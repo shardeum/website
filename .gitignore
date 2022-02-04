@@ -1,0 +1,22 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# Log
+*.log
+
+# Environment
+.env
+
+# Library
+lib/
+
+# Dist
+dist/
+
+# Mac
+.DS_Store
+
+# Build
+.next

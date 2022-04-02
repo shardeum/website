@@ -1,0 +1,12 @@
+{
+  "site-title": "Welcome to Shardeum.org!",
+  "site-description": "Decentralization for everyone",
+  "feature1-title": "Compute and State Sharding",
+  "feature1-description": "The technology being developed will use compute and state sharding...",
+  "feature2-title": "Smart Contracts",
+  "feature2-description": "Combined with a smart contract layer, the technology will enable...",
+  "feature3-title": "Energy Efficient",
+  "feature3-description": "The technology will use an energy efficient consensus algorithm...",
+  "feature4-title": "Auto Scaling",
+  "feature4-description": "The technology aims to build a network that can self-govern the..."
+}

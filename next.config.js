@@ -1,4 +1,5 @@
-import i18n from "./next-i18next.config";
+/* eslint @typescript-eslint/no-var-requires: "off" */
+const { i18n } = require("./next-i18next.config");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -19,6 +19,7 @@ const colors: ColorProps = {
     black: "#000000",
     white: "#FFFFFF",
     secondaryTextColor: "#fff",
+    "grey-95": "#101010",
     "grey-90": "#212121",
     "grey-5": "#FAFAFA",
     "grey-50": "#9E9E9E",

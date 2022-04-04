@@ -2,13 +2,15 @@ import { useRouter } from "next/router";
 import { ChangeEvent } from "react";
 
 const LanguageSwitcher = () => {
-  const router = useRouter();
   const {
+    push,
+    asPath,
+    pathname,
     locale, // selected language
   } = useRouter();
 
   const handleChangeLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
-    router.push(router.pathname, router.asPath, { locale: e.target.value });
+    push(pathname, asPath, { locale: e.target.value });
   };
 
   return (

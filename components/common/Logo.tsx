@@ -1,6 +1,6 @@
-import Image from "next/image";
+import React from "react";
 
-const Logo = (props: any) => {
+const Logo = () => {
   return (
     <svg
       width="128"

@@ -1,11 +1,5 @@
-import {
-  Box,
-  Container,
-  Flex,
-  IconButton,
-  Stack,
-  useColorMode,
-} from "@chakra-ui/react";
+import React from "react";
+import { Box, Container, Flex, IconButton, Stack, useColorMode } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Logo from "./common/Logo";
@@ -39,13 +33,9 @@ const Navbar = () => {
       <Container maxW="container.xl">
         <Flex justify="space-between" align={"center"}>
           <Box>
-            <Logo width={"200px"} height={"20px"} />
+            <Logo />
           </Box>
-          <Stack
-            direction={["column", "row"]}
-            spacing={"1rem"}
-            alignItems={"center"}
-          >
+          <Stack direction={["column", "row"]} spacing={"1rem"} alignItems={"center"}>
             {/* All the links laid out horizontally */}
             {links?.map((link) => (
               <NextLink key={link.title} href={link.link} passHref>

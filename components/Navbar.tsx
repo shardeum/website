@@ -10,6 +10,7 @@ import Link from "./common/Link";
 import NextLink from "next/link";
 import Logo from "./common/Logo";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import THEME from "../constants/theme";
 
 const links = [
   {
@@ -41,20 +42,20 @@ const Navbar = () => {
             <Logo width={"200px"} height={"20px"} />
           </Box>
           <Stack direction={["column", "row"]} spacing={"1rem"}>
-            {/* All the links laid out horiozontally */}
-            {links?.map((l) => (
-              <NextLink key={l.title} href={l.link} passHref>
-                <Link variant="navlink">{l.title}</Link>
+            {/* All the links laid out horizontally */}
+            {links?.map((link) => (
+              <NextLink key={link.title} href={link.link} passHref>
+                <Link variant="navlink">{link.title}</Link>
               </NextLink>
             ))}
 
             {/* Keeping this separate because it will mostly be a switcher */}
             <Link variant="navlink">Language</Link>
 
-            <Link varian="navlink" onClick={toggleColorMode}>
+            <Link variant="navlink" onClick={toggleColorMode}>
               <IconButton
                 aria-label="Switch theme"
-                icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+                icon={colorMode === THEME.DARK ? <SunIcon /> : <MoonIcon />}
               />
             </Link>
           </Stack>

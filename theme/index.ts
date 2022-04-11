@@ -1,8 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
+import THEME from "../constants/theme";
 
 const customTheme = extendTheme({
   config: {
-    initialColorMode: "dark",
+    initialColorMode: THEME.DARK,
   },
   semanticTokens: {
     colors: {

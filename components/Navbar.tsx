@@ -1,15 +1,10 @@
-import {
-  Box,
-  Container,
-  Flex,
-  IconButton,
-  Stack,
-  useColorMode,
-} from "@chakra-ui/react";
-import Link from "./common/Link";
+import React from "react";
+import { Box, Container, Flex, IconButton, Stack, useColorMode } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Logo from "./common/Logo";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import THEME from "../constants/theme";
 
 const links = [
   {
@@ -38,25 +33,24 @@ const Navbar = () => {
       <Container maxW="container.xl">
         <Flex justify="space-between" align={"center"}>
           <Box>
-            <Logo width={"200px"} height={"20px"} />
+            <Logo />
           </Box>
-          <Stack direction={["column", "row"]} spacing={"1rem"}>
-            {/* All the links laid out horiozontally */}
-            {links?.map((l) => (
-              <NextLink key={l.title} href={l.link} passHref>
-                <Link variant="navlink">{l.title}</Link>
+          <Stack direction={["column", "row"]} spacing={"1rem"} alignItems={"center"}>
+            {/* All the links laid out horizontally */}
+            {links?.map((link) => (
+              <NextLink key={link.title} href={link.link} passHref>
+                <Link variant="navlink">{link.title}</Link>
               </NextLink>
             ))}
 
             {/* Keeping this separate because it will mostly be a switcher */}
             <Link variant="navlink">Language</Link>
 
-            <Link varian="navlink" onClick={toggleColorMode}>
-              <IconButton
-                aria-label="Switch theme"
-                icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
-              />
-            </Link>
+            <IconButton
+              onClick={toggleColorMode}
+              aria-label="Switch theme"
+              icon={colorMode === THEME.DARK ? <SunIcon /> : <MoonIcon />}
+            />
           </Stack>
         </Flex>
       </Container>

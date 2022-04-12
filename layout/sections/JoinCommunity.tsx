@@ -10,20 +10,20 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import {
-  Discord,
-  ExternalIcon,
-  Github,
-  SeeMore,
-  Telegram,
-  Twitter,
+  IconDiscord,
+  IconExternal,
+  IconGithub,
+  IconSeeMore,
+  IconTelegram,
+  IconTwitter,
 } from "./Icons";
 
 const socialLinks = [
-  { Icon: Discord, title: "Discord", href: "https://discord.gg/yWqQZQ" },
-  { Icon: Twitter, title: "Twitter", href: "https://discord.gg/yWqQZQ" },
-  { Icon: Github, title: "Github", href: "https://discord.gg/yWqQZQ" },
-  { Icon: Telegram, title: "Telegram", href: "https://discord.gg/yWqQZQ" },
-  { Icon: SeeMore, title: "See more", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconDiscord, title: "Discord", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconTwitter, title: "Twitter", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconGithub, title: "Github", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconTelegram, title: "Telegram", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconSeeMore, title: "See more", href: "https://discord.gg/yWqQZQ" },
 ];
 
 const JoinCommunity = () => {
@@ -81,7 +81,7 @@ const JoinCommunity = () => {
                         {link.title}
                       </Text>
                     </HStack>
-                    <ExternalIcon />
+                    <IconExternal />
                   </HStack>
                 </Link>
               ))}

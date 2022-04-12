@@ -1,4 +1,4 @@
-export const SeeMore = () => (
+export const IconSeeMore = () => (
   <svg
     id="Group_13"
     data-name="Group 13"
@@ -17,7 +17,7 @@ export const SeeMore = () => (
   </svg>
 );
 
-export const Telegram = () => (
+export const IconTelegram = () => (
   <svg
     id="Group_13"
     data-name="Group 13"
@@ -35,7 +35,7 @@ export const Telegram = () => (
     />
   </svg>
 );
-export const Github = () => (
+export const IconGithub = () => (
   <svg
     id="Group_12"
     data-name="Group 12"
@@ -54,7 +54,7 @@ export const Github = () => (
     />
   </svg>
 );
-export const Twitter = () => (
+export const IconTwitter = () => (
   <svg
     id="Group_11"
     data-name="Group 11"
@@ -73,7 +73,7 @@ export const Twitter = () => (
     />
   </svg>
 );
-export const Discord = () => (
+export const IconDiscord = () => (
   <svg
     id="Group_10"
     data-name="Group 10"
@@ -93,7 +93,7 @@ export const Discord = () => (
   </svg>
 );
 
-export const ExternalIcon = () => (
+export const IconExternal = () => (
   <svg
     id="Group_15"
     data-name="Group 15"
@@ -109,6 +109,82 @@ export const ExternalIcon = () => (
       d="M14.334,8.845,7.161,16.017,5.983,14.839l7.172-7.173H6.834V6H16v9.167H14.334Z"
       transform="translate(-0.997 -1)"
       fill="#616161"
+    />
+  </svg>
+);
+
+export const IconP2P_Transfer = () => (
+  <svg
+    id="Group_74"
+    data-name="Group 74"
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 28 28"
+  >
+    <path id="Path_98" data-name="Path 98" d="M0,0H28V28H0Z" fill="none" />
+    <path
+      id="Path_99"
+      data-name="Path 99"
+      d="M22.347,17.287A9.335,9.335,0,0,0,9.112,5.562L7.954,3.536A11.669,11.669,0,0,1,24.38,18.462l1.566.9-4.859,2.583-.193-5.5,1.454.839ZM5.139,10.047A9.335,9.335,0,0,0,18.375,21.772L19.532,23.8A11.669,11.669,0,0,1,3.107,8.872L1.54,7.97,6.4,5.387l.192,5.5-1.454-.839Zm10.255,6.92-3.3-3.3-3.3,3.3-1.65-1.65,4.95-4.949,3.3,3.3,3.3-3.3,1.65,1.65-4.95,4.949Z"
+      transform="translate(0.257 0.333)"
+    />
+  </svg>
+);
+
+export const IconNFTs = () => (
+  <svg
+    id="Group_76"
+    data-name="Group 76"
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 28 28"
+  >
+    <path id="Path_102" data-name="Path 102" d="M0,0H28V28H0Z" fill="none" />
+    <path
+      id="Path_103"
+      data-name="Path 103"
+      d="M24.167,3a1.167,1.167,0,0,1,1.167,1.167v6.417a2.917,2.917,0,0,0,0,5.833v6.417A1.167,1.167,0,0,1,24.167,24h-21A1.167,1.167,0,0,1,2,22.833V16.417a2.917,2.917,0,1,0,0-5.833V4.167A1.167,1.167,0,0,1,3.167,3ZM23,5.333H4.333V8.8l.182.094a5.25,5.25,0,0,1,2.73,4.363l0,.246a5.249,5.249,0,0,1-2.735,4.609l-.181.1v3.463H23V18.2l-.182-.093a5.25,5.25,0,0,1-2.73-4.363l0-.246a5.246,5.246,0,0,1,2.735-4.608l.182-.1ZM18.333,10v7H9V10Z"
+      transform="translate(0.333 0.5)"
+    />
+  </svg>
+);
+
+export const IconDApps = () => (
+  <svg
+    id="Group_71"
+    data-name="Group 71"
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 28 28"
+  >
+    <path id="Path_94" data-name="Path 94" d="M0,0H28V28H0Z" fill="none" />
+    <path
+      id="Path_95"
+      data-name="Path 95"
+      d="M7.458,2.5a4.958,4.958,0,0,1,4.958,4.958v4.958H7.458a4.958,4.958,0,1,1,0-9.917ZM14.75,14.75h4.958a4.958,4.958,0,1,1-4.958,4.958Z"
+      transform="translate(0.417 0.417)"
+    />
+  </svg>
+);
+
+export const IconWeb3 = () => (
+  <svg
+    id="Group_75"
+    data-name="Group 75"
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 28 28"
+  >
+    <path id="Path_100" data-name="Path 100" d="M0,0H28V28H0Z" fill="none" />
+    <path
+      id="Path_101"
+      data-name="Path 101"
+      d="M3.167,3h21a1.167,1.167,0,0,1,1.167,1.167V22.833A1.167,1.167,0,0,1,24.167,24h-21A1.167,1.167,0,0,1,2,22.833V4.167A1.167,1.167,0,0,1,3.167,3ZM23,11.167H4.333v10.5H23ZM5.5,6.5V8.833H7.833V6.5Zm4.667,0V8.833H12.5V6.5Z"
+      transform="translate(0.333 0.5)"
     />
   </svg>
 );

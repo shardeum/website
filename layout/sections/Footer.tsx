@@ -41,7 +41,7 @@ function Footer() {
               </Box>
             </Link>
             <Text color="brand.grey-50">
-              Copy &copy; Shardeum {new Date().getFullYear()}
+              Copyright &copy; Shardeum {new Date().getFullYear()}
             </Text>
           </Flex>
           <SimpleGrid columns={[2, 2, 3]}>

@@ -1,14 +1,6 @@
 import Image from "next/image";
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "./Icons";
+import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
 
 const UseCaseItem = ({
   title,
@@ -91,12 +83,7 @@ const UseCases = () => {
         </VStack>
         <SimpleGrid columns={[1, 2]}>
           {useCases.map((useCase) => (
-            <Box
-              py="16"
-              borderTop="1px"
-              borderColor="brand.grey-30"
-              key={useCase.title}
-            >
+            <Box py="16" borderTop="1px" borderColor="brand.grey-30" key={useCase.title}>
               <UseCaseItem
                 Icon={useCase.Icon}
                 title={useCase.title}

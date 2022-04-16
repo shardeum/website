@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  HStack,
-  SimpleGrid,
-  Text,
-  useColorMode,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import {
   IconDiscord,
@@ -16,7 +7,7 @@ import {
   IconSeeMore,
   IconTelegram,
   IconTwitter,
-} from "./Icons";
+} from "@shm/Icons";
 
 const socialLinks = [
   { Icon: IconDiscord, title: "Discord", href: "https://discord.gg/yWqQZQ" },
@@ -48,18 +39,17 @@ const JoinCommunity = () => {
                 textAlign={{ base: "center", md: "left" }}
                 color="brand.grey-40"
               >
-                Shardeum is a global community. Anyone can join us in the
-                journey to onboard billions of people into Web 3. Don't know how
-                to code? Or not sure where to start? Don't worry. You can start
-                by contributing as a content creator, community manager,
-                language translator, developer and you name it
+                Shardeum is a global community. Anyone can join us in the journey to onboard
+                billions of people into Web 3. Don&apos;t know how to code? Or not sure where to
+                start? Don&apos;t worry. You can start by contributing as a content creator,
+                community manager, language translator, developer and you name it
               </Text>
             </Box>
           </VStack>
           <Flex justifyContent="flex-end">
             <VStack w="96">
               {socialLinks.map((link) => (
-                <Link href="#" passHref>
+                <Link href="#" passHref key={link.href}>
                   <HStack
                     as="a"
                     w="full"

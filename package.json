@@ -13,6 +13,12 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^1.8.7",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.2.8",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "eslint-config-prettier": "^8.5.0",

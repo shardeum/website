@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
+import SectionHeading from "../../components/common/SectionHeading";
 
 const UseCaseItem = ({
   title,
@@ -61,9 +62,7 @@ const UseCases = () => {
         <VStack spacing="20" alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="start" spacing="20">
-              <Heading size="2xl" color="brand.grey-90">
-                Use Cases
-              </Heading>
+              <SectionHeading color="brand.grey-90">Use Cases</SectionHeading>
               <UseCaseItem
                 Icon={IconP2P_Transfer}
                 title="P2P Transfers"

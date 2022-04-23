@@ -1,16 +1,7 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  HStack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
 import { getPercentage } from "@shm/utils";
 import Image from "next/image";
+import SectionHeading from "../../components/common/SectionHeading";
 
 const bars = [
   {
@@ -72,9 +63,7 @@ const SHMTokenomics = () => {
         px={{ base: 6, lg: 0 }}
       >
         <Box>
-          <Heading color="brand.white" mb={{ base: "3", lg: "9" }}>
-            $SHM Tokenomics
-          </Heading>
+          <SectionHeading color="brand.white">$SHM Tokenomics</SectionHeading>
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>
           <Text fontSize="base" fontWeight="medium">

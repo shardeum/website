@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,8 +23,8 @@ function Team() {
                     Nischal Shetty
                   </Text>
                   <Text color="brand.grey-70">
-                    Founder of WazirX, Crowdfire and a steward of the
-                    cryptocurrency industry in India
+                    Founder of WazirX, Crowdfire and a steward of the cryptocurrency industry in
+                    India
                   </Text>
                 </VStack>
               </VStack>
@@ -49,8 +41,8 @@ function Team() {
                     Omar
                   </Text>
                   <Text color="brand.grey-70">
-                    A blockchain architect and a scientist cum inventor with
-                    prior experience working at NASA, Yahoo and Zynga
+                    A blockchain architect and a scientist cum inventor with prior experience
+                    working at NASA, Yahoo and Zynga
                   </Text>
                 </VStack>
               </VStack>
@@ -72,11 +64,17 @@ function Team() {
                 </Text>
                 <Flex direction="column">
                   <Text color="brand.grey-70">
-                    Community is the reason how and why Shardeum will remain
-                    decentralized, secure and infinitely scalable
+                    Community is the reason how and why Shardeum will remain decentralized, secure
+                    and infinitely scalable
                   </Text>
                   <Link href="/#" passHref>
-                    <Text as="a" color="brand.blue" mt="2" _hover={{color: 'brand.blue-70'}} fontWeight="medium">
+                    <Text
+                      as="a"
+                      color="brand.blue"
+                      mt="2"
+                      _hover={{ color: "brand.blue-70" }}
+                      fontWeight="medium"
+                    >
                       Know More
                     </Text>
                   </Link>

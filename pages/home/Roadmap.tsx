@@ -1,22 +1,11 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 
 const roadmapList = [
   {
     title: "Q1 2020",
     description: "Shardeum Foundation set up in Switzerland ",
     subTitle: "Initial Testing",
-    taskList: [
-      "Sharding network testing",
-      "Smart Contract & Node Reward System Testing",
-    ],
+    taskList: ["Sharding network testing", "Smart Contract & Node Reward System Testing"],
     active: true,
   },
   {
@@ -64,17 +53,8 @@ function Roadmap() {
             <SimpleGrid columns={[2, 2, 4]} w="full" gap="4">
               {titles.map((item) => {
                 return (
-                  <VStack
-                    spacing="10"
-                    key={item}
-                    alignItems="start"
-                    flexWrap="wrap"
-                  >
-                    <Text
-                      fontSize="2xl"
-                      color="brand.white"
-                      fontWeight="medium"
-                    >
+                  <VStack spacing="10" key={item} alignItems="start" flexWrap="wrap">
+                    <Text fontSize="2xl" color="brand.white" fontWeight="medium">
                       {item}
                     </Text>
                   </VStack>
@@ -82,8 +62,9 @@ function Roadmap() {
               })}
             </SimpleGrid>
             <SimpleGrid columns={[2, 2, 4]} w="full">
-              {activeList.map((isActive) => (
+              {activeList.map((isActive, index) => (
                 <Box
+                  key={index}
                   h="0.5"
                   w="100%"
                   bg={isActive ? "brand.orange" : "brand.grey-80"}
@@ -95,33 +76,18 @@ function Roadmap() {
           <SimpleGrid columns={[2, 2, 4]} w="full" gap="4">
             {roadmapList.map((item) => {
               return (
-                <VStack
-                  spacing="10"
-                  key={item.title}
-                  alignItems="start"
-                  flexWrap="wrap"
-                >
+                <VStack spacing="10" key={item.title} alignItems="start" flexWrap="wrap">
                   <VStack alignItems="start" spacing="6">
-                    <Text
-                      fontSize="xl"
-                      color="white"
-                      pr="4"
-                      fontWeight="medium"
-                    >
+                    <Text fontSize="xl" color="white" pr="4" fontWeight="medium">
                       {item.description}
                     </Text>
                     {item.subTitle ? (
-                      <Text
-                        fontSize="xl"
-                        color="white"
-                        pr="4"
-                        fontWeight="medium"
-                      >
+                      <Text fontSize="xl" color="white" pr="4" fontWeight="medium">
                         {item.subTitle}
                       </Text>
                     ) : null}
-                    {item.taskList.map((task) => (
-                      <Text fontSize="base" color="brand.grey-40" pr="4">
+                    {item.taskList.map((task, index) => (
+                      <Text key={index} fontSize="base" color="brand.grey-40" pr="4">
                         - {task}
                       </Text>
                     ))}
@@ -130,9 +96,9 @@ function Roadmap() {
               );
             })}
             <VStack alignItems="start" spacing="6">
-              {launchItems.map((item) => {
+              {launchItems.map((item, index) => {
                 return (
-                  <Text fontSize="xl" color="white" pr="4" fontWeight="medium">
+                  <Text key={index} fontSize="xl" color="white" pr="4" fontWeight="medium">
                     {item}
                   </Text>
                 );

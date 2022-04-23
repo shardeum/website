@@ -1,28 +1,23 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  SimpleGrid,
-  Text,
-  useColorMode,
-  VStack,
-} from "@chakra-ui/react";
+/* 
+This is the common hero section which will be used in most of the pages
+*/
 
-const Hero = () => {
+import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+
+// Props for the Hero component
+type HeroProps = {
+  heading?: React.ReactNode;
+  description?: React.ReactNode;
+  cta?: React.ReactNode;
+  media?: React.ReactNode;
+};
+
+const Hero = ({ heading, description, cta, media }: HeroProps) => {
   return (
-    <Flex
-      h={["80vh", "90vh"]}
-      justifyContent="center"
-      alignItems="center"
-      mt={{ base: 10, lg: 0 }}
-    >
+    <Flex h={["80vh", "90vh"]} justifyContent="center" alignItems="center" mt={{ base: 10, lg: 0 }}>
       <Container maxW="container.xl" mx="auto">
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
-          <VStack
-            alignItems={{ base: "center", md: "flex-start" }}
-            spacing={[8]}
-          >
+          <VStack alignItems={{ base: "center", md: "flex-start" }} spacing={[8]}>
             <VStack spacing={2}>
               <Text
                 as="h2"
@@ -32,23 +27,20 @@ const Hero = () => {
                 fontWeight="bold"
                 color="text"
               >
-                Decentralization for everyone
+                {heading}
               </Text>
               <Box maxW={{ base: "md", md: "full" }}>
                 <Text
                   fontSize={{ base: "md", lg: "xl" }}
                   textAlign={{ base: "center", md: "left" }}
                 >
-                  Shardeum is the first linearly scalable smart contract
-                  blockchain being built by the people for the people
+                  {description}
                 </Text>
               </Box>
             </VStack>
-            <Button variant="secondary" size="lg">
-              Join Discord
-            </Button>
+            {cta}
           </VStack>
-          <Box h={["60", "80"]} bg="brand.grey-90"></Box>
+          {media ? media : <Box h={["60", "80"]} bg="brand.grey-90"></Box>}
         </SimpleGrid>
       </Container>
     </Flex>

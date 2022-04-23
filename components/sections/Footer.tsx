@@ -1,6 +1,6 @@
 import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import Logo from "../../components/common/Logo";
+import Logo from "../common/Logo";
 
 const LinksMap = {
   General: [

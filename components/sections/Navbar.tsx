@@ -2,11 +2,15 @@ import React from "react";
 import { Box, Container, Flex, IconButton, Stack, useColorMode } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import Logo from "./common/Logo";
+import Logo from "../common/Logo";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import THEME from "../constants/theme";
+import THEME from "../../constants/theme";
 
 const links = [
+  {
+    title: "Alphanet",
+    link: "/alphanet",
+  },
   {
     title: "Community",
     link: "#",
@@ -33,8 +37,13 @@ const Navbar = () => {
       <Container maxW="container.xl">
         <Flex justify="space-between" align={"center"}>
           <Box>
-            <Logo />
+            <NextLink href="/">
+              <Link>
+                <Logo />
+              </Link>
+            </NextLink>
           </Box>
+
           <Stack direction={["column", "row"]} spacing={"1rem"} alignItems={"center"}>
             {/* All the links laid out horizontally */}
             {links?.map((link) => (

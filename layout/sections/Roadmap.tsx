@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import Image from "next/image";
 
 const roadmapList = [
   {
@@ -36,7 +37,8 @@ const roadmapList = [
   {
     title: "Q4 2022",
     description: "",
-    taskList: ["Main-net launch", "SHM token issue/TGE", "Public Sale"],
+    taskList: [],
+    launchItems: ["Main-net launch", "SHM token issue/TGE", "Public Sale"],
     months: [10, 11, 12],
   },
 ];
@@ -51,7 +53,7 @@ const getQuarterProgressInPercentage = (quarterMonths: number[]) => {
   const totalMonthsInQuarter = quarterMonths.length;
   const currentMonth = new Date().getMonth() + 1; // Adding 1 because getMonth() returns month from 0 and we have taken month from 1
 
-  // If the last month of the quarter is less than the current month then we know that the quarter has passed
+  // If the last month of the current quarter is less than the current month then we know that the quarter has passed
   const hasQuarterPassed = quarterMonths[totalMonthsInQuarter - 1] < currentMonth;
   let percentage = 0;
   if (hasQuarterPassed) {
@@ -75,8 +77,17 @@ const getQuarterProgressInPercentage = (quarterMonths: number[]) => {
 
 function Roadmap() {
   return (
-    <Flex bg="brand.grey-95" as="section">
-      <Container maxW="container.xl" mx="auto" pt="20" pb="32">
+    <Flex bg="brand.black" as="section" position="relative" overflow="hidden">
+      <Box position="absolute" zIndex={1} display={{ base: "none", lg: "block" }}>
+        <Image
+          src="/roadmap-bg.png"
+          width="500px"
+          objectFit="cover"
+          alt="white paper gradient background"
+          height="800px"
+        />
+      </Box>
+      <Container maxW="container.xl" mx="auto" pt="20" pb="32" position="relative" zIndex={2}>
         <VStack spacing="20" alignItems="start" w="full">
           <VStack alignItems="start" spacing="3">
             <Text fontSize="sm" color="brand.orange">
@@ -135,6 +146,11 @@ function Roadmap() {
                       {item.taskList.map((task) => (
                         <Text key={task} fontSize="base" color="brand.grey-40" pr="4">
                           - {task}
+                        </Text>
+                      ))}
+                      {item?.launchItems?.map((task) => (
+                        <Text key={task} fontSize="base" color="brand.white" pr="4">
+                          {task}
                         </Text>
                       ))}
                     </VStack>

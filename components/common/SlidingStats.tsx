@@ -13,9 +13,9 @@ const SlidingStats = () => (
   <Box bg="brand.grey-90" borderColor="brand.grey-50" borderTopWidth="1px" borderBottomWidth="1px">
     <Marquee gradientWidth={0} speed={50} pauseOnHover loop={0}>
       {stats.map((stat) => (
-        <HStack spacing="6" mx="3rem" py="9" key={stat.title}>
+        <HStack spacing="6" mx="3rem" py={{ base: "4", md: "6", lg: "9" }} key={stat.title}>
           <stat.Icon />
-          <Text fontSize="2xl">{stat.title}</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>{stat.title}</Text>
         </HStack>
       ))}
     </Marquee>

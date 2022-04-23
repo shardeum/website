@@ -66,7 +66,7 @@ const SHMTokenomics = () => {
       <Container
         maxW="container.xl"
         mx="auto"
-        py="40"
+        py={{ base: "14", md: "32", lg: "40" }}
         zIndex={2}
         position="relative"
         px={{ base: 6, lg: 0 }}
@@ -84,6 +84,7 @@ const SHMTokenomics = () => {
             </Text>
           </Text>
         </HStack>
+        {/* Shown on mobile devices */}
         <HStack h="600px" w="full" display={{ base: "flex", md: "none" }}>
           <Flex
             py="3"
@@ -96,7 +97,7 @@ const SHMTokenomics = () => {
             <Text
               as="p"
               style={{
-                writingMode: "vertical-lr", // passing this value to Chakra's __css doesn't work
+                writingMode: "vertical-lr", // passing this value to Chakra's __css doesn't work that's why using inline style
               }}
               color="brand.grey-10"
               transform="rotate(-180deg)"
@@ -115,7 +116,7 @@ const SHMTokenomics = () => {
                 alignItems="flex-end"
               >
                 <Box h="full" bgColor={bar.bgColor} w="20" />
-                <Text fontSize="lg" fontWeight="medium">
+                <Text fontSize="base" fontWeight="medium">
                   {bar.height}{" "}
                   <Text as="span" color="brand.grey-50" fontSize="">
                     {bar.use}
@@ -125,6 +126,7 @@ const SHMTokenomics = () => {
             ))}
           </VStack>
         </HStack>
+        {/* Shown on tabs and above */}
         <Grid
           h="600px"
           gridTemplateColumns={{ base: "repeat(6,1fr) " }}

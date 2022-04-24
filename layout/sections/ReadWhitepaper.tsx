@@ -44,7 +44,11 @@ function ReadWhitepaper() {
               spacing="12"
               marginLeft="auto"
             >
-              <Text fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="medium">
+              <Text
+                fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+                fontWeight="medium"
+                color="brand.white"
+              >
                 The first linearly smart contract blockchain that{" "}
                 <Text as="span" color="brand.orange">
                   solves

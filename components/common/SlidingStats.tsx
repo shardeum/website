@@ -15,7 +15,9 @@ const SlidingStats = () => (
       {stats.map((stat) => (
         <HStack spacing="6" mx="3rem" py={{ base: "4", md: "6", lg: "9" }} key={stat.title}>
           <stat.Icon />
-          <Text fontSize={{ base: "xl", lg: "2xl" }}>{stat.title}</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }} color="brand.grey-5">
+            {stat.title}
+          </Text>
         </HStack>
       ))}
     </Marquee>

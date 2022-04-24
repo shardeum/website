@@ -87,7 +87,15 @@ function Roadmap() {
           height="800px"
         />
       </Box>
-      <Container maxW="container.xl" mx="auto" pt="20" pb="32" position="relative" zIndex={2}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        pt="20"
+        pb="32"
+        position="relative"
+        zIndex={2}
+        px={{ base: 6, lg: 0 }}
+      >
         <VStack spacing="20" alignItems="start" w="full">
           <VStack alignItems="start" spacing="3">
             <Text fontSize="sm" color="brand.orange">

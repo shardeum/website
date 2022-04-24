@@ -62,7 +62,7 @@ const SHMTokenomics = () => {
         position="relative"
         px={{ base: 6, lg: 0 }}
       >
-        <Box>
+        <Box mb="12">
           <SectionHeading color="brand.white">$SHM Tokenomics</SectionHeading>
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>

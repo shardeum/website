@@ -33,9 +33,11 @@ function Footer() {
                 <Logo />
               </Box>
             </Link>
-            <Text color="brand.grey-50">Copyright &copy; Shardeum {new Date().getFullYear()}</Text>
+            <Text color="brand.grey-50" display={{ base: "none", md: "block" }}>
+              Copyright &copy; Shardeum {new Date().getFullYear()}
+            </Text>
           </Flex>
-          <SimpleGrid columns={[2, 2, 3]}>
+          <SimpleGrid columns={[2, 2, 3]} gap={{ base: 6 }} rowGap={{ base: 10 }}>
             {Object.entries(LinksMap).map(([title, links]) => {
               return (
                 <VStack alignItems="start" spacing="4" key={title}>
@@ -56,6 +58,9 @@ function Footer() {
             })}
           </SimpleGrid>
         </SimpleGrid>
+        <Text color="brand.grey-50" display={{ md: "none" }} mt="10">
+          Copyright &copy; Shardeum {new Date().getFullYear()}
+        </Text>
       </Container>
     </Flex>
   );

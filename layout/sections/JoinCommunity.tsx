@@ -25,7 +25,7 @@ const JoinCommunity = () => {
           <VStack spacing="6">
             <Text
               as="h2"
-              textAlign={{ base: "center", md: "left" }}
+              textAlign="left"
               lineHeight="normal"
               fontSize={{ base: "4xl", md: "5xl", lg: "7xl" }}
               fontWeight="bold"
@@ -34,11 +34,7 @@ const JoinCommunity = () => {
               Join the Community
             </Text>
             <Box maxW={{ base: "md", md: "full" }}>
-              <Text
-                fontSize={{ base: "md", lg: "base" }}
-                textAlign={{ base: "center", md: "left" }}
-                color="brand.grey-40"
-              >
+              <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
                 Shardeum is a global community. Anyone can join us in the journey to onboard
                 billions of people into Web 3. Don&apos;t know how to code? Or not sure where to
                 start? Don&apos;t worry. You can start by contributing as a content creator,

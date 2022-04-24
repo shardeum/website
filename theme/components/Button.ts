@@ -41,10 +41,11 @@ export const Button: ComponentStyleConfig = {
           backgroundColor: mode("brand.black", "brand.grey-10")(props),
         },
         "&:disabled": {
-          backgroundColor: mode("brand.grey-30", "brand.grey-90")(props),
+          backgroundColor: mode("brand.grey-90", "brand.grey-90")(props),
           color: "brand.grey-40",
           "&:hover": {
-            backgroundColor: mode("brand.grey-20", "brand.grey-90")(props),
+            backgroundColor: mode("brand.grey-90", "brand.grey-90")(props),
+            cursor: "not-allowed",
           },
         },
       };
@@ -61,7 +62,7 @@ export const Button: ComponentStyleConfig = {
     },
   },
   defaultProps: {
-    colorScheme: 'facebook',
+    colorScheme: "facebook",
     variant: "primary",
     size: "lg",
   },

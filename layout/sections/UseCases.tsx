@@ -1,7 +1,17 @@
 import Image from "next/image";
-import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Container,
+  Flex,
+  HStack,
+  SimpleGrid,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
 import SectionHeading from "../../components/common/SectionHeading";
+import Feature from "../../components/common/Feature";
 
 const UseCaseItem = ({
   title,
@@ -13,16 +23,18 @@ const UseCaseItem = ({
   Icon: any;
 }) => {
   return (
-    <VStack alignItems="start">
-      <VStack spacing="5" alignItems="start">
-        <Icon />{" "}
-        <Text fontSize="3xl" color="brand.black" fontWeight="bold">
-          {title}
-        </Text>
-      </VStack>
-      <Text fontSize="xl" color="brand.grey-70" fontWeight="medium" maxW="xl">
-        {description}
-      </Text>
+    <VStack alignItems="start" spacing={{ base: "5" }}>
+      <Icon />{" "}
+      <Box pr={{ md: "2", lg: "20" }}>
+        <Feature
+          title={title}
+          titleSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+          description={description}
+          descriptionSize={{
+            md: "xl",
+          }}
+        />
+      </Box>
     </VStack>
   );
 };
@@ -58,11 +70,28 @@ const useCases = [
 const UseCases = () => {
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="32" pb="32">
-        <VStack spacing="20" alignItems="start" w="full" pb="16">
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        py={{ base: "9", md: "20", lg: "32" }}
+        px={{ base: 6, lg: 0 }}
+      >
+        <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="start" spacing="20">
-              <SectionHeading color="brand.grey-90">Use Cases</SectionHeading>
+              <HStack justifyContent="space-between" w="full">
+                <SectionHeading color="brand.grey-90">Use Cases</SectionHeading>
+                <Box display={{ base: "block", md: "none" }}>
+                  <Image
+                    objectFit="contain"
+                    src="/useCase.png"
+                    alt="Shardeum Use Case Illustrations"
+                    // layout="fill"
+                    width="100px"
+                    height="80px"
+                  />
+                </Box>
+              </HStack>
               <UseCaseItem
                 Icon={IconP2P_Transfer}
                 title="P2P Transfers"
@@ -71,13 +100,21 @@ const UseCases = () => {
         dynamic state sharding`}
               />
             </VStack>
-            <Image
-              objectFit="contain"
-              src="/useCase.png"
-              alt="Shardeum Use Case Illustrations"
-              width="490px"
-              height="328px"
-            />
+            <AspectRatio
+              ratio={1}
+              w="full"
+              maxW={{ md: "300px", lg: "400px" }}
+              maxH={{ md: "241px", lg: "328px" }}
+              ml="16"
+              display={{ base: "none", md: "block" }}
+            >
+              <Image
+                objectFit="contain"
+                src="/useCase.png"
+                alt="Shardeum Use Case Illustrations"
+                layout="fill"
+              />
+            </AspectRatio>
           </SimpleGrid>
         </VStack>
         <SimpleGrid columns={[1, 2]}>

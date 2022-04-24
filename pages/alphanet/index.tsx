@@ -13,44 +13,50 @@ const AlphanetLanding: NextPage = () => {
       <Hero
         heading={"Shardeum’s Alphanet is Live!"}
         description={
-          "Join us in building the world’s first EVM based blockchain that scales linearly with low gas fees forever. It is our aim to onboard billions of daily users and numerous DApps across the world to Web 3 for a more inclusive society"
+          "Shardeum is the world's first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3. We invite you to build your DApps and other web 3 services on Shardeum by simply following the guidelines listed under ‘Developer Docs’ below"
         }
         cta={
           <Button variant="primary" size="lg">
-            Read Developer Docs
+            Developer Docs
           </Button>
         }
       />
 
       {/* Features of alphanet */}
       <UseCases
-        heading={"Features"}
+        heading={"Why Build on Shardeum?"}
         descriptiveMedia={<></>}
         content={[
           {
             title: "Developer Friendly Languages",
             description:
-              "Shardeum is EVM compatible decentralized network that will accommodate billions of daily users and DApps on a global scale achieved through dynamic state shardingShardeum’s smart contract platforms are deployed in developer and user friendly programming languages - Solidity/Vyper.",
+              "Shardeum’s smart contract platforms are deployed in developer and user friendly programming languages - Solidity & Vyper.",
             // Icon: IconP2P_Transfer,
           },
           {
-            title: "Unrivaled Scalability with low fees forever",
+            title: "Unrivaled Scalability through Dynamic State Sharding",
             description:
-              "Shardeum will be the first layer 1 blockchain network to achieve linear scalability with high decentralization and solid security that solves scalability trilemma once and for all.",
+              "Shardeum’s dynamic state sharding allows the network to achieve linear scalability where throughput increases as and when more nodes join in. This ensures gas fees on the network remain very low forever with high decentralization regardless of how many people use it in the future",
             // Icon: IconNFTs,
           },
 
           {
+            title: "Unique Consensus Algorithm",
+            description:
+              "Shardeum’s unique technology is complemented with a unique consensus algorithm that combines Proof-of-Quorum (PoQ) with Proof-of-Stake (PoS) to secure the network. Consensus on the network is done at the transaction level with simultaneous processing of transactions across shards resulting in immediate finality and low latency which prevents network congestion.",
+            // Icon: IconDApps,
+          },
+          {
             title: "Quick & Easy Migration",
             description:
               "Shardeum is EVM based smart contract platform which means you can launch your Ethereum DApps and other Web 3 applications on Shardeum seamlessly.",
-            // Icon: IconDApps,
+            // Icon: IconNFTs,
           },
           {
             title: "Affordable P2P Transfers",
             description:
               "Shardeum’s immediate finality and high throughput with low gas fees forever paves the way for global-scale adoption, redefining the landscape of cross-border payments and settlements.",
-            // Icon: IconNFTs,
+            // Icon: IconWeb3,
           },
           {
             title: "DeFi, NFT & Other Web 3 Apps",
@@ -71,12 +77,8 @@ const AlphanetLanding: NextPage = () => {
             q: "What is Shardeum?",
             a: (
               <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Shardeum is an EVM-compatible dynamically state sharded blockchain with infinite
+                scalability, true decentralization, and solid security.
               </>
             ),
           },
@@ -97,57 +99,55 @@ const AlphanetLanding: NextPage = () => {
           },
 
           {
-            q: "I have developed apps in Ethereum. How to easily migrate my apps in this testnet?",
+            q: "What language will Shardeum use for Smart Contracts?",
+            a: <>EVM-compatible languages: Solidity and Vyper.</>,
+          },
+
+          {
+            q: "How can a developer contribute to alphanet?",
             a: (
               <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Alphanet launches on 26th April 2022. Nodes will be operated by Shardeum Foundation
+                during Alphanet. Developers will deploy smart contracts on the network. As a
+                developer you can start developing DApps on Shardeum and the performance data will
+                be analyzed by the Shardeum Foundation dev team to identify improvement
+                opportunities. Since the smart contract is in Solidity and Vyper, developers can
+                also easily migrate their new/existing DApps from another network like Ethereum to
+                Shardeum.
               </>
             ),
           },
 
           {
-            q: "Can you guide me how to build and develop apps in this testnet as I am new and excited about the project?",
+            q: "How do I get access to alphanet? Can you guide me how to build and develop apps during alphanet as I am new and excited about the project?",
             a: (
               <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                The alphanet will be accessible to the public. You just need to configure the
+                JSON-RPC server URL in MetaMask, Remix and other tools you use for development.
+                Click on ‘Developer Docs’ link above which can guide you further.
               </>
             ),
           },
 
           {
-            q: "Will Shardeum maintain atomic composability across different shards?",
+            q: "What rewards can I expect if I build DApps on Shardeum?",
             a: (
               <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                There will be an ecosystem fund setup to reward devs for creating innovative apps on
+                Shardeum. You would be able to apply for a grant. More information will be posted on
+                the Shardeum.org site about the process to apply.
               </>
             ),
           },
-
           {
-            q: "Is the source code open?",
+            q: "I have developed apps on Ethereum. How can I easily migrate them to Shardeum’s testnet?",
             a: (
               <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Since Shardeum is EVM compatible, there is nothing new you have to learn to use the
+                network. On a sharded blockchain, transactions which are EIP2930 compliant will run
+                faster than regular transactions. So you might want to look into this. Information
+                about creating EIP2930 transactions can be found by clicking ‘Developer Docs’ link
+                above.
               </>
             ),
           },

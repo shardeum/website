@@ -44,7 +44,7 @@ function Roadmap() {
               Q2 2022
             </Text>
             <Heading size="2xl" color="brand.white">
-              Product Roadmap of Alphanet
+              Product Roadmap of Shardeum Liberty (Alphanet)
             </Heading>
           </VStack>
           <VStack alignItems="start" spacing="6" w="full">

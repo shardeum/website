@@ -17,6 +17,8 @@ const Hero = ({ heading, description, cta, media }: HeroProps) => {
     <Flex h={["80vh", "90vh"]} justifyContent="center" alignItems="center" mt={{ base: 10, lg: 0 }}>
       <Container maxW="container.xl" mx="auto">
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
+          {/* The content on the left */}
+
           <VStack alignItems={{ base: "center", md: "flex-start" }} spacing={[8]}>
             <VStack spacing={2}>
               <Text
@@ -40,6 +42,8 @@ const Hero = ({ heading, description, cta, media }: HeroProps) => {
             </VStack>
             {cta}
           </VStack>
+
+          {/* The media on the right */}
           {media ? media : <Box h={["60", "80"]} bg="brand.grey-90"></Box>}
         </SimpleGrid>
       </Container>

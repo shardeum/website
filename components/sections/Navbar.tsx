@@ -56,6 +56,7 @@ const Navbar = () => {
             <Link variant="navlink">Language</Link>
 
             <IconButton
+              display={"none"}
               onClick={toggleColorMode}
               aria-label="Switch theme"
               icon={colorMode === THEME.DARK ? <SunIcon /> : <MoonIcon />}

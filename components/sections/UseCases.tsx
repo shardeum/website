@@ -3,14 +3,14 @@ import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra
 type UseCaseItem = {
   title: string;
   description: string;
-  Icon?: React.FunctionComponent;
+  Icon?: React.FunctionComponent | React.ReactNode;
 };
 
 const UseCaseItem = ({ title, description, Icon }: UseCaseItem) => {
   return (
     <VStack alignItems="start">
       <VStack spacing="5" alignItems="start">
-        {Icon && <Icon />}
+        {Icon}
         <Text fontSize="3xl" color="brand.black" fontWeight="bold">
           {title}
         </Text>
@@ -54,10 +54,10 @@ const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
             {descriptiveMedia}
           </SimpleGrid>
         </VStack>
-        <SimpleGrid columns={[1, 2]}>
+        <SimpleGrid columns={[1, 2]} spacingX={30}>
           {content
             ?.filter((useCase, index: number) => (descriptiveMedia ? index !== 0 : true))
-            .map((useCase: any) => (
+            .map((useCase: UseCaseItem) => (
               <Box py="16" borderTop="1px" borderColor="brand.grey-30" key={useCase.title}>
                 <UseCaseItem
                   Icon={useCase.Icon}

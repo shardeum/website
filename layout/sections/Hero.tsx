@@ -18,8 +18,8 @@ const Hero = () => {
       mt={{ base: 20, xl: 0 }}
       bg="brand.black"
     >
-      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, lg: 0 }}>
-        <SimpleGrid columns={[1, null, 1, 2]} gap={["8", "12"]}>
+      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }}>
+        <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]}>
           <VStack alignItems="flex-start" spacing={[8]}>
             <VStack spacing={2} width="100%" maxW={{ base: "md", md: "lg", lg: "full" }}>
               <Text

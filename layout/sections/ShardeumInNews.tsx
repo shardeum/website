@@ -11,7 +11,7 @@ function ShardeumInNews() {
         maxW="container.xl"
         mx="auto"
         py={{ base: "20", lg: "28" }}
-        px={{ base: "6", lg: 0 }}
+        px={{ base: "6", xl: 0 }}
       >
         <Box mb={{ base: "10", md: "20", lg: "32" }}>
           <NewsAppearance sectionTitle="Shardeum In News" />

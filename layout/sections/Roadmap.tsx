@@ -94,7 +94,7 @@ function Roadmap() {
         pb="32"
         position="relative"
         zIndex={2}
-        px={{ base: 6, lg: 0 }}
+        px={{ base: 6, xl: 0 }}
       >
         <VStack spacing="20" alignItems="start" w="full">
           <VStack alignItems="start" spacing="3">

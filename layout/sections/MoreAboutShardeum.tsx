@@ -72,7 +72,7 @@ function MoreAboutShardeum() {
         maxW="container.xl"
         mx="auto"
         py={{ base: "12", md: "16", lg: "32" }}
-        px={{ base: "6", lg: 0 }}
+        px={{ base: "6", xl: 0 }}
       >
         <Box mb="12">
           <SectionHeading color="brand.black">More About Shardeum</SectionHeading>

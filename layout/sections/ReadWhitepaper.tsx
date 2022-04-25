@@ -4,7 +4,7 @@ import Image from "next/image";
 function ReadWhitepaper() {
   return (
     <Box position="relative" overflow="hidden" bg="brand.black">
-      <Box position="absolute" zIndex={1} display={{ base: "none", lg: "block" }}>
+      <Box position="absolute" zIndex={1} display={{ base: "none", xl: "block" }}>
         <Image
           src="/white-paper-bg.png"
           width="700px"
@@ -18,7 +18,7 @@ function ReadWhitepaper() {
         position="absolute"
         top="30%"
         left="6%"
-        display={{ base: "none", lg: "block" }}
+        display={{ base: "none", xl: "block" }}
       >
         <AspectRatio ratio={212 / 215} w="290px" maxW="290px">
           <Image
@@ -42,7 +42,7 @@ function ReadWhitepaper() {
               maxW={{ base: "full", lg: "2xl" }}
               alignItems="start"
               spacing="12"
-              marginLeft="auto"
+              marginLeft={{ xl: "auto" }}
             >
               <Text
                 fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}

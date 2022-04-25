@@ -60,7 +60,7 @@ const SHMTokenomics = () => {
         py={{ base: "14", md: "32", lg: "40" }}
         zIndex={2}
         position="relative"
-        px={{ base: 6, lg: 0 }}
+        px={{ base: 6, xl: 0 }}
       >
         <Box mb="12">
           <SectionHeading color="brand.white">$SHM Tokenomics</SectionHeading>

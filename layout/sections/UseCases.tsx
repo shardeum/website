@@ -74,7 +74,7 @@ const UseCases = () => {
         maxW="container.xl"
         mx="auto"
         py={{ base: "9", md: "20", lg: "32" }}
-        px={{ base: 6, lg: 0 }}
+        px={{ base: 6, xl: 0 }}
       >
         <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">

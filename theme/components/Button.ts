@@ -11,7 +11,7 @@ export const Button: ComponentStyleConfig = {
     fontWeight: "medium",
   },
   variants: {
-    primary: (props) => {
+    primary: () => {
       return {
         backgroundColor: "brand.blue",
         color: "brand.white",
@@ -35,7 +35,7 @@ export const Button: ComponentStyleConfig = {
         backgroundColor: mode("brand.grey-90", "brand.grey-5")(props),
         color: mode("brand.white", "brand.black")(props),
         _hover: {
-          backgroundColor: mode("brand.secondaryHover", "brand.grey-5")(props),
+          backgroundColor: mode("brand.secondaryHover", "brand.grey-30")(props),
         },
         "&:active": {
           backgroundColor: mode("brand.black", "brand.grey-10")(props),

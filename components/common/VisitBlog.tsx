@@ -9,7 +9,14 @@ function VisitBlog() {
         description={`Explore interesting and diverse blog posts about Web 3.0 ecosystem contributed by community/content creators across the world like you`}
       />
       <LightMode>
-        <Button variant="secondary" h="full">
+        <Button
+          variant="secondary"
+          h="full"
+          as="a"
+          href="https://shardeum.org/blog"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Visit Blog
         </Button>
       </LightMode>

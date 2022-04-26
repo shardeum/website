@@ -1,5 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
+import { WHITEPAPER_URL } from "../../constants/links";
 
 function ReadWhitepaper() {
   return (
@@ -58,7 +59,15 @@ function ReadWhitepaper() {
                   community{" "}
                 </Text>{" "}
               </Text>
-              <Button variant="secondary">Read Whitepaper</Button>
+              <Button
+                variant="secondary"
+                as="a"
+                href={WHITEPAPER_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read Whitepaper
+              </Button>
             </VStack>
             {/* When the video is done it will be put here */}
             {/* <Box

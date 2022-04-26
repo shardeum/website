@@ -1,32 +1,30 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Box, Container, Flex, IconButton, Link, Stack, useColorMode } from "@chakra-ui/react";
+import { Box, Container, Flex, Link, Stack } from "@chakra-ui/react";
 import NextLink from "next/link";
-import THEME from "../constants/theme";
+import { BLOG_URL, COMMUNITY_URL, WHITEPAPER_URL } from "../constants/links";
 import Logo from "./common/Logo";
 import MobileDrawer from "./common/MobileDrawer";
 
 const links = [
   {
     title: "Community",
-    link: "#",
+    link: COMMUNITY_URL,
   },
   {
     title: "Whitepaper",
-    link: "#",
+    link: WHITEPAPER_URL,
   },
-  {
-    title: "Learn",
-    link: "#",
-  },
+  // commenting it for now until we have page for it
+  // {
+  //   title: "Learn",
+  //   link: "#",
+  // },
   {
     title: "Blog",
-    link: "#",
+    link: BLOG_URL,
   },
 ];
 
 const Navbar = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
-
   return (
     <Flex bg="brand.black" w="100%" p={2} color="text">
       <Container maxW="container.xl" py="5">
@@ -43,18 +41,13 @@ const Navbar = () => {
             {/* All the links laid out horizontally */}
             {links?.map((link) => (
               <NextLink key={link.title} href={link.link} passHref>
-                <Link variant="navlink">{link.title}</Link>
+                <Link variant="navlink" rel="noopener noreferrer" target="_blank">
+                  {link.title}
+                </Link>
               </NextLink>
             ))}
 
-            {/* Keeping this separate because it will mostly be a switcher */}
             <Link variant="navlink">Language</Link>
-
-            <IconButton
-              onClick={toggleColorMode}
-              aria-label="Switch theme"
-              icon={colorMode === THEME.DARK ? <SunIcon /> : <MoonIcon />}
-            />
           </Stack>
           {/* Will only show on mobile and tablets */}
           <MobileDrawer links={links} />

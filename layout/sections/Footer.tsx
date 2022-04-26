@@ -1,17 +1,18 @@
 import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import Logo from "../../components/common/Logo";
+import { BLOG_URL, COMMUNITY_URL, WHITEPAPER_URL } from "../../constants/links";
 
 const LinksMap = {
   General: [
-    { title: "Home", href: "#" },
-    { title: "Community", href: "#" },
+    { title: "Home", href: "/" },
+    { title: "Community", href: COMMUNITY_URL },
     { title: "Super Shardians", href: "#" },
-    { title: "Blog", href: "#" },
+    { title: "Blog", href: BLOG_URL },
     { title: "Languages", href: "#" },
   ],
   Resources: [
-    { title: "Whitepaper", href: "#" },
+    { title: "Whitepaper", href: WHITEPAPER_URL },
     { title: "FAQ", href: "#" },
     { title: "Brand Asset Page", href: "#" },
     { title: "Public Drive Link", href: "#" },

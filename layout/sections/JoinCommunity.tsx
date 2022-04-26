@@ -8,13 +8,14 @@ import {
   IconTelegram,
   IconTwitter,
 } from "@shm/Icons";
+import { COMMUNITY_URL, GITHUB_URL, TELEGRAM_URL, TWITTER_URL } from "../../constants/links";
 
 const socialLinks = [
-  { Icon: IconDiscord, title: "Discord", href: "https://discord.gg/yWqQZQ" },
-  { Icon: IconTwitter, title: "Twitter", href: "https://discord.gg/yWqQZQ" },
-  { Icon: IconGithub, title: "Github", href: "https://discord.gg/yWqQZQ" },
-  { Icon: IconTelegram, title: "Telegram", href: "https://discord.gg/yWqQZQ" },
-  { Icon: IconSeeMore, title: "See more", href: "https://discord.gg/yWqQZQ" },
+  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL },
+  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL },
+  { Icon: IconGithub, title: "Github", href: GITHUB_URL },
+  { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL },
+  { Icon: IconSeeMore, title: "See more", href: COMMUNITY_URL },
 ];
 
 const JoinCommunity = () => {
@@ -43,14 +44,17 @@ const JoinCommunity = () => {
             </Box>
           </VStack>
           <Flex justifyContent="flex-end">
-            <VStack w="96">
+            <VStack w={{ base: "md", lg: "96" }} mx={{ base: "auto", lg: "0" }}>
               {socialLinks.map((link) => (
-                <Link href="#" passHref key={link.href}>
+                <Link href={link.href} passHref key={link.title}>
                   <HStack
                     as="a"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     w="full"
                     key={link.title}
                     py="5"
+                    _hover={{ opacity: 0.8 }}
                     borderBottom="1px"
                     borderColor="brand.grey-80"
                     justifyContent="space-between"

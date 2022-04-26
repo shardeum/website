@@ -2,6 +2,7 @@ import { AspectRatio, Box, Container, Flex, SimpleGrid, Text, VStack } from "@ch
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "../../components/common/SectionHeading";
+import { COMMUNITY_URL } from "../../constants/links";
 
 function Team() {
   return (
@@ -60,13 +61,15 @@ function Team() {
                     Community is the reason how and why Shardeum will remain decentralized, secure
                     and infinitely scalable
                   </Text>
-                  <Link href="/#" passHref>
+                  <Link href={COMMUNITY_URL} passHref>
                     <Text
                       as="a"
                       color="brand.blue"
                       mt="2"
                       _hover={{ color: "brand.blue-70" }}
                       fontWeight="medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Know More
                     </Text>

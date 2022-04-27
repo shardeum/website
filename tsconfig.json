@@ -16,8 +16,7 @@
     "incremental": true,
     "paths": {
       "@shm/Icons": ["components/common/Icons"],
-      "@/components/*": ["components/*"],
-      "@/layout/*": ["components/*"]
+      "@/components/*": ["components/*"]
     },
     "baseUrl": "."
   },

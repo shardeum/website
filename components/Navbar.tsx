@@ -23,6 +23,10 @@ const links = [
     title: "Blog",
     link: "#",
   },
+  {
+    title: "Language",
+    link: "/language",
+  },
 ];
 
 const Navbar = () => {
@@ -42,10 +46,6 @@ const Navbar = () => {
                 <Link variant="navlink">{link.title}</Link>
               </NextLink>
             ))}
-
-            {/* Keeping this separate because it will mostly be a switcher */}
-            <Link variant="navlink">Language</Link>
-
             <IconButton
               onClick={toggleColorMode}
               aria-label="Switch theme"

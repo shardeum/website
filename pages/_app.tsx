@@ -5,7 +5,7 @@ import customTheme from "../theme";
 import "../styles/satoshi.css";
 import { appWithTranslation } from "next-i18next";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: any) {
   return (
     <ChakraProvider theme={customTheme}>
       <Component {...pageProps} />

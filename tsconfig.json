@@ -15,7 +15,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@shm/Icons": ["components/common/Icons"]
+      "@shm/Icons": ["components/common/Icons"],
+      "@/components/*": ["components/*"],
+      "@/layout/*": ["components/*"]
     },
     "baseUrl": "."
   },

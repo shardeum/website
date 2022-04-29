@@ -2,7 +2,7 @@ import { Box, Button } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
-import Roadmap from "./Roadmap";
+import Roadmap from "../../components/sections/alphanet/Roadmap";
 import UseCases from "components/sections/UseCases";
 import FAQs from "components/sections/FAQs";
 import Image from "next/image";

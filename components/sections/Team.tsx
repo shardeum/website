@@ -1,23 +1,21 @@
-import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { AspectRatio, Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeading from "../../components/common/SectionHeading";
+import { COMMUNITY_URL } from "../../constants/links";
 
 function Team() {
   return (
     <Flex as="section" bg="brand.grey-10">
-      <Container maxW="container.xl" mx="auto" py="28">
+      <Container maxW="container.xl" mx="auto" py={{ base: "20", lg: "24" }}>
         <VStack alignItems="start" spacing="12">
-          <Heading color="brand.black">Team Shardeum</Heading>
+          <SectionHeading color="brand.black">Team Shardeum</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
               <VStack spacing="6">
-                <Image
-                  objectFit="cover"
-                  src="/Nischal.png"
-                  alt="Nischal Image"
-                  width="270px"
-                  height="300px"
-                />
+                <AspectRatio ratio={270 / 300} w="full">
+                  <Image objectFit="cover" src="/Nischal.png" alt="Nischal Image" layout="fill" />
+                </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
                     Nischal Shetty
@@ -29,13 +27,9 @@ function Team() {
                 </VStack>
               </VStack>
               <VStack spacing="6">
-                <Image
-                  objectFit="cover"
-                  src="/Omar.png"
-                  alt="Omar Image"
-                  width="270px"
-                  height="300px"
-                />
+                <AspectRatio ratio={270 / 300} w="full">
+                  <Image objectFit="cover" src="/Omar.png" alt="Omar Image" layout="fill" />
+                </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
                     Omar
@@ -48,15 +42,15 @@ function Team() {
               </VStack>
             </SimpleGrid>
             <VStack spacing="6">
-              <Box maxH="300px" position="relative" width="100%" height="300px">
-                <Image
-                  layout="fill"
-                  objectFit="cover"
-                  src="/community-thumbnail.png"
-                  alt="Community Image"
-                  width="564px"
-                  height="300px"
-                />
+              <Box position="relative" width="100%">
+                <AspectRatio w="full" ratio={564 / 300}>
+                  <Image
+                    layout="fill"
+                    objectFit="cover"
+                    src="/community-thumbnail.png"
+                    alt="Community Image"
+                  />
+                </AspectRatio>
               </Box>
               <VStack alignItems="start">
                 <Text fontSize="xl" color="brand.black" fontWeight="medium">
@@ -67,13 +61,15 @@ function Team() {
                     Community is the reason how and why Shardeum will remain decentralized, secure
                     and infinitely scalable
                   </Text>
-                  <Link href="/#" passHref>
+                  <Link href={COMMUNITY_URL} passHref>
                     <Text
                       as="a"
                       color="brand.blue"
                       mt="2"
                       _hover={{ color: "brand.blue-70" }}
                       fontWeight="medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Know More
                     </Text>

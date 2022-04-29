@@ -1,4 +1,6 @@
 import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import SectionHeading from "../../components/common/SectionHeading";
+import Feature from "../../components/common/Feature";
 
 type UseCaseItem = {
   title: string;
@@ -8,16 +10,18 @@ type UseCaseItem = {
 
 const UseCaseItem = ({ title, description, Icon }: UseCaseItem) => {
   return (
-    <VStack alignItems="start">
-      <VStack spacing="5" alignItems="start">
-        {Icon}
-        <Text fontSize="3xl" color="brand.black" fontWeight="bold">
-          {title}
-        </Text>
-      </VStack>
-      <Text fontSize="xl" color="brand.grey-70" fontWeight="medium" maxW="xl">
-        {description}
-      </Text>
+    <VStack alignItems="start" spacing={{ base: "5" }}>
+      {Icon}
+      <Box pr={{ md: "2", lg: "20" }}>
+        <Feature
+          title={title}
+          titleSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+          description={description}
+          descriptionSize={{
+            md: "xl",
+          }}
+        />
+      </Box>
     </VStack>
   );
 };
@@ -31,15 +35,16 @@ type UseCaseSection = {
 const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="32" pb="32">
-        <VStack spacing="20" alignItems="start" w="full" pb="16">
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        py={{ base: "9", md: "20", lg: "32" }}
+        px={{ base: 6, xl: 0 }}
+      >
+        <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="start" spacing="20">
-              {heading && (
-                <Heading size="2xl" color="brand.grey-90">
-                  {heading}
-                </Heading>
-              )}
+              {heading && <SectionHeading color="brand.grey-90">{heading}</SectionHeading>}
 
               {descriptiveMedia && content?.length && (
                 <UseCaseItem
@@ -51,7 +56,9 @@ const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
             </VStack>
 
             {/* In case an image / descriptive media is present then show it here */}
-            {descriptiveMedia}
+            {descriptiveMedia && (
+              <Box display={{ base: "none", md: "block" }}>{descriptiveMedia}</Box>
+            )}
           </SimpleGrid>
         </VStack>
         <SimpleGrid columns={[1, 2]} spacingX={30}>

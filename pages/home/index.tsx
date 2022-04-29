@@ -2,11 +2,16 @@ import type { NextPage } from "next";
 import { Button } from "@chakra-ui/react";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
-import Roadmap from "pages/home/Roadmap";
+import Roadmap from "components/sections/home/Roadmap";
 import Team from "../../components/sections/Team";
-import UseCases from "components/sections/UseCases";
+import UseCases from "../../components//sections/UseCases";
 import Image from "next/image";
 import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
+import SlidingStats from "components/common/SlidingStats";
+import ReadWhitepaper from "components/sections/home/ReadWhitepaper";
+import MoreAboutShardeum from "../../components/sections/home/MoreAboutShardeum";
+import SHMTokenomics from "components/sections/home/SHMTokenomics";
+import ShardeumInNews from "components/sections/home/ShardeumInNews";
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +28,11 @@ const Home: NextPage = () => {
           </Button>
         }
       />
+
+      <SlidingStats />
+      <ReadWhitepaper />
+      <MoreAboutShardeum />
+      <SHMTokenomics />
 
       {/* Use cases section */}
       <UseCases
@@ -73,6 +83,7 @@ const Home: NextPage = () => {
 
       <Roadmap />
       <Team />
+      <ShardeumInNews />
       <JoinCommunity />
     </>
   );

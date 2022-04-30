@@ -22,3 +22,6 @@ dist/
 .next
 *.tsbuildinfo
 .vercel
+
+sitemap*.xml
+robots.txt

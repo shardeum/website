@@ -1,3 +1,4 @@
+import "swiper/css";
 import {
   AspectRatio,
   Box,

@@ -1,17 +1,18 @@
 import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import Logo from "../../components/common/Logo";
+import Logo from "../common/Logo";
+import { BLOG_URL, COMMUNITY_URL, WHITEPAPER_URL } from "../../constants/links";
 
 const LinksMap = {
   General: [
-    { title: "Home", href: "#" },
-    { title: "Community", href: "#" },
+    { title: "Home", href: "/" },
+    { title: "Community", href: COMMUNITY_URL },
     { title: "Super Shardians", href: "#" },
-    { title: "Blog", href: "#" },
+    { title: "Blog", href: BLOG_URL },
     { title: "Languages", href: "#" },
   ],
   Resources: [
-    { title: "Whitepaper", href: "#" },
+    { title: "Whitepaper", href: WHITEPAPER_URL },
     { title: "FAQ", href: "#" },
     { title: "Brand Asset Page", href: "#" },
     { title: "Public Drive Link", href: "#" },
@@ -33,9 +34,11 @@ function Footer() {
                 <Logo />
               </Box>
             </Link>
-            <Text color="brand.grey-50">Copyright &copy; Shardeum {new Date().getFullYear()}</Text>
+            <Text color="brand.grey-50" display={{ base: "none", md: "block" }}>
+              Copyright &copy; Shardeum {new Date().getFullYear()}
+            </Text>
           </Flex>
-          <SimpleGrid columns={[2, 2, 3]}>
+          <SimpleGrid columns={[2, 2, 3]} gap={{ base: 6 }} rowGap={{ base: 10 }}>
             {Object.entries(LinksMap).map(([title, links]) => {
               return (
                 <VStack alignItems="start" spacing="4" key={title}>
@@ -56,6 +59,9 @@ function Footer() {
             })}
           </SimpleGrid>
         </SimpleGrid>
+        <Text color="brand.grey-50" display={{ md: "none" }} mt="10">
+          Copyright &copy; Shardeum {new Date().getFullYear()}
+        </Text>
       </Container>
     </Flex>
   );

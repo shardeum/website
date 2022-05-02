@@ -15,38 +15,33 @@ type CardProps = {
   name: string;
   description: string;
   category: string;
+  image: string;
 };
 
-const Card = ({ name, description, category }: CardProps) => {
+const Card = ({ name, description, category, image }: CardProps) => {
   return (
-    <Flex pb={[12, 8, 6]} w="full" justifyContent="center" alignItems="center">
-      <Box
-        p={8}
-        bg={useColorModeValue("white", "gray.800")}
-        borderWidth="1px"
-        shadow="lg"
-        position="relative"
-      >
-        <Image src={"/Nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
+    <Box p={8} bg="gray.800" borderWidth="1px" shadow="lg" position="relative">
+      <Image
+        height={"65%"}
+        src={image || "nischal.png"}
+        alt={`Picture of ${name}`}
+        roundedTop="lg"
+      />
 
-        <Box pt={[6, 7, 8]}>
-          <Flex direction="column" justifyContent="space-between" alignContent="center">
-            <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>
-              {name}
-            </Text>
-            <Text pt={[2, 3, 4]} pb={[2, 3, 4]}>
-              {description}
-            </Text>
-            <Flex justifyContent="space-between" alignContent="center">
-              <Badge px={2} py={1} fontWeight={"600"}>
-                {category}
-              </Badge>
-              <Text color="gray.500">Week #3</Text>
-            </Flex>
-          </Flex>
-        </Box>
+      <Box pt={[6, 7, 8]}>
+        <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>
+          {name}
+        </Text>
+        <Text pt={[2, 3, 4]} pb={[2, 3, 4]}>
+          {description}
+        </Text>
+        <Flex>
+          <Badge px={2} py={1} fontWeight={"600"}>
+            {category}
+          </Badge>
+        </Flex>
       </Box>
-    </Flex>
+    </Box>
   );
 };
 

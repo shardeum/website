@@ -46,7 +46,7 @@ const customTheme: ThemeOverride = {
     global: (props) => {
       return {
         body: {
-          bg: mode("brand.white", "brand.black")(props),
+          bg: "brand.black",
         },
       };
     },
@@ -60,7 +60,7 @@ const customTheme: ThemeOverride = {
       },
       error: "red.500",
       text: {
-        default: "gray.900",
+        default: "brand.white",
         _dark: "gray.50",
       },
       linkHover: {

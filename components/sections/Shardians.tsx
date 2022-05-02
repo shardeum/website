@@ -8,7 +8,7 @@ type ShardiansProps = {
 };
 const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps) => {
   return (
-    <Container maxW="container.xl" pt="8" pb="8" as="section">
+    <Container pl={0} pr={0} maxW="container.xl" pt={[6, 8, 12]} pb={[6, 8, 12]}>
       <HStack pb={12}>
         {categories.map((category, index) => {
           return (
@@ -17,6 +17,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
               value={category.name}
               onClick={changeCategory}
               variant={category.selected ? "secondary" : "outline"}
+              fontSize={["sm", "md", "lg"]}
               size="lg"
             >
               {category.name}
@@ -24,7 +25,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
           );
         })}
       </HStack>
-      <SimpleGrid spacingX="30px" columns={[1, 2, 3]}>
+      <SimpleGrid spacing="30px" columns={[1, 2, 3]}>
         {filteredData.map((data, index) => {
           return (
             <Card
@@ -32,6 +33,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
               name={data.name}
               description={data.description}
               category={data.category}
+              image={data.image && data.image[0]?.thumbnails.full.url}
             />
           );
         })}

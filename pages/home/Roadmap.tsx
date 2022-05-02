@@ -64,7 +64,7 @@ function Roadmap() {
             <SimpleGrid columns={[2, 2, 4]} w="full">
               {activeList.map((isActive, index) => (
                 <Box
-                  key={index}
+                  key={"rdmap-" + index}
                   h="0.5"
                   w="100%"
                   bg={isActive ? "brand.orange" : "brand.grey-80"}
@@ -87,7 +87,7 @@ function Roadmap() {
                       </Text>
                     ) : null}
                     {item.taskList.map((task, index) => (
-                      <Text key={index} fontSize="base" color="brand.grey-40" pr="4">
+                      <Text key={"tsk-" + index} fontSize="base" color="brand.grey-40" pr="4">
                         - {task}
                       </Text>
                     ))}
@@ -98,7 +98,13 @@ function Roadmap() {
             <VStack alignItems="start" spacing="6">
               {launchItems.map((item, index) => {
                 return (
-                  <Text key={index} fontSize="xl" color="white" pr="4" fontWeight="medium">
+                  <Text
+                    key={"launchitem-" + index}
+                    fontSize="xl"
+                    color="white"
+                    pr="4"
+                    fontWeight="medium"
+                  >
                     {item}
                   </Text>
                 );

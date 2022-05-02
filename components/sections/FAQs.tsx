@@ -37,7 +37,7 @@ const FAQs = ({ heading, content }: FAQProps) => {
             color="brand.grey-90"
           >
             {content?.map((item, index) => (
-              <AccordionItem key={index} bg="brand.white" mb={4}>
+              <AccordionItem key={"faq-" + index} bg="brand.white" mb={4}>
                 <AccordionButton
                   px={5}
                   py={5}

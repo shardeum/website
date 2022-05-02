@@ -14,25 +14,34 @@ type HeroProps = {
 
 const Hero = ({ heading, description, cta, media }: HeroProps) => {
   return (
-    <Flex h={["80vh", "90vh"]} justifyContent="center" alignItems="center" mt={{ base: 10, lg: 0 }}>
-      <Container maxW="container.xl" mx="auto">
-        <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
-          <VStack alignItems={{ base: "center", md: "flex-start" }} spacing={[8]}>
-            <VStack spacing={2}>
+    <Flex
+      h={["80vh"]}
+      justifyContent="center"
+      alignItems="center"
+      mt={{ base: 20, xl: 0 }}
+      bg="brand.black"
+    >
+      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }}>
+        <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]}>
+          <VStack alignItems="flex-start" spacing={[8]}>
+            <VStack spacing={2} width="100%" maxW={{ base: "md", md: "lg", lg: "full" }}>
               <Text
                 as="h2"
-                textAlign={{ base: "center", md: "left" }}
+                textAlign="left"
                 lineHeight="normal"
-                fontSize={{ base: "4xl", md: "5xl", lg: "7xl" }}
+                fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
                 fontWeight="bold"
-                color="text"
+                width="100%"
+                color="brand.white"
               >
                 {heading}
               </Text>
               <Box maxW={{ base: "md", md: "full" }}>
                 <Text
                   fontSize={{ base: "md", lg: "xl" }}
-                  textAlign={{ base: "center", md: "left" }}
+                  textAlign="left"
+                  lineHeight={{ base: "7", md: "8" }}
+                  color="brand.grey-20"
                 >
                   {description}
                 </Text>
@@ -40,6 +49,8 @@ const Hero = ({ heading, description, cta, media }: HeroProps) => {
             </VStack>
             {cta}
           </VStack>
+
+          {/* The media on the right */}
           {media ? media : <Box h={["60", "80"]} bg="brand.grey-90"></Box>}
         </SimpleGrid>
       </Container>

@@ -20,3 +20,5 @@ dist/
 
 # Build
 .next
+*.tsbuildinfo
+.vercel

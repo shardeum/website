@@ -188,3 +188,109 @@ export const IconWeb3 = () => (
     />
   </svg>
 );
+
+export const IconLeftArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="white"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+  </svg>
+);
+export const IconRightArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="white"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+  </svg>
+);
+
+export const IconCommunity = () => (
+  <svg
+    id="Group_30"
+    data-name="Group 30"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+  >
+    <path id="Path_47" data-name="Path 47" d="M0,0H32V32H0Z" fill="none" />
+    <path
+      id="Path_48"
+      data-name="Path 48"
+      d="M3.8,5.1a8.667,8.667,0,0,1,11.787-.437A8.667,8.667,0,0,1,27.82,16.872L17.466,27.258a2.667,2.667,0,0,1-3.625.136l-.147-.135L3.342,16.872A8.667,8.667,0,0,1,3.8,5.1ZM5.681,6.989a6,6,0,0,0-.195,8.28l.195.205,9.9,9.9L22.652,18.3l-4.713-4.713L16.525,15a4,4,0,1,1-5.659-5.656l2.8-2.8a6,6,0,0,0-7.783.252l-.205.195ZM17,10.76a1.333,1.333,0,0,1,1.885,0l5.656,5.656.944-.941A6,6,0,0,0,17.2,6.794l-.2.195-4.243,4.243a1.333,1.333,0,0,0-.1,1.769l.1.116a1.333,1.333,0,0,0,1.769.1l.116-.1Z"
+      transform="translate(0.419 0.855)"
+      fill="#eee"
+    />
+  </svg>
+);
+
+export const IconGlobe = () => (
+  <svg
+    id="Group_27"
+    data-name="Group 27"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+  >
+    <path id="Path_42" data-name="Path 42" d="M0,0H32V32H0Z" fill="none" />
+    <path
+      id="Path_43"
+      data-name="Path 43"
+      d="M15.333,28.667A13.333,13.333,0,1,1,28.667,15.333,13.333,13.333,0,0,1,15.333,28.667ZM12.28,25.556a23.867,23.867,0,0,1-2.244-8.889H4.749a10.677,10.677,0,0,0,7.531,8.889Zm.427-8.889a21.22,21.22,0,0,0,2.627,9,21.207,21.207,0,0,0,2.627-9H12.707Zm13.211,0H20.631a23.867,23.867,0,0,1-2.244,8.889A10.677,10.677,0,0,0,25.917,16.667ZM4.749,14h5.287A23.867,23.867,0,0,1,12.28,5.111,10.677,10.677,0,0,0,4.749,14Zm7.959,0h5.251a21.207,21.207,0,0,0-2.625-9,21.207,21.207,0,0,0-2.627,9Zm5.679-8.889A23.867,23.867,0,0,1,20.631,14h5.287a10.677,10.677,0,0,0-7.531-8.889Z"
+      transform="translate(0.667 0.667)"
+      fill="#e0e0e0"
+    />
+  </svg>
+);
+
+export const IconTransaction = () => (
+  <svg
+    id="Group_28"
+    data-name="Group 28"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+  >
+    <path id="Path_44" data-name="Path 44" d="M0,0H32V32H0Z" fill="none" />
+    <path
+      id="Path_45"
+      data-name="Path 45"
+      d="M15.333,28.667A13.333,13.333,0,1,1,28.667,15.333,13.333,13.333,0,0,1,15.333,28.667Zm0-2.667A10.667,10.667,0,1,0,4.667,15.333,10.667,10.667,0,0,0,15.333,26Zm0-17.267,6.6,6.6-6.6,6.6-6.6-6.6Zm0,3.772-2.828,2.828,2.828,2.828,2.828-2.828Z"
+      transform="translate(0.667 0.667)"
+      fill="#e0e0e0"
+    />
+  </svg>
+);
+
+export const IconHamburger = () => (
+  <svg
+    id="Group_128"
+    data-name="Group 128"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path id="Path_129" data-name="Path 129" d="M0,0H24V24H0Z" fill="none" />
+    <path
+      id="Path_130"
+      data-name="Path 130"
+      d="M3,4H21V6H3Zm6,7H21v2H9ZM3,18H21v2H3Z"
+      fill="#fafafa"
+    />
+  </svg>
+);

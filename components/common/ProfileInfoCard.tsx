@@ -20,13 +20,8 @@ type CardProps = {
 
 const Card = ({ name, description, category, image }: CardProps) => {
   return (
-    <Box p={8} bg="gray.800" borderWidth="1px" shadow="lg" position="relative">
-      <Image
-        height={"65%"}
-        src={image || "nischal.png"}
-        alt={`Picture of ${name}`}
-        roundedTop="lg"
-      />
+    <Box p={8} bg="gray.800" shadow="lg" position="relative">
+      <Image src={image || "nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
 
       <Box pt={[6, 7, 8]}>
         <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>

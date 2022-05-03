@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Container, Flex, Grid, Heading, VStack } from "@chakra-ui/react";
+import { AspectRatio, Box, Container, Flex, Grid, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Feature from "../../common/Feature";
 import SectionHeading from "../../common/SectionHeading";

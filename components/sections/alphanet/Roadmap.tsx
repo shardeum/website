@@ -1,5 +1,14 @@
-import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  ListItem,
+  SimpleGrid,
+  Text,
+  UnorderedList,
+  VStack,
+} from "@chakra-ui/react";
 
 const roadmapList = [
   {

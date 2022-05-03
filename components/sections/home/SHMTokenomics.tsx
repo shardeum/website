@@ -1,5 +1,4 @@
 import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
-import { useNewsletter } from "@shm/hooks";
 import { getPercentage } from "@shm/utils";
 import SectionHeading from "components/common/SectionHeading";
 import Image from "next/image";
@@ -39,11 +38,6 @@ const bars = [
 ];
 
 const SHMTokenomics = () => {
-  const {
-    handleSubmit,
-    form: { error, status, value, success },
-    handleOnChange,
-  } = useNewsletter();
   return (
     <Box position="relative" overflow="hidden" bg="brand.black">
       <Box

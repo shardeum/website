@@ -7,10 +7,49 @@ import UseCases from "components/sections/UseCases";
 import FAQs from "components/sections/FAQs";
 import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
+import { NextSeo } from "next-seo";
 
 const AlphanetLanding: NextPage = () => {
   return (
     <>
+      <NextSeo
+        title="Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum"
+        description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
+        canonical="https://shardeum.org/shardeum-liberty-alphanet/"
+        additionalMetaTags={[
+          {
+            property: "keywords",
+            content:
+              "shardeum, shardeum liberty, testnet, alphanet, blockchain,layer1 blockchain,evm compatible blockchain",
+          },
+          {
+            property: "twitter:image",
+            content: "https://shardeum.org/shardeum-liberty.jpeg",
+          },
+        ]}
+        openGraph={{
+          url: "https://shardeum.org/shardeum-liberty-alphanet/",
+          title:
+            "Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3",
+          description: "Open Graph Description",
+          images: [
+            {
+              url: "https://shardeum.org/shardeum-liberty.jpeg",
+              width: 800,
+              height: 600,
+              alt: "Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum",
+              type: "image/jpeg",
+            },
+          ],
+          site_name: "Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "https://shardeum.org",
+          handle: "@shardeum",
+        }}
+      />
+
       {/* Hero section */}
       <Hero
         heading={"Shardeum Liberty (Alphanet) is Live!"}

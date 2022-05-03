@@ -7,7 +7,7 @@ import MobileDrawer from "components/common/MobileDrawer";
 const links = [
   {
     title: "Alphanet",
-    link: "/alphanet",
+    link: "/shardeum-liberty-alphanet",
     newPage: false,
   },
   {

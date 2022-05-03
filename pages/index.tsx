@@ -42,9 +42,8 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               h={{ base: "150px", md: "250px", xl: "auto" }}
               overflow="hidden"
               mb={{ base: "-24px" }}
-              // maxW={{ lg: "1446px" }}
               mx="auto"
-              transform={{ base: "scale(1.2)", md: "scale(1)" }}
+              transform={{ md: "scale(1)" }}
             >
               <video loop autoPlay muted>
                 <source src="/hero-globe.mp4" type="video/mp4" />

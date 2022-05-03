@@ -57,7 +57,14 @@ const AlphanetLanding: NextPage = () => {
           "Shardeum is the world's first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever. The network aims to onboard billions of daily users and numerous DApps to Web 3 in the future. We take this opportunity to invite you to build your DApps and other web 3 utilities on Shardeum using the guidelines documented under ‘Developer Docs’ below"
         }
         cta={
-          <Button variant="primary" size="lg">
+          <Button
+            as="a"
+            variant="primary"
+            size="lg"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://docs.shardeum.org/"
+          >
             Developer Docs
           </Button>
         }

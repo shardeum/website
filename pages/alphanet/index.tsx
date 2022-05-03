@@ -6,6 +6,7 @@ import Roadmap from "../../components/sections/alphanet/Roadmap";
 import UseCases from "components/sections/UseCases";
 import FAQs from "components/sections/FAQs";
 import Image from "next/image";
+import { AlphanetFeatureIcons } from "@shm/Icons";
 
 const AlphanetLanding: NextPage = () => {
   return (
@@ -41,38 +42,38 @@ const AlphanetLanding: NextPage = () => {
             title: "Developer Friendly Languages",
             description:
               "Shardeum’s smart contract platforms are - EVM based - deployed in developer friendly smart contract languages - Solidity & Vyper.",
-            Icon: <Image src="/alphanet/alphanet-feature-1.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "1" }),
           },
           {
             title: "Unrivaled Scalability through Dynamic State Sharding",
             description:
               "Dynamic state sharding allows Shardeum to scale linearly in which throughput increases by simply adding more nodes to the network. This further ensures gas fees on the network remain very low forever with high decentralization regardless of how many people use it in the future.",
-            Icon: <Image src="/alphanet/alphanet-feature-2.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "2" }),
           },
 
           {
             title: "Unique Consensus Algorithm",
             description:
               "Shardeum’s unique technology is complemented with a unique consensus algorithm that combines Proof-of-Quorum (PoQ) with Proof-of-Stake (PoS) to secure the network. Consensus on the network is done at the transaction level and transactions are processed simultaneously across shards. This results in immediate finality and low latency which helps to prevent network congestion.",
-            Icon: <Image src="/alphanet/alphanet-feature-3.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "3" }),
           },
           {
             title: "Quick & Easy Migration",
             description:
               "Shardeum is EVM based smart contract platform which means you can launch and develop your Ethereum DApps on the network seamlessly.",
-            Icon: <Image src="/alphanet/alphanet-feature-4.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "4" }),
           },
           {
             title: "Affordable P2P Transfers",
             description:
               "Shardeum’s high throughput with low gas fees paves the way for global-scale adoption, redefining the landscape of cross-border payments and settlements. This will be truly liberating for billions of people in the years to come.",
-            Icon: <Image src="/alphanet/alphanet-feature-5.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "5" }),
           },
           {
             title: "DeFi, NFT & Other Web 3 Apps",
             description:
               "The current Web 3 landscape is bottlenecked by high gas fees and low throughput with repetitive performance issues. Shardeum aims to accelerate the transition to Web 3 by providing an integrated, interoperable, and permissionless network which scales horizontally with optimal capacity and constant bandwidth.",
-            Icon: <Image src="/alphanet/alphanet-feature-6.svg" height={50} width={50} />,
+            Icon: () => AlphanetFeatureIcons({ id: "6" }),
           },
         ]}
       />

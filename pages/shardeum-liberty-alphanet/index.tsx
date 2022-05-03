@@ -8,6 +8,7 @@ import FAQs from "components/sections/FAQs";
 import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
 import { NextSeo } from "next-seo";
+import { DOCS_URL } from "constants/links";
 
 const AlphanetLanding: NextPage = () => {
   return (
@@ -63,7 +64,7 @@ const AlphanetLanding: NextPage = () => {
             size="lg"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://docs.shardeum.org/"
+            href={DOCS_URL}
           >
             Developer Docs
           </Button>

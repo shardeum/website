@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const IconSeeMore = () => (
   <svg
     id="Group_13"
@@ -326,3 +328,9 @@ export const teamSocialIcons = {
     </svg>
   ),
 };
+
+export const AlphanetFeatureIcons = ({ id }: { id: string }) => (
+  <>
+    <Image src={`/alphanet/alphanet-feature-${id}.svg`} height={50} width={50} />
+  </>
+);

@@ -26,6 +26,13 @@ const defaultSEOValues: DefaultSeoProps = {
     site: "https://shardeum.org",
     handle: "@shardeum",
   },
+
+  additionalMetaTags: [
+    {
+      property: "keywords",
+      content: "shardeum,blockchain,layer1 blockchain,evm compatible blockchain",
+    },
+  ],
 };
 
 export default defaultSEOValues;

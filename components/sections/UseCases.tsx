@@ -5,13 +5,13 @@ import SectionHeading from "../../components/common/SectionHeading";
 type UseCaseItem = {
   title: string;
   description: string;
-  Icon?: React.FunctionComponent | React.ReactNode;
+  Icon?: React.FunctionComponent;
 };
 
 const UseCaseItem = ({ title, description, Icon }: UseCaseItem) => {
   return (
     <VStack alignItems="start" spacing={{ base: "5" }}>
-      {Icon}
+      {Icon && <Icon />}
       <Box pr={{ md: "2", lg: "20" }}>
         <Feature
           title={title}

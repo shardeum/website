@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
 import Roadmap from "components/sections/home/Roadmap";
@@ -12,7 +12,6 @@ import ReadWhitepaper from "components/sections/home/ReadWhitepaper";
 import MoreAboutShardeum from "../../components/sections/home/MoreAboutShardeum";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import ShardeumInNews from "components/sections/home/ShardeumInNews";
-import NewsletterInput from "../../components/common/NewsletterInput";
 
 const Home: NextPage = () => {
   return (
@@ -23,19 +22,26 @@ const Home: NextPage = () => {
         description={
           "Shardeum is the first linearly scalable smart contract blockchain being built by the people for the people"
         }
-        h={{ base: "auto", lg: "80vh" }}
+        h={{ base: "auto", xl: "80vh" }}
         cta={
-          <Box maxW={{ base: "md", md: "lg", lg: "full" }} w="full">
-            <NewsletterInput type="newsletterHero" />
-          </Box>
+          <Button
+            as="a"
+            variant="primary"
+            size="lg"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://shardeum.org/shardeum-liberty-alphanet"
+          >
+            Join Shardeum Liberty Testnet
+          </Button>
         }
         media={
           <Box position="relative">
             <Box
-              h={{ base: "150px", md: "350px", xl: "auto" }}
+              h={{ base: "150px", md: "250px", xl: "auto" }}
               overflow="hidden"
-              margin={{ base: "-24px" }}
-              maxW={{ lg: "1446px" }}
+              mb={{ base: "-24px" }}
+              // maxW={{ lg: "1446px" }}
               mx="auto"
               transform={{ base: "scale(1.2)", md: "scale(1)" }}
             >

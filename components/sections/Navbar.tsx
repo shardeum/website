@@ -55,7 +55,7 @@ const Navbar = () => {
               </NextLink>
             ))}
 
-            <Link variant="navlink">Language</Link>
+            {/* <Link variant="navlink">Language</Link> */}
           </Stack>
           {/* Will only show on mobile and tablets */}
           <MobileDrawer links={links} />

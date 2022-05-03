@@ -1,6 +1,6 @@
-import { Box, Container, Flex, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import SectionHeading from "../../components/common/SectionHeading";
+import { Box, Container, Flex, SimpleGrid, VStack } from "@chakra-ui/react";
 import Feature from "../../components/common/Feature";
+import SectionHeading from "../../components/common/SectionHeading";
 
 type UseCaseItem = {
   title: string;

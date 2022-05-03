@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Link, Stack } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { BLOG_URL, COMMUNITY_URL, WHITEPAPER_URL } from "../../constants/links";
+import { BLOG_URL, COMMUNITY_URL, LITEPAPER_URL } from "../../constants/links";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 
@@ -8,23 +8,28 @@ const links = [
   {
     title: "Alphanet",
     link: "/alphanet",
+    newPage: false,
   },
   {
     title: "Community",
     link: COMMUNITY_URL,
+    newPage: true,
   },
   {
-    title: "Whitepaper",
-    link: WHITEPAPER_URL,
+    title: "Litepaper",
+    link: LITEPAPER_URL,
+    newPage: true,
   },
   // commenting it for now until we have page for it
   // {
   //   title: "Learn",
   //   link: "#",
+  // newPage:false,
   // },
   {
     title: "Blog",
     link: BLOG_URL,
+    newPage: true,
   },
 ];
 
@@ -49,13 +54,17 @@ const Navbar = () => {
             {/* All the links laid out horizontally */}
             {links?.map((link) => (
               <NextLink key={link.title} href={link.link} passHref>
-                <Link variant="navlink" rel="noopener noreferrer" target="_blank">
+                <Link
+                  variant="navlink"
+                  rel="noopener noreferrer"
+                  target={link.newPage ? "_blank" : "_self"}
+                >
                   {link.title}
                 </Link>
               </NextLink>
             ))}
 
-            <Link variant="navlink">Language</Link>
+            {/* <Link variant="navlink">Language</Link> */}
           </Stack>
           {/* Will only show on mobile and tablets */}
           <MobileDrawer links={links} />

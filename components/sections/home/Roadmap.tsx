@@ -101,7 +101,7 @@ function Roadmap() {
             <Text fontSize="sm" color="brand.orange">
               2022
             </Text>
-            <Heading size="2xl" color="brand.white">
+            <Heading size="2xl" color="brand.white" as="h3">
               Roadmap
             </Heading>
           </VStack>
@@ -113,6 +113,7 @@ function Roadmap() {
             }}
             w="full"
             overflowX="scroll"
+            className="no-scrollbar"
             gridAutoFlow="column"
             gridAutoColumns={{
               base: "minmax(290px, 1fr)",

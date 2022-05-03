@@ -37,7 +37,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
               {links.map((item) => (
                 <Flex key={item.title} w="full" justifyContent="flex-end">
                   <Link href={item.link} passHref>
-                    <Button variant="text" as="a" textAlign="end">
+                    <Button variant="text" as="a" textAlign="end" onClick={onClose}>
                       {item.title}
                     </Button>
                   </Link>

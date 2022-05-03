@@ -1,6 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { WHITEPAPER_URL } from "constants/links";
+import { LITEPAPER_URL } from "constants/links";
 
 function ReadWhitepaper() {
   return (
@@ -27,6 +27,7 @@ function ReadWhitepaper() {
             objectFit="contain"
             alt="animating Shardeum Slogan"
             layout="fill"
+            className="rotate-360"
           />
         </AspectRatio>
       </Box>
@@ -62,11 +63,11 @@ function ReadWhitepaper() {
               <Button
                 variant="secondary"
                 as="a"
-                href={WHITEPAPER_URL}
+                href={LITEPAPER_URL}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read Whitepaper
+                Read Litepaper
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

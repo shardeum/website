@@ -8,7 +8,7 @@ type Props = {
 
 function SectionHeading({ color, children }: Props) {
   return (
-    <Heading color={color} fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}>
+    <Heading color={color} fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} as="h3">
       {children}
     </Heading>
   );

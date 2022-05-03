@@ -43,10 +43,10 @@ const customTheme: ThemeOverride = {
     initialColorMode: THEME.DARK as ConfigColorMode,
   },
   styles: {
-    global: (props) => {
+    global: () => {
       return {
         body: {
-          bg: mode("brand.white", "brand.black")(props),
+          bg: "brand.black",
         },
       };
     },

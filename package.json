@@ -10,6 +10,7 @@
     "format:check": "npx prettier -c \"**/*.{js,jsx,json,ts,tsx}\"   ",
     "format": "npx prettier -w \"**/*.{js,jsx,json,ts,tsx}\"",
     "prepare": "husky install",
+    "postbuild": "next-sitemap",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "eslint-plugin-react": "^7.29.4",
     "framer-motion": "^6.2.8",
     "next": "12.0.10",
+    "next-seo": "^5.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-error-boundary": "^3.1.4",
@@ -42,6 +44,7 @@
     "eslint-config-next": "12.0.10",
     "husky": "^7.0.0",
     "lint-staged": ">=10",
+    "next-sitemap": "^2.5.20",
     "prettier": "2.6.1",
     "typescript": "4.5.5"
   },

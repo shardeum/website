@@ -89,6 +89,7 @@ function MoreAboutShardeum() {
           gridAutoColumns={{
             base: "minmax(290px, 1fr)",
           }}
+          className="no-scrollbar"
         >
           {featureList.map((feature) => (
             <FeatureCard

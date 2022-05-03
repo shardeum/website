@@ -1,8 +1,19 @@
-import { AspectRatio, Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Container,
+  Flex,
+  HStack,
+  SimpleGrid,
+  Text,
+  VStack,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "../../components/common/SectionHeading";
 import { COMMUNITY_URL } from "../../constants/links";
+import { teamSocialIcons } from "@shm/Icons";
 
 function Team() {
   return (
@@ -12,7 +23,7 @@ function Team() {
           <SectionHeading color="brand.black">Team Shardeum</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
-              <VStack spacing="6">
+              <VStack spacing="6" alignItems="start">
                 <AspectRatio ratio={270 / 300} w="full">
                   <Image objectFit="cover" src="/Nischal.png" alt="Nischal Image" layout="fill" />
                 </AspectRatio>
@@ -25,8 +36,26 @@ function Team() {
                     India
                   </Text>
                 </VStack>
+                <HStack>
+                  <ChakraLink
+                    pr="4"
+                    href="https://twitter.com/NischalShetty"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {teamSocialIcons.twitter}
+                  </ChakraLink>
+                  <ChakraLink
+                    pr="4"
+                    href="https://www.linkedin.com/in/nischalshetty/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {teamSocialIcons.linkedIn}
+                  </ChakraLink>
+                </HStack>
               </VStack>
-              <VStack spacing="6">
+              <VStack spacing="6" alignItems="start">
                 <AspectRatio ratio={270 / 300} w="full">
                   <Image objectFit="cover" src="/Omar.png" alt="Omar Image" layout="fill" />
                 </AspectRatio>
@@ -39,6 +68,24 @@ function Team() {
                     working at NASA, Yahoo and Zynga
                   </Text>
                 </VStack>
+                <HStack>
+                  <ChakraLink
+                    pr="4"
+                    href="https://twitter.com/OmarUnblocked"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {teamSocialIcons.twitter}
+                  </ChakraLink>
+                  <ChakraLink
+                    pr="4"
+                    href="https://www.linkedin.com/in/omarsyed1/  "
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {teamSocialIcons.linkedIn}
+                  </ChakraLink>
+                </HStack>
               </VStack>
             </SimpleGrid>
             <VStack spacing="6">

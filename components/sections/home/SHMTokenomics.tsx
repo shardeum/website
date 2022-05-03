@@ -1,7 +1,8 @@
 import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
 import { getPercentage } from "@shm/utils";
-import Image from "next/image";
 import SectionHeading from "components/common/SectionHeading";
+import Image from "next/image";
+import NewsletterInput from "../../common/NewsletterInput";
 
 const bars = [
   {
@@ -161,6 +162,22 @@ const SHMTokenomics = () => {
             </GridItem>
           ))}
         </Grid>
+
+        <VStack spacing="6" maxW={{ base: "xl", lg: "3xl" }} mx="auto">
+          <VStack
+            alignItems={{ base: "left", md: "center" }}
+            spacing="6"
+            mt="20"
+            maxWidth="2xl"
+            mx="auto"
+            w="full"
+          >
+            <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
+              Want to invest in $SHM early? Drop your email
+            </Text>
+          </VStack>
+          <NewsletterInput type="investment" />
+        </VStack>
       </Container>
     </Box>
   );

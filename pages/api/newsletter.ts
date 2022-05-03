@@ -1,10 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { isValidEmail } from "@shm/utils";
 import axios from "axios";
+import { sourceToListIdMap } from "../../constants/common";
+import { validSources } from "../../types";
 
 const API = process.env.NEXT_PUBLIC_SENDINBLUE_API_KEY as string;
 
-function addEmailAsContact(email: string) {
+function addEmailAsContact(email: string, sources: validSources[]) {
   const REQUEST_URL = "https://api.sendinblue.com/v3/contacts";
   return axios({
     url: REQUEST_URL,
@@ -16,9 +18,12 @@ function addEmailAsContact(email: string) {
     },
     data: {
       email,
+      listIds: sources.map((src) => sourceToListIdMap[src]),
     },
   });
 }
+
+const validateSource = (source: validSources[]) => source.every((src) => src in sourceToListIdMap);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
@@ -26,13 +31,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       message: "Method not allowed",
     });
   }
-  const { email } = req.body;
+  const { email, source: sources } = req.body;
   if (!isValidEmail(email)) {
     return res.status(400).json({ error: "Invalid email" });
   }
 
+  if (!validateSource(sources) || !Array.isArray(sources)) {
+    return res.status(400).json({ error: "Invalid payload" });
+  }
+
   try {
-    const response = await addEmailAsContact(email);
+    const response = await addEmailAsContact(email, sources);
     if (response.status === 201) {
       return res.status(201).json({ message: "Success" });
     }

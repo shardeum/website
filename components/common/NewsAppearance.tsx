@@ -1,3 +1,4 @@
+import "swiper/css";
 import {
   AspectRatio,
   Box,
@@ -9,12 +10,12 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
-import { useNewsList } from "@shm/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { IconLeftArrow, IconRightArrow } from "./Icons";
 import SectionHeading from "./SectionHeading";
+import { NewsItem } from "../../types";
 
 const SliderButtons = () => {
   const swiper = useSwiper();
@@ -63,7 +64,7 @@ const NewsItem = ({
           </Text>
         </Box>
       </Flex>
-      <Flex mt="6">
+      <Flex mt="6" alignItems="start" w="full">
         <Text fontSize={{ base: "xl", md: "2xl" }} color="brand.black" fontWeight="medium">
           {title}
         </Text>
@@ -72,9 +73,8 @@ const NewsItem = ({
   </Link>
 );
 
-const NewsAppearance = ({ sectionTitle }: { sectionTitle: string }) => {
+const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: NewsItem[] }) => {
   const slidesPerView = useBreakpointValue({ base: 1, md: 2 });
-  const { data } = useNewsList();
 
   return (
     <Box>
@@ -93,7 +93,7 @@ const NewsAppearance = ({ sectionTitle }: { sectionTitle: string }) => {
             </HStack>
           </VStack>
         </Box>
-        {data.map((item) => (
+        {news.map((item) => (
           <SwiperSlide key={item.title}>
             <NewsItem
               title={item.title}

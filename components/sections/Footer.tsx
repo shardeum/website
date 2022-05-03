@@ -1,25 +1,30 @@
 import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import Logo from "../common/Logo";
-import { BLOG_URL, COMMUNITY_URL, WHITEPAPER_URL } from "../../constants/links";
+import {
+  BLOG_URL,
+  COMMUNITY_URL,
+  FAQ_URL,
+  GENERAL_QUERIES_LINK,
+  INVESTMENT_QUERY_LINK,
+  PUBLIC_DRIVE_LINK,
+  LITEPAPER_URL,
+} from "../../constants/links";
 
 const LinksMap = {
   General: [
     { title: "Home", href: "/" },
     { title: "Community", href: COMMUNITY_URL },
-    { title: "Super Shardians", href: "#" },
     { title: "Blog", href: BLOG_URL },
-    { title: "Languages", href: "#" },
   ],
   Resources: [
-    { title: "Whitepaper", href: WHITEPAPER_URL },
-    { title: "FAQ", href: "#" },
-    { title: "Brand Asset Page", href: "#" },
-    { title: "Public Drive Link", href: "#" },
+    { title: "Litepaper", href: LITEPAPER_URL },
+    { title: "FAQ", href: FAQ_URL },
+    { title: "Public Drive Link", href: PUBLIC_DRIVE_LINK },
   ],
   Contact: [
-    { title: "General Enquiries", href: "#" },
-    { title: "Investment Purpose", href: "#" },
+    { title: "General Enquiries", href: GENERAL_QUERIES_LINK },
+    { title: "Investment Purpose", href: INVESTMENT_QUERY_LINK },
   ],
 };
 
@@ -47,7 +52,7 @@ function Footer() {
                   </Text>
                   <VStack spacing="3" alignItems="start">
                     {links.map((link) => (
-                      <Link href={link.href} passHref key={link.href}>
+                      <Link href={link.href} passHref key={link.title}>
                         <Text as="a" color="brand.grey-50" _hover={{ color: "brand.grey-30" }}>
                           {link.title}
                         </Text>

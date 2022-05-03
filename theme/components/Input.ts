@@ -1,26 +1,27 @@
 import { ComponentStyleConfig } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const Input: ComponentStyleConfig = {
-  baseStyle: {
+  baseStyle: (props) => ({
     field: {
       borderWidth: 1,
       borderColor: "transparent",
       _focus: {
-        borderColor: "brand.blue",
+        borderColor: mode("brand.blue", "brand.blue")(props),
         borderWidth: 1,
       },
       _placeholder: {
-        color: "brand.grey-60",
+        color: mode("brand.grey-60", "brand.grey-10")(props),
       },
       padding: "20px 24px",
-      bgColor: "brand.grey-30",
-      color: "brand.grey-90",
+      bgColor: mode("brand.grey-30", "brand.grey-80")(props),
+      color: mode("brand.grey-90", "brand.grey-20")(props),
       fontWeight: "medium",
     },
-  },
+  }),
   sizes: {},
   defaultProps: {
-    variant: null,
+    variant: "light",
     size: null,
     errorBorderColor: "red",
   },

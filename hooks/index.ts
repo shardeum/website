@@ -1,3 +1,4 @@
 import useNewsList from "./useNewsList";
+import useNewsletter from "./useNewsletter";
 
-export { useNewsList };
+export { useNewsList, useNewsletter };

@@ -64,7 +64,7 @@ const NewsItem = ({
           </Text>
         </Box>
       </Flex>
-      <Flex mt="6">
+      <Flex mt="6" alignItems="start" w="full">
         <Text fontSize={{ base: "xl", md: "2xl" }} color="brand.black" fontWeight="medium">
           {title}
         </Text>

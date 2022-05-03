@@ -1,6 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { WHITEPAPER_URL } from "constants/links";
+import { LITEPAPER_URL } from "constants/links";
 
 function ReadWhitepaper() {
   return (
@@ -63,7 +63,7 @@ function ReadWhitepaper() {
               <Button
                 variant="secondary"
                 as="a"
-                href={WHITEPAPER_URL}
+                href={LITEPAPER_URL}
                 rel="noopener noreferrer"
                 target="_blank"
               >

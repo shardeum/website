@@ -1,4 +1,4 @@
-export const WHITEPAPER_URL =
+export const LITEPAPER_URL =
   "https://shardeum.org/wp-content/uploads/2022/03/Shardeum-Litepaper.pdf";
 export const COMMUNITY_URL = "https://discord.gg/shardeum";
 export const TWITTER_URL = "https://twitter.com/shardeum";

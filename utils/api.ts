@@ -21,7 +21,7 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
   const data: any[] = [];
   const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return new Promise((resolve, reject) => {
-    base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_NAME as string)
+    base(process.env.NEXT_PUBLIC_AIRTABLE_NEWS_BASE_NAME as string)
       .select({
         view: "Grid view",
       })
@@ -31,13 +31,16 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
             const title = record.get("Title");
             const SiteName = record.get("Site Name & Date");
             const image: any = record.get("Image");
+            const isPosted: any = record.get("isPosted");
             const newsURL = record.get("News URL");
-            data.push({
-              title,
-              siteName: SiteName,
-              imageURL: image?.[0]?.thumbnails?.large?.url,
-              newsURL,
-            });
+            if (isPosted) {
+              data.push({
+                title,
+                siteName: SiteName,
+                imageURL: image?.[0]?.thumbnails?.large?.url,
+                newsURL,
+              });
+            }
           });
           fetchNextPage();
         },

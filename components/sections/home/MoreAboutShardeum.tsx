@@ -79,13 +79,11 @@ function MoreAboutShardeum() {
         </Box>
         <Grid
           templateColumns={{
-            base: "repeat(auto-fill, minmax(290px, 1fr))",
-            md: "repeat(auto-fill, minmax(340px, 1fr))",
+            md: "repeat(2, 1fr)",
             lg: "repeat(3, 1fr)",
           }}
           gap="6"
           overflowX="scroll"
-          gridAutoFlow={{ base: "column", lg: "row" }}
           gridAutoColumns={{
             base: "minmax(290px, 1fr)",
           }}

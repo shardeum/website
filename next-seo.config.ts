@@ -15,7 +15,7 @@ const defaultSEOValues: DefaultSeoProps = {
       "Shardeum is the world's first EVM based L1 blockchain that truly solves scalability trilemma with linear scaling and low gas fees forever",
     images: [
       {
-        url: "https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png",
+        url: "https://shardeum.org/Shardeum.png",
         alt: "Shardeum Image",
       },
     ],

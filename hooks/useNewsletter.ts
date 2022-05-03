@@ -53,7 +53,7 @@ const useNewsLetterForm = () => {
         }));
         return;
       }
-      setEmail({ ...email, value: "", success: "Thank you for subscribing. Have a nice day :)" });
+      setEmail({ ...email, value: "", success: "🎉 Subscribed! Have a nice day :)" });
       return;
     }
 

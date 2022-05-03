@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
 import Roadmap from "components/sections/home/Roadmap";
@@ -12,6 +12,7 @@ import ReadWhitepaper from "components/sections/home/ReadWhitepaper";
 import MoreAboutShardeum from "../../components/sections/home/MoreAboutShardeum";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import ShardeumInNews from "components/sections/home/ShardeumInNews";
+import NewsletterInput from "../../components/common/NewsletterInput";
 
 const Home: NextPage = () => {
   return (
@@ -23,9 +24,9 @@ const Home: NextPage = () => {
           "Shardeum is the first linearly scalable smart contract blockchain being built by the people for the people"
         }
         cta={
-          <Button variant="secondary" size="lg">
-            Join Discord
-          </Button>
+          <Box maxW="3xl" w="full">
+            <NewsletterInput type="newsletterHero" />
+          </Box>
         }
       />
 

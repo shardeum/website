@@ -1,22 +1,9 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  FormControl,
-  FormHelperText,
-  Grid,
-  GridItem,
-  HStack,
-  Input,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { getPercentage } from "@shm/utils";
-import Image from "next/image";
-import SectionHeading from "components/common/SectionHeading";
-import { IconRightArrow } from "@shm/Icons";
+import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
 import { useNewsletter } from "@shm/hooks";
+import { getPercentage } from "@shm/utils";
+import SectionHeading from "components/common/SectionHeading";
+import Image from "next/image";
+import NewsletterInput from "../../common/NewsletterInput";
 
 const bars = [
   {
@@ -181,53 +168,22 @@ const SHMTokenomics = () => {
             </GridItem>
           ))}
         </Grid>
-        {success ? (
-          <VStack alignItems="center" spacing="6" mt="20" maxWidth="2xl" mx="auto" w="full">
-            <Text fontSize={{ base: "xl", lg: "xl" }}>✅ Subscribed </Text>
+
+        <VStack spacing="6" maxW={{ base: "xl", lg: "3xl" }} mx="auto">
+          <VStack
+            alignItems={{ base: "left", md: "center" }}
+            spacing="6"
+            mt="20"
+            maxWidth="2xl"
+            mx="auto"
+            w="full"
+          >
+            <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
+              Want to invest in $SHM early? Drop your email
+            </Text>
           </VStack>
-        ) : (
-          <VStack spacing="6" maxW="3xl" mx="auto">
-            <VStack alignItems="center" spacing="6" mt="20" maxWidth="2xl" mx="auto" w="full">
-              <Text fontSize="xl" color="brand.white">
-                Want to invest in $SHM early? Drop your email
-              </Text>
-            </VStack>
-            <FormControl isInvalid={!!error}>
-              <HStack spacing="3" w="full">
-                <Input
-                  placeholder="Your Email"
-                  w="full"
-                  h="full"
-                  onChange={handleOnChange}
-                  type="email"
-                  value={value}
-                />
-                <Button
-                  h="full"
-                  variant="primary"
-                  px="10"
-                  py="5"
-                  border="0"
-                  borderColor="transparent"
-                  isLoading={status === "loading"}
-                  onClick={() => handleSubmit(["investment"])}
-                  rightIcon={<IconRightArrow />}
-                >
-                  Subscribe
-                </Button>
-              </HStack>
-              {error ? (
-                <FormHelperText fontWeight="medium" color="red">
-                  {error}
-                </FormHelperText>
-              ) : success ? (
-                <FormHelperText fontWeight="medium" color="green">
-                  {success}
-                </FormHelperText>
-              ) : null}
-            </FormControl>
-          </VStack>
-        )}
+          <NewsletterInput type="investment" />
+        </VStack>
       </Container>
     </Box>
   );

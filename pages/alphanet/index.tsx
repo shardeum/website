@@ -22,7 +22,7 @@ const AlphanetLanding: NextPage = () => {
           </Button>
         }
         media={
-          <Box position="relative">
+          <Box position="relative" h="full">
             <Image
               objectFit="contain"
               src="/alphanet/alphanet-hero.png"

@@ -27,6 +27,7 @@ function ReadWhitepaper() {
             objectFit="contain"
             alt="animating Shardeum Slogan"
             layout="fill"
+            className="rotate-360"
           />
         </AspectRatio>
       </Box>
@@ -66,7 +67,7 @@ function ReadWhitepaper() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read Whitepaper
+                Read Litepaper
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

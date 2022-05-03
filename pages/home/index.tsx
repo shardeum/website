@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Box, Button } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
 import Roadmap from "components/sections/home/Roadmap";
@@ -23,9 +23,27 @@ const Home: NextPage = () => {
         description={
           "Shardeum is the first linearly scalable smart contract blockchain being built by the people for the people"
         }
+        h={{ base: "auto", lg: "80vh" }}
         cta={
-          <Box maxW="3xl" w="full">
+          <Box maxW={{ base: "md", md: "lg", lg: "full" }} w="full">
             <NewsletterInput type="newsletterHero" />
+          </Box>
+        }
+        media={
+          <Box position="relative">
+            <Box
+              h={{ base: "150px", md: "350px", xl: "auto" }}
+              overflow="hidden"
+              margin={{ base: "-24px" }}
+              maxW={{ lg: "1446px" }}
+              mx="auto"
+              transform={{ base: "scale(1.2)", md: "scale(1)" }}
+            >
+              <video loop autoPlay muted>
+                <source src="/hero-globe.mp4" type="video/mp4" />
+                <Image src="/hero-globe-image.png" width="660px" height="660px" />
+              </video>
+            </Box>
           </Box>
         }
       />

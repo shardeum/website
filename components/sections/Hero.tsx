@@ -10,21 +10,28 @@ type HeroProps = {
   description?: React.ReactNode;
   cta?: React.ReactNode;
   media?: React.ReactNode;
+  h: any;
 };
 
-const Hero = ({ heading, description, cta, media }: HeroProps) => {
+const Hero = ({ heading, description, cta, media, h, ...args }: HeroProps) => {
   return (
     <Flex
-      h={["80vh"]}
+      h={h}
       justifyContent="center"
       alignItems="center"
       mt={{ base: 20, xl: 0 }}
       bg="brand.black"
+      {...args}
     >
       <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }}>
-        <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]}>
+        <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]} alignItems="center">
           <VStack alignItems="flex-start" spacing={[8]}>
-            <VStack spacing={2} width="100%" maxW={{ base: "md", md: "lg", lg: "full" }}>
+            <VStack
+              spacing={2}
+              width="100%"
+              maxW={{ base: "md", md: "lg", lg: "full" }}
+              alignItems="start"
+            >
               <Text
                 as="h2"
                 textAlign="left"
@@ -58,4 +65,7 @@ const Hero = ({ heading, description, cta, media }: HeroProps) => {
   );
 };
 
+Hero.defaultProps = {
+  h: ["80vh"],
+};
 export default Hero;

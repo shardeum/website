@@ -60,12 +60,10 @@ const customTheme: ThemeOverride = {
       },
       error: "red.500",
       text: {
-        default: "gray.900",
-        _dark: "gray.50",
+        default: "gray.50",
       },
       linkHover: {
-        default: "blackAlpha.200",
-        _dark: "whiteAlpha.200",
+        default: "whiteAlpha.200",
       },
     },
   },

@@ -67,7 +67,7 @@ const SHMTokenomics = () => {
           <SectionHeading color="brand.white">$SHM Tokenomics</SectionHeading>
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>
-          <Text fontSize="base" fontWeight="medium">
+          <Text fontSize="base" fontWeight="medium" color="white">
             Fixed Supply of{" "}
             <Text as="span" color="brand.orange" fontWeight="base">
               508 Mn $SHM
@@ -126,7 +126,7 @@ const SHMTokenomics = () => {
         >
           <GridItem display="flex" justifyContent="flex-end" h="full" flexDir="column">
             <VStack alignItems="start" spacing="2" mb="4">
-              <Text fontSize="xl" fontWeight="medium">
+              <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
                 Fixed Supply of
               </Text>
               <Text as="span" color="brand.orange" fontWeight="xl">
@@ -144,10 +144,10 @@ const SHMTokenomics = () => {
               flexDir={{ base: "row", md: "column" }}
             >
               <VStack alignItems="start" spacing="2" mb="4">
-                <Text fontSize="xl" fontWeight="medium">
+                <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
                   {bar.height}
                 </Text>{" "}
-                <Text fontSize="lg" fontWeight="medium">
+                <Text fontSize="lg" fontWeight="medium" color="brand.grey-30">
                   {bar.use}
                 </Text>{" "}
                 <Text as="span" color="brand.grey-50" display="inline-block" fontSize="base">

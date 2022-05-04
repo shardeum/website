@@ -23,7 +23,6 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         description={
           "Shardeum is the world's first EVM based L1 blockchain that solves scalability trilemma with linear scaling and low gas fees forever."
         }
-        h={{ base: "auto", xl: "80vh" }}
         cta={
           <Button
             as="a"

@@ -51,7 +51,7 @@ const FeatureCard = ({
   description: string;
   icon: string;
 }) => (
-  <VStack border="1px" bg="brand.grey-10" p="6" maxW="md" alignItems="flex-start" spacing="5">
+  <VStack bg="brand.grey-10" p="6" maxW="md" alignItems="flex-start" spacing="5">
     <AspectRatio ratio={1} maxWidth={{ base: "50px", lg: "80px" }} w={{ base: "50px", lg: "80px" }}>
       <Image src={`/${icon}`} alt={`${icon}`} layout="fill" objectFit="contain" />
     </AspectRatio>

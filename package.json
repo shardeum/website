@@ -10,7 +10,6 @@
     "format:check": "npx prettier -c \"**/*.{js,jsx,json,ts,tsx}\"   ",
     "format": "npx prettier -w \"**/*.{js,jsx,json,ts,tsx}\"",
     "prepare": "husky install",
-    "postbuild": "next-sitemap",
     "pre-commit": "lint-staged"
   },
   "dependencies": {

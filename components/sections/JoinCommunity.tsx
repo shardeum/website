@@ -1,4 +1,4 @@
-import { Box, Container, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Container, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import {
   IconDiscord,

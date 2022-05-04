@@ -51,13 +51,13 @@ function ReadWhitepaper() {
                 fontWeight="medium"
                 color="brand.white"
               >
-                The first linearly smart contract blockchain that{" "}
+                Shardeum is a smart contract platform that scales{" "}
                 <Text as="span" color="brand.orange">
-                  solves
+                  linearly
                 </Text>{" "}
-                trilemma with the help of its{" "}
+                and infinitely through{" "}
                 <Text as="span" color="brand.orange">
-                  community{" "}
+                  dynamic state sharding{" "}
                 </Text>{" "}
               </Text>
               <Button

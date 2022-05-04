@@ -59,7 +59,7 @@ const JoinNewsletter = () => {
           </FormHelperText>
         ) : success ? (
           <FormHelperText fontWeight="medium" color="green">
-            {success}
+            Subscribed! Stay tuned for SHM updates in your inbox ;)
           </FormHelperText>
         ) : null}
       </FormControl>

@@ -31,7 +31,7 @@ const featureList = [
   {
     title: "Solid Security",
     description:
-      "Transactions on Shardeum will be validated and processed by randomly rotated and leaderless nodes through unique consensus model that combines Proof of Stake (PoS) with Proof of Quorum (PoQ) consensus algorithms",
+      "Transactions on Shardeum will be validated and processed by randomly rotated leaderless nodes through unique consensus model that combines Proof of Stake (PoS) with Proof of Quorum (PoQ) consensus algorithms",
     iconPath: "securityIcon.png",
   },
   {

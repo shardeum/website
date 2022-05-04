@@ -23,5 +23,3 @@ dist/
 *.tsbuildinfo
 .vercel
 
-sitemap*.xml
-robots.txt

@@ -23,7 +23,7 @@ const featureList = [
     iconPath: "operateNode.png",
   },
   {
-    title: "Immediately finality & Low Latency",
+    title: "Immediate Finality & Low Latency",
     description:
       "Network will have consensus done at transaction level and will process transactions simultaneously across shards resulting in immediate finality preventing network congestion",
     iconPath: "clockIcon.png",

@@ -64,8 +64,8 @@ function Team() {
                     Omar
                   </Text>
                   <Text color="brand.grey-70">
-                    A blockchain architect and a scientist cum inventor with prior experience
-                    working at NASA, Yahoo and Zynga
+                    A distributed systems architect with 30 years of experience at NASA, Yahoo,
+                    Raytheon and Zynga.
                   </Text>
                 </VStack>
                 <HStack>

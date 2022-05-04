@@ -21,7 +21,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       <Hero
         heading={"Decentralization for everyone"}
         description={
-          "Shardeum is the first linearly scalable smart contract blockchain being built by the people for the people"
+          "Shardeum is the world's first EVM based L1 blockchain that solves scalability trilemma with linear scaling and low gas fees forever."
         }
         h={{ base: "auto", xl: "80vh" }}
         cta={
@@ -75,7 +75,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           {
             title: "P2P Transfers",
             description:
-              "Shardeum is EVM compatible decentralized network that will accommodate billions of daily users and DApps on a global scale achieved through dynamic state sharding",
+              "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",
             Icon: IconP2P_Transfer,
           },
           {
@@ -86,21 +86,21 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           },
 
           {
-            title: "DApps",
+            title: "EVM DApps",
             description:
-              "Shardeum is EVM compatible. Developers can seamlessly build and deploy complex smart contract platforms like DeFi and Web3 applications. Any EVM DApp can easily be ported over to Shardeum to be instantly scalable.",
+              "Shardeum is EVM based. You can write contracts in Solidity or Vyper and use the same Ethereum tooling you're accustomed to. Join the Shardeum ecosystem where you never have to worry about rising gas fees again.",
             Icon: IconDApps,
           },
           {
             title: "NFTs",
             description:
-              "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates, and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user friendly",
+              "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates, and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user friendly.",
             Icon: IconNFTs,
           },
           {
             title: "Web 3.0",
             description:
-              "Web 3.0 or the Internet of Value is the next iteration of the Internet. Shardeum aims to accelerate the transition to Web 3.0 by providing an integrated, interoperable, and permissionless network to build SocialFi, GameFi applications",
+              "Web 3.0 or the Internet of Value is the next iteration of the Internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized user experiences 100x better than centralized competitors at scale.",
             Icon: IconWeb3,
           },
         ]}

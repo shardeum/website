@@ -53,11 +53,15 @@ const useNewsLetterForm = () => {
         }));
         return;
       }
-      setEmail({ ...email, value: "", success: "🎉 Subscribed! Have a nice day :)" });
+      setEmail({
+        ...email,
+        value: "",
+        success: "🎉 Subscribed! Stay tuned for SHM updates in your inbox ;)",
+      });
       return;
     }
 
-    setEmail({ ...email, error: "Please enter a valid email" });
+    setEmail({ ...email, error: "Please enter a valid email address" });
   };
 
   return { form: email, handleSubmit, setEmail, handleOnChange };

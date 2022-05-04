@@ -49,7 +49,7 @@ function NewsletterInput({ type }: Props) {
           {error}
         </FormHelperText>
       ) : success ? (
-        <FormHelperText fontWeight="medium" color="green">
+        <FormHelperText fontWeight="medium" color="green.400">
           {success}
         </FormHelperText>
       ) : null}

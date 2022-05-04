@@ -3,9 +3,9 @@ import Marquee from "react-fast-marquee";
 import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
 
 const stats = [
-  { Icon: IconCommunity, title: "9.5k+ community members" },
+  { Icon: IconCommunity, title: "10k+ community members" },
   { Icon: IconGlobe, title: "100k+ Estimated Transactions per sec." },
-  { Icon: IconTransaction, title: "$0.001 Estimated Transaction Cost" },
+  { Icon: IconTransaction, title: "$0.01 Estimated Transaction Cost" },
   { Icon: IconGlobe, title: "1280 - Estimated Average Number Of Validators" },
 ];
 

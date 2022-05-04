@@ -34,14 +34,19 @@ const JoinCommunity = () => {
             >
               Join the Community
             </Text>
-            <Box maxW={{ base: "md", md: "full" }}>
+            <VStack maxW={{ base: "md", md: "full" }} spacing="6" alignItems="start">
               <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
                 Shardeum is a global community. Anyone can join us in the journey to onboard
-                billions of people into Web 3. Don&apos;t know how to code? Or not sure where to
-                start? Don&apos;t worry. You can start by contributing as a content creator,
-                community manager, language translator, developer and you name it
+                billions of people to Web 3. Don&apos;t know how to code? Or not sure where to
+                start? Don&apos;t worry. You can contribute as a content creator, community manager,
+                language translator, developer and you name it.
               </Text>
-            </Box>
+              <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
+                Get started and become an early adopter of the blockchain network by joining our
+                Discord and other social media channels listed here. It will be easier to find how
+                you can add value to the project.
+              </Text>
+            </VStack>
           </VStack>
           <Flex justifyContent="flex-end">
             <VStack w={{ base: "md", lg: "96" }} mx={{ base: "auto", lg: "0" }}>

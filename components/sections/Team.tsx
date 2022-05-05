@@ -61,7 +61,7 @@ function Team() {
                 </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                    Omar
+                    Omar Syed
                   </Text>
                   <Text color="brand.grey-70">
                     A distributed systems architect with 30 years of experience at NASA, Yahoo,

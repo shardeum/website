@@ -30,9 +30,9 @@ const AlphanetLanding: NextPage = () => {
         ]}
         openGraph={{
           url: "https://shardeum.org/shardeum-liberty-alphanet/",
-          title:
+          title: "Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum",
+          description:
             "Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3",
-          description: "Open Graph Description",
           images: [
             {
               url: "https://shardeum.org/shardeum-liberty.jpeg",

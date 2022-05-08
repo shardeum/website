@@ -4,11 +4,8 @@ import LanguageIcons from "components/sections/language/LanguageIcons";
 import SupportedLanguages from "components/sections/language/SupportedLanguages";
 import LanguageDescription from "components/sections/language/LanguageDescription";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 
 const Language = () => {
-  const { t } = useTranslation("page-language");
-
   return (
     <Flex justifyContent="center" alignItems="center">
       <Container

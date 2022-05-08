@@ -3,6 +3,7 @@ import { mode } from "@chakra-ui/theme-tools";
 import Button from "./components/Button";
 import Link from "./components/Link";
 import THEME from "../constants/theme";
+import Input from "./components/Input";
 
 type ColorProps = ThemeOverride["colors"];
 
@@ -56,10 +57,10 @@ const customTheme: ThemeOverride = {
     initialColorMode: THEME.DARK as ConfigColorMode,
   },
   styles: {
-    global: (props) => {
+    global: () => {
       return {
         body: {
-          bg: mode("brand.white", "brand.black")(props),
+          bg: "brand.black",
         },
       };
     },
@@ -73,12 +74,10 @@ const customTheme: ThemeOverride = {
       },
       error: "red.500",
       text: {
-        default: "gray.900",
-        _dark: "gray.50",
+        default: "gray.50",
       },
       linkHover: {
-        default: "blackAlpha.200",
-        _dark: "whiteAlpha.200",
+        default: "whiteAlpha.200",
       },
     },
   },
@@ -89,6 +88,21 @@ const customTheme: ThemeOverride = {
   components: {
     Button,
     Link,
+    Input: {
+      ...Input,
+    },
+    Container: {
+      baseStyle: {
+        px: 6,
+      },
+      sizes: {
+        baseStyle: {
+          base: {
+            px: 6,
+          },
+        },
+      },
+    },
   },
 };
 

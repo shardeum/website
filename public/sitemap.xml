@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://shardeum.org/</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://shardeum.org/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://shardeum.org/Shardeum-Litepaper.pdf</loc>
+    <changefreq>weekly</changefreq>
+    <lastmod>2022-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://shardeum.org/shardeum-liberty-alphanet/</loc>
+    <changefreq>daily</changefreq>
+    <lastmod>2022-05-04T16:32:44.785Z</lastmod>
+  </url>
+</urlset>

@@ -8,11 +8,7 @@ import { useTranslation } from "next-i18next";
 
 const Language = () => {
   const { t } = useTranslation("page-language");
-  console.log({
-    h1: t("page-language-h1"),
-    p1: t("page-language-description-p1"),
-    p2: t("page-language-description-p2"),
-  });
+
   return (
     <Flex justifyContent="center" alignItems="center">
       <Container

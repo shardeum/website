@@ -1,7 +1,8 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { CROWDIN_PROJECT_LINK } from "constants/links";
 
 const LanguageDescription = () => {
   const { t: pageTranslation } = useTranslation("page-language");
@@ -30,15 +31,19 @@ const LanguageDescription = () => {
           {paragraph}
         </Text>
       ))}
-      <Button size="xl" mt="10" w={{ base: "44", sm: "96" }} fontSize="lg">
-        <Text display={{ base: "block", sm: "none" }}>
-          {pageTranslation("page-language-contribute")}
-        </Text>
-        <Text display={{ base: "none", sm: "block" }}>
-          {pageTranslation("page-language-contribute-full-text")}
-        </Text>
-        <ArrowForwardIcon ml="3" boxSize="6" />
-      </Button>
+      <Box w={{ base: "44", sm: "96" }}>
+        <a target="_blank" rel="noopener noreferrer" href={CROWDIN_PROJECT_LINK}>
+          <Button size="xl" mt="10" fontSize="lg">
+            <Text display={{ base: "block", sm: "none" }}>
+              {pageTranslation("page-language-contribute")}
+            </Text>
+            <Text display={{ base: "none", sm: "block" }}>
+              {pageTranslation("page-language-contribute-full-text")}
+            </Text>
+            <ArrowForwardIcon ml="3" boxSize="6" />
+          </Button>
+        </a>
+      </Box>
     </Flex>
   );
 };

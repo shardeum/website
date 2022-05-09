@@ -1,10 +1,12 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import { COMMUNITY_URL } from "constants/links";
+import CommunityIntro from "@shm/components/sections/community/CommunityIntro";
+import CommunityTiles from "@shm/components/sections/community/CommunityTiles";
 
 const Community: NextPage = () => {
   return (
@@ -76,6 +78,10 @@ const Community: NextPage = () => {
           </Box>
         }
       />
+
+      <CommunityIntro />
+
+      <CommunityTiles />
 
       {/* Join community - common CTA */}
       <JoinCommunity />

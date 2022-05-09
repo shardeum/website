@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { CROWDIN_PROJECT_LINK } from "constants/links";
 
 const LanguageDescription = () => {

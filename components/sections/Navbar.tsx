@@ -36,11 +36,12 @@ const links = [
     link: DOCS_URL,
     newPage: true,
   },
-  {
-    title: "Language",
-    link: "/language",
-    newPage: false,
-  },
+  // TODO: undo comment when global-localization feat goes live
+  // {
+  //   title: "Language",
+  //   link: "/language",
+  //   newPage: false,
+  // },
 ];
 
 const Navbar = () => {

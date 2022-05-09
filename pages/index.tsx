@@ -80,7 +80,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           {
             title: "DeFi",
             description:
-              "The current DeFi landscape is bottlenecked by high gas fees and low throughput. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs making it affordable to businesses and individuals",
+              "The current DeFi landscape is bottlenecked by high gas fees and low throughput. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs making it affordable to businesses and individuals.",
             Icon: IconNFTs,
           },
 

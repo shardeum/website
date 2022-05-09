@@ -5,39 +5,39 @@ import SectionHeading from "../../common/SectionHeading";
 
 const featureList = [
   {
-    title: "EVM-Based Layer 1 Blockchain",
+    title: "EVM-based layer 1 blockchain",
     description:
-      "Shardeum is an EVM-based layer 1 smart contract platform that will accommodate billions of daily active users while retaining low fees and fast transactions",
+      "Any dApp that can run on the Ethereum Virtual Machine will seamlessly run on Shardeum.",
     iconPath: "decentralized.png",
   },
   {
-    title: "Linear Scalability & Low Gas Forever",
+    title: "Linear scalability & low gas forever",
     description:
-      "Dynamic state sharding partitions the network, compute and state into shards where parallel processing is gained per validator node to increase TPS capacity and retain low gas fees forever",
+      "Every node that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
     iconPath: "linearScale.png",
   },
   {
-    title: "Anyone Can Operate A Node",
+    title: "Anyone can operate a node",
     description:
-      "Hardware requirements to operate a node will be very low to ensure network scales horizontally with constant bandwidth and optimal capacity achieving high decentralization at any given time",
+      "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator in the permissionless Shardeum network.",
     iconPath: "operateNode.png",
   },
   {
-    title: "Immediate Finality & Low Latency",
+    title: "Immediate finality & low latency",
     description:
-      "Network will have consensus done at transaction level and will process transactions simultaneously across shards resulting in immediate finality preventing network congestion",
+      "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
     iconPath: "clockIcon.png",
   },
   {
-    title: "Solid Security",
+    title: "Solid security",
     description:
-      "Transactions on Shardeum will be validated and processed by randomly rotated leaderless nodes through unique consensus model that combines Proof of Stake (PoS) with Proof of Quorum (PoQ) consensus algorithms",
+      "A leaderless Proof-of-Quorum (PoQ) consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
     iconPath: "securityIcon.png",
   },
   {
     title: "High fairness & energy efficiency",
     description:
-      "Shardeum orders transactions on a time basis and charges each transaction the same fee to ensure the fair ordering of transactions. As a PoS network, Shardeum is energy efficient and sustainable.",
+      "Shardeum processes transactions on a first-come, first-served basis, with the same gas rate for all transactions to ensure fairness and eliminate miner extractable value. As a PoS network, Shardeum is energy efficient and sustainable.",
     iconPath: "plantIcon.png",
   },
 ];
@@ -75,7 +75,7 @@ function MoreAboutShardeum() {
         px={{ base: "6", xl: 0 }}
       >
         <Box mb="12">
-          <SectionHeading color="brand.black">More About Shardeum</SectionHeading>
+          <SectionHeading color="brand.black">Shardeum features</SectionHeading>
         </Box>
         <Grid
           templateColumns={{

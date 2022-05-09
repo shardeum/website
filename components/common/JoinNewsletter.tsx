@@ -22,8 +22,8 @@ const JoinNewsletter = () => {
   return (
     <VStack py="6" px="8" bgColor="brand.white" w="full" alignItems="start" spacing="6">
       <Feature
-        title="Join Newsletter"
-        description={`Sign up for the weekly newsletter and stay updated on major announcements and developments about Shardeum`}
+        title="Join newsletter"
+        description={`Sign up for the weekly newsletter and stay updated on major announcements and developments about Shardeum.`}
       />
       <FormControl isInvalid={!!error}>
         <LightMode>

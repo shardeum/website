@@ -1,6 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { LITEPAPER_URL } from "constants/links";
+import { COMMUNITY_URL } from "constants/links";
 
 function ReadWhitepaper() {
   return (
@@ -51,23 +51,25 @@ function ReadWhitepaper() {
                 fontWeight="medium"
                 color="brand.white"
               >
-                Shardeum is a smart contract platform that scales{" "}
+                {/* Shardeum is a smart contract platform that scales{" "}
                 <Text as="span" color="brand.orange">
                   linearly
                 </Text>{" "}
                 and infinitely through{" "}
                 <Text as="span" color="brand.orange">
                   dynamic state sharding{" "}
-                </Text>{" "}
+                </Text>{" "} */}
+                The first linearly scalable smart contract platform that increases transactions per
+                second (TPS) by adding more nodes.
               </Text>
               <Button
                 variant="secondary"
                 as="a"
-                href={LITEPAPER_URL}
+                href={COMMUNITY_URL}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read Litepaper
+                Join our Discord
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

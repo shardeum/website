@@ -1,16 +1,16 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { ChakraProvider } from "@chakra-ui/react";
 import customTheme from "../theme";
 import "../styles/satoshi.css";
+import { appWithTranslation } from "next-i18next";
 import { Box } from "@chakra-ui/react";
 import Navbar from "components/sections/Navbar";
 import Footer from "components/sections/Footer";
 import defaultSEOValues from "../next-seo.config";
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: any) {
   return (
     <ChakraProvider theme={customTheme}>
       <Head>
@@ -37,4 +37,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

@@ -5,72 +5,80 @@ import { useEffect, useRef } from "react";
 const roadmapList = [
   {
     title: "2017 - 2021",
-    description: "Consensus algorithm defined & tested",
-    taskList: [
-      "20 nodes = 100 TPS",
-      "100 nodes = 500 TPS",
-      "200 nodes = 1000 TPS",
-      "1000 nodes = 5000 TPS",
+    sections: [
+      {
+        taskList: ["100 nodes = 500 TPS", "200 nodes = 1000 TPS", "1000 nodes = 5000 TPS"],
+        launchItems: [
+          "Consensus algorithm defined and tested",
+          "Auto scaling and rate limiting an unhardened network of 20 nodes",
+          "Linear scaling (small sharded nodes)",
+          "Small / Medium AWS network",
+        ],
+      },
     ],
-    launchItems: [
-      "Auto scaling & rate limiting an unhardened network of 20 nodes",
-      "Linear scaling (small sharded nodes)",
-      "Small / Medium AWS network",
-    ],
-    subTitle: "",
     quarterStartDate: new Date(2017, 1, 1),
     quarterEndDate: new Date(2021, 12, 31),
   },
   {
     title: "Q1 2022",
-    description: "Shardeum Foundation structured in Switzerland",
-    taskList: [
-      "Initial Testing",
-      "Sharding network testing",
-      "Smart contract & node reward system testing",
+    sections: [
+      {
+        taskList: ["Sharding network testing", "Smart contract & node reward system testing"],
+        launchItems: ["Initial Testing", "Shardeum Foundation structured in Switzerland"],
+      },
     ],
-    launchItems: [],
-    subTitle: "",
-    active: true,
     quarterStartDate: new Date(2022, 1, 1),
     quarterEndDate: new Date(2022, 3, 31),
   },
   {
     title: "Q2 2022",
-    description: "Private sale",
-    taskList: [
-      "Alphanet launch",
-      "Send transactions and deploy smart contracts",
-      "50 node network operated by Shardeum",
-      "10 node shard size",
-      "5 archive nodes",
-      "Deployed to individual medium nodes on AWS in different regions",
+    sections: [
+      {
+        description: "Alphanet launch",
+        taskList: [
+          "Send transactions and deploy smart contracts",
+          "50 node network operated by Shardeum",
+          "10 node shard size",
+          "5 archive nodes",
+          "Deployed to individual medium nodes on AWS in different regions",
+        ],
+      },
+      {
+        description: "Private sale",
+      },
     ],
-    launchItems: [],
-    subTitle: "",
     quarterStartDate: new Date(2022, 4, 1),
     quarterEndDate: new Date(2022, 6, 30),
   },
   {
     title: "Q3 2022",
-    description: "Betanet launch",
-    taskList: [
-      "Community can operate validator and archive nodes",
-      "Minimum network size of 1280 nodes with 200 TPS",
-      "Sharded with shard size of 128 nodes",
-      "Node rotation from standby to validation",
+    sections: [
+      {
+        description: "Betanet launch",
+        taskList: [
+          "Community can operate validator and archive nodes",
+          "Minimum network size of 1280 nodes with 200 TPS",
+          "Sharded with shard size of 128 nodes",
+          "Node rotation from standby to validation",
+        ],
+        launchItems: [],
+      },
     ],
-    launchItems: [],
-    subTitle: "",
     quarterStartDate: new Date(2022, 7, 1),
     quarterEndDate: new Date(2022, 9, 30),
   },
   {
     title: "Q4 2022",
-    description: "Mainnet launch",
-    taskList: ["SHM Token Generation", "Public Sales"],
-    launchItems: [],
-    subTitle: "",
+    sections: [
+      {
+        description: "Mainnet launch",
+        taskList: ["SHM Token Generation"],
+        launchItems: [],
+      },
+      {
+        description: "Public sales",
+      },
+    ],
     quarterStartDate: new Date(2022, 10, 1),
     quarterEndDate: new Date(2022, 12, 31),
   },
@@ -167,11 +175,11 @@ function Roadmap() {
               base: "minmax(290px, 1fr)",
             }}
           >
-            {roadmapList.map((item) => {
+            {roadmapList.map((item: any) => {
               const percentage = getQuarterProgressInPercentage(item);
               const additionaLProps = { "data-scroll-to": percentage > 0 && percentage < 100 };
               return (
-                <VStack key={item.title} alignItems="start" spacing="8" {...additionaLProps}>
+                <VStack key={item.title} alignItems="start" {...additionaLProps}>
                   <VStack alignItems="start" spacing="4" w="full">
                     <Text
                       fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
@@ -191,27 +199,33 @@ function Roadmap() {
                       />
                     </Box>
                   </VStack>
-                  <VStack spacing="10" alignItems="start" flexWrap="wrap">
-                    <VStack alignItems="start" spacing="6">
-                      <Text fontSize="xl" color="white" pr="4" fontWeight="medium">
-                        {item.description}
-                      </Text>
-                      {item.subTitle ? (
-                        <Text fontSize="xl" color="white" pr="4" fontWeight="medium">
-                          {item.subTitle}
-                        </Text>
-                      ) : null}
-                      {item?.launchItems?.map((task) => (
-                        <Text key={task} fontSize="base" color="brand.white" pr="4">
-                          {task}
-                        </Text>
-                      ))}
-                      {item.taskList.map((task) => (
-                        <Text key={task} fontSize="base" color="brand.grey-40" pr="4">
-                          - {task}
-                        </Text>
-                      ))}
-                    </VStack>
+                  <VStack alignItems="start" flexWrap="wrap">
+                    {item.sections.map((section: any, index: number) => {
+                      return (
+                        <VStack key={index} alignItems="start" pt={6}>
+                          {section.description ? (
+                            <Text fontSize="xl" color="white" pr="4" fontWeight="medium" pb="2">
+                              {section.description}
+                            </Text>
+                          ) : null}
+                          {section.subTitle ? (
+                            <Text fontSize="xl" color="white" pr="4" fontWeight="medium" pb="2">
+                              {section.subTitle}
+                            </Text>
+                          ) : null}
+                          {section.launchItems?.map((task: string) => (
+                            <Text key={task} fontSize="base" color="brand.white" pr="4" pb="2">
+                              {task}
+                            </Text>
+                          ))}
+                          {section.taskList?.map((task: string) => (
+                            <Text key={task} fontSize="base" color="brand.grey-40" pr="4" pb="2">
+                              - {task}
+                            </Text>
+                          ))}
+                        </VStack>
+                      );
+                    })}
                   </VStack>
                 </VStack>
               );

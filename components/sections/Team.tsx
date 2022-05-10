@@ -121,7 +121,7 @@ function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Know More
+                      Join now
                     </Text>
                   </Link>
                 </Flex>

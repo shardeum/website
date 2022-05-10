@@ -29,7 +29,7 @@ const JoinNewsletter = () => {
         <LightMode>
           <InputGroup>
             <Input
-              placeholder="Your Email"
+              placeholder="Your email"
               type="email"
               name="email"
               onChange={handleOnChange}

@@ -118,7 +118,7 @@ function Roadmap() {
         (node: any) => node.attributes["data-scroll-to"]?.value === "true"
       );
       if (element) {
-        gridContainerRef.current.scrollLeft = element?.offsetLeft;
+        gridContainerRef.current.scrollLeft = element?.offsetLeft - 36; // Subtracted this offset of 36px to account for additional padding in the roadmap while scrolling it to the active section.
       }
     }, 1);
   }, []);

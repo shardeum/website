@@ -1,13 +1,13 @@
 import { DefaultSeoProps } from "next-seo";
 
 const defaultSEOValues: DefaultSeoProps = {
-  title: "Shardeum | EVM compatible sharded layer 1 blockchain",
+  title: "Shardeum | EVM-based sharded layer 1 blockchain",
   description:
     "Shardeum is the world's first EVM based L1 blockchain that truly solves scalability trilemma with linear scaling and low gas fees forever",
   canonical: "https://shardeum.org",
 
   openGraph: {
-    title: "Shardeum | EVM compatible sharded layer 1 blockchain",
+    title: "Shardeum | EVM-based sharded layer 1 blockchain",
     type: "website",
     url: "https://shardeum.org",
 

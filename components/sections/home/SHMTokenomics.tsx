@@ -173,7 +173,7 @@ const SHMTokenomics = () => {
             w="full"
           >
             <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
-              Want to invest in $SHM early? Drop your email
+              Want to invest in $SHM early? Drop your email below
             </Text>
           </VStack>
           <NewsletterInput type="investment" />

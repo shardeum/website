@@ -47,20 +47,19 @@ function ReadWhitepaper() {
               marginLeft={{ xl: "auto" }}
             >
               <Text
-                fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+                fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
                 fontWeight="medium"
                 color="brand.white"
               >
-                {/* Shardeum is a smart contract platform that scales{" "}
+                The first{" "}
                 <Text as="span" color="brand.orange">
-                  linearly
+                  linearly scalable
                 </Text>{" "}
-                and infinitely through{" "}
+                smart contract platform that{" "}
                 <Text as="span" color="brand.orange">
-                  dynamic state sharding{" "}
-                </Text>{" "} */}
-                The first linearly scalable smart contract platform that increases transactions per
-                second (TPS) by adding more nodes.
+                  increases transactions per second (TPS)
+                </Text>{" "}
+                by adding more nodes.
               </Text>
               <Button
                 variant="secondary"

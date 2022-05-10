@@ -21,7 +21,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       <Hero
         heading={"Decentralization for everyone"}
         description={
-          "Shardeum is the world's first EVM based L1 blockchain that solves scalability trilemma with linear scaling and low gas fees forever."
+          "Shardeum is an EVM-based, linearly scalable smart contract platform that provides low gas fees forever while maintaining true decentralization and solid security through dynamic state sharding."
         }
         cta={
           <Button
@@ -32,7 +32,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             target="_blank"
             href="https://shardeum.org/shardeum-liberty-alphanet"
           >
-            Join Shardeum Liberty Testnet
+            Join Shardeum Liberty
           </Button>
         }
         media={
@@ -60,7 +60,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
 
       {/* Use cases section */}
       <UseCases
-        heading={"Use Cases"}
+        heading={"Use cases"}
         descriptiveMedia={
           <Image
             objectFit="contain"
@@ -72,7 +72,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         }
         content={[
           {
-            title: "P2P Transfers",
+            title: "P2P transfers",
             description:
               "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",
             Icon: IconP2P_Transfer,
@@ -80,26 +80,26 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           {
             title: "DeFi",
             description:
-              "The current DeFi landscape is bottlenecked by high gas fees and low throughput. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs making it affordable to businesses and individuals.",
+              "High gas fees and low throughput bottleneck the current DeFi landscape. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs, making it affordable to businesses and individuals for even low value transactions.",
             Icon: IconNFTs,
           },
 
           {
-            title: "EVM DApps",
+            title: "EVM dApps",
             description:
-              "Shardeum is EVM based. You can write contracts in Solidity or Vyper and use the same Ethereum tooling you're accustomed to. Join the Shardeum ecosystem where you never have to worry about rising gas fees again.",
+              "Shardeum is EVM-based. Contracts can be written in Solidity or Vyper and use the same Ethereum tooling such as Remix and Truffle. Join the Shardeum ecosystem, where users never have to worry about rising gas fees again.",
             Icon: IconDApps,
           },
           {
             title: "NFTs",
             description:
-              "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates, and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user friendly.",
+              "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user-friendly.",
             Icon: IconNFTs,
           },
           {
             title: "Web 3.0",
             description:
-              "Web 3.0 or the Internet of Value is the next iteration of the Internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized user experiences 100x better than centralized competitors at scale.",
+              "Web 3.0, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized user experiences that are better than centralized competitors at scale.",
             Icon: IconWeb3,
           },
         ]}

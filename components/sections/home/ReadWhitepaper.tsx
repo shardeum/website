@@ -1,6 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { LITEPAPER_URL } from "constants/links";
+import { COMMUNITY_URL } from "constants/links";
 
 function ReadWhitepaper() {
   return (
@@ -47,27 +47,28 @@ function ReadWhitepaper() {
               marginLeft={{ xl: "auto" }}
             >
               <Text
-                fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+                fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
                 fontWeight="medium"
                 color="brand.white"
               >
-                Shardeum is a smart contract platform that scales{" "}
+                The first{" "}
                 <Text as="span" color="brand.orange">
-                  linearly
+                  linearly scalable
                 </Text>{" "}
-                and infinitely through{" "}
+                smart contract platform that{" "}
                 <Text as="span" color="brand.orange">
-                  dynamic state sharding{" "}
+                  increases transactions per second (TPS)
                 </Text>{" "}
+                by adding more nodes.
               </Text>
               <Button
                 variant="secondary"
                 as="a"
-                href={LITEPAPER_URL}
+                href={COMMUNITY_URL}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read Litepaper
+                Join our Discord
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

@@ -9,7 +9,7 @@ const bars = [
     bgColor: "brand.grey-30",
     height: "51%",
     totalSHM: getPercentage(51),
-    use: "Node Mining",
+    use: "Node mining",
   },
   {
     bgColor: "brand.grey-30",
@@ -68,9 +68,9 @@ const SHMTokenomics = () => {
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>
           <Text fontSize="base" fontWeight="medium" color="white">
-            Fixed Supply of{" "}
+            Fixed supply of{" "}
             <Text as="span" color="brand.orange" fontWeight="base">
-              508 Mn $SHM
+              508M $SHM
             </Text>
           </Text>
         </HStack>
@@ -92,7 +92,7 @@ const SHMTokenomics = () => {
               color="brand.grey-10"
               transform="rotate(-180deg)"
             >
-              508 Mn $SHM
+              508M $SHM
             </Text>
           </Flex>
           <VStack h="full" spacing="3" alignItems="start">
@@ -127,10 +127,10 @@ const SHMTokenomics = () => {
           <GridItem display="flex" justifyContent="flex-end" h="full" flexDir="column">
             <VStack alignItems="start" spacing="2" mb="4">
               <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
-                Fixed Supply of
+                Fixed supply of
               </Text>
               <Text as="span" color="brand.orange" fontWeight="xl">
-                508 Mn $SHM
+                508M $SHM
               </Text>
             </VStack>
             <Box height="100%" bgColor="brand.grey-90" />
@@ -151,7 +151,7 @@ const SHMTokenomics = () => {
                   {bar.use}
                 </Text>{" "}
                 <Text as="span" color="brand.grey-50" display="inline-block" fontSize="base">
-                  {bar.totalSHM} Mn $SHM
+                  {bar.totalSHM}M $SHM
                 </Text>
               </VStack>
               <Box
@@ -173,7 +173,7 @@ const SHMTokenomics = () => {
             w="full"
           >
             <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
-              Want to invest in $SHM early? Drop your email
+              Want to invest in $SHM early? Drop your email below.
             </Text>
           </VStack>
           <NewsletterInput type="investment" />

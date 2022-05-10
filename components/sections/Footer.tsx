@@ -20,11 +20,11 @@ const LinksMap = {
   Resources: [
     { title: "Litepaper", href: LITEPAPER_URL },
     { title: "FAQ", href: FAQ_URL },
-    { title: "Public Drive Link", href: PUBLIC_DRIVE_LINK },
+    { title: "Public drive link", href: PUBLIC_DRIVE_LINK },
   ],
   Contact: [
-    { title: "General Enquiries", href: GENERAL_QUERIES_LINK },
-    { title: "Investment Purpose", href: INVESTMENT_QUERY_LINK },
+    { title: "General enquiries", href: GENERAL_QUERIES_LINK },
+    { title: "Investment enquiries", href: INVESTMENT_QUERY_LINK },
   ],
 };
 

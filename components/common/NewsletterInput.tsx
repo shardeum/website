@@ -19,7 +19,7 @@ function NewsletterInput({ type }: Props) {
       <Stack w="full" flexDirection={{ base: "column", md: "row" }} alignItems="center" spacing="0">
         <Box w="full" h="full" mb={{ base: "4", md: "0" }} mr={{ md: "4" }}>
           <Input
-            placeholder="Your Email"
+            placeholder="Your email"
             w="full"
             h="56px"
             onChange={handleOnChange}

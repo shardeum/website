@@ -6,7 +6,7 @@ const stats = [
   { Icon: IconCommunity, title: "10k+ Community members" },
   { Icon: IconGlobe, title: "100k+ Estimated transactions per second (TPS)" },
   { Icon: IconTransaction, title: "$0.01 Estimated transaction cost" },
-  { Icon: IconGlobe, title: "1280 - Minimum number of validators" },
+  { Icon: IconGlobe, title: "Minimum of 1280 validators" },
 ];
 
 const SlidingStats = () => (

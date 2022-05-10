@@ -11,7 +11,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
   return (
     <Flex bg="brand.grey-5">
       <Container pl={0} pr={0} maxW="container.xl" pt={[6, 8, 12]} pb={[6, 8, 12]}>
-        <HStack pb={12}>
+        <HStack pb={12} pl={[3, 5, 0]} pr={[3, 5, 0]}>
           {categories.map((category, index) => {
             return (
               <Button
@@ -19,7 +19,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
                 value={category.name}
                 onClick={changeCategory}
                 variant={category.selected ? "secondary" : "outline"}
-                fontSize={["sm", "md", "lg"]}
+                fontSize={["x-small", "md", "lg"]}
                 bg={category.selected ? "brand.grey-90" : "brand.grey-5"}
                 color={category.selected ? "brand.grey-5" : "brand.grey-80"}
                 size="lg"
@@ -29,7 +29,7 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
             );
           })}
         </HStack>
-        <SimpleGrid spacing="30px" columns={[1, 2, 3]}>
+        <SimpleGrid spacing={["20px", "30px"]} columns={[1, 2, 3]} pl={[3, 5, 0]} pr={[3, 5, 0]}>
           {filteredData.map((data, index) => {
             return (
               <Card

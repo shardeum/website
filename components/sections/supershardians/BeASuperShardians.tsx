@@ -21,7 +21,7 @@ const BeASuperShardian = ({ title, description }: BeASuperShardianProps) => {
           <Box maxW={{ base: "md", md: "full" }} pb={5}>
             <Box
               fontSize={{ base: "md", lg: "lg" }}
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "left", md: "left" }}
               color="brand.grey-10"
             >
               {description}

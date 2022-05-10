@@ -4,49 +4,22 @@ import { useEffect, useRef } from "react";
 
 const roadmapList = [
   {
-    title: "Q4 2017",
+    title: "2017 - 2021",
     description: "Consensus algorithm defined & tested",
+    taskList: [
+      "20 nodes = 100 TPS",
+      "100 nodes = 500 TPS",
+      "200 nodes = 1000 TPS",
+      "1000 nodes = 5000 TPS",
+    ],
+    launchItems: [
+      "Auto scaling & rate limiting an unhardened network of 20 nodes",
+      "Linear scaling (small sharded nodes)",
+      "Small / Mediuml AWS network",
+    ],
     subTitle: "",
-    taskList: [],
-    launchItems: [],
-    quarterStartDate: new Date(2017, 10, 1),
-    quarterEndDate: new Date(2017, 12, 31),
-  },
-  {
-    title: "Q2 2018",
-    description: "Project launch (Shardus)",
-    subTitle: "",
-    taskList: [],
-    launchItems: [],
-    quarterStartDate: new Date(2018, 4, 1),
-    quarterEndDate: new Date(2018, 6, 30),
-  },
-  {
-    title: "Q1 2019",
-    description: "Auto scaling & rate limiting an unhardened network of 20 nodes",
-    subTitle: "",
-    taskList: [],
-    launchItems: [],
-    quarterStartDate: new Date(2019, 1, 1),
-    quarterEndDate: new Date(2019, 3, 31),
-  },
-  {
-    title: "Q3 2019",
-    description: "Linear scaling (small sharded nodes)",
-    taskList: ["10 nodes = 100 TPS", "40 nodes = 400 TPS"],
-    launchItems: [],
-    subTitle: "",
-    quarterStartDate: new Date(2019, 7, 1),
-    quarterEndDate: new Date(2019, 9, 30),
-  },
-  {
-    title: "Q4 2020",
-    description: "Small AWS network",
-    taskList: ["20 nodes = 100 TPS", "200 nodes = 1000 TPS"],
-    launchItems: [],
-    subTitle: "",
-    quarterStartDate: new Date(2020, 10, 1),
-    quarterEndDate: new Date(2020, 12, 31),
+    quarterStartDate: new Date(2017, 1, 1),
+    quarterEndDate: new Date(2021, 6, 30),
   },
   {
     title: "Q3 2021",
@@ -237,14 +210,14 @@ function Roadmap() {
                           {item.subTitle}
                         </Text>
                       ) : null}
-                      {item.taskList.map((task) => (
-                        <Text key={task} fontSize="base" color="brand.grey-40" pr="4">
-                          - {task}
-                        </Text>
-                      ))}
                       {item?.launchItems?.map((task) => (
                         <Text key={task} fontSize="base" color="brand.white" pr="4">
                           {task}
+                        </Text>
+                      ))}
+                      {item.taskList.map((task) => (
+                        <Text key={task} fontSize="base" color="brand.grey-40" pr="4">
+                          - {task}
                         </Text>
                       ))}
                     </VStack>

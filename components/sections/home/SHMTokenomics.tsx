@@ -33,7 +33,7 @@ const bars = [
     bgColor: "brand.grey-30",
     height: "5%",
     totalSHM: getPercentage(5),
-    use: "Ecosystem grants / Airdrops",
+    use: "Ecosystem / Airdrops",
   },
 ];
 

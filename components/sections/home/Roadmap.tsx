@@ -23,7 +23,7 @@ const roadmapList = [
     title: "Q1 2022",
     sections: [
       {
-        taskList: ["Sharding network testing", "Smart contract & node reward system testing"],
+        taskList: ["Sharding network testing", "Smart contract and node reward system testing"],
         launchItems: ["Initial Testing", "Shardeum Foundation structured in Switzerland"],
       },
     ],
@@ -72,7 +72,7 @@ const roadmapList = [
     sections: [
       {
         description: "Mainnet launch",
-        taskList: ["SHM Token Generation"],
+        taskList: ["SHM token generation"],
         launchItems: [],
       },
       {

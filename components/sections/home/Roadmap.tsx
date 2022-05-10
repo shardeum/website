@@ -15,20 +15,11 @@ const roadmapList = [
     launchItems: [
       "Auto scaling & rate limiting an unhardened network of 20 nodes",
       "Linear scaling (small sharded nodes)",
-      "Small / Mediuml AWS network",
+      "Small / Medium AWS network",
     ],
     subTitle: "",
     quarterStartDate: new Date(2017, 1, 1),
-    quarterEndDate: new Date(2021, 6, 30),
-  },
-  {
-    title: "Q3 2021",
-    description: "Medium AWS network",
-    taskList: ["100 nodes = 500 TPS", "1000 nodes = 5000 TPS"],
-    launchItems: [],
-    subTitle: "",
-    quarterStartDate: new Date(2021, 7, 1),
-    quarterEndDate: new Date(2021, 9, 30),
+    quarterEndDate: new Date(2021, 12, 31),
   },
   {
     title: "Q1 2022",

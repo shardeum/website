@@ -1,6 +1,13 @@
 import Airtable from "airtable";
 import { NewsItem } from "../types";
 
+const configureAirtable = () => {
+  Airtable.configure({
+    endpointUrl: "https://api.airtable.com",
+    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
+  });
+};
+
 export const fetchNewList = () =>
   fetch("/api/news")
     .then((res) => res.json())
@@ -14,10 +21,7 @@ export const fetchNewList = () =>
     );
 
 export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
-  Airtable.configure({
-    endpointUrl: "https://api.airtable.com",
-    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-  });
+  configureAirtable();
   const data: any[] = [];
   const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return new Promise((resolve, reject) => {
@@ -55,3 +59,27 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
       );
   });
 };
+
+export function getSuperShardians() {
+  configureAirtable();
+  const data: any[] = [];
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
+  return new Promise<any>((resolve, reject) => {
+    base(process.env.NEXT_PUBLIC_AIRTABLE_SUPERSHARDEUM as string)
+      .select({
+        view: "Grid view",
+      })
+      .firstPage()
+      .then((records) => {
+        records.forEach(function (record) {
+          const name = record.get("Name");
+          const description = record.get("Description");
+          const createdDate = record.get("CreatedDate");
+          const category = record.get("Category");
+          const image = record.get("Image");
+          data.push({ name, description, category, image });
+        });
+        resolve(data);
+      });
+  });
+}

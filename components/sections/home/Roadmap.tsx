@@ -12,7 +12,7 @@ const roadmapList = [
           "Consensus algorithm defined and tested",
           "Auto scaling and rate limiting an unhardened network of 20 nodes",
           "Linear scaling (small sharded nodes)",
-          "Small / Medium AWS network",
+          "Small / medium AWS network",
         ],
       },
     ],

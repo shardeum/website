@@ -118,6 +118,12 @@ export const LANGUAGES: {
   sw: {
     language: "Kiswahili",
   },
+  ta: {
+    language: "தமிழ்",
+  },
+  te: {
+    language: "తెలుగు",
+  },
   th: {
     language: "ภาษาไทย",
   },

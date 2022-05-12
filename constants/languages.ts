@@ -64,7 +64,7 @@ export const LANGUAGES: {
   ja: {
     language: "日本語",
   },
-  ka: {
+  kn: {
     language: "ქართული",
   },
   ko: {

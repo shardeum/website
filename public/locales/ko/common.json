@@ -1,6 +1,14 @@
 {
   "language-en": "English",
+  "language-hi": "Hindi",
+  "language-id": "Indonesian",
+  "language-it": "Italian",
+  "language-ja": "Japanese",
+  "language-ka": "Kannada",
+  "language-ko": "Korean",
+  "language-ru": "Russian",
+  "language-ta": "Tamil",
+  "language-te": "Telugu",
   "language-es": "Spanish",
-  "language-fr": "French",
-  "language-hi": "Hindi"
+  "language-fr": "French"
 }

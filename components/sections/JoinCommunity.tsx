@@ -8,14 +8,14 @@ import {
   IconTelegram,
   IconTwitter,
 } from "@shm/Icons";
-import { COMMUNITY_URL, GITHUB_URL, TELEGRAM_URL, TWITTER_URL } from "../../constants/links";
+import { COMMUNITY_URL, GITHUB_URL, NEWSLETTER_URL, TELEGRAM_URL, TWITTER_URL } from "../../constants/links";
 
 const socialLinks = [
-  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL },
-  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL },
-  { Icon: IconGithub, title: "Github", href: GITHUB_URL },
-  { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL },
-  { Icon: IconSeeMore, title: "See more", href: COMMUNITY_URL },
+  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL , target: '_blank'},
+  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL , target: '_blank'},
+  { Icon: IconGithub, title: "Github", href: GITHUB_URL , target: '_blank'},
+  { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL , target: '_blank'},
+  { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL , target: '_self'},
 ];
 
 const JoinCommunity = () => {
@@ -54,7 +54,7 @@ const JoinCommunity = () => {
                   <HStack
                     as="a"
                     rel="noopener noreferrer"
-                    target="_blank"
+                    target={link.target}
                     w="full"
                     key={link.title}
                     py="5"

@@ -9,6 +9,7 @@ import {
   INVESTMENT_QUERY_LINK,
   PUBLIC_DRIVE_LINK,
   LITEPAPER_URL,
+  NEWSLETTER_URL,
 } from "../../constants/links";
 
 const LinksMap = {
@@ -16,6 +17,7 @@ const LinksMap = {
     { title: "Home", href: "/" },
     { title: "Community", href: COMMUNITY_URL },
     { title: "Blog", href: BLOG_URL },
+    { title: "Newsletter", href: NEWSLETTER_URL },
   ],
   Resources: [
     { title: "Litepaper", href: LITEPAPER_URL },

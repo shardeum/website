@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { COMMUNITY_URL } from "constants/links";
-import { useTranslation } from "next-i18next";
+import { useTranslation, Trans } from "next-i18next";
 
 function ReadWhitepaper() {
   const { t: commonTranslation } = useTranslation("common");
@@ -54,15 +54,17 @@ function ReadWhitepaper() {
                 fontWeight="medium"
                 color="brand.white"
               >
-                The first{" "}
-                <Text as="span" color="brand.orange">
-                  linearly scalable
-                </Text>{" "}
-                smart contract platform that{" "}
-                <Text as="span" color="brand.orange">
-                  increases transactions per second (TPS)
-                </Text>{" "}
-                by adding more nodes.
+                <Trans i18nKey="shm-desc" t={commonTranslation}>
+                  The first
+                  <Text as="span" color="brand.orange">
+                    linearly scalable
+                  </Text>
+                  smart contract platform that
+                  <Text as="span" color="brand.orange">
+                    increases transactions per second (TPS)
+                  </Text>
+                  by adding more nodes
+                </Trans>
               </Text>
               <Button
                 variant="secondary"

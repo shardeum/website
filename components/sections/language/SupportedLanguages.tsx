@@ -44,7 +44,7 @@ const SupportedLanguages = () => {
         </Text>
         <Text
           color={currentLocale === localeLang ? "brand.orange-80" : "brand.grey-80"}
-          fontSize={{ base: "md", sm: "2xl", lg: "3xl" }}
+          fontSize={{ base: "md", sm: "xl", lg: "2xl" }}
           fontWeight={{ base: 400, sm: 500 }}
         >
           {Object.keys(LANGUAGES).includes(localeLang) ? LANGUAGES[localeLang]["language"] : "-"}

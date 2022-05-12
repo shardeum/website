@@ -3,20 +3,21 @@ import NextLink from "next/link";
 import { BLOG_URL, COMMUNITY_URL, DOCS_URL, LITEPAPER_URL } from "../../constants/links";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
+import { useTranslation } from "next-i18next";
 
 const links = [
   {
-    title: "Alphanet",
+    title: "alphanet",
     link: "/shardeum-liberty-alphanet",
     newPage: false,
   },
   {
-    title: "Community",
+    title: "community",
     link: COMMUNITY_URL,
     newPage: true,
   },
   {
-    title: "Litepaper",
+    title: "litepaper",
     link: LITEPAPER_URL,
     newPage: true,
   },
@@ -27,12 +28,12 @@ const links = [
   // newPage:false,
   // },
   {
-    title: "Blog",
+    title: "blog",
     link: BLOG_URL,
     newPage: true,
   },
   {
-    title: "Docs",
+    title: "docs",
     link: DOCS_URL,
     newPage: true,
   },
@@ -45,9 +46,11 @@ const links = [
 ];
 
 const Navbar = () => {
+  const { t: commonTranslation } = useTranslation("common");
+
   return (
     <Flex bg="brand.black" w="100%" py={2} color="text">
-      <Container maxW="container.xl" py="5" px={{ base: "6", xl: '0'}}>
+      <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
         <Flex justify="space-between" align={"center"}>
           <Box>
             <NextLink href="/" passHref>
@@ -70,7 +73,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   target={link.newPage ? "_blank" : "_self"}
                 >
-                  {link.title}
+                  {commonTranslation(link.title)}
                 </Link>
               </NextLink>
             ))}

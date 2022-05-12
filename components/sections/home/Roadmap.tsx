@@ -1,18 +1,19 @@
 import { Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const roadmapList = [
   {
-    title: "2017 - 2021",
+    title: "phase-1-title",
     sections: [
       {
-        taskList: ["100 nodes = 500 TPS", "200 nodes = 1000 TPS", "1000 nodes = 5000 TPS"],
+        taskList: ["phase-1-task-list-1", "phase-1-task-list-2", "phase-1-task-list-3"],
         launchItems: [
-          "Consensus algorithm defined and tested",
-          "Auto scaling and rate limiting an unhardened network of 20 nodes",
-          "Linear scaling (small sharded nodes)",
-          "Small / medium AWS network",
+          "phase-1-launch-item-1",
+          "phase-1-launch-item-2",
+          "phase-1-launch-item-3",
+          "phase-1-launch-item-4",
         ],
       },
     ],
@@ -20,46 +21,46 @@ const roadmapList = [
     quarterEndDate: new Date(2021, 12, 31),
   },
   {
-    title: "Q1 2022",
+    title: "phase-2-title",
     sections: [
       {
-        taskList: ["Sharding network testing", "Smart contract and node reward system testing"],
-        launchItems: ["Initial Testing", "Shardeum Foundation structured in Switzerland"],
+        taskList: ["phase-2-task-list-1", "phase-2-task-list-2"],
+        launchItems: ["phase-2-launch-item-1", "phase-2-launch-item-2"],
       },
     ],
     quarterStartDate: new Date(2022, 1, 1),
     quarterEndDate: new Date(2022, 3, 31),
   },
   {
-    title: "Q2 2022",
+    title: "phase-3-title",
     sections: [
       {
-        description: "Alphanet launch",
+        description: "phase-3-desc",
         taskList: [
-          "Send transactions and deploy smart contracts",
-          "50 node network operated by Shardeum",
-          "10 node shard size",
-          "5 archive nodes",
-          "Deployed to individual medium nodes on AWS in different regions",
+          "phase-3-task-list-1",
+          "phase-3-task-list-2",
+          "phase-3-task-list-3",
+          "phase-3-task-list-4",
+          "phase-3-task-list-5",
         ],
       },
       {
-        description: "Private sale",
+        description: "phase-3-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2022, 4, 1),
     quarterEndDate: new Date(2022, 6, 30),
   },
   {
-    title: "Q3 2022",
+    title: "phase-4-title",
     sections: [
       {
-        description: "Betanet launch",
+        description: "phase-4-desc",
         taskList: [
-          "Community can operate validator and archive nodes",
-          "Minimum network size of 1280 nodes with 200 TPS",
-          "Sharded with shard size of 128 nodes",
-          "Node rotation from standby to validation",
+          "phase-4-task-list-1",
+          "phase-4-task-list-2",
+          "phase-4-task-list-3",
+          "phase-4-task-list-4",
         ],
         launchItems: [],
       },
@@ -68,15 +69,15 @@ const roadmapList = [
     quarterEndDate: new Date(2022, 9, 30),
   },
   {
-    title: "Q4 2022",
+    title: "phase-5-title",
     sections: [
       {
-        description: "Mainnet launch",
-        taskList: ["SHM token generation"],
+        description: "phase-5-desc",
+        taskList: ["phase-5-task-list-1"],
         launchItems: [],
       },
       {
-        description: "Public sales",
+        description: "phase-5-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2022, 10, 1),
@@ -118,6 +119,7 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
 };
 
 function Roadmap() {
+  const { t: pageTranslation } = useTranslation(["page-home", 'common']);
   const gridContainerRef = useRef<any>();
   useEffect(() => {
     // Scroll to the exact quarter which is currently active
@@ -157,7 +159,7 @@ function Roadmap() {
               2022
             </Text> */}
             <Heading size="2xl" color="brand.white" as="h3">
-              Roadmap
+              {pageTranslation("roadmap")}
             </Heading>
           </VStack>
           <Grid
@@ -186,7 +188,7 @@ function Roadmap() {
                       color="brand.white"
                       fontWeight="medium"
                     >
-                      {item.title}
+                      {pageTranslation(item.title)}
                     </Text>
                     <Box h="0.5" w="100%" bg={"brand.grey-80"} position="relative" mt="6">
                       <Box
@@ -205,22 +207,22 @@ function Roadmap() {
                         <VStack key={index} alignItems="start" pt={6}>
                           {section.description ? (
                             <Text fontSize="xl" color="white" pr="4" fontWeight="medium" pb="2">
-                              {section.description}
+                              {pageTranslation(section.description)}
                             </Text>
                           ) : null}
                           {section.subTitle ? (
                             <Text fontSize="xl" color="white" pr="4" fontWeight="medium" pb="2">
-                              {section.subTitle}
+                              {pageTranslation(section.subTitle)}
                             </Text>
                           ) : null}
                           {section.launchItems?.map((task: string) => (
                             <Text key={task} fontSize="base" color="brand.white" pr="4" pb="2">
-                              {task}
+                              {pageTranslation(task)}
                             </Text>
                           ))}
                           {section.taskList?.map((task: string) => (
                             <Text key={task} fontSize="base" color="brand.grey-40" pr="4" pb="2">
-                              - {task}
+                              - {pageTranslation(task)}
                             </Text>
                           ))}
                         </VStack>

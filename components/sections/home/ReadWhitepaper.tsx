@@ -1,8 +1,11 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { COMMUNITY_URL } from "constants/links";
+import { useTranslation } from "next-i18next";
 
 function ReadWhitepaper() {
+  const { t: commonTranslation } = useTranslation("common");
+
   return (
     <Box position="relative" overflow="hidden" bg="brand.black">
       <Box position="absolute" zIndex={1} display={{ base: "none", xl: "block" }}>
@@ -68,7 +71,7 @@ function ReadWhitepaper() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Join our Discord
+                {commonTranslation("join-discord-cta")}
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

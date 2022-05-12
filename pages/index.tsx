@@ -8,6 +8,8 @@ import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import JoinCommunity from "components/sections/JoinCommunity";
 import type { InferGetStaticPropsType } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Image from "next/image";
 import UseCases from "../components//sections/UseCases";
 import MoreAboutShardeum from "../components/sections/home/MoreAboutShardeum";
@@ -15,14 +17,15 @@ import Team from "../components/sections/Team";
 import { getSHMNewsArticles } from "../utils/api";
 
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
+  const { t: pageTranslation } = useTranslation("page-home");
+  const { t: commonTranslation } = useTranslation("common");
+
   return (
     <>
       {/* Hero section */}
       <Hero
-        heading={"Decentralization for everyone"}
-        description={
-          "Shardeum is an EVM-based, linearly scalable smart contract platform that provides low gas fees forever while maintaining true decentralization and solid security through dynamic state sharding."
-        }
+        heading={commonTranslation("shm-slogan")}
+        description={commonTranslation("shm-description")}
         cta={
           <Button
             as="a"
@@ -32,7 +35,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             target="_blank"
             href="https://shardeum.org/shardeum-liberty-alphanet"
           >
-            Join Shardeum Liberty
+            {commonTranslation("join-liberty-cta")}
           </Button>
         }
         media={
@@ -60,7 +63,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
 
       {/* Use cases section */}
       <UseCases
-        heading={"Use cases"}
+        heading={pageTranslation("use-case-title")}
         descriptiveMedia={
           <Image
             objectFit="contain"
@@ -72,34 +75,29 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         }
         content={[
           {
-            title: "P2P transfers",
-            description:
-              "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",
+            title: pageTranslation("use-case-1-title"),
+            description: pageTranslation("use-case-1-desc"),
             Icon: IconP2P_Transfer,
           },
           {
-            title: "DeFi",
-            description:
-              "High gas fees and low throughput bottleneck the current DeFi landscape. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs, making it affordable to businesses and individuals for even low value transactions.",
+            title: pageTranslation("use-case-2-title"),
+            description: pageTranslation("use-case-2-desc"),
             Icon: IconNFTs,
           },
 
           {
-            title: "EVM dApps",
-            description:
-              "Shardeum is EVM-based. Contracts can be written in Solidity or Vyper and use the same Ethereum tooling such as Remix and Truffle. Join the Shardeum ecosystem, where users never have to worry about rising gas fees again.",
+            title: pageTranslation("use-case-3-title"),
+            description: pageTranslation("use-case-3-desc"),
             Icon: IconDApps,
           },
           {
-            title: "NFTs",
-            description:
-              "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user-friendly.",
+            title: pageTranslation("use-case-4-title"),
+            description: pageTranslation("use-case-4-desc"),
             Icon: IconNFTs,
           },
           {
-            title: "Web 3.0",
-            description:
-              "Web 3.0, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized user experiences that are better than centralized competitors at scale.",
+            title: pageTranslation("use-case-5-title"),
+            description: pageTranslation("use-case-5-desc"),
             Icon: IconWeb3,
           },
         ]}
@@ -113,10 +111,13 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }: { locale: string }) => {
   const news = await getSHMNewsArticles();
   return {
-    props: { news },
+    props: {
+      news,
+      ...(await serverSideTranslations(locale, ["common", "page-home"])),
+    },
   };
 };
 export default LandingPage;

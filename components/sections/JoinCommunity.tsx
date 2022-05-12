@@ -8,17 +8,25 @@ import {
   IconTelegram,
   IconTwitter,
 } from "@shm/Icons";
-import { COMMUNITY_URL, GITHUB_URL, NEWSLETTER_URL, TELEGRAM_URL, TWITTER_URL } from "../../constants/links";
+import {
+  COMMUNITY_URL,
+  GITHUB_URL,
+  NEWSLETTER_URL,
+  TELEGRAM_URL,
+  TWITTER_URL,
+} from "../../constants/links";
+import { useTranslation } from "next-i18next";
 
 const socialLinks = [
-  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL , target: '_blank'},
-  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL , target: '_blank'},
-  { Icon: IconGithub, title: "Github", href: GITHUB_URL , target: '_blank'},
-  { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL , target: '_blank'},
-  { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL , target: '_self'},
+  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL, target: "_blank" },
+  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
+  { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
+  { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
+  { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
 ];
 
 const JoinCommunity = () => {
+  const { t: pageTranslation } = useTranslation(["common", "page-home"]);
   return (
     <Flex bg="brand.grey-90" as="section">
       <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: "6", lg: "0" }}>
@@ -32,18 +40,15 @@ const JoinCommunity = () => {
               fontWeight="bold"
               color="brand.white"
             >
-              Join the Community
+              {pageTranslation("join-community-title")}
             </Text>
             <VStack maxW={{ base: "md", md: "full" }} spacing="6" alignItems="start">
               <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
-                Shardeum is a global community. Anyone can join us in the journey to onboard
-                billions of people to Web 3.0. Don&apos;t know how to code? Or not sure where to
-                start? Don&apos;t worry. You can contribute as a content creator, community manager,
-                language translator, developer, etc.
+                {pageTranslation("join-community-desc-1")}
               </Text>
               <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
-                Get started and become an early adopter of the blockchain network by joining our
-                Discord and other social media channels.
+                {pageTranslation("join-community-desc-2")}
+                
               </Text>
             </VStack>
           </VStack>

@@ -46,8 +46,8 @@ const links = [
 
 const Navbar = () => {
   return (
-    <Flex bg="brand.black" w="100%" p={2} color="text">
-      <Container maxW="container.xl" py="5">
+    <Flex bg="brand.black" w="100%" py={2} color="text">
+      <Container maxW="container.xl" py="5" px={{ base: "6", xl: '0'}}>
         <Flex justify="space-between" align={"center"}>
           <Box>
             <NextLink href="/">

@@ -18,7 +18,12 @@ import { teamSocialIcons } from "@shm/Icons";
 function Team() {
   return (
     <Flex as="section" bg="brand.grey-10">
-      <Container maxW="container.xl" mx="auto" py={{ base: "20", lg: "24" }}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        py={{ base: "20", lg: "24" }}
+        px={{ base: "6", xl: "0" }}
+      >
         <VStack alignItems="start" spacing="12">
           <SectionHeading color="brand.black">Team Shardeum</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">

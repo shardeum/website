@@ -31,7 +31,7 @@ const LinksMap = {
 function Footer() {
   return (
     <Flex bg="brand.grey-95" as="footer">
-      <Container maxW="container.xl" mx="auto" py="12">
+      <Container maxW="container.xl" mx="auto" py="12" px={{ base: "6", xl: "0" }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
             <Link href="/" passHref>

@@ -50,7 +50,7 @@ const Navbar = () => {
       <Container maxW="container.xl" py="5" px={{ base: "6", xl: '0'}}>
         <Flex justify="space-between" align={"center"}>
           <Box>
-            <NextLink href="/">
+            <NextLink href="/" passHref>
               <Link>
                 <Logo />
               </Link>

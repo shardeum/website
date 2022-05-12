@@ -46,5 +46,6 @@
   "est-transaction-per-second": "100k+ Estimated transactions per second (TPS)",
   "est-transaction-cost": "$0.01 Estimated transaction cost",
   "min-validators": "Minimum of 1280 validators",
-  "shm-intro-highlight-1": "linearly scalable"
+  "shm-intro-highlight-1": "linearly scalable",
+  "team-shardeum": "Team Shardeum"
 }

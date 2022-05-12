@@ -17,7 +17,8 @@ import { teamSocialIcons } from "@shm/Icons";
 import { useTranslation } from "next-i18next";
 
 function Team() {
-  const { t: pageTranslation } = useTranslation(["common", "page-home"]);
+  const { t: pageTranslation } = useTranslation("page-home");
+  const { t: commonTranslation } = useTranslation("common");
   return (
     <Flex as="section" bg="brand.grey-10">
       <Container
@@ -27,7 +28,7 @@ function Team() {
         px={{ base: "6", xl: "0" }}
       >
         <VStack alignItems="start" spacing="12">
-          <SectionHeading color="brand.black">Team Shardeum</SectionHeading>
+          <SectionHeading color="brand.black">{commonTranslation('team-shardeum')}</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
               <VStack spacing="6" alignItems="start">

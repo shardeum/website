@@ -17,7 +17,6 @@ import { teamSocialIcons } from "@shm/Icons";
 import { useTranslation } from "next-i18next";
 
 function Team() {
-  const { t: pageTranslation } = useTranslation("page-home");
   const { t: commonTranslation } = useTranslation("common");
   return (
     <Flex as="section" bg="brand.grey-10">
@@ -28,7 +27,7 @@ function Team() {
         px={{ base: "6", xl: "0" }}
       >
         <VStack alignItems="start" spacing="12">
-          <SectionHeading color="brand.black">{commonTranslation('team-shardeum')}</SectionHeading>
+          <SectionHeading color="brand.black">{commonTranslation("team-shardeum")}</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
               <VStack spacing="6" alignItems="start">
@@ -37,9 +36,9 @@ function Team() {
                 </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                    {pageTranslation("founder-1-title")}
+                    {commonTranslation("founder-1-title")}
                   </Text>
-                  <Text color="brand.grey-70">{pageTranslation("founder-1-desc")}</Text>
+                  <Text color="brand.grey-70">{commonTranslation("founder-1-desc")}</Text>
                 </VStack>
                 <HStack>
                   <ChakraLink
@@ -66,9 +65,9 @@ function Team() {
                 </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                    {pageTranslation("founder-2-title")}
+                    {commonTranslation("founder-2-title")}
                   </Text>
-                  <Text color="brand.grey-70">{pageTranslation("founder-2-desc")}</Text>
+                  <Text color="brand.grey-70">{commonTranslation("founder-2-desc")}</Text>
                 </VStack>
                 <HStack>
                   <ChakraLink
@@ -103,10 +102,10 @@ function Team() {
               </Box>
               <VStack alignItems="start">
                 <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                  {pageTranslation("community")}
+                  {commonTranslation("community")}
                 </Text>
                 <Flex direction="column">
-                  <Text color="brand.grey-70">{pageTranslation("community-desc")}</Text>
+                  <Text color="brand.grey-70">{commonTranslation("community-desc")}</Text>
                   <Link href={COMMUNITY_URL} passHref>
                     <Text
                       as="a"
@@ -117,7 +116,7 @@ function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {pageTranslation("join-now-cta")}
+                      {commonTranslation("join-now-cta")}
                     </Text>
                   </Link>
                 </Flex>

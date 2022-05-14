@@ -1,10 +1,14 @@
 export const LITEPAPER_URL = "/Shardeum-Litepaper.pdf";
-export const COMMUNITY_URL = "https://discord.gg/shardeum";
+export const DISCORD_URL = "https://discord.gg/shardeum";
+export const COMMUNITY_URL = DISCORD_URL;
 export const TWITTER_URL = "https://twitter.com/shardeum";
 export const BLOG_URL = "https://shardeum.org/blog";
 export const DOCS_URL = "https://docs.shardeum.org";
 export const GITHUB_URL = "https://github.com/shardeum/";
 export const TELEGRAM_URL = "https://telegram.me/shardeum";
+export const REDDIT_URL = "https://www.reddit.com/r/shardeum/";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/shardeum/";
+export const YOUTUBE_URL = "https://www.youtube.com/channel/UCO20LJZBF-lYbc6PWVvwkMA";
 export const FAQ_URL =
   "https://docs.google.com/document/d/1RilXqwJN6hupaKdrXhk2RF9gl_DS5qY3uPm6iII3Xyg/edit?usp=sharing";
 

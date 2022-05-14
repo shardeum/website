@@ -74,7 +74,6 @@ export function getSuperShardians() {
         records.forEach(function (record) {
           const name = record.get("Name");
           const description = record.get("Description");
-          const createdDate = record.get("CreatedDate");
           const category = record.get("Category");
           const image = record.get("Image");
           data.push({ name, description, category, image });

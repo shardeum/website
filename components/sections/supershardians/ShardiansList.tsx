@@ -9,9 +9,9 @@ type ShardiansProps = {
 
 const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps) => {
   return (
-    <Flex bg="brand.grey-5">
-      <Container pl={0} pr={0} maxW="container.xl" pt={[6, 8, 12]} pb={[6, 8, 12]}>
-        <HStack pb={12} pl={[3, 5, 0]} pr={[3, 5, 0]}>
+    <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
+      <Container maxW="container.xl" px={{ base: 6, xl: 0 }} py="5%">
+        <HStack pb={8}>
           {categories.map((category, index) => {
             return (
               <Button
@@ -21,15 +21,16 @@ const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps)
                 variant={category.selected ? "secondary" : "outline"}
                 fontSize={["x-small", "md", "lg"]}
                 bg={category.selected ? "brand.grey-90" : "brand.grey-5"}
-                color={category.selected ? "brand.grey-5" : "brand.grey-80"}
+                color={category.selected ? "brand.grey-5" : "brand.grey-90"}
                 size="lg"
+                _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
               >
                 {category.name}
               </Button>
             );
           })}
         </HStack>
-        <SimpleGrid spacing={["20px", "30px"]} columns={[1, 2, 3]} pl={[3, 5, 0]} pr={[3, 5, 0]}>
+        <SimpleGrid spacing={["20px", "30px"]} columns={[1, 2, 3]}>
           {filteredData.map((data, index) => {
             return (
               <Card

@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, VStack } from "@chakra-ui/react";
 import { COMMUNITY_URL } from "constants/links";
 
 type BeASuperShardianProps = {
@@ -7,9 +7,9 @@ type BeASuperShardianProps = {
 };
 const BeASuperShardian = ({ title, description }: BeASuperShardianProps) => {
   return (
-    <Flex bg="brand.grey-5">
-      <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={12}>
-        <VStack alignItems={"flex-start"} spacing={2} p={10}>
+    <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
+      <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={[6, 12]}>
+        <VStack alignItems={"flex-start"} spacing={2} pt="4" pb="4">
           <Box
             lineHeight="normal"
             fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
@@ -33,6 +33,7 @@ const BeASuperShardian = ({ title, description }: BeASuperShardianProps) => {
             bg="brand.grey-5"
             color="brand.grey-90"
             target="_blank"
+            _hover={{ color: "brand.grey-5", bg: "brand.blue-40" }}
             href={COMMUNITY_URL}
           >
             Start Here

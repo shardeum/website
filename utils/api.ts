@@ -66,10 +66,10 @@ export function getSuperShardians() {
   const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return new Promise<any>((resolve, reject) => {
     base(process.env.NEXT_PUBLIC_AIRTABLE_SUPERSHARDEUM as string)
-      .select({
+      ?.select({
         view: "Grid view",
       })
-      .firstPage()
+      ?.firstPage()
       .then((records) => {
         records.forEach(function (record) {
           const name = record.get("Name");

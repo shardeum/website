@@ -918,20 +918,6 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
-"@types/airtable@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@types/airtable/-/airtable-0.10.1.tgz#d7575251c890cb9a93e92c59344f7b7c4f7d9ae0"
-  integrity sha512-ZwMU+ZztgmN1k12ist39+lDQAkeeaPLO5pgXdRodJecVTMo+zKHNn83dQcLY3eaD3BbUfEZ/6uJsqBTcM+UKuQ==
-  dependencies:
-    airtable "*"
-
-"@types/axios@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
-  integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
-  dependencies:
-    axios "*"
-
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -1173,7 +1159,7 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-airtable@*, airtable@^0.11.3:
+airtable@^0.11.3:
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.11.3.tgz#bed8f81454ec46ce4ce39cb53dc2ef61030b546b"
   integrity sha512-fPT0SdipmJU1eQNe+sJshvnb87HcZ2rPS7gJuryDAF9xDbfbxB8AmYQSuC1f0PIbLyPPpSWBuEewf4UJ9i3rJw==
@@ -1299,7 +1285,7 @@ axe-core@^4.3.5:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.0.tgz#f93be7f81017eb8bedeb1859cc8092cc918d2dc8"
   integrity sha512-btWy2rze3NnxSSxb7LtNhPYYFrRoFBfjiGzmSc/5Hu47wApO2KNXjP/w7Nv2Uz/Fyr/pfEiwOkcXhDxu0jz5FA==
 
-axios@*, axios@^0.26.1:
+axios@^0.26.1:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
   integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==

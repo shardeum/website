@@ -1,14 +1,11 @@
-import { Box, Button, Container, filter, HStack, SimpleGrid } from "@chakra-ui/react";
-import Card from "components/common/ProfileInfoCard";
-import Footer from "components/sections/Footer";
+import React, { useEffect, useState } from "react";
+import { getSuperShardians } from "utils/api";
 import Hero from "components/sections/Hero";
 import BeASuperShardian from "components/sections/supershardians/BeASuperShardians";
 import Shardians from "components/sections/supershardians/ShardiansList";
 import JoinCommunity from "components/sections/JoinCommunity";
-import { InferGetStaticPropsType, NextApiResponse, NextPage } from "next";
+import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { getSuperShardians } from "utils/api";
 
 const buttonCategories = [
   { name: "All", selected: true },

@@ -5,8 +5,8 @@ function VisitBlog() {
   return (
     <VStack py="6" px="8" bgColor="brand.white" w="full" alignItems="start" spacing="6">
       <Feature
-        title="Read Our Blog"
-        description={`Explore interesting and diverse blog posts about Web 3.0 ecosystem contributed by community/content creators across the world like you`}
+        title="Read our blog"
+        description={`Explore exciting and diverse blog posts about the Web 3.0 ecosystem contributed by community/content creators worldwide like you.`}
       />
       <LightMode>
         <Button

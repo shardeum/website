@@ -32,8 +32,9 @@ function Team() {
                     Nischal Shetty
                   </Text>
                   <Text color="brand.grey-70">
-                    Founder of WazirX, Crowdfire and a steward of the cryptocurrency industry in
-                    India
+                    {
+                      "Founder of WazirX, Crowdfire and a steward of the cryptocurrency industry in India. Nischal aims to bring decentralization to billions of people around the world."
+                    }
                   </Text>
                 </VStack>
                 <HStack>
@@ -64,8 +65,9 @@ function Team() {
                     Omar Syed
                   </Text>
                   <Text color="brand.grey-70">
-                    A distributed systems architect with 30 years of experience at NASA, Yahoo,
-                    Raytheon and Zynga.
+                    {
+                      "A distributed systems architect with 30 years of experience at NASA, Yahoo, Raytheon and Zynga. Omar envisions a world where scalable blockchain technology is used to eliminate global poverty and hunger."
+                    }
                   </Text>
                 </VStack>
                 <HStack>
@@ -105,8 +107,9 @@ function Team() {
                 </Text>
                 <Flex direction="column">
                   <Text color="brand.grey-70">
-                    Community is the reason how and why Shardeum will remain decentralized, secure
-                    and infinitely scalable
+                    {
+                      "Shardians are the key pillar to Shardeum's success. The project is being built from the ground up with the community's involvement following Shardeum's open, collaborative and community-driven principles."
+                    }
                   </Text>
                   <Link href={COMMUNITY_URL} passHref>
                     <Text
@@ -118,7 +121,7 @@ function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Know More
+                      Join now
                     </Text>
                   </Link>
                 </Flex>

@@ -1,5 +1,6 @@
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import { useTranslation } from "next-i18next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
 import Image from "next/image";
@@ -7,8 +8,11 @@ import { NextSeo } from "next-seo";
 import { COMMUNITY_URL } from "constants/links";
 import CommunityIntro from "@shm/components/sections/community/CommunityIntro";
 import CommunityTiles from "@shm/components/sections/community/CommunityTiles";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Community: NextPage = () => {
+  const { t: pageTranslation } = useTranslation("page-community");
+
   return (
     <>
       <NextSeo
@@ -51,10 +55,8 @@ const Community: NextPage = () => {
 
       {/* Hero section */}
       <Hero
-        heading={"The Community is the CEO of Shardeum"}
-        description={
-          "Shardeum is home to content creators, designers, digital marketers, technologists, cypherpunks and Web 3.0 enthusiasts. They are in charge of bringing a high level of decentralization to billions of people for a more equitable society."
-        }
+        heading={pageTranslation("page-community-hero-h1")}
+        description={pageTranslation("page-community-hero-description")}
         cta={
           <Button
             as="a"
@@ -64,7 +66,7 @@ const Community: NextPage = () => {
             target="_blank"
             href={COMMUNITY_URL}
           >
-            Join our Discord
+            {pageTranslation("page-community-hero-cta")}
           </Button>
         }
         media={
@@ -88,5 +90,14 @@ const Community: NextPage = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "page-community"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 export default Community;

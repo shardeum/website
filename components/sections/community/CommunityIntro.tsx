@@ -1,9 +1,9 @@
 import React from "react";
-// import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 
 const CommunityIntro = () => {
-  // const { t: pageTranslation } = useTranslation("page-language");
+  const { t: pageTranslation } = useTranslation("page-community");
 
   return (
     <Flex bg="brand.white" as="section">
@@ -19,7 +19,7 @@ const CommunityIntro = () => {
               width="100%"
               color="#2031E6"
             >
-              What is OCC?
+              {pageTranslation("page-community-occ-h1")}
             </Text>
             <Box maxW={{ base: "md", md: "full" }}>
               <Text
@@ -28,16 +28,7 @@ const CommunityIntro = () => {
                 lineHeight={{ base: "7", md: "8" }}
                 color="brand.grey-80"
               >
-                OCC is short for Open, Collaborative and Community driven approach in the effort to
-                install a truly decentralized network to connect billions of unserved, underserved
-                and ordinary people across the world. It is no different from the initial days of
-                the internet where the only CEO was the community who believed when others around
-                dismissed the idea. But the community would not have found long lasting success if
-                not for the open source architecture of the internet. If it was privatized or
-                commoditized, it could still be successful but not at a scale we see today uplifting
-                billions out of poverty. With the introduction of cryptography in open source
-                blockchain, we have a great opportunity to make that success reach more people and
-                communities than ever without compromising on privacy or security.
+                {pageTranslation("page-community-occ-description")}
               </Text>
             </Box>
           </VStack>

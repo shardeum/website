@@ -1,6 +1,5 @@
 import React from "react";
-// import { useTranslation } from "next-i18next";
-// import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useTranslation } from "next-i18next";
 import { Box, Container, Flex, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import {
   TWITTER_URL,
@@ -82,7 +81,7 @@ const tilesData: Tile[] = [
 ];
 
 const CommunityTiles = () => {
-  // const { t: pageTranslation } = useTranslation("page-language");
+  const { t: pageTranslation } = useTranslation("page-community");
 
   const handleTileClick = (url: string) => {
     window.open(url, "_blank"); //to open new page
@@ -102,7 +101,7 @@ const CommunityTiles = () => {
               width="100%"
               color="brand.grey-90"
             >
-              Join the Community
+              {pageTranslation("page-community-join-community-h1")}
             </Text>
             <Box maxW={{ base: "md", md: "full" }}>
               <Text
@@ -111,8 +110,7 @@ const CommunityTiles = () => {
                 lineHeight={{ base: "7", md: "8" }}
                 color="brand.grey-80"
               >
-                Join Shardeum’s global community today via official channels and start collaborating
-                with like minded Shardians to benefit from each other’s knowledge
+                {pageTranslation("page-community-join-community-description")}
               </Text>
             </Box>
 
@@ -137,13 +135,13 @@ const CommunityTiles = () => {
                     }}
                     onClick={() => handleTileClick(tile.link)}
                   >
-                    <Image src={tile.icon} alt={tile.title} width={32} height={32} />
+                    <Image src={tile.icon} alt={tile.key} width={32} height={32} />
                     <Text
                       color={"brand.grey-80"}
                       fontSize={{ base: "xs", sm: "md", lg: "lg" }}
                       fontWeight={"bold"}
                     >
-                      {tile.title}
+                      {pageTranslation(`page-community-${tile.key}`) || tile.title}
                     </Text>
 
                     <Text
@@ -151,7 +149,8 @@ const CommunityTiles = () => {
                       fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
                       fontWeight={"light"}
                     >
-                      {tile.fallBackNum} {tile.userAlias}
+                      {tile.fallBackNum}{" "}
+                      {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias}
                     </Text>
                   </Box>
                 </WrapItem>

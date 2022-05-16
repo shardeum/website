@@ -1,8 +1,11 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { COMMUNITY_URL } from "constants/links";
+import { useTranslation, Trans } from "next-i18next";
 
 function ReadWhitepaper() {
+  const { t: commonTranslation } = useTranslation("common");
+
   return (
     <Box position="relative" overflow="hidden" bg="brand.black">
       <Box position="absolute" zIndex={1} display={{ base: "none", xl: "block" }}>
@@ -51,15 +54,17 @@ function ReadWhitepaper() {
                 fontWeight="medium"
                 color="brand.white"
               >
-                The first{" "}
-                <Text as="span" color="brand.orange">
-                  linearly scalable
-                </Text>{" "}
-                smart contract platform that{" "}
-                <Text as="span" color="brand.orange">
-                  increases transactions per second (TPS)
-                </Text>{" "}
-                by adding more nodes.
+                <Trans i18nKey="shm-desc" t={commonTranslation}>
+                  The first
+                  <Text as="span" color="brand.orange">
+                    linearly scalable
+                  </Text>
+                  smart contract platform that
+                  <Text as="span" color="brand.orange">
+                    increases transactions per second (TPS)
+                  </Text>
+                  by adding more nodes
+                </Trans>
               </Text>
               <Button
                 variant="secondary"
@@ -68,7 +73,7 @@ function ReadWhitepaper() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Join our Discord
+                {commonTranslation("join-discord-cta")}
               </Button>
             </VStack>
             {/* When the video is done it will be put here */}

@@ -3,6 +3,7 @@ export const DISCORD_URL = "https://discord.gg/shardeum";
 export const COMMUNITY_URL = DISCORD_URL;
 export const TWITTER_URL = "https://twitter.com/shardeum";
 export const BLOG_URL = "https://shardeum.org/blog";
+export const NEWSLETTER_URL = "/newsletter";
 export const DOCS_URL = "https://docs.shardeum.org";
 export const GITHUB_URL = "https://github.com/shardeum/";
 export const TELEGRAM_URL = "https://telegram.me/shardeum";

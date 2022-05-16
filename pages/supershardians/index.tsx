@@ -21,8 +21,8 @@ const SuperShardians = ({
   superShardians,
 }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const [categories, setCategories] = useState(buttonCategories);
-  const [filteredData, setFilteredData] = useState([] as any);
-  const { t: ssTranslation } = useTranslation("super-shardians");
+  const [filteredData, setFilteredData] = useState<any[]>([]);
+  const { t: ssTranslation } = useTranslation("page-super-shardians");
 
   useEffect(() => {
     setFilteredData(superShardians);
@@ -31,7 +31,7 @@ const SuperShardians = ({
   const onCategoryChangeHandler = (event: any) => {
     if (event) {
       setFilteredData(
-        superShardians.filter(
+        superShardians?.filter(
           (data: any) => event.target.value === "All" || data.category[0] === event.target.value
         )
       );
@@ -48,9 +48,7 @@ const SuperShardians = ({
     <>
       <Hero
         heading={ssTranslation("heading")}
-        description={
-          "Meet our Super Shardians. These are people who have gone above and beyond the call of duty to contribute to Shardeum. Our Super Shardians are spread across the globe and stand testament to Shardeum’s OCC principles. Exciting rewards like crypto merchs, NFTs are awaiting them."
-        }
+        description={ssTranslation("description")}
         bg="brand.grey-5"
         titleColor="brand.black"
         descColor="brand.grey-90"
@@ -70,10 +68,9 @@ const SuperShardians = ({
         changeCategory={onCategoryChangeHandler}
       />
       <BeASuperShardian
-        title={"Wanna be a Super Shardian?"}
-        description={
-          "You too can become a Super Shardian by joining our community today. All you need is passion and the drive to add value to Shardeum as a content creator, designer, marketer, translator, developer or in any way you can. The community has always got your back."
-        }
+        title={ssTranslation("beASuperShardianTitle")}
+        description={ssTranslation("beASuperShardianDesc")}
+        joinButtonText={ssTranslation("startHere")}
       />
       <JoinCommunity />
     </>
@@ -85,7 +82,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       superShardians,
-      ...(await serverSideTranslations("en", ["super-shardians"])),
+      ...(await serverSideTranslations("en", ["page-super-shardians"])),
     },
   };
 };

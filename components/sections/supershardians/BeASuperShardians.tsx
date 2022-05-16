@@ -4,8 +4,9 @@ import { COMMUNITY_URL } from "constants/links";
 type BeASuperShardianProps = {
   title: string;
   description: string;
+  joinButtonText: string;
 };
-const BeASuperShardian = ({ title, description }: BeASuperShardianProps) => {
+const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardianProps) => {
   return (
     <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
       <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={[6, 12]}>
@@ -36,7 +37,7 @@ const BeASuperShardian = ({ title, description }: BeASuperShardianProps) => {
             _hover={{ color: "brand.grey-5", bg: "brand.blue-40" }}
             href={COMMUNITY_URL}
           >
-            Start Here
+            {joinButtonText}
           </Button>
         </VStack>
       </Container>

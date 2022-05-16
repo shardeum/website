@@ -9,29 +9,34 @@ import {
   INVESTMENT_QUERY_LINK,
   PUBLIC_DRIVE_LINK,
   LITEPAPER_URL,
+  NEWSLETTER_URL,
 } from "../../constants/links";
+import { useTranslation } from "next-i18next";
 
 const LinksMap = {
   General: [
-    { title: "Home", href: "/" },
-    { title: "Community", href: COMMUNITY_URL },
-    { title: "Blog", href: BLOG_URL },
+    { title: "home", href: "/" },
+    { title: "the-community", href: COMMUNITY_URL },
+    { title: "blog", href: BLOG_URL },
+    { title: "newsletter", href: NEWSLETTER_URL },
   ],
   Resources: [
-    { title: "Litepaper", href: LITEPAPER_URL },
-    { title: "FAQ", href: FAQ_URL },
-    { title: "Public drive link", href: PUBLIC_DRIVE_LINK },
+    { title: "litepaper", href: LITEPAPER_URL },
+    { title: "faq", href: FAQ_URL },
+    { title: "public-drive-link", href: PUBLIC_DRIVE_LINK },
   ],
   Contact: [
-    { title: "General enquiries", href: GENERAL_QUERIES_LINK },
-    { title: "Investment enquiries", href: INVESTMENT_QUERY_LINK },
+    { title: "general-enquiries", href: GENERAL_QUERIES_LINK },
+    { title: "investment-queries", href: INVESTMENT_QUERY_LINK },
   ],
 };
 
 function Footer() {
+  const { t: pageTranslation } = useTranslation(["common", "page-home"]);
+
   return (
     <Flex bg="brand.grey-95" as="footer">
-      <Container maxW="container.xl" mx="auto" py="12">
+      <Container maxW="container.xl" mx="auto" py="12" px={{ base: "6", xl: "0" }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
             <Link href="/" passHref>
@@ -48,13 +53,13 @@ function Footer() {
               return (
                 <VStack alignItems="start" spacing="4" key={title}>
                   <Text color="white" fontWeight="medium">
-                    {title}
+                    {pageTranslation(title)}
                   </Text>
                   <VStack spacing="3" alignItems="start">
                     {links.map((link) => (
                       <Link href={link.href} passHref key={link.title}>
                         <Text as="a" color="brand.grey-50" _hover={{ color: "brand.grey-30" }}>
-                          {link.title}
+                          {pageTranslation(link.title)}
                         </Text>
                       </Link>
                     ))}

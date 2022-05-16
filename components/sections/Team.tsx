@@ -14,13 +14,20 @@ import Link from "next/link";
 import SectionHeading from "../../components/common/SectionHeading";
 import { COMMUNITY_URL } from "../../constants/links";
 import { teamSocialIcons } from "@shm/Icons";
+import { useTranslation } from "next-i18next";
 
 function Team() {
+  const { t: commonTranslation } = useTranslation("common");
   return (
     <Flex as="section" bg="brand.grey-10">
-      <Container maxW="container.xl" mx="auto" py={{ base: "20", lg: "24" }}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        py={{ base: "20", lg: "24" }}
+        px={{ base: "6", xl: "0" }}
+      >
         <VStack alignItems="start" spacing="12">
-          <SectionHeading color="brand.black">Team Shardeum</SectionHeading>
+          <SectionHeading color="brand.black">{commonTranslation("team-shardeum")}</SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
               <VStack spacing="6" alignItems="start">
@@ -29,13 +36,9 @@ function Team() {
                 </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                    Nischal Shetty
+                    {commonTranslation("founder-1-title")}
                   </Text>
-                  <Text color="brand.grey-70">
-                    {
-                      "Founder of WazirX, Crowdfire and a steward of the cryptocurrency industry in India. Nischal aims to bring decentralization to billions of people around the world."
-                    }
-                  </Text>
+                  <Text color="brand.grey-70">{commonTranslation("founder-1-desc")}</Text>
                 </VStack>
                 <HStack>
                   <ChakraLink
@@ -62,13 +65,9 @@ function Team() {
                 </AspectRatio>
                 <VStack alignItems="start">
                   <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                    Omar Syed
+                    {commonTranslation("founder-2-title")}
                   </Text>
-                  <Text color="brand.grey-70">
-                    {
-                      "A distributed systems architect with 30 years of experience at NASA, Yahoo, Raytheon and Zynga. Omar envisions a world where scalable blockchain technology is used to eliminate global poverty and hunger."
-                    }
-                  </Text>
+                  <Text color="brand.grey-70">{commonTranslation("founder-2-desc")}</Text>
                 </VStack>
                 <HStack>
                   <ChakraLink
@@ -103,14 +102,10 @@ function Team() {
               </Box>
               <VStack alignItems="start">
                 <Text fontSize="xl" color="brand.black" fontWeight="medium">
-                  The Community
+                  {commonTranslation("community")}
                 </Text>
                 <Flex direction="column">
-                  <Text color="brand.grey-70">
-                    {
-                      "Shardians are the key pillar to Shardeum's success. The project is being built from the ground up with the community's involvement following Shardeum's open, collaborative and community-driven principles."
-                    }
-                  </Text>
+                  <Text color="brand.grey-70">{commonTranslation("community-desc")}</Text>
                   <Link href={COMMUNITY_URL} passHref>
                     <Text
                       as="a"
@@ -121,7 +116,7 @@ function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Join now
+                      {commonTranslation("join-now-cta")}
                     </Text>
                   </Link>
                 </Flex>

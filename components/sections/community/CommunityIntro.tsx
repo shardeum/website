@@ -7,7 +7,7 @@ const CommunityIntro = () => {
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="32" pb="32">
+      <Container maxW="container.xl" mx="auto" pt="16" pb="32">
         <Box bg="#E9EAFC" p="48px">
           <VStack spacing={2} width="100%" alignItems="start">
             <Text

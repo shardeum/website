@@ -14,13 +14,62 @@ import {
 import Image from "next/image";
 
 const tilesData = [
-  { key: "discord", title: "Discord", icon: "/community/icons/discord.svg", link: DISCORD_URL },
-  { key: "youtube", title: "YouTube", icon: "/community/icons/youtube.svg", link: YOUTUBE_URL },
-  { key: "twitter", title: "Twitter", icon: "/community/icons/twitter.svg", link: TWITTER_URL },
-  { key: "telegram", title: "Telegram", icon: "/community/icons/telegram.svg", link: TELEGRAM_URL },
-  { key: "reddit", title: "Reddit", icon: "/community/icons/discord.svg", link: REDDIT_URL },
-  { key: "github", title: "GitHub", icon: "/community/icons/discord.svg", link: GITHUB_URL },
-  { key: "linkedin", title: "LinkedIn", icon: "/community/icons/discord.svg", link: LINKEDIN_URL },
+  {
+    key: "discord",
+    title: "Discord",
+    icon: "/community/icons/discord.svg",
+    link: DISCORD_URL,
+    fallBackNum: "4500+",
+    userAlias: "members",
+  },
+  {
+    key: "youtube",
+    title: "YouTube",
+    icon: "/community/icons/youtube.svg",
+    link: YOUTUBE_URL,
+    fallBackNum: "1.67k+",
+    userAlias: "subscribers",
+  },
+  {
+    key: "twitter",
+    title: "Twitter",
+    icon: "/community/icons/twitter.svg",
+    link: TWITTER_URL,
+    fallBackNum: "13.5k+",
+    userAlias: "followers",
+  },
+  {
+    key: "telegram",
+    title: "Telegram",
+    icon: "/community/icons/telegram.svg",
+    link: TELEGRAM_URL,
+    fallBackNum: "4.6k+",
+    userAlias: "members",
+  },
+  {
+    key: "reddit",
+    title: "Reddit",
+    icon: "/community/icons/discord.svg",
+    link: REDDIT_URL,
+    fallBackNum: "141",
+    userAlias: "members",
+  },
+  {
+    key: "github",
+    title: "GitHub",
+    icon: "/community/icons/discord.svg",
+    link: GITHUB_URL,
+    fallBackNum: "14",
+    userAlias: "contributors",
+  },
+  {
+    key: "linkedin",
+    title: "LinkedIn",
+    icon: "/community/icons/discord.svg",
+    link: LINKEDIN_URL,
+    fallBackNum: "891",
+    userAlias: "followers",
+  },
 ];
 
 const CommunityTiles = () => {
@@ -88,7 +137,7 @@ const CommunityTiles = () => {
                       fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
                       fontWeight={"light"}
                     >
-                      4,500+ Subscribers
+                      {tile.fallBackNum} {tile.userAlias}
                     </Text>
                   </Box>
                 </WrapItem>

@@ -14,7 +14,7 @@ const links = [
   {
     title: "community",
     link: COMMUNITY_URL,
-    newPage: true,
+    newPage: false,
   },
   {
     title: "litepaper",

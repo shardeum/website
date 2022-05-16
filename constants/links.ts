@@ -1,6 +1,6 @@
 export const LITEPAPER_URL = "/Shardeum-Litepaper.pdf";
 export const DISCORD_URL = "https://discord.gg/shardeum";
-export const COMMUNITY_URL = DISCORD_URL;
+export const COMMUNITY_URL = "/community";
 export const TWITTER_URL = "https://twitter.com/shardeum";
 export const BLOG_URL = "https://shardeum.org/blog";
 export const NEWSLETTER_URL = "/newsletter";

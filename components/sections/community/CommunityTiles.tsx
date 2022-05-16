@@ -13,7 +13,16 @@ import {
 } from "constants/links";
 import Image from "next/image";
 
-const tilesData = [
+type Tile = {
+  key: string;
+  title: string;
+  icon: string;
+  link: string;
+  fallBackNum: string;
+  userAlias: string;
+};
+
+const tilesData: Tile[] = [
   {
     key: "discord",
     title: "Discord",
@@ -75,6 +84,10 @@ const tilesData = [
 const CommunityTiles = () => {
   // const { t: pageTranslation } = useTranslation("page-language");
 
+  const handleTileClick = (url: string) => {
+    window.open(url, "_blank"); //to open new page
+  };
+
   return (
     <Flex bg="brand.white" as="section">
       <Container maxW="container.xl" mx="auto" pb="32">
@@ -122,6 +135,7 @@ const CommunityTiles = () => {
                     _hover={{
                       bgColor: "brand.grey-10",
                     }}
+                    onClick={() => handleTileClick(tile.link)}
                   >
                     <Image src={tile.icon} alt={tile.title} width={32} height={32} />
                     <Text

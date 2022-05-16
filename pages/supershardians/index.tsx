@@ -6,6 +6,8 @@ import Shardians from "components/sections/supershardians/ShardiansList";
 import JoinCommunity from "components/sections/JoinCommunity";
 import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const buttonCategories = [
   { name: "All", selected: true },
@@ -20,6 +22,7 @@ const SuperShardians = ({
 }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const [categories, setCategories] = useState(buttonCategories);
   const [filteredData, setFilteredData] = useState([] as any);
+  const { t: ssTranslation } = useTranslation("super-shardians");
 
   useEffect(() => {
     setFilteredData(superShardians);
@@ -44,7 +47,7 @@ const SuperShardians = ({
   return (
     <>
       <Hero
-        heading={"Our Super Shardians"}
+        heading={ssTranslation("heading")}
         description={
           "Meet our Super Shardians. These are people who have gone above and beyond the call of duty to contribute to Shardeum. Our Super Shardians are spread across the globe and stand testament to Shardeum’s OCC principles. Exciting rewards like crypto merchs, NFTs are awaiting them."
         }
@@ -80,7 +83,10 @@ const SuperShardians = ({
 export const getStaticProps = async () => {
   const superShardians = await getSuperShardians();
   return {
-    props: { superShardians },
+    props: {
+      superShardians,
+      ...(await serverSideTranslations("en", ["super-shardians"])),
+    },
   };
 };
 

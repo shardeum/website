@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
-import { Box, Container, Flex, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, VStack, SimpleGrid } from "@chakra-ui/react";
+
 import { CommunityStat } from "types";
 import {
   TWITTER_URL,
@@ -115,53 +116,53 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                 textAlign="left"
                 lineHeight={{ base: "7", md: "8" }}
                 color="brand.grey-80"
+                mb="5"
               >
                 {pageTranslation("page-community-join-community-description")}
               </Text>
             </Box>
 
-            <Wrap spacing={{ base: "4", sm: "4", lg: "6" }}>
+            <SimpleGrid spacing={6} columns={{ base: 1, sm: 2, md: 3, lg: 4 }} w="100%">
               {tilesData?.map((tile) => (
-                <WrapItem key={tile.key}>
-                  <Box
-                    display="flex"
-                    flexDir="column"
-                    cursor="pointer"
-                    overflow="hidden"
-                    bgColor="brand.white"
-                    alignItems="flex-start"
-                    justifyContent="flex-start"
-                    p={{ base: "3", sm: "4", lg: "5" }}
-                    pb={{ base: "4", sm: "6", lg: "8" }}
-                    minW={{ base: "156px", sm: "156px", lg: "266px" }}
-                    border={"1px solid"}
-                    borderColor={"brand.grey-70"}
-                    _hover={{
-                      bgColor: "brand.grey-10",
-                    }}
-                    onClick={() => handleTileClick(tile.link)}
+                <Box
+                  key={tile.key}
+                  display="flex"
+                  flexDir="column"
+                  cursor="pointer"
+                  overflow="hidden"
+                  bgColor="brand.white"
+                  alignItems="flex-start"
+                  justifyContent="flex-start"
+                  p={{ base: "3", sm: "4", lg: "5" }}
+                  pb={{ base: "4", sm: "6", lg: "8" }}
+                  // w={{ base: "170px", sm: "200px", md: "200px", lg: "300px" }}
+                  border={"1px solid"}
+                  borderColor={"brand.grey-70"}
+                  _hover={{
+                    bgColor: "brand.grey-10",
+                  }}
+                  onClick={() => handleTileClick(tile.link)}
+                >
+                  <Image src={tile.icon} alt={tile.key} width={32} height={32} />
+                  <Text
+                    color={"brand.grey-80"}
+                    fontSize={{ base: "xs", sm: "md", lg: "lg" }}
+                    fontWeight={"bold"}
                   >
-                    <Image src={tile.icon} alt={tile.key} width={32} height={32} />
-                    <Text
-                      color={"brand.grey-80"}
-                      fontSize={{ base: "xs", sm: "md", lg: "lg" }}
-                      fontWeight={"bold"}
-                    >
-                      {pageTranslation(`page-community-${tile.key}`) || tile.title}
-                    </Text>
+                    {pageTranslation(`page-community-${tile.key}`) || tile.title}
+                  </Text>
 
-                    <Text
-                      color={"brand.grey-80"}
-                      fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
-                      fontWeight={"light"}
-                    >
-                      {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "}
-                      {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias}
-                    </Text>
-                  </Box>
-                </WrapItem>
+                  <Text
+                    color={"brand.grey-80"}
+                    fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
+                    fontWeight={"light"}
+                  >
+                    {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "}
+                    {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias}
+                  </Text>
+                </Box>
               ))}
-            </Wrap>
+            </SimpleGrid>
           </VStack>
         </Box>
       </Container>

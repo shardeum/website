@@ -17,7 +17,7 @@ const links = [
   },
   {
     title: "Super Shardians",
-    link: "/supershardians",
+    link: "/super-shardian",
     newPage: false,
   },
   {

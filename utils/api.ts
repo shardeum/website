@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { NewsItem } from "../types";
+import { NewsItem, Shardian } from "../types";
 
 const configureAirtable = () => {
   Airtable.configure({
@@ -60,11 +60,11 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
   });
 };
 
-export function getSuperShardians() {
+export const getSuperShardians = (): Promise<Shardian[]> => {
   configureAirtable();
-  const data: any[] = [];
+  const data: Shardian[] = [];
   const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
-  return new Promise<any>((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     base(process.env.NEXT_PUBLIC_AIRTABLE_SUPERSHARDEUM as string)
       ?.select({
         view: "Grid view",
@@ -72,13 +72,13 @@ export function getSuperShardians() {
       ?.firstPage()
       .then((records) => {
         records.forEach(function (record) {
-          const name = record.get("Name");
-          const description = record.get("Description");
-          const category = record.get("Category");
+          const name = record.get("Name")!.toString();
+          const description = record.get("Description")!.toString();
+          const category = record.get("Category")!.toString();
           const image = record.get("Image");
           data.push({ name, description, category, image });
         });
         resolve(data);
       });
   });
-}
+};

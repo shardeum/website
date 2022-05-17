@@ -9,7 +9,7 @@ type BeASuperShardianProps = {
 const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardianProps) => {
   return (
     <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
-      <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={[6, 12]}>
+      <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={{ base: 6, md: 8, lg: 16 }}>
         <VStack alignItems={"flex-start"} spacing={2} pt="4" pb="4">
           <Box
             lineHeight="normal"

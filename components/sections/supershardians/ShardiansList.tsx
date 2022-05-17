@@ -10,7 +10,7 @@ type ShardiansProps = {
 const Shardians = ({ categories, filteredData, changeCategory }: ShardiansProps) => {
   return (
     <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
-      <Container maxW="container.xl" px={{ base: 6, xl: 0 }} py="5%">
+      <Container maxW="container.xl" px={{ base: 6, xl: 0 }} py="4%">
         <HStack pb={8}>
           {categories.map((category, index) => {
             return (

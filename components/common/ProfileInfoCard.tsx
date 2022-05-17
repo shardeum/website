@@ -9,12 +9,12 @@ type CardProps = {
 
 const Card = ({ name, description, category, image }: CardProps) => {
   return (
-    <Box p={8} bg="gray.800" shadow="lg" position="relative">
+    <Flex direction="column" p={8} bg="gray.800" shadow="lg" position="relative">
       <AspectRatio ratio={270 / 300} w="full">
         <Image src={image || "nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
       </AspectRatio>
 
-      <Box pt={[6, 7, 8]}>
+      <Flex direction="column" justifyContent={"space-between"} flexGrow={1} pt={[6, 7, 8]}>
         <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>
           {name}
         </Text>
@@ -26,8 +26,8 @@ const Card = ({ name, description, category, image }: CardProps) => {
             {category}
           </Badge>
         </Flex>
-      </Box>
-    </Box>
+      </Flex>
+    </Flex>
   );
 };
 

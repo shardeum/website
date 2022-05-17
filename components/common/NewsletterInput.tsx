@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, FormHelperText, Input, Stack } from "@chakra-ui/react";
 import { useNewsletter } from "@shm/hooks";
 import { IconRightArrow } from "@shm/Icons";
+import { useTranslation } from "next-i18next";
 import { validSources } from "../../types";
 
 type Props = {
@@ -13,13 +14,14 @@ function NewsletterInput({ type }: Props) {
     form: { error, status, value, success },
     handleOnChange,
   } = useNewsletter();
+  const { t: commonTranslation } = useTranslation("common");
 
   return (
     <FormControl isInvalid={!!error} w="full">
       <Stack w="full" flexDirection={{ base: "column", md: "row" }} alignItems="center" spacing="0">
         <Box w="full" h="full" mb={{ base: "4", md: "0" }} mr={{ md: "4" }}>
           <Input
-            placeholder="Your email"
+            placeholder={commonTranslation("your-email")}
             w="full"
             h="56px"
             onChange={handleOnChange}
@@ -41,7 +43,7 @@ function NewsletterInput({ type }: Props) {
           onClick={() => handleSubmit([type])}
           rightIcon={<IconRightArrow />}
         >
-          Subscribe
+          {commonTranslation("subscribe")}
         </Button>
       </Stack>
       {error ? (

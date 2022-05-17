@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
 import { getPercentage } from "@shm/utils";
 import SectionHeading from "components/common/SectionHeading";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import NewsletterInput from "../../common/NewsletterInput";
 
@@ -9,35 +10,38 @@ const bars = [
     bgColor: "brand.grey-30",
     height: "51%",
     totalSHM: getPercentage(51),
-    use: "Node mining",
+    use: "node-mining",
   },
   {
     bgColor: "brand.grey-30",
     height: "18%",
     totalSHM: getPercentage(18),
-    use: "Sale",
+    use: "sale",
   },
   {
     bgColor: "brand.grey-30",
     height: "15%",
     totalSHM: getPercentage(15),
-    use: "Team",
+    use: "team",
   },
   {
     bgColor: "brand.grey-30",
     height: "11%",
     totalSHM: getPercentage(11),
-    use: "Foundation",
+    use: "foundation",
   },
   {
     bgColor: "brand.grey-30",
     height: "5%",
     totalSHM: getPercentage(5),
-    use: "Ecosystem / Airdrops",
+    use: "ecosystem-airdrops",
   },
 ];
 
 const SHMTokenomics = () => {
+  const { t: pageTranslation } = useTranslation("page-home");
+  const { t: commonTranslation } = useTranslation("common");
+
   return (
     <Box position="relative" overflow="hidden" bg="brand.black">
       <Box
@@ -64,11 +68,11 @@ const SHMTokenomics = () => {
         px={{ base: 6, xl: 0 }}
       >
         <Box mb="12">
-          <SectionHeading color="brand.white">$SHM Tokenomics</SectionHeading>
+          <SectionHeading color="brand.white">{pageTranslation("shm-tokenomics")}</SectionHeading>
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>
           <Text fontSize="base" fontWeight="medium" color="white">
-            Fixed supply of{" "}
+            {pageTranslation("shm-fixed-supply-label")}{" "}
             <Text as="span" color="brand.orange" fontWeight="base">
               508M $SHM
             </Text>
@@ -109,7 +113,7 @@ const SHMTokenomics = () => {
                 <Text fontSize="base" fontWeight="medium">
                   {bar.height}{" "}
                   <Text as="span" color="brand.grey-50" fontSize="">
-                    {bar.use}
+                    {pageTranslation(bar.use)}
                   </Text>
                 </Text>{" "}
               </HStack>
@@ -127,7 +131,7 @@ const SHMTokenomics = () => {
           <GridItem display="flex" justifyContent="flex-end" h="full" flexDir="column">
             <VStack alignItems="start" spacing="2" mb="4">
               <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
-                Fixed supply of
+                {pageTranslation("shm-fixed-supply-label")}
               </Text>
               <Text as="span" color="brand.orange" fontWeight="xl">
                 508M $SHM
@@ -148,7 +152,7 @@ const SHMTokenomics = () => {
                   {bar.height}
                 </Text>{" "}
                 <Text fontSize="lg" fontWeight="medium" color="brand.grey-30">
-                  {bar.use}
+                  {commonTranslation(bar.use)}
                 </Text>{" "}
                 <Text as="span" color="brand.grey-50" display="inline-block" fontSize="base">
                   {bar.totalSHM}M $SHM
@@ -173,7 +177,7 @@ const SHMTokenomics = () => {
             w="full"
           >
             <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
-              Want to invest in $SHM early? Drop your email below.
+              {commonTranslation("investment-newsletter-title")}
             </Text>
           </VStack>
           <NewsletterInput type="investment" />

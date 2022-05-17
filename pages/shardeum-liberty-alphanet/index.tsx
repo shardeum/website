@@ -9,6 +9,7 @@ import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
 import { NextSeo } from "next-seo";
 import { DOCS_URL } from "constants/links";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AlphanetLanding: NextPage = () => {
   return (
@@ -215,6 +216,14 @@ const AlphanetLanding: NextPage = () => {
       <JoinCommunity />
     </>
   );
+};
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 };
 
 export default AlphanetLanding;

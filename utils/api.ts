@@ -1,5 +1,12 @@
 import Airtable from "airtable";
-import { NewsItem } from "../types";
+import { NewsItem, CommunityStat } from "../types";
+
+const configureAirtable = () => {
+  Airtable.configure({
+    endpointUrl: "https://api.airtable.com",
+    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
+  });
+};
 
 export const fetchNewList = () =>
   fetch("/api/news")
@@ -53,5 +60,26 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
           resolve(data);
         }
       );
+  });
+};
+
+export const getCommunityStats = (): Promise<CommunityStat[]> => {
+  configureAirtable();
+  const data: CommunityStat[] = [];
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
+  return new Promise((resolve, reject) => {
+    base(process.env.NEXT_PUBLIC_AIRTABLE_COMMUNITYSTATS as string)
+      ?.select({
+        view: "Grid view",
+      })
+      ?.firstPage()
+      .then((records) => {
+        records.forEach(function (record) {
+          const key = (record.get("key") || "").toString();
+          const followerCount = (record.get("followerCount") || "").toString();
+          data.push({ key, followerCount });
+        });
+        resolve(data);
+      });
   });
 };

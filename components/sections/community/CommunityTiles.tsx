@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import { Box, Container, Flex, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { CommunityStat } from "types";
 import {
   TWITTER_URL,
   GITHUB_URL,
@@ -80,12 +81,17 @@ const tilesData: Tile[] = [
   },
 ];
 
-const CommunityTiles = () => {
+const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] }) => {
   const { t: pageTranslation } = useTranslation("page-community");
 
   const handleTileClick = (url: string) => {
     window.open(url, "_blank"); //to open new page
   };
+
+  const communityStatsMap = communityStats?.reduce((result: any, item) => {
+    result[item.key] = item.followerCount;
+    return result;
+  }, {});
 
   return (
     <Flex bg="brand.white" as="section">
@@ -149,7 +155,7 @@ const CommunityTiles = () => {
                       fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
                       fontWeight={"light"}
                     >
-                      {tile.fallBackNum}{" "}
+                      {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "}
                       {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias}
                     </Text>
                   </Box>

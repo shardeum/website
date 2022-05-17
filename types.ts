@@ -10,3 +10,8 @@ export interface NewsItem {
   newsURL: string;
   siteName: string;
 }
+
+export interface CommunityStat {
+  key: string;
+  followerCount: string;
+}

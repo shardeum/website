@@ -58,7 +58,7 @@ const tilesData: Tile[] = [
   {
     key: "reddit",
     title: "Reddit",
-    icon: "/community/icons/discord.svg",
+    icon: "/community/icons/reddit.svg",
     link: REDDIT_URL,
     fallBackNum: "141",
     userAlias: "members",
@@ -66,7 +66,7 @@ const tilesData: Tile[] = [
   {
     key: "github",
     title: "GitHub",
-    icon: "/community/icons/discord.svg",
+    icon: "/community/icons/github.svg",
     link: GITHUB_URL,
     fallBackNum: "14",
     userAlias: "contributors",
@@ -74,7 +74,7 @@ const tilesData: Tile[] = [
   {
     key: "linkedin",
     title: "LinkedIn",
-    icon: "/community/icons/discord.svg",
+    icon: "/community/icons/linkedin.svg",
     link: LINKEDIN_URL,
     fallBackNum: "891",
     userAlias: "followers",

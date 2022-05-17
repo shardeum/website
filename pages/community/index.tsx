@@ -10,6 +10,7 @@ import CommunityTiles from "@shm/components/sections/community/CommunityTiles";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getCommunityStats } from "utils/api";
 import { CommunityStat } from "types";
+import CommunitySuperShardianBox from "@shm/components/sections/community/CommunitySuperShardianBox";
 
 const Community = ({ communityStats }: { communityStats: CommunityStat[] }): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-community");
@@ -86,6 +87,8 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
       <CommunityIntro />
 
       <CommunityTiles communityStats={communityStats} />
+
+      <CommunitySuperShardianBox />
 
       {/* Join community - common CTA */}
       <JoinCommunity />

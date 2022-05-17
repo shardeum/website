@@ -12,6 +12,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/company/shardeum/";
 export const YOUTUBE_URL = "https://www.youtube.com/channel/UCO20LJZBF-lYbc6PWVvwkMA";
 export const FAQ_URL =
   "https://docs.google.com/document/d/1RilXqwJN6hupaKdrXhk2RF9gl_DS5qY3uPm6iII3Xyg/edit?usp=sharing";
+export const SUPERSHARDIAN_URL = "/supershardians";
 
 export const PUBLIC_DRIVE_LINK =
   "https://drive.google.com/drive/folders/1zal5vN3f67Ql-Q8jiSYsp6Nf0xoJuqNI";

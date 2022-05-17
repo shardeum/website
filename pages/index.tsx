@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Stack } from "@chakra-ui/react";
 import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
 import SlidingStats from "components/common/SlidingStats";
 import Hero from "components/sections/Hero";
@@ -27,16 +27,34 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         heading={commonTranslation("shm-slogan")}
         description={commonTranslation("shm-description")}
         cta={
-          <Button
-            as="a"
-            variant="primary"
-            size="lg"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://shardeum.org/shardeum-liberty-alphanet"
-          >
-            {commonTranslation("join-liberty-cta")}
-          </Button>
+          <>
+            <Stack
+              spacing="4"
+              direction={{ base: "column", sm: "row" }}
+              width={{ base: "full", sm: "auto" }}
+            >
+              <Button
+                as="a"
+                variant="secondary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://shardeum.org/shardeum-liberty-alphanet"
+              >
+                {commonTranslation("join-liberty-cta")}
+              </Button>
+              <Button
+                as="a"
+                variant="primary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://docs.shardeum.org/basics/claim"
+              >
+                {commonTranslation("claim-100-shm-cta")}
+              </Button>
+            </Stack>
+          </>
         }
         media={
           <Box position="relative">

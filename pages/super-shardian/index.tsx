@@ -115,7 +115,7 @@ export const getStaticProps = async ({ locale }: { locale: string }) => {
   return {
     props: {
       superShardians,
-      ...(await serverSideTranslations(locale, ["page-super-shardian"])),
+      ...(await serverSideTranslations(locale, ["common", "page-super-shardian"])),
     },
   };
 };

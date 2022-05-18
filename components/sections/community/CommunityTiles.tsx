@@ -96,7 +96,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }} pb="32">
+      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }} pb="16">
         <Box>
           <VStack spacing={2} width="100%" alignItems="start">
             <Text
@@ -122,7 +122,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
               </Text>
             </Box>
 
-            <SimpleGrid spacing={6} columns={{ base: 1, sm: 2, md: 3, lg: 4 }} w="100%">
+            <SimpleGrid spacing={6} columns={{ base: 2, sm: 2, md: 3, lg: 4 }} w="100%">
               {tilesData?.map((tile) => (
                 <Box
                   key={tile.key}
@@ -146,7 +146,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   <Image src={tile.icon} alt={tile.key} width={32} height={32} />
                   <Text
                     color={"brand.grey-80"}
-                    fontSize={{ base: "xs", sm: "md", lg: "lg" }}
+                    fontSize={{ base: "md", sm: "md", lg: "lg" }}
                     fontWeight={"bold"}
                   >
                     {pageTranslation(`page-community-${tile.key}`) || tile.title}
@@ -154,8 +154,8 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
 
                   <Text
                     color={"brand.grey-80"}
-                    fontSize={{ base: "xs", sm: "sm", lg: "sm" }}
-                    fontWeight={"light"}
+                    fontSize={{ base: "sm", sm: "sm", lg: "sm" }}
+                    fontWeight={"normal"}
                   >
                     {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "}
                     {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias}

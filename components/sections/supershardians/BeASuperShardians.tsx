@@ -8,39 +8,47 @@ type BeASuperShardianProps = {
 };
 const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardianProps) => {
   return (
-    <Flex bg="brand.grey-5" justifyContent="center" alignItems="center">
-      <Container maxW="container.xl" mx="auto" bg="brand.blue" mb={{ base: 6, md: 8, lg: 16 }}>
-        <VStack alignItems={"flex-start"} spacing={2} pt="4" pb="4">
-          <Box
-            lineHeight="normal"
-            fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
-            fontWeight="bold"
-            color="brand.grey-5"
-          >
-            {title}
-          </Box>
-          <Box maxW={{ base: "md", md: "full" }} pb={5}>
-            <Box
-              fontSize={{ base: "md", lg: "lg" }}
-              textAlign={{ base: "left", md: "left" }}
-              color="brand.grey-10"
-            >
-              {description}
-            </Box>
-          </Box>
-          <Button
-            size="lg"
-            as="a"
-            bg="brand.grey-5"
-            color="brand.grey-90"
-            target="_blank"
-            _hover={{ color: "brand.grey-5", bg: "brand.blue-40" }}
-            href={COMMUNITY_URL}
-          >
-            {joinButtonText}
-          </Button>
-        </VStack>
-      </Container>
+    <Flex bg="brand.grey-5" px={{ base: 0, sm: 0, lg: 8 }} pt={0} pb={{ base: 8, lg: 24 }}>
+      <Flex
+        maxW="container.xl"
+        direction={"column"}
+        mx={{ lg: "auto" }}
+        p={{ base: 6, sm: 6, lg: 8 }}
+        bg="brand.blue"
+        width={{ base: "full" }}
+        justifyContent="center"
+        alignItems="flex-start"
+      >
+        <Box
+          lineHeight="normal"
+          fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
+          fontWeight="bold"
+          color="brand.grey-5"
+        >
+          {title}
+        </Box>
+        <Box
+          maxW={{ md: "full" }}
+          pt={4}
+          pb={5}
+          fontSize={{ base: "md", lg: "lg" }}
+          textAlign={{ base: "left", md: "left" }}
+          color="brand.grey-10"
+        >
+          {description}
+        </Box>
+        <Button
+          size="lg"
+          as="a"
+          bg="brand.grey-5"
+          color="brand.grey-90"
+          target="_blank"
+          _hover={{ color: "brand.grey-5", bg: "brand.blue-40" }}
+          href={COMMUNITY_URL}
+        >
+          {joinButtonText}
+        </Button>
+      </Flex>
     </Flex>
   );
 };

@@ -26,8 +26,8 @@ const Hero = ({
   ...args
 }: HeroProps) => {
   return (
-    <Flex justifyContent="center" alignItems="center" bg={bg || "brand.black"} {...args}>
-      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }} py="5%">
+    <Flex justifyContent="center" alignItems="center" bg="brand.black" {...args}>
+      <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }} py="3%">
         <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]} alignItems="center">
           <VStack alignItems="flex-start" spacing={[8]}>
             <VStack

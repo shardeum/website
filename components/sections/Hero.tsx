@@ -10,11 +10,23 @@ type HeroProps = {
   description?: React.ReactNode;
   cta?: React.ReactNode;
   media?: React.ReactNode;
+  bg?: string;
+  titleColor?: string;
+  descColor?: string;
 };
 
-const Hero = ({ heading, description, cta, media, ...args }: HeroProps) => {
+const Hero = ({
+  heading,
+  description,
+  cta,
+  media,
+  bg,
+  titleColor,
+  descColor,
+  ...args
+}: HeroProps) => {
   return (
-    <Flex justifyContent="center" alignItems="center" bg="brand.black" {...args}>
+    <Flex justifyContent="center" alignItems="center" bg={bg || "brand.black"} {...args}>
       <Container maxW="container.xl" mx="auto" p="6" px={{ base: 6, xl: 0 }} py="3%">
         <SimpleGrid columns={[1, null, null, 1, 2]} gap={["8", "12"]} alignItems="center">
           <VStack alignItems="flex-start" spacing={[8]}>
@@ -31,7 +43,7 @@ const Hero = ({ heading, description, cta, media, ...args }: HeroProps) => {
                 fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
                 fontWeight="bold"
                 width="100%"
-                color="brand.white"
+                color={titleColor || "brand.white"}
               >
                 {heading}
               </Text>
@@ -40,7 +52,7 @@ const Hero = ({ heading, description, cta, media, ...args }: HeroProps) => {
                   fontSize={{ base: "md", lg: "xl" }}
                   textAlign="left"
                   lineHeight={{ base: "7", md: "8" }}
-                  color="brand.grey-20"
+                  color={descColor || "brand.grey-20"}
                 >
                   {description}
                 </Text>

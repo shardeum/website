@@ -38,14 +38,7 @@ const CommunitySuperShardianBox = () => {
           </Text>
           {/* </Box> */}
           <LightMode>
-            <Button
-              as="a"
-              variant="secondary"
-              size="lg"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={SUPERSHARDIAN_URL}
-            >
+            <Button as="a" variant="secondary" size="lg" href={SUPERSHARDIAN_URL}>
               {pageTranslation("page-community-supershardians-cta")}
             </Button>
           </LightMode>

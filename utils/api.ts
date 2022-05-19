@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { NewsItem, CommunityStat } from "../types";
+import { NewsItem, Shardian, CommunityStat } from "../types";
 
 const configureAirtable = () => {
   Airtable.configure({
@@ -21,10 +21,7 @@ export const fetchNewList = () =>
     );
 
 export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
-  Airtable.configure({
-    endpointUrl: "https://api.airtable.com",
-    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-  });
+  configureAirtable();
   const data: any[] = [];
   const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return new Promise((resolve, reject) => {
@@ -60,6 +57,29 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
           resolve(data);
         }
       );
+  });
+};
+
+export const getSuperShardians = (): Promise<Shardian[]> => {
+  configureAirtable();
+  const data: Shardian[] = [];
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
+  return new Promise((resolve, reject) => {
+    base(process.env.NEXT_PUBLIC_AIRTABLE_SUPERSHARDEUM as string)
+      ?.select({
+        view: "Grid view",
+      })
+      ?.firstPage()
+      .then((records) => {
+        records.forEach(function (record) {
+          const name = record.get("Name")!.toString();
+          const description = record.get("Description")!.toString();
+          const category = record.get("Category")!.toString();
+          const image = record.get("Image");
+          data.push({ name, description, category, image });
+        });
+        resolve(data);
+      });
   });
 };
 

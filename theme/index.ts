@@ -60,7 +60,7 @@ const customTheme: ThemeOverride = {
     global: () => {
       return {
         body: {
-          bg: "brand.grey-5",
+          bg: "brand.red",
         },
       };
     },

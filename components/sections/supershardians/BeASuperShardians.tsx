@@ -8,7 +8,7 @@ type BeASuperShardianProps = {
 };
 const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardianProps) => {
   return (
-    <Flex bg="brand.grey-5" px={{ base: 0, sm: 0, lg: 8 }} pt={0} pb={{ base: 8, lg: 24 }}>
+    <Flex bg="brand.grey-5" px={{ base: 0, sm: 0, lg: 8 }} pt={0} pb={{ base: 0, lg: 24 }}>
       <Flex
         maxW="container.xl"
         direction={"column"}

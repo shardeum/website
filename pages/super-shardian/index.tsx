@@ -10,6 +10,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextSeo } from "next-seo";
 import { Shardian } from "types";
+import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 
 let buttonCategories = [{ name: "All", selected: true }];
 
@@ -82,18 +83,10 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
           handle: "@shardeum",
         }}
       />
-      <Hero
+      <ResponsiveHero
         heading={ssTranslation("page-super-shardian-heading")}
         description={ssTranslation("page-super-shardian-description")}
-        media={
-          <Image
-            objectFit="contain"
-            src="/supershardian.png"
-            alt="Shardeum Use Case Illustrations"
-            width="490px"
-            height="328px"
-          />
-        }
+        src="/supershardian.png"
       />
       <Shardians
         categories={categories}

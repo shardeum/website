@@ -9,51 +9,45 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react";
-
-const roadmapList = [
-  {
-    title: "Phase 1",
-    taskList: [
-      "Send Transactions",
-      "Deploy Smart Contracts",
-      <>
-        30 node unsharded network operated by Shardeum.
-        <br /> 20 validator nodes, 10 standby nodes and 5 archive nodes
-      </>,
-      "Rotation of Standby and Validator Nodes",
-      "Faucet to Distribute SHM",
-    ],
-    active: true,
-  },
-  {
-    title: "Phase 2",
-    taskList: [
-      <>
-        120 node sharded network operated by Shardeum.
-        <br /> 100 validator nodes and 20 standby nodes. 5 archive nodes.
-      </>,
-      <>
-        Shard size of 20 nodes.
-        <br /> Only support EIP2930 transactions
-      </>,
-    ],
-  },
-];
-
-const titles = roadmapList.map((roadmap) => roadmap.title);
-const activeList = roadmapList.map((roadmap) => roadmap.active);
+import { useTranslation } from "next-i18next";
 
 function Roadmap() {
+  const { t: pageTranslation } = useTranslation(["page-alphanet"]);
+
+  const roadmapList = [
+    {
+      title: pageTranslation("page-alphanet-roadmap-1-title"),
+      taskList: [
+        pageTranslation("page-alphanet-roadmap-1-tasklist-1"),
+        pageTranslation("page-alphanet-roadmap-1-tasklist-2"),
+        pageTranslation("page-alphanet-roadmap-1-tasklist-3"),
+        pageTranslation("page-alphanet-roadmap-1-tasklist-4"),
+        pageTranslation("page-alphanet-roadmap-1-tasklist-5"),
+      ],
+      active: true,
+    },
+    {
+      title: pageTranslation("page-alphanet-roadmap-2-title"),
+      taskList: [
+        pageTranslation("page-alphanet-roadmap-2-tasklist-1"),
+        pageTranslation("page-alphanet-roadmap-2-tasklist-2"),
+      ],
+    },
+  ];
+
+  const titles = roadmapList.map((roadmap) => roadmap.title);
+  const activeList = roadmapList.map((roadmap) => roadmap.active);
+
   return (
     <Flex bg="brand.grey-95" as="section">
       <Container maxW="container.xl" mx="auto" pt="20" pb="32">
         <VStack spacing="20" alignItems="start" w="full">
           <VStack alignItems="start" spacing="3">
             <Text fontSize="sm" color="brand.orange">
-              Q2 2022
+              {pageTranslation("page-alphanet-roadmap-subtitle")}
             </Text>
             <Heading size="2xl" color="brand.white">
-              Product Roadmap of Shardeum Liberty (Alphanet)
+              {pageTranslation("page-alphanet-roadmap-title")}
             </Heading>
           </VStack>
           <VStack alignItems="start" spacing="6" w="full">

@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { NewsItem, Shardian } from "../types";
+import { NewsItem, Shardian, CommunityStat } from "../types";
 
 const configureAirtable = () => {
   Airtable.configure({
@@ -77,6 +77,27 @@ export const getSuperShardians = (): Promise<Shardian[]> => {
           const category = record.get("Category")!.toString();
           const image = record.get("Image");
           data.push({ name, description, category, image });
+        });
+        resolve(data);
+      });
+  });
+};
+
+export const getCommunityStats = (): Promise<CommunityStat[]> => {
+  configureAirtable();
+  const data: CommunityStat[] = [];
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
+  return new Promise((resolve, reject) => {
+    base(process.env.NEXT_PUBLIC_AIRTABLE_COMMUNITYSTATS as string)
+      ?.select({
+        view: "Grid view",
+      })
+      ?.firstPage()
+      .then((records) => {
+        records.forEach(function (record) {
+          const key = (record.get("key") || "").toString();
+          const followerCount = (record.get("followerCount") || "").toString();
+          data.push({ key, followerCount });
         });
         resolve(data);
       });

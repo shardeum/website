@@ -7,7 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Language = () => {
   return (
-    <Flex justifyContent="center" alignItems="center">
+    <Flex bg="brand.black" justifyContent="center" alignItems="center">
       <Container
         mx="auto"
         height="100%"

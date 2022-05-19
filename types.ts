@@ -10,3 +10,10 @@ export interface NewsItem {
   newsURL: string;
   siteName: string;
 }
+
+export interface Shardian {
+  name: string;
+  image: any;
+  category: string;
+  description: string;
+}

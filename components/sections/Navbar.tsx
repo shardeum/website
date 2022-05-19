@@ -17,6 +17,11 @@ const links = [
     newPage: true,
   },
   {
+    title: "Super Shardians",
+    link: "/super-shardian",
+    newPage: false,
+  },
+  {
     title: "litepaper",
     link: LITEPAPER_URL,
     newPage: true,

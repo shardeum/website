@@ -29,7 +29,7 @@ const JoinCommunity = () => {
   const { t: pageTranslation } = useTranslation(["common", "page-home"]);
   return (
     <Flex bg="brand.grey-90" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: "6", lg: "0" }}>
+      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, lg: 8 }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <VStack spacing="6">
             <Text
@@ -48,7 +48,6 @@ const JoinCommunity = () => {
               </Text>
               <Text fontSize={{ base: "md", lg: "base" }} textAlign="left" color="brand.grey-40">
                 {pageTranslation("join-community-desc-2")}
-                
               </Text>
             </VStack>
           </VStack>

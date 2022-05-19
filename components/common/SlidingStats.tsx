@@ -11,7 +11,7 @@ const stats = [
 ];
 
 const SlidingStats = () => {
-  const { t: pageTranslation } = useTranslation('common');
+  const { t: pageTranslation } = useTranslation("common");
 
   return (
     <Box

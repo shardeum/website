@@ -38,7 +38,7 @@ function Newsletter() {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'page-newsletter'])),
+      ...(await serverSideTranslations(locale, ["common", "page-newsletter"])),
     },
   };
 }

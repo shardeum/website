@@ -119,7 +119,7 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
 };
 
 function Roadmap() {
-  const { t: pageTranslation } = useTranslation(["page-home", 'common']);
+  const { t: pageTranslation } = useTranslation(["page-home", "common"]);
   const gridContainerRef = useRef<any>();
   useEffect(() => {
     // Scroll to the exact quarter which is currently active

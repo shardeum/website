@@ -14,11 +14,11 @@ const Card = ({ name, description, category, image }: CardProps) => {
         <Image src={image || "nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
       </AspectRatio>
 
-      <Flex direction="column" justifyContent={"space-between"} flexGrow={1} pt={[6, 7, 8]}>
+      <Flex direction="column" justifyContent={"flex-start"} flexGrow={1} pt={[6, 7, 8]}>
         <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>
           {name}
         </Text>
-        <Text pt={[2, 3, 4]} pb={[2, 3, 4]}>
+        <Text flexGrow={1} pt={[2, 3, 4]} pb={[2, 3, 4]}>
           {description}
         </Text>
         <Flex>

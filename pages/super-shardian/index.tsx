@@ -46,13 +46,14 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
   return (
     <>
       <NextSeo
-        title={ssTranslation("page-super-shardian-seo-title")}
-        description={ssTranslation("page-super-shardian-seo-description")}
+        title="Top contributors of Shardeum AKA Super Shardians"
+        description="Create, collaborate, contribute to building world's 1st EVM-based L1 with linear scalability and get recognized and rewarded for it."
         canonical="https://shardeum.org/super-shardian/"
         additionalMetaTags={[
           {
             property: "keywords",
-            content: ssTranslation("page-super-shardian-seo-keywords"),
+            content:
+              "super shardian, shardeum, shardeum dApps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm compatible blockchain",
           },
           {
             property: "twitter:image",
@@ -61,18 +62,19 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
         ]}
         openGraph={{
           url: "https://shardeum.org/super-shardian/",
-          title: ssTranslation("page-super-shardian-seo-title"),
-          description: ssTranslation("page-super-shardian-seo-description"),
+          title: "Top contributors of Shardeum AKA Super Shardians",
+          description:
+            "Create, collaborate, contribute to building world's 1st EVM-based L1 with linear scalability and get recognized and rewarded for it.",
           images: [
             {
               url: "https://shardeum.org/blog/wp-content/uploads/2022/05/Super-Shardian.png",
               width: 800,
               height: 600,
-              alt: ssTranslation("page-super-shardian-seo-title"),
+              alt: "Top contributors of Shardeum AKA Super Shardians",
               type: "image/jpeg",
             },
           ],
-          site_name: ssTranslation("page-super-shardian-seo-title"),
+          site_name: "Top contributors of Shardeum AKA Super Shardians",
         }}
         twitter={{
           cardType: "summary_large_image",

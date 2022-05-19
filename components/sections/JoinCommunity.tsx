@@ -29,9 +29,9 @@ const JoinCommunity = () => {
   const { t: pageTranslation } = useTranslation(["common", "page-home"]);
   return (
     <Flex bg="brand.grey-90" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, lg: 8 }}>
+      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
-          <VStack spacing="6">
+          <VStack spacing="6" alignItems="start">
             <Text
               as="h2"
               textAlign="left"
@@ -52,7 +52,7 @@ const JoinCommunity = () => {
             </VStack>
           </VStack>
           <Flex justifyContent="flex-end">
-            <VStack w={{ base: "md", lg: "96" }} mx={{ base: "auto", lg: "0" }}>
+            <VStack w={{ base: "full", lg: "96" }} mx={{ base: "auto", lg: "0" }}>
               {socialLinks.map((link) => (
                 <Link href={link.href} passHref key={link.title}>
                   <HStack

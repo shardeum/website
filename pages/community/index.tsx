@@ -68,7 +68,6 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
             target="_blank"
             href={DISCORD_URL}
             mt={8}
-            mb={16}
           >
             {pageTranslation("page-community-hero-cta")}
           </Button>

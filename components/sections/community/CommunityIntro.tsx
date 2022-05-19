@@ -12,7 +12,6 @@ const CommunityIntro = () => {
         mx="auto"
         px={{ base: 0, sm: 0, md: 0, lg: 6, xl: 0 }}
         pt={{ base: 0, sm: 0, md: 0, lg: 16 }}
-        pb={16}
       >
         {/* <Box > */}
         <VStack spacing={2} width="100%" alignItems="start" bg="#E9EAFC" p={6}>

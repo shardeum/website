@@ -12,7 +12,8 @@ const CommunitySuperShardianBox = () => {
         maxW="container.xl"
         mx="auto"
         px={{ base: 0, sm: 0, md: 0, lg: 6, xl: 0 }}
-        py={{ base: 0, sm: 0, md: 0, lg: 16 }}
+        pt={{ base: 8, lg: 16 }}
+        pb={{ base: 0, sm: 0, md: 0, lg: 16 }}
       >
         {/* <Box > */}
         <VStack spacing={2} width="100%" alignItems="start" bg="#FCF4E9" p={6}>

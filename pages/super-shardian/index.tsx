@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getSuperShardians } from "utils/api";
-import Hero from "components/sections/Hero";
 import BeASuperShardian from "components/sections/supershardians/BeASuperShardians";
 import Shardians from "components/sections/supershardians/ShardiansList";
 import JoinCommunity from "components/sections/JoinCommunity";
-import { InferGetStaticPropsType } from "next";
-import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextSeo } from "next-seo";

@@ -1,4 +1,4 @@
-import { Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Container, Flex, Image, Text } from "@chakra-ui/react";
 
 type HeroProps = {
   heading: string;

@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Badge, Text, AspectRatio } from "@chakra-ui/react";
+import { Flex, Image, Badge, Text, AspectRatio } from "@chakra-ui/react";
 
 type CardProps = {
   name: string;

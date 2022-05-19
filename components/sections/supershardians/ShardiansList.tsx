@@ -1,4 +1,4 @@
-import { Button, Container, Flex, HStack, SimpleGrid } from "@chakra-ui/react";
+import { Button, Flex, HStack, SimpleGrid } from "@chakra-ui/react";
 import Card from "components/common/ProfileInfoCard";
 
 type ShardiansProps = {

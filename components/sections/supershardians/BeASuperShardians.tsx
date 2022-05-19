@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import { COMMUNITY_URL } from "constants/links";
 
 type BeASuperShardianProps = {

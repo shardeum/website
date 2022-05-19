@@ -1,10 +1,9 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
-import Hero from "components/sections/Hero";
+import ResponsiveHero from "components/sections/ResponsiveHero";
 import JoinCommunity from "components/sections/JoinCommunity";
-import Image from "next/image";
 import { NextSeo } from "next-seo";
-import { COMMUNITY_URL } from "constants/links";
+import { DISCORD_URL } from "constants/links";
 import CommunityIntro from "@shm/components/sections/community/CommunityIntro";
 import CommunityTiles from "@shm/components/sections/community/CommunityTiles";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -57,7 +56,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
       />
 
       {/* Hero section */}
-      <Hero
+      <ResponsiveHero
         heading={pageTranslation("page-community-hero-h1")}
         description={pageTranslation("page-community-hero-description")}
         cta={
@@ -67,21 +66,13 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
             size="lg"
             rel="noopener noreferrer"
             target="_blank"
-            href={COMMUNITY_URL}
+            href={DISCORD_URL}
+            mt={8}
           >
             {pageTranslation("page-community-hero-cta")}
           </Button>
         }
-        media={
-          <Box position="relative" h="full">
-            <Image
-              objectFit="contain"
-              src="/community/community-hero.png"
-              alt="Shardeum Community"
-              layout="fill"
-            />
-          </Box>
-        }
+        src={"community-hero.png"}
       />
 
       <CommunityIntro />

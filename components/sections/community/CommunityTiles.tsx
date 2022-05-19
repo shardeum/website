@@ -96,7 +96,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" px={6} pb="16">
+      <Container maxW="container.xl" mx="auto" px={{ base: 6, sm: 6, md: 6, lg: 6, xl: 0 }} pb="16">
         <Box>
           <VStack spacing={2} width="100%" alignItems="start">
             <Text

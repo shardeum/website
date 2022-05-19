@@ -43,8 +43,9 @@ const ResponsiveHero = ({ src, cta, heading, description, titleColor, descColor 
               pr={{ xl: 24 }}
             >
               {description}
+              <br />
+              {cta}
             </Text>
-            {cta}
           </Flex>
           {renderIcon(src)}
         </Flex>

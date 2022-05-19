@@ -11,7 +11,7 @@ const CommunitySuperShardianBox = () => {
       <Container
         maxW="container.xl"
         mx="auto"
-        px={{ base: 0, sm: 0, md: 0, lg: 6 }}
+        px={{ base: 0, sm: 0, md: 0, lg: 6, xl: 0 }}
         py={{ base: 0, sm: 0, md: 0, lg: 16 }}
       >
         {/* <Box > */}

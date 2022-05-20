@@ -37,15 +37,7 @@ const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardi
         >
           {description}
         </Box>
-        <Button
-          size="lg"
-          as="a"
-          bg="brand.grey-5"
-          color="brand.grey-90"
-          target="_blank"
-          _hover={{ color: "brand.grey-5", bg: "brand.blue-40" }}
-          href={COMMUNITY_URL}
-        >
+        <Button as="a" variant="secondary" size="lg" href={COMMUNITY_URL}>
           {joinButtonText}
         </Button>
       </Flex>

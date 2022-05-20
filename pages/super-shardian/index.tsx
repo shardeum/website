@@ -9,16 +9,16 @@ import { NextSeo } from "next-seo";
 import { Shardian } from "types";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 
-let buttonCategories = [{ name: "All", selected: true }];
+const initialButtonCategories = [{ name: "All", selected: true }];
 
 const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): React.ReactNode => {
-  const [categories, setCategories] = useState(buttonCategories);
+  const [categories, setCategories] = useState(initialButtonCategories);
   const [filteredData, setFilteredData] = useState<any[]>([]);
   const { t: ssTranslation } = useTranslation("page-super-shardian");
 
   useEffect(() => {
-    buttonCategories = [
-      ...buttonCategories,
+    const buttonCategories = [
+      ...initialButtonCategories,
       ...Array.from(new Set(superShardians.map((shardian: any) => shardian.category))).map(
         (item) => ({ name: item, selected: false })
       ),

@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Link, Stack } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { BLOG_URL, COMMUNITY_URL, DOCS_URL, LITEPAPER_URL } from "../../constants/links";
+import { BLOG_URL, DOCS_URL, LITEPAPER_URL, COMMUNITY_URL } from "../../constants/links";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
@@ -14,7 +14,12 @@ const links = [
   {
     title: "community",
     link: COMMUNITY_URL,
-    newPage: true,
+    newPage: false,
+  },
+  {
+    title: "Super Shardians",
+    link: "/super-shardian",
+    newPage: false,
   },
   {
     title: "Super Shardians",

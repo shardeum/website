@@ -11,6 +11,10 @@ export interface NewsItem {
   siteName: string;
 }
 
+export interface CommunityStat {
+  key: string;
+  followerCount: string;
+}
 export interface Shardian {
   name: string;
   image: any;

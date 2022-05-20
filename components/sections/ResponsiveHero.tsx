@@ -17,7 +17,13 @@ const ResponsiveHero = ({ src, cta, heading, description, titleColor, descColor 
 
   return (
     <Flex bg="brand.black" justifyContent="center" alignItems="center">
-      <Container mx="auto" maxW="container.xl" p={8} px={{ base: 8, xl: 0 }} py={"5%"}>
+      <Container
+        mx="auto"
+        maxW="container.xl"
+        px={{ base: 8, xl: 0 }}
+        pt={{ base: 4, md: 16 }}
+        pb={{ base: 20, md: 16 }}
+      >
         <Flex
           direction={{ sm: "column-reverse", base: "column-reverse", md: "row", lg: "row" }}
           gap={{ base: "none", lg: "10" }}
@@ -43,8 +49,9 @@ const ResponsiveHero = ({ src, cta, heading, description, titleColor, descColor 
               pr={{ xl: 24 }}
             >
               {description}
+              <br />
+              {cta}
             </Text>
-            {cta}
           </Flex>
           {renderIcon(src)}
         </Flex>

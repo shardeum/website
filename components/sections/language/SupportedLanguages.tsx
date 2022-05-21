@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, Container, SimpleGrid } from "@chakra-ui/reac
 import { LANGUAGES } from "constants/languages";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import React, { Fragment } from "react";
+import React from "react";
 
 const LanguageCard = (props: {
   localeLang: string;

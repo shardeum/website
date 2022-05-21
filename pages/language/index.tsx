@@ -14,36 +14,35 @@ const Language = () => {
   return (
     <>
       <NextSeo
-        title="Community is the CEO of Shardeum"
-        description="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma."
-        canonical="https://shardeum.org/shardeum-liberty-alphanet/"
+        title="Introduce Shardeum to your native community"
+        description="Come help us translate resources in your native languages and introduce Shardeum to your community."
+        canonical="https://shardeum.org/language/"
         additionalMetaTags={[
           {
             property: "keywords",
-            content:
-              "super shardian, shardeum, contributors, rewards, shardeum community, developers, testnet, blockchain,layer1 blockchain,evm based blockchain",
+            content: "shardeum, blockchain, layer1 blockchain, evm based blockchain",
           },
           {
             property: "twitter:image",
-            content: "https://shardeum.org/shardeum-liberty.jpeg",
+            content: "https://shardeum.org/Shardeum.png",
           },
         ]}
         openGraph={{
-          url: "https://shardeum.org/community/",
-          title: "Community is the CEO of Shardeum",
+          url: "https://shardeum.org/language/",
+          title: "Introduce Shardeum to your native community",
           description:
-            "Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma",
+            "Come help us translate resources in your native languages and introduce Shardeum to your community.",
           images: [
             {
-              url: "https://shardeum.org/shardeum-liberty.jpeg",
+              url: "https://shardeum.org/Shardeum.png",
               width: 800,
               height: 600,
-              alt: "Shardeum Community | Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma",
+              alt: "Shardeum Language | Come help us translate resources in your native languages and introduce Shardeum to your community.",
               type: "image/jpeg",
             },
           ],
           site_name:
-            "Shardeum Community | Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma",
+            "Shardeum Language | Come help us translate resources in your native languages and introduce Shardeum to your community.",
         }}
         twitter={{
           cardType: "summary_large_image",

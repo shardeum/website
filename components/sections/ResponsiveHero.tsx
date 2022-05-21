@@ -2,15 +2,24 @@ import { Container, Flex, Image, Text } from "@chakra-ui/react";
 
 type HeroProps = {
   heading: string;
-  description?: string;
+  description?: React.ReactNode;
   cta?: React.ReactNode;
-  src: string;
+  src?: string;
+  respHeroImg?: React.ReactNode;
   bg?: string;
   titleColor?: string;
   descColor?: string;
 };
 
-const ResponsiveHero = ({ src, cta, heading, description, titleColor, descColor }: HeroProps) => {
+const ResponsiveHero = ({
+  src,
+  cta,
+  heading,
+  description,
+  titleColor,
+  descColor,
+  respHeroImg,
+}: HeroProps) => {
   const renderIcon = (src: string) => {
     return <Image objectFit="contain" src={src} width="490px" />;
   };
@@ -53,7 +62,8 @@ const ResponsiveHero = ({ src, cta, heading, description, titleColor, descColor 
               {cta}
             </Text>
           </Flex>
-          {renderIcon(src)}
+          {src && renderIcon(src)}
+          {respHeroImg}
         </Flex>
       </Container>
     </Flex>

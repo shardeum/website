@@ -72,7 +72,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
             {pageTranslation("page-community-hero-cta")}
           </Button>
         }
-        src={"community-hero.png"}
+        src={"/community/community-hero.png"}
       />
 
       <CommunityIntro />

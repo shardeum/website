@@ -11,7 +11,7 @@ const Card = ({ name, description, category, image }: CardProps) => {
   return (
     <Flex direction="column" p={8} bg="gray.800" shadow="lg" position="relative">
       <AspectRatio ratio={270 / 300} w="full">
-        <Image src={image || "nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
+        <Image src={image || "/Nischal.png"} alt={`Picture of ${name}`} roundedTop="lg" />
       </AspectRatio>
 
       <Flex direction="column" justifyContent={"flex-start"} flexGrow={1} pt={[6, 7, 8]}>

@@ -1,12 +1,15 @@
 import { Button, LightMode, VStack } from "@chakra-ui/react";
+import { useTranslation } from "next-i18next";
 import Feature from "./Feature";
 
 function VisitBlog() {
+  const { t: pageTranslation } = useTranslation(["common"]);
+
   return (
     <VStack py="6" px="8" bgColor="brand.white" w="full" alignItems="start" spacing="6">
       <Feature
-        title="Read our blog"
-        description={`Explore exciting and diverse blog posts about the Web 3.0 ecosystem contributed by community/content creators worldwide like you.`}
+        title={pageTranslation("read-blog-title")}
+        description={pageTranslation("read-blog-desc")}
       />
       <LightMode>
         <Button
@@ -17,7 +20,7 @@ function VisitBlog() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          Visit Blog
+          {pageTranslation("visit-blog-cta")}
         </Button>
       </LightMode>
     </VStack>

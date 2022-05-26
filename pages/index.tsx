@@ -7,6 +7,7 @@ import Roadmap from "components/sections/home/Roadmap";
 import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import JoinCommunity from "components/sections/JoinCommunity";
+import { CLAIM_100_SHM_LINK } from "constants/links";
 import type { InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -49,7 +50,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
-                href="https://docs.shardeum.org/basics/claim"
+                href={CLAIM_100_SHM_LINK}
               >
                 {commonTranslation("claim-100-shm-cta")}
               </Button>

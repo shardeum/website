@@ -20,3 +20,4 @@ export const PUBLIC_DRIVE_LINK =
 export const GENERAL_QUERIES_LINK = "mailto:hi@shardeum.org";
 export const INVESTMENT_QUERY_LINK = "mailto:invest@shardeum.org";
 export const CROWDIN_PROJECT_LINK = "https://crowdin.com/project/shardeumtranslation";
+export const CLAIM_100_SHM_LINK = "https://docs.shardeum.org/basics/claim";

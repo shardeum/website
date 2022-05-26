@@ -1,6 +1,12 @@
 import { Box, Container, Flex, Link, Stack } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { BLOG_URL, DOCS_URL, LITEPAPER_URL, COMMUNITY_URL } from "../../constants/links";
+import {
+  BLOG_URL,
+  DOCS_URL,
+  LITEPAPER_URL,
+  COMMUNITY_URL,
+  CLAIM_100_SHM_LINK,
+} from "../../constants/links";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
@@ -42,6 +48,12 @@ const links = [
     link: DOCS_URL,
     newPage: true,
   },
+  {
+    title: "claim-100-shm-cta",
+    link: CLAIM_100_SHM_LINK,
+    newPage: true,
+    highlight: true,
+  },
   // TODO: undo comment when global-localization feat goes live
   // {
   //   title: "Language",
@@ -77,12 +89,12 @@ const Navbar = () => {
                   variant="navlink"
                   rel="noopener noreferrer"
                   target={link.newPage ? "_blank" : "_self"}
+                  fontWeight={link.highlight ? "bold" : "normal"}
                 >
                   {commonTranslation(link.title)}
                 </Link>
               </NextLink>
             ))}
-
             {/* <Link variant="navlink">Language</Link> */}
           </Stack>
           {/* Will only show on mobile and tablets */}

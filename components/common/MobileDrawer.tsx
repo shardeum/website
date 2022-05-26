@@ -18,7 +18,7 @@ import Link from "next/link";
 
 interface MobileDrawerProps {
   placement?: DrawerProps["placement"];
-  links: { title: string; link: string }[];
+  links: { title: string; link: string; highlight?: boolean }[];
 }
 
 function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
@@ -39,7 +39,13 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
               {links.map((item) => (
                 <Flex key={item.title} w="full" justifyContent="flex-end">
                   <Link href={item.link} passHref>
-                    <Button variant="text" as="a" textAlign="end" onClick={onClose}>
+                    <Button
+                      variant="text"
+                      as="a"
+                      fontWeight={item.highlight ? "bold" : "normal"}
+                      textAlign="end"
+                      onClick={onClose}
+                    >
                       {commonTranslation(item.title)}
                     </Button>
                   </Link>

@@ -10,6 +10,7 @@ import {
   PUBLIC_DRIVE_LINK,
   LITEPAPER_URL,
   NEWSLETTER_URL,
+  CLAIM_100_SHM_LINK,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
 
@@ -24,6 +25,7 @@ const LinksMap = {
     { title: "litepaper", href: LITEPAPER_URL },
     { title: "faq", href: FAQ_URL },
     { title: "public-drive-link", href: PUBLIC_DRIVE_LINK },
+    { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },
   ],
   Contact: [
     { title: "general-enquiries", href: GENERAL_QUERIES_LINK },

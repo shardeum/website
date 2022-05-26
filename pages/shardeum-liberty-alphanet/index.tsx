@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Stack } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
@@ -8,12 +8,13 @@ import FAQs from "components/sections/FAQs";
 import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
 import { NextSeo } from "next-seo";
-import { DOCS_URL } from "constants/links";
+import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
+  const { t: commonTranslation } = useTranslation(["common"]);
   return (
     <>
       <NextSeo
@@ -59,16 +60,32 @@ const AlphanetLanding: NextPage = () => {
         heading={pageTranslation("page-alphanet-hero-h1")}
         description={pageTranslation("page-alphanet-hero-description")}
         cta={
-          <Button
-            as="a"
-            variant="primary"
-            size="lg"
-            rel="noopener noreferrer"
-            target="_blank"
-            href={DOCS_URL}
+          <Stack
+            spacing="4"
+            direction={{ base: "column", sm: "row" }}
+            width={{ base: "full", sm: "auto" }}
           >
-            {pageTranslation("page-alphanet-hero-cta")}
-          </Button>
+            <Button
+              as="a"
+              variant="secondary"
+              size="lg"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={DOCS_URL}
+            >
+              {pageTranslation("page-alphanet-hero-cta")}
+            </Button>
+            <Button
+              as="a"
+              variant="primary"
+              size="lg"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={CLAIM_100_SHM_LINK}
+            >
+              {commonTranslation("claim-100-shm-cta")}
+            </Button>
+          </Stack>
         }
         media={
           <Box position="relative" h="full">

@@ -15,7 +15,7 @@ const Card = ({ name, description, category, image }: CardProps) => {
       </AspectRatio>
 
       <Flex direction="column" justifyContent={"flex-start"} flexGrow={1} pt={[6, 7, 8]}>
-        <Text fontSize="2xl" fontWeight="semibold" as="h4" isTruncated>
+        <Text fontSize="2xl" fontWeight="semibold" as="h4">
           {name}
         </Text>
         <Text flexGrow={1} pt={[2, 3, 4]} pb={[2, 3, 4]}>

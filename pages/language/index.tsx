@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, VStack, Text, Image } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Button, VStack, Text, Image, Box } from "@chakra-ui/react";
+import { IconRightArrow } from "@shm/Icons";
 import SupportedLanguages from "components/sections/language/SupportedLanguages";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextSeo } from "next-seo";
@@ -74,7 +74,9 @@ const Language = () => {
             <Text display={{ base: "none", sm: "block" }}>
               {pageTranslation("page-language-contribute-full-text")}
             </Text>
-            <ArrowForwardIcon ml="3" boxSize="6" />
+            <Box ml="3" boxSize="6">
+              <IconRightArrow />
+            </Box>
           </Button>
         }
         respHeroImg={

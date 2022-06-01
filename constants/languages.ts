@@ -64,7 +64,7 @@ export const LANGUAGES: {
   ja: {
     language: "日本語",
   },
-  ka: {
+  kn: {
     language: "ქართული",
   },
   ko: {
@@ -117,6 +117,12 @@ export const LANGUAGES: {
   },
   sw: {
     language: "Kiswahili",
+  },
+  ta: {
+    language: "தமிழ்",
+  },
+  te: {
+    language: "తెలుగు",
   },
   th: {
     language: "ภาษาไทย",

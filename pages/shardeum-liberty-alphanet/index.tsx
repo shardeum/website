@@ -116,7 +116,7 @@ const AlphanetLanding: NextPage = () => {
 
       <FAQs
         heading={pageTranslation("page-alphanet-faq-h1")}
-        content={Array(7)
+        content={Array(6)
           .fill(0)
           .map((_, index) => ({
             q: pageTranslation(`page-alphanet-faq-${index + 1}-q`),

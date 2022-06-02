@@ -8,12 +8,10 @@
   "shm-feature-3-desc": "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator in the permissionless Shardeum network.",
   "shm-feature-4-title": "Immediate finality & low latency",
   "shm-feature-4-desc": "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
-
   "shm-feature-5-title": "Solid security",
   "shm-feature-5-desc": "A leaderless Proof-of-Quorum (PoQ) consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
   "shm-feature-6-title": "High fairness & energy efficiency",
   "shm-feature-6-desc": "Shardeum processes transactions on a first-come, first-served basis, with the same gas rate for all transactions to ensure fairness and eliminate miner extractable value. As a PoS network, Shardeum is energy efficient and sustainable.",
-
   "roadmap": "Roadmap",
   "phase-1-title": "2017 - 2021",
   "phase-1-task-list-1": "100 nodes = 500 TPS",
@@ -23,13 +21,11 @@
   "phase-1-launch-item-2": "Auto scaling and rate limiting an unhardened network of 20 nodes",
   "phase-1-launch-item-3": "Linear scaling (small sharded nodes)",
   "phase-1-launch-item-4": "Small / medium AWS network",
-
   "phase-2-title": "Q1 2022",
   "phase-2-task-list-1": "Sharding network testing",
   "phase-2-task-list-2": "Smart contract and node reward system testing",
   "phase-2-launch-item-1": "Initial Testing",
   "phase-2-launch-item-2": "Shardeum Foundation structured in Switzerland",
-
   "phase-3-title": "Q2 2022",
   "phase-3-desc": "Alphanet launch",
   "phase-3-secondary-desc": "Private sale",
@@ -38,22 +34,18 @@
   "phase-3-task-list-3": "10 node shard size",
   "phase-3-task-list-4": "5 archive nodes",
   "phase-3-task-list-5": "Deployed to individual medium nodes on AWS in different regions",
-
   "phase-4-title": "Q3 2022",
   "phase-4-desc": "Betanet launch",
   "phase-4-task-list-1": "Community can operate validator and archive nodes",
   "phase-4-task-list-2": "Minimum network size of 1280 nodes with 200 TPS",
   "phase-4-task-list-3": "Sharded with shard size of 128 nodes",
   "phase-4-task-list-4": "Node rotation from standby to validation",
-
   "phase-5-title": "Q4 2022",
   "phase-5-desc": "Mainnet launch",
   "phase-5-secondary-desc": "Public sales",
   "phase-5-task-list-1": "SHM token generation",
-
   "shm-tokenomics": "$SHM Tokenomics",
   "shm-fixed-supply-label": "Fixed supply of",
-
   "use-case-title": "Use cases",
   "use-case-1-title": "P2P transfers",
   "use-case-1-desc": "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",

@@ -115,11 +115,11 @@ function Roadmap() {
                 <VStack spacing="10" key={item.title} alignItems="start" flexWrap="wrap">
                   <VStack alignItems="start" spacing="6">
                     {item.taskList.map((task, index) => (
-                      <>
+                      <VStack alignItems="start" key={index}>
                         <Text fontWeight="medium" fontSize="base" color="brand.white" pr="4">
                           {task.version}
                         </Text>
-                        <UnorderedList spacing={5} px={5}>
+                        <UnorderedList key={index} spacing={5} px={5}>
                           {task.tasks.map((task, index) => (
                             <>
                               <ListItem key={index}>
@@ -130,7 +130,7 @@ function Roadmap() {
                             </>
                           ))}
                         </UnorderedList>
-                      </>
+                      </VStack>
                     ))}
                   </VStack>
                 </VStack>

@@ -22,5 +22,3 @@ dist/
 .next
 *.tsbuildinfo
 .vercel
-
-yarn.lock

@@ -45,7 +45,7 @@ const WhatCanYoDo = () => {
     },
   ];
   return (
-    <Flex bg="brand.white" as="section">
+    <Flex bg="brand.grey-5" as="section">
       <Container
         maxW="container.xl"
         mx="auto"

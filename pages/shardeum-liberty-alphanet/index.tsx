@@ -113,10 +113,10 @@ const AlphanetLanding: NextPage = () => {
             Icon: () => AlphanetFeatureIcons({ id: `${index + 1}` }),
           }))}
       />
-
+      <WhatCanYoDo />
       {/* Alphanet roadmap */}
       <Roadmap />
-      <WhatCanYoDo />
+
       <FAQs
         heading={pageTranslation("page-alphanet-faq-h1")}
         content={Array(6)

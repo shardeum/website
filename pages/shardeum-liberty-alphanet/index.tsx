@@ -11,6 +11,7 @@ import { NextSeo } from "next-seo";
 import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
@@ -113,7 +114,7 @@ const AlphanetLanding: NextPage = () => {
 
       {/* Alphanet roadmap */}
       <Roadmap />
-
+      <WhatCanYoDo />
       <FAQs
         heading={pageTranslation("page-alphanet-faq-h1")}
         content={Array(6)

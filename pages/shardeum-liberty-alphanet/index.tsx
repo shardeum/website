@@ -19,7 +19,9 @@ const AlphanetLanding: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={"Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum"}
+        title={
+          "Shardeum Liberty | Alphanet | Build scalable dApps and Web 3.0 applications on Shardeum"
+        }
         description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
         additionalMetaTags={[

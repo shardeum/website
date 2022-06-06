@@ -3,6 +3,7 @@ import { DefaultSeo } from "next-seo";
 import { ChakraProvider } from "@chakra-ui/react";
 import customTheme from "../theme";
 import "../styles/satoshi.css";
+import "../styles/custom.css";
 import { appWithTranslation } from "next-i18next";
 import { Box } from "@chakra-ui/react";
 import Navbar from "components/sections/Navbar";

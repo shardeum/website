@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import SectionHeading from "../../components/common/SectionHeading";
 import { useTranslation } from "next-i18next";
+import ReactMarkdown from "react-markdown";
 
 const WhatCanYoDo = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
@@ -45,7 +46,7 @@ const WhatCanYoDo = () => {
     },
   ];
   return (
-    <Flex bg="brand.grey-5" as="section">
+    <Flex className="WhatCanYouDo" bg="brand.grey-5" as="section">
       <Container
         maxW="container.xl"
         mx="auto"
@@ -73,14 +74,24 @@ const WhatCanYoDo = () => {
                     {item.for}
                   </Text>
 
-                  <OrderedList fontSize={16} color="brand.black" spacing={5} px={7}>
+                  <OrderedList
+                    className="brand-orange-href"
+                    fontSize={16}
+                    color="brand.black"
+                    spacing={5}
+                    px={7}
+                  >
                     {item.points.map((points) => {
-                      return <ListItem key={points}>{points}</ListItem>;
+                      return (
+                        <ListItem key={points}>
+                          <ReactMarkdown>{points}</ReactMarkdown>
+                        </ListItem>
+                      );
                     })}
                   </OrderedList>
                 </VStack>
                 <VStack mt={7} alignItems="start">
-                  <Button as="a" href={item.cta.link} variant="orange">
+                  <Button as="a" href={item.cta.link} variant={item.cta.variant}>
                     {item.cta.text}
                   </Button>
                 </VStack>

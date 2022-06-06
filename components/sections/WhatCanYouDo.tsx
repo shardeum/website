@@ -84,7 +84,7 @@ const WhatCanYoDo = () => {
                     {item.points.map((points) => {
                       return (
                         <ListItem key={points}>
-                          <ReactMarkdown>{points}</ReactMarkdown>
+                          <ReactMarkdown linkTarget="_blank">{points}</ReactMarkdown>
                         </ListItem>
                       );
                     })}

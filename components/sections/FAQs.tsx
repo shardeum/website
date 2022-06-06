@@ -52,7 +52,7 @@ const FAQs = ({ heading, content }: FAQProps) => {
                 </AccordionButton>
 
                 <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                  <ReactMarkdown>{item.a}</ReactMarkdown>
+                  <ReactMarkdown linkTarget="_blank">{item.a}</ReactMarkdown>
                 </AccordionPanel>
               </AccordionItem>
             ))}

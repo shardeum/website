@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Heading, VStack } from "@chakra-ui/react";
+import ReactMarkdown from "react-markdown";
 
 import {
   Accordion,
@@ -10,7 +11,7 @@ import {
 
 type FAQItem = {
   q: React.ReactNode;
-  a: React.ReactNode;
+  a: string;
 };
 
 type FAQProps = {
@@ -51,7 +52,7 @@ const FAQs = ({ heading, content }: FAQProps) => {
                 </AccordionButton>
 
                 <AccordionPanel px={5} py={8}>
-                  {item.a}
+                  <ReactMarkdown>{item.a}</ReactMarkdown>
                 </AccordionPanel>
               </AccordionItem>
             ))}

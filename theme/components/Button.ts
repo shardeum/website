@@ -60,6 +60,14 @@ export const Button: ComponentStyleConfig = {
         backgroundColor: "brand.blue-20",
       },
     },
+    orange: () => {
+      return {
+        backgroundColor: "brand.orange",
+        _hover: {
+          backgroundColor: "brand.orange-80",
+        },
+      };
+    },
   },
   defaultProps: {
     colorScheme: "facebook",

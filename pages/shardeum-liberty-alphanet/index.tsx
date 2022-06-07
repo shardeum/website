@@ -11,6 +11,7 @@ import { NextSeo } from "next-seo";
 import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
@@ -18,7 +19,9 @@ const AlphanetLanding: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={"Shardeum Liberty | Alphanet | Build your DApps and Web3 services on Shardeum"}
+        title={
+          "Shardeum Liberty | Alphanet | Build scalable dApps and Web 3.0 applications on Shardeum"
+        }
         description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
         additionalMetaTags={[
@@ -110,7 +113,7 @@ const AlphanetLanding: NextPage = () => {
             Icon: () => AlphanetFeatureIcons({ id: `${index + 1}` }),
           }))}
       />
-
+      <WhatCanYoDo />
       {/* Alphanet roadmap */}
       <Roadmap />
 

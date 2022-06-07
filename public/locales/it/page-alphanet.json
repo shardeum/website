@@ -17,7 +17,7 @@
   "page-alphanet-hero-features-6-description": "Due to its ability to achieve high TPS by adding more nodes, Shardeum will provide Web 3.0 dApps with linear scalability, true decentralization and solid security to build smart contracts on a global scale.",
   "page-alphanet-faq-h1": "FAQs",
   "page-alphanet-faq-1-q": "What is Shardeum?",
-  "page-alphanet-faq-1-a": "Shardeum is an EVM-compatible dynamically sharded blockchain with infinite scalability, true decentralization, and solid security.",
+  "page-alphanet-faq-1-a": "Shardeum is an EVM-based sharded layer 1 blockchain that uses dynamic state sharding to increase transactions per second (TPS) with the addition of every new node.",
   "page-alphanet-faq-2-q": "Who will use Shardeum?",
   "page-alphanet-faq-2-a": "Shardeum aims to be capable of onboarding over a billion people to Web 3.0. Like the Internet, Shardeum is Open, Collaborative, and Community-driven with a mission to provide decentralization for everyone.",
   "page-alphanet-faq-3-q": "What languages can be used to write smart contracts on the Shardeum network?",
@@ -57,5 +57,17 @@
   "page-alphanet-roadmap-2-version-2.1-task-4": "System speedup of 2-5x",
   "page-alphanet-roadmap-2-version-2.2": "Alpha 2.2 (network updates via rotation)",
   "page-alphanet-roadmap-2-version-2.2-task-1": "Ability to push non-trivial software updates without downtime",
-  "page-alphanet-roadmap-report-bug-cta": "Testnets are all about finding bugs and improving. Found one? Report bug here"
+  "page-alphanet-roadmap-report-bug-cta": "Testnets are all about finding bugs and improving. Found one? Report bug here",
+  "page-alphanet-liberty-for-community": "For Community",
+  "page-alphanet-liberty-for-community-cta-text": "Check out smart contracts",
+  "page-alphanet-liberty-for-community-cta-link": "https://docs.google.com/spreadsheets/u/0/d/1kthKCY097MlNwfm8g8OAhldmFOE5rTG9vwl7FHrnDEk/edit",
+  "page-alphanet-liberty-for-community-do-1": "Add network to MetaMask Wallet",
+  "page-alphanet-liberty-for-community-do-2": "[Claim 100 SHM from faucet](https://docs.shardeum.org/basics/claim)",
+  "page-alphanet-liberty-for-community-do-3": "Interact with smart contract",
+  "page-alphanet-liberty-for-developers": "For Developers",
+  "page-alphanet-liberty-for-developers-cta-text": "List your smart contract",
+  "page-alphanet-liberty-for-developers-cta-link": "https://forms.gle/BFLXtLn9Urq9KH998",
+  "page-alphanet-liberty-for-developers-do-1": "Build smart contract on Liberty",
+  "page-alphanet-liberty-for-developers-do-2": "Feature it on Shardeum",
+  "page-alphanet-liberty-for-developers-do-3": "Grow your community and become a leader"
 }

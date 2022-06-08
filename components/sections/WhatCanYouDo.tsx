@@ -91,7 +91,7 @@ const WhatCanYoDo = () => {
                   </OrderedList>
                 </VStack>
                 <VStack mt={7} alignItems="start">
-                  <Button as="a" href={item.cta.link} variant={item.cta.variant}>
+                  <Button as="a" target="_blank" href={item.cta.link} variant={item.cta.variant}>
                     {item.cta.text}
                   </Button>
                 </VStack>

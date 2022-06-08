@@ -119,7 +119,7 @@ function Roadmap() {
                         <Text fontWeight="medium" fontSize="base" color="brand.white" pr="4">
                           {task.version}
                         </Text>
-                        <UnorderedList key={index} spacing={5} px={5}>
+                        <UnorderedList key={task.version} spacing={5} px={5}>
                           {task.tasks.map((task, index) => (
                             <>
                               <ListItem key={index}>

@@ -8,7 +8,7 @@ function Newsletter() {
   const { t: pageTranslation } = useTranslation("page-newsletter");
   return (
     <>
-      <Container maxW="container.xl" mx="auto" py="12" px={{ base: "6", xl: "0" }} bg="brand.black">
+      <Container minW={"100%"} py="12" px={{ base: "6", xl: "0" }} bg="brand.black">
         <VStack
           spacing="6"
           maxW={{ base: "xl", lg: "3xl" }}

@@ -171,7 +171,7 @@ function Roadmap() {
             }}
             w="full"
             overflowX="scroll"
-            className="no-scrollbar"
+            // className="no-scrollbar"
             gridAutoFlow="column"
             gridAutoColumns={{
               base: "minmax(290px, 1fr)",

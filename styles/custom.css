@@ -227,7 +227,7 @@
   .vertical-timeline-element-content .vertical-timeline-element-date {
     float: left;
     padding: .8em 0;
-    opacity: .7;
+    /* opacity: .7; */
   }
   .vertical-timeline-element-content-arrow {
     content: '';
@@ -284,7 +284,7 @@
     .vertical-timeline--two-columns .vertical-timeline-element-content {
       margin-left: 0;
       padding: 1.5em;
-      width: 48%;
+      width: 49%;
     }
     .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
       top: 24px;
@@ -295,7 +295,7 @@
     .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
       position: absolute;
       width: 100%;
-      left: 110%;
+      left: 104%;
       top: -6px;
       font-size: var(--chakra-fontSizes-2xl);
     }
@@ -323,7 +323,7 @@
     .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date,
     .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date {
       left: auto;
-      right: 110%;
+      right: 104%;
       text-align: right;
     }
   }

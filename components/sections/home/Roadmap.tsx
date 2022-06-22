@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { CalendarIcon } from "@chakra-ui/icons";
 
 const roadmapList = [
@@ -162,7 +161,7 @@ function Roadmap() {
                   key={item.title}
                   className="vertical-timeline-element--work"
                   contentStyle={{ background: "rgba(33, 33, 33, 1)", color: "#fff" }}
-                  contentArrowStyle={{ borderRight: "7px solid  rgba(33, 33, 33, 1)" }}
+                  contentArrowStyle={{ borderRight: "0" }}
                   date={pageTranslation(item.title)}
                   iconStyle={{
                     background: "rgba(33, 33, 33, 1)",
@@ -186,7 +185,7 @@ function Roadmap() {
                             </Text>
                           ) : null}
                           {section.launchItems?.map((task: string) => (
-                            <Text key={task} fontSize="base" color="brand.white" pr="4" pb="2">
+                            <Text key={task} fontSize="xl" color="brand.white" pr="4" pb="2">
                               {pageTranslation(task)}
                             </Text>
                           ))}

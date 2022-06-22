@@ -1,10 +1,12 @@
-.brand-orange-href a, .vertical-timeline-element-date{
+.brand-orange-href a{
     color: var(--chakra-colors-brand-orange-80);
 }
 .vertical-timeline * {
     box-sizing: border-box;
   }
-  
+  .vertical-timeline-element-date{
+    color: var(--chakra-colors-brand-orange);
+}
   .vertical-timeline {
     width: 95%;
     max-width: 1170px;

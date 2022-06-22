@@ -2,6 +2,9 @@ import { Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/re
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { CalendarIcon } from "@chakra-ui/icons";
 
 const roadmapList = [
   {
@@ -120,18 +123,6 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
 
 function Roadmap() {
   const { t: pageTranslation } = useTranslation(["page-home", "common"]);
-  const gridContainerRef = useRef<any>();
-  useEffect(() => {
-    // Scroll to the exact quarter which is currently active
-    setTimeout(() => {
-      const element: any = Array.from(gridContainerRef.current.childNodes)?.find(
-        (node: any) => node.attributes["data-scroll-to"]?.value === "true"
-      );
-      if (element) {
-        gridContainerRef.current.scrollLeft = element?.offsetLeft - 36; // Subtracted this offset of 36px to account for additional padding in the roadmap while scrolling it to the active section.
-      }
-    }, 1);
-  }, []);
 
   return (
     <Flex bg="brand.black" as="section" position="relative" overflow="hidden">
@@ -153,58 +144,37 @@ function Roadmap() {
         zIndex={2}
         px={{ base: 6, xl: 0 }}
       >
-        <VStack spacing="20" alignItems="start" w="full">
-          <VStack alignItems="start" spacing="3">
+        <VStack spacing="20" alignItems="center" w="full">
+          <VStack alignItems="center" spacing="3">
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as="h3">
+            <Heading size="2xl" color="brand.white" as="h3" alignItems="center">
               {pageTranslation("roadmap")}
             </Heading>
           </VStack>
-          <Grid
-            ref={gridContainerRef}
-            templateColumns={{
-              base: "repeat(auto-fill, minmax(270, 1fr))",
-              md: "repeat(auto-fill, minmax(340px, 1fr))",
-              lg: "repeat(auto-fill, 1fr)",
-            }}
-            w="full"
-            overflowX="scroll"
-            className="no-scrollbar"
-            gridAutoFlow="column"
-            gridAutoColumns={{
-              base: "minmax(290px, 1fr)",
-            }}
-          >
+          <VerticalTimeline lineColor="rgba(33, 33, 33, 1)">
             {roadmapList.map((item: any) => {
               const percentage = getQuarterProgressInPercentage(item);
               const additionaLProps = { "data-scroll-to": percentage > 0 && percentage < 100 };
               return (
-                <VStack key={item.title} alignItems="start" {...additionaLProps}>
-                  <VStack alignItems="start" spacing="4" w="full">
-                    <Text
-                      fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-                      color="brand.white"
-                      fontWeight="medium"
-                    >
-                      {pageTranslation(item.title)}
-                    </Text>
-                    <Box h="0.5" w="100%" bg={"brand.grey-80"} position="relative" mt="6">
-                      <Box
-                        position="absolute"
-                        top="0"
-                        left="0"
-                        height="100%"
-                        bg="brand.orange"
-                        width={`${percentage}%`}
-                      />
-                    </Box>
-                  </VStack>
+                <VerticalTimelineElement
+                  key={item.title}
+                  className="vertical-timeline-element--work"
+                  contentStyle={{ background: "rgba(33, 33, 33, 1)", color: "#fff" }}
+                  contentArrowStyle={{ borderRight: "7px solid  rgba(33, 33, 33, 1)" }}
+                  date={pageTranslation(item.title)}
+                  iconStyle={{
+                    background: "rgba(33, 33, 33, 1)",
+                    color: "#fff",
+                    border: "rgba(33, 33, 33, 1)",
+                  }}
+                  icon={<CalendarIcon />}
+                >
                   <VStack alignItems="start" flexWrap="wrap">
                     {item.sections.map((section: any, index: number) => {
                       return (
-                        <VStack key={index} alignItems="start" pt={6}>
+                        <VStack key={index} alignItems="start" pt={0}>
                           {section.description ? (
                             <Text fontSize="xl" color="white" pr="4" fontWeight="medium" pb="2">
                               {pageTranslation(section.description)}
@@ -229,10 +199,10 @@ function Roadmap() {
                       );
                     })}
                   </VStack>
-                </VStack>
+                </VerticalTimelineElement>
               );
             })}
-          </Grid>
+          </VerticalTimeline>
         </VStack>
       </Container>
     </Flex>

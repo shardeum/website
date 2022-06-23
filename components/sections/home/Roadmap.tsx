@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import { Show, Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -171,6 +171,12 @@ function Roadmap() {
                   icon={<CalendarIcon />}
                 >
                   <VStack alignItems="start" flexWrap="wrap">
+                    <Show below="lg">
+                      <Text fontSize="xl" color="brand.orange" pr="4" fontWeight="medium" pb="0">
+                        {pageTranslation(item.title)}
+                      </Text>
+                    </Show>
+
                     {item.sections.map((section: any, index: number) => {
                       return (
                         <VStack key={index} alignItems="start" pt={0}>

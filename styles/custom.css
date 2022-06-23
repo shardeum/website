@@ -26,7 +26,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    left: -8px;
     height: 100%;
     width: 4px;
     background: var(--line-color);
@@ -48,7 +48,7 @@
   }
   .vertical-timeline-element {
     position: relative;
-    margin: 2em 0;
+    margin: 1em 0;
   }
   .vertical-timeline-element > div {
     min-height: 1px;
@@ -181,7 +181,7 @@
   }
   .vertical-timeline-element-content {
     position: relative;
-    margin-left: 60px;
+    margin-left: 6px;
     background: white;
     /* border-radius: 0.25em; */
     padding: 1em;
@@ -227,6 +227,7 @@
   .vertical-timeline-element-content .vertical-timeline-element-date {
     float: left;
     padding: .8em 0;
+    display: none;
     /* opacity: .7; */
   }
   .vertical-timeline-element-content-arrow {
@@ -293,6 +294,7 @@
     }
   
     .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+      display: block;
       position: absolute;
       width: 100%;
       left: 104%;

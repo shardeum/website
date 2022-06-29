@@ -21,18 +21,18 @@ const nextConfig = {
       },
     ];
   },
-  async headers() {
-    return [
-      {
-        source: "/blog/:slug*",
-        headers: [
-          { key: "x-forwarded-proto", value: "http" },
-          { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
-          { key: "host", value: process.env.ENV_DOMAIN },
-        ],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/blog/:slug*",
+  //       headers: [
+  //         { key: "x-forwarded-proto", value: "http" },
+  //         { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
+  //         { key: "host", value: process.env.ENV_DOMAIN },
+  //       ],
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: "/blog/:slug*",
-        destination: `${process.env.BLOG_URL}/:slug*/`,
+        destination: `${process.env.BLOG_URL}/:slug*`,
       },
     ];
   },

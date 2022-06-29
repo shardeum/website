@@ -12,10 +12,6 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/blog/",
-        destination: `${process.env.BLOG_URL}`,
-      },
-      {
         source: "/blog/:slug*",
         destination: `${process.env.BLOG_URL}/:slug*`,
       },

@@ -12,27 +12,23 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/blog",
-        destination: `${process.env.BLOG_URL}`,
-      },
-      {
         source: "/blog/:slug*",
         destination: `${process.env.BLOG_URL}/:slug*`,
       },
     ];
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/blog/:slug*",
-  //       headers: [
-  //         { key: "x-forwarded-proto", value: "http" },
-  //         { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
-  //         { key: "host", value: process.env.ENV_DOMAIN },
-  //       ],
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        source: "/blog/:slug*",
+        headers: [
+          { key: "x-forwarded-proto", value: "https" },
+          { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
+          { key: "host", value: process.env.ENV_DOMAIN },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

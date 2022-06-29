@@ -24,7 +24,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/blog/:slug*",
+        source: "/blog/:slug*/",
         headers: [
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },

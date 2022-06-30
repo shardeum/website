@@ -12,6 +12,7 @@ import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
+import Script from "next/script";
 
 const Carrers: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-careers"]);
@@ -60,36 +61,8 @@ const Carrers: NextPage = () => {
 
       {/* Hero section */}
       <Hero
-        heading={pageTranslation("page-careers-hero-h1")}
-        description={pageTranslation("page-careers-hero-description")}
-        cta={
-          <Stack
-            spacing="4"
-            direction={{ base: "column", sm: "row" }}
-            width={{ base: "full", sm: "auto" }}
-          >
-            <Button
-              as="a"
-              variant="secondary"
-              size="lg"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={DOCS_URL}
-            >
-              {pageTranslation("page-career-hero-cta")}
-            </Button>
-            <Button
-              as="a"
-              variant="primary"
-              size="lg"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={CLAIM_100_SHM_LINK}
-            >
-              {commonTranslation("claim-100-shm-cta")}
-            </Button>
-          </Stack>
-        }
+        heading="Help us build Shardeum!"
+        description="Join the team of enthusiastic people who are striving to solve blockchain's biggest problems"
         media={
           <Box position="relative" h="full">
             <Image
@@ -102,33 +75,8 @@ const Carrers: NextPage = () => {
         }
       />
 
-      {/* Features of alphanet */}
-      <UseCases
-        heading={pageTranslation("page-alphanet-hero-features-h1")}
-        content={Array(6)
-          .fill(0)
-          .map((_, index) => ({
-            title: pageTranslation(`page-alphanet-hero-features-${index + 1}-title`),
-            description: pageTranslation(`page-alphanet-hero-features-${index + 1}-description`),
-            Icon: () => AlphanetFeatureIcons({ id: `${index + 1}` }),
-          }))}
-      />
-      <WhatCanYoDo />
-      {/* Alphanet roadmap */}
-      <Roadmap />
-
-      <FAQs
-        heading={pageTranslation("page-alphanet-faq-h1")}
-        content={Array(6)
-          .fill(0)
-          .map((_, index) => ({
-            q: pageTranslation(`page-alphanet-faq-${index + 1}-q`),
-            a: pageTranslation(`page-alphanet-faq-${index + 1}-a`),
-          }))}
-      />
-
-      {/* Join community - common CTA */}
-      <JoinCommunity />
+      <div id="grnhse_app"></div>
+      <Script src="https://boards.greenhouse.io/embed/job_board/js?for=shardeumfoundation" />
     </>
   );
 };

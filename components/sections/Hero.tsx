@@ -62,7 +62,7 @@ const Hero = ({
           </VStack>
 
           {/* The media on the right */}
-          {media ? media : <Box h={["60", "80"]} bg="brand.grey-90"></Box>}
+          {media ? media : ""}
         </SimpleGrid>
       </Container>
     </Flex>

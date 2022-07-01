@@ -55,16 +55,6 @@ const Carrers: NextPage = () => {
         <Hero
           heading="Help us build Shardeum!"
           description="Join the team of enthusiastic people who are striving to solve blockchain's biggest problems"
-          media={
-            <Box position="relative" h="full">
-              <Image
-                objectFit="contain"
-                src="/careers/careers-hero.png"
-                alt="Shardeum Alphanet is Live"
-                layout="fill"
-              />
-            </Box>
-          }
         />
       )}
       <Flex bg="brand.white" as="section">

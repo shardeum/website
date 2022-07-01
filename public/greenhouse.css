@@ -68,7 +68,7 @@
   body #wrapper {
       background-color: white;
       min-height: 100vh;
-      max-width: 800px;
+      max-width: 100%;
       /*padding: 0 48px;*/
       padding: 0px !important;
   }

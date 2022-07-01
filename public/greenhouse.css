@@ -247,7 +247,9 @@
       order: 4;
       margin-top: 2px;
   }
-  
+  div#app_body #header a, #content a{
+    color: #C3491F;
+  }
   div#main #application_form h2.heading {
       color: var(--main-text-color);
       font-weight: 400;
@@ -265,7 +267,9 @@
       padding-bottom: 8px;
       font-weight: 600;
   }
-  
+  div#submit_buttons{
+      text-align: left;
+  }
   div#submit_buttons input#submit_app {
       background-color: var(--primary-brand-color);
       padding-top: 8px;

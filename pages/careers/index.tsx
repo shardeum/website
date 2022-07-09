@@ -54,7 +54,7 @@ const Carrers: NextPage = () => {
       {!router.query.gh_jid && (
         <Hero
           heading="Help us build Shardeum!"
-          description="Join the team of enthusiastic people who are striving to solve blockchain's biggest problems"
+          description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
         />
       )}
       <Flex bg="brand.white" as="section">

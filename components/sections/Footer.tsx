@@ -25,12 +25,12 @@ const LinksMap = {
   Resources: [
     { title: "litepaper", href: LITEPAPER_URL },
     { title: "faq", href: FAQ_URL },
-    { title: "public-drive-link", href: PUBLIC_DRIVE_LINK },
+    { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },
     { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },
   ],
   Contact: [
-    { title: "general-enquiries", href: GENERAL_QUERIES_LINK },
-    { title: "investment-queries", href: INVESTMENT_QUERY_LINK },
+    { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
+    { title: "investment-queries", href: INVESTMENT_QUERY_LINK, target: "_BLANK" },
   ],
 };
 

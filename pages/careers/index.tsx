@@ -17,7 +17,7 @@ const Carrers: NextPage = () => {
     <>
       <NextSeo
         title={"Shardeum Careers | Help us build Shardeum!"}
-        description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
+        description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
         canonical="https://shardeum.org/careers/"
         additionalMetaTags={[
           {
@@ -35,7 +35,7 @@ const Carrers: NextPage = () => {
           url: "https://shardeum.org/careers/",
 
           description:
-            "Shardeum is the world's first EVM based L1 blockchain that truly solves scalability trilemma with linear scaling and low gas fees forever",
+            "Join the team of enthusiastic people trying to make decentralization accessible to everyone!",
           images: [
             {
               url: "https://shardeum.org/Shardeum.png",

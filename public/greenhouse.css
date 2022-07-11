@@ -1,0 +1,484 @@
+/**
+ * @license
+ *
+ * Font Family: Satoshi
+ * Designed by: Deni Anggara
+ * URL: https://www.fontshare.com/fonts/satoshi
+ * © 2022 Indian Type Foundry
+ *
+ * Font Styles:
+ * Satoshi Variable(Variable font)
+ * Satoshi Light
+ * Satoshi Regular
+ * Satoshi Medium
+ * Satoshi Bold
+ * Satoshi Black
+ *
+*/
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+    font-family: "Satoshi-Variable";
+    src: url("https://shardeum-dev.vercel.app/fonts/Satoshi-Variable.woff2") format("woff2"),
+      url("https://shardeum-dev.vercel.app/fonts/Satoshi-Variable.woff") format("woff"),
+      url("https://shardeum-dev.vercel.app/fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  
+  :root {
+      /*
+      We recommend you change these values to match your brand.
+      The light color has an opacity of .1, do not modify that
+      */
+      --primary-brand-color: #C3491F;
+      --light-primary-brand-color: rgba(53, 116, 214, .1);
+  
+      /* We recommend not changing these colors */
+      --full-page-background-color: #fff;
+      --application-background-color: #FFF;
+      --footer-color: #F3F3F3;
+      --main-text-color: #222222;
+      --sub-header-color: #666;
+      --link-color: #C3491F;
+      --field-border-color: #E1E1E1;
+  }
+  
+  body {
+      background-color: var(--full-page-background-color);
+      font-family:Satoshi-Variable,Roboto !important;
+     /* font-family: "Nunito Sans", 'sans-serif';*/
+  }
+  h1, h2, h3, h4, h5, h6{
+      font-family: Satoshi-Variable,Roboto;
+  }
+  
+  body #wrapper {
+      background-color: white;
+      min-height: 100vh;
+      max-width: 100%;
+      /*padding: 0 48px;*/
+      padding: 0px !important;
+  }
+  
+  body > #wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  
+  body #main > #wrapper {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  
+  /* Select Boxes */
+  #main .select2-choice {
+      height: 35px;
+  }
+  
+  #main .select2-chosen {
+      line-height: 35px;
+  }
+  
+  #main .select2-arrow {
+      padding-top: 4px;
+      padding-right: 4px;
+  }
+  
+  #main .filter-label {
+      color: var(--sub-header-color);
+      font-size: 12px;
+      font-weight: 600;
+  }
+  
+  #main .location {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      color: var(--sub-header-color);
+  }
+  
+  /* Job Board Page */
+  #main > h1:not(.app-title) {
+      /* Hide the company name in favor of a Logo that includes it */
+      display: none;
+  }
+  
+  #board_title {
+      margin: 0 0 24px 0;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      font-family: Satoshi-Variable,Roboto !important;
+  }
+  
+  section {
+      margin-top: 16px;
+  }
+  
+  section > h3 {
+      margin-top: 32px;
+  }
+  
+  #logo {
+      display: none;
+  }
+  
+  body #content {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+  }
+  
+  #main section h3 {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-bottom: 0;
+  }
+  
+  #main section .location {
+      display: block;
+      margin-top: 4px;
+      margin-bottom: 0;
+      font-size: 18px;
+      line-height: 28px;
+      color: #657687;
+      font-weight: 400;
+  }
+  
+  #main section .opening {
+      padding-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  section .opening a {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      color: var(--main-text-color);
+  }
+  
+  section .opening a {
+      /* We want to increase the click area and background area of links to jobs,
+      so we combine padding and negative margin */
+      display: block;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      color: #C3491F;
+      font-family: Satoshi-Variable,Roboto !important;
+      margin: 0px 0px 0px 0px !important;
+  }
+  
+  section .opening a:hover {
+      background-color: transparent;
+      border-radius: 0;
+      color: #C3491F;
+      text-decoration: none;
+  }
+  
+  body #footer {
+      border: none;
+      background-color: var(--footer-color);
+      height: 60px;
+      margin-top: -80px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  
+  body #footer .privacy-policy {
+      line-height: 19px;
+  }
+  
+  body #footer img {
+      width: 90px;
+  }
+  
+  h3#filter-count {
+      margin-top: 30px;
+      margin-bottom: 0;
+  }
+  
+  /* Job Post Page */
+  div#main div#app_body {
+      /* padding-left: 0 !important; */
+      /* padding-right: 0; */
+      padding: 20px !important;
+  }
+  
+  div#app_body #header {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  div#app_body #header #apply_button {
+      order: 3;
+      margin-top: 37px
+  }
+  
+  div#app_body #header .company-name {
+      display: none;
+  }
+  
+  div#app_body #header > a {
+      order: 1;
+  }
+  
+  div#app_body #header .app-title {
+      order: 2;
+  }
+  
+  div#app_body #header .location {
+      order: 4;
+      margin-top: 2px;
+  }
+  div#app_body #header a, #content a{
+    color: #C3491F;
+  }
+  div#main #application_form h2.heading {
+      color: var(--main-text-color);
+      font-weight: 400;
+  }
+  
+  div#app_body .app-title {
+      font-weight: 400;
+      font-size: 28px;
+  }
+  
+  div#app_body div#header #apply_button {
+      top: auto;
+      background-color: var(--primary-brand-color);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-weight: 600;
+  }
+  div#submit_buttons{
+      text-align: left;
+  }
+  div#submit_buttons input#submit_app {
+      background-color: var(--primary-brand-color);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-family: Satoshi-Variable,Roboto;
+      font-weight: 600;
+  }
+  
+  div#app_body {
+      max-width: none;
+      padding-right: 20px;
+  }
+  
+  div#content {
+      padding-bottom: 0px;
+  }
+  
+  div#application hr:nth-last-of-type(1) {
+      display: none;
+  }
+  
+  div#application {
+      background-color: var(--application-background-color);
+      border-top: 1px solid var(--field-border-color);
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none;
+  }
+  
+  div#main_fields, div#custom_fields {
+      font-weight: 400;
+      line-height: 26px;
+  }
+  
+  div#application div.field label {
+      color: var(--sub-header-color);
+      display: block;
+      float: none;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: left;
+  }
+  
+  div#application div.field label span.asterisk {
+      font-size: 12px;
+  }
+  
+  div#application #main_fields div.field textarea {
+      margin-left: 0;
+  }
+  
+  div#application div.field input[type=text] {
+      border: solid 1px var(--field-border-color);
+      height: 25px;
+      padding-left: 12px;
+      width: 455px;
+  }
+  
+  @media (max-width: 640px) {
+      div#application div.field input[type=text] {
+          width: 100%;
+      }
+  }
+  
+  div#application div.field input[placeholder="MM"] {
+      padding-left: 10px;
+  }
+  
+  div#application div.field input[placeholder="YYYY"] {
+      padding-left: 7px;
+  }
+  
+  div#application legend {
+      float: none;
+  }
+  
+  div.link-container a {
+      color: var(--link-color);
+      font-size: 14px;
+  }
+  
+  div#application a#add_education {
+      margin-left: 0;
+  }
+  
+  div#field {
+      margin-bottom: 10px;
+  }
+  
+  #main_fields div.field div.field-error-msg {
+      padding-left: 0;
+  }
+  
+  div.field div.msg-container {
+      padding-top: 5px;
+  }
+  
+  #application .field .select2-container {
+      margin-top: 0;
+  }
+  
+  div#application div.field a.locate-me {
+      display: block;
+  }
+  
+  div#application div.field textarea {
+      border-color: var(--field-border-color);
+      width: 455px;
+  }
+  
+  @media (max-width: 640px) {
+      div#application div.field textarea {
+          width: 100%;
+      }
+  }
+  
+  div#application div.field div.select2-container {
+      width: 455px !important;
+  }
+  
+  @media (max-width: 640px) {
+      div#application div.field div.select2-container {
+          width: 100% !important;
+      }
+  }
+  
+  div.s3-upload-form {
+      display: none;
+  }
+  
+  /* Confirmation Page */
+  #main #view-more {
+      text-align: left;
+      padding-top: 0;
+  }
+  
+  #main strong > a {
+      color: var(--link-color);
+      font-weight: 400;
+  }
+  
+  
+  
+  section.level-0 {
+      border-bottom: 1px solid #D1D5D9;
+      padding-bottom: 36px;
+      margin-top: 0;
+      margin-bottom: 40px;
+  }
+  
+  section.level-0 h2 {
+      margin: 0 0 16px 0;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      font-family:Satoshi-Variable,Roboto !important;
+  }
+  
+  #main section .opening br{
+      display: none;
+  }
+  
+  .filter-container select#departments-select,
+  .filter-container select#offices-select {
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+      line-height: 28px;
+      margin-right: 6px;
+      font-family:Satoshi-Variable,Roboto !important;
+  }
+  
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+      .filter-container select#offices-select{
+          margin-top: 15px;
+      }
+  }
+  
+  
+  @media screen and (max-width: 767px) {
+      #board_title {
+          font-size: 24px;
+          line-height: 32px;
+      }
+  
+      .filter-container select#departments-select, .filter-container select#offices-select{
+          width: 100%;
+      }
+      .filter-container select#offices-select{
+          margin-top: 15px;
+      }
+  
+      section.level-0 {
+          padding-bottom: 30px;
+          margin-bottom: 32px;
+      }
+      section.level-0 h2 {
+          font-size: 24px;
+          line-height: 32px;
+      }
+      section .opening a {
+          font-size: 20px;
+          line-height: 28px;
+      }
+      #main section .location {
+          margin-top: 0px;
+          font-size: 16px;
+          line-height: 24px;
+      }
+  }
+  

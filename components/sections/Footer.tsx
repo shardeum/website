@@ -20,16 +20,17 @@ const LinksMap = {
     { title: "the-community", href: COMMUNITY_URL },
     { title: "blog", href: BLOG_URL },
     { title: "newsletter", href: NEWSLETTER_URL },
+    { title: "Careers", href: "/careers/", target: "_BLANK" },
   ],
   Resources: [
     { title: "litepaper", href: LITEPAPER_URL },
     { title: "faq", href: FAQ_URL },
-    { title: "public-drive-link", href: PUBLIC_DRIVE_LINK },
+    { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },
     { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },
   ],
   Contact: [
-    { title: "general-enquiries", href: GENERAL_QUERIES_LINK },
-    { title: "investment-queries", href: INVESTMENT_QUERY_LINK },
+    { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
+    { title: "investment-queries", href: INVESTMENT_QUERY_LINK, target: "_BLANK" },
   ],
 };
 
@@ -60,7 +61,12 @@ function Footer() {
                   <VStack spacing="3" alignItems="start">
                     {links.map((link) => (
                       <Link href={link.href} passHref key={link.title}>
-                        <Text as="a" color="brand.grey-50" _hover={{ color: "brand.grey-30" }}>
+                        <Text
+                          as="a"
+                          target={link.target ? link.target : ""}
+                          color="brand.grey-50"
+                          _hover={{ color: "brand.grey-30" }}
+                        >
                           {pageTranslation(link.title)}
                         </Text>
                       </Link>

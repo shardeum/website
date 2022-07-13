@@ -61,7 +61,7 @@ const Carrers: NextPage = () => {
         <Container
           maxW="container.xl"
           mx="auto"
-          py={{ base: "9", md: "20" }}
+          py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
           <div id="grnhse_app"></div>

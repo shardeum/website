@@ -38,7 +38,7 @@ const JoinNewsletter = () => {
               value={value}
             />
             <InputRightAddon
-              onClick={() => handleSubmit(["newsletterBottom"])}
+              onClick={() => handleSubmit(["newsletterHero"])}
               children={
                 <LightMode>
                   <IconButton

@@ -39,8 +39,8 @@ const nextConfig = {
         source: "/explore/:slug*",
         headers: [
           { key: "x-forwarded-proto", value: "https" },
-          { key: "x-forwarded-host", value: "shardeum-blog.vercel.app" },
-          { key: "host", value: "shardeum-blog.vercel.app" },
+          { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
+          { key: "host", value: process.env.ENV_DOMAIN },
         ],
       },
     ];

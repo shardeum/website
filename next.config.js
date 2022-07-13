@@ -15,12 +15,28 @@ const nextConfig = {
         source: "/blog/:slug*",
         destination: `${process.env.BLOG_URL}/:slug*`,
       },
+      {
+        source: "/explore/:slug*",
+        destination: `${process.env.EXPLORE_URL}/:slug*`,
+      },
+      {
+        source: "/explore/wp-admin",
+        destination: `${process.env.EXPLORE_URL}/wp-admin/index.php`,
+      },
     ];
   },
   async headers() {
     return [
       {
         source: "/blog/:slug*",
+        headers: [
+          { key: "x-forwarded-proto", value: "https" },
+          { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
+          { key: "host", value: process.env.ENV_DOMAIN },
+        ],
+      },
+      {
+        source: "/explore/:slug*",
         headers: [
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },

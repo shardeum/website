@@ -19,6 +19,10 @@ const nextConfig = {
         source: "/explore/:slug*",
         destination: `${process.env.EXPLORE_URL}/:slug*`,
       },
+      {
+        source: "/explore/wp-admin",
+        destination: `${process.env.EXPLORE_URL}/wp-admin/index.php`,
+      },
     ];
   },
   async headers() {

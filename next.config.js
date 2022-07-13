@@ -15,6 +15,10 @@ const nextConfig = {
         source: "/blog/:slug*",
         destination: `${process.env.BLOG_URL}/:slug*`,
       },
+      {
+        source: "/explore/:slug*",
+        destination: `https://shardeum-blog.vercel.app/explore/:slug*`,
+      },
     ];
   },
   async headers() {
@@ -25,6 +29,14 @@ const nextConfig = {
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
           { key: "host", value: process.env.ENV_DOMAIN },
+        ],
+      },
+      {
+        source: "/explore/:slug*",
+        headers: [
+          { key: "x-forwarded-proto", value: "https" },
+          { key: "x-forwarded-host", value: "shardeum-blog.vercel.app" },
+          { key: "host", value: "shardeum-blog.vercel.app" },
         ],
       },
     ];

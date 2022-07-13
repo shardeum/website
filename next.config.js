@@ -17,7 +17,7 @@ const nextConfig = {
       },
       {
         source: "/explore/:slug*",
-        destination: `https://shardeum-blog.vercel.app/explore/:slug*`,
+        destination: `${process.env.EXPLORE_URL}/:slug*`,
       },
     ];
   },

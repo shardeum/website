@@ -10,6 +10,7 @@ import Navbar from "components/sections/Navbar";
 import Footer from "components/sections/Footer";
 import defaultSEOValues from "../next-seo.config";
 import Head from "next/head";
+import DiscordCTA from "@shm/components/common/DiscordCTA";
 
 function MyApp({ Component, pageProps }: any) {
   return (
@@ -30,7 +31,7 @@ function MyApp({ Component, pageProps }: any) {
 
         {/* content */}
         <Component {...pageProps} />
-
+        <DiscordCTA />
         {/* common footer */}
         <Footer />
       </Box>

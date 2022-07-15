@@ -474,3 +474,27 @@
       transform: translateX(0);
     }
   }
+.discord-btn-cta{
+  border-radius: 2px;
+  bottom: 0;
+  font-size: 13px;
+  padding: 5px 10px;
+  position: fixed;
+  right: 0;
+  z-index: 99;
+  background: #5865f2;
+  color: #fff;
+}
+.discord-btn-cta img{
+  display: inline;
+    vertical-align: middle;
+}
+@media (max-width: 580px) {
+  .discord-btn-cta{
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}

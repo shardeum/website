@@ -13,7 +13,7 @@ interface Props {
   website?: string | null;
 }
 
-function ProjectsList(projects: Props[]) {
+function ProjectsList(projects: any) {
   return (
     <Flex bg="brand.white" as="section">
       <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>

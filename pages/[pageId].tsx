@@ -16,7 +16,7 @@ const Page = ({ recordMap }: { recordMap: ExtendedRecordMap }) => {
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
 
-  const recordMap = await notion.getPage("b47d0cc33f5d4100a73ef91a8dfe5a07");
+  const recordMap = await notion.getPage("a4570667a6af4778a0d5228710601d5e");
 
   return {
     props: {

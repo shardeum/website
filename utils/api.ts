@@ -103,3 +103,54 @@ export const getCommunityStats = (): Promise<CommunityStat[]> => {
       });
   });
 };
+
+export const getSHMProjects = (): Promise<NewsItem[]> => {
+  configureAirtable();
+  const data: any[] = [];
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+  return new Promise((resolve, reject) => {
+    base("projects")
+      .select({
+        view: "Grid view",
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            try {
+              const projectName = record.get("Project Name");
+              const projectDescription = record.get("Project Description");
+              const projectCategory = record.get("Project Category");
+              const projectLogo: any = record.get("Project Logo");
+              const projectScreenshots = record.get("Project Screenshots");
+              // const projectWebsiteURL = record.get("Project Website URL")
+              // const pointOfContactEmailID = record.get("Your Point of Contact's Email id")
+              // const projectGithubURL = record.get("Project Github URL")
+              const projectWebsiteURL = record.get("Project Website URL");
+              if (projectName) {
+                data.push({
+                  name: projectName,
+                  description: projectDescription,
+                  category: projectCategory,
+                  logo: (projectLogo && projectLogo[0]?.url) || null,
+                  screenShots: projectScreenshots || null,
+                  website: projectWebsiteURL,
+                });
+              }
+            } catch (err) {
+              console.log(err);
+            }
+          });
+
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+            reject(err);
+            return;
+          }
+          resolve(data);
+        }
+      );
+  });
+};

@@ -122,6 +122,7 @@ export const getSHMProjects = (): Promise<{
       .eachPage(
         function page(records, fetchNextPage) {
           records.forEach(function (record) {
+            console.log(record);
             try {
               // extract row details
               const projectId = record.getId();
@@ -131,6 +132,7 @@ export const getSHMProjects = (): Promise<{
               const projectLogo: any = record.get("Project Logo") as string[];
               const projectScreenshots = record.get("Project Screenshots") as string[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
+              const projectDateCreated = new Date(record.get("Created") as string);
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               // const projectGithubURL = record.get("Project Github URL");
 
@@ -143,6 +145,7 @@ export const getSHMProjects = (): Promise<{
                   logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
                   screenShots: projectScreenshots || [],
                   website: projectWebsiteURL,
+                  dateCreated: projectDateCreated,
                 });
 
                 categoryCount[projectCategory] = categoryCount[projectCategory]

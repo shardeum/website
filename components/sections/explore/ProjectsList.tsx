@@ -1,39 +1,47 @@
 import { Container, Flex } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import { Project } from "models/project";
+import { FC, useState } from "react";
 import CategoryList from "./CategoryList";
 import ProjectCard from "./ProjectCard";
 import TitleAndSearchInput from "./TitleAndSearchInput";
 
-interface Props {
-  name?: string | null;
-  description?: string | null;
-  category?: string | null;
-  logo?: string | null;
-  screenShots?: string | null;
-  website?: string | null;
-}
+export type ProjectsListProps = {
+  projects: Project[];
+  categories: { [category: string]: number };
+};
 
-function ProjectsList(projects: any) {
+export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories = {} }) => {
+  const [searchValue, setSearchValue] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   return (
     <Flex bg="brand.white" as="section">
       <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
+        {/* title and searchbar */}
         <TitleAndSearchInput />
-        <CategoryList />
-        {/* {projects.map((item) => {
-          return (
-            <Fragment key={item.name}> */}
-        <ProjectCard
-          imageURL="https://dl.airtable.com/.attachments/10700c81bf9b8caa5ebda8964c24156d/d8d2f701/shardeumSwap.jpeg?ts=1658131801&userId=usrAW07lCdOEL0HwA&cs=1c4be9cb0b3baf73"
-          title="Main"
-          category="NFT"
-          description="yo yo honey singh"
+
+        {/* category pils */}
+        <CategoryList
+          categories={categories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
         />
-        {/* </Fragment>
-          );
-        })} */}
+
+        {/* set of projects based on categories and  */}
+        <Flex flexDirection="row" gap={4}>
+          {projects?.map((item) => (
+            <ProjectCard
+              key={item.name}
+              imageURL={item.logo}
+              title={item.name}
+              category={item.category}
+              description={item.description}
+            />
+          ))}
+        </Flex>
       </Container>
     </Flex>
   );
-}
+};
 
 export default ProjectsList;

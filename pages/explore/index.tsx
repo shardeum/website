@@ -1,5 +1,6 @@
 import { Button } from "@chakra-ui/react";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
+import { TrendingProjects } from "@shm/components/sections/explore/TrendingProjects";
 // import TitleAndSearchInput from "@shm/components/sections/explore/TitleAndSearchInput";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
@@ -43,6 +44,7 @@ const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePa
       />
 
       {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}
+      {projects.length > 0 && <TrendingProjects projects={projects} />}
 
       <JoinCommunity />
     </>

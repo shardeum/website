@@ -2,14 +2,19 @@ import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
-type Props = {
+export type ProjectCardProps = {
   imageURL?: string;
   title?: string;
   description?: string;
   category?: string;
 };
 
-function ProjectCard({ imageURL, title, description, category }: Props) {
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  category,
+  imageURL,
+}) => {
   return (
     <Box width="368px" height="448px" background="brand.grey-10" px="2rem" py="2rem">
       <Image width={80} height={80} src={String(imageURL)} alt={title + "Image"} />
@@ -34,6 +39,6 @@ function ProjectCard({ imageURL, title, description, category }: Props) {
       </Box>
     </Box>
   );
-}
+};
 
 export default ProjectCard;

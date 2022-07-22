@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { Container, Flex, Grid, Heading } from "@chakra-ui/react";
 import { Project } from "models/project";
 import { ProjectSectionCard } from "./ProjectSectionCard";
@@ -8,6 +8,16 @@ export type NewestProjectsProps = {
 };
 
 export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
+  const newestProjects = useMemo(() => {
+    return projects
+      .sort((a, b) => {
+        const dateA = new Date(a.dateCreated);
+        const dateB = new Date(b.dateCreated);
+        return dateB.getTime() - dateA.getTime();
+      })
+      .slice(0, 8);
+  }, [projects]);
+
   return (
     <Flex bg="brand.white" as="section">
       <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
@@ -18,7 +28,7 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
         </Flex>
 
         <Grid templateColumns="1fr 1fr" gap="24px">
-          {projects.map((project) => (
+          {newestProjects.map((project) => (
             <ProjectSectionCard
               key={project.id}
               id={project.id}

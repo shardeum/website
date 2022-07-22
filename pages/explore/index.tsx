@@ -25,6 +25,11 @@ export const getStaticProps = async () => {
 export type ExplorePageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePageProps) => {
+  // projects = projects.map((project) => ({
+  //   ...project,
+  //   dateCreatedL: new Date(project.dateCreated),
+  // }));
+
   return (
     <>
       <ResponsiveHero

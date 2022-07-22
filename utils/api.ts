@@ -122,7 +122,6 @@ export const getSHMProjects = (): Promise<{
       .eachPage(
         function page(records, fetchNextPage) {
           records.forEach(function (record) {
-            console.log(record);
             try {
               // extract row details
               const projectId = record.getId();
@@ -132,7 +131,8 @@ export const getSHMProjects = (): Promise<{
               const projectLogo: any = record.get("Project Logo") as string[];
               const projectScreenshots = record.get("Project Screenshots") as string[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
-              const projectDateCreated = new Date(record.get("Created") as string);
+              const projectDateCreated = record.get("Created") as string;
+              const projectUpvotes = (record.get("Upvoted Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               // const projectGithubURL = record.get("Project Github URL");
 
@@ -146,6 +146,7 @@ export const getSHMProjects = (): Promise<{
                   screenShots: projectScreenshots || [],
                   website: projectWebsiteURL,
                   dateCreated: projectDateCreated,
+                  numUpvotes: projectUpvotes,
                 });
 
                 categoryCount[projectCategory] = categoryCount[projectCategory]

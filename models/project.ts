@@ -6,5 +6,6 @@ export type Project = {
   logo: string; // Project Image
   website: string; // Project Website
   screenShots: string[] | null; // Project Screenshot
-  dateCreated: Date; // Project Date Created
+  dateCreated: Date | string; // Project Date Created
+  numUpvotes: number; // Project Upvotes
 };

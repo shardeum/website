@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Text } from "@chakra-ui/react";
+import { Button, Flex, HStack } from "@chakra-ui/react";
 import React, { FC } from "react";
 
 const categoryList = [
@@ -45,7 +45,7 @@ export const CategoryList: FC<CaregoryListProps> = ({
               _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
               _focus={{ outline: "none" }}
             >
-              {category.name} <Text>{categoryCount[category.name] || 0}</Text>
+              {category.name} {categoryCount[category.name] || 0}
             </Button>
           );
         })}

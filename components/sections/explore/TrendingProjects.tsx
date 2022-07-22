@@ -40,6 +40,7 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
           {projects.map((project) => (
             <ProjectSectionCard
               key={project.id}
+              id={project.id}
               title={project.name}
               category={project.category}
               description={project.description}

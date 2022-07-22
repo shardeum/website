@@ -8,6 +8,7 @@ import { CategoryBadge } from "./CategoryBadge";
 import { ChevronUpIcon } from "@chakra-ui/icons";
 
 export type ProjectSectionCardProps = {
+  id: string;
   title: string;
   category: string;
   description?: string;
@@ -18,6 +19,7 @@ export type ProjectSectionCardProps = {
 };
 
 export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
+  id,
   title,
   category,
   description = "",
@@ -35,7 +37,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
 
         <Flex flexDirection="column" ml="24px" justifyContent="space-between" flexGrow={1}>
           <Heading as="h3" fontSize="lg">
-            <NextLink href={"#"}>
+            <NextLink href={`/explore/${id}`}>
               <LinkOverlay>{title}</LinkOverlay>
             </NextLink>
           </Heading>

@@ -26,7 +26,7 @@ function ProjectsList(projects: any) {
           imageURL="https://dl.airtable.com/.attachments/10700c81bf9b8caa5ebda8964c24156d/d8d2f701/shardeumSwap.jpeg?ts=1658131801&userId=usrAW07lCdOEL0HwA&cs=1c4be9cb0b3baf73"
           title="Main"
           category="NFT"
-          description="yo yo honey singh"
+          description="dApp 1 is a great addition to the Shardeum ecosystem, their unique applications make them a valuable contributor to the Shardeum ecosystem. The dApp1 team enjoys working with Shardeum… read more"
         />
         {/* </Fragment>
           );

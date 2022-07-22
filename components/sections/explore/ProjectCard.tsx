@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, color, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -14,12 +14,14 @@ function ProjectCard({ imageURL, title, description, category }: Props) {
     <Box width="368px" height="448px" background="brand.grey-10" px="2rem" py="2rem">
       <Image width={80} height={80} src={String(imageURL)} alt={title + "Image"} />
       <Text
-        mt="2rem"
         color={"brand.grey-80"}
         fontSize={{ base: "md", sm: "md", lg: "lg" }}
         fontWeight={"bold"}
       >
         {title}
+      </Text>
+      <Text color="brand.grey-70">
+        <span style={{ color: "#EC5B29" }}>&#9733;&nbsp;&nbsp;</span>4.6
       </Text>
       <Text
         fontSize={{ base: "md", lg: "md" }}

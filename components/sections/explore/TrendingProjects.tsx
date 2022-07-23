@@ -78,7 +78,7 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
         />
 
         <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr", md: "1fr" }} gap={4}>
-          {projects.map((project) => (
+          {filteredAndSlicedProjects.map((project) => (
             <ProjectSectionCard
               key={project.id}
               id={project.id}

@@ -21,13 +21,13 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
   return (
     <Flex bg="brand.white" as="section">
       <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
-        <Flex justifyContent="space-between" alignItems="center" my={2} py={2}>
+        <Flex justifyContent="space-between" alignItems="center" my={4} py={4}>
           <Heading size="2xl" color="brand.black">
             Newest Projects
           </Heading>
         </Flex>
 
-        <Grid templateColumns="1fr 1fr" gap="24px">
+        <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr", md: "1fr" }} gap={4}>
           {newestProjects.map((project) => (
             <ProjectSectionCard
               key={project.id}

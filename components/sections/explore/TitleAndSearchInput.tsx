@@ -12,7 +12,7 @@ import {
   // Text,
   VStack,
 } from "@chakra-ui/react";
-import { IconRightArrow } from "@shm/Icons";
+import { IconSearch } from "@shm/Icons";
 
 export type TitleAndSearchInputProps = {
   value: string;
@@ -25,11 +25,20 @@ export const TitleAndSearchInput: FC<TitleAndSearchInputProps> = ({ value = "", 
   };
 
   return (
-    <Flex justifyContent="space-between" alignItems="center">
+    <Flex
+      direction={{ lg: "row", base: "column" }}
+      justifyContent="space-between"
+      alignItems="center"
+    >
       <Heading size="2xl" color="brand.black">
         Explore Shardeum Projects
       </Heading>
-      <VStack py="6" bgColor="brand.white" w="466px" alignItems="start">
+      <VStack
+        py="6"
+        bgColor="brand.white"
+        w={{ lg: "27.875rem", md: "27.875rem", base: "100%" }}
+        alignItems="start"
+      >
         <FormControl>
           <LightMode>
             <InputGroup>
@@ -46,7 +55,7 @@ export const TitleAndSearchInput: FC<TitleAndSearchInputProps> = ({ value = "", 
                     <IconButton
                       variant="secondary"
                       p="5"
-                      icon={<IconRightArrow />}
+                      icon={<IconSearch />}
                       h="full"
                       px="4"
                       aria-label="Submit Button"

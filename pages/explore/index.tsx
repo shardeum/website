@@ -46,7 +46,7 @@ const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePa
             Submit your project
           </Button>
         }
-        src={"/community/community-hero.png"}
+        src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
       {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}

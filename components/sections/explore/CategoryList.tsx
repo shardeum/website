@@ -1,7 +1,9 @@
-import { Button, Flex, HStack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Text } from "@chakra-ui/react";
 import React, { FC } from "react";
 
-const categoryList = [
+type CategoryList = { id: number; name: string; selected: boolean }[];
+
+const categoryList: CategoryList = [
   { id: 1, name: "All", selected: true },
   { id: 2, name: "NFT", selected: false },
   { id: 3, name: "Gaming", selected: false },
@@ -27,13 +29,21 @@ export const CategoryList: FC<CaregoryListProps> = ({
 }) => {
   return (
     <Flex overflowX="scroll" className="no-scrollbar">
-      <HStack pt={{ base: 6, lg: 8 }} pb={{ base: 6, lg: 8 }}>
+      <HStack
+        flexWrap={{ base: "wrap", md: "wrap", sm: "nowrap" }}
+        rowGap={{ md: 2 }}
+        maxW="fit-content"
+        justifyContent="center"
+        pt={{ base: 6, lg: 8 }}
+        pb={{ base: 6, lg: 8 }}
+      >
         {categoryList.map((category) => {
           const isSelected = category.name === selectedCategory;
 
           return (
             <Button
               p={4}
+              marginInlineStart={0}
               key={category.name}
               value={category.name}
               onClick={() => setSelectedCategory(category.name)}
@@ -41,11 +51,13 @@ export const CategoryList: FC<CaregoryListProps> = ({
               fontSize="md"
               bg={isSelected ? "brand.grey-90" : "brand.grey-5"}
               color={isSelected ? "brand.grey-5" : "brand.grey-90"}
-              //size="lg"
               _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
               _focus={{ outline: "none" }}
             >
-              {category.name} {categoryCount[category.name] || 0}
+              {category.name}&nbsp;&nbsp;
+              <Text as="span" color="brand.grey-50">
+                {categoryCount[category.name] || 0}
+              </Text>
             </Button>
           );
         })}

@@ -35,7 +35,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
+      <Container maxW="container.xl" mx="auto" pt="16" pb="11.6rem" px={{ base: 6, xl: 0 }}>
         {/* title and searchbar */}
         <TitleAndSearchInput value={searchValue} setValue={setSearchValue} />
 
@@ -47,7 +47,12 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
         />
 
         {/* set of projects based on categories and search value */}
-        <Flex flexDirection="row" gap={4}>
+        <Flex
+          direction={{ lg: "row", md: "row", base: "column" }}
+          justify={{ lg: "flex-start", md: "center", sm: "center" }}
+          align={{ sm: "center" }}
+          gap={4}
+        >
           {filteredProjects
             ?.slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
             ?.map((item) => (

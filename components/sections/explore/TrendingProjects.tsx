@@ -63,7 +63,7 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
+      <Container maxW="container.xl" mx="auto" pb="28" px={{ base: 6, xl: 0 }}>
         <TitleAndSelect
           title={"Trending Projects"}
           value={filter}
@@ -71,8 +71,8 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
           onChange={(val) => setFilter(val)}
         />
 
-        <Grid templateColumns="1fr 1fr" gap="24px">
-          {filteredAndSlicedProjects.map((project) => (
+        <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr", md: "1fr" }} gap={4}>
+          {projects.map((project) => (
             <ProjectSectionCard
               key={project.id}
               id={project.id}

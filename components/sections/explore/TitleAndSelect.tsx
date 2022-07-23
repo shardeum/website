@@ -1,4 +1,4 @@
-import { Flex, Heading, LightMode, Select } from "@chakra-ui/react";
+import { Flex, Heading, HStack, LightMode, Select } from "@chakra-ui/react";
 import { FC } from "react";
 
 export type TitleAndSelectProps = {
@@ -10,7 +10,7 @@ export type TitleAndSelectProps = {
 
 export const TitleAndSelect: FC<TitleAndSelectProps> = ({ title, value, options, onChange }) => {
   return (
-    <Flex justifyContent="space-between" alignItems="center" my={2} py={2}>
+    <HStack mb="8" justify={{ base: "space-between" }}>
       <Heading size="2xl" color="brand.black">
         {title}
       </Heading>
@@ -21,8 +21,9 @@ export const TitleAndSelect: FC<TitleAndSelectProps> = ({ title, value, options,
           value={value}
           onChange={(e) => onChange(e.target.value)}
           color="brand.black"
-          maxW="150px"
-          h="60px"
+          maxW="9.375rem"
+          h="3.75rem"
+          fontWeight="medium"
           borderWidth="1px"
           borderColor="brand.black"
           borderStyle="solid"
@@ -35,6 +36,6 @@ export const TitleAndSelect: FC<TitleAndSelectProps> = ({ title, value, options,
           ))}
         </Select>
       </LightMode>
-    </Flex>
+    </HStack>
   );
 };

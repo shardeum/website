@@ -310,6 +310,25 @@ export const IconHamburger = () => (
   </svg>
 );
 
+export const IconSearch = () => (
+  <svg
+    id="Group_219"
+    data-name="Group 219"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path id="Path_212" data-name="Path 212" d="M0,0H24V24H0Z" fill="none" />
+    <path
+      id="Path_213"
+      data-name="Path 213"
+      d="M18.031,16.617,22.314,20.9,20.9,22.314l-4.282-4.283a9,9,0,1,1,1.414-1.414Zm-2.006-.742a7,7,0,1,0-.15.15l.15-.15Z"
+      fill="#fff"
+    />
+  </svg>
+);
+
 export const teamSocialIcons = {
   twitter: (
     <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">

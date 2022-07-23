@@ -1,4 +1,5 @@
 import Airtable from "airtable";
+import { Project } from "models/project";
 import { NewsItem, Shardian, CommunityStat } from "../types";
 
 const configureAirtable = () => {
@@ -104,10 +105,15 @@ export const getCommunityStats = (): Promise<CommunityStat[]> => {
   });
 };
 
-export const getSHMProjects = (): Promise<NewsItem[]> => {
+export const getSHMProjects = (): Promise<{
+  projects: Project[];
+  categories: { [category: string]: number };
+}> => {
   configureAirtable();
-  const data: any[] = [];
+  const data: Project[] = [];
+  const categoryCount: { [category: string]: number } = {};
   const base = Airtable.base("appYSqEEnRwWor3V9");
+
   return new Promise((resolve, reject) => {
     base("projects")
       .select({
@@ -117,24 +123,31 @@ export const getSHMProjects = (): Promise<NewsItem[]> => {
         function page(records, fetchNextPage) {
           records.forEach(function (record) {
             try {
-              const projectName = record.get("Project Name");
-              const projectDescription = record.get("Project Description");
-              const projectCategory = record.get("Project Category");
-              const projectLogo: any = record.get("Project Logo");
-              const projectScreenshots = record.get("Project Screenshots");
-              // const projectWebsiteURL = record.get("Project Website URL")
-              // const pointOfContactEmailID = record.get("Your Point of Contact's Email id")
-              // const projectGithubURL = record.get("Project Github URL")
-              const projectWebsiteURL = record.get("Project Website URL");
+              // extract row details
+              const projectId = record.getId();
+              const projectName = record.get("Project Name") as string;
+              const projectDescription = record.get("Project Description") as string;
+              const projectCategory = record.get("Project Category") as string;
+              const projectLogo: any = record.get("Project Logo") as string[];
+              const projectScreenshots = record.get("Project Screenshots") as string[];
+              const projectWebsiteURL = record.get("Project Website URL") as string;
+              // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
+              // const projectGithubURL = record.get("Project Github URL");
+
               if (projectName) {
                 data.push({
+                  id: projectId,
                   name: projectName,
                   description: projectDescription,
-                  category: projectCategory,
-                  logo: (projectLogo && projectLogo[0]?.url) || null,
-                  screenShots: projectScreenshots || null,
+                  category: projectCategory || "Others",
+                  logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
+                  screenShots: projectScreenshots || [],
                   website: projectWebsiteURL,
                 });
+
+                categoryCount[projectCategory] = categoryCount[projectCategory]
+                  ? categoryCount[projectCategory] + 1
+                  : 1;
               }
             } catch (err) {
               console.log(err);
@@ -149,7 +162,11 @@ export const getSHMProjects = (): Promise<NewsItem[]> => {
             reject(err);
             return;
           }
-          resolve(data);
+
+          // get the categories (DEX, NFT etc)
+          // const categories: string[] = Array.from(new Set(data.map((item) => item.category)));
+
+          resolve({ projects: data, categories: categoryCount });
         }
       );
   });

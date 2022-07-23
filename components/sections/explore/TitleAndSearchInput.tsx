@@ -1,34 +1,45 @@
+import { FC } from "react";
 import {
   Flex,
   FormControl,
-  FormHelperText,
+  // FormHelperText,
   Heading,
   IconButton,
   Input,
   InputGroup,
   InputRightAddon,
   LightMode,
-  Text,
+  // Text,
   VStack,
 } from "@chakra-ui/react";
-import Feature from "@shm/components/common/Feature";
-import { IconRightArrow } from "@shm/Icons";
-import useNewsLetterForm from "hooks/useNewsletter";
-import React from "react";
+import { IconRightArrow, IconSearch } from "@shm/Icons";
 
-function TitleAndSearchInput() {
-  const {
-    form: { error, status, success, value },
-    handleOnChange,
-    handleSubmit,
-  } = useNewsLetterForm();
+export type TitleAndSearchInputProps = {
+  value: string;
+  setValue: (value: string) => void;
+};
+
+export const TitleAndSearchInput: FC<TitleAndSearchInputProps> = ({ value = "", setValue }) => {
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
   return (
-    <Flex justifyContent="space-between" alignItems="center">
+    <Flex
+      direction={{ lg: "row", base: "column" }}
+      justifyContent="space-between"
+      alignItems="center"
+    >
       <Heading size="2xl" color="brand.black">
         Explore Shardeum Projects
       </Heading>
-      <VStack py="6" bgColor="brand.white" w="466px" alignItems="start">
-        <FormControl isInvalid={!!error}>
+      <VStack
+        py="6"
+        bgColor="brand.white"
+        w={{ lg: "27.875rem", md: "27.875rem", base: "100%" }}
+        alignItems="start"
+      >
+        <FormControl>
           <LightMode>
             <InputGroup>
               <Input
@@ -39,17 +50,15 @@ function TitleAndSearchInput() {
                 value={value}
               />
               <InputRightAddon
-                onClick={() => handleSubmit(["newsletterHero"])}
                 children={
                   <LightMode>
                     <IconButton
                       variant="secondary"
                       p="5"
-                      icon={<IconRightArrow />}
+                      icon={<IconSearch />}
                       h="full"
                       px="4"
                       aria-label="Submit Button"
-                      isLoading={status === "loading"}
                     />
                   </LightMode>
                 }
@@ -60,6 +69,6 @@ function TitleAndSearchInput() {
       </VStack>
     </Flex>
   );
-}
+};
 
 export default TitleAndSearchInput;

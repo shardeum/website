@@ -1,13 +1,29 @@
 import { Button } from "@chakra-ui/react";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
-import TitleAndSearchInput from "@shm/components/sections/explore/TitleAndSearchInput";
+import { TrendingProjects } from "@shm/components/sections/explore/TrendingProjects";
+// import TitleAndSearchInput from "@shm/components/sections/explore/TitleAndSearchInput";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import type { InferGetStaticPropsType, NextPage } from "next";
 import React from "react";
 import { getSHMProjects } from "utils/api";
 
-const Explore = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+export const getStaticProps = async () => {
+  const { projects, categories } = await getSHMProjects();
+
+  return {
+    // Will be passed to the page component as props
+    props: {
+      projects,
+      categories,
+    },
+  };
+};
+
+// define page props type
+export type ExplorePageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePageProps) => {
   return (
     <>
       <ResponsiveHero
@@ -24,24 +40,15 @@ const Explore = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) =
             Submit your project
           </Button>
         }
-        src={"/community/community-hero.png"}
+        src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projects.length ? <ProjectsList projects={projects} /> : null}
+      {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}
+      {projects.length > 0 && <TrendingProjects projects={projects} />}
+
       <JoinCommunity />
     </>
   );
 };
-
-export async function getStaticProps() {
-  const projects = await getSHMProjects();
-
-  return {
-    props: {
-      projects,
-      // Will be passed to the page component as props
-    },
-  };
-}
 
 export default Explore;

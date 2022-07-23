@@ -17,7 +17,13 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
   const [currentPage, setCurrentPage] = useState(1);
   // Use breakpoints to show different number of project cards
 
-  const numProjectsPerPage: number | undefined = useBreakpointValue({ lg: 6, md: 2, sm: 2, xs: 2 });
+  const numProjectsPerPage: number | undefined = useBreakpointValue({
+    lg: 6,
+    md: 2,
+    sm: 2,
+    xs: 2,
+    base: 2,
+  });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {
     setCurrentPage(1);
@@ -39,7 +45,13 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="11.6rem" px={{ base: 6, xl: 0 }}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        pt="16"
+        pb={{ lg: "11.6rem", md: "3rem", sm: "3rem" }}
+        px={{ base: 6, xl: 0 }}
+      >
         {/* title and searchbar */}
         <TitleAndSearchInput value={searchValue} setValue={setSearchValue} />
 

@@ -83,6 +83,8 @@ const Navbar = () => {
   const { t: commonTranslation } = useTranslation(["common"]);
   const { data: session } = useSession();
 
+  console.log("session", session);
+
   return (
     <Flex bg="brand.black" w="100%" py={2} color="text">
       <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
@@ -116,7 +118,7 @@ const Navbar = () => {
 
             <Menu>
               <MenuButton>
-                <Avatar size="sm" src="/avatar.png" />
+                <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
               </MenuButton>
 
               <MenuList>

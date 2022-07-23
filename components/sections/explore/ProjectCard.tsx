@@ -18,8 +18,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Box
-      w={{ lg: "32%", sm: "20.375rem5" }}
-      maxW={{ lg: "32%", sm: "20.375rem" }}
+      w={{ lg: "32.5%", sm: "20.375rem5" }}
+      maxW={{ lg: "32.5%", sm: "20.375rem" }}
       h={{ lg: "28rem", base: "27rem" }}
       minH={{ lg: "28rem", base: "27rem" }}
       background="brand.grey-10"
@@ -43,14 +43,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         4.6
       </Text>
 
-      {description?.length > 150 ? (
+      {description?.length > 100 ? (
         <Text
           mb={{ base: "8" }}
           fontSize={{ base: "md", lg: "md" }}
           textAlign="left"
           color="brand.grey-80"
         >
-          {description.slice(0, 150)}...
+          {description.slice(0, 100)}...
           <Text as="span" color="#2031E6">
             read more
           </Text>

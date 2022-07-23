@@ -176,3 +176,49 @@ export const getSHMProjects = (): Promise<{
       );
   });
 };
+
+// to get the upvoted projects of a user
+export const getUserUpvotedProjects = (
+  userId: string
+): Promise<{
+  upvotedProjectIds: string[];
+}> => {
+  configureAirtable();
+  let data: string[] = [];
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    base("users")
+      .select({
+        view: "Grid view",
+        filterByFormula: `{UserId} = "${userId}"`,
+        maxRecords: 1,
+        pageSize: 1,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            try {
+              // extract row details
+              const projectIds = (record.get("UpvotedProjects") as string[]) || [];
+
+              data = [...projectIds];
+            } catch (err) {
+              console.log(err);
+            }
+          });
+
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+            reject(err);
+            return;
+          }
+
+          resolve({ upvotedProjectIds: data });
+        }
+      );
+  });
+};

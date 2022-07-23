@@ -33,7 +33,6 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
 
   const filteredAndSlicedProjects = useMemo(() => {
     // filter out projects that were created within last week/month/24 hours
-
     let filteredProjects: Project[] = [];
 
     switch (filter) {
@@ -85,7 +84,8 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
               title={project.name}
               category={project.category}
               description={project.description}
-              upvotes={1544}
+              upvotes={project.numUpvotes}
+              logo={project.logo}
             />
           ))}
         </Grid>

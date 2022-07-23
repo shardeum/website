@@ -2,20 +2,17 @@ import { FC } from "react";
 
 import {
   Grid,
-  Flex,
   Heading,
   LinkOverlay,
   LinkBox,
   Text,
-  IconButton,
-  Box,
   Image,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
 
 import NextLink from "next/link";
 import { CategoryBadge } from "./CategoryBadge";
-import { ChevronUpIcon } from "@chakra-ui/icons";
 
 export type ProjectSectionCardProps = {
   id: string;
@@ -39,7 +36,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
   onUpvoteButtonClicked,
 }) => {
   return (
-    <LinkBox as="div">
+    <LinkBox as="div" cursor="pointer">
       <Grid
         templateColumns={["10% auto auto", "7% auto auto", "14% auto auto", "auto auto auto"]} //xs , rest
         templateRows="repeat(2 , auto)"
@@ -84,9 +81,20 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
           alignItems="center"
           justifyContent="center"
         >
-          <Text fontWeight="medium" pb={2}>
+          <Button
+            variant="unstyled"
+            p={0}
+            m={0}
+            w="min-content"
+            h="min-content"
+            fontWeight="medium"
+            pb={2}
+            _focus={{ outline: "none" }}
+            color={isUpvoted ? "brand.blue" : "brand.black"}
+            onClick={() => onUpvoteButtonClicked && onUpvoteButtonClicked(!isUpvoted)}
+          >
             &#9650;
-          </Text>
+          </Button>
           <Text fontWeight="medium">{upvotes}</Text>
         </GridItem>
         <GridItem
@@ -94,12 +102,11 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
           colStart={[1, 1, 2, 2]} // xs,sm,md,lg
           colEnd={3}
         >
-          <Text color="brand.grey-80" textOverflow="ellipsis">
-            dApp 1 is an NFT application based on Shardeum blockchain. Their unique…
+          <Text color="brand.grey-80" textOverflow="ellipsis" noOfLines={2}>
+            {description}
           </Text>
           <CategoryBadge category={category} />
         </GridItem>
-        {/* Upvotes button and count */}
       </Grid>
     </LinkBox>
   );

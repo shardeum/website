@@ -1,4 +1,4 @@
-import { Container, Flex } from "@chakra-ui/react";
+import { Container, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Project } from "models/project";
 import { FC, useMemo, useState } from "react";
 import CategoryList from "./CategoryList";
@@ -15,7 +15,9 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
   const [searchValue, setSearchValue] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  // Use breakpoints to show different number of project cards
 
+  const numProjectsPerPage: number | undefined = useBreakpointValue({ lg: 6, md: 2, sm: 2, xs: 2 });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {
     setCurrentPage(1);
@@ -30,8 +32,10 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
   }, [projects, selectedCategory, searchValue]);
 
   // get number of pages based on number of filtered projects
-  const numProjectsPerPage = 6;
-  const numPages = Math.ceil(filteredProjects.length / numProjectsPerPage) || 1;
+
+  const numPages = numProjectsPerPage
+    ? Math.ceil(filteredProjects.length / numProjectsPerPage) || 1
+    : 1;
 
   return (
     <Flex bg="brand.white" as="section">
@@ -49,21 +53,24 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
         {/* set of projects based on categories and search value */}
         <Flex
           direction={{ lg: "row", md: "row", base: "column" }}
-          justify={{ lg: "flex-start", md: "center", sm: "center" }}
+          justify="center"
           align={{ sm: "center" }}
+          flexWrap="wrap"
           gap={4}
         >
-          {filteredProjects
-            ?.slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
-            ?.map((item) => (
-              <ProjectCard
-                key={item.name}
-                imageURL={item.logo}
-                title={item.name}
-                category={item.category}
-                description={item.description}
-              />
-            ))}
+          {filteredProjects && numProjectsPerPage
+            ? filteredProjects
+                .slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
+                ?.map((item) => (
+                  <ProjectCard
+                    key={item.name}
+                    imageURL={item.logo}
+                    title={item.name}
+                    category={item.category}
+                    description={item.description}
+                  />
+                ))
+            : null}
         </Flex>
 
         <Pagination

@@ -84,7 +84,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
           alignItems="center"
           justifyContent="center"
         >
-          <Text fontWeight="medium" pb="1.125rem">
+          <Text fontWeight="medium" pb={2}>
             &#9650;
           </Text>
           <Text fontWeight="medium">{upvotes}</Text>

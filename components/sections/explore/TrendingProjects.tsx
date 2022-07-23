@@ -23,15 +23,16 @@ export type TrendingProjectsProps = {
   projects: Project[];
 };
 
+const now = new Date();
+const lastWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+const lastMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+const last24Hours = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+
 export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) => {
   const [filter, setFilter] = useState("week");
 
   const filteredAndSlicedProjects = useMemo(() => {
     // filter out projects that were created within last week/month/24 hours
-    const now = new Date();
-    const lastWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-    const lastMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-    const last24Hours = new Date(now.getTime() - 24 * 60 * 60 * 1000);
 
     let filteredProjects: Project[] = [];
 
@@ -63,7 +64,12 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pb="28" px={{ base: 6, xl: 0 }}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        pb={{ lg: "7.5rem", md: "7.5rem", sm: "5rem" }}
+        px={{ base: 6, xl: 0 }}
+      >
         <TitleAndSelect
           title={"Trending Projects"}
           value={filter}

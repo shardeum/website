@@ -20,7 +20,13 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
 
   return (
     <Flex bg="brand.white" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
+      <Container
+        maxW="container.xl"
+        mx="auto"
+        pt="16"
+        pb={{ lg: "7.5rem", md: "7.5rem", sm: "5rem" }}
+        px={{ base: 6, xl: 0 }}
+      >
         <Flex justifyContent="space-between" alignItems="center" my={4} py={4}>
           <Heading size="2xl" color="brand.black">
             Newest Projects

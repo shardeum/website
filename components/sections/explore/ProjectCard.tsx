@@ -18,7 +18,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Box
-      w={{ lg: "32.5%", sm: "20.375rem5" }}
+      w={{ lg: "32.5%", sm: "20.375rem" }}
       maxW={{ lg: "32.5%", sm: "20.375rem" }}
       h={{ lg: "28rem", base: "27rem" }}
       minH={{ lg: "28rem", base: "27rem" }}

@@ -9,7 +9,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ message: "Unauthorized access" });
   }
 
-  console.log(session);
-
   return res.status(200).json({ session, err });
 }

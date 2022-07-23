@@ -5,18 +5,24 @@ import { TrendingProjects } from "@shm/components/sections/explore/TrendingProje
 // import TitleAndSearchInput from "@shm/components/sections/explore/TitleAndSearchInput";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
+import axios from "axios";
 import type { InferGetStaticPropsType, NextPage } from "next";
-import React from "react";
+import React, { useMemo } from "react";
 import { getSHMProjects } from "utils/api";
 
 export const getStaticProps = async () => {
   const { projects, categories } = await getSHMProjects();
+  const upvotedProjectsData: { upvotedProjectIds: string[] } = await axios.get(
+    "http://localhost:3000/api/users/get-upvotes"
+  );
 
   return {
     // Will be passed to the page component as props
     props: {
       projects,
       categories,
+      upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],
+      // upvotedProjectIds: [],
     },
   };
 };
@@ -24,11 +30,21 @@ export const getStaticProps = async () => {
 // define page props type
 export type ExplorePageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePageProps) => {
-  // projects = projects.map((project) => ({
-  //   ...project,
-  //   dateCreatedL: new Date(project.dateCreated),
-  // }));
+const Explore: NextPage<ExplorePageProps> = ({
+  projects = [],
+  categories = {},
+  upvotedProjectIds = [],
+}: ExplorePageProps) => {
+  const upvotedProjectsMap = useMemo(() => {
+    return upvotedProjectIds.reduce((acc, projectId) => {
+      // eslint-disable-next-line
+      // @ts-ignore
+      acc[projectId] = true;
+      return acc;
+    }, {});
+  }, [upvotedProjectIds]);
+
+  console.log(upvotedProjectsMap);
 
   return (
     <>

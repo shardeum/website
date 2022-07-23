@@ -49,3 +49,5 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
     </Flex>
   );
 };
+
+export default NewestProjects;

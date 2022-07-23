@@ -177,6 +177,18 @@ export const getSHMProjects = (): Promise<{
   });
 };
 
+// to add user to users table
+export const createUser = (userId: string) => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+  return base("users").create({ UserId: userId }, function (err, record) {
+    console.log({ record });
+    if (err) {
+      console.error(err);
+    }
+  });
+};
+
 // to get the upvoted projects of a user
 export const getUserUpvotedProjects = (
   userId: string
@@ -185,6 +197,7 @@ export const getUserUpvotedProjects = (
 }> => {
   configureAirtable();
   let data: string[] = [];
+  let userFound = false;
   const base = Airtable.base("appYSqEEnRwWor3V9");
 
   return new Promise((resolve, reject) => {
@@ -201,6 +214,7 @@ export const getUserUpvotedProjects = (
             try {
               // extract row details
               const projectIds = (record.get("UpvotedProjects") as string[]) || [];
+              userFound = true;
 
               data = [...projectIds];
             } catch (err) {
@@ -217,7 +231,12 @@ export const getUserUpvotedProjects = (
             return;
           }
 
-          resolve({ upvotedProjectIds: data });
+          if (!userFound) {
+            console.log("User not found");
+            createUser(userId);
+          }
+
+          resolve({ upvotedProjectIds: data || [] });
         }
       );
   });

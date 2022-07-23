@@ -93,3 +93,5 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
     </Flex>
   );
 };
+
+export default TrendingProjects;

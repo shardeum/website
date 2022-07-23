@@ -12,9 +12,9 @@ import defaultSEOValues from "../next-seo.config";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
 
-function MyApp({ Component, pageProps }: any) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider session={session}>
       <ChakraProvider theme={customTheme}>
         <Head>
           <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

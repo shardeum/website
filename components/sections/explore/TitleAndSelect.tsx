@@ -21,8 +21,9 @@ export const TitleAndSelect: FC<TitleAndSelectProps> = ({ title, value, options,
           value={value}
           onChange={(e) => onChange(e.target.value)}
           color="brand.black"
-          maxW="150px"
-          h="60px"
+          maxW="9.375rem"
+          h="3.75rem"
+          fontWeight="medium"
           borderWidth="1px"
           borderColor="brand.black"
           borderStyle="solid"

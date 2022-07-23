@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react";
+import { NewestProjects } from "@shm/components/sections/explore/NewProjects";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import { TrendingProjects } from "@shm/components/sections/explore/TrendingProjects";
 // import TitleAndSearchInput from "@shm/components/sections/explore/TitleAndSearchInput";
@@ -24,6 +25,11 @@ export const getStaticProps = async () => {
 export type ExplorePageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePageProps) => {
+  // projects = projects.map((project) => ({
+  //   ...project,
+  //   dateCreatedL: new Date(project.dateCreated),
+  // }));
+
   return (
     <>
       <ResponsiveHero
@@ -45,6 +51,7 @@ const Explore: NextPage<ExplorePageProps> = ({ projects, categories }: ExplorePa
 
       {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}
       {projects.length > 0 && <TrendingProjects projects={projects} />}
+      {projects.length > 0 && <NewestProjects projects={projects} />}
 
       <JoinCommunity />
     </>

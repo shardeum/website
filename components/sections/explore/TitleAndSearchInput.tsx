@@ -12,7 +12,7 @@ import {
   // Text,
   VStack,
 } from "@chakra-ui/react";
-import { IconRightArrow, IconSearch } from "@shm/Icons";
+import { IconSearch } from "@shm/Icons";
 
 export type TitleAndSearchInputProps = {
   value: string;

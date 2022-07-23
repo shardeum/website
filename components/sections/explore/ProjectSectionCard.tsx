@@ -1,8 +1,18 @@
 import { FC } from "react";
 
-import { Flex, Heading, LinkOverlay, LinkBox, Text, IconButton, Box } from "@chakra-ui/react";
+import {
+  Grid,
+  Flex,
+  Heading,
+  LinkOverlay,
+  LinkBox,
+  Text,
+  IconButton,
+  Box,
+  Image,
+  GridItem,
+} from "@chakra-ui/react";
 
-import Image from "next/image";
 import NextLink from "next/link";
 import { CategoryBadge } from "./CategoryBadge";
 import { ChevronUpIcon } from "@chakra-ui/icons";
@@ -30,59 +40,67 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
 }) => {
   return (
     <LinkBox as="div">
-      <Flex
-        p={{ base: 4, sm: 6, md: 6, lg: 6 }}
-        pr={0}
+      <Grid
+        templateColumns={["10% auto auto", "7% auto auto", "14% auto auto", "auto auto auto"]} //xs , rest
+        templateRows="repeat(2 , auto)"
+        p={{ base: 4, sm: 4, md: 4, lg: 6 }}
+        columnGap={4}
         maxH="10.375rem"
         background="brand.grey-10"
         color="brand.black"
       >
-        <Box minWidth="118px">
-          <Image src={logo} width={118} height={118} />
-        </Box>
+        <GridItem
+          rowStart={1}
+          rowEnd={[2, 2, 3, 3]} // xs,sm,md,lg
+          colSpan={1}
+          position="relative"
+        >
+          <Image
+            src={logo}
+            boxSize={["2rem", "2rem", "7.375rem", "7.375rem"]} // xs,sm,md,lg
+          />
+        </GridItem>
 
-        <Flex flexDirection="column" ml="24px" justifyContent="space-between" flexGrow={1}>
+        <GridItem>
           <Heading as="h3" fontSize="lg">
             <NextLink href={`/explore/${id}`}>
               <LinkOverlay>{title}</LinkOverlay>
             </NextLink>
           </Heading>
-
-          <Text noOfLines={2} color="brand.grey-80">
-            {description}
-          </Text>
-
-          <CategoryBadge category={category} />
-        </Flex>
-
-        {/* Upvotes button and count */}
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
+        </GridItem>
+        <GridItem
+          minW="100%"
+          textAlign="center"
           borderLeftColor="brand.grey-40"
           borderLeftWidth="1px"
           borderLeftStyle="solid"
-          minW="106px"
-          ml="30px"
+          colStart={3}
+          colEnd={4}
+          rowStart={1}
+          rowEnd={3}
+          pl={4}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
         >
-          <IconButton
-            aria-label={"Upvote Button"}
-            color={isUpvoted ? "brand.blue" : "brand.black"}
-            icon={<ChevronUpIcon />}
-            variant="unstyled"
-            outline="none"
-            border="none"
-            _focus={{ outline: "none" }}
-            isRound={true}
-            onClick={() => {
-              onUpvoteButtonClicked && onUpvoteButtonClicked(!isUpvoted);
-            }}
-          />
-
-          {upvotes}
-        </Flex>
-      </Flex>
+          <Text fontWeight="medium" pb="1.125rem">
+            &#9650;
+          </Text>
+          <Text fontWeight="medium">{upvotes}</Text>
+        </GridItem>
+        <GridItem
+          overflow="hidden"
+          colStart={[1, 1, 2, 2]} // xs,sm,md,lg
+          colEnd={3}
+        >
+          <Text color="brand.grey-80" textOverflow="ellipsis">
+            dApp 1 is an NFT application based on Shardeum blockchain. Their unique…
+          </Text>
+          <CategoryBadge category={category} />
+        </GridItem>
+        {/* Upvotes button and count */}
+      </Grid>
     </LinkBox>
   );
 };

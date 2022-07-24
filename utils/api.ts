@@ -1,5 +1,6 @@
 import Airtable from "airtable";
 import { Project } from "models/project";
+import { removeDuplicatesFromArray } from ".";
 import { NewsItem, Shardian, CommunityStat } from "../types";
 
 const configureAirtable = () => {
@@ -239,5 +240,75 @@ export const getUserUpvotedProjects = (
           resolve({ upvotedProjectIds: data || [] });
         }
       );
+  });
+};
+
+// get user's row field id based on user id
+export const getUserId = (userId: string): Promise<string> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+  return new Promise((resolve, reject) => {
+    base("users")
+      .select({
+        view: "Grid view",
+        filterByFormula: `{UserId} = "${userId}"`,
+        maxRecords: 1,
+        pageSize: 1,
+      })
+      .eachPage(function page(records) {
+        records.forEach(function (record) {
+          try {
+            const userId = record.getId();
+            resolve(userId);
+          } catch (err) {
+            console.log(err);
+            reject(err);
+          }
+        });
+      });
+  });
+};
+
+// // to add user to project upvoted users
+// export const addUserToProjectUpvotedUsers = (projectId: string, userId: string) => {
+//   configureAirtable();
+//   const base = Airtable.base("appYSqEEnRwWor3V9");
+
+//   return new Promise((resolve, reject) => {
+//     base("projects").update(projectId, {});
+//   });
+// };
+
+// to add upvote of project of project id to user of user id
+export const addProjectToUserUpvotedProjects = (
+  projectRecordId: string,
+  userRecordId: string
+): Promise<{ success: boolean }> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    getUserUpvotedProjects(userRecordId)
+      .then((data) => {
+        getUserId(userRecordId).then((userId) => {
+          const upvotedProjectIds = data.upvotedProjectIds;
+          const newUpvotedProjectIds = removeDuplicatesFromArray([
+            ...upvotedProjectIds,
+            projectRecordId,
+          ]);
+          base("users").update(userId, { UpvotedProjects: newUpvotedProjectIds }, function (err) {
+            if (err) {
+              console.error(err);
+              return reject(err);
+            }
+
+            resolve({ success: true });
+          });
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        reject(err);
+      });
   });
 };

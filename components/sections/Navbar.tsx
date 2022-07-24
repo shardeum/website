@@ -6,6 +6,7 @@ import {
   LITEPAPER_URL,
   COMMUNITY_URL,
   CLAIM_100_SHM_LINK,
+  ECOSYSTEM_URL,
 } from "../../constants/links";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
@@ -20,6 +21,11 @@ const links = [
   {
     title: "community",
     link: COMMUNITY_URL,
+    newPage: false,
+  },
+  {
+    title: "explore",
+    link: ECOSYSTEM_URL,
     newPage: false,
   },
   {

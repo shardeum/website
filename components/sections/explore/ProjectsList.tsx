@@ -65,7 +65,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
         {/* set of projects based on categories and search value */}
         <Flex
           direction={{ lg: "row", md: "row", base: "column" }}
-          justify="center"
+          justify={{ lg: "flex-start", base: "center" }}
           align={{ sm: "center" }}
           flexWrap="wrap"
           gap={4}

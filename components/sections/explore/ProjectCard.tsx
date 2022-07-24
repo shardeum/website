@@ -1,4 +1,4 @@
-import { Box, color, Text } from "@chakra-ui/react";
+import { Box, color, Text, useBreakpointValue } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { CategoryBadge } from "./CategoryBadge";
@@ -16,6 +16,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   category,
   imageURL,
 }) => {
+  const numProjectsPerPage: number | undefined = useBreakpointValue({
+    lg: 170,
+    base: 100,
+  });
+
   return (
     <Box
       w={{ lg: "32.5%", sm: "20.375rem" }}
@@ -43,15 +48,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         4.6
       </Text>
 
-      {description?.length > 100 ? (
+      {numProjectsPerPage && description?.length > numProjectsPerPage ? (
         <Text
           mb={{ base: "8" }}
           fontSize={{ base: "md", lg: "md" }}
           textAlign="left"
           color="brand.grey-80"
         >
-          {description.slice(0, 100)}...
-          <Text as="span" color="#2031E6">
+          {description.slice(0, numProjectsPerPage)}...
+          <Text cursor="pointer" as="span" color="#2031E6">
             read more
           </Text>
         </Text>

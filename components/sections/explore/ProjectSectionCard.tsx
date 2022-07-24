@@ -69,14 +69,14 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
         <GridItem
           minW="100%"
           textAlign="center"
-          borderLeftColor="brand.grey-40"
-          borderLeftWidth="1px"
+          borderLeftColor="brand.grey-30"
+          borderLeftWidth="2px"
           borderLeftStyle="solid"
           colStart={3}
           colEnd={4}
           rowStart={1}
           rowEnd={3}
-          pl={4}
+          pl={{ lg: 6, base: 4 }}
           display="flex"
           flexDirection="column"
           alignItems="center"

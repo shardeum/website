@@ -1,5 +1,6 @@
 import Airtable from "airtable";
 import { Project } from "models/project";
+import { removeDuplicatesFromArray } from ".";
 import { NewsItem, Shardian, CommunityStat } from "../types";
 
 const configureAirtable = () => {
@@ -132,7 +133,7 @@ export const getSHMProjects = (): Promise<{
               const projectScreenshots = record.get("Project Screenshots") as string[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
               const projectDateCreated = record.get("Created") as string;
-              const projectUpvotes = (record.get("Upvoted Users") as string[])?.length ?? 0;
+              const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               // const projectGithubURL = record.get("Project Github URL");
 
@@ -239,5 +240,114 @@ export const getUserUpvotedProjects = (
           resolve({ upvotedProjectIds: data || [] });
         }
       );
+  });
+};
+
+// get user's row field id based on user id
+export const getUserId = (userId: string): Promise<string> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+  return new Promise((resolve, reject) => {
+    base("users")
+      .select({
+        view: "Grid view",
+        filterByFormula: `{UserId} = "${userId}"`,
+        maxRecords: 1,
+        pageSize: 1,
+      })
+      .eachPage(function page(records) {
+        records.forEach(function (record) {
+          try {
+            const userId = record.getId();
+            resolve(userId);
+          } catch (err) {
+            console.error(err);
+            reject(err);
+          }
+        });
+      });
+  });
+};
+
+// // to add user to project upvoted users
+// export const addUserToProjectUpvotedUsers = (projectId: string, userId: string) => {
+//   configureAirtable();
+//   const base = Airtable.base("appYSqEEnRwWor3V9");
+
+//   return new Promise((resolve, reject) => {
+//     base("projects").update(projectId, {});
+//   });
+// };
+
+// to add upvote of project of project id to user of user id
+export const addProjectToUserUpvotedProjects = (
+  projectRecordId: string,
+  userId: string
+): Promise<{ success: boolean }> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    getUserUpvotedProjects(userId)
+      .then((data) => {
+        getUserId(userId).then((userRecordId) => {
+          const upvotedProjectIds = data.upvotedProjectIds;
+          const newUpvotedProjectIds = removeDuplicatesFromArray([
+            ...upvotedProjectIds,
+            projectRecordId,
+          ]);
+          base("users").update(
+            userRecordId,
+            { UpvotedProjects: newUpvotedProjectIds },
+            function (err) {
+              if (err) {
+                console.error(err);
+                return reject(err);
+              }
+
+              resolve({ success: true });
+            }
+          );
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        reject(err);
+      });
+  });
+};
+
+// to remove upvote of project of project id from user of user id
+export const removeProjectFromUserUpvotedProjects = (
+  projectRecordId: string,
+  userId: string
+): Promise<{ success: boolean }> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    getUserUpvotedProjects(userId)
+      .then((data) => {
+        getUserId(userId).then((userRecordId) => {
+          const upvotedProjectIds = data.upvotedProjectIds;
+          const newUpvotedProjectIds = upvotedProjectIds.filter((id) => id !== projectRecordId);
+          base("users").update(
+            userRecordId,
+            { UpvotedProjects: newUpvotedProjectIds },
+            function (err) {
+              if (err) {
+                console.error(err);
+                return reject(err);
+              }
+
+              resolve({ success: true });
+            }
+          );
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        reject(err);
+      });
   });
 };

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useState } from "react";
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
 import { Button } from "@chakra-ui/react";
@@ -8,8 +8,9 @@ import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
 
-import { getSession } from "next-auth/react";
+import { getSession, signIn } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
+import { upvoteProject } from "services/explore.service";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
@@ -18,7 +19,6 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
   const session = await getSession({ req: context.req });
 
   const { projects, categories } = await getSHMProjects();
-  console.log({ session });
   const upvotedProjectsData = await getUserUpvotedProjects(session?.user?.id || "");
 
   return {
@@ -27,6 +27,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],
+      sessionObject: session,
     },
   };
 };
@@ -35,15 +36,58 @@ const Explore: NextPage<ExplorePageProps> = ({
   projects = [],
   categories = {},
   upvotedProjectIds = [],
+  sessionObject,
 }: ExplorePageProps) => {
-  const upvotedProjectsMap = useMemo(() => {
+  // convert server props into state
+  const [projectsState, setProjectsState] = useState(projects);
+  const [upvotedProjectsMap, setUpvotedProjectsMap] = useState(() => {
     return upvotedProjectIds.reduce((acc: Record<string, boolean>, projectId) => {
       acc[projectId] = true;
       return acc;
     }, {});
-  }, [upvotedProjectIds]);
+  });
 
-  console.log(upvotedProjectsMap);
+  // to manage state of projects(update upvote count) and upvotedProjectsMap
+  const handleUpvoteProjectState = (projectId: string, upvoted: boolean) => {
+    setUpvotedProjectsMap((prevUpvotedProjectsMap) => {
+      const newUpvotedProjectsMap = { ...prevUpvotedProjectsMap };
+      newUpvotedProjectsMap[projectId] = upvoted;
+      return newUpvotedProjectsMap;
+    });
+    setProjectsState((prevProjectsState) => {
+      const newProjectsState = [...prevProjectsState];
+      const projectIndex = newProjectsState.findIndex((project) => project.id === projectId);
+      if (projectIndex === -1) {
+        return prevProjectsState;
+      }
+      const project = { ...newProjectsState[projectIndex] };
+      project.numUpvotes = upvoted ? project.numUpvotes + 1 : project.numUpvotes - 1;
+      newProjectsState[projectIndex] = project;
+      return newProjectsState;
+    });
+  };
+
+  // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
+  const onUpvoteProject = (projectId: string, upvoted: boolean) => {
+    // if user is not signed in, take them to sign in page
+    if (!sessionObject) {
+      signIn("twitter");
+      return;
+    }
+
+    // make the update on frontend state regardless of the API response
+    handleUpvoteProjectState(projectId, upvoted);
+
+    // call the upvote project service
+    upvoteProject(projectId, sessionObject.user.id, upvoted)
+      .then()
+      .catch((err) => {
+        console.error(err);
+
+        // undo the update from frontend side if the API call fails
+        handleUpvoteProjectState(projectId, !upvoted);
+      });
+  };
 
   return (
     <>
@@ -64,9 +108,21 @@ const Explore: NextPage<ExplorePageProps> = ({
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}
-      {projects.length > 0 && <TrendingProjects projects={projects} />}
-      {projects.length > 0 && <NewestProjects projects={projects} />}
+      {projects.length > 0 && <ProjectsList projects={projectsState} categories={categories} />}
+      {projects.length > 0 && (
+        <TrendingProjects
+          projects={projectsState}
+          upvoteMap={upvotedProjectsMap}
+          onUpvoteProject={onUpvoteProject}
+        />
+      )}
+      {projects.length > 0 && (
+        <NewestProjects
+          projects={projectsState}
+          upvoteMap={upvotedProjectsMap}
+          onUpvoteProject={onUpvoteProject}
+        />
+      )}
 
       <JoinCommunity />
     </>

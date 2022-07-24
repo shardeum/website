@@ -5,11 +5,17 @@ import { ProjectSectionCard } from "./ProjectSectionCard";
 
 export type NewestProjectsProps = {
   projects: Project[];
+  upvoteMap: Record<string, boolean>;
+  onUpvoteProject: (projectId: string, upvoted: boolean) => void;
 };
 
-export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
+export const NewestProjects: FC<NewestProjectsProps> = ({
+  projects = [],
+  upvoteMap = {},
+  onUpvoteProject,
+}) => {
   const newestProjects = useMemo(() => {
-    return projects
+    return [...projects]
       .sort((a, b) => {
         const dateA = new Date(a.dateCreated);
         const dateB = new Date(b.dateCreated);
@@ -43,6 +49,8 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
               description={project.description}
               upvotes={project.numUpvotes}
               logo={project.logo}
+              isUpvoted={upvoteMap[project.id]}
+              onUpvoteButtonClicked={(upvoted) => onUpvoteProject(project.id, upvoted)}
             />
           ))}
         </Grid>

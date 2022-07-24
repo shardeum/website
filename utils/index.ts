@@ -23,3 +23,7 @@ export function getNumberWithSuffix(num: number) {
   }
   return num;
 }
+
+export const removeDuplicatesFromArray = <T = unknown>(arr: Array<T>): Array<T> => {
+  return Array.from(new Set(arr));
+};

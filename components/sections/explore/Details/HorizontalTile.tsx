@@ -1,16 +1,6 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { ShareIcon } from "@shm/Icons";
-import React from "react";
+import { Button, Container, Grid, GridItem, Image, Text, VStack } from "@chakra-ui/react";
+
+import React, { FC } from "react";
 import { CategoryBadge } from "../CategoryBadge";
 
 type Links = {
@@ -18,14 +8,14 @@ type Links = {
   discord: string;
 };
 
-type Props = {
+export type HorizontalTileProps = {
   title: string;
   logo: string;
   description: string;
   links?: Links;
 };
 
-function HorizontalTile() {
+export const HorizontalTile: FC<HorizontalTileProps> = () => {
   return (
     <Container
       mx="auto"
@@ -95,6 +85,6 @@ function HorizontalTile() {
       </Grid>
     </Container>
   );
-}
+};
 
 export default HorizontalTile;

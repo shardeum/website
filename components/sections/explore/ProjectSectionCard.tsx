@@ -1,15 +1,6 @@
 import { FC } from "react";
 
-import {
-  Grid,
-  Heading,
-  LinkOverlay,
-  LinkBox,
-  Text,
-  Image,
-  GridItem,
-  Button,
-} from "@chakra-ui/react";
+import { Grid, Heading, LinkOverlay, LinkBox, Text, Img, GridItem, Button } from "@chakra-ui/react";
 
 import NextLink from "next/link";
 import { CategoryBadge } from "./CategoryBadge";
@@ -52,7 +43,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
           colSpan={1}
           position="relative"
         >
-          <Image
+          <Img
             src={logo}
             boxSize={["2rem", "2rem", "7.375rem", "7.375rem"]} // xs,sm,md,lg
           />

@@ -133,7 +133,7 @@ export const getSHMProjects = (): Promise<{
               const projectScreenshots = record.get("Project Screenshots") as string[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
               const projectDateCreated = record.get("Created") as string;
-              const projectUpvotes = (record.get("Upvoted Users") as string[])?.length ?? 0;
+              const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               // const projectGithubURL = record.get("Project Github URL");
 
@@ -282,28 +282,32 @@ export const getUserId = (userId: string): Promise<string> => {
 // to add upvote of project of project id to user of user id
 export const addProjectToUserUpvotedProjects = (
   projectRecordId: string,
-  userRecordId: string
+  userId: string
 ): Promise<{ success: boolean }> => {
   configureAirtable();
   const base = Airtable.base("appYSqEEnRwWor3V9");
 
   return new Promise((resolve, reject) => {
-    getUserUpvotedProjects(userRecordId)
+    getUserUpvotedProjects(userId)
       .then((data) => {
-        getUserId(userRecordId).then((userId) => {
+        getUserId(userId).then((userRecordId) => {
           const upvotedProjectIds = data.upvotedProjectIds;
           const newUpvotedProjectIds = removeDuplicatesFromArray([
             ...upvotedProjectIds,
             projectRecordId,
           ]);
-          base("users").update(userId, { UpvotedProjects: newUpvotedProjectIds }, function (err) {
-            if (err) {
-              console.error(err);
-              return reject(err);
-            }
+          base("users").update(
+            userRecordId,
+            { UpvotedProjects: newUpvotedProjectIds },
+            function (err) {
+              if (err) {
+                console.error(err);
+                return reject(err);
+              }
 
-            resolve({ success: true });
-          });
+              resolve({ success: true });
+            }
+          );
         });
       })
       .catch((err) => {
@@ -316,25 +320,29 @@ export const addProjectToUserUpvotedProjects = (
 // to remove upvote of project of project id from user of user id
 export const removeProjectFromUserUpvotedProjects = (
   projectRecordId: string,
-  userRecordId: string
+  userId: string
 ): Promise<{ success: boolean }> => {
   configureAirtable();
   const base = Airtable.base("appYSqEEnRwWor3V9");
 
   return new Promise((resolve, reject) => {
-    getUserUpvotedProjects(userRecordId)
+    getUserUpvotedProjects(userId)
       .then((data) => {
-        getUserId(userRecordId).then((userId) => {
+        getUserId(userId).then((userRecordId) => {
           const upvotedProjectIds = data.upvotedProjectIds;
           const newUpvotedProjectIds = upvotedProjectIds.filter((id) => id !== projectRecordId);
-          base("users").update(userId, { UpvotedProjects: newUpvotedProjectIds }, function (err) {
-            if (err) {
-              console.error(err);
-              return reject(err);
-            }
+          base("users").update(
+            userRecordId,
+            { UpvotedProjects: newUpvotedProjectIds },
+            function (err) {
+              if (err) {
+                console.error(err);
+                return reject(err);
+              }
 
-            resolve({ success: true });
-          });
+              resolve({ success: true });
+            }
+          );
         });
       })
       .catch((err) => {

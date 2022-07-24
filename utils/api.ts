@@ -261,7 +261,7 @@ export const getUserId = (userId: string): Promise<string> => {
             const userId = record.getId();
             resolve(userId);
           } catch (err) {
-            console.log(err);
+            console.error(err);
             reject(err);
           }
         });
@@ -307,7 +307,38 @@ export const addProjectToUserUpvotedProjects = (
         });
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
+        reject(err);
+      });
+  });
+};
+
+// to remove upvote of project of project id from user of user id
+export const removeProjectFromUserUpvotedProjects = (
+  projectRecordId: string,
+  userRecordId: string
+): Promise<{ success: boolean }> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    getUserUpvotedProjects(userRecordId)
+      .then((data) => {
+        getUserId(userRecordId).then((userId) => {
+          const upvotedProjectIds = data.upvotedProjectIds;
+          const newUpvotedProjectIds = upvotedProjectIds.filter((id) => id !== projectRecordId);
+          base("users").update(userId, { UpvotedProjects: newUpvotedProjectIds }, function (err) {
+            if (err) {
+              console.error(err);
+              return reject(err);
+            }
+
+            resolve({ success: true });
+          });
+        });
+      })
+      .catch((err) => {
+        console.error(err);
         reject(err);
       });
   });

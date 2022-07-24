@@ -1,6 +1,16 @@
 import { FC } from "react";
 
-import { Grid, Heading, LinkOverlay, LinkBox, Text, Img, GridItem, Button } from "@chakra-ui/react";
+import {
+  Grid,
+  Heading,
+  LinkOverlay,
+  LinkBox,
+  Text,
+  Img,
+  GridItem,
+  Button,
+  Tooltip,
+} from "@chakra-ui/react";
 
 import NextLink from "next/link";
 import { CategoryBadge } from "./CategoryBadge";
@@ -72,20 +82,27 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
           alignItems="center"
           justifyContent="center"
         >
-          <Button
-            variant="unstyled"
-            p={0}
-            m={0}
-            w="min-content"
-            h="min-content"
-            fontWeight="medium"
-            pb={2}
-            _focus={{ outline: "none" }}
-            color={isUpvoted ? "brand.blue" : "brand.black"}
-            onClick={() => onUpvoteButtonClicked && onUpvoteButtonClicked(!isUpvoted)}
+          <Tooltip
+            label={isUpvoted ? "Remove Upvote" : "Upvote Project"}
+            openDelay={1000}
+            placement="top"
           >
-            &#9650;
-          </Button>
+            <Button
+              variant="unstyled"
+              p={0}
+              m={0}
+              w="min-content"
+              h="min-content"
+              fontWeight="medium"
+              pb={2}
+              _focus={{ outline: "none" }}
+              color={isUpvoted ? "brand.blue" : "brand.black"}
+              onClick={() => onUpvoteButtonClicked && onUpvoteButtonClicked(!isUpvoted)}
+              transform={`rotateX(${isUpvoted ? 180 : 0}deg)`}
+            >
+              &#9650;
+            </Button>
+          </Tooltip>
           <Text fontWeight="medium">{upvotes}</Text>
         </GridItem>
         <GridItem

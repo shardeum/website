@@ -65,9 +65,9 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({
     return filteredProjects.sort((a, b) => b.numUpvotes - a.numUpvotes).slice(0, 8);
 
     // return projectsSortedByUpvotes.slice(0, 8);
-  }, [projects, filter]);
+  }, [filter]);
 
-  console.log({ filteredAndSlicedProjects });
+  // console.log({ filteredAndSlicedProjects });
 
   return (
     <Flex bg="brand.white" as="section">

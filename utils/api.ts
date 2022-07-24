@@ -152,6 +152,7 @@ export const getSHMProjects = (): Promise<{
                 categoryCount[projectCategory] = categoryCount[projectCategory]
                   ? categoryCount[projectCategory] + 1
                   : 1;
+                categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
               }
             } catch (err) {
               console.log(err);
@@ -171,6 +172,71 @@ export const getSHMProjects = (): Promise<{
           // const categories: string[] = Array.from(new Set(data.map((item) => item.category)));
 
           resolve({ projects: data, categories: categoryCount });
+        }
+      );
+  });
+};
+
+// to add user to users table
+export const createUser = (userId: string) => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+  return base("users").create({ UserId: userId }, function (err, record) {
+    console.log({ record });
+    if (err) {
+      console.error(err);
+    }
+  });
+};
+
+// to get the upvoted projects of a user
+export const getUserUpvotedProjects = (
+  userId: string
+): Promise<{
+  upvotedProjectIds: string[];
+}> => {
+  configureAirtable();
+  let data: string[] = [];
+  let userFound = false;
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    base("users")
+      .select({
+        view: "Grid view",
+        filterByFormula: `{UserId} = "${userId}"`,
+        maxRecords: 1,
+        pageSize: 1,
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            try {
+              // extract row details
+              const projectIds = (record.get("UpvotedProjects") as string[]) || [];
+              userFound = true;
+
+              data = [...projectIds];
+            } catch (err) {
+              console.log(err);
+            }
+          });
+
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+            reject(err);
+            return;
+          }
+
+          if (!userFound) {
+            console.log("User not found");
+            createUser(userId);
+          }
+
+          resolve({ upvotedProjectIds: data || [] });
         }
       );
   });

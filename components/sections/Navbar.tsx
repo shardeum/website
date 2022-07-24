@@ -1,4 +1,15 @@
-import { Box, Container, Flex, Link, Stack } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Container,
+  Flex,
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Stack,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import {
   BLOG_URL,
@@ -11,6 +22,7 @@ import {
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const links = [
   {
@@ -70,6 +82,7 @@ const links = [
 
 const Navbar = () => {
   const { t: commonTranslation } = useTranslation(["common"]);
+  const { data: session } = useSession();
 
   return (
     <Flex bg="brand.black" w="100%" py={2} color="text">
@@ -101,6 +114,21 @@ const Navbar = () => {
                 </Link>
               </NextLink>
             ))}
+
+            <Menu>
+              <MenuButton>
+                <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
+              </MenuButton>
+
+              <MenuList>
+                {session ? (
+                  <MenuItem onClick={() => signOut()}>Signout</MenuItem>
+                ) : (
+                  <MenuItem onClick={() => signIn("twitter")}>Signin</MenuItem>
+                )}
+              </MenuList>
+            </Menu>
+
             {/* <Link variant="navlink">Language</Link> */}
           </Stack>
           {/* Will only show on mobile and tablets */}

@@ -33,7 +33,6 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
 
   const filteredAndSlicedProjects = useMemo(() => {
     // filter out projects that were created within last week/month/24 hours
-
     let filteredProjects: Project[] = [];
 
     switch (filter) {
@@ -78,14 +77,15 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
         />
 
         <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr", md: "1fr" }} gap={4}>
-          {projects.map((project) => (
+          {filteredAndSlicedProjects.map((project) => (
             <ProjectSectionCard
               key={project.id}
               id={project.id}
               title={project.name}
               category={project.category}
               description={project.description}
-              upvotes={1544}
+              upvotes={project.numUpvotes}
+              logo={project.logo}
             />
           ))}
         </Grid>
@@ -93,3 +93,5 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({ projects = [] }) =
     </Flex>
   );
 };
+
+export default TrendingProjects;

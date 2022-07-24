@@ -41,7 +41,8 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
               title={project.name}
               category={project.category}
               description={project.description}
-              upvotes={1544}
+              upvotes={project.numUpvotes}
+              logo={project.logo}
             />
           ))}
         </Grid>
@@ -49,3 +50,5 @@ export const NewestProjects: FC<NewestProjectsProps> = ({ projects = [] }) => {
     </Flex>
   );
 };
+
+export default NewestProjects;

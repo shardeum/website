@@ -15,7 +15,7 @@ export const NewestProjects: FC<NewestProjectsProps> = ({
   onUpvoteProject,
 }) => {
   const newestProjects = useMemo(() => {
-    return projects
+    return [...projects]
       .sort((a, b) => {
         const dateA = new Date(a.dateCreated);
         const dateB = new Date(b.dateCreated);

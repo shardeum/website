@@ -19,7 +19,6 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
   const session = await getSession({ req: context.req });
 
   const { projects, categories } = await getSHMProjects();
-  console.log({ session });
   const upvotedProjectsData = await getUserUpvotedProjects(session?.user?.id || "");
 
   return {
@@ -39,6 +38,8 @@ const Explore: NextPage<ExplorePageProps> = ({
   upvotedProjectIds = [],
   sessionObject,
 }: ExplorePageProps) => {
+  // convert server props into state
+  const [projectsState, setProjectsState] = useState(projects);
   const [upvotedProjectsMap, setUpvotedProjectsMap] = useState(() => {
     return upvotedProjectIds.reduce((acc: Record<string, boolean>, projectId) => {
       acc[projectId] = true;
@@ -46,6 +47,27 @@ const Explore: NextPage<ExplorePageProps> = ({
     }, {});
   });
 
+  // to manage state of projects(update upvote count) and upvotedProjectsMap
+  const handleUpvoteProjectState = (projectId: string, upvoted: boolean) => {
+    setUpvotedProjectsMap((prevUpvotedProjectsMap) => {
+      const newUpvotedProjectsMap = { ...prevUpvotedProjectsMap };
+      newUpvotedProjectsMap[projectId] = upvoted;
+      return newUpvotedProjectsMap;
+    });
+    setProjectsState((prevProjectsState) => {
+      const newProjectsState = [...prevProjectsState];
+      const projectIndex = newProjectsState.findIndex((project) => project.id === projectId);
+      if (projectIndex === -1) {
+        return prevProjectsState;
+      }
+      const project = { ...newProjectsState[projectIndex] };
+      project.numUpvotes = upvoted ? project.numUpvotes + 1 : project.numUpvotes - 1;
+      newProjectsState[projectIndex] = project;
+      return newProjectsState;
+    });
+  };
+
+  // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
     // if user is not signed in, take them to sign in page
     if (!sessionObject) {
@@ -54,11 +76,7 @@ const Explore: NextPage<ExplorePageProps> = ({
     }
 
     // make the update on frontend state regardless of the API response
-    setUpvotedProjectsMap((prevUpvotedProjectsMap) => {
-      const newUpvotedProjectsMap = { ...prevUpvotedProjectsMap };
-      newUpvotedProjectsMap[projectId] = upvoted;
-      return newUpvotedProjectsMap;
-    });
+    handleUpvoteProjectState(projectId, upvoted);
 
     // call the upvote project service
     upvoteProject(projectId, sessionObject.user.id, upvoted)
@@ -67,11 +85,7 @@ const Explore: NextPage<ExplorePageProps> = ({
         console.error(err);
 
         // undo the update from frontend side if the API call fails
-        setUpvotedProjectsMap((prevUpvotedProjectsMap) => {
-          const newUpvotedProjectsMap = { ...prevUpvotedProjectsMap };
-          newUpvotedProjectsMap[projectId] = !upvoted;
-          return newUpvotedProjectsMap;
-        });
+        handleUpvoteProjectState(projectId, !upvoted);
       });
   };
 
@@ -94,17 +108,17 @@ const Explore: NextPage<ExplorePageProps> = ({
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projects.length > 0 && <ProjectsList projects={projects} categories={categories} />}
+      {projects.length > 0 && <ProjectsList projects={projectsState} categories={categories} />}
       {projects.length > 0 && (
         <TrendingProjects
-          projects={projects}
+          projects={projectsState}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />
       )}
       {projects.length > 0 && (
         <NewestProjects
-          projects={projects}
+          projects={projectsState}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />

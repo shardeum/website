@@ -62,10 +62,8 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({
     }
 
     // sort projects by highest upvotes, and return first 8
-    return filteredProjects.sort((a, b) => b.numUpvotes - a.numUpvotes).slice(0, 8);
-
-    // return projectsSortedByUpvotes.slice(0, 8);
-  }, [filter]);
+    return [...filteredProjects].sort((a, b) => b.numUpvotes - a.numUpvotes).slice(0, 8);
+  }, [projects, filter]);
 
   // console.log({ filteredAndSlicedProjects });
 

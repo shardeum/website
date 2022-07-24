@@ -86,6 +86,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
             label={isUpvoted ? "Remove Upvote" : "Upvote Project"}
             openDelay={1000}
             placement="top"
+            closeOnClick
           >
             <Button
               variant="unstyled"

@@ -30,7 +30,7 @@ export const CategoryList: FC<CaregoryListProps> = ({
   return (
     <Flex overflowX="scroll" className="no-scrollbar">
       <HStack
-        flexWrap={{ base: "wrap", md: "wrap", sm: "nowrap", xs: "nowrap" }}
+        flexWrap={["nowrap", "nowrap", "wrap"]} // xs, sm, ...rest
         rowGap={{ md: 2 }}
         maxW="fit-content"
         justifyContent="center"

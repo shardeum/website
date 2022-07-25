@@ -23,6 +23,7 @@ import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { FC } from "react";
 
 const links = [
   {
@@ -80,12 +81,21 @@ const links = [
   // },
 ];
 
-const Navbar = () => {
+export type NavbarProps = {
+  mode?: "light" | "dark";
+};
+
+const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const { t: commonTranslation } = useTranslation(["common"]);
   const { data: session } = useSession();
 
   return (
-    <Flex bg="brand.black" w="100%" py={2} color="text">
+    <Flex
+      bg={mode === "light" ? "brand.white" : "brand.black"}
+      w="100%"
+      py={2}
+      color={mode === "light" ? "brand.grey-90" : "text"}
+    >
       <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
         <Flex justify="space-between" align={"center"}>
           <Box>

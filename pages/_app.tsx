@@ -11,8 +11,12 @@ import Footer from "components/sections/Footer";
 import defaultSEOValues from "../next-seo.config";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
+  const router = useRouter();
+  console.log(router);
+
   return (
     <SessionProvider session={session}>
       <ChakraProvider theme={customTheme}>
@@ -27,7 +31,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
         </Head>
         <Box as="main">
           {/* common header  */}
-          <Navbar />
+          <Navbar mode={router.pathname === "/explore/[id]" ? "light" : "dark"} />
           <DefaultSeo {...defaultSEOValues} />
 
           {/* content */}

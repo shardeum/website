@@ -1,15 +1,10 @@
 import { Box } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  InferGetServerSidePropsType,
-  NextPage,
-} from "next";
-import { getSession } from "next-auth/react";
-import React from "react";
+import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
+
 import { getProjectById } from "utils/api";
+import { getSession } from "next-auth/react";
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
   const session = await getSession({ req: context.req });
@@ -36,11 +31,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
 }: ProjectPageProps) => {
   return (
     <Box>
-      <HorizontalTile
-        title={project.name}
-        logo={project.logo || "/Shardeum.png"}
-        description={project.description}
-      />
+      <HorizontalTile project={project} userUpvoted={userUpvoted} session={sessionObject} />
       <JoinCommunity />
     </Box>
   );

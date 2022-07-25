@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
 import { Button } from "@chakra-ui/react";
@@ -8,9 +8,10 @@ import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
 
-import { getSession, signIn } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
+import SigninContext from "context/signin-window.context";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
@@ -38,6 +39,9 @@ const Explore: NextPage<ExplorePageProps> = ({
   upvotedProjectIds = [],
   sessionObject,
 }: ExplorePageProps) => {
+  // to open signin window
+  const { setPopup } = useContext(SigninContext);
+
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
   const [upvotedProjectsMap, setUpvotedProjectsMap] = useState(() => {
@@ -71,7 +75,8 @@ const Explore: NextPage<ExplorePageProps> = ({
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
     // if user is not signed in, take them to sign in page
     if (!sessionObject) {
-      signIn("twitter");
+      // signIn("twitter");
+      setPopup(true);
       return;
     }
 

@@ -23,7 +23,8 @@ import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { FC } from "react";
+import { FC, useContext } from "react";
+import SigninContext from "context/signin-window.context";
 
 const links = [
   {
@@ -88,6 +89,7 @@ export type NavbarProps = {
 const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const { t: commonTranslation } = useTranslation(["common"]);
   const { data: session } = useSession();
+  const { setPopup } = useContext(SigninContext);
 
   return (
     <Flex
@@ -134,7 +136,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                 {session ? (
                   <MenuItem onClick={() => signOut()}>Signout</MenuItem>
                 ) : (
-                  <MenuItem onClick={() => signIn("twitter")}>Signin</MenuItem>
+                  <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
                 )}
               </MenuList>
             </Menu>

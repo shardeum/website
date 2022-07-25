@@ -25,3 +25,5 @@ export const CategoryBadge: FC<CategoryBadgeProps> = ({ category = "Others" }) =
     </Box>
   );
 };
+
+export default CategoryBadge;

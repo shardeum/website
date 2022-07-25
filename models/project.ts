@@ -9,3 +9,5 @@ export type Project = {
   dateCreated: Date | string; // Project Date Created
   numUpvotes: number; // Project Upvotes
 };
+
+export default Project;

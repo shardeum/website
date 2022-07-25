@@ -1,31 +1,73 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { ShareIcon } from "@shm/Icons";
-import React from "react";
-import { CategoryBadge } from "../CategoryBadge";
+import { FC, useState } from "react";
+
+import { Button, Container, Grid, GridItem, Img, Text, VStack } from "@chakra-ui/react";
+import CategoryBadge from "../CategoryBadge";
+
+// types/models
+import { Session } from "next-auth";
+import { Project } from "models/project";
+import { signIn } from "next-auth/react";
+import { upvoteProject } from "services/explore.service";
+import { getNumberWithSuffix } from "@shm/utils";
+import { HorizontalTileButton } from "./HorizontalTileButton";
 
 type Links = {
   twitter: string;
   discord: string;
 };
 
-type Props = {
-  title: string;
-  logo: string;
-  description: string;
+export type HorizontalTileProps = {
+  project: Project;
+  userUpvoted: boolean;
+  session: Session | null;
   links?: Links;
 };
 
-function HorizontalTile() {
+export const HorizontalTile: FC<HorizontalTileProps> = ({
+  project,
+  userUpvoted,
+  session,
+  links,
+}) => {
+  const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
+  const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
+
+  // to manage state of projects(update upvote count) and upvotedProjectsMap
+  const handleUpvoteProjectState = (upvoted: boolean) => {
+    setUpvoteCount((curCount) => {
+      if (upvoted) {
+        return curCount + 1; // increment since we are going to upvote
+      } else {
+        return curCount - 1; // decrement since we are going to negate upvoted state
+      }
+    });
+    setUserUpvotedState(upvoted);
+  };
+
+  // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
+  const onUpvoteProject = () => {
+    // if user is not signed in, take them to sign in page
+    if (!session) {
+      signIn("twitter");
+      return;
+    }
+
+    const upvoted = !userUpvotedState;
+
+    // make the update on frontend state regardless of the API response
+    handleUpvoteProjectState(upvoted);
+
+    // call the upvote project service
+    upvoteProject(project.id, session.user?.id, upvoted)
+      .then()
+      .catch((err) => {
+        console.error(err);
+
+        // undo the update from frontend side if the API call fails
+        handleUpvoteProjectState(!upvoted);
+      });
+  };
+
   return (
     <Container
       mx="auto"
@@ -41,11 +83,11 @@ function HorizontalTile() {
         padding="2.5rem"
       >
         <GridItem>
-          <Image src="/Shardeum.png" boxSize={["7.5rem", "11.25rem"]} alt="logo" />
+          <Img src={project.logo || "/Shardeum.png"} boxSize={["7.5rem", "11.25rem"]} alt="logo" />
         </GridItem>
         <GridItem>
           <Text mb="4" fontWeight="medium" color="brand.grey-90" fontSize={["3xl", "4xl", "5xl"]}>
-            Growth DAO
+            {project.name}
           </Text>
           <Text
             mb="4"
@@ -54,47 +96,31 @@ function HorizontalTile() {
             color="brand.grey-90"
             fontSize="2xl"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            {project.description}
           </Text>
           <CategoryBadge category="DAO" />
         </GridItem>
         <GridItem>
           <VStack w={["100%", "175px"]}>
-            <Button
-              p={4}
-              marginInlineStart={0}
-              variant="outline"
-              fontSize="md"
-              w="100%"
-              bg="brand.grey-5"
-              color="brand.grey-90"
-              _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
-              _focus={{ outline: "none" }}
+            <HorizontalTileButton
+              onClick={onUpvoteProject}
+              bg={userUpvotedState ? "brand.grey-90" : "brand.grey-5"}
+              color={userUpvotedState ? "brand.grey-5" : "brand.grey-90"}
             >
-              <Text as="span">&#9650;</Text>&nbsp;&nbsp; Upvote &nbsp;
-              <Text as="span" color="brand.grey-50">
-                1.6k
+              <Text as="span" transform={`rotateX(${userUpvotedState ? 180 : 0}deg)`}>
+                &#9650;
               </Text>
-            </Button>
-            <Button
-              p={4}
-              marginInlineStart={0}
-              variant="outline"
-              fontSize="md"
-              w="100%"
-              bg="brand.grey-5"
-              color="brand.grey-90"
-              _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
-              _focus={{ outline: "none" }}
-            >
-              &nbsp;&nbsp; Share
-            </Button>
+              &nbsp;&nbsp; Upvote{userUpvotedState ? "d" : ""} &nbsp;
+              <Text as="span" color="brand.grey-50">
+                {getNumberWithSuffix(upvoteCount)}
+              </Text>
+            </HorizontalTileButton>
+            <HorizontalTileButton>&nbsp;&nbsp; Share</HorizontalTileButton>
           </VStack>
         </GridItem>
       </Grid>
     </Container>
   );
-}
+};
 
 export default HorizontalTile;

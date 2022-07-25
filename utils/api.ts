@@ -351,3 +351,62 @@ export const removeProjectFromUserUpvotedProjects = (
       });
   });
 };
+
+export const getProjectById = (
+  projectRecordId: string,
+  userId = ""
+): Promise<{
+  project: Project;
+  userUpvoted: boolean;
+}> => {
+  configureAirtable();
+  const base = Airtable.base("appYSqEEnRwWor3V9");
+
+  return new Promise((resolve, reject) => {
+    base("projects")
+      .find(projectRecordId)
+      .then((record) => {
+        const projectId = record.getId();
+        const projectName = record.get("Project Name") as string;
+        const projectDescription = record.get("Project Description") as string;
+        const projectCategory = record.get("Project Category") as string;
+        const projectLogo: any = record.get("Project Logo") as string[];
+        const projectScreenshots = record.get("Project Screenshots") as string[];
+        const projectWebsiteURL = record.get("Project Website URL") as string;
+        const projectDateCreated = record.get("Created") as string;
+        const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
+
+        const project: Project = {
+          id: projectId,
+          name: projectName,
+          description: projectDescription,
+          category: projectCategory || "Others",
+          logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
+          screenShots: projectScreenshots || [],
+          website: projectWebsiteURL,
+          dateCreated: projectDateCreated,
+          numUpvotes: projectUpvotes,
+        };
+
+        if (!userId) {
+          return resolve({ project, userUpvoted: false });
+        }
+
+        getUserId(userId)
+          .then((userRecordId) => {
+            return resolve({
+              project,
+              userUpvoted: (record.get("Upvote Users") as string[])?.includes(userRecordId),
+            });
+          })
+          .catch((err) => {
+            console.error(err);
+            reject(err);
+          });
+      })
+      .catch((err) => {
+        console.error(err);
+        reject(err);
+      });
+  });
+};

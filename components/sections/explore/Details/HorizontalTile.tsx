@@ -12,24 +12,13 @@ import { HorizontalTileButton } from "./HorizontalTileButton";
 import SigninContext from "context/signin-window.context";
 import { ShareIcon, ShareLinkIcon } from "@shm/Icons";
 
-type Links = {
-  twitter: string;
-  discord: string;
-};
-
 export type HorizontalTileProps = {
   project: Project;
   userUpvoted: boolean;
   session: Session | null;
-  links?: Links;
 };
 
-export const HorizontalTile: FC<HorizontalTileProps> = ({
-  project,
-  userUpvoted,
-  session,
-  links,
-}) => {
+export const HorizontalTile: FC<HorizontalTileProps> = ({ project, userUpvoted, session }) => {
   const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
   const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
 

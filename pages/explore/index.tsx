@@ -113,7 +113,14 @@ const Explore: NextPage<ExplorePageProps> = ({
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projects.length > 0 && <ProjectsList projects={projectsState} categories={categories} />}
+      {projects.length > 0 && (
+        <ProjectsList
+          projects={projectsState}
+          categories={categories}
+          upvoteMap={upvotedProjectsMap}
+          onUpvoteProject={onUpvoteProject}
+        />
+      )}
       {projects.length > 0 && (
         <TrendingProjects
           projects={projectsState}

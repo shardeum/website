@@ -9,9 +9,16 @@ import TitleAndSearchInput from "./TitleAndSearchInput";
 export type ProjectsListProps = {
   projects: Project[];
   categories: { [category: string]: number };
+  upvoteMap: { [projectId: string]: boolean };
+  onUpvoteProject: (projectId: string, upvoted: boolean) => void;
 };
 
-export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories = {} }) => {
+export const ProjectsList: FC<ProjectsListProps> = ({
+  projects = [],
+  categories = {},
+  upvoteMap = {},
+  onUpvoteProject,
+}) => {
   const [searchValue, setSearchValue] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -80,6 +87,9 @@ export const ProjectsList: FC<ProjectsListProps> = ({ projects = [], categories 
                     title={item.name}
                     category={item.category}
                     description={item.description}
+                    userUpvotedState={upvoteMap[item.id]}
+                    onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}
+                    upvoteCount={item.numUpvotes}
                   />
                 ))
             : null}

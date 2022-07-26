@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useContext, useState } from "react";
 
 import { Button, Container, Grid, GridItem, Img, Text, VStack } from "@chakra-ui/react";
 import CategoryBadge from "../CategoryBadge";
@@ -10,6 +10,7 @@ import { signIn } from "next-auth/react";
 import { upvoteProject } from "services/explore.service";
 import { getNumberWithSuffix } from "@shm/utils";
 import { HorizontalTileButton } from "./HorizontalTileButton";
+import SigninContext from "context/signin-window.context";
 
 type Links = {
   twitter: string;
@@ -32,6 +33,9 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
   const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
   const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
 
+  // to open signin window
+  const { setPopup } = useContext(SigninContext);
+
   // to manage state of projects(update upvote count) and upvotedProjectsMap
   const handleUpvoteProjectState = (upvoted: boolean) => {
     setUpvoteCount((curCount) => {
@@ -48,7 +52,8 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
   const onUpvoteProject = () => {
     // if user is not signed in, take them to sign in page
     if (!session) {
-      signIn("twitter");
+      // signIn("twitter");
+      setPopup(true);
       return;
     }
 

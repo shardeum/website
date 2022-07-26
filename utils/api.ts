@@ -396,7 +396,8 @@ export const getProjectById = (
           .then((userRecordId) => {
             return resolve({
               project,
-              userUpvoted: (record.get("Upvote Users") as string[])?.includes(userRecordId),
+              userUpvoted:
+                (record.get("Upvote Users") as string[])?.includes(userRecordId) ?? false,
             });
           })
           .catch((err) => {

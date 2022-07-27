@@ -6,7 +6,7 @@ type ModalShareLinkTextProps = {
 
 function ModalSocialLinksText({ children }: ModalShareLinkTextProps) {
   return (
-    <Text color="brand.black" fontWeight="medium">
+    <Text mt="2" color="brand.black" fontWeight="medium">
       {children}
     </Text>
   );

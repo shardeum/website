@@ -10,7 +10,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  useDisclosure,
+  useClipboard,
+  Tooltip,
 } from "@chakra-ui/react";
 import { brandSocialIcons } from "@shm/Icons";
 import { FC } from "react";
@@ -28,12 +29,15 @@ const { twitter, facebook, reddit, linkedIn, telegram } = brandSocialIcons;
 
 export type ShareModalProps = {
   projectUrl: string;
+  isOpen: boolean;
+  onClose: () => void;
 };
 
-export const ShareModal: FC<ShareModalProps> = ({ projectUrl }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose }) => {
+  const { hasCopied, onCopy } = useClipboard(projectUrl);
+
   return (
-    <Modal isOpen={true} isCentered onClose={onClose}>
+    <Modal isOpen={isOpen} isCentered onClose={onClose}>
       <ModalOverlay />
       <ModalContent
         borderRadius="none"
@@ -93,13 +97,21 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl }) => {
               <ModalSocialLinksText>Telegram</ModalSocialLinksText>
             </Flex>
           </HStack>
-          <HStack mt={6} p={4} background="brand.grey-10" justifyContent="space-between">
+          <HStack
+            mt={6}
+            p={4}
+            background={hasCopied ? "green.100" : "brand.grey-10"}
+            justifyContent="space-between"
+            transition="0.2s ease-in"
+          >
             <Text lineHeight="2xl" color="brand.grey-70">
-              {projectUrl}
+              {projectUrl?.slice(0, 35)}...
             </Text>
 
-            <Text color="brand.grey-90" fontWeight="semibold">
-              Copy
+            <Text onClick={onCopy} cursor="pointer" color="brand.grey-90" fontWeight="semibold">
+              <Tooltip backgroundColor="brand.grey-10" label={projectUrl}>
+                {hasCopied ? "Copied" : "Copy"}
+              </Tooltip>
             </Text>
           </HStack>
         </ModalBody>

@@ -16,9 +16,15 @@ export type HorizontalTileProps = {
   project: Project;
   userUpvoted: boolean;
   session: Session | null;
+  onOpen: () => void;
 };
 
-export const HorizontalTile: FC<HorizontalTileProps> = ({ project, userUpvoted, session }) => {
+export const HorizontalTile: FC<HorizontalTileProps> = ({
+  project,
+  userUpvoted,
+  session,
+  onOpen,
+}) => {
   const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
   const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
 
@@ -149,7 +155,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({ project, userUpvoted, 
                 {getNumberWithSuffix(upvoteCount)}
               </Text>
             </HorizontalTileButton>
-            <HorizontalTileButton>
+            <HorizontalTileButton onClick={onOpen}>
               <ShareIcon />
               &nbsp;&nbsp; Share
             </HorizontalTileButton>

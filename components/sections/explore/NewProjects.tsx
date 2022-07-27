@@ -30,7 +30,8 @@ export const NewestProjects: FC<NewestProjectsProps> = ({
         maxW="container.xl"
         mx="auto"
         pt="16"
-        pb={{ lg: "7.5rem", md: "7.5rem", sm: "5rem" }}
+        // pb={{ lg: "7.5rem", md: "7.5rem", sm: "5rem" }}
+        pb={["4rem", "5rem", "7.5rem"]}
         px={{ base: 6, xl: 0 }}
       >
         <Flex justifyContent="space-between" alignItems="center" my={4} py={4}>

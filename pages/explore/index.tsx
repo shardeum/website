@@ -101,6 +101,7 @@ const Explore: NextPage<ExplorePageProps> = ({
         cta={
           <Button
             as="a"
+            href="https://airtable.com/shrIXaaf87BzaTfYy"
             variant="primary"
             size="lg"
             rel="noopener noreferrer"

@@ -25,7 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   upvoteCount = 0,
 }) => {
   const numProjectsPerPage: number | undefined = useBreakpointValue({
-    lg: 170,
+    lg: 160,
     base: 100,
   });
 
@@ -49,13 +49,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {title}
       </Text>
-      {/* <Text mb="6" color="brand.grey-70" fontWeight="semibold">
-        <Text as="span" color="#EC5B29">
-          &#9733;&nbsp;&nbsp;
-        </Text>
-        4.6
-      </Text> */}
       <HorizontalTileButton
+        maxWidth="fit-content"
+        my="2"
         onClick={onUpvoteProject}
         bg={userUpvotedState ? "brand.grey-90" : "brand.grey-5"}
         color={userUpvotedState ? "brand.grey-5" : "brand.grey-90"}

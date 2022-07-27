@@ -94,20 +94,18 @@ const Explore: NextPage<ExplorePageProps> = ({
       });
   };
 
+  const handleSubmitProject = () => {
+    !sessionObject
+      ? setPopup(true)
+      : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
+  };
+
   return (
     <>
       <ResponsiveHero
         heading="Discover The dApp projects on shardeum"
         cta={
-          <Button
-            as="a"
-            href="https://airtable.com/shrIXaaf87BzaTfYy"
-            variant="primary"
-            size="lg"
-            rel="noopener noreferrer"
-            target="_blank"
-            mt={8}
-          >
+          <Button onClick={handleSubmitProject} variant="primary" size="lg" mt={8}>
             Submit your project
           </Button>
         }

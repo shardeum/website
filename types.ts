@@ -21,3 +21,10 @@ export interface Shardian {
   category: string;
   description: string;
 }
+export interface NotionPagesLinks {
+  slug: string;
+  notionId: string;
+  title: string;
+  description: string;
+  image: string;
+}

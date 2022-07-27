@@ -20,8 +20,6 @@ const Page = ({
   const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
   const description = notionPageDetails.description;
   const image = notionPageDetails.image;
-
-  const { t: commonTranslation } = useTranslation(["common"]);
   return (
     <>
       <NextSeo
@@ -62,9 +60,9 @@ const Page = ({
   );
 };
 
-export async function getServerSideProps({ params, locale }: { params: any; locale: string }) {
+export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = params.pageId;
+  const pageId = "privacy-policy";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {
@@ -79,7 +77,6 @@ export async function getServerSideProps({ params, locale }: { params: any; loca
       notFound: true,
     };
   }
-  console.log(notionPageDetails);
   // const notionPageDetails = NotionPagesLinks[pageId];
   const recordMap = await notion.getPage(notionPageDetails.notionId);
   // console.log(recordMap);

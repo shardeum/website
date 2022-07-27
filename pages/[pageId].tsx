@@ -7,6 +7,7 @@ import NotionPagesLinks from "constants/notion";
 import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Page = ({
   recordMap,
@@ -19,6 +20,7 @@ const Page = ({
   const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
   const description = notionPageDetails.description;
   const image = notionPageDetails.image;
+  const { t: commonTranslation } = useTranslation(["common"]);
   return (
     <>
       <NextSeo

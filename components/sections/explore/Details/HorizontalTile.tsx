@@ -1,35 +1,24 @@
 import { FC, useContext, useState } from "react";
 
-import { Button, Container, Grid, GridItem, Img, Text, VStack } from "@chakra-ui/react";
+import { Container, Flex, Grid, GridItem, Img, Text } from "@chakra-ui/react";
 import CategoryBadge from "../CategoryBadge";
 
 // types/models
 import { Session } from "next-auth";
 import { Project } from "models/project";
-import { signIn } from "next-auth/react";
 import { upvoteProject } from "services/explore.service";
 import { getNumberWithSuffix } from "@shm/utils";
 import { HorizontalTileButton } from "./HorizontalTileButton";
 import SigninContext from "context/signin-window.context";
-
-type Links = {
-  twitter: string;
-  discord: string;
-};
+import { ShareIcon, ShareLinkIcon } from "@shm/Icons";
 
 export type HorizontalTileProps = {
   project: Project;
   userUpvoted: boolean;
   session: Session | null;
-  links?: Links;
 };
 
-export const HorizontalTile: FC<HorizontalTileProps> = ({
-  project,
-  userUpvoted,
-  session,
-  links,
-}) => {
+export const HorizontalTile: FC<HorizontalTileProps> = ({ project, userUpvoted, session }) => {
   const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
   const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
 
@@ -83,30 +72,70 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
     >
       <Grid
         backgroundColor="brand.grey-10"
-        templateColumns="auto auto auto"
-        columnGap={8}
+        templateColumns={["auto auto", "auto auto", "auto auto", "auto auto auto"]}
+        templateRows={[
+          "repeat(5, auto)",
+          "auto auto auto auto",
+          "auto 4rem auto auto",
+          "auto auto auto",
+        ]}
+        columnGap={[0, 8]}
         padding="2.5rem"
       >
-        <GridItem>
-          <Img src={project.logo || "/Shardeum.png"} boxSize={["7.5rem", "11.25rem"]} alt="logo" />
+        <GridItem mb={[6, 8, 8, 0]} colStart={1} colEnd={2} rowStart={[1]} rowEnd={[2, 2, 2, 4]}>
+          <Img
+            src={project.logo || "/Shardeum.png"}
+            margin={["0 auto", 0]}
+            boxSize={["7.5rem", "11.25rem"]}
+            alt="logo"
+          />
         </GridItem>
-        <GridItem>
-          <Text mb="4" fontWeight="medium" color="brand.grey-90" fontSize={["3xl", "4xl", "5xl"]}>
+        <GridItem
+          colStart={[1, 1, 1, 2]}
+          colEnd={[2, 1, 1, 3]}
+          rowStart={[2, 2, 2, 1]}
+          rowEnd={[3, 3, 3, 2]}
+        >
+          <Text
+            textAlign={["center", "left"]}
+            mb={[4, 0, 4]}
+            fontWeight="medium"
+            color="brand.grey-90"
+            fontSize={["3xl", "4xl", "5xl"]}
+          >
             {project.name}
           </Text>
+        </GridItem>
+        <GridItem
+          colStart={[1, 1, 1, 2]}
+          colEnd={[2, 1, 1, 3]}
+          rowStart={[4, 3, 3, 2]}
+          rowEnd={[5, 4, 4, 3]}
+        >
           <Text
             mb="4"
             lineHeight={{ base: "7", md: "8" }}
-            fontWeight="thin"
+            fontWeight="normal"
             color="brand.grey-90"
-            fontSize="2xl"
+            fontSize="xl"
           >
             {project.description}
           </Text>
-          <CategoryBadge category="DAO" />
+          <CategoryBadge category={project.category} />
         </GridItem>
-        <GridItem>
-          <VStack w={["100%", "175px"]}>
+        <GridItem
+          colStart={[1, 2, 2, 3]}
+          colEnd={[2, 3, 3, 4]}
+          rowStart={[3, 2, 2, 1]}
+          rowEnd={[4, 3, 3, 3]}
+        >
+          <Flex
+            marginBottom={[6, 0]}
+            direction={["row", "column"]}
+            columnGap={2}
+            rowGap={[0, 2]}
+            w={["100%", "175px"]}
+          >
             <HorizontalTileButton
               onClick={onUpvoteProject}
               bg={userUpvotedState ? "brand.grey-90" : "brand.grey-5"}
@@ -120,8 +149,25 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
                 {getNumberWithSuffix(upvoteCount)}
               </Text>
             </HorizontalTileButton>
-            <HorizontalTileButton>&nbsp;&nbsp; Share</HorizontalTileButton>
-          </VStack>
+            <HorizontalTileButton>
+              <ShareIcon />
+              &nbsp;&nbsp; Share
+            </HorizontalTileButton>
+          </Flex>
+        </GridItem>
+        <GridItem
+          colStart={[1, 1, 1, 2]}
+          colEnd={[2, 3, 3, 4]}
+          rowStart={[5, 4, 4, 3]}
+          rowEnd={[6, 4]}
+          display="flex"
+          justifyContent="space-between"
+          mt="6"
+        >
+          <ShareLinkIcon />
+          <Text color="brand.grey-60">
+            Listed on {new Date(project.dateCreated).toLocaleDateString()}
+          </Text>
         </GridItem>
       </Grid>
     </Container>

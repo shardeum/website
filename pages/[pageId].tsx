@@ -78,7 +78,7 @@ export async function getServerSideProps({ params, locale }: { params: any; loca
   }
   // const notionPageDetails = NotionPagesLinks[pageId];
   const recordMap = await notion.getPage(notionPageDetails.notionId);
-  console.log(recordMap);
+  // console.log(recordMap);
   return {
     props: {
       recordMap,

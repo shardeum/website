@@ -6,6 +6,7 @@ import "react-notion-x/src/styles.css";
 import NotionPagesLinks from "constants/notion";
 import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Page = ({
   recordMap,
@@ -81,6 +82,7 @@ export async function getServerSideProps({ params, locale }: { params: any; loca
     props: {
       recordMap,
       notionPageDetails,
+      ...(await serverSideTranslations(locale, ["common"])),
     },
   };
 }

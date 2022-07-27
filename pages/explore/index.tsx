@@ -94,7 +94,7 @@ const Explore: NextPage<ExplorePageProps> = ({
       });
   };
 
-  const handleSubmitProject = () => {
+  const handleSubmitProject = (): void => {
     !sessionObject
       ? setPopup(true)
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");

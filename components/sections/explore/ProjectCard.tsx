@@ -1,9 +1,10 @@
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import { LinkBox, LinkOverlay, Text, useBreakpointValue } from "@chakra-ui/react";
 import { getNumberWithSuffix } from "@shm/utils";
 import Image from "next/image";
 import React from "react";
 import { CategoryBadge } from "./CategoryBadge";
 import { HorizontalTileButton } from "./Details/HorizontalTileButton";
+import NextLink from "next/link";
 
 export type ProjectCardProps = {
   imageURL?: string;
@@ -11,6 +12,7 @@ export type ProjectCardProps = {
   description: string;
   category: string;
   userUpvotedState: boolean;
+  projectId: string;
   onUpvoteProject: () => void;
   upvoteCount: number;
 };
@@ -23,6 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   userUpvotedState,
   onUpvoteProject,
   upvoteCount = 0,
+  projectId = "",
 }) => {
   const numProjectsPerPage: number | undefined = useBreakpointValue({
     lg: 160,
@@ -30,7 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   });
 
   return (
-    <Box
+    <LinkBox
       w={{ lg: "32.5%", sm: "20.375rem" }}
       maxW={{ lg: "32.5%", sm: "20.375rem" }}
       h={{ lg: "28rem", base: "27rem" }}
@@ -38,6 +41,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       background="brand.grey-10"
       px="2rem"
       py="2rem"
+      cursor="pointer"
     >
       <Image width={80} height={80} src={String(imageURL)} alt={title + "Image"} />
       <Text
@@ -47,7 +51,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         fontSize={{ base: "md", sm: "md", lg: "lg" }}
         fontWeight={"bold"}
       >
-        {title}
+        <NextLink href={`/explore/${projectId}`}>
+          <LinkOverlay>{title}</LinkOverlay>
+        </NextLink>
       </Text>
       <HorizontalTileButton
         maxWidth="fit-content"
@@ -89,7 +95,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
 
       <CategoryBadge category={category} />
-    </Box>
+    </LinkBox>
   );
 };
 

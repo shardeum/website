@@ -84,6 +84,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                 ?.map((item) => (
                   <ProjectCard
                     key={item.name}
+                    projectId={item.id}
                     imageURL={item.logo}
                     title={item.name}
                     category={item.category}

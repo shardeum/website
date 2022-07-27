@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { Container, Flex } from "@chakra-ui/layout";
 
 const Page = ({
   recordMap,
@@ -55,7 +56,16 @@ const Page = ({
           handle: "@shardeum",
         }}
       />
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+      <Flex bg="brand.white" as="section">
+        <Container
+          maxW="container.xl"
+          mx="auto"
+          py={{ base: "9", md: "10" }}
+          px={{ base: 6, xl: 0 }}
+        >
+          <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
+        </Container>
+      </Flex>
     </>
   );
 };

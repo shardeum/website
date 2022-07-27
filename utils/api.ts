@@ -113,7 +113,7 @@ export const getSHMProjects = (): Promise<{
   configureAirtable();
   const data: Project[] = [];
   const categoryCount: { [category: string]: number } = {};
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
 
   return new Promise((resolve, reject) => {
     base("projects")
@@ -182,7 +182,7 @@ export const getSHMProjects = (): Promise<{
 // to add user to users table
 export const createUser = (userId: string) => {
   configureAirtable();
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return base("users").create({ UserId: userId }, function (err, record) {
     console.log({ record });
     if (err) {
@@ -200,7 +200,7 @@ export const getUserUpvotedProjects = (
   configureAirtable();
   let data: string[] = [];
   let userFound = false;
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
 
   return new Promise((resolve, reject) => {
     base("users")
@@ -247,7 +247,7 @@ export const getUserUpvotedProjects = (
 // get user's row field id based on user id
 export const getUserId = (userId: string): Promise<string> => {
   configureAirtable();
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
   return new Promise((resolve, reject) => {
     base("users")
       .select({
@@ -286,7 +286,7 @@ export const addProjectToUserUpvotedProjects = (
   userId: string
 ): Promise<{ success: boolean }> => {
   configureAirtable();
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
 
   return new Promise((resolve, reject) => {
     getUserUpvotedProjects(userId)
@@ -324,7 +324,7 @@ export const removeProjectFromUserUpvotedProjects = (
   userId: string
 ): Promise<{ success: boolean }> => {
   configureAirtable();
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
 
   return new Promise((resolve, reject) => {
     getUserUpvotedProjects(userId)
@@ -361,7 +361,7 @@ export const getProjectById = (
   userUpvoted: boolean;
 }> => {
   configureAirtable();
-  const base = Airtable.base("appYSqEEnRwWor3V9");
+  const base = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID as string);
 
   return new Promise((resolve, reject) => {
     base("projects")

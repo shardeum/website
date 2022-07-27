@@ -8,6 +8,7 @@ export type Project = {
   screenShots: string[] | null; // Project Screenshot
   dateCreated: Date | string; // Project Date Created
   numUpvotes: number; // Project Upvotes
+  githubUrl: string; //github url
 };
 
 export default Project;

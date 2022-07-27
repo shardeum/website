@@ -1,6 +1,6 @@
 import { FC, useContext, useState } from "react";
 
-import { Container, Flex, Grid, GridItem, Img, Text } from "@chakra-ui/react";
+import { Container, Flex, Grid, GridItem, HStack, Img, Text } from "@chakra-ui/react";
 import CategoryBadge from "../CategoryBadge";
 
 // types/models
@@ -11,6 +11,8 @@ import { getNumberWithSuffix } from "@shm/utils";
 import { HorizontalTileButton } from "./HorizontalTileButton";
 import SigninContext from "context/signin-window.context";
 import { ShareIcon, ShareLinkIcon } from "@shm/Icons";
+import Image from "next/image";
+import Link from "next/link";
 
 export type HorizontalTileProps = {
   project: Project;
@@ -68,6 +70,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
       });
   };
 
+  console.log(project);
   return (
     <Container
       mx="auto"
@@ -170,7 +173,18 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
           justifyContent="space-between"
           mt="6"
         >
-          <ShareLinkIcon />
+          <HStack columnGap={3}>
+            <ShareLinkIcon />
+            <Link href={project.githubUrl}>
+              <Image
+                src="/community/icons/github.svg"
+                alt="community-logo"
+                width={24}
+                height={24}
+              />
+            </Link>
+          </HStack>
+
           <Text color="brand.grey-60">
             Listed on {new Date(project.dateCreated).toLocaleDateString()}
           </Text>

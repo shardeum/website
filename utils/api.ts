@@ -135,7 +135,7 @@ export const getSHMProjects = (): Promise<{
               const projectDateCreated = record.get("Created") as string;
               const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
-              // const projectGithubURL = record.get("Project Github URL");
+              const projectGithubURL = (record.get("Project Github URL") as string) || "";
 
               if (projectName) {
                 data.push({
@@ -148,6 +148,7 @@ export const getSHMProjects = (): Promise<{
                   website: projectWebsiteURL,
                   dateCreated: projectDateCreated,
                   numUpvotes: projectUpvotes,
+                  githubUrl: projectGithubURL,
                 });
 
                 categoryCount[projectCategory] = categoryCount[projectCategory]
@@ -375,7 +376,7 @@ export const getProjectById = (
         const projectWebsiteURL = record.get("Project Website URL") as string;
         const projectDateCreated = record.get("Created") as string;
         const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
-
+        const projectGithub = (record.get("Project Github URL") as string) || "";
         const project: Project = {
           id: projectId,
           name: projectName,
@@ -386,6 +387,7 @@ export const getProjectById = (
           website: projectWebsiteURL,
           dateCreated: projectDateCreated,
           numUpvotes: projectUpvotes,
+          githubUrl: projectGithub,
         };
 
         if (!userId) {

@@ -1,5 +1,6 @@
 import { Container, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Project } from "models/project";
+import { totalmem } from "os";
 import { FC, useMemo, useState } from "react";
 import CategoryList from "./CategoryList";
 import { Pagination } from "./Pagination";
@@ -45,7 +46,6 @@ export const ProjectsList: FC<ProjectsListProps> = ({
   }, [projects, selectedCategory, searchValue]);
 
   // get number of pages based on number of filtered projects
-
   const numPages = numProjectsPerPage
     ? Math.ceil(filteredProjects.length / numProjectsPerPage) || 1
     : 1;

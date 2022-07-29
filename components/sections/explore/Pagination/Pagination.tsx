@@ -1,8 +1,9 @@
 import { FC } from "react";
 
-import { BoxProps, HStack } from "@chakra-ui/react";
+import { BoxProps, HStack, Text } from "@chakra-ui/react";
 import { PaginationButton } from "./PaginationButton";
 import { IconLeftArrow, IconRightArrow } from "@shm/Icons";
+import usePagination from "hooks/usePagination";
 
 export type PaginationProps = {
   currentPage: number;
@@ -18,6 +19,8 @@ export const Pagination: FC<PaginationProps> = ({
 }) => {
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === totalPages;
+
+  const thing = usePagination({ totalPageCount: totalPages, currentPage, siblingCount: 1 });
 
   const onClickLeft = () => {
     if (!isFirstPage) {
@@ -36,18 +39,21 @@ export const Pagination: FC<PaginationProps> = ({
       {/* left button */}
       <PaginationButton iconButton onClick={onClickLeft} icon={<IconLeftArrow />} />
 
-      {Array(totalPages)
-        .fill(0)
-        .map((_, index) => {
-          const page = index + 1;
-          const isSelected = page === currentPage;
+      {thing.map((pageNumber) => {
+        const isSelected = pageNumber === currentPage;
 
-          return (
-            <PaginationButton key={page} onClick={() => onPageChange(page)} selected={isSelected}>
-              {page}
-            </PaginationButton>
-          );
-        })}
+        if (pageNumber === "...") return <Text color="brand.black">&#8230;</Text>;
+
+        return (
+          <PaginationButton
+            key={pageNumber}
+            onClick={() => onPageChange(pageNumber as number)}
+            selected={isSelected}
+          >
+            {pageNumber}
+          </PaginationButton>
+        );
+      })}
 
       {/* right button */}
       <PaginationButton iconButton onClick={onClickRight} icon={<IconRightArrow />} />

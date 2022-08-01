@@ -28,12 +28,17 @@ function RegisterPromoTile({
       borderRadius="0.25rem"
       backgroundColor={reverse ? "#333" : "brand.grey-90"}
     >
-      <Box flexBasis={["100%", "100%", "50%"]} py={[4, 6, "3rem"]} pl={[0, 0, "3rem"]} px={[4, 6]}>
+      <Box
+        flexBasis={["100%", "100%", "50%"]}
+        py={[4, 6, "3rem"]}
+        pl={[4, 6, reverse ? 0 : 10, 10]}
+        pr={[4, 6, reverse ? 10 : 0, 10]}
+      >
         <Text
           as="h2"
           textAlign="left"
-          lineHeight="normal"
-          fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
+          lineHeight="1.2"
+          fontSize={{ base: "4xl", sm: "6xl", md: "6xl", lg: "7xl" }}
           fontWeight="bold"
           width="100%"
           bgGradient={
@@ -48,8 +53,8 @@ function RegisterPromoTile({
         <Text
           as="h2"
           textAlign="left"
-          lineHeight="normal"
-          fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
+          lineHeight="1.2"
+          fontSize={{ base: "4xl", sm: "6xl", md: "6xl", lg: "7xl" }}
           fontWeight="bold"
           width="100%"
           bgGradient={
@@ -75,17 +80,9 @@ function RegisterPromoTile({
           Aug 27 - Sept 25
         </Text>
 
-        <Text mb="1.75rem" fontSize="2xl">
+        <Text mb="1.75rem" lineHeight="1.3" fontSize="2xl">
           {description}
         </Text>
-        {/* <Button
-          size="lg"
-          // sx={{ height: "3.75rem", width: "12.125rem" }}
-          fontSize="xl"
-          variant="primary"
-        >
-          Register Now
-        </Button> */}
         <CustomButton text="Register Now" />
       </Box>
       <Image

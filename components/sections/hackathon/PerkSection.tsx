@@ -14,7 +14,7 @@ function PerkSection() {
         right="2%"
         transform={"translateY(72%)"}
         alt="floating-vector"
-        width={["7rem", "8rem", "auto"]}
+        width={["7rem", "8rem", "8rem", "auto"]}
       />
       <Image
         src="/hackathon/section-2-background.png"
@@ -34,10 +34,11 @@ function PerkSection() {
         pb={{ base: 20, md: 16 }}
       >
         <Flex
-          flexDirection={["column-reverse", "column-reverse", "row"]}
+          flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
           pt="4.25rem"
           justifyContent="space-between"
-          marginBottom={["7rem", "7rem", "13.125rem"]}
+          alignItems="center"
+          marginBottom={["7rem", "7rem", "7rem", "13.125rem"]}
         >
           <Box flexBasis={["1", "1", "48%"]}>
             <Text

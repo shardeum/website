@@ -22,7 +22,7 @@ function PanelOfJudges() {
         left="2%"
         zIndex="10"
         transform="translateY(73.5%)"
-        width={["7rem", "8rem", "auto"]}
+        width={["7rem", "8rem", "8rem", "auto"]}
       />
       <Container
         mx="auto"

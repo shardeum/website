@@ -46,7 +46,7 @@ function PrizesSection() {
         bottom="0"
         left="2%"
         zIndex="10"
-        width={["7rem", "8rem", "auto"]}
+        width={["7rem", "8rem", "8rem", "auto"]}
         transform="translateY(50%)"
       />
       <Container

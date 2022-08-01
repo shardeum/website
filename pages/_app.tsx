@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: any) {
       </Head>
       <Box as="main">
         {/* common header  */}
-        {typeof window !== undefined && window.location.pathname.includes("hackathon") ? (
+        {typeof window !== "undefined" && window.location.pathname.includes("hackathon") ? (
           <HackathonNavbar />
         ) : (
           <Navbar />

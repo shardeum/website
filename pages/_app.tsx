@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: any) {
         <Component {...pageProps} />
         <DiscordCTA />
         {/* common footer */}
-        <Footer />
+        {/* <Footer /> */}
       </Box>
     </ChakraProvider>
   );

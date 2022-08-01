@@ -1,6 +1,7 @@
 :root {
   /* this is the size of 1rem */
-  font-size: 16px;
+  font-size: 100%;
+  /* 16px === 100% */
 }
 
 html,

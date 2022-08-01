@@ -38,7 +38,7 @@ function PrizesSection() {
     }
   };
   return (
-    <Box className="section-3" width="100%" position="relative">
+    <Box id="section-4" width="100%" position="relative">
       <Image
         src="/hackathon/section-3-floating-image.png"
         position="absolute"

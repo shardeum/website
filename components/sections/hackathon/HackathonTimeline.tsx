@@ -3,7 +3,7 @@ import TimelineGrid from "./TimelineGrid";
 
 function HackathonTimeline() {
   return (
-    <Box className="section-4" position="relative">
+    <Box id="section-5" position="relative">
       <Image
         src="/hackathon/section-4-background.png"
         position="absolute"

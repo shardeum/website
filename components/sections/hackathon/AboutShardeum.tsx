@@ -2,7 +2,7 @@ import { Box, Container, Flex, Image, Text } from "@chakra-ui/react";
 
 function AboutShardeum() {
   return (
-    <Box className="section-6">
+    <Box id="section-7">
       <Container
         mx="auto"
         maxW="container.xl"
@@ -153,7 +153,7 @@ function AboutShardeum() {
             alt="Omar Syed"
           />
         </Flex>
-        <Box px={[4, 8, 0]}>
+        <Box id="section-8" px={[4, 8, 0]}>
           <Text
             textAlign="center"
             mb={4}

@@ -14,7 +14,7 @@ import ImageCard from "./ImageCard";
 
 function PanelOfJudges() {
   return (
-    <Box background="#EFF0F8" position="relative">
+    <Box id="section-6" background="#EFF0F8" position="relative">
       <Image
         src="/hackathon/section-5-floating-image.png"
         position="absolute"

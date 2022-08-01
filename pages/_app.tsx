@@ -11,6 +11,7 @@ import Footer from "components/sections/Footer";
 import defaultSEOValues from "../next-seo.config";
 import Head from "next/head";
 import DiscordCTA from "@shm/components/common/DiscordCTA";
+import HackathonNavbar from "@shm/components/sections/hackathon/HackathonNavbar";
 
 function MyApp({ Component, pageProps }: any) {
   return (
@@ -26,7 +27,11 @@ function MyApp({ Component, pageProps }: any) {
       </Head>
       <Box as="main">
         {/* common header  */}
-        <Navbar />
+        {typeof window !== undefined && window.location.pathname.includes("hackathon") ? (
+          <HackathonNavbar />
+        ) : (
+          <Navbar />
+        )}
         <DefaultSeo {...defaultSEOValues} />
 
         {/* content */}

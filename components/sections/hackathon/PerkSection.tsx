@@ -6,7 +6,7 @@ import PerkPoint from "./PerkPoint";
 
 function PerkSection() {
   return (
-    <Box className="hackathon-section-2" position="relative">
+    <Box id="section-2" position="relative">
       <Image
         src="/hackathon/section-2-floating-image.png"
         position="absolute"
@@ -87,7 +87,7 @@ function PerkSection() {
             src="/hackathon/section-2-right-image.png"
           />
         </Flex>
-        <Box width="100%">
+        <Box id="section-3" width="100%">
           <Text
             as="h2"
             textAlign="center"

@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { NewsItem, Shardian, CommunityStat } from "../types";
+import { NewsItem, Shardian, CommunityStat, Panel } from "../types";
 
 const configureAirtable = () => {
   Airtable.configure({
@@ -101,5 +101,50 @@ export const getCommunityStats = (): Promise<CommunityStat[]> => {
         });
         resolve(data);
       });
+  });
+};
+
+export const getHackathonPanel = (): Promise<Panel[]> => {
+  configureAirtable();
+  const data: any[] = [];
+  const base = Airtable.base(process.env.AIRTABLE_HACKATHON_BASE_ID as string);
+  return new Promise((resolve, reject) => {
+    base(process.env.AIRTABLE_HACKATHON_BASE_NAME as string)
+      .select({
+        view: "Grid view",
+      })
+      .eachPage(
+        function page(records, fetchNextPage) {
+          records.forEach(function (record) {
+            const id = record.getId() as string;
+            const name = record.get("Name") as string;
+            const designation = record.get("Designation") as string;
+            const description = record.get("Description") as string;
+            const type = record.get("Type") as string;
+            const photo = record.get("Photo") as any;
+            const linkedIn = record.get("Linkedin") as string;
+            if (name) {
+              data.push({
+                id,
+                name,
+                description,
+                designation,
+                type,
+                linkedInURL: linkedIn,
+                photo: photo?.[0]?.thumbnails?.large?.url,
+              });
+            }
+          });
+          fetchNextPage();
+        },
+        function done(err) {
+          if (err) {
+            console.error(err);
+            reject(err);
+            return;
+          }
+          resolve(data);
+        }
+      );
   });
 };

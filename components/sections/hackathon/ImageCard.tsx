@@ -11,7 +11,7 @@ type Props = {
 
 function ImageCard({ imageLocation, name, designation, linkedInURL }: Props) {
   return (
-    <Box>
+    <Box maxW="14rem">
       <Image
         mb={6}
         src={imageLocation}
@@ -20,7 +20,7 @@ function ImageCard({ imageLocation, name, designation, linkedInURL }: Props) {
         objectFit="contain"
       />
       <Flex justifyContent="space-between" mb={3}>
-        <Box>
+        <Box maxW={"80%"}>
           <Text color="brand.black" fontSize="1.25rem" fontWeight="bold">
             {name}
           </Text>

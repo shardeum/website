@@ -9,10 +9,17 @@ import {
   TabPanels,
   Tabs,
 } from "@chakra-ui/react";
-import React from "react";
+import { HackathonPageProps } from "pages/hackathon";
+import React, { FC, Fragment } from "react";
 import ImageCard from "./ImageCard";
 
-function PanelOfJudges() {
+const PanelOfJudges: FC<HackathonPageProps> = ({
+  judges,
+  mentors,
+  vcs,
+  angels,
+  partners,
+}: HackathonPageProps) => {
   return (
     <Box id="section-6" background="#EFF0F8" position="relative">
       <Image
@@ -173,43 +180,79 @@ function PanelOfJudges() {
           <TabPanels>
             <TabPanel padding={0}>
               <Flex flexWrap="wrap" justifyContent="center" gap={[4, 4, "3rem"]}>
-                <ImageCard
-                  imageLocation="/hackathon/section-5-panel-image.png"
-                  name="John Abraham"
-                  designation="Software Engineer"
-                  linkedInURL="www.moon.com"
-                />
-                <ImageCard
-                  imageLocation="/hackathon/section-5-panel-image.png"
-                  name="John Abraham"
-                  designation="Software Engineer"
-                  linkedInURL="www.moon.com"
-                />
-                <ImageCard
-                  imageLocation="/hackathon/section-5-panel-image.png"
-                  name="John Abraham"
-                  designation="Software Engineer"
-                  linkedInURL="www.moon.com"
-                />
-                <ImageCard
-                  imageLocation="/hackathon/section-5-panel-image.png"
-                  name="John Abraham"
-                  designation="Software Engineer"
-                  linkedInURL="www.moon.com"
-                />
+                {judges.map((panelMember) => (
+                  <Fragment key={panelMember.id}>
+                    <ImageCard
+                      imageLocation={panelMember.photo}
+                      name={panelMember.name}
+                      designation={panelMember.designation}
+                      linkedInURL={panelMember.linkedInURL}
+                    />
+                  </Fragment>
+                ))}
               </Flex>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Flex flexWrap="wrap" justifyContent="center" gap={[4, 4, "3rem"]}>
+                {mentors.map((panelMember) => (
+                  <Fragment key={panelMember.id}>
+                    <ImageCard
+                      imageLocation={panelMember.photo}
+                      name={panelMember.name}
+                      designation={panelMember.designation}
+                      linkedInURL={panelMember.linkedInURL}
+                    />
+                  </Fragment>
+                ))}
+              </Flex>
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Flex flexWrap="wrap" justifyContent="center" gap={[4, 4, "3rem"]}>
+                {vcs.map((panelMember) => (
+                  <Fragment key={panelMember.id}>
+                    <ImageCard
+                      imageLocation={panelMember.photo}
+                      name={panelMember.name}
+                      designation={panelMember.designation}
+                      linkedInURL={panelMember.linkedInURL}
+                    />
+                  </Fragment>
+                ))}
+              </Flex>
+            </TabPanel>
+            <TabPanel>
+              <Flex flexWrap="wrap" justifyContent="center" gap={[4, 4, "3rem"]}>
+                {angels.map((panelMember) => (
+                  <Fragment key={panelMember.id}>
+                    <ImageCard
+                      imageLocation={panelMember.photo}
+                      name={panelMember.name}
+                      designation={panelMember.designation}
+                      linkedInURL={panelMember.linkedInURL}
+                    />
+                  </Fragment>
+                ))}
+              </Flex>
+            </TabPanel>
+            <TabPanel>
+              <Flex flexWrap="wrap" justifyContent="center" gap={[4, 4, "3rem"]}>
+                {partners.map((panelMember) => (
+                  <Fragment key={panelMember.id}>
+                    <ImageCard
+                      imageLocation={panelMember.photo}
+                      name={panelMember.name}
+                      designation={panelMember.designation}
+                      linkedInURL={panelMember.linkedInURL}
+                    />
+                  </Fragment>
+                ))}
+              </Flex>
             </TabPanel>
           </TabPanels>
         </Tabs>
       </Container>
     </Box>
   );
-}
+};
 
 export default PanelOfJudges;

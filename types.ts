@@ -28,3 +28,13 @@ export interface NotionPagesLinks {
   description: string;
   image: string;
 }
+
+export interface Panel {
+  id: string;
+  name: string;
+  designation: string;
+  photo: string;
+  description: string;
+  linkedInURL: string;
+  type: string;
+}

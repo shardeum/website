@@ -96,6 +96,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
       notionPageDetails,
       ...(await serverSideTranslations(locale, ["common"])),
     },
+    revalidate: 10, // In seconds
   };
 }
 

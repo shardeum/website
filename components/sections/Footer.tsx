@@ -22,6 +22,7 @@ const LinksMap = {
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
     { title: "Privacy Policy", href: "/privacy-policy/", target: "" },
+    { title: "Terms", href: "/terms/", target: "" },
   ],
   Resources: [
     { title: "litepaper", href: LITEPAPER_URL },

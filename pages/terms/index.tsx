@@ -10,7 +10,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Container, Flex } from "@chakra-ui/layout";
 
-const Page = ({
+const Terms = ({
   recordMap,
   notionPageDetails,
 }: {
@@ -72,7 +72,7 @@ const Page = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = "privacy-policy";
+  const pageId = "terms";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {
@@ -100,4 +100,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default Page;
+export default Terms;

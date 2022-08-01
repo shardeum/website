@@ -11,14 +11,15 @@ function AboutShardeum() {
         pb={{ base: 20, xs: 0, sm: 0, md: 16 }}
       >
         <Flex
-          flexDirection={["column-reverse", "column-reverse", "row"]}
+          flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
           columnGap="6rem"
           mt="9.5rem"
+          alignItems="center"
         >
           <Box>
             <Text
               as="h2"
-              textAlign={["center", "center", "left"]}
+              textAlign={["center", "center", "center", "left"]}
               lineHeight="normal"
               fontSize={{ base: "6xl", sm: "6xl", lg: "7xl" }}
               fontWeight="bold"
@@ -30,7 +31,12 @@ function AboutShardeum() {
               About Shaardeum
             </Text>
 
-            <Text color="brand.grey-90" fontSize="xl" fontWeight="normal">
+            <Text
+              textAlign={["center", "center", "center", "left"]}
+              color="brand.grey-90"
+              fontSize="xl"
+              fontWeight="normal"
+            >
               Shardeum is the world&apos;s first EVM-based L1 which uses sharding to increase TPS
               with the addition of every new node, with a mission to enable decentralization for
               everyone. Currently, decentralized applications are limited by rising gas fees and
@@ -40,13 +46,14 @@ function AboutShardeum() {
               node added to the network and helps in maintaining low fees forever with faster TPS.
             </Text>
           </Box>
-          <Image src="/hackathon/section-6-right-image.png" />
+          <Image width={["100%", "80%", "60%"]} src="/hackathon/section-6-right-image.png" />
         </Flex>
       </Container>
-      <Box mx="auto" pt="6rem" pb="6.875rem" maxW={["100%", "100%", "90%", "90%", "65%"]}>
+      <Box mx="auto" pt="6rem" pb="6.875rem" maxW={["100%", "100%", "90%", "90%", "75%"]}>
         <Text
-          textAlign="center"
+          textAlign={"center"}
           pt="4rem"
+          pb={[0, 0, "4rem"]}
           color="brand.grey-90"
           fontSize={{ base: "6xl", sm: "6xl", lg: "7xl" }}
           fontWeight="bold"
@@ -55,22 +62,23 @@ function AboutShardeum() {
         </Text>
         <Flex
           padding={[8, 8, 16, 0]}
-          flexDirection={["column", "column", "row"]}
+          flexDirection={["column", "column", "column", "row"]}
           mb="4rem"
-          alignItems={["center", "flex-start"]}
+          alignItems={["center", "center", "flex-start"]}
           gap={[4, 6, "4rem"]}
         >
           <Image
-            maxH="23.5rem"
-            minW="23.5rem"
-            width={["100%", "80%", "23.5rem"]}
+            maxH={["23.5rem", "25rem"]}
+            h={{ lg: "24.5rem" }}
+            minW={["100%", "80%", "23.5rem", "25rem"]}
+            w={["100%", "80%", "23.5rem", "25rem"]}
             src="/hackathon/section-6-nishchal.png"
             alt="Nishchal Shetty"
           />
           <Box>
             <Text
               as="h2"
-              textAlign={["center", "left"]}
+              textAlign={["center", "center", "left"]}
               lineHeight="short"
               fontSize="2.5rem"
               fontWeight="bold"
@@ -81,7 +89,7 @@ function AboutShardeum() {
               Nishchal Shetty
             </Text>
             <Text
-              textAlign={["center", "left"]}
+              textAlign={["center", "center", "left"]}
               color="brand.grey-90"
               fontSize="xl"
               fontWeight="normal"
@@ -102,14 +110,14 @@ function AboutShardeum() {
           padding={[8, 8, 16, 0]}
           mb="4rem"
           gap={[4, 6, "4rem"]}
-          flexDirection={["column-reverse", "column-reverse", "row"]}
-          alignItems={["center", "flex-start"]}
+          flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
+          alignItems={["center", "center", "flex-start"]}
           columnGap="4rem"
         >
           <Box>
             <Text
               as="h2"
-              textAlign={["center", "left"]}
+              textAlign={["center", "center", "left"]}
               lineHeight="short"
               fontSize="2.5rem"
               fontWeight="bold"
@@ -120,7 +128,7 @@ function AboutShardeum() {
               Omar Syed
             </Text>
             <Text
-              textAlign={["center", "left"]}
+              textAlign={["center", "center", "left"]}
               color="brand.grey-90"
               fontSize="xl"
               fontWeight="normal"
@@ -137,9 +145,10 @@ function AboutShardeum() {
             </Text>
           </Box>
           <Image
-            maxH="23.5rem"
-            minW="23.5rem"
-            width={["100%", "80%", "23.5rem"]}
+            maxH={["23.5rem", "25rem"]}
+            h={{ lg: "24.5rem" }}
+            minW={["100%", "80%", "23.5rem", "25rem"]}
+            w={["100%", "80%", "23.5rem", "25rem"]}
             src="/hackathon/section-6-omar.png"
             alt="Omar Syed"
           />

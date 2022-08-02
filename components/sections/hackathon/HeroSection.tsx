@@ -4,13 +4,7 @@ import CustomButton from "./CustomButton";
 
 function HeroSection() {
   return (
-    <Box
-      className="hackathon-section-1"
-      background="#000"
-      position="relative"
-      minH="100vh"
-      maxW="100%"
-    >
+    <Box background="#000" position="relative" minH="100vh" maxW="100%">
       <Image
         src="/hackathon/hero-background.png"
         position="absolute"

@@ -55,7 +55,7 @@ const HackathonNavbar = () => {
           >
             {/* All the links laid out horizontally */}
             {links?.map((link) => (
-              <NextLink key={link.title} href={link.link} passHref>
+              <NextLink key={link.title} href={link.link}>
                 <Link variant="navlink" rel="noopener noreferrer">
                   {link.title}
                 </Link>

@@ -11,7 +11,7 @@ import { InferGetServerSidePropsType, NextPage } from "next";
 import React from "react";
 import { getHackathonPanel } from "utils/api";
 
-export type HackathonPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
+export type HackathonPageProps = InferGetServerSidePropsType<typeof getStaticProps>;
 
 const Hackathon: NextPage<HackathonPageProps> = (props: HackathonPageProps) => {
   return (
@@ -51,7 +51,7 @@ enum Panel {
   PARTNER = "partner",
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const data = await getHackathonPanel();
   const judges = await data.filter((panel) => panel.type === Panel.JUDGE);
   const mentors = await data.filter((panel) => panel.type === Panel.MENTOR);

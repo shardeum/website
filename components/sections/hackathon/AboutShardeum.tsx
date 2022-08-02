@@ -12,11 +12,11 @@ function AboutShardeum() {
       >
         <Flex
           flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
-          columnGap="6rem"
+          columnGap={"7rem"}
           mt="9.5rem"
-          alignItems="center"
+          alignItems={"center"}
         >
-          <Box>
+          <Box maxHeight="fit-content" flexBasis={["100%", "100%", "100%", "50%"]}>
             <Text
               as="h2"
               textAlign={["center", "center", "center", "left"]}
@@ -26,7 +26,6 @@ function AboutShardeum() {
               width="100%"
               color="brand.black"
               mb={8}
-              pt={20}
             >
               About Shaardeum
             </Text>
@@ -46,7 +45,10 @@ function AboutShardeum() {
               node added to the network and helps in maintaining low fees forever with faster TPS.
             </Text>
           </Box>
-          <Image width={["100%", "80%", "60%"]} src="/hackathon/section-6-right-image.png" />
+          <Image
+            flexBasis={["100%", "80%", "60%", "45%"]}
+            src="/hackathon/section-6-right-image.png"
+          />
         </Flex>
       </Container>
       <Box mx="auto" pt="6rem" pb="6.875rem" maxW={["100%", "100%", "90%", "90%", "75%"]}>

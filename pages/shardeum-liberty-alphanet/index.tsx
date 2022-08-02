@@ -13,10 +13,17 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
 import SlidingStats from "@shm/components/common/SlidingStats";
+import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
   const { t: commonTranslation } = useTranslation(["common"]);
+  const stats = [
+    { Icon: IconTransaction, title: "total-transaction" },
+    { Icon: IconGlobe, title: "total-accounts" },
+    { Icon: IconGlobe, title: "total-contracts" },
+    { Icon: IconGlobe, title: "active-nodes" },
+  ];
   return (
     <>
       <NextSeo
@@ -102,6 +109,8 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
+      <SlidingStats stats={stats} />
+
       {/* Features of alphanet */}
       <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}

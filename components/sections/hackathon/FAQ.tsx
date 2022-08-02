@@ -14,7 +14,7 @@ function FAQ() {
   return (
     <Box background="brand.grey-90">
       <Text textAlign="center" pt="4rem" mb="3.75rem" fontSize="7xl" fontWeight="bold">
-        About Shardeum
+        FAQ
       </Text>
       <Box mx="auto" pt="6rem" pb="6.875rem" maxW={["100%", "100%", "90%", "90%", "65%"]}>
         <Accordion>

@@ -27,7 +27,7 @@ function AboutShardeum() {
               color="brand.black"
               mb={8}
             >
-              About Shaardeum
+              About Shardeum
             </Text>
 
             <Text

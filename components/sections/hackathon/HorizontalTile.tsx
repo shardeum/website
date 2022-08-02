@@ -90,8 +90,7 @@ function HorizontalTile({ ecoSystem, description, imageLocation }: Props) {
           </Text>
           <Text
             fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
-            bgGradient="linear-gradient(97.77deg, #00B2FF -2.3%, #579AFF 29.87%, #D93FFF 57.73%, #FC4236 84.99%, #FFF500 113.99%)"
-            backgroundClip="text"
+            color="brand.white"
             textShadow="0px 8px 24px rgba(0, 0, 0, 0.15)"
             fontWeight="bold"
           >
@@ -105,8 +104,7 @@ function HorizontalTile({ ecoSystem, description, imageLocation }: Props) {
           </Text>
           <Text
             fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
-            bgGradient="linear-gradient(97.77deg, #00B2FF -2.3%, #579AFF 29.87%, #D93FFF 57.73%, #FC4236 84.99%, #FFF500 113.99%)"
-            backgroundClip="text"
+            color="brand.white"
             textShadow="0px 8px 24px rgba(0, 0, 0, 0.15)"
             fontWeight="bold"
           >

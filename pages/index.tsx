@@ -16,11 +16,17 @@ import UseCases from "../components//sections/UseCases";
 import MoreAboutShardeum from "../components/sections/home/MoreAboutShardeum";
 import Team from "../components/sections/Team";
 import { getSHMNewsArticles } from "../utils/api";
+import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
 
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-home");
   const { t: commonTranslation } = useTranslation("common");
-
+  const stats = [
+    { Icon: IconCommunity, title: "total-community-members" },
+    { Icon: IconGlobe, title: "est-transaction-per-second" },
+    { Icon: IconTransaction, title: "est-transaction-cost" },
+    { Icon: IconGlobe, title: "min-validators" },
+  ];
   return (
     <>
       {/* Hero section */}
@@ -75,7 +81,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         }
       />
 
-      <SlidingStats />
+      <SlidingStats stats={stats} />
       <ReadWhitepaper />
       <MoreAboutShardeum />
       <SHMTokenomics />

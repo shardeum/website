@@ -12,6 +12,7 @@ import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
+import SlidingStats from "@shm/components/common/SlidingStats";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
@@ -101,7 +102,6 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
-
       {/* Features of alphanet */}
       <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}

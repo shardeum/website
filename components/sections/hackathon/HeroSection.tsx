@@ -33,7 +33,7 @@ function HeroSection() {
       >
         <Box
           position="absolute"
-          top="50%"
+          top={["45%", "45%", "50%"]}
           transform="translateY(-55%)"
           minH={["fit-content", "32.375rem"]}
           maxW={["44.3rem"]}
@@ -52,7 +52,7 @@ function HeroSection() {
           <Text
             as="h2"
             textAlign={["center", "center", "left"]}
-            lineHeight="4.5rem"
+            lineHeight={[1, 1, "4.5rem"]}
             fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
             fontWeight="bold"
             width="100%"
@@ -63,7 +63,7 @@ function HeroSection() {
           <Text
             as="h2"
             textAlign={["center", "center", "left"]}
-            lineHeight="4.5rem"
+            lineHeight={[1.2, 1.2, "4.5rem"]}
             fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
             fontWeight="bold"
             width="100%"
@@ -75,7 +75,7 @@ function HeroSection() {
           <Text
             as="h2"
             textAlign={["center", "center", "left"]}
-            lineHeight="4.5rem"
+            lineHeight={[1.2, 1.2, "4.5rem"]}
             fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
             fontWeight="bold"
             width="100%"
@@ -102,7 +102,7 @@ function HeroSection() {
             color="brand.white"
             textAlign={["center", "center", "left"]}
           >
-            Build Your DApps On The World’s First EVM-Based Dynamic State Sharded L1
+            Build Your DApps On The World&apos;s First EVM-Based Dynamic State Sharded L1
           </Text>
           <CustomButton text="Apply Now" />
         </Box>

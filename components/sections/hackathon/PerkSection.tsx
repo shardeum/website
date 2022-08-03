@@ -29,7 +29,7 @@ function PerkSection() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 6, xl: 0 }}
+        px={{ base: 4, md: 8, xl: 0 }}
         pt={{ base: 4, md: 16 }}
         pb={{ base: 20, md: 16 }}
       >

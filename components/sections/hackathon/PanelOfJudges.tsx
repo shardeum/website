@@ -34,7 +34,7 @@ const PanelOfJudges: FC<HackathonPageProps> = ({
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, sm: 4, xl: 0 }}
+        px={{ base: 4, sm: 4, md: 8, xl: 0 }}
         pt={{ base: 20, md: 16, lg: "6rem" }}
         pb={{ base: 20, md: 16, lg: "8rem" }}
       >

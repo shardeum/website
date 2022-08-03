@@ -18,7 +18,7 @@ function HackathonTimeline() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, xl: 0 }}
+        px={[4, 4, 8]}
         pt={{ base: 20, md: 16 }}
         pb={{ base: 20, md: 16 }}
       >

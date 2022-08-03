@@ -113,7 +113,7 @@ function PrizesSection() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, xl: 0 }}
+        px={{ base: 4, md: 8, xl: 0 }}
         pt={{ base: 20, md: 16, lg: "7rem" }}
         pb={{ base: 20, md: 16 }}
       >
@@ -143,7 +143,7 @@ function PrizesSection() {
           </Text>
 
           <Flex
-            direction={["column", "column", "row"]}
+            direction={["row"]}
             gap={[2, 4, 6]}
             flexWrap="wrap"
             justifyContent="center"
@@ -175,7 +175,7 @@ function PrizesSection() {
             Sponsored by Sponsored by Ecosystem Partners
           </Text>
           <Flex
-            direction={["column", "column", "row"]}
+            direction={["row"]}
             gap={[2, 4, 6]}
             flexWrap="wrap"
             justifyContent="center"
@@ -207,7 +207,7 @@ function PrizesSection() {
         <Container
           mx="auto"
           maxW="container.xl"
-          px={{ base: 8, xl: 0 }}
+          px={{ base: 4, md: 8, xl: 0 }}
           pt={{ base: 4, md: 16, lg: "6.75rem" }}
           pb={{ base: 20, md: 16, lg: "6.75rem" }}
         >

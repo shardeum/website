@@ -9,7 +9,7 @@ type Props = {
 
 function HorizontalTile({ ecoSystem, description, imageName }: Props) {
   return (
-    <Box padding="2.5rem" w="100%" position="relative">
+    <Box padding={[6, 6, 6, "2.5rem"]} w="100%" position="relative">
       <Image
         src="/hackathon/section-3-horizontal-tile-background.png"
         position="absolute"
@@ -68,13 +68,22 @@ function HorizontalTile({ ecoSystem, description, imageName }: Props) {
           </Text>
         </Box>
       </Flex>
-      <Flex direction={["column", "column", "row"]} alignItems={["center", "flex-start"]} pt={8}>
-        <Box borderRight={["none", "none", "1px solid #555"]} flexBasis="33.33%" textAlign="center">
-          <Text color="brand.white" fontSize="xl" fontWeight="normal">
+      <Flex
+        direction="row"
+        justifyContent="space-between"
+        alignItems={["center", "flex-start"]}
+        pt={8}
+      >
+        <Box
+          textAlign={["start", "start", "center"]}
+          borderRight="1px solid #555"
+          flexBasis={["30%", "30%", "33.33%"]}
+        >
+          <Text color="brand.white" fontSize="md" fontWeight="normal">
             First Prize
           </Text>
           <Text
-            fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
+            fontSize={["2xl", "4xl", "6xl", "7xl"]}
             bgGradient="linear-gradient(97.77deg, #00B2FF -2.3%, #579AFF 29.87%, #D93FFF 57.73%, #FC4236 84.99%, #FFF500 113.99%)"
             backgroundClip="text"
             textShadow="0px 8px 24px rgba(0, 0, 0, 0.15)"
@@ -83,13 +92,13 @@ function HorizontalTile({ ecoSystem, description, imageName }: Props) {
             $2500
           </Text>
         </Box>
-        <Divider my={6} display={["block", "block", "none"]} width="50%" />
-        <Box borderRight={["none", "none", "1px solid #555"]} flexBasis="33.33%" textAlign="center">
-          <Text color="brand.white" fontSize="xl" fontWeight="normal">
+
+        <Box textAlign="center" borderRight="1px solid #555" flexBasis="40%">
+          <Text color="brand.white" fontSize="md" fontWeight="normal">
             Second Prize
           </Text>
           <Text
-            fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
+            fontSize={["2xl", "4xl", "6xl", "7xl"]}
             color="brand.white"
             textShadow="0px 8px 24px rgba(0, 0, 0, 0.15)"
             fontWeight="bold"
@@ -97,13 +106,13 @@ function HorizontalTile({ ecoSystem, description, imageName }: Props) {
             $1500
           </Text>
         </Box>
-        <Divider my={6} display={["block", "block", "none"]} width="50%" />
-        <Box flexBasis="33.33%" textAlign="center">
-          <Text color="brand.white" fontSize="xl" fontWeight="normal">
+
+        <Box textAlign={["end", "end", "center"]} flexBasis="30%">
+          <Text color="brand.white" fontSize="md" fontWeight="normal">
             Third Prize
           </Text>
           <Text
-            fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}
+            fontSize={["2xl", "4xl", "6xl", "7xl"]}
             color="brand.white"
             textShadow="0px 8px 24px rgba(0, 0, 0, 0.15)"
             fontWeight="bold"

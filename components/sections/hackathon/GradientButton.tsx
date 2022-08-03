@@ -27,7 +27,7 @@ function GradientButton({ text, imageName, active, onClick }: Props) {
         opacity: "0.7",
       }}
       padding="2px"
-      minH="4.5rem"
+      minH={["2.5rem", "3rem", "4.5rem"]}
       onClick={onClick}
       _focus={{
         outline: "none",
@@ -35,14 +35,14 @@ function GradientButton({ text, imageName, active, onClick }: Props) {
     >
       <Flex
         py={4}
-        px={8}
-        columnGap={8}
+        px={[2, 4, 8]}
+        columnGap={[2, 4, 8]}
         alignItems="center"
         width={"100%"}
         height={"100%"}
         background="brand.white"
       >
-        <Image boxSize="2.75rem" src={`/hackathon/${imageName}.svg`} />
+        <Image boxSize={["1.5rem", "1.875rem", "2.75rem"]} src={`/hackathon/${imageName}.svg`} />
         <Text color={active ? "brand.black" : "#7A7A7A"}>{text}</Text>
       </Flex>
     </Button>

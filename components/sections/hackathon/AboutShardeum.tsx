@@ -6,7 +6,7 @@ function AboutShardeum() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, xs: 6, md: 6, xl: 0 }}
+        px={[4, 4, 8]}
         pt={{ base: 4, md: 16 }}
         pb={{ base: 20, xs: 0, sm: 0, md: 16 }}
       >

@@ -4,10 +4,10 @@ import React from "react";
 type Props = {
   ecoSystem: string;
   description: string;
-  imageLocation: string;
+  imageName: string;
 };
 
-function HorizontalTile({ ecoSystem, description, imageLocation }: Props) {
+function HorizontalTile({ ecoSystem, description, imageName }: Props) {
   return (
     <Box padding="2.5rem" w="100%" position="relative">
       <Image
@@ -43,7 +43,7 @@ function HorizontalTile({ ecoSystem, description, imageLocation }: Props) {
             borderRadius: "0.5rem",
           }}
         >
-          <Image src={imageLocation} alt="vector" boxSize="100%" />
+          <Image src={`/hackathon/${imageName}.svg`} alt="vector" boxSize="100%" />
         </Box>
         <Box>
           <Text

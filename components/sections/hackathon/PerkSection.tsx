@@ -78,7 +78,7 @@ function PerkSection() {
               columnGap={3}
               rowGap={4}
             >
-              <CustomButton text="Register Now" />
+              <CustomButton text="Apply Now" />
               <CustomButton text="About Shardeum" variant="outlined" />
             </Flex>
           </Box>

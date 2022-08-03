@@ -4,29 +4,90 @@ import GradientButton from "./GradientButton";
 import HorizontalTile from "./HorizontalTile";
 import RegisterPromoTile from "./RegisterPromoTile";
 
-const buttonImageName = (imageName: string): string => `/hackathon/section-3-${imageName}.png`;
-const ecosystemButtons: { key: string; name: string }[] = [
-  { key: "defi", name: "DeFi" },
-  { key: "nft", name: "NFT" },
-  { key: "buidl", name: "BUIDL" },
-  { key: "dao-identity", name: "DAO / Identity" },
-  { key: "gaming", name: "Gaming" },
+const partnerSlicer = (key: string): string =>
+  key.includes("partner") ? key.slice(0, key.length - 1) : key;
+
+enum Keys {
+  DEFI = "defi",
+  NFT = "nft",
+  BUIDL = "buidl",
+  DAO = "dao",
+  GAMING = "gaming",
+  FEMALE = "female",
+  PARTNER = "partner",
+}
+
+interface Buttons {
+  key: string;
+  name: string;
+}
+
+interface Details {
+  [key: string]: { title: string; description: string };
+}
+
+const ecosystemButtons: Buttons[] = [
+  { key: Keys.DEFI, name: "DeFi" },
+  { key: Keys.NFT, name: "NFT" },
+  { key: Keys.BUIDL, name: "BUIDL" },
+  { key: Keys.DAO, name: "DAO / Identity" },
+  { key: Keys.GAMING, name: "Gaming" },
 ];
 
-const sponseredButtons = [
+const totalWinningPool = "$5000";
+
+const ecoSystemDetails: Details = {
+  [Keys.DEFI]: {
+    title: "DeFi - " + totalWinningPool,
+    description: "Build DEXs, Lending Platforms and decentralized applications.",
+  },
+  [Keys.NFT]: {
+    title: "NFT - " + totalWinningPool,
+    description: "Build best NFT DApps on Shardeum.",
+  },
+  [Keys.BUIDL]: {
+    title: "BUIDL - " + totalWinningPool,
+    description: "It is open. Build any DApp on Shardeum.",
+  },
+  [Keys.DAO]: {
+    title: "DAO / Identity - " + totalWinningPool,
+    description: "Build a decentralized autonomous organization on Shardeum.",
+  },
+  [Keys.GAMING]: {
+    title: "Gaming - " + totalWinningPool,
+    description: "Build some interactive gaming for future.",
+  },
+};
+
+const sponseredButtons: Buttons[] = [
   {
-    key: "female",
+    key: Keys.FEMALE,
     name: "Female & Non-Binary",
   },
   {
-    key: "partner1",
+    key: Keys.PARTNER + "1",
     name: "Partner 1",
   },
   {
-    key: "partner2",
+    key: Keys.PARTNER + "2",
     name: "Partner 2",
   },
 ];
+
+const sponserDetails: Details = {
+  [Keys.FEMALE]: {
+    title: "Female or non-binary developers - " + totalWinningPool,
+    description: " It is open for female or non-binary developers. Build any DApp on Shardeum.",
+  },
+  [Keys.PARTNER + "1"]: {
+    title: "Partner 1 - " + totalWinningPool,
+    description: "Build privacy-preserving social networks.",
+  },
+  [Keys.PARTNER + "2"]: {
+    title: "Partner 2 - " + totalWinningPool,
+    description: "Make your DApp Gasless.",
+  },
+};
 function PrizesSection() {
   const [ecosystemActiveIndex, setEcosystemActiveIndex] = useState<string>(ecosystemButtons[0].key);
   const [sponserActiveIndex, setSponserActiveIndex] = useState(sponseredButtons[0].key);
@@ -81,10 +142,11 @@ function PrizesSection() {
             Sponsored by Sharedum
           </Text>
 
-          <HStack
+          <Flex
+            direction={["column", "column", "row"]}
             gap={[2, 4, 6]}
             flexWrap="wrap"
-            justifyContent="space-between"
+            justifyContent="center"
             alignItems="strech"
             mb={6}
           >
@@ -93,22 +155,27 @@ function PrizesSection() {
                 key={item.key}
                 onClick={() => handleButtonActive(item.key, "ecosystem")}
                 text={item.name}
-                imageLocation={buttonImageName(item.key)}
+                imageName={
+                  item.key === ecosystemActiveIndex
+                    ? partnerSlicer(item.key)
+                    : partnerSlicer(item.key) + "-inactive"
+                }
                 active={item.key === ecosystemActiveIndex}
               />
             ))}
-          </HStack>
+          </Flex>
           <HorizontalTile
-            ecoSystem={"DeFi"}
-            description="Build DEXs, Lending platforms and Decentralized applications."
-            imageLocation="/hackathon/section-3-defi.png"
+            ecoSystem={ecoSystemDetails[ecosystemActiveIndex].title}
+            description={ecoSystemDetails[ecosystemActiveIndex].description}
+            imageName={ecosystemActiveIndex}
           />
         </Box>
         <Box>
           <Text mb="2rem" color="brand.black" textAlign="center" fontSize="2xl" fontWeight="bold">
             Sponsored by Sponsored by Ecosystem Partners
           </Text>
-          <HStack
+          <Flex
+            direction={["column", "column", "row"]}
             gap={[2, 4, 6]}
             flexWrap="wrap"
             justifyContent="center"
@@ -120,17 +187,19 @@ function PrizesSection() {
                 key={item.name}
                 onClick={() => handleButtonActive(item.key)}
                 text={item.name}
-                imageLocation={buttonImageName(
-                  item.key.includes("partner") ? item.key.slice(0, item.key.length - 1) : item.key
-                )}
-                active={item.key === sponserActiveIndex}
+                imageName={
+                  item.key === sponserActiveIndex
+                    ? partnerSlicer(item.key)
+                    : partnerSlicer(item.key) + "-inactive"
+                }
+                active={item.key === partnerSlicer(sponserActiveIndex)}
               />
             ))}
-          </HStack>
+          </Flex>
           <HorizontalTile
-            ecoSystem="Female & Non Binary Developers"
-            description="It is open for female or non-binary developers. Build any DApp on Shardeum."
-            imageLocation="/hackathon/section-3-female.png"
+            ecoSystem={sponserDetails[sponserActiveIndex].title}
+            description={sponserDetails[sponserActiveIndex].description}
+            imageName={partnerSlicer(sponserActiveIndex)}
           />
         </Box>
       </Container>

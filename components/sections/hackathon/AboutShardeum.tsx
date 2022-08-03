@@ -13,7 +13,7 @@ function AboutShardeum() {
         <Flex
           flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
           columnGap={"7rem"}
-          mt={[10, 10, "9.5rem"]}
+          mt={[10, 10, "5rem"]}
           alignItems={"center"}
           px={[6, 6, 0]}
         >

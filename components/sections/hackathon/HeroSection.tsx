@@ -104,7 +104,7 @@ function HeroSection() {
           >
             Build Your DApps On The World’s First EVM-Based Dynamic State Sharded L1
           </Text>
-          <CustomButton text="Register Now" />
+          <CustomButton text="Apply Now" />
         </Box>
       </Container>
     </Box>

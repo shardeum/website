@@ -83,7 +83,7 @@ function RegisterPromoTile({
         <Text mb="1.75rem" lineHeight="1.3" fontSize="2xl">
           {description}
         </Text>
-        <CustomButton text="Register Now" />
+        <CustomButton text="Apply Now" />
       </Box>
       <Image
         width="23rem"

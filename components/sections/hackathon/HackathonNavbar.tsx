@@ -1,7 +1,8 @@
-import { Box, Container, Flex, Link, Stack, Button } from "@chakra-ui/react";
+import { Box, Container, Flex, Link, Stack, Button, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
+import { useRouter } from "next/router";
 
 const links = [
   {
@@ -36,6 +37,8 @@ const links = [
 ];
 
 const HackathonNavbar = () => {
+  const router = useRouter();
+
   return (
     <Flex bg="brand.black" w="100%" py={2} color="text">
       <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
@@ -49,21 +52,23 @@ const HackathonNavbar = () => {
           </Box>
           <Stack
             direction={["column", "row"]}
-            spacing={"1rem"}
+            spacing={"1.5rem"}
             alignItems={"center"}
             display={{ base: "none", lg: "flex" }}
           >
             {/* All the links laid out horizontally */}
             {links?.map((link) => (
-              <NextLink key={link.title} href={link.link}>
-                <Link variant="navlink" rel="noopener noreferrer">
-                  {link.title}
-                </Link>
-              </NextLink>
+              <Text
+                cursor="pointer"
+                key={link.title}
+                onClick={() => router.push(`/hackathon/${link.link}`)}
+              >
+                {link.title}
+              </Text>
             ))}
             {/* <Link variant="navlink">Language</Link> */}
             <Button variant="primary" size="lg">
-              Register Now
+              Apply Now
             </Button>
           </Stack>
           {/* Will only show on mobile and tablets */}

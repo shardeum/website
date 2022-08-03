@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
                 <>
                   {/* eslint-disable-next-line */}
                   {/* @ts-ignore */}
-                  <NewWindow url="/auth/signin" center="screen" />
+                  <NewWindow url="/auth/signin" center="screen" onUnload={() => setPopup(false)} />
                   <AuthChecker />
                 </>
               )}

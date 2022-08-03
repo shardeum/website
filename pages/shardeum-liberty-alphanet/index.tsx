@@ -1,4 +1,4 @@
-import { Box, Button, Stack } from "@chakra-ui/react";
+import { Box, Button, Stack, Flex, Center, Text, SimpleGrid } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
@@ -109,8 +109,28 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
-      <SlidingStats stats={stats} />
+      <Box display="flex">
+        <Center
+          w="200px"
+          bg="black"
+          borderColor="brand.grey-50"
+          borderTopWidth="1px"
+          borderBottomWidth="1px"
+          position="relative"
+          flexShrink={0}
+        >
+          <Text
+            textTransform="uppercase"
+            px={{ base: "4", md: "6", lg: "9" }}
+            fontWeight="bold"
+            fontSize={{ base: "m", lg: "l" }}
+          >
+            Liberty Metrics
+          </Text>
+        </Center>
 
+        <SlidingStats stats={stats} />
+      </Box>
       {/* Features of alphanet */}
       <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}

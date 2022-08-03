@@ -177,6 +177,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             <ShareLinkIcon />
             <Link href={project.githubUrl}>
               <Image
+                cursor="pointer"
                 src="/community/icons/github.svg"
                 alt="community-logo"
                 width={24}

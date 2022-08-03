@@ -19,21 +19,21 @@ function ImageCard({ imageLocation, name, designation, linkedInURL }: Props) {
         boxSize="13.875rem"
         objectFit="contain"
       />
-      <Flex justifyContent="space-between" mb={3}>
-        <Box maxW={"80%"}>
-          <Text color="brand.black" fontSize="1.25rem" fontWeight="bold">
+      <Flex justifyContent="space-between">
+        <Flex direction="column" justify="space-between" maxW={"80%"}>
+          <Text color="brand.black" mb={1} fontSize="1.25rem" lineHeight={1} fontWeight="bold">
             {name}
           </Text>
-        </Box>
+          <Text lineHeight={1} color="brand.grey-60" fontSize="sm">
+            {designation}
+          </Text>
+        </Flex>
         <Link href={linkedInURL}>
           <Box w="2.635rem" h="2.635rem" padding="0.75rem" borderRadius="2px" background="#0A66C2">
             <Image src="/hackathon/section-5-linkedin.png" alt="linked in image" />
           </Box>
         </Link>
       </Flex>
-      <Text color="brand.grey-60" fontSize="sm">
-        {designation}
-      </Text>
     </Box>
   );
 }

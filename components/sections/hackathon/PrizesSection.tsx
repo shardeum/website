@@ -82,10 +82,10 @@ function PrizesSection() {
           </Text>
 
           <HStack
-            flexWrap="wrap"
-            justifyContent="center"
-            alignItems="strech"
             gap={[2, 4, 6]}
+            flexWrap="wrap"
+            justifyContent="space-between"
+            alignItems="strech"
             mb={6}
           >
             {ecosystemButtons.map((item) => (

@@ -6,15 +6,16 @@ function AboutShardeum() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, xl: 0 }}
+        px={{ base: 8, xs: 6, md: 6, xl: 0 }}
         pt={{ base: 4, md: 16 }}
         pb={{ base: 20, xs: 0, sm: 0, md: 16 }}
       >
         <Flex
           flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
           columnGap={"7rem"}
-          mt="9.5rem"
+          mt={[10, 10, "9.5rem"]}
           alignItems={"center"}
+          px={[6, 6, 0]}
         >
           <Box maxHeight="fit-content" flexBasis={["100%", "100%", "100%", "50%"]}>
             <Text
@@ -46,6 +47,7 @@ function AboutShardeum() {
             </Text>
           </Box>
           <Image
+            my={[16, 16, 0]}
             flexBasis={["100%", "80%", "60%", "45%"]}
             src="/hackathon/section-6-right-image.png"
           />
@@ -54,8 +56,8 @@ function AboutShardeum() {
       <Box mx="auto" pt="6rem" pb="6.875rem" maxW={["100%", "100%", "90%", "90%", "75%"]}>
         <Text
           textAlign={"center"}
-          pt="4rem"
-          pb={[0, 0, "4rem"]}
+          pt={[0, 0, "4rem"]}
+          pb={["3.5rem", "3.5rem", "4rem"]}
           color="brand.grey-90"
           fontSize={{ base: "6xl", sm: "6xl", lg: "7xl" }}
           fontWeight="bold"
@@ -63,7 +65,7 @@ function AboutShardeum() {
           About Founders
         </Text>
         <Flex
-          padding={[8, 8, 16, 0]}
+          px={[6, 6, 16, 0]}
           flexDirection={["column", "column", "column", "row"]}
           mb="4rem"
           alignItems={["center", "center", "flex-start"]}

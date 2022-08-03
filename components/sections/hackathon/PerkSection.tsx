@@ -29,18 +29,19 @@ function PerkSection() {
       <Container
         mx="auto"
         maxW="container.xl"
-        px={{ base: 8, xl: 0 }}
+        px={{ base: 6, xl: 0 }}
         pt={{ base: 4, md: 16 }}
         pb={{ base: 20, md: 16 }}
       >
         <Flex
           flexDirection={["column-reverse", "column-reverse", "column-reverse", "row"]}
-          pt="4.25rem"
+          pt={[0, 0, "4.25rem"]}
           justifyContent="space-between"
           alignItems="center"
           marginBottom={["7rem", "7rem", "7rem", "13.125rem"]}
+          columnGap={[0, 0, 0, "3rem"]}
         >
-          <Box flexBasis={["1", "1", "48%"]}>
+          <Box flexBasis={["1", "1", "62%"]}>
             <Text
               as="h2"
               textAlign={["center", "center", "left"]}
@@ -53,7 +54,7 @@ function PerkSection() {
             >
               About Hackathon
             </Text>
-            <Text textAlign={["center", "center", "left"]} mb="6">
+            <Text fontSize="xl" textAlign={["center", "center", "left"]} mb="6">
               #BuildWeb3 2022 is an online hackathon series inviting developers to compete in
               building dApps on Shardeum. #BuildWeb3&apos;s India chapter is the inaugural edition
               of our online hackathon series targeting developers in India focusing on Indian
@@ -82,8 +83,8 @@ function PerkSection() {
             </Flex>
           </Box>
           <Image
-            my={["8rem", "8rem", 0]}
-            width={["100%", "100%", "29.375rem"]}
+            my={[16, 16, 0]}
+            flexBasis={["1", "1", "35%"]}
             src="/hackathon/section-2-right-image.png"
           />
         </Flex>
@@ -100,24 +101,19 @@ function PerkSection() {
           >
             Participation Perks
           </Text>
-          <Flex
-            rowGap="3.75rem"
-            columnGap={[0, 4, "7.5rem"]}
-            justifyContent="center"
-            flexWrap="wrap"
-          >
+          <Flex rowGap="3.75rem" columnGap={[0, 4, "7rem"]} justifyContent="center" flexWrap="wrap">
             <PerkCard
               imageLocation="/hackathon/perk-card-image-1.png"
               text="Get a golden chance to win the total competion prize worth of $25k"
             />
             <PerkCard
               imageLocation="/hackathon/perk-card-image-2.png"
-              text="Build your DApps on world’s first EVM-based dynamic state sharded L1
+              text="Build your DApps on world's first EVM-based dynamic state sharded L1
 "
             />
             <PerkCard
               imageLocation="/hackathon/perk-card-image-3.png"
-              text="Get access to India’s top blockchain accelerator program organised by experts "
+              text="Get access to India's top blockchain accelerator program organised by experts "
             />
             <PerkCard
               imageLocation="/hackathon/perk-card-image-4.png"

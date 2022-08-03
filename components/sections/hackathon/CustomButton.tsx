@@ -9,6 +9,7 @@ type Props = {
 const CustomButton = ({ text, variant = "primary" }: Props) => {
   return (
     <Box
+      cursor="pointer"
       textAlign={["center", "center", "left"]}
       maxW={["100%", "100%", "15rem"]}
       backgroundColor={variant === "outlined" ? "transparent" : "#4150EA"}

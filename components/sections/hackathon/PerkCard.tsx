@@ -9,7 +9,7 @@ type Props = {
 function PerkCard({ text, imageLocation }: Props) {
   return (
     <Box
-      width="19.125rem"
+      width="19.5rem"
       height="14.875rem"
       background="linear-gradient(165.94deg, rgba(255, 255, 255, 0.315) -1.43%, rgba(255, 255, 255, 0) 104.31%)"
       padding="0.75rem"
@@ -20,7 +20,9 @@ function PerkCard({ text, imageLocation }: Props) {
     >
       <Box backgroundColor="#121212" px="1.25rem" borderRadius="0.25rem" py={6} h="100%" w="100%">
         <Image mb="2" src={imageLocation} alt="perks-illustration" />
-        <Text fontSize="large">{text}</Text>
+        <Text fontSize="large" fontWeight="medium">
+          {text}
+        </Text>
       </Box>
     </Box>
   );

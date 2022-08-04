@@ -38,23 +38,23 @@ const totalWinningPool = "$5000";
 
 const ecoSystemDetails: Details = {
   [Keys.DEFI]: {
-    title: "DeFi - " + totalWinningPool,
+    title: ecosystemButtons[0].name + " - " + totalWinningPool,
     description: "Build DEXs, Lending Platforms and decentralized applications.",
   },
   [Keys.NFT]: {
-    title: "NFT - " + totalWinningPool,
+    title: ecosystemButtons[1].name + " - " + totalWinningPool,
     description: "Build best NFT DApps on Shardeum.",
   },
   [Keys.BUIDL]: {
-    title: "BUIDL - " + totalWinningPool,
+    title: ecosystemButtons[2].name + " - " + totalWinningPool,
     description: "It is open. Build any DApp on Shardeum.",
   },
   [Keys.DAO]: {
-    title: "DAO / Identity - " + totalWinningPool,
+    title: ecosystemButtons[3].name + " - " + totalWinningPool,
     description: "Build a decentralized autonomous organization on Shardeum.",
   },
   [Keys.GAMING]: {
-    title: "Gaming - " + totalWinningPool,
+    title: ecosystemButtons[4].name + " - " + totalWinningPool,
     description: "Build some interactive gaming for future.",
   },
 };
@@ -76,15 +76,15 @@ const sponseredButtons: Buttons[] = [
 
 const sponserDetails: Details = {
   [Keys.FEMALE]: {
-    title: "Female or non-binary developers - " + totalWinningPool,
+    title: sponseredButtons[0].name + " developers - " + totalWinningPool,
     description: " It is open for female or non-binary developers. Build any DApp on Shardeum.",
   },
   [Keys.PARTNER + "1"]: {
-    title: "Partner 1 - " + totalWinningPool,
+    title: sponseredButtons[1].name + " - " + totalWinningPool,
     description: "Build privacy-preserving social networks.",
   },
   [Keys.PARTNER + "2"]: {
-    title: "Partner 2 - " + totalWinningPool,
+    title: sponseredButtons[2].name + " - " + totalWinningPool,
     description: "Make your DApp Gasless.",
   },
 };

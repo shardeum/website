@@ -1,4 +1,4 @@
-import { Box, Button, Stack } from "@chakra-ui/react";
+import { Box, Button, Stack, Flex, Center, Text, SimpleGrid } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
@@ -12,10 +12,22 @@ import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
+import SlidingStats from "@shm/components/common/SlidingStats";
+import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
   const { t: commonTranslation } = useTranslation(["common"]);
+  const stats = [
+    { Icon: IconTransaction, title: "total-transaction" },
+    { Icon: IconGlobe, title: "total-accounts" },
+    { Icon: IconGlobe, title: "total-contracts" },
+    { Icon: IconGlobe, title: "active-nodes" },
+    { Icon: IconTransaction, title: "total-transaction" },
+    { Icon: IconGlobe, title: "total-accounts" },
+    { Icon: IconGlobe, title: "total-contracts" },
+    { Icon: IconGlobe, title: "active-nodes" },
+  ];
   return (
     <>
       <NextSeo
@@ -101,7 +113,23 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
+      <Box position="relative">
+        <Center
+          maxW="30%"
+          bg="black"
+          position="absolute"
+          zIndex="9"
+          h="100%"
+          borderColor="brand.grey-50"
+          borderTopWidth="1px"
+          borderBottomWidth="1px"
+          px={{ base: "4", md: "6", lg: "9" }}
+        >
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Liberty Metrics</Text>
+        </Center>
 
+        <SlidingStats stats={stats} />
+      </Box>
       {/* Features of alphanet */}
       <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}

@@ -109,21 +109,22 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
-      <Box display="flex">
+      <Box position="relative">
         <Center
           w="200px"
           bg="black"
+          position="absolute"
+          zIndex="9"
+          h="100%"
           borderColor="brand.grey-50"
           borderTopWidth="1px"
           borderBottomWidth="1px"
-          position="relative"
-          flexShrink={0}
         >
           <Text
             textTransform="uppercase"
             px={{ base: "4", md: "6", lg: "9" }}
             fontWeight="bold"
-            fontSize={{ base: "m", lg: "l" }}
+            fontSize={{ base: "10", md: "20" }}
           >
             Liberty Metrics
           </Text>

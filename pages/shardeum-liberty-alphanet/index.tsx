@@ -23,6 +23,10 @@ const AlphanetLanding: NextPage = () => {
     { Icon: IconGlobe, title: "total-accounts" },
     { Icon: IconGlobe, title: "total-contracts" },
     { Icon: IconGlobe, title: "active-nodes" },
+    { Icon: IconTransaction, title: "total-transaction" },
+    { Icon: IconGlobe, title: "total-accounts" },
+    { Icon: IconGlobe, title: "total-contracts" },
+    { Icon: IconGlobe, title: "active-nodes" },
   ];
   return (
     <>
@@ -111,7 +115,7 @@ const AlphanetLanding: NextPage = () => {
       />
       <Box position="relative">
         <Center
-          w="200px"
+          maxW="30%"
           bg="black"
           position="absolute"
           zIndex="9"
@@ -119,15 +123,9 @@ const AlphanetLanding: NextPage = () => {
           borderColor="brand.grey-50"
           borderTopWidth="1px"
           borderBottomWidth="1px"
+          px={{ base: "4", md: "6", lg: "9" }}
         >
-          <Text
-            textTransform="uppercase"
-            px={{ base: "4", md: "6", lg: "9" }}
-            fontWeight="bold"
-            fontSize={{ base: "10", md: "14" }}
-          >
-            Liberty Metrics
-          </Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Liberty Metrics</Text>
         </Center>
 
         <SlidingStats stats={stats} />

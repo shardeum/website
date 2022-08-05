@@ -124,7 +124,7 @@ const AlphanetLanding: NextPage = () => {
             textTransform="uppercase"
             px={{ base: "4", md: "6", lg: "9" }}
             fontWeight="bold"
-            fontSize={{ base: "10", md: "20" }}
+            fontSize={{ base: "10", md: "14" }}
           >
             Liberty Metrics
           </Text>

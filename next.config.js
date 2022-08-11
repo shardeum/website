@@ -9,6 +9,15 @@ const nextConfig = {
   images: {
     domains: ["airtable.com", "dl.airtable.com"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/live",
+        destination: "https://www.youtube.com/watch?v=sKczslvXBd4",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

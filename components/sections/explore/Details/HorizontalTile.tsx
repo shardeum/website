@@ -70,7 +70,6 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
       });
   };
 
-  console.log(project);
   return (
     <Container
       mx="auto"

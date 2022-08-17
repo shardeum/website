@@ -12,19 +12,20 @@ import { getSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-  const session = await getSession({ req: context.req });
+export const getServerSideProps = async ({ req, locale }: GetServerSidePropsContext) => {
+  const session = await getSession({ req });
 
   const { projects, categories } = await getSHMProjects();
   const upvotedProjectsData = await getUserUpvotedProjects(session?.user?.id || "");
-
   return {
     // Will be passed to the page component as props
     props: {
+      ...(await serverSideTranslations(locale as string, ["common"])),
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],

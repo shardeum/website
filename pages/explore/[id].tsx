@@ -7,16 +7,18 @@ import { getProjectById } from "utils/api";
 import { getSession } from "next-auth/react";
 import ShareModal from "@shm/components/sections/explore/Details/ShareModal";
 import { ProductScreenshots } from "@shm/components/sections/explore/Details/ProductScreenshots";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-  const session = await getSession({ req: context.req });
-  const projectRecordId = (context.query.id as string) || "";
+export const getServerSideProps = async ({ req, locale, query }: GetServerSidePropsContext) => {
+  const session = await getSession({ req });
+  const projectRecordId = (query.id as string) || "";
   const userId = session?.user?.id || "";
 
   const { project, userUpvoted } = await getProjectById(projectRecordId, userId);
 
   return {
     props: {
+      ...(await serverSideTranslations(locale as string, ["common"])),
       project,
       userUpvoted,
       sessionObject: session,

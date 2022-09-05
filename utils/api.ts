@@ -1,5 +1,5 @@
 import Airtable from "airtable";
-import { Project } from "models/project";
+import { Project, Screenshot } from "models/project";
 import { removeDuplicatesFromArray } from ".";
 import { NewsItem, Shardian, CommunityStat } from "../types";
 
@@ -130,7 +130,7 @@ export const getSHMProjects = (): Promise<{
               const projectDescription = record.get("Project Description") as string;
               const projectCategory = record.get("Project Category") as string;
               const projectLogo: any = record.get("Project Logo") as string[];
-              const projectScreenshots = record.get("Project Screenshots") as string[];
+              const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
               const projectDateCreated = record.get("Created") as string;
               const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
@@ -144,7 +144,7 @@ export const getSHMProjects = (): Promise<{
                   description: projectDescription,
                   category: projectCategory || "Others",
                   logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
-                  screenShots: projectScreenshots || [],
+                  screenShots: projectScreenshots,
                   website: projectWebsiteURL,
                   dateCreated: projectDateCreated,
                   numUpvotes: projectUpvotes,
@@ -372,7 +372,7 @@ export const getProjectById = (
         const projectDescription = record.get("Project Description") as string;
         const projectCategory = record.get("Project Category") as string;
         const projectLogo: any = record.get("Project Logo") as string[];
-        const projectScreenshots = record.get("Project Screenshots") as string[];
+        const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
         const projectWebsiteURL = record.get("Project Website URL") as string;
         const projectDateCreated = record.get("Created") as string;
         const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;

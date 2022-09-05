@@ -7,6 +7,7 @@ import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
+import { useTranslation } from "next-i18next";
 
 import { getSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
@@ -25,7 +26,7 @@ export const getServerSideProps = async ({ req, locale }: GetServerSidePropsCont
   return {
     // Will be passed to the page component as props
     props: {
-      ...(await serverSideTranslations(locale as string, ["common"])),
+      ...(await serverSideTranslations(locale as string, ["common", "page-alphanet"])),
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],

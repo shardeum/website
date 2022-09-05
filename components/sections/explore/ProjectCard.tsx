@@ -51,7 +51,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         fontSize={{ base: "md", sm: "md", lg: "lg" }}
         fontWeight={"bold"}
       >
-        <NextLink href={`/explore/${projectId}`}>
+        <NextLink href={`/ecosystem/${projectId}`}>
           <LinkOverlay>{title}</LinkOverlay>
         </NextLink>
       </Text>

@@ -38,7 +38,7 @@ const links = [
     newPage: false,
   },
   {
-    title: "explore",
+    title: "ecosystem",
     link: ECOSYSTEM_URL,
     newPage: false,
   },

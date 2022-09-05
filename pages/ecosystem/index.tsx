@@ -7,6 +7,7 @@ import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
+import { useTranslation } from "next-i18next";
 
 import { getSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
@@ -42,6 +43,7 @@ const Explore: NextPage<ExplorePageProps> = ({
 }: ExplorePageProps) => {
   // to open signin window
   const { setPopup } = useContext(SigninContext);
+  const { t: commonTranslation } = useTranslation(["common"]);
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);

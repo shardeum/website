@@ -39,7 +39,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
   return (
     <LinkBox as="div" cursor="pointer">
       <Grid
-        templateColumns={["10% auto auto", "7% auto auto", "14% auto auto", "auto auto auto"]} //xs , rest
+        templateColumns={["10% auto 12%", "7% auto 7%", "14% auto 10%", "24% auto 10%"]} //xs , rest
         templateRows="repeat(2 , auto)"
         p={{ base: 4, sm: 4, md: 4, lg: 6 }}
         columnGap={4}

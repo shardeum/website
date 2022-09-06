@@ -27,7 +27,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   upvoteCount = 0,
   projectId = "",
 }) => {
-  const numProjectsPerPage: number | undefined = useBreakpointValue({
+  const descriptionLength: number | undefined = useBreakpointValue({
     lg: 160,
     base: 100,
   });
@@ -71,14 +71,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </Text>
       </HorizontalTileButton>
 
-      {numProjectsPerPage && description?.length > numProjectsPerPage ? (
+      {descriptionLength && description?.length > descriptionLength ? (
         <Text
           mb={{ base: "8" }}
           fontSize={{ base: "md", lg: "md" }}
           textAlign="left"
           color="brand.grey-80"
         >
-          {description.slice(0, numProjectsPerPage)}...
+          {description.slice(0, descriptionLength)}...
           <Text cursor="pointer" as="span" color="#2031E6">
             read more
           </Text>

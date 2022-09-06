@@ -38,11 +38,6 @@ const links = [
     newPage: false,
   },
   {
-    title: "ecosystem",
-    link: ECOSYSTEM_URL,
-    newPage: false,
-  },
-  {
     title: "Super Shardians",
     link: "/super-shardian",
     newPage: false,

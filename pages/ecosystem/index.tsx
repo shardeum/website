@@ -18,7 +18,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-export const getServerSideProps = async ({ req, locale }: GetServerSidePropsContext) => {
+export const getServerSideProps = async ({ req }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
 
   const { projects, categories } = await getSHMProjects();
@@ -26,7 +26,6 @@ export const getServerSideProps = async ({ req, locale }: GetServerSidePropsCont
   return {
     // Will be passed to the page component as props
     props: {
-      ...(await serverSideTranslations(locale as string, ["common", "page-alphanet"])),
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],

@@ -9,7 +9,7 @@ import ShareModal from "@shm/components/sections/explore/Details/ShareModal";
 import { ProductScreenshots } from "@shm/components/sections/explore/Details/ProductScreenshots";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export const getServerSideProps = async ({ req, locale, query }: GetServerSidePropsContext) => {
+export const getServerSideProps = async ({ req, query }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
   const projectRecordId = (query.id as string) || "";
   const userId = session?.user?.id || "";
@@ -18,7 +18,6 @@ export const getServerSideProps = async ({ req, locale, query }: GetServerSidePr
 
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, ["common"])),
       project,
       userUpvoted,
       sessionObject: session,

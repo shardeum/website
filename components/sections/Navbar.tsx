@@ -122,7 +122,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
               </NextLink>
             ))}
 
-            <Menu>
+            {/* <Menu>
               <MenuButton>
                 <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
               </MenuButton>
@@ -134,7 +134,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
                 )}
               </MenuList>
-            </Menu>
+            </Menu> */}
 
             {/* <Link variant="navlink">Language</Link> */}
           </Stack>

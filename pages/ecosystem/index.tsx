@@ -26,7 +26,6 @@ export const getServerSideProps = async ({ req, locale }: GetServerSidePropsCont
   return {
     // Will be passed to the page component as props
     props: {
-      ...(await serverSideTranslations(locale as string, ["common", "page-alphanet"])),
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],

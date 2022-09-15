@@ -38,10 +38,16 @@ const links = [
     newPage: false,
   },
   {
+    title: "ecosystem",
+    link: ECOSYSTEM_URL,
+    newPage: false,
+  },
+  {
     title: "Super Shardians",
     link: "/super-shardian",
     newPage: false,
   },
+
   {
     title: "litepaper",
     link: LITEPAPER_URL,
@@ -122,7 +128,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
               </NextLink>
             ))}
 
-            {/* <Menu>
+            <Menu>
               <MenuButton>
                 <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
               </MenuButton>
@@ -134,7 +140,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
                 )}
               </MenuList>
-            </Menu> */}
+            </Menu>
 
             {/* <Link variant="navlink">Language</Link> */}
           </Stack>

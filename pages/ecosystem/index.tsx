@@ -16,9 +16,9 @@ import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 // define page props type
-export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
+export type ExplorePageProps = InferGetServerSidePropsType<typeof getStaticProps>;
 
-export const getServerSideProps = async ({ req, locale }: GetServerSidePropsContext) => {
+export const getStaticProps = async ({ req, locale }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
 
   const { projects, categories } = await getSHMProjects();

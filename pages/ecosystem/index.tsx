@@ -8,11 +8,12 @@ import ProjectsList from "@shm/components/sections/explore/ProjectsList";
 import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
 
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
@@ -40,8 +41,16 @@ const Explore: NextPage<ExplorePageProps> = ({
   upvotedProjectIds = [],
   sessionObject,
 }: ExplorePageProps) => {
+  const router = useRouter();
+
   // to open signin window
   const { setPopup } = useContext(SigninContext);
+
+  // get session from hook
+  const { data: session } = useSession();
+
+  // if user was previously not signed in, but has signed in now, do a reload
+  if (!sessionObject && session) router.reload();
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);

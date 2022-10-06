@@ -4,10 +4,11 @@ import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
 import { getProjectById } from "utils/api";
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import ShareModal from "@shm/components/sections/explore/Details/ShareModal";
 import { ProductScreenshots } from "@shm/components/sections/explore/Details/ProductScreenshots";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useRouter } from "next/router";
 
 export const getServerSideProps = async ({ req, locale, query }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
@@ -33,6 +34,14 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   userUpvoted = false,
   sessionObject,
 }: ProjectPageProps) => {
+  const router = useRouter();
+
+  // get session from hook
+  const { data: session } = useSession();
+
+  // if user was previously not signed in, but has signed in now, do a reload
+  if (!sessionObject && session) router.reload();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

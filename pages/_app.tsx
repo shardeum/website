@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   const isInSigninRoute = router.pathname.startsWith("/auth/signin");
 
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={session} refetchOnWindowFocus refetchInterval={350}>
       <ChakraProvider theme={customTheme}>
         <SigninProvider value={{ popup, setPopup }}>
           <Head>
@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
                   {/* eslint-disable-next-line */}
                   {/* @ts-ignore */}
                   <NewWindow url="/auth/signin" center="screen" onUnload={() => setPopup(false)} />
-                  <AuthChecker />
+                  {/* <AuthChecker /> */}
                 </>
               )}
 

@@ -1,6 +1,6 @@
 import { AspectRatio, Box, Button, Container, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { COMMUNITY_URL } from "constants/links";
+import { DISCORD_URL } from "constants/links";
 import { useTranslation, Trans } from "next-i18next";
 
 function ReadWhitepaper() {
@@ -69,7 +69,7 @@ function ReadWhitepaper() {
               <Button
                 variant="secondary"
                 as="a"
-                href={COMMUNITY_URL}
+                href={DISCORD_URL}
                 rel="noopener noreferrer"
                 target="_blank"
               >

@@ -9,7 +9,7 @@ import {
   IconTwitter,
 } from "@shm/Icons";
 import {
-  COMMUNITY_URL,
+  DISCORD_URL,
   GITHUB_URL,
   NEWSLETTER_URL,
   TELEGRAM_URL,
@@ -18,7 +18,7 @@ import {
 import { useTranslation } from "next-i18next";
 
 const socialLinks = [
-  { Icon: IconDiscord, title: "Discord", href: COMMUNITY_URL, target: "_blank" },
+  { Icon: IconDiscord, title: "Discord", href: DISCORD_URL, target: "_blank" },
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
   { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },

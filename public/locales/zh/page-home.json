@@ -5,7 +5,7 @@
   "shm-feature-2-title": "Linear scalability & low gas forever",
   "shm-feature-2-desc": "Every node that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
   "shm-feature-3-title": "Anyone can operate a node",
-  "shm-feature-3-desc": "Replace the 3rd featutre with Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator.",
+  "shm-feature-3-desc": "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator.",
   "shm-feature-4-title": "Immediate finality & low latency",
   "shm-feature-4-desc": "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
   "shm-feature-5-title": "Solid security",

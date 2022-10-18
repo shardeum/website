@@ -1,7 +1,9 @@
-import { resolve } from "path";
+const path = require('path')
 
-export const i18n = {
-  defaultLocale: "en",
-  locales: ["en", "hi", "id", "it", "ja", "kn", "ko", "ru", "ta", "te"],
-  localePath: resolve("./public/locales"),
+module.exports = {
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "hi", "id", "it", "ja", "kn", "ko", "ru", "ta", "te"],
+    localePath: path.resolve('./public/locales')
+  },
 };

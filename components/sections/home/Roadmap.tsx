@@ -26,8 +26,11 @@ const roadmapList = [
     title: "phase-2-title",
     sections: [
       {
-        taskList: ["phase-2-task-list-1", "phase-2-task-list-2"],
-        launchItems: ["phase-2-launch-item-1", "phase-2-launch-item-2"],
+        description: "phase-2-launch-item-1",
+        taskList: ["phase-2-task-list-1"],
+      },
+      {
+        description: "phase-2-launch-item-2",
       },
     ],
     quarterStartDate: new Date(2022, 1, 1),
@@ -38,13 +41,7 @@ const roadmapList = [
     sections: [
       {
         description: "phase-3-desc",
-        taskList: [
-          "phase-3-task-list-1",
-          "phase-3-task-list-2",
-          "phase-3-task-list-3",
-          "phase-3-task-list-4",
-          "phase-3-task-list-5",
-        ],
+        taskList: ["phase-3-task-list-1", "phase-3-task-list-2", "phase-3-task-list-3"],
       },
       {
         description: "phase-3-secondary-desc",
@@ -63,8 +60,13 @@ const roadmapList = [
           "phase-4-task-list-2",
           "phase-4-task-list-3",
           "phase-4-task-list-4",
+          "phase-4-task-list-5",
         ],
+
         launchItems: [],
+      },
+      {
+        description: "phase-4-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2022, 7, 1),
@@ -75,15 +77,35 @@ const roadmapList = [
     sections: [
       {
         description: "phase-5-desc",
-        taskList: ["phase-5-task-list-1"],
+        taskList: [
+          "phase-5-task-list-1",
+          "phase-5-task-list-2",
+          "phase-5-task-list-3",
+          "phase-5-task-list-4",
+        ],
         launchItems: [],
       },
-      {
-        description: "phase-5-secondary-desc",
-      },
+      // {
+      //   description: "phase-5-secondary-desc",
+      // },
     ],
     quarterStartDate: new Date(2022, 10, 1),
     quarterEndDate: new Date(2022, 12, 31),
+  },
+  {
+    title: "phase-6-title",
+    sections: [
+      {
+        description: "phase-6-desc",
+        taskList: ["phase-6-task-list-1", "phase-6-task-list-2"],
+        launchItems: [],
+      },
+      // {
+      //   description: "phase-5-secondary-desc",
+      // },
+    ],
+    quarterStartDate: new Date(2023, 1, 1),
+    quarterEndDate: new Date(2023, 3, 31),
   },
 ];
 

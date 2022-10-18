@@ -9,65 +9,94 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import {
   BLOG_URL,
-  DOCS_URL,
   LITEPAPER_URL,
   COMMUNITY_URL,
   CLAIM_100_SHM_LINK,
   ECOSYSTEM_URL,
+  SHARDEUM_LIBERTY_ALPHANET_URL,
+  DOCS_URL,
+  FAQ_URL,
+  EXPLORER_LIBERTY_URL,
+  SUPERSHARDIAN_URL,
 } from "../../constants/links";
+import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
 import MobileDrawer from "components/common/MobileDrawer";
 import { useTranslation } from "next-i18next";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { FC, useContext } from "react";
+import { FC, useContext, useState, useEffect } from "react";
 import SigninContext from "context/signin-window.context";
+import MenuComponent from "./MenuComponent";
 
-const links = [
+const linksArr = [
   {
-    title: "alphanet",
-    link: "/shardeum-liberty-alphanet",
+    title: "learn",
+    link: "",
     newPage: false,
+    highlight: false,
+    submenu: [
+      {
+        title: "litepaper",
+        link: LITEPAPER_URL,
+        newPage: true,
+      },
+      {
+        title: "faq",
+        link: FAQ_URL,
+        newPage: true,
+      },
+      {
+        title: "blog",
+        link: BLOG_URL,
+        newPage: true,
+      },
+    ],
+  },
+  {
+    title: "developers",
+    link: "",
+    newPage: false,
+    highlight: false,
+    submenu: [
+      {
+        title: "alphanet",
+        link: SHARDEUM_LIBERTY_ALPHANET_URL,
+        newPage: false,
+      },
+      {
+        title: "docs",
+        link: DOCS_URL,
+        newPage: true,
+      },
+      {
+        title: "explore",
+        link: EXPLORER_LIBERTY_URL,
+        newPage: true,
+      },
+    ],
   },
   {
     title: "community",
-    link: COMMUNITY_URL,
+    link: "",
     newPage: false,
-  },
-  // {
-  //   title: "ecosystem",
-  //   link: ECOSYSTEM_URL,
-  //   newPage: false,
-  // },
-  {
-    title: "Super Shardians",
-    link: "/super-shardian",
-    newPage: false,
-  },
-
-  {
-    title: "litepaper",
-    link: LITEPAPER_URL,
-    newPage: true,
-  },
-  // commenting it for now until we have page for it
-  // {
-  //   title: "Learn",
-  //   link: "#",
-  // newPage:false,
-  // },
-  {
-    title: "blog",
-    link: BLOG_URL,
-    newPage: true,
-  },
-  {
-    title: "docs",
-    link: DOCS_URL,
-    newPage: true,
+    highlight: false,
+    submenu: [
+      {
+        title: "community",
+        link: COMMUNITY_URL,
+        newPage: false,
+      },
+      {
+        title: "supershardian",
+        link: SUPERSHARDIAN_URL,
+        newPage: false,
+      },
+    ],
   },
   {
     title: "claim-100-shm-cta",
@@ -75,12 +104,6 @@ const links = [
     newPage: true,
     highlight: true,
   },
-  // TODO: undo comment when global-localization feat goes live
-  // {
-  //   title: "Language",
-  //   link: "/language",
-  //   newPage: false,
-  // },
 ];
 
 export type NavbarProps = {
@@ -91,6 +114,18 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const { t: commonTranslation } = useTranslation(["common"]);
   const { data: session } = useSession();
   const { setPopup } = useContext(SigninContext);
+  const [isauthVisible, setIsauthVisible] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    const text = window.location.href;
+    const position = text.search("ecosystem");
+    if (position > -1) {
+      setIsauthVisible(true);
+    } else {
+      setIsauthVisible(false);
+    }
+  }, []);
 
   return (
     <Flex
@@ -115,7 +150,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
             display={{ base: "none", lg: "flex" }}
           >
             {/* All the links laid out horizontally */}
-            {links?.map((link) => (
+            {linksArr?.map((link, index) => (
               <NextLink key={link.title} href={link.link} passHref>
                 <Link
                   variant="navlink"
@@ -123,29 +158,35 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   target={link.newPage ? "_blank" : "_self"}
                   fontWeight={link.highlight ? "bold" : "normal"}
                 >
-                  {commonTranslation(link.title)}
+                  {typeof link.submenu !== "undefined" ? (
+                    <MenuComponent link={link} />
+                  ) : (
+                    commonTranslation(link.title)
+                  )}
                 </Link>
               </NextLink>
             ))}
 
-            <Menu>
-              <MenuButton>
-                <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
-              </MenuButton>
+            {isauthVisible === true ? (
+              <Menu>
+                <MenuButton>
+                  <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
+                </MenuButton>
 
-              <MenuList>
-                {session ? (
-                  <MenuItem onClick={() => signOut()}>Signout</MenuItem>
-                ) : (
-                  <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
-                )}
-              </MenuList>
-            </Menu>
+                <MenuList>
+                  {session ? (
+                    <MenuItem onClick={() => signOut()}>Signout</MenuItem>
+                  ) : (
+                    <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
+                  )}
+                </MenuList>
+              </Menu>
+            ) : null}
 
             {/* <Link variant="navlink">Language</Link> */}
           </Stack>
           {/* Will only show on mobile and tablets */}
-          <MobileDrawer links={links} />
+          <MobileDrawer links={linksArr} />
         </Flex>
       </Container>
     </Flex>

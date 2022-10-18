@@ -31,10 +31,12 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
     <>
       {/* Hero section */}
       <Hero
-        heading={commonTranslation("shm-slogan")}
-        description={commonTranslation("shm-description")}
         cta={
           <>
+            <h1 className="chakra-text css-1ukwr3a">{commonTranslation("shm-slogan")}</h1>
+            <div className="css-x04s0f">
+              <p className="chakra-text css-zfsl17">{commonTranslation("shm-description")}</p>
+            </div>
             <Stack
               spacing="4"
               direction={{ base: "column", sm: "row" }}

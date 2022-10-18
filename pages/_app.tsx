@@ -39,7 +39,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
           {!isInSigninRoute ? (
             <Box as="main">
               {/* common header  */}
-              <Navbar mode={router.pathname === "/explore/[id]" ? "light" : "dark"} />
+              {/* <Navbar mode={router.pathname === "/explore/[id]" ? "light" : "dark"} /> */}
+              {/* IMP NOTE !!!! Hero.tsx and ResponsiveHero.tx  Nav Bar is Moved there as it was not rendering with page click on this page for the validation on auth to work */}
               <DefaultSeo {...defaultSEOValues} />
 
               {/* content */}

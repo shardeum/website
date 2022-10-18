@@ -92,13 +92,13 @@ const linksArr = [
         newPage: false,
       },
       {
-        title: "supershardian",
-        link: SUPERSHARDIAN_URL,
+        title: "events",
+        link: EXPLORE_EVENTS,
         newPage: false,
       },
       {
-        title: "events",
-        link: EXPLORE_EVENTS,
+        title: "supershardian",
+        link: SUPERSHARDIAN_URL,
         newPage: false,
       },
     ],

@@ -40,6 +40,7 @@ const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
         mx="auto"
         py={{ base: "9", md: "20", lg: "32" }}
         px={{ base: 6, xl: 0 }}
+        style={{ paddingBottom: "0px" }}
       >
         <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">

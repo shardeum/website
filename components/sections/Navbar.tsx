@@ -17,7 +17,7 @@ import {
   LITEPAPER_URL,
   COMMUNITY_URL,
   CLAIM_100_SHM_LINK,
-  ECOSYSTEM_URL,
+  EXPLORE_EVENTS,
   SHARDEUM_LIBERTY_ALPHANET_URL,
   DOCS_URL,
   FAQ_URL,
@@ -87,8 +87,13 @@ const linksArr = [
     highlight: false,
     submenu: [
       {
-        title: "community",
+        title: "community_ecosystem",
         link: COMMUNITY_URL,
+        newPage: false,
+      },
+      {
+        title: "events",
+        link: EXPLORE_EVENTS,
         newPage: false,
       },
       {

@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
-import { COMMUNITY_URL } from "constants/links";
+import { SUPER_SHARDIAN_START_HERE } from "constants/links";
 
 type BeASuperShardianProps = {
   title: string;
@@ -37,7 +37,7 @@ const BeASuperShardian = ({ title, description, joinButtonText }: BeASuperShardi
         >
           {description}
         </Box>
-        <Button as="a" variant="secondary" size="lg" href={COMMUNITY_URL}>
+        <Button as="a" variant="secondary" size="lg" href={SUPER_SHARDIAN_START_HERE}>
           {joinButtonText}
         </Button>
       </Flex>

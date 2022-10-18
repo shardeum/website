@@ -56,7 +56,7 @@ const WhatCanYoDo = () => {
         <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="start" spacing="20">
-              <SectionHeading color="brand.grey-90">What can you do on liberty?</SectionHeading>
+              <SectionHeading color="brand.grey-90">What can you do on Liberty?</SectionHeading>
             </VStack>
           </SimpleGrid>
         </VStack>

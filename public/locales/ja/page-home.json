@@ -5,7 +5,7 @@
   "shm-feature-2-title": "Linear scalability & low gas forever",
   "shm-feature-2-desc": "Every node that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
   "shm-feature-3-title": "Anyone can operate a node",
-  "shm-feature-3-desc": "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator in the permissionless Shardeum network.",
+  "shm-feature-3-desc": "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator.",
   "shm-feature-4-title": "Immediate finality & low latency",
   "shm-feature-4-desc": "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
   "shm-feature-5-title": "Solid security",
@@ -23,7 +23,7 @@
   "phase-1-launch-item-4": "Small / medium AWS network",
   "phase-2-title": "Q1 2022",
   "phase-2-launch-item-1": "Initial Prototype",
-  "phase-2-task-list-1": "Demo of EMV integration with Shardus",
+  "phase-2-task-list-1": "Demo of EVM integration with Shardus",
   "phase-2-launch-item-2": "Shardeum Foundation structured in Switzerland",
   "phase-3-title": "Q2 2022",
   "phase-3-desc": "Alphanet 1.0 launch",
@@ -59,11 +59,11 @@
   "use-case-1-title": "P2P transfers",
   "use-case-1-desc": "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",
   "use-case-2-title": "DeFi",
-  "use-case-2-desc": "High gas fees and low throughput bottleneck the current DeFi landscape. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs, making it affordable to businesses and individuals for even low value transactions.",
+  "use-case-2-desc": "High gas fees and low throughput bottleneck the current DeFi landscape. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs, making it affordable to both businesses and individuals.",
   "use-case-3-title": "EVM dApps",
   "use-case-3-desc": "Shardeum is EVM-based. Contracts can be written in Solidity or Vyper and use the same Ethereum tooling such as Remix and Truffle. Join the Shardeum ecosystem, where users never have to worry about rising gas fees again.",
   "use-case-4-title": "NFTs",
   "use-case-4-desc": "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user-friendly.",
   "use-case-5-title": "Web 3.0",
-  "use-case-5-desc": "Web 3.0, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized user experiences that are better than centralized competitors at scale."
+  "use-case-5-desc": "Web 3.0, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized UI & UX which will be superior to that of centralized peers."
 }

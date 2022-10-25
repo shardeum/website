@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
@@ -34,6 +35,20 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   sessionObject,
 }: ProjectPageProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = `Shardeum | Ecosystem | ${project.name}`;
+    const Description = project.description.substring(0, 160);
+    const stateObj = {};
+    window.history.pushState(stateObj, project.name, `/ecosystem/${project.name}`);
+
+    return () => {
+      document.title = prevTitle;
+      const CONTENT = document.getElementsByTagName("META") as any | null;
+      CONTENT[5].content = Description;
+    };
+  });
 
   return (
     <Box>

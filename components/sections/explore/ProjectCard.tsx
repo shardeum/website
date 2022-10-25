@@ -1,7 +1,7 @@
-import { LinkBox, LinkOverlay, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Link, LinkBox, LinkOverlay, Text, useBreakpointValue } from "@chakra-ui/react";
 import { getNumberWithSuffix } from "@shm/utils";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { CategoryBadge } from "./CategoryBadge";
 import { HorizontalTileButton } from "./Details/HorizontalTileButton";
 import NextLink from "next/link";
@@ -51,8 +51,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         fontSize={{ base: "md", sm: "md", lg: "lg" }}
         fontWeight={"bold"}
       >
-        <NextLink href={`/ecosystem/${projectId}`}>
-          <LinkOverlay>{title}</LinkOverlay>
+        <NextLink href={`/ecosystem/${projectId}`} passHref>
+          <LinkOverlay target="_blank">{title}</LinkOverlay>
         </NextLink>
       </Text>
       <HorizontalTileButton

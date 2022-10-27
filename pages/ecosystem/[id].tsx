@@ -42,6 +42,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
     const Description = project.description.substring(0, 160);
     const stateObj = {};
     window.history.pushState(stateObj, project.name, `/ecosystem/${project.name}`);
+    console.log(project);
 
     return () => {
       document.title = prevTitle;

@@ -149,6 +149,7 @@ export const getSHMProjects = (): Promise<{
                   dateCreated: projectDateCreated,
                   numUpvotes: projectUpvotes,
                   githubUrl: projectGithubURL,
+                  twiterUrl: "",
                 });
 
                 categoryCount[projectCategory] = categoryCount[projectCategory]
@@ -377,6 +378,7 @@ export const getProjectById = (
         const projectDateCreated = record.get("Created") as string;
         const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
         const projectGithub = (record.get("Project Github URL") as string) || "";
+        const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
         const project: Project = {
           id: projectId,
           name: projectName,
@@ -388,6 +390,7 @@ export const getProjectById = (
           dateCreated: projectDateCreated,
           numUpvotes: projectUpvotes,
           githubUrl: projectGithub,
+          twiterUrl: projectTwiterUrl,
         };
 
         if (!userId) {

@@ -182,6 +182,14 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
                 height={24}
               />
             </Link>
+            <Link href={project.twiterUrl}>
+              <Image
+                src="/community/icons/twitter.svg"
+                alt="community-logo"
+                width={24}
+                height={24}
+              />
+            </Link>
           </HStack>
 
           <Text color="brand.grey-60">

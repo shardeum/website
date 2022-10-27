@@ -28,6 +28,7 @@ export type Project = {
   dateCreated: Date | string; // Project Date Created
   numUpvotes: number; // Project Upvotes
   githubUrl: string; //github url
+  twiterUrl: string; //github url
 };
 
 export default Project;

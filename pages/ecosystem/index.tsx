@@ -107,7 +107,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   return (
     <>
       <ResponsiveHero
-        heading="Discover The dApp projects on shardeum"
+        heading="Explore the Shardeum Ecosystem"
         cta={
           <Button onClick={handleSubmitProject} variant="primary" size="lg" mt={8}>
             Submit your project

@@ -16,7 +16,8 @@ export const YOUTUBE_URL = "https://www.youtube.com/channel/UCO20LJZBF-lYbc6PWVv
 export const FAQ_URL =
   "https://docs.google.com/document/d/1RilXqwJN6hupaKdrXhk2RF9gl_DS5qY3uPm6iII3Xyg/edit?usp=sharing";
 export const SHARDEUM_LIBERTY_ALPHANET_URL = "/shardeum-liberty-alphanet";
-export const SUPERSHARDIAN_URL = "/super-shardian";
+// export const SUPERSHARDIAN_URL = "/super-shardian";
+export const SUPERSHARDIAN_URL = "https://trello.com/b/8d3aAQWj/super-shardian";
 export const BLOG_URL = "/blog";
 
 export const PUBLIC_DRIVE_LINK =

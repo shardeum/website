@@ -99,7 +99,7 @@ const linksArr = [
       {
         title: "supershardian",
         link: SUPERSHARDIAN_URL,
-        newPage: false,
+        newPage: true,
       },
     ],
   },

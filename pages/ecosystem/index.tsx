@@ -78,7 +78,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
     // if user is not signed in, take them to sign in page
-    if (!sessionObject) {
+    if (!sessionData) {
       // signIn("twitter");
       setPopup(true);
       return;
@@ -88,7 +88,7 @@ const Explore: NextPage<ExplorePageProps> = ({
     handleUpvoteProjectState(projectId, upvoted);
 
     // call the upvote project service
-    upvoteProject(projectId, sessionObject.user.id, upvoted)
+    upvoteProject(projectId, sessionData.user.id, upvoted)
       .then()
       .catch((err) => {
         console.error(err);
@@ -99,7 +99,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
 
   const handleSubmitProject = (): void => {
-    console.log(sessionObject);
+    console.log(sessionData);
     !sessionObject
       ? setPopup(true)
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");

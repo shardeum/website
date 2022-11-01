@@ -44,7 +44,6 @@ const Explore: NextPage<ExplorePageProps> = ({
   // to open signin window
   const { setPopup } = useContext(SigninContext);
   const { data: sessionData } = useSession();
-  console.log(sessionData);
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
@@ -99,7 +98,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
 
   const handleSubmitProject = (): void => {
-    console.log(sessionData);
+    console.log("ON click", sessionData);
     !sessionData
       ? setPopup(true)
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");

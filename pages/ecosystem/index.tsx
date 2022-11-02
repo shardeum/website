@@ -9,7 +9,7 @@ import TrendingProjects from "@shm/components/sections/explore/TrendingProjects"
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
 import { useTranslation } from "next-i18next";
 
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
@@ -43,6 +43,7 @@ const Explore: NextPage<ExplorePageProps> = ({
 }: ExplorePageProps) => {
   // to open signin window
   const { setPopup } = useContext(SigninContext);
+  const { data: sessionData } = useSession();
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
@@ -76,7 +77,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
     // if user is not signed in, take them to sign in page
-    if (!sessionObject) {
+    if (!sessionData) {
       // signIn("twitter");
       setPopup(true);
       return;
@@ -86,7 +87,7 @@ const Explore: NextPage<ExplorePageProps> = ({
     handleUpvoteProjectState(projectId, upvoted);
 
     // call the upvote project service
-    upvoteProject(projectId, sessionObject.user.id, upvoted)
+    upvoteProject(projectId, sessionData.user.id, upvoted)
       .then()
       .catch((err) => {
         console.error(err);
@@ -97,7 +98,8 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
 
   const handleSubmitProject = (): void => {
-    !sessionObject
+    console.log("ON click", sessionData);
+    !sessionData
       ? setPopup(true)
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
   };
@@ -105,7 +107,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   return (
     <>
       <ResponsiveHero
-        heading="Discover The dApp projects on shardeum"
+        heading="Explore the Shardeum Ecosystem"
         cta={
           <Button onClick={handleSubmitProject} variant="primary" size="lg" mt={8}>
             Submit your project

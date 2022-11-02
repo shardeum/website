@@ -16,7 +16,8 @@ export const YOUTUBE_URL = "https://www.youtube.com/channel/UCO20LJZBF-lYbc6PWVv
 export const FAQ_URL =
   "https://docs.google.com/document/d/1RilXqwJN6hupaKdrXhk2RF9gl_DS5qY3uPm6iII3Xyg/edit?usp=sharing";
 export const SHARDEUM_LIBERTY_ALPHANET_URL = "/shardeum-liberty-alphanet";
-export const SUPERSHARDIAN_URL = "/super-shardian";
+// export const SUPERSHARDIAN_URL = "/super-shardian";
+export const SUPERSHARDIAN_URL = "https://trello.com/b/8d3aAQWj/super-shardian";
 export const BLOG_URL = "/blog";
 
 export const PUBLIC_DRIVE_LINK =
@@ -26,4 +27,4 @@ export const GENERAL_QUERIES_LINK = "mailto:hi@shardeum.org";
 export const INVESTMENT_QUERY_LINK = "mailto:invest@shardeum.org";
 export const CROWDIN_PROJECT_LINK = "https://crowdin.com/project/shardeumtranslation";
 export const CLAIM_100_SHM_LINK = "https://docs.shardeum.org/faucet/claim";
-export const EXPLORER_LIBERTY_URL = "https://explorer.liberty10.shardeum.org/";
+export const EXPLORER_LIBERTY_URL = "https://explorer-liberty10.shardeum.org/";

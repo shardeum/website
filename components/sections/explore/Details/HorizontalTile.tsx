@@ -173,15 +173,21 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
           mt="6"
         >
           <HStack columnGap={3}>
-            <ShareLinkIcon />
-            <Link href={project.githubUrl}>
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => window.open(project.website, "_blank")}
+            >
+              <ShareLinkIcon />
+            </div>
+            <div style={{ cursor: "pointer", marginTop: "6px" }}>
               <Image
-                src="/community/icons/github.svg"
+                onClick={() => window.open(project.twiterUrl, "_blank")}
+                src="/community/icons/twitter.svg"
                 alt="community-logo"
                 width={24}
                 height={24}
               />
-            </Link>
+            </div>
           </HStack>
 
           <Text color="brand.grey-60">

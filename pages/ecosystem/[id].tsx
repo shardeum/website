@@ -41,7 +41,8 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
     document.title = `Shardeum | Ecosystem | ${project.name}`;
     const Description = project.description.substring(0, 160);
     const stateObj = {};
-    window.history.pushState(stateObj, project.name, `/ecosystem/${project.name}`);
+    const ProjectName = project.name.replace(/ /g, "-");
+    window.history.pushState(stateObj, project.name, `/ecosystem/${ProjectName}`);
     console.log(project);
 
     return () => {

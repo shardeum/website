@@ -180,7 +180,7 @@ const SHMTokenomics = () => {
               {commonTranslation("investment-newsletter-title")}
             </Text>
           </VStack>
-          <NewsletterInput type="investment" />
+          <NewsletterInput type="newsletterHero" />
         </VStack>
       </Container>
     </Box>

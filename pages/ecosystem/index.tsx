@@ -47,6 +47,9 @@ const Explore: NextPage<ExplorePageProps> = ({
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
+  const [projectSort, setProjectSort] = useState(projects);
+  const [projectSortUpvote, setProjectSortUpvote] = useState(projects);
+  const [projectSortDate, setProjectSortDate] = useState(projects);
   const [upvotedProjectsMap, setUpvotedProjectsMap] = useState(() => {
     return upvotedProjectIds.reduce((acc: Record<string, boolean>, projectId) => {
       acc[projectId] = true;
@@ -104,6 +107,42 @@ const Explore: NextPage<ExplorePageProps> = ({
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
   };
 
+  const sort = () => {
+    projectSort.sort(function (a, b) {
+      const nA = a.name.toLowerCase();
+      const nB = b.name.toLowerCase();
+
+      if (nA < nB) return -1;
+      else if (nA > nB) return 1;
+      return 0;
+    });
+  };
+  sort();
+
+  const sortUpvote = () => {
+    projectSortUpvote.sort(function (a, b) {
+      const nA = a.numUpvotes;
+      const nB = b.numUpvotes;
+
+      if (nA < nB) return -1;
+      else if (nA > nB) return 1;
+      return 0;
+    });
+  };
+  sortUpvote();
+
+  const sortDate = () => {
+    projectSortUpvote.sort(function (a, b) {
+      const nA = a.dateCreated;
+      const nB = b.dateCreated;
+
+      if (nA < nB) return -1;
+      else if (nA > nB) return 1;
+      return 0;
+    });
+  };
+  sortDate();
+
   return (
     <>
       <ResponsiveHero
@@ -116,7 +155,7 @@ const Explore: NextPage<ExplorePageProps> = ({
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projects.length > 0 && (
+      {projectSort.length > 0 && (
         <ProjectsList
           projects={projectsState}
           categories={categories}
@@ -124,14 +163,14 @@ const Explore: NextPage<ExplorePageProps> = ({
           onUpvoteProject={onUpvoteProject}
         />
       )}
-      {projects.length > 0 && (
+      {projectSortUpvote.length > 0 && (
         <TrendingProjects
           projects={projectsState}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />
       )}
-      {projects.length > 0 && (
+      {projectSortDate.length > 0 && (
         <NewestProjects
           projects={projectsState}
           upvoteMap={upvotedProjectsMap}

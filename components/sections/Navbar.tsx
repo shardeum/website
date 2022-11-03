@@ -182,7 +182,10 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         }}
       >
         <a href={EVENTBRITE} target="_blank" rel="noreferrer">
-          <b>This is a demo alert for shardeum website !</b>
+          <b>
+            {" "}
+            Shardeum&apos;22 Q3 Update: Autoscaling Demo on 5 Nov 2022, 3 PM UTC. Register Now !{" "}
+          </b>
         </a>
       </div>
     );

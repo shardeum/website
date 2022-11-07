@@ -136,7 +136,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       setIsauthVisible(false);
     }
 
-    const specific_date = new Date("04/11/2022"); // TODO Need to do it dinamic
+    const specific_date = new Date("30/11/2022"); // TODO Need to do it dinamic
     const current_date = formatDate(new Date());
 
     if (current_date.getTime() > specific_date.getTime()) {

@@ -136,7 +136,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       setIsauthVisible(false);
     }
 
-    const specific_date = new Date("04/11/2022"); // TODO Need to do it dinamic
+    const specific_date = new Date("12/11/2022"); // TODO Need to do it dinamic
     const current_date = formatDate(new Date());
 
     if (current_date.getTime() > specific_date.getTime()) {
@@ -193,9 +193,9 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
 
   return (
     <>
-      <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
+      {/* <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
         {hideNoti === false ? <NotificationBar /> : null}
-      </div>
+      </div> */}
       <Flex
         bg={mode === "light" ? "brand.white" : "brand.black"}
         w="100%"

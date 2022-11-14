@@ -44,7 +44,7 @@ const ResponsiveHero = ({
           >
             <Flex direction="column">
               <Text
-                as="h2"
+                as="h1"
                 textAlign="left"
                 lineHeight="normal"
                 fontSize={{ base: "4xl", sm: "6xl", lg: "7xl" }}

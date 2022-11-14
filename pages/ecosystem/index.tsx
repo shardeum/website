@@ -119,6 +119,8 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
   sort();
 
+  console.log(projectSort);
+
   const sortUpvote = () => {
     projectSortUpvote.sort(function (a, b) {
       const nA = a.numUpvotes;

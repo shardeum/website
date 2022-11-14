@@ -60,17 +60,19 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         heading={pageTranslation("page-community-hero-h1")}
         description={pageTranslation("page-community-hero-description")}
         cta={
-          <Button
-            as="a"
-            variant="primary"
-            size="lg"
-            rel="noopener noreferrer"
-            target="_blank"
-            href={DISCORD_URL}
-            mt={8}
-          >
-            {pageTranslation("page-community-hero-cta")}
-          </Button>
+          <>
+            <Button
+              as="a"
+              variant="primary"
+              size="lg"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={DISCORD_URL}
+              mt={8}
+            >
+              {pageTranslation("page-community-hero-cta")}
+            </Button>
+          </>
         }
         src={"/community/community-hero.png"}
       />

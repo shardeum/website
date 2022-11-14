@@ -42,7 +42,7 @@ const Hero = ({
                 alignItems="start"
               >
                 <Text
-                  as="h2"
+                  as="h1"
                   textAlign="left"
                   lineHeight="normal"
                   fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}

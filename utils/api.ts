@@ -413,3 +413,34 @@ export const getProjectById = (
       });
   });
 };
+
+// export const getNotificationById = () => {
+//   configureAirtable();
+//   const base = Airtable.base(process.env.SHARDEUM_EXPLORE_BASE_ID as string);
+
+//   return new Promise((resolve, reject) => {
+//     base('Notification')
+//     .select({
+//       view: "Grid view",
+//     })
+//     .eachPage(function page(records) {
+//       records.forEach(function (record) {
+//         try {
+//           const projectId = record.getId();
+//           const projectText = record.get("text") as string;
+//           const projectdate = record.get("date") as string;
+//           const project = {
+//             id: projectId,
+//             text: projectText,
+//             date: projectdate,
+//           };
+
+//           return resolve(project);
+//         } catch (err) {
+//           console.error(err);
+//           reject(err);
+//         }
+//       });
+//     });
+//   });
+// };

@@ -74,10 +74,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               mx="auto"
               transform={{ md: "scale(1)" }}
             >
-              <video loop muted autoPlay playsInline>
-                <source src="/hero-globe.mp4" type="video/mp4" />
-                <Image src="/hero-globe-image.png" width="660px" height="660px" />
-              </video>
+              <Image src="/hero-globe-image.png" width="660px" height="660px" />
             </Box>
           </Box>
         }

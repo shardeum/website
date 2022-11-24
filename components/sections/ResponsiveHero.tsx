@@ -11,6 +11,7 @@ type HeroProps = {
   bg?: string;
   titleColor?: string;
   descColor?: string;
+  breadcrumb?: any;
 };
 
 const ResponsiveHero = ({
@@ -21,6 +22,7 @@ const ResponsiveHero = ({
   titleColor,
   descColor,
   respHeroImg,
+  breadcrumb,
 }: HeroProps) => {
   const router = useRouter();
   const renderIcon = (src: string) => {
@@ -43,6 +45,14 @@ const ResponsiveHero = ({
             gap={{ base: "none", lg: "10" }}
           >
             <Flex direction="column">
+              <Text
+                fontSize={{ base: "md", lg: "xl" }}
+                textAlign="left"
+                lineHeight={{ base: "7", md: "8" }}
+                color={descColor || "brand.grey-20"}
+              >
+                {breadcrumb}
+              </Text>
               <Text
                 as="h1"
                 textAlign="left"

@@ -9,6 +9,11 @@ interface Props {
   descriptionColor?: string;
   titleFontWeight: "normal" | "semibold" | "medium" | "bold";
 }
+
+function createMarkup(c: any) {
+  return { __html: c };
+}
+
 const Feature = ({
   title,
   description,
@@ -20,10 +25,10 @@ const Feature = ({
 }: Props) => (
   <VStack spacing={4} alignItems="start">
     <Text as="h5" fontSize={titleSize} color={titleColor} fontWeight={titleFontWeight}>
-      {title}
+      <div dangerouslySetInnerHTML={createMarkup(title)}></div>
     </Text>
     <Text as="p" color={descriptionColor} fontSize={descriptionSize}>
-      {description}
+      <div dangerouslySetInnerHTML={createMarkup(description)}></div>
     </Text>
   </VStack>
 );

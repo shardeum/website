@@ -1,4 +1,19 @@
-import { Box, Container, Flex, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  SimpleGrid,
+  Text,
+  VStack,
+  FormControl,
+  FormHelperText,
+  IconButton,
+  Input,
+  InputGroup,
+  InputRightAddon,
+  LightMode,
+} from "@chakra-ui/react";
+
 import Link from "next/link";
 import Logo from "../common/Logo";
 import {
@@ -13,12 +28,71 @@ import {
   CLAIM_100_SHM_LINK,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
+import useNewsLetterForm from "../../hooks/useNewsletter";
+import Feature from "../common/Feature";
+import { IconRightArrow } from "../common/Icons";
+
+const JoinNewsletterComp = () => {
+  const {
+    form: { error, status, success, value },
+    handleOnChange,
+    handleSubmit,
+  } = useNewsLetterForm();
+  const { t: pageTranslation } = useTranslation(["common"]);
+
+  return (
+    <VStack py="6" px="0" bgColor="#101010" w="full" alignItems="start" spacing="6">
+      <Feature
+        title={pageTranslation("join-newsletter-title-footer")}
+        description={pageTranslation("join-newsletter-desc")}
+      />
+      <FormControl isInvalid={!!error}>
+        <LightMode>
+          <InputGroup>
+            <Input
+              placeholder={pageTranslation("your-email")}
+              type="email"
+              name="email"
+              onChange={handleOnChange}
+              value={value}
+            />
+            <InputRightAddon
+              onClick={() => handleSubmit(["newsletterBottom"])}
+              children={
+                <LightMode>
+                  <IconButton
+                    variant="secondary"
+                    p="5"
+                    icon={<IconRightArrow />}
+                    h="full"
+                    px="4"
+                    aria-label="Submit Button"
+                    isLoading={status === "loading"}
+                  />
+                </LightMode>
+              }
+            />
+          </InputGroup>
+        </LightMode>
+        {error ? (
+          <FormHelperText fontWeight="medium" color="red">
+            {error}
+          </FormHelperText>
+        ) : success ? (
+          <FormHelperText fontWeight="medium" color="green">
+            Subscribed! Stay tuned for SHM updates in your inbox ;)
+          </FormHelperText>
+        ) : null}
+      </FormControl>
+    </VStack>
+  );
+};
 
 const LinksMap = {
   General: [
     { title: "home", href: "/" },
     { title: "the-community", href: COMMUNITY_URL },
-    { title: "blog", href: BLOG_URL },
+    { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
     { title: "Privacy Policy", href: "/privacy-policy/", target: "" },
@@ -49,6 +123,7 @@ function Footer() {
                 <Logo />
               </Box>
             </Link>
+            <JoinNewsletterComp />
             <Text color="brand.grey-50" display={{ base: "none", md: "block" }}>
               Copyright &copy; Shardeum {new Date().getFullYear()}
             </Text>

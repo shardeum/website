@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Script from "next/script";
 import { useRouter } from "next/router";
+import NextLink from "next/link";
 
 const Carrers: NextPage = () => {
   const router = useRouter();
@@ -55,6 +56,16 @@ const Carrers: NextPage = () => {
         <Hero
           heading="Help us build Shardeum!"
           description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
+          breadcrumb={
+            <>
+              <p>
+                <NextLink href="/" passHref>
+                  Home
+                </NextLink>{" "}
+                / Careers
+              </p>
+            </>
+          }
         />
       )}
       <Flex bg="brand.white" as="section">

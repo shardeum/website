@@ -14,6 +14,24 @@ export default function Document() {
             `,
           }}
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<script type="application/ld+json">
+            {
+            @context: "https://schema.org",
+            @type: "Organization",
+            name: "Shardeum",
+            url: "https://shardeum.org/",
+            logo: "https://shardeum.org/blog/wp-content/uploads/2022/06/main-logo.svg",
+            sameAs: [
+            https://twitter.com/shardeum,
+            https://github.com/shardeum/,
+            https://shardeum.org/
+            ]
+            }
+            </script>`,
+          }}
+        ></script>
       </Head>
       <body>
         <Main />

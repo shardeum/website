@@ -8,6 +8,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { NextSeo } from "next-seo";
 import { Shardian } from "types";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
+import NextLink from "next/link";
 
 const initialButtonCategories = [{ name: "All", selected: true }];
 
@@ -85,6 +86,16 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
       <ResponsiveHero
         heading={ssTranslation("page-super-shardian-heading")}
         description={ssTranslation("page-super-shardian-description")}
+        breadcrumb={
+          <>
+            <p>
+              <NextLink href="/" passHref>
+                Home
+              </NextLink>{" "}
+              / Super Shardian
+            </p>
+          </>
+        }
         src="/supershardian.png"
       />
       <Shardians

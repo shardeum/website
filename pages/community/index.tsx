@@ -10,6 +10,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getCommunityStats } from "utils/api";
 import { CommunityStat } from "types";
 import CommunitySuperShardianBox from "@shm/components/sections/community/CommunitySuperShardianBox";
+import NextLink from "next/link";
 
 const Community = ({ communityStats }: { communityStats: CommunityStat[] }): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-community");
@@ -59,6 +60,16 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
       <ResponsiveHero
         heading={pageTranslation("page-community-hero-h1")}
         description={pageTranslation("page-community-hero-description")}
+        breadcrumb={
+          <>
+            <p>
+              <NextLink href="/" passHref>
+                Home
+              </NextLink>{" "}
+              / Community
+            </p>
+          </>
+        }
         cta={
           <>
             <Button

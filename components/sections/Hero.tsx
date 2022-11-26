@@ -15,6 +15,7 @@ type HeroProps = {
   bg?: string;
   titleColor?: string;
   descColor?: string;
+  breadcrumb?: any;
 };
 
 const Hero = ({
@@ -25,6 +26,7 @@ const Hero = ({
   bg,
   titleColor,
   descColor,
+  breadcrumb,
   ...args
 }: HeroProps) => {
   const router = useRouter();
@@ -41,6 +43,14 @@ const Hero = ({
                 maxW={{ base: "md", md: "lg", lg: "full" }}
                 alignItems="start"
               >
+                <Text
+                  fontSize={{ base: "md", lg: "xl" }}
+                  textAlign="left"
+                  lineHeight={{ base: "7", md: "8" }}
+                  color={descColor || "brand.grey-20"}
+                >
+                  {breadcrumb}
+                </Text>
                 <Text
                   as="h1"
                   textAlign="left"

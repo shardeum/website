@@ -1,15 +1,15 @@
 {
   "page-home-shardeum-home-title": "Shardeum features",
   "shm-feature-1-title": "EVM-based layer 1 blockchain",
-  "shm-feature-1-desc": "Any dApp that can run on the Ethereum Virtual Machine will seamlessly run on Shardeum.",
+  "shm-feature-1-desc": "Any <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-decentralized-applications/' target='_blank' >dApp</a> that can run on the <a style='color:#ec5c28' href='https://shardeum.org/blog/ethereum-virtual-machine-evm-simplified/' target='_blank' >Ethereum Virtual</a> Machine will seamlessly run on Shardeum.",
   "shm-feature-2-title": "Linear scalability & low gas forever",
-  "shm-feature-2-desc": "Every node that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
+  "shm-feature-2-desc": "Every <a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-a-blockchain-node/' target='_blank' >node</a> that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
   "shm-feature-3-title": "Anyone can operate a node",
   "shm-feature-3-desc": "Hardware requirements to operate a validator node are kept low by offloading historical data to archive nodes and adding more nodes to reduce the load on each validator.",
   "shm-feature-4-title": "Immediate finality & low latency",
   "shm-feature-4-desc": "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
   "shm-feature-5-title": "Solid security",
-  "shm-feature-5-desc": "A leaderless Proof-of-Quorum (PoQ) consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
+  "shm-feature-5-desc": "A leaderless <a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-proof-of-stake/' target='_blank' >Proof-of-Quorum (PoQ)</a> consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
   "shm-feature-6-title": "High fairness & energy efficiency",
   "shm-feature-6-desc": "Shardeum processes transactions on a first-come, first-served basis, with the same gas rate for all transactions to ensure fairness and eliminate miner extractable value. As a PoS network, Shardeum is energy efficient and sustainable.",
   "roadmap": "Roadmap",
@@ -59,11 +59,11 @@
   "use-case-1-title": "P2P transfers",
   "use-case-1-desc": "Shardeum enables users to transfer value across the internet with no intermediaries while always retaining extremely low fees and immediate finality.",
   "use-case-2-title": "DeFi",
-  "use-case-2-desc": "High gas fees and low throughput bottleneck the current DeFi landscape. Shardeum provides a platform for scalable DeFi infrastructure with very low gas costs, making it affordable to both businesses and individuals.",
+  "use-case-2-desc": "High <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-gas-fees/' target='_blank' >gas fees</a> and low throughput bottleneck the current <a style='color:#ec5c28' href='https://shardeum.org/blog/basics-of-defi/' target='_blank' >DeFi</a> landscape. Shardeum provides a platform for scalable <a style='color:#ec5c28' href='https://shardeum.org/blog/basics-of-defi/' target='_blank' >DeFi</a> infrastructure with very low gas costs, making it affordable to both businesses and individuals.",
   "use-case-3-title": "EVM dApps",
-  "use-case-3-desc": "Shardeum is EVM-based. Contracts can be written in Solidity or Vyper and use the same Ethereum tooling such as Remix and Truffle. Join the Shardeum ecosystem, where users never have to worry about rising gas fees again.",
+  "use-case-3-desc": "Shardeum is EVM-based. Contracts can be written in <a style='color:#ec5c28' href='https://shardeum.org/blog/solidity-data-types/' target='_blank' >Solidity</a> or Vyper and use the same Ethereum tooling such as Remix and Truffle. Join the Shardeum ecosystem, where users never have to worry about rising <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-gas-fees/' target='_blank' >gas fees</a> again.",
   "use-case-4-title": "NFTs",
   "use-case-4-desc": "NFTs, assets that represent ownership of digitally unique items, have multitudes of applications ranging from real estate, digital certificates and IP rights to digital identities. NFTs on Shardeum will be fast, interoperable and user-friendly.",
   "use-case-5-title": "Web 3.0",
-  "use-case-5-desc": "Web 3.0, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to Web 3.0 by providing a platform that enables decentralized UI & UX which will be superior to that of centralized peers."
+  "use-case-5-desc": "<a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-web-3-and-why-is-it-important/' target='_blank' >Web 3.0</a>, or the Internet of Value, is the next iteration of the internet. Shardeum aims to accelerate the transition to <a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-web-3-and-why-is-it-important/' target='_blank' >Web 3.0</a> by providing a platform that enables decentralized UI & UX which will be superior to that of centralized peers."
 }

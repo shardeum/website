@@ -15,10 +15,12 @@ import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-// define page props type
-export type ExplorePageProps = InferGetServerSidePropsType<typeof getStaticProps>;
+import { useRouter } from "next/router";
 
-export const getStaticProps = async ({ req, locale }: GetServerSidePropsContext) => {
+// define page props type
+export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
+
+export const getServerSideProps = async ({ req }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
 
   const { projects, categories } = await getSHMProjects();
@@ -26,7 +28,7 @@ export const getStaticProps = async ({ req, locale }: GetServerSidePropsContext)
   return {
     // Will be passed to the page component as props
     props: {
-      ...(await serverSideTranslations(locale as string, ["common", "page-alphanet"])),
+      // ...(await serverSideTranslations(locale as string, ["common", "page-alphanet"])),
       projects,
       categories,
       upvotedProjectIds: upvotedProjectsData?.upvotedProjectIds ?? [],
@@ -41,9 +43,16 @@ const Explore: NextPage<ExplorePageProps> = ({
   upvotedProjectIds = [],
   sessionObject,
 }: ExplorePageProps) => {
+  const router = useRouter();
+
   // to open signin window
   const { setPopup } = useContext(SigninContext);
-  const { data: sessionData } = useSession();
+  // get session from hook
+  const { data: session } = useSession();
+  // if user was previously not signed in, but has signed in now, do a reload
+  if (!sessionObject && session) router.reload();
+
+  // const { data: sessionData } = useSession();
 
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
@@ -80,7 +89,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
     // if user is not signed in, take them to sign in page
-    if (!sessionData) {
+    if (!sessionObject) {
       // signIn("twitter");
       setPopup(true);
       return;
@@ -90,7 +99,7 @@ const Explore: NextPage<ExplorePageProps> = ({
     handleUpvoteProjectState(projectId, upvoted);
 
     // call the upvote project service
-    upvoteProject(projectId, sessionData.user.id, upvoted)
+    upvoteProject(projectId, sessionObject.user.id, upvoted)
       .then()
       .catch((err) => {
         console.error(err);
@@ -101,8 +110,8 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
 
   const handleSubmitProject = (): void => {
-    console.log("ON click", sessionData);
-    !sessionData
+    console.log("ON click", sessionObject);
+    !sessionObject
       ? setPopup(true)
       : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
   };

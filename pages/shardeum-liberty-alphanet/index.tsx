@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Flex, Center, Text, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, Stack, Flex, Center, Text, SimpleGrid, Link } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import JoinCommunity from "components/sections/JoinCommunity";
@@ -14,6 +14,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
 import SlidingStats from "@shm/components/common/SlidingStats";
 import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
+import NextLink from "next/link";
 
 const AlphanetLanding: NextPage = () => {
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
@@ -74,33 +75,98 @@ const AlphanetLanding: NextPage = () => {
       <Hero
         heading={pageTranslation("page-alphanet-hero-h1")}
         description={pageTranslation("page-alphanet-hero-description")}
+        breadcrumb={
+          <>
+            <p>
+              <NextLink href="/" passHref>
+                Home
+              </NextLink>{" "}
+              / Shardeum Liberty (Alphanet)
+            </p>
+          </>
+        }
         cta={
-          <Stack
-            spacing="4"
-            direction={{ base: "column", sm: "row" }}
-            width={{ base: "full", sm: "auto" }}
-          >
-            <Button
-              as="a"
-              variant="secondary"
-              size="lg"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={DOCS_URL}
+          <>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `<script type="application/ld+json">	
+                {	
+                @context: "https://schema.org",	
+                @type: "FAQPage",	
+                mainEntity: [{	
+                @type: "Question",	
+                name: "What is Shardeum?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "Shardeum is an EVM-based sharded layer 1 blockchain that uses dynamic state sharding to increase transactions per second (TPS) with the addition of every new node."	
+                }	
+                },{	
+                @type: "Question",	
+                name: "Who will use Shardeum?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "Shardeum aims to be capable of onboarding over a billion people to Web 3.0. Like the Internet, Shardeum is Open, Collaborative, and Community-driven with a mission to provide decentralization for everyone."	
+                }	
+                },{	
+                @type: "Question",	
+                name: "What languages can be used to write smart contracts on the Shardeum network?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "EVM-compatible languages can be used to compile smart contracts; this includes Solidity and Vyper."	
+                }	
+                },{	
+                @type: "Question",	
+                name: "How can I contribute to Liberty as a developer?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "You can build and deploy smart contracts on Liberty by following the developer documentation. List your smart contract here to publicize it among the community and become a leader in the Shardeum ecosystem. Pro-tip: If you already have a smart contract deployed on Ethereum, you can migrate it to Liberty within seconds."	
+                }	
+                },{	
+                @type: "Question",	
+                name: "How can the community get involved with Liberty?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "Everyone in the Shardeum community can add the Liberty network to their wallet, request testnet SHM from the faucet and interact with smart contracts."	
+                }	
+                },{	
+                @type: "Question",	
+                name: "I already have a smart contract deployed on Ethereum. Can I easily migrate it to Liberty?",	
+                acceptedAnswer: {	
+                @type: "Answer",	
+                text: "Since Shardeum is EVM-based, it's as simple as deploying your existing code to the Shardeum network. If you have built for Ethereum, you have built for Shardeum."	
+                }	
+                }]	
+                }	
+                </script>	`,
+              }}
+            ></script>
+            <Stack
+              spacing="4"
+              direction={{ base: "column", sm: "row" }}
+              width={{ base: "full", sm: "auto" }}
             >
-              {pageTranslation("page-alphanet-hero-cta")}
-            </Button>
-            <Button
-              as="a"
-              variant="primary"
-              size="lg"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={CLAIM_100_SHM_LINK}
-            >
-              {commonTranslation("claim-100-shm-cta")}
-            </Button>
-          </Stack>
+              <Button
+                as="a"
+                variant="secondary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={DOCS_URL}
+              >
+                {pageTranslation("page-alphanet-hero-cta")}
+              </Button>
+              <Button
+                as="a"
+                variant="primary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={CLAIM_100_SHM_LINK}
+              >
+                {commonTranslation("claim-100-shm-cta")}
+              </Button>
+            </Stack>
+          </>
         }
         media={
           <Box position="relative" h="full">

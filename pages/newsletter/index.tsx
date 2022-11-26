@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsletterInput from "../../components/common/NewsletterInput";
 import JoinCommunity from "../../components/sections/JoinCommunity";
+import NextLink from "next/link";
 
 function Newsletter() {
   const { t: pageTranslation } = useTranslation("page-newsletter");
@@ -24,6 +25,19 @@ function Newsletter() {
             mx="auto"
             w="full"
           >
+            <Text
+              fontSize={{ base: "md", lg: "xl" }}
+              textAlign="left"
+              lineHeight={{ base: "7", md: "8" }}
+              color={"brand.grey-20"}
+            >
+              <p>
+                <NextLink href="/" passHref>
+                  Home
+                </NextLink>{" "}
+                / Newsletter
+              </p>
+            </Text>
             <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
               {pageTranslation("page-newsletter-newsletter-title")}
             </Text>

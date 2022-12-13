@@ -82,17 +82,21 @@ export const ProjectsList: FC<ProjectsListProps> = ({
             ? filteredProjects
                 .slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
                 ?.map((item) => (
-                  <ProjectCard
-                    key={item.name}
-                    projectId={item.id}
-                    imageURL={item.logo}
-                    title={item.name}
-                    category={item.category}
-                    description={item.description}
-                    userUpvotedState={upvoteMap[item.id]}
-                    onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}
-                    upvoteCount={item.numUpvotes}
-                  />
+                  <>
+                    {item.status === "accepted" ? (
+                      <ProjectCard
+                        key={item.name}
+                        projectId={item.id}
+                        imageURL={item.logo}
+                        title={item.name}
+                        category={item.category}
+                        description={item.description}
+                        userUpvotedState={upvoteMap[item.id]}
+                        onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}
+                        upvoteCount={item.numUpvotes}
+                      />
+                    ) : null}
+                  </>
                 ))
             : null}
         </Flex>

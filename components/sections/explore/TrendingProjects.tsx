@@ -84,17 +84,21 @@ export const TrendingProjects: FC<TrendingProjectsProps> = ({
 
         <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr", md: "1fr" }} gap={4}>
           {filteredAndSlicedProjects.map((project) => (
-            <ProjectSectionCard
-              key={project.id}
-              id={project.id}
-              title={project.name}
-              category={project.category}
-              description={project.description}
-              upvotes={project.numUpvotes}
-              logo={project.logo}
-              isUpvoted={upvoteMap[project.id]}
-              onUpvoteButtonClicked={(upvoted) => onUpvoteProject(project.id, upvoted)}
-            />
+            <>
+              {project.status === "accepted" ? (
+                <ProjectSectionCard
+                  key={project.id}
+                  id={project.id}
+                  title={project.name}
+                  category={project.category}
+                  description={project.description}
+                  upvotes={project.numUpvotes}
+                  logo={project.logo}
+                  isUpvoted={upvoteMap[project.id]}
+                  onUpvoteButtonClicked={(upvoted) => onUpvoteProject(project.id, upvoted)}
+                />
+              ) : null}
+            </>
           ))}
         </Grid>
       </Container>

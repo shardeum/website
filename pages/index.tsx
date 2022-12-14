@@ -3,7 +3,7 @@ import { IconDApps, IconNFTs, IconP2P_Transfer, IconWeb3 } from "@shm/Icons";
 import SlidingStats from "components/common/SlidingStats";
 import Hero from "components/sections/Hero";
 import ReadWhitepaper from "components/sections/home/ReadWhitepaper";
-import Roadmap from "components/sections/home/Roadmap";
+import RoadmapFull from "components/sections/home/RoadMapFull";
 import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import JoinCommunity from "components/sections/JoinCommunity";
@@ -129,7 +129,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         ]}
       />
 
-      <Roadmap />
+      <RoadmapFull />
       <Team />
       <ShardeumInNews news={news} />
       <JoinCommunity />

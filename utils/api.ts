@@ -136,6 +136,7 @@ export const getSHMProjects = (): Promise<{
               const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               const projectGithubURL = (record.get("Project Github URL") as string) || "";
+              const status = (record.get("Status") as string) || "pending";
 
               if (projectName) {
                 data.push({
@@ -150,6 +151,7 @@ export const getSHMProjects = (): Promise<{
                   numUpvotes: projectUpvotes,
                   githubUrl: projectGithubURL,
                   twiterUrl: "",
+                  status: status,
                 });
 
                 categoryCount[projectCategory] = categoryCount[projectCategory]
@@ -379,6 +381,7 @@ export const getProjectById = (
         const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
         const projectGithub = (record.get("Project Github URL") as string) || "";
         const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
+        const status = (record.get("Status") as string) || "pending";
         const project: Project = {
           id: projectId,
           name: projectName,
@@ -391,6 +394,7 @@ export const getProjectById = (
           numUpvotes: projectUpvotes,
           githubUrl: projectGithub,
           twiterUrl: projectTwiterUrl,
+          status: status,
         };
 
         if (!userId) {

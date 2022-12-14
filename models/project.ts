@@ -29,6 +29,7 @@ export type Project = {
   numUpvotes: number; // Project Upvotes
   githubUrl: string; //github url
   twiterUrl: string; //github url
+  status: string; //github url
 };
 
 export default Project;

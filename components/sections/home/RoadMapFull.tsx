@@ -1,10 +1,9 @@
-import { Show, Box, Container, Button, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import { Show, Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { CalendarIcon } from "@chakra-ui/icons";
-import NextLink from "next/link";
 
 const roadmapList = [
   {
@@ -41,15 +40,72 @@ const roadmapList = [
     title: "phase-3-title",
     sections: [
       {
-        description: "....",
-        taskList: [],
+        description: "phase-3-desc",
+        taskList: ["phase-3-task-list-1", "phase-3-task-list-2", "phase-3-task-list-3"],
       },
       {
-        description: "",
+        description: "phase-3-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2022, 4, 1),
     quarterEndDate: new Date(2022, 6, 30),
+  },
+  {
+    title: "phase-4-title",
+    sections: [
+      {
+        description: "phase-4-desc",
+        taskList: [
+          "phase-4-task-list-1",
+          "phase-4-task-list-2",
+          "phase-4-task-list-3",
+          "phase-4-task-list-4",
+          "phase-4-task-list-5",
+        ],
+
+        launchItems: [],
+      },
+      {
+        description: "phase-4-secondary-desc",
+      },
+    ],
+    quarterStartDate: new Date(2022, 7, 1),
+    quarterEndDate: new Date(2022, 9, 30),
+  },
+  {
+    title: "phase-5-title",
+    sections: [
+      {
+        description: "phase-5-desc",
+        taskList: [
+          "phase-5-task-list-1",
+          "phase-5-task-list-2",
+          "phase-5-task-list-3",
+          "phase-5-task-list-4",
+        ],
+        launchItems: [],
+      },
+      // {
+      //   description: "phase-5-secondary-desc",
+      // },
+    ],
+    quarterStartDate: new Date(2022, 10, 1),
+    quarterEndDate: new Date(2022, 12, 31),
+  },
+  {
+    title: "phase-6-title",
+    sections: [
+      {
+        description: "phase-6-desc",
+        taskList: ["phase-6-task-list-1", "phase-6-task-list-2"],
+        launchItems: [],
+      },
+      // {
+      //   description: "phase-5-secondary-desc",
+      // },
+    ],
+    quarterStartDate: new Date(2023, 1, 1),
+    quarterEndDate: new Date(2023, 3, 31),
   },
 ];
 
@@ -86,7 +142,7 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
   }
 };
 
-function Roadmap() {
+function RoadmapFull() {
   const { t: pageTranslation } = useTranslation(["page-home", "common"]);
 
   return (
@@ -173,20 +229,6 @@ function Roadmap() {
                 </VerticalTimelineElement>
               );
             })}
-            <Button
-              variant="primary"
-              px="10"
-              h="56px"
-              margin="0"
-              border="0"
-              fontSize="base"
-              w={{ base: "full", md: "auto" }}
-              borderColor="transparent"
-            >
-              <NextLink href="/roadmap" passHref>
-                View Full Road Map
-              </NextLink>
-            </Button>
           </VerticalTimeline>
         </VStack>
       </Container>
@@ -194,4 +236,4 @@ function Roadmap() {
   );
 }
 
-export default Roadmap;
+export default RoadmapFull;

@@ -61,8 +61,8 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
 
         <GridItem>
           <Heading as="h3" fontSize="lg">
-            <NextLink href={`/ecosystem/${id}`}>
-              <LinkOverlay>{title}</LinkOverlay>
+            <NextLink href={`/ecosystem/${id}`} passHref>
+              <LinkOverlay target="_blank">{title}</LinkOverlay>
             </NextLink>
           </Heading>
         </GridItem>

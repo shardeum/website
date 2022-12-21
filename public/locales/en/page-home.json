@@ -1,7 +1,7 @@
 {
   "page-home-shardeum-home-title": "Shardeum features",
   "shm-feature-1-title": "EVM-based layer 1 blockchain",
-  "shm-feature-1-desc": "Any <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-decentralized-applications/' target='_blank' >dApp</a> that can run on the <a style='color:#ec5c28' href='https://shardeum.org/blog/ethereum-virtual-machine-evm-simplified/' target='_blank' >Ethereum Virtual</a> Machine will seamlessly run on Shardeum.",
+  "shm-feature-1-desc": "Any <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-decentralized-applications/' target='_blank' >dApp</a> that can run on the <a style='color:#ec5c28' href='https://shardeum.org/blog/ethereum-virtual-machine-evm-simplified/' target='_blank' >Ethereum Virtual</a> <a style='color:#ec5c28' href='https://shardeum.org/blog/ethereum-virtual-machine-evm-simplified/' target='_blank' >Machine</a> will seamlessly run on Shardeum.",
   "shm-feature-2-title": "Linear scalability & low gas forever",
   "shm-feature-2-desc": "Every <a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-a-blockchain-node/' target='_blank' >node</a> that joins the Shardeum network immediately increases the transactions per second (TPS) and total capacity of the network to achieve linear scaling and ensure low transaction fees even as the usage grows.",
   "shm-feature-3-title": "Anyone can operate a node",
@@ -9,7 +9,7 @@
   "shm-feature-4-title": "Immediate finality & low latency",
   "shm-feature-4-desc": "All transactions are guaranteed to be processed within a few seconds to ensure low latency and are irreversible once processed to achieve immediate finality.",
   "shm-feature-5-title": "Solid security",
-  "shm-feature-5-desc": "A leaderless <a style='color:#ec5c28' href='https://shardeum.org/blog/what-is-proof-of-stake/' target='_blank' >Proof-of-Quorum (PoQ)</a> consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
+  "shm-feature-5-desc": "A leaderless <a style='color:#ec5c28' href='https://shardeum.org/blog/consensus-mechanism-used-in-shardeum/' target='_blank' >Proof-of-Quorum (PoQ)</a> consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation all contribute to increasing the security of the network.",
   "shm-feature-6-title": "High fairness & energy efficiency",
   "shm-feature-6-desc": "Shardeum processes transactions on a first-come, first-served basis, with the same gas rate for all transactions to ensure fairness and eliminate miner extractable value. As a PoS network, Shardeum is energy efficient and sustainable.",
   "roadmap": "Roadmap",

@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "../../components/common/SectionHeading";
-import { COMMUNITY_URL } from "../../constants/links";
+import { DISCORD_URL } from "../../constants/links";
 import { teamSocialIcons } from "@shm/Icons";
 import { useTranslation } from "next-i18next";
 
@@ -106,7 +106,7 @@ function Team() {
                 </Text>
                 <Flex direction="column">
                   <Text color="brand.grey-70">{commonTranslation("community-desc")}</Text>
-                  <Link href={COMMUNITY_URL} passHref>
+                  <Link href={DISCORD_URL} passHref>
                     <Text
                       as="a"
                       color="brand.blue"

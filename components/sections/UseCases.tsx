@@ -45,7 +45,11 @@ const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
         <VStack spacing={{ base: "8", md: "8" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="start" spacing="20">
-              {heading && <SectionHeading color="brand.grey-90">{heading}</SectionHeading>}
+              {heading && (
+                <SectionHeading color="brand.grey-90">
+                  <h2>{heading}</h2>
+                </SectionHeading>
+              )}
 
               {descriptiveMedia && content?.length && (
                 <UseCaseItem

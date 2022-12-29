@@ -20,6 +20,10 @@ type FAQProps = {
 };
 
 const FAQs = ({ heading, content }: FAQProps) => {
+  function createMarkup(c: any) {
+    return { __html: c };
+  }
+
   return (
     <Flex bg="brand.grey-10" as="section">
       <Container maxW="container.xl" mx="auto" pt="32" pb="32">
@@ -52,7 +56,11 @@ const FAQs = ({ heading, content }: FAQProps) => {
                 </AccordionButton>
 
                 <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                  <ReactMarkdown linkTarget="_blank">{item.a}</ReactMarkdown>
+                  <>
+                    <div dangerouslySetInnerHTML={createMarkup(item.a)}></div>
+                  </>
+                  {/* <ReactMarkdown linkTarget="_blank">
+                  </ReactMarkdown> */}
                 </AccordionPanel>
               </AccordionItem>
             ))}

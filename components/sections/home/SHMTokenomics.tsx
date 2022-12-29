@@ -68,7 +68,9 @@ const SHMTokenomics = () => {
         px={{ base: 6, xl: 0 }}
       >
         <Box mb="12">
-          <SectionHeading color="brand.white">{pageTranslation("shm-tokenomics")}</SectionHeading>
+          <SectionHeading color="brand.white">
+            <h2>{pageTranslation("shm-tokenomics")}</h2>
+          </SectionHeading>
         </Box>
         <HStack alignItems="start" spacing="2" mb="4" display={{ base: "flex", md: "none" }}>
           <Text fontSize="base" fontWeight="medium" color="white">

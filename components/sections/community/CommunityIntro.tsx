@@ -4,6 +4,9 @@ import { Container, Flex, Text, VStack } from "@chakra-ui/react";
 
 const CommunityIntro = () => {
   const { t: pageTranslation } = useTranslation("page-community");
+  function createMarkup(c: any) {
+    return { __html: c };
+  }
 
   return (
     <Flex bg="brand.white" as="section">
@@ -16,7 +19,7 @@ const CommunityIntro = () => {
         {/* <Box > */}
         <VStack spacing={2} width="100%" alignItems="start" bg="#E9EAFC" p={6}>
           <Text
-            as="h3"
+            as="h2"
             textAlign="left"
             lineHeight="normal"
             fontSize={{ base: "3xl", md: "3xl", lg: "4xl" }}
@@ -33,7 +36,11 @@ const CommunityIntro = () => {
             lineHeight={{ base: "7", md: "8" }}
             color="brand.grey-80"
           >
-            {pageTranslation("page-community-occ-description")}
+            <div
+              dangerouslySetInnerHTML={createMarkup(
+                pageTranslation("page-community-occ-description")
+              )}
+            ></div>
           </Text>
           {/* </Box> */}
         </VStack>

@@ -27,7 +27,9 @@ function Team() {
         px={{ base: "6", xl: "0" }}
       >
         <VStack alignItems="start" spacing="12">
-          <SectionHeading color="brand.black">{commonTranslation("team-shardeum")}</SectionHeading>
+          <SectionHeading color="brand.black">
+            <h2>{commonTranslation("team-shardeum")}</h2>
+          </SectionHeading>
           <SimpleGrid columns={[1, 1, 2]} gap="6" alignItems="start">
             <SimpleGrid columns={[1, 1, 2]} gap="6">
               <VStack spacing="6" alignItems="start">

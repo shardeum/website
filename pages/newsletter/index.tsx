@@ -9,6 +9,27 @@ function Newsletter() {
   const { t: pageTranslation } = useTranslation("page-newsletter");
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `<script type="application/ld+json">
+            {
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home",
+                "item": "https://shardeum.org/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Newsletter",
+                "item": "https://shardeum.org/newsletter/"  
+              }]
+            }
+            </script>	`,
+        }}
+      ></script>
       <Container maxW="container" mx="auto" py="12" px={{ base: "6", xl: "0" }} bg="brand.black">
         <VStack
           spacing="6"
@@ -39,7 +60,7 @@ function Newsletter() {
               </p>
             </Text>
             <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
-              {pageTranslation("page-newsletter-newsletter-title")}
+              <h1>{pageTranslation("page-newsletter-newsletter-title")}</h1>
             </Text>
           </VStack>
           <NewsletterInput type="newsletterPage" />

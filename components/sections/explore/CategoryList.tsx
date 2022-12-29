@@ -39,26 +39,30 @@ export const CategoryList: FC<CaregoryListProps> = ({
       >
         {categoryList.map((category) => {
           const isSelected = category.name === selectedCategory;
-
+          // console.log(categoryCount)
           return (
-            <Button
-              p={4}
-              marginInlineStart={0}
-              key={category.name}
-              value={category.name}
-              onClick={() => setSelectedCategory(category.name)}
-              variant={isSelected ? "secondary" : "outline"}
-              fontSize="md"
-              bg={isSelected ? "brand.grey-90" : "brand.grey-5"}
-              color={isSelected ? "brand.grey-5" : "brand.grey-90"}
-              _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
-              _focus={{ outline: "none" }}
-            >
-              {category.name}&nbsp;&nbsp;
-              <Text as="span" color="brand.grey-50">
-                {categoryCount[category.name] || 0}
-              </Text>
-            </Button>
+            <>
+              {typeof categoryCount[category.name] !== "undefined" ? (
+                <Button
+                  p={4}
+                  marginInlineStart={0}
+                  key={category.name}
+                  value={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  variant={isSelected ? "secondary" : "outline"}
+                  fontSize="md"
+                  bg={isSelected ? "brand.grey-90" : "brand.grey-5"}
+                  color={isSelected ? "brand.grey-5" : "brand.grey-90"}
+                  _hover={{ color: "brand.grey-5", bg: "brand.grey-90" }}
+                  _focus={{ outline: "none" }}
+                >
+                  {category.name}&nbsp;&nbsp;
+                  <Text as="span" color="brand.grey-50">
+                    {categoryCount[category.name] || 0}
+                  </Text>
+                </Button>
+              ) : null}
+            </>
           );
         })}
       </HStack>

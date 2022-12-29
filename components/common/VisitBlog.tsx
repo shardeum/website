@@ -8,6 +8,7 @@ function VisitBlog() {
   return (
     <VStack py="6" px="8" bgColor="brand.white" w="full" alignItems="start" spacing="6">
       <Feature
+        type={"h2"}
         title={pageTranslation("read-blog-title")}
         description={pageTranslation("read-blog-desc")}
       />

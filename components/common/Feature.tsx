@@ -5,6 +5,7 @@ interface Props {
   description: string;
   titleSize?: any;
   descriptionSize?: any;
+  type?: any;
   titleColor?: string;
   descriptionColor?: string;
   titleFontWeight: "normal" | "semibold" | "medium" | "bold";
@@ -21,11 +22,21 @@ const Feature = ({
   descriptionSize,
   titleColor,
   titleFontWeight,
+  type,
   descriptionColor,
 }: Props) => (
   <VStack spacing={4} alignItems="start">
-    <Text as="h5" fontSize={titleSize} color={titleColor} fontWeight={titleFontWeight}>
-      <div dangerouslySetInnerHTML={createMarkup(title)}></div>
+    <Text
+      as={typeof type !== "undefined" ? type : "h3"}
+      fontSize={titleSize}
+      color={titleColor}
+      fontWeight={titleFontWeight}
+    >
+      {typeof type !== "undefined" ? (
+        <h2 dangerouslySetInnerHTML={createMarkup(title)}></h2>
+      ) : (
+        <h3 dangerouslySetInnerHTML={createMarkup(title)}></h3>
+      )}
     </Text>
     <Text as="p" color={descriptionColor} fontSize={descriptionSize}>
       <div dangerouslySetInnerHTML={createMarkup(description)}></div>

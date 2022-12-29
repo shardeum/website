@@ -114,8 +114,8 @@ function Roadmap() {
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as="h3" alignItems="center">
-              {pageTranslation("roadmap")}
+            <Heading size="2xl" color="brand.white" as="h2" alignItems="center">
+              <h2>{pageTranslation("roadmap")}</h2>
             </Heading>
           </VStack>
           <VerticalTimeline lineColor="rgba(33, 33, 33, 1)">

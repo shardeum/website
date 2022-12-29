@@ -8,7 +8,8 @@ import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { Container, Flex } from "@chakra-ui/layout";
+import { Container, Flex, Text, VStack } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Terms = ({
   recordMap,
@@ -63,6 +64,41 @@ const Terms = ({
           py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `<script type="application/ld+json">
+                {
+                  "@context": "https://schema.org/", 
+                  "@type": "BreadcrumbList", 
+                  "itemListElement": [{
+                    "@type": "ListItem", 
+                    "position": 1, 
+                    "name": "Home",
+                    "item": "https://shardeum.org/"  
+                  },{
+                    "@type": "ListItem", 
+                    "position": 2, 
+                    "name": "Terms",
+                    "item": "https://shardeum.org/terms/"  
+                  }]
+                }
+                </script>`,
+            }}
+          ></script>
+          <Text
+            fontSize={{ base: "md", lg: "xl" }}
+            textAlign="left"
+            lineHeight={{ base: "7", md: "8" }}
+            color={"#37352f"}
+            paddingLeft="7.9cm"
+          >
+            <p>
+              <NextLink href="/" passHref>
+                Home
+              </NextLink>{" "}
+              / Terms
+            </p>
+          </Text>
           <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>

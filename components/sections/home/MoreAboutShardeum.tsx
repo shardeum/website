@@ -73,7 +73,7 @@ function MoreAboutShardeum() {
       >
         <Box mb="12">
           <SectionHeading color="brand.black">
-            {pageTranslation("page-home-shardeum-home-title")}
+            <h2>{pageTranslation("page-home-shardeum-home-title")}</h2>
           </SectionHeading>
         </Box>
         <Grid

@@ -88,7 +88,9 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
               w="full"
               mb="12"
             >
-              <SectionHeading color="brand.black">{sectionTitle}</SectionHeading>
+              <SectionHeading color="brand.black">
+                <h2>{sectionTitle}</h2>
+              </SectionHeading>
               <SliderButtons />
             </HStack>
           </VStack>

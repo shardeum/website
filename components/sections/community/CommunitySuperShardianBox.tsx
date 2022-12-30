@@ -5,6 +5,9 @@ import { SUPERSHARDIAN_URL } from "constants/links";
 
 const CommunitySuperShardianBox = () => {
   const { t: pageTranslation } = useTranslation("page-community");
+  function createMarkup(c: any) {
+    return { __html: c };
+  }
 
   return (
     <Flex bg="brand.white" as="section">
@@ -18,7 +21,7 @@ const CommunitySuperShardianBox = () => {
         {/* <Box > */}
         <VStack spacing={2} width="100%" alignItems="start" bg="#FCF4E9" p={6}>
           <Text
-            as="h3"
+            as="h2"
             textAlign="left"
             lineHeight="normal"
             fontSize={{ base: "3xl", md: "3xl", lg: "4xl" }}
@@ -35,7 +38,11 @@ const CommunitySuperShardianBox = () => {
             lineHeight={{ base: "7", md: "8" }}
             color="brand.grey-80"
           >
-            {pageTranslation("page-community-supershardians-description")}
+            <div
+              dangerouslySetInnerHTML={createMarkup(
+                pageTranslation("page-community-supershardians-description")
+              )}
+            ></div>
           </Text>
           {/* </Box> */}
           <LightMode>

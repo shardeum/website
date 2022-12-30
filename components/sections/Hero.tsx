@@ -60,7 +60,7 @@ const Hero = ({
                   width="100%"
                   color={titleColor || "brand.white"}
                 >
-                  {heading}
+                  <h1>{heading}</h1>
                 </Text>
                 <Box maxW={{ base: "md", md: "full" }}>
                   <Text

@@ -29,7 +29,7 @@ const FAQs = ({ heading, content }: FAQProps) => {
       <Container maxW="container.xl" mx="auto" pt="32" pb="32">
         {heading && (
           <Heading size="2xl" color="brand.grey-90" mb={20}>
-            {heading}
+            <h2>{heading}</h2>
           </Heading>
         )}
         <VStack spacing="40" alignItems="start" w="full">
@@ -50,7 +50,9 @@ const FAQs = ({ heading, content }: FAQProps) => {
                   _expanded={{ border: "none" }}
                 >
                   <Box flex="1" textAlign="left">
-                    <Heading size={"lg"}>{item.q}</Heading>
+                    <Heading size={"lg"}>
+                      <h3>{item.q}</h3>
+                    </Heading>
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>

@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NewsletterInput from "../../components/common/NewsletterInput";
 import JoinCommunity from "../../components/sections/JoinCommunity";
 import NextLink from "next/link";
+import Hero from "components/sections/Hero";
 
 function Newsletter() {
   const { t: pageTranslation } = useTranslation("page-newsletter");
@@ -30,6 +31,7 @@ function Newsletter() {
             </script>	`,
         }}
       ></script>
+      <Hero />
       <Container maxW="container" mx="auto" py="12" px={{ base: "6", xl: "0" }} bg="brand.black">
         <VStack
           spacing="6"

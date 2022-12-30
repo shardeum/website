@@ -10,6 +10,7 @@ import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import NextLink from "next/link";
+import Hero from "components/sections/Hero";
 
 const Page = ({
   recordMap,
@@ -24,6 +25,26 @@ const Page = ({
   const image = notionPageDetails.image;
   return (
     <>
+      <Hero
+        cta={
+          <>
+            <Text
+              fontSize={{ base: "md", lg: "xl" }}
+              textAlign="left"
+              lineHeight={{ base: "7", md: "8" }}
+              // color={"#37352f"}
+              // paddingLeft="7.9cm"
+            >
+              <p>
+                <NextLink href="/" passHref>
+                  Home
+                </NextLink>{" "}
+                / Privacy Policy
+              </p>
+            </Text>
+          </>
+        }
+      />
       <NextSeo
         title={title}
         description={description}
@@ -85,7 +106,7 @@ const Page = ({
                 </script>`,
             }}
           ></script>
-          <Text
+          {/* <Text
             fontSize={{ base: "md", lg: "xl" }}
             textAlign="left"
             lineHeight={{ base: "7", md: "8" }}
@@ -98,7 +119,7 @@ const Page = ({
               </NextLink>{" "}
               / Privacy Policy
             </p>
-          </Text>
+          </Text> */}
           <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>

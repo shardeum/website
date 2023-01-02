@@ -170,7 +170,7 @@ function RoadmapFull() {
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as="h3" alignItems="center">
+            <Heading size="2xl" color="brand.white" as="h2" alignItems="center">
               {pageTranslation("roadmap")}
             </Heading>
           </VStack>

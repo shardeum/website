@@ -43,6 +43,7 @@ const JoinNewsletterComp = () => {
   return (
     <VStack py="6" px="0" bgColor="#101010" w="full" alignItems="start" spacing="6">
       <Feature
+        type="h2"
         title={pageTranslation("join-newsletter-title-footer")}
         description={pageTranslation("join-newsletter-desc")}
       />

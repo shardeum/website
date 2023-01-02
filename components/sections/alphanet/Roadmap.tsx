@@ -82,7 +82,7 @@ function Roadmap() {
               {pageTranslation("page-alphanet-roadmap-subtitle")}
             </Text>
             <Heading size="2xl" color="brand.white">
-              {pageTranslation("page-alphanet-roadmap-title")}
+              <h2>{pageTranslation("page-alphanet-roadmap-title")}</h2>
             </Heading>
           </VStack>
           <VStack alignItems="start" spacing="6" w="full">

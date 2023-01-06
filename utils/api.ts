@@ -154,10 +154,12 @@ export const getSHMProjects = (): Promise<{
                   status: status,
                 });
 
-                categoryCount[projectCategory] = categoryCount[projectCategory]
-                  ? categoryCount[projectCategory] + 1
-                  : 1;
-                categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
+                if (status !== "pending") {
+                  categoryCount[projectCategory] = categoryCount[projectCategory]
+                    ? categoryCount[projectCategory] + 1
+                    : 1;
+                  categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
+                }
               }
             } catch (err) {
               console.log(err);

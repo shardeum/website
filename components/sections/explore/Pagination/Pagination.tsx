@@ -34,6 +34,8 @@ export const Pagination: FC<PaginationProps> = ({
     }
   };
 
+  console.log(isLastPage);
+
   return (
     <HStack justifyContent="center" alignItems="center" gap={1} {...flexProps}>
       {/* left button */}
@@ -56,7 +58,10 @@ export const Pagination: FC<PaginationProps> = ({
       })}
 
       {/* right button */}
-      <PaginationButton iconButton onClick={onClickRight} icon={<IconRightArrow />} />
+
+      {isLastPage === true ? null : (
+        <PaginationButton iconButton onClick={onClickRight} icon={<IconRightArrow />} />
+      )}
     </HStack>
   );
 };

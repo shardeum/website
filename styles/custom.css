@@ -498,3 +498,8 @@
     width: 100%;
   }
 }
+
+/* for socail futtor icon  */
+.footer-social-icon .chakra-button__icon {
+  margin: 0 !important;
+}

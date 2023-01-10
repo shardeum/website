@@ -14,7 +14,6 @@ const categoryList: CategoryList = [
   { id: 8, name: "Social", selected: false },
   { id: 9, name: "Wallet", selected: false },
   { id: 10, name: "Utility", selected: false },
-  { id: 11, name: "NFT", selected: false },
   { id: 12, name: "Tools", selected: false },
   { id: 13, name: "Infrastructure", selected: false },
   { id: 14, name: "Others", selected: false },

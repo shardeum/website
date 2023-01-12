@@ -47,27 +47,29 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
 
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = () => {
-    // if user is not signed in, take them to sign in page
-    if (!session) {
-      // signIn("twitter");
-      setPopup(true);
-      return;
-    }
+    window.alert("Disabled for the momment");
+    //uncomment code to enable upvote functionality and comment/ remove above line
+    // // if user is not signed in, take them to sign in page
+    // if (!session) {
+    //   // signIn("twitter");
+    //   setPopup(true);
+    //   return;
+    // }
 
-    const upvoted = !userUpvotedState;
+    // const upvoted = !userUpvotedState;
 
-    // make the update on frontend state regardless of the API response
-    handleUpvoteProjectState(upvoted);
+    // // make the update on frontend state regardless of the API response
+    // handleUpvoteProjectState(upvoted);
 
-    // call the upvote project service
-    upvoteProject(project.id, session.user?.id, upvoted)
-      .then()
-      .catch((err) => {
-        console.error(err);
+    // // call the upvote project service
+    // upvoteProject(project.id, session.user?.id, upvoted)
+    //   .then()
+    //   .catch((err) => {
+    //     console.error(err);
 
-        // undo the update from frontend side if the API call fails
-        handleUpvoteProjectState(!upvoted);
-      });
+    //     // undo the update from frontend side if the API call fails
+    //     handleUpvoteProjectState(!upvoted);
+    //   });
   };
 
   return (

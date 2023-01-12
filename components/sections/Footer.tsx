@@ -12,8 +12,22 @@ import {
   InputGroup,
   InputRightAddon,
   LightMode,
+  HStack,
+  Button,
 } from "@chakra-ui/react";
-
+import {
+  IconDiscord,
+  IconExternal,
+  IconGithub,
+  IconSeeMore,
+  IconTelegram,
+  IconTwitter,
+  brandSocialIcons,
+  IconFacebook,
+  IconYoutube,
+  IconLinkedin,
+} from "@shm/Icons";
+import { YOUTUBE_URL, LINKEDIN_URL, TWITTER_URL } from "../../constants/links";
 import Link from "next/link";
 import Logo from "../common/Logo";
 import {
@@ -88,7 +102,12 @@ const JoinNewsletterComp = () => {
     </VStack>
   );
 };
-
+const socialLinks = [
+  { Icon: IconFacebook, title: "Facebook", href: YOUTUBE_URL, target: "_blank" },
+  { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
+  { Icon: IconYoutube, title: "Youtube", href: YOUTUBE_URL, target: "_blank" },
+  { Icon: IconLinkedin, title: "LinkedIn", href: LINKEDIN_URL, target: "_blank" },
+];
 const LinksMap = {
   General: [
     { title: "home", href: "/" },
@@ -119,11 +138,26 @@ function Footer() {
       <Container maxW="container.xl" mx="auto" py="12" px={{ base: "6", xl: "0" }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
-            <Link href="/" passHref>
-              <Box as="a">
-                <Logo />
-              </Box>
-            </Link>
+            <Flex direction="column" justifyContent="center" alignItems="center">
+              <Link href="/" passHref>
+                <Box as="a">
+                  <Logo />
+                </Box>
+              </Link>
+              <Flex direction="row" justifyContent="center" mt={2}>
+                {socialLinks.map((link) => (
+                  <a href={link.href} target={link.target} key={link.title}>
+                    <Button
+                      className="footer-social-icon"
+                      leftIcon={<link.Icon />}
+                      size="xs"
+                      colorScheme="Gray"
+                      variant="outline"
+                    />
+                  </a>
+                ))}
+              </Flex>
+            </Flex>
             <JoinNewsletterComp />
             <Text color="brand.grey-50" display={{ base: "none", md: "block" }}>
               Copyright &copy; Shardeum {new Date().getFullYear()}

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
@@ -41,17 +41,12 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
     document.title = `Shardeum | Ecosystem | ${project.name}`;
     const Description = project.description.substring(0, 160);
     const stateObj = {};
-    const ProjectName = project.name.replace(/ /g, "-");
-    window.history.pushState(stateObj, project.name, `/ecosystem/${ProjectName}`);
-    console.log(project);
-
     return () => {
       document.title = prevTitle;
       const CONTENT = document.getElementsByTagName("META") as any | null;
       CONTENT[5].content = Description;
     };
   });
-
   return (
     <Box>
       <HorizontalTile

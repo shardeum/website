@@ -61,8 +61,11 @@ const UseCases = ({ heading, descriptiveMedia, content }: UseCaseSection) => {
             </VStack>
 
             {/* In case an image / descriptive media is present then show it here */}
+            {/* remove base : none here */}
             {descriptiveMedia && (
-              <Box display={{ base: "none", md: "block" }}>{descriptiveMedia}</Box>
+              <Box pt={{ base: 8, md: 0 }} display={{ md: "block" }}>
+                {descriptiveMedia}
+              </Box>
             )}
           </SimpleGrid>
         </VStack>

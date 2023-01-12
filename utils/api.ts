@@ -154,12 +154,10 @@ export const getSHMProjects = (): Promise<{
                   status: status,
                 });
 
-                if (status !== "pending") {
-                  categoryCount[projectCategory] = categoryCount[projectCategory]
-                    ? categoryCount[projectCategory] + 1
-                    : 1;
-                  categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
-                }
+                categoryCount[projectCategory] = categoryCount[projectCategory]
+                  ? categoryCount[projectCategory] + 1
+                  : 1;
+                categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
               }
             } catch (err) {
               console.log(err);
@@ -358,67 +356,75 @@ export const removeProjectFromUserUpvotedProjects = (
   });
 };
 
-export const getProjectById = (
-  projectRecordId: string,
+export const getProjectById = async (
+  projectRecordName: string,
   userId = ""
 ): Promise<{
   project: Project;
   userUpvoted: boolean;
 }> => {
   configureAirtable();
+  let projectRecordId = "";
   const base = Airtable.base(process.env.SHARDEUM_EXPLORE_BASE_ID as string);
-
+  const arrarOfPrject = await getSHMProjects();
+  arrarOfPrject.projects.map((item) => {
+    if (item.name.replace(/ /g, "") === projectRecordName) {
+      return (projectRecordId = item.id);
+    }
+  });
   return new Promise((resolve, reject) => {
-    base(process.env.SHARDEUM_EXPLORE_BASE_NAME as string)
-      .find(projectRecordId)
-      .then((record) => {
-        const projectId = record.getId();
-        const projectName = record.get("Project Name") as string;
-        const projectDescription = record.get("Project Description") as string;
-        const projectCategory = record.get("Project Category") as string;
-        const projectLogo: any = record.get("Project Logo") as string[];
-        const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
-        const projectWebsiteURL = record.get("Project Website URL") as string;
-        const projectDateCreated = record.get("Created") as string;
-        const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
-        const projectGithub = (record.get("Project Github URL") as string) || "";
-        const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
-        const status = (record.get("Status") as string) || "pending";
-        const project: Project = {
-          id: projectId,
-          name: projectName,
-          description: projectDescription,
-          category: projectCategory || "Others",
-          logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
-          screenShots: projectScreenshots || [],
-          website: projectWebsiteURL,
-          dateCreated: projectDateCreated,
-          numUpvotes: projectUpvotes,
-          githubUrl: projectGithub,
-          twiterUrl: projectTwiterUrl,
-          status: status,
-        };
+    if (projectRecordId != "") {
+      base(process.env.SHARDEUM_EXPLORE_BASE_NAME as string)
+        .find(projectRecordId)
+        .then((record) => {
+          const projectId = record.getId();
+          const projectName = record.get("Project Name") as string;
+          const projectDescription = record.get("Project Description") as string;
+          const projectCategory = record.get("Project Category") as string;
+          const projectLogo: any = record.get("Project Logo") as string[];
+          const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
+          const projectWebsiteURL = record.get("Project Website URL") as string;
+          const projectDateCreated = record.get("Created") as string;
+          const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
+          const projectGithub = (record.get("Project Github URL") as string) || "";
+          const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
+          const status = (record.get("Status") as string) || "pending";
+          const project: Project = {
+            id: projectId,
+            name: projectName,
+            description: projectDescription,
+            category: projectCategory || "Others",
+            logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
+            screenShots: projectScreenshots || [],
+            website: projectWebsiteURL,
+            dateCreated: projectDateCreated,
+            numUpvotes: projectUpvotes,
+            githubUrl: projectGithub,
+            twiterUrl: projectTwiterUrl,
+            status: status,
+          };
 
-        if (!userId) {
-          return resolve({ project, userUpvoted: false });
-        }
+          if (!userId) {
+            return resolve({ project, userUpvoted: false });
+          }
 
-        getUserId(userId)
-          .then((userRecordId) => {
-            return resolve({
-              project,
-              userUpvoted:
-                (record.get("Upvote Users") as string[])?.includes(userRecordId) ?? false,
+          getUserId(userId)
+            .then((userRecordId) => {
+              return resolve({
+                project,
+                userUpvoted:
+                  (record.get("Upvote Users") as string[])?.includes(userRecordId) ?? false,
+              });
+            })
+            .catch((err) => {
+              console.error(err);
+              reject(err);
             });
-          })
-          .catch((err) => {
-            console.error(err);
-            reject(err);
-          });
-      })
-      .catch((err) => {
-        console.error(err);
-        reject(err);
-      });
+        })
+        .catch((err) => {
+          console.error(err);
+          reject(err);
+        });
+    }
   });
 };

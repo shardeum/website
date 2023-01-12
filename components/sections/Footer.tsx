@@ -138,13 +138,13 @@ function Footer() {
       <Container maxW="container.xl" mx="auto" py="12" px={{ base: "6", xl: "0" }}>
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
-            <Flex direction="column" justifyContent="center" alignItems="center">
+            <Flex direction="column" justifyContent="left" alignItems="left">
               <Link href="/" passHref>
                 <Box as="a">
                   <Logo />
                 </Box>
               </Link>
-              <Flex direction="row" justifyContent="center" mt={2}>
+              {/* <Flex direction="row" justifyContent="center" mt={2}>
                 {socialLinks.map((link) => (
                   <a href={link.href} target={link.target} key={link.title}>
                     <Button
@@ -156,7 +156,7 @@ function Footer() {
                     />
                   </a>
                 ))}
-              </Flex>
+              </Flex> */}
             </Flex>
             <JoinNewsletterComp />
             <Text color="brand.grey-50" display={{ base: "none", md: "block" }}>

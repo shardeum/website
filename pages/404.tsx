@@ -31,6 +31,7 @@ const AlphanetLanding: NextPage = () => {
   ];
   return (
     <>
+      <Hero />
       <Page404 />
     </>
   );

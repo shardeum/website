@@ -55,7 +55,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <LinkOverlay target="_blank">{title}</LinkOverlay>
         </NextLink>
       </Text>
-      <HorizontalTileButton
+      {/* ************upVoteButoon Commented uncomment when Needed **********  */}
+      {/* <HorizontalTileButton
         maxWidth="fit-content"
         my="2"
         onClick={onUpvoteProject}
@@ -69,7 +70,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Text as="span" color="brand.grey-50">
           {getNumberWithSuffix(upvoteCount)}
         </Text>
-      </HorizontalTileButton>
+      </HorizontalTileButton> */}
 
       {numProjectsPerPage && description?.length > numProjectsPerPage ? (
         <Text

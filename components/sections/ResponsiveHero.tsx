@@ -1,7 +1,7 @@
 import { Container, Flex, Image, Text } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import { useRouter } from "next/router";
-
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@chakra-ui/react";
 type HeroProps = {
   heading: string;
   description?: React.ReactNode;
@@ -51,7 +51,15 @@ const ResponsiveHero = ({
                 lineHeight={{ base: "7", md: "8" }}
                 color={descColor || "brand.grey-20"}
               >
-                {breadcrumb}
+                <Breadcrumb color={descColor || "brand.grey-20"}>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="/">{"Home"}</BreadcrumbLink>
+                  </BreadcrumbItem>
+
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href="#">{"Ecosystem"}</BreadcrumbLink>
+                  </BreadcrumbItem>
+                </Breadcrumb>
               </Text>
               <Text
                 as="h1"

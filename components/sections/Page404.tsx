@@ -29,9 +29,9 @@ const Page404 = () => {
   const { t: pageTranslation } = useTranslation(["common", "page-home"]);
   return (
     <Flex style={{ backgroundColor: "#000000" }} as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
-        <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
-          <VStack spacing="6" pt={20} alignItems="center">
+      <Container maxW="container.xl" mx="auto" pt="0" pb="28" px={{ base: 6, xl: 0 }}>
+        <SimpleGrid columns={[]} gap={["8", "12"]}>
+          <VStack spacing="6" pt={0} alignItems="center">
             <Text
               as="h2"
               textAlign="left"
@@ -42,20 +42,24 @@ const Page404 = () => {
             >
               {pageTranslation("un-oh")}
             </Text>
+          </VStack>
+          <VStack spacing="6" pt={0} alignItems="center">
             <VStack maxW={{ base: "md", md: "full" }} spacing="6" alignItems="start">
               <Text
                 fontSize={{ base: "md", lg: "base" }}
-                textAlign="left"
+                textAlign="center"
                 color="brand.grey-40"
               ></Text>
-              <Text fontSize={{ base: "lg", lg: "base" }} textAlign="left" color="brand.grey-40">
+              <Text fontSize={{ base: "lg", lg: "base" }} textAlign="center" color="brand.grey-40">
                 {pageTranslation("un-oh-desc")}
+                <br />
+                {pageTranslation("un-oh-descTwo")}
               </Text>
             </VStack>
           </VStack>
-          <Flex justifyContent="flex-end">
+          <Flex justifyContent="center">
             <VStack w={{ base: "full", lg: "96" }} mx={{ base: "auto", lg: "0" }}>
-              <Button mt={40} as="a" variant="primary" size="lg" rel="noopener noreferrer" href="/">
+              <Button mt={0} as="a" variant="primary" size="lg" rel="noopener noreferrer" href="/">
                 {pageTranslation("un-oh-backhome")}
               </Button>
             </VStack>

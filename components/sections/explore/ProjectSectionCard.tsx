@@ -66,7 +66,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
             </NextLink>
           </Heading>
         </GridItem>
-        <GridItem
+        {/* <GridItem
           minW="100%"
           textAlign="center"
           borderLeftColor="brand.grey-30"
@@ -105,7 +105,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
             </Button>
           </Tooltip>
           <Text fontWeight="medium">{upvotes}</Text>
-        </GridItem>
+        </GridItem> */}
         <GridItem
           overflow="hidden"
           colStart={[1, 1, 2, 2]} // xs,sm,md,lg

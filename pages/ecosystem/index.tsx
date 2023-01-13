@@ -90,27 +90,27 @@ const Explore: NextPage<ExplorePageProps> = ({
 
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
-    window.alert("Disabled for the momment");
+    // window.alert("Disabled for the momment")
     //uncomment code to enable upvote functionality and comment/ remove above line
-    // // if user is not signed in, take them to sign in page
-    // if (!sessionObject) {
-    //   // signIn("twitter");
-    //   setPopup(true);
-    //   return;
-    // }
+    // if user is not signed in, take them to sign in page
+    if (!sessionObject) {
+      // signIn("twitter");
+      setPopup(true);
+      return;
+    }
 
-    // // make the update on frontend state regardless of the API response
-    // handleUpvoteProjectState(projectId, upvoted);
+    // make the update on frontend state regardless of the API response
+    handleUpvoteProjectState(projectId, upvoted);
 
-    // // call the upvote project service
-    // upvoteProject(projectId, sessionObject.user.id, upvoted)
-    //   .then()
-    //   .catch((err) => {
-    //     console.error(err);
+    // call the upvote project service
+    upvoteProject(projectId, sessionObject.user.id, upvoted)
+      .then()
+      .catch((err) => {
+        console.error(err);
 
-    //     // undo the update from frontend side if the API call fails
-    //     handleUpvoteProjectState(projectId, !upvoted);
-    //   });
+        // undo the update from frontend side if the API call fails
+        handleUpvoteProjectState(projectId, !upvoted);
+      });
   };
 
   const handleSubmitProject = (): void => {

@@ -12,7 +12,7 @@ import { HorizontalTileButton } from "./HorizontalTileButton";
 import SigninContext from "context/signin-window.context";
 import { ShareIcon, ShareLinkIcon } from "@shm/Icons";
 import Image from "next/image";
-import Link from "next/link";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@chakra-ui/react";
 
 export type HorizontalTileProps = {
   project: Project;
@@ -47,29 +47,29 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
 
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = () => {
-    window.alert("Disabled for the momment");
-    //uncomment code to enable upvote functionality and comment/ remove above line
-    // // if user is not signed in, take them to sign in page
-    // if (!session) {
-    //   // signIn("twitter");
-    //   setPopup(true);
-    //   return;
-    // }
+    // window.alert("Disabled for the momment");
+    // uncomment code to enable upvote functionality and comment/ remove above line
+    // if user is not signed in, take them to sign in page
+    if (!session) {
+      // signIn("twitter");
+      setPopup(true);
+      return;
+    }
 
-    // const upvoted = !userUpvotedState;
+    const upvoted = !userUpvotedState;
 
-    // // make the update on frontend state regardless of the API response
-    // handleUpvoteProjectState(upvoted);
+    // make the update on frontend state regardless of the API response
+    handleUpvoteProjectState(upvoted);
 
-    // // call the upvote project service
-    // upvoteProject(project.id, session.user?.id, upvoted)
-    //   .then()
-    //   .catch((err) => {
-    //     console.error(err);
+    // call the upvote project service
+    upvoteProject(project.id, session.user?.id, upvoted)
+      .then()
+      .catch((err) => {
+        console.error(err);
 
-    //     // undo the update from frontend side if the API call fails
-    //     handleUpvoteProjectState(!upvoted);
-    //   });
+        // undo the update from frontend side if the API call fails
+        handleUpvoteProjectState(!upvoted);
+      });
   };
 
   return (
@@ -106,6 +106,18 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
           rowStart={[2, 2, 2, 1]}
           rowEnd={[3, 3, 3, 2]}
         >
+          <Breadcrumb color="brand.grey-90">
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">{"Home"}</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/ecosystem">{"Ecosystem"}</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="#">{project.name}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
           <Text
             textAlign={["center", "left"]}
             mb={[4, 0, 4]}
@@ -146,7 +158,8 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             rowGap={[0, 2]}
             w={["100%", "175px"]}
           >
-            <HorizontalTileButton
+            {/* *******upVoteButoon Commented uncomment when needed***********  */}
+            {/* <HorizontalTileButton
               onClick={onUpvoteProject}
               bg={userUpvotedState ? "brand.grey-90" : "brand.grey-5"}
               color={userUpvotedState ? "brand.grey-5" : "brand.grey-90"}
@@ -158,7 +171,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
               <Text as="span" color="brand.grey-50">
                 {getNumberWithSuffix(upvoteCount)}
               </Text>
-            </HorizontalTileButton>
+            </HorizontalTileButton> */}
             <HorizontalTileButton onClick={onOpen}>
               <ShareIcon />
               &nbsp;&nbsp; Share

@@ -123,6 +123,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const { data: session } = useSession();
   const { setPopup } = useContext(SigninContext);
   const [hideNoti, setHideNoti] = useState(true);
+  const [scrollHideNoti, setScrollHideNoti] = useState(true);
+  const [height, setHeight] = useState(0);
   const [isauthVisible, setIsauthVisible] = useState(false);
   const [projectNotification, setprojectNotification] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -149,9 +151,21 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       setHideNoti(false);
     }
 
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
     // loadApi()
   }, []);
+  const listenToScroll = () => {
+    const heightToHideFrom = 5;
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    setHeight(winScroll);
 
+    if (winScroll > heightToHideFrom) {
+      scrollHideNoti && setScrollHideNoti(false);
+    } else {
+      setScrollHideNoti(true);
+    }
+  };
   // const loadApi = async () => {
   //   const project:any  = await getNotificationById();
   //   console.log('project',project)
@@ -190,9 +204,13 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
 
   return (
     <>
-      <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
+      <div
+        id="hide"
+        // style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}
+        className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
+      >
+        <NotificationBar />
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
-        {<NotificationBar />}
       </div>
       <Flex
         style={{ position: "fixed", zIndex: 9999 }}
@@ -257,7 +275,10 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           </Flex>
         </Container>
       </Flex>
-      <div style={{ width: "100%", padding: "2rem" }}></div>
+      <Box
+        style={{ width: "100%", padding: "2rem" }}
+        bg={mode === "light" ? "brand.white" : "brand.black"}
+      ></Box>
     </>
   );
 };

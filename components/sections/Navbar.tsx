@@ -181,11 +181,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           padding: "5px",
         }}
       >
-        <a href={EVENTBRITE} target="_blank" rel="noreferrer">
-          <b>
-            {" "}
-            Shardeum&apos;22 Q3 Update: Autoscaling Demo on 5 Nov 2022, 3 PM UTC. Register Now !{" "}
-          </b>
+        <a href={"https://lu.ma/shardeum-q4-update"} target="_blank" rel="noreferrer">
+          <b> Register now for Shardeum Q4 Update : Intro to Betanet </b>
         </a>
       </div>
     );
@@ -193,10 +190,12 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
 
   return (
     <>
-      {/* <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
-        {hideNoti === false ? <NotificationBar /> : null}
-      </div> */}
+      <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
+        {/* {hideNoti === false ? <NotificationBar /> : null} */}
+        {<NotificationBar />}
+      </div>
       <Flex
+        style={{ position: "fixed", zIndex: 9999 }}
         bg={mode === "light" ? "brand.white" : "brand.black"}
         w="100%"
         py={2}
@@ -258,6 +257,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           </Flex>
         </Container>
       </Flex>
+      <div style={{ width: "100%", padding: "2rem" }}></div>
     </>
   );
 };

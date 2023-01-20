@@ -123,6 +123,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const { data: session } = useSession();
   const { setPopup } = useContext(SigninContext);
   const [hideNoti, setHideNoti] = useState(true);
+  const [scrollHideNoti, setScrollHideNoti] = useState(true);
+  const [height, setHeight] = useState(0);
   const [isauthVisible, setIsauthVisible] = useState(false);
   const [projectNotification, setprojectNotification] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -149,9 +151,21 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       setHideNoti(false);
     }
 
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
     // loadApi()
   }, []);
+  const listenToScroll = () => {
+    const heightToHideFrom = 5;
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    setHeight(winScroll);
 
+    if (winScroll > heightToHideFrom) {
+      scrollHideNoti && setScrollHideNoti(false);
+    } else {
+      setScrollHideNoti(true);
+    }
+  };
   // const loadApi = async () => {
   //   const project:any  = await getNotificationById();
   //   console.log('project',project)
@@ -174,6 +188,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const NotificationBar = () => {
     return (
       <div
+        className="navNotificationShow"
         style={{
           background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);",
           textAlign: "center",
@@ -181,11 +196,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           padding: "5px",
         }}
       >
-        <a href={EVENTBRITE} target="_blank" rel="noreferrer">
-          <b>
-            {" "}
-            Shardeum&apos;22 Q3 Update: Autoscaling Demo on 5 Nov 2022, 3 PM UTC. Register Now !{" "}
-          </b>
+        <a href={"https://lu.ma/shardeum-q4-update"} target="_blank" rel="noreferrer">
+          <b> Register now for Shardeum Q4 Update : Intro to Betanet </b>
         </a>
       </div>
     );
@@ -193,71 +205,83 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
 
   return (
     <>
-      {/* <div style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}>
-        {hideNoti === false ? <NotificationBar /> : null}
-      </div> */}
-      <Flex
-        bg={mode === "light" ? "brand.white" : "brand.black"}
-        w="100%"
-        py={2}
-        color={mode === "light" ? "brand.grey-90" : "text"}
+      <div
+        style={{ position: "fixed", zIndex: 9999, width: "100%" }}
+        // id="hide"
+        // style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}
+        // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
+        // className="navNotificationShow"
       >
-        <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
-          <Flex justify="space-between" align={"center"}>
-            <Box>
-              <NextLink href="/" passHref>
-                <Link>
-                  <Logo />
-                </Link>
-              </NextLink>
-            </Box>
-            <Stack
-              direction={["column", "row"]}
-              spacing={"1rem"}
-              alignItems={"center"}
-              display={{ base: "none", lg: "flex" }}
-            >
-              {/* All the links laid out horizontally */}
-              {linksArr?.map((link, index) => (
-                <NextLink key={link.title} href={link.link} passHref>
-                  <Link
-                    variant="navlink"
-                    rel="noopener noreferrer"
-                    target={link.newPage ? "_blank" : "_self"}
-                    fontWeight={link.highlight ? "bold" : "normal"}
-                  >
-                    {typeof link.submenu !== "undefined" ? (
-                      <MenuComponent link={link} />
-                    ) : (
-                      commonTranslation(link.title)
-                    )}
+        <NotificationBar />
+        {/* {hideNoti === false ? <NotificationBar /> : null} */}
+        <Flex
+          bg={mode === "light" ? "brand.white" : "brand.black"}
+          w="100%"
+          py={2}
+          color={mode === "light" ? "brand.grey-90" : "text"}
+        >
+          <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
+            <Flex justify="space-between" align={"center"}>
+              <Box>
+                <NextLink href="/" passHref>
+                  <Link>
+                    <Logo />
                   </Link>
                 </NextLink>
-              ))}
+              </Box>
+              <Stack
+                direction={["column", "row"]}
+                spacing={"1rem"}
+                alignItems={"center"}
+                display={{ base: "none", lg: "flex" }}
+              >
+                {/* All the links laid out horizontally */}
+                {linksArr?.map((link, index) => (
+                  <NextLink key={link.title} href={link.link} passHref>
+                    <Link
+                      variant="navlink"
+                      rel="noopener noreferrer"
+                      target={link.newPage ? "_blank" : "_self"}
+                      fontWeight={link.highlight ? "bold" : "normal"}
+                    >
+                      {typeof link.submenu !== "undefined" ? (
+                        <MenuComponent link={link} />
+                      ) : (
+                        commonTranslation(link.title)
+                      )}
+                    </Link>
+                  </NextLink>
+                ))}
 
-              {isauthVisible === true ? (
-                <Menu>
-                  <MenuButton>
-                    <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
-                  </MenuButton>
+                {isauthVisible === true ? (
+                  <Menu>
+                    <MenuButton>
+                      <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
+                    </MenuButton>
 
-                  <MenuList>
-                    {session ? (
-                      <MenuItem onClick={() => signOut()}>Signout</MenuItem>
-                    ) : (
-                      <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
-                    )}
-                  </MenuList>
-                </Menu>
-              ) : null}
+                    <MenuList>
+                      {session ? (
+                        <MenuItem onClick={() => signOut()}>Signout</MenuItem>
+                      ) : (
+                        <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
+                      )}
+                    </MenuList>
+                  </Menu>
+                ) : null}
 
-              {/* <Link variant="navlink">Language</Link> */}
-            </Stack>
-            {/* Will only show on mobile and tablets */}
-            <MobileDrawer links={linksArr} />
-          </Flex>
-        </Container>
-      </Flex>
+                {/* <Link variant="navlink">Language</Link> */}
+              </Stack>
+              {/* Will only show on mobile and tablets */}
+              <MobileDrawer links={linksArr} />
+            </Flex>
+          </Container>
+        </Flex>
+      </div>
+
+      <Box
+        style={{ width: "100%", padding: "3rem" }}
+        bg={mode === "light" ? "brand.white" : "brand.black"}
+      ></Box>
     </>
   );
 };

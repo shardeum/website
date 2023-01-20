@@ -188,6 +188,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   const NotificationBar = () => {
     return (
       <div
+        className="navNotificationShow"
         style={{
           background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);",
           textAlign: "center",
@@ -205,78 +206,80 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
   return (
     <>
       <div
-        id="hide"
+        style={{ position: "fixed", zIndex: 9999, width: "100%" }}
+        // id="hide"
         // style={{ background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);" }}
-        className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
+        // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
+        // className="navNotificationShow"
       >
         <NotificationBar />
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
-      </div>
-      <Flex
-        style={{ position: "fixed", zIndex: 9999 }}
-        bg={mode === "light" ? "brand.white" : "brand.black"}
-        w="100%"
-        py={2}
-        color={mode === "light" ? "brand.grey-90" : "text"}
-      >
-        <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
-          <Flex justify="space-between" align={"center"}>
-            <Box>
-              <NextLink href="/" passHref>
-                <Link>
-                  <Logo />
-                </Link>
-              </NextLink>
-            </Box>
-            <Stack
-              direction={["column", "row"]}
-              spacing={"1rem"}
-              alignItems={"center"}
-              display={{ base: "none", lg: "flex" }}
-            >
-              {/* All the links laid out horizontally */}
-              {linksArr?.map((link, index) => (
-                <NextLink key={link.title} href={link.link} passHref>
-                  <Link
-                    variant="navlink"
-                    rel="noopener noreferrer"
-                    target={link.newPage ? "_blank" : "_self"}
-                    fontWeight={link.highlight ? "bold" : "normal"}
-                  >
-                    {typeof link.submenu !== "undefined" ? (
-                      <MenuComponent link={link} />
-                    ) : (
-                      commonTranslation(link.title)
-                    )}
+        <Flex
+          bg={mode === "light" ? "brand.white" : "brand.black"}
+          w="100%"
+          py={2}
+          color={mode === "light" ? "brand.grey-90" : "text"}
+        >
+          <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
+            <Flex justify="space-between" align={"center"}>
+              <Box>
+                <NextLink href="/" passHref>
+                  <Link>
+                    <Logo />
                   </Link>
                 </NextLink>
-              ))}
+              </Box>
+              <Stack
+                direction={["column", "row"]}
+                spacing={"1rem"}
+                alignItems={"center"}
+                display={{ base: "none", lg: "flex" }}
+              >
+                {/* All the links laid out horizontally */}
+                {linksArr?.map((link, index) => (
+                  <NextLink key={link.title} href={link.link} passHref>
+                    <Link
+                      variant="navlink"
+                      rel="noopener noreferrer"
+                      target={link.newPage ? "_blank" : "_self"}
+                      fontWeight={link.highlight ? "bold" : "normal"}
+                    >
+                      {typeof link.submenu !== "undefined" ? (
+                        <MenuComponent link={link} />
+                      ) : (
+                        commonTranslation(link.title)
+                      )}
+                    </Link>
+                  </NextLink>
+                ))}
 
-              {isauthVisible === true ? (
-                <Menu>
-                  <MenuButton>
-                    <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
-                  </MenuButton>
+                {isauthVisible === true ? (
+                  <Menu>
+                    <MenuButton>
+                      <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
+                    </MenuButton>
 
-                  <MenuList>
-                    {session ? (
-                      <MenuItem onClick={() => signOut()}>Signout</MenuItem>
-                    ) : (
-                      <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
-                    )}
-                  </MenuList>
-                </Menu>
-              ) : null}
+                    <MenuList>
+                      {session ? (
+                        <MenuItem onClick={() => signOut()}>Signout</MenuItem>
+                      ) : (
+                        <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
+                      )}
+                    </MenuList>
+                  </Menu>
+                ) : null}
 
-              {/* <Link variant="navlink">Language</Link> */}
-            </Stack>
-            {/* Will only show on mobile and tablets */}
-            <MobileDrawer links={linksArr} />
-          </Flex>
-        </Container>
-      </Flex>
+                {/* <Link variant="navlink">Language</Link> */}
+              </Stack>
+              {/* Will only show on mobile and tablets */}
+              <MobileDrawer links={linksArr} />
+            </Flex>
+          </Container>
+        </Flex>
+      </div>
+
       <Box
-        style={{ width: "100%", padding: "2rem" }}
+        style={{ width: "100%", padding: "3rem" }}
         bg={mode === "light" ? "brand.white" : "brand.black"}
       ></Box>
     </>

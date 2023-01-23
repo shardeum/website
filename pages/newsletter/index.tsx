@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import { Container, Text, VStack } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -7,6 +9,27 @@ import NextLink from "next/link";
 import Hero from "components/sections/Hero";
 
 function Newsletter() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = `{
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "https://shardeum.org/" 
+      },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "Newsletter",
+      "item": "https://shardeum.org/newsletter/" 
+      }]
+      };`;
+
+    document.head.appendChild(script);
+  }, []);
   const { t: pageTranslation } = useTranslation("page-newsletter");
   return (
     <>

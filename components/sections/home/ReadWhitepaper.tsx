@@ -55,15 +55,18 @@ function ReadWhitepaper() {
                 color="brand.white"
               >
                 <Trans i18nKey="shm-desc" t={commonTranslation}>
-                  The first
+                  The
                   <Text as="span" color="brand.orange">
-                    linearly scalable
+                    first linearly scalable
                   </Text>
-                  smart contract platform that
+                  L1 blockchain network that
                   <Text as="span" color="brand.orange">
-                    increases transactions per second (TPS)
+                    increases
                   </Text>
-                  by adding more nodes
+                  transactions per second
+                  <Text as="span" color="brand.orange">
+                    (TPS) by adding more nodes.
+                  </Text>
                 </Trans>
               </Text>
               <Button

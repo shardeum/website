@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Button } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import ResponsiveHero from "components/sections/ResponsiveHero";
@@ -13,10 +15,64 @@ import CommunitySuperShardianBox from "@shm/components/sections/community/Commun
 import NextLink from "next/link";
 
 const Community = ({ communityStats }: { communityStats: CommunityStat[] }): React.ReactNode => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = `{
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "https://shardeum.org/" 
+      },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "Community",
+      "item": "https://shardeum.org/community/" 
+      }]
+      };`;
+
+    document.head.appendChild(script);
+  }, []);
   const { t: pageTranslation } = useTranslation("page-community");
 
   return (
     <>
+      <Helmet>
+        <title>{"Community is the CEO of Shardeum"}</title>
+        <meta
+          name="description"
+          content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma."
+        />
+        <meta
+          name="keywords"
+          content="super shardian, shardeum, contributors, rewards, shardeum community, developers, testnet, blockchain,layer1 blockchain,evm based blockchain"
+        />
+        <meta property="og:title" content="Community is the CEO of Shardeum" />
+        <meta
+          property="og:description"
+          content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
+        />
+        <meta property="og:url" content="https://shardeum.org/community/" />
+        <meta
+          property="og:image"
+          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+        />
+        <meta name="twitter:title" content="Community is the CEO of Shardeum" />
+        <meta
+          name="twitter:description"
+          content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
+        />
+        <meta
+          name="twitter:image"
+          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/community/" />
+      </Helmet>
       <NextSeo
         title="Community is the CEO of Shardeum"
         description="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma."
@@ -65,7 +121,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
             <p>
               <NextLink href="/" passHref>
                 Home
-              </NextLink>{" "}
+              </NextLink>
               / Community
             </p>
           </>

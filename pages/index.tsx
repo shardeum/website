@@ -17,7 +17,7 @@ import MoreAboutShardeum from "../components/sections/home/MoreAboutShardeum";
 import Team from "../components/sections/Team";
 import { getSHMNewsArticles } from "../utils/api";
 import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
-
+import { Helmet } from "react-helmet";
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-home");
   const { t: commonTranslation } = useTranslation("common");
@@ -30,6 +30,39 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
+      <Helmet>
+        <title>{"Shardeum | EVM based Sharded Layer 1 Blockchain"}</title>
+        <meta
+          name="description"
+          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+        />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+        <meta property="og:title" content="EVM Based Sharded Layer 1 Blockchain" />
+        <meta
+          property="og:description"
+          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+        />
+        <meta property="og:url" content="https://shardeum.org/" />
+        <meta
+          property="og:image"
+          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+        />
+        <meta name="twitter:title" content="EVM Based Sharded Layer 1 Blockchain" />
+        <meta
+          name="twitter:description"
+          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+        />
+        <meta
+          name="twitter:image"
+          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+      </Helmet>
       <Hero
         heading={commonTranslation("shm-slogan")}
         description={commonTranslation("shm-description")}

@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import { Box, Button, Stack, Flex, Center, Text, SimpleGrid, Link } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
@@ -17,6 +19,27 @@ import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
 import NextLink from "next/link";
 
 const AlphanetLanding: NextPage = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = `{
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "https://shardeum.org/" 
+      },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "Shardeum Liberty (Alphanet)",
+      "item": "https://shardeum.org/shardeum-liberty-alphanet/" 
+      }]
+      };`;
+
+    document.head.appendChild(script);
+  }, []);
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
   const { t: commonTranslation } = useTranslation(["common"]);
   const stats = [
@@ -33,7 +56,7 @@ const AlphanetLanding: NextPage = () => {
     <>
       <NextSeo
         title={
-          "Shardeum Liberty | Alphanet | Build scalable dApps and Web 3.0 applications on Shardeum"
+          "Shardeum Liberty | Alphanet | Build scalable dApps and Web3 applications on Shardeum"
         }
         description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
@@ -105,7 +128,7 @@ const AlphanetLanding: NextPage = () => {
                 name: "Who will use Shardeum?",	
                 acceptedAnswer: {	
                 @type: "Answer",	
-                text: "Shardeum aims to be capable of onboarding over a billion people to Web 3.0. Like the Internet, Shardeum is Open, Collaborative, and Community-driven with a mission to provide decentralization for everyone."	
+                text: "Shardeum aims to be capable of onboarding over a billion people to Web3. Like the Internet, Shardeum is Open, Collaborative, and Community-driven with a mission to provide decentralization for everyone."	
                 }	
                 },{	
                 @type: "Question",	

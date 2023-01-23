@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Box, Flex, Container } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
@@ -8,12 +9,36 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
-
 const Carrers: NextPage = () => {
   const router = useRouter();
 
   const { t: pageTranslation } = useTranslation(["page-careers"]);
   const { t: commonTranslation } = useTranslation(["common"]);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = `{
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://shardeum.org/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Careers",
+          item: "https://shardeum.org/careers/",
+        },
+      ],
+    };`;
+
+    document.head.appendChild(script);
+  }, []);
   return (
     <>
       <NextSeo

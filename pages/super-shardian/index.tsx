@@ -9,7 +9,7 @@ import { NextSeo } from "next-seo";
 import { Shardian } from "types";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import NextLink from "next/link";
-
+import { Helmet } from "react-helmet";
 const initialButtonCategories = [{ name: "All", selected: true }];
 
 const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): React.ReactNode => {
@@ -18,6 +18,25 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
   const { t: ssTranslation } = useTranslation("page-super-shardian");
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = `{
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "https://shardeum.org/" 
+      },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "Super Shardian",
+      "item": "https://shardeum.org/super-shardian/" 
+      }]
+      };`;
+
+    document.head.appendChild(script);
     const buttonCategories = [
       ...initialButtonCategories,
       ...Array.from(new Set(superShardians.map((shardian: any) => shardian.category))).map(
@@ -46,6 +65,39 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
   };
   return (
     <>
+      <Helmet>
+        <title>{"Top contributors of Shardeum AKA Super Shardians"}</title>
+        <meta
+          name="description"
+          content="Create, collaborate and contribute to build a layer 1 blockchain network that aims to onboard billions of daily users to Web3 for the first time ever."
+        />
+        <meta
+          name="keywords"
+          content="super shardian, shardeum, shardeum dApps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm based blockchain"
+        />
+        <meta property="og:title" content="Top contributors of Shardeum AKA Super Shardians" />
+        <meta
+          property="og:description"
+          content="Create, collaborate and contribute to build a layer 1 blockchain network that aims to onboard billions of daily users to Web3 for the first time ever"
+        />
+        <meta property="og:url" content="https://shardeum.org/super-shardian" />
+        <meta
+          property="og:image"
+          content="https://shardeum.org/blog/wp-content/uploads/2022/05/Super-Shardian.png"
+        />
+        <meta name="twitter:title" content="Top contributors of Shardeum AKA Super Shardians" />
+        <meta
+          name="twitter:description"
+          content="Create, collaborate and contribute to build a layer 1 blockchain network that aims to onboard billions of daily users to Web3 for the first time ever"
+        />
+        <meta
+          name="twitter:image"
+          content="https://shardeum.org/blog/wp-content/uploads/2022/05/Super-Shardian.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/super-shardian" />
+      </Helmet>
       <NextSeo
         title="Top contributors of Shardeum AKA Super Shardians"
         description="Create, collaborate, contribute to building world's 1st EVM-based L1 with linear scalability and get recognized and rewarded for it."
@@ -91,7 +143,7 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
             <p>
               <NextLink href="/" passHref>
                 Home
-              </NextLink>{" "}
+              </NextLink>
               / Super Shardian
             </p>
           </>

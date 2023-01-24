@@ -47,8 +47,6 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
 
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = () => {
-    // window.alert("Disabled for the momment");
-    // uncomment code to enable upvote functionality and comment/ remove above line
     // if user is not signed in, take them to sign in page
     if (!session) {
       // signIn("twitter");
@@ -139,7 +137,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             lineHeight={{ base: "7", md: "8" }}
             fontWeight="normal"
             color="brand.grey-90"
-            fontSize="xl"
+            fontSize={["sm", "md", "lg", "xl"]}
           >
             {project.description}
           </Text>

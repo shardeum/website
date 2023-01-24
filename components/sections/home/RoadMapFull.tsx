@@ -41,7 +41,17 @@ const roadmapList = [
     sections: [
       {
         description: "phase-3-desc",
-        taskList: ["phase-3-task-list-1", "phase-3-task-list-2", "phase-3-task-list-3"],
+        taskList: [
+          "phase-3-task-list-1",
+          "phase-3-task-list-2",
+          "phase-3-task-list-3",
+          "phase-3-task-list-4",
+          "phase-3-task-list-5",
+          "phase-3-task-list-6",
+          "phase-3-task-list-7",
+          "phase-3-task-list-8",
+          "phase-3-task-list-9",
+        ],
       },
       {
         description: "phase-3-secondary-desc",
@@ -97,7 +107,17 @@ const roadmapList = [
     sections: [
       {
         description: "phase-6-desc",
-        taskList: ["phase-6-task-list-1", "phase-6-task-list-2"],
+        taskList: [
+          "phase-6-task-list-1",
+          "phase-6-task-list-2",
+          "phase-6-task-list-3",
+          "phase-6-task-list-4",
+          "phase-6-task-list-5",
+          "phase-6-task-list-6",
+          "phase-6-task-list-7",
+          "phase-6-task-list-8",
+          "phase-6-task-list-9",
+        ],
         launchItems: [],
       },
       // {

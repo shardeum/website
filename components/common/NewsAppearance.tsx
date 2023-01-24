@@ -55,7 +55,8 @@ const NewsItem = ({
       <Flex w="full" position="relative">
         {imageURL ? (
           <AspectRatio ratio={564 / 300} w="full">
-            <Image unoptimized={true} src={imageURL} alt={title} layout="fill" />
+            <img src={imageURL} alt={title} />
+            {/* <Image unoptimized={false} src={imageURL} alt={title} layout="fill" /> */}
           </AspectRatio>
         ) : null}
         <Box position="absolute" bg="brand.white" px="3" py="2" bottom="0">

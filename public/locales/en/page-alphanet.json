@@ -1,10 +1,10 @@
 {
   "page-alphanet-hero-h1": "Shardeum Liberty (Alphanet) is Live!",
   "page-alphanet-hero-description": "Shardeum is an EVM-based layer 1 blockchain that ensures low fees and fast transactions forever. Build your dApps and Web3 applications on Liberty and become a leader within the Shardeum ecosystem.",
-  "page-betanet-hero-h1": "Shardeum Betanet is Live!",
-  "page-betanet-hero-description": "After 1 million transactions and 40k smart contracts deployed on Shardeum Alphanet (Liberty), the network is advancing to Betanet where the community can start running validator nodes.",
+  "page-betanet-hero-h1": "Shardeum Sphinx (Betanet) is Live!",
+  "page-betanet-hero-description": "After 1.5 million transactions and 45k smart contracts deployed on Shardeum Liberty (alphanet), the network is advancing to Betanet where the community can start running validator nodes.",
   "page-alphanet-hero-cta": "Developer Docs",
-  "page-betanet-hero-cta": "Dev Docs",
+  "page-betanet-hero-cta": "Developer Docs",
   "page-alphanet-hero-features-h1": "Why build on Shardeum Liberty?",
   "page-alphanet-hero-features-1-title": "EVM-Based Network",
   "page-alphanet-hero-features-1-description": "Smart contracts on Shardeum are written in developer-friendly languages such as Solidity and Vyper, allowing seamless deployment of EVM-based <a style='color:#ec5c28' href='https://shardeum.org/blog/what-are-decentralized-applications/' target='_blank' >dApps</a> and Web3 applications on Liberty within minutes.",

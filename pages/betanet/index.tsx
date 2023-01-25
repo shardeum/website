@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Box,
@@ -64,6 +64,8 @@ const AlphanetLanding: NextPage = () => {
   }, []);
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
   const { t: commonTranslation } = useTranslation(["common"]);
+  const [showMoreFAQ, setShowMoreFAQ] = useState(false);
+
   const stats = [
     { Icon: IconTransaction, title: "total-transaction" },
     { Icon: IconGlobe, title: "total-accounts" },
@@ -74,6 +76,10 @@ const AlphanetLanding: NextPage = () => {
     { Icon: IconGlobe, title: "total-contracts" },
     { Icon: IconGlobe, title: "active-nodes" },
   ];
+
+  const showFAQ = () => {
+    setShowMoreFAQ(true);
+  };
   return (
     <>
       {/* <NextSeo
@@ -301,7 +307,7 @@ const AlphanetLanding: NextPage = () => {
       <Container
         maxW="container.xl"
         mx="auto"
-        py={{ base: "9", md: "20", lg: "32" }}
+        py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 6, xl: 0 }}
         style={{ paddingTop: "50px" }}
       >
@@ -313,14 +319,22 @@ const AlphanetLanding: NextPage = () => {
             <VStack alignItems="left" spacing="20" mt={10}>
               <SectionHeading color="brand.grey-90">
                 <h2>What is Betanet?</h2>
-                <p className="betanetquestionSubHed">
+
+                <Text className="betanetquestionSubHed">
                   It all starts with an idea! Once a tech product idea proves its technical
                   feasibilty, it will be followed by an extensive period of testing and upgrades.
                   The gradual yet volatile upgrades will be carried out on a test network or testnet
                   until it is battle ready with all the desired features and performance for real
                   world use (mainnet). The upgrades are typically made via two major testnet phases
-                  called 'alphanet' and 'betanet'.{" "}
+                  called 'alphanet' and 'betanet'.
+                </Text>
+
+                <p className="betanetquestionSubTiltedColor" style={{ marginTop: "10px" }}>
+                  Let's see how strong is Shardeum alphanet
                 </p>
+                <span className="betanetquestionSubTiltedColor" style={{ color: "black" }}>
+                  (Liberty)!
+                </span>
               </SectionHeading>
             </VStack>
           </SimpleGrid>
@@ -331,14 +345,14 @@ const AlphanetLanding: NextPage = () => {
       <Container
         maxW="container"
         mx="auto"
-        py={{ base: "9", md: "20", lg: "32" }}
+        py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 6, xl: 0 }}
-        style={{ paddingTop: "50px", background: "#000000" }}
+        style={{ paddingTop: "0px", background: "#000000" }}
       >
         <Container
           maxW="container.xl"
           mx="auto"
-          py={{ base: "9", md: "20", lg: "32" }}
+          py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
           style={{ paddingTop: "50px", background: "#000000" }}
         >
@@ -353,32 +367,32 @@ const AlphanetLanding: NextPage = () => {
           </VStack>
 
           <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
-            <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
+            <div className="gridAlignTwo">
               <div className="borderGrid">
                 <h4 className="betanetHighlights">Top Alphanet Highlights</h4>
 
                 <div className="chekMark">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
                     First Web3 state sharded network with sharding abstraction
                   </p>
                 </div>
                 <div className="chekMarkNextline">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
                     First smart contract platform to implement EIP2930
                   </p>
                 </div>
                 <div className="chekMarkNextline">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">Automation of EIP2930 for a smoother DX</p>
                 </div>
                 <div className="chekMarkNextline">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">50 validator nodes with shard size of 20 nodes</p>
                 </div>
                 <div className="chekMarkNextline">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">Network capacity of 100 TPS</p>
                 </div>
               </div>
@@ -389,24 +403,24 @@ const AlphanetLanding: NextPage = () => {
 
                   <div className="borderGridTwoAddSpace">
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
-                      <p className="checkMarkText">43,000+ smart contracts</p>
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                      <p className="checkMarkText">45,000+ smart contracts</p>
                     </div>
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
-                      <p className="checkMarkText">xx dApps</p>
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                      <p className="checkMarkText">29 dApps</p>
                     </div>
                   </div>
                   <div className="borderGridTwoAddSpace">
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
                       <p className="checkMarkText">
-                        520,000+ accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        540,000+ accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </p>
                     </div>
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
-                      <p className="checkMarkText">1.4 million+ transactions</p>
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                      <p className="checkMarkText">1.5 million+ transactions</p>
                     </div>
                   </div>
                 </div>
@@ -416,11 +430,11 @@ const AlphanetLanding: NextPage = () => {
 
                   <div className="borderGridTwoAddSpace">
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                       <p className="checkMarkText">300,000+ community members</p>
                     </div>
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                       <p className="checkMarkText">
                         50+ Meetups/Workshops ~ Proof of Community Events
                       </p>
@@ -428,13 +442,13 @@ const AlphanetLanding: NextPage = () => {
                   </div>
                   <div className="borderGridTwoAddSpace">
                     <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#EC5B29" />
+                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                       <p className="checkMarkText">30,000+ newsletter subscribers</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </SimpleGrid>
+            </div>
           </VStack>
         </Container>
       </Container>
@@ -443,14 +457,14 @@ const AlphanetLanding: NextPage = () => {
       <Container
         maxW="container"
         mx="auto"
-        py={{ base: "9", md: "20", lg: "32" }}
+        py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 6, xl: 0 }}
-        style={{ paddingTop: "50px" }}
+        style={{ paddingTop: "60px" }}
       >
         <Container
           maxW="container.xl"
           mx="auto"
-          py={{ base: "9", md: "20", lg: "32" }}
+          py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
           style={{ paddingTop: "0px" }}
         >
@@ -460,7 +474,9 @@ const AlphanetLanding: NextPage = () => {
                 <VStack alignItems="left" className="backgroundBorder" spacing="10" mt={0}>
                   <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
                     <div className="backgroundBorderLine"></div>
-                    <h2 className="betaAlphanetTitleColor">Some of the top dApps on Alphanet</h2>
+                    <h2 className="betaAlphanetTitleColor">
+                      dApps/Projects that gained cult status on alphanet
+                    </h2>
                     <div className="backgroundBorderLine"></div>
                   </div>
                 </VStack>
@@ -531,7 +547,7 @@ const AlphanetLanding: NextPage = () => {
         <Container
           maxW="container.xl"
           mx="auto"
-          py={{ base: "9", md: "20", lg: "32" }}
+          py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
           style={{ paddingTop: "50px" }}
         >
@@ -540,7 +556,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitle">
-                    How do I benefit from Shardeum’s betanet release?
+                    How do I benefit from Shardeum’s <br /> Betanet/Sphinx release?
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -564,7 +580,7 @@ const AlphanetLanding: NextPage = () => {
 
                   <Box className="list-wrap">
                     <ul>
-                      <li>{"You can run validator nodes"}</li>
+                      <li>{"You can run validator nodes easily via GUI"}</li>
                       <li>{"You can stake test SHM"}</li>
                       <li>{"Get involved in network's unique consensus mechanism"}</li>
                       <li>{"Validate transactions and keep network secure"}</li>
@@ -580,7 +596,7 @@ const AlphanetLanding: NextPage = () => {
 
                 <Box className="borderGridNoborder">
                   <h4 className="betanetHighlightsLeft" style={{ color: "#ffae93" }}>
-                    As a smart contract dev
+                    As a Builder
                   </h4>
 
                   <Box className="list-wrap">
@@ -601,14 +617,14 @@ const AlphanetLanding: NextPage = () => {
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
-                    <Button className="btn btn-primary chekMarkNextlineButton">
+                    <Button className="btn btn-primary chekMarkNextlineButtonTwo">
                       {"Developer Docs"}
                     </Button>
                   </Box>
                 </Box>
 
                 <Box className="borderGridNoborder" style={{ color: "#ffce88" }}>
-                  <h4 className="betanetHighlightsLeft">As a general user</h4>
+                  <h4 className="betanetHighlightsLeft">As a General User</h4>
                   <Box className="list-wrap">
                     <ul>
                       <li>{"Bug bounty will be enabled"}</li>
@@ -617,7 +633,7 @@ const AlphanetLanding: NextPage = () => {
                           "Earn rewards by engaging in various Shardeum and dApp initiatives Like Shardeum Leagues, Shardeum missions, quiz etc"
                         }
                       </li>
-                      <li>{"Earn POAPs by participants in Shardeum community events"}</li>
+                      <li>{"Earn POAPs by participating in Shardeum community events"}</li>
                       <li>{"Moderating social media channels"}</li>
                       <li>
                         {
@@ -628,7 +644,7 @@ const AlphanetLanding: NextPage = () => {
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
-                    <Button className="btn btn-primary chekMarkNextlineButton">
+                    <Button className="btn btn-primary chekMarkNextlineButtonThree">
                       {"Join Shardeum community"}
                     </Button>
                   </Box>
@@ -649,7 +665,7 @@ const AlphanetLanding: NextPage = () => {
         <Container
           maxW="container.xl"
           mx="auto"
-          py={{ base: "9", md: "20", lg: "32" }}
+          py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
           style={{ paddingTop: "50px" }}
         >
@@ -658,7 +674,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10} pl={5}>
                 <span style={{ color: "#EC5B29" }}>{"2022"}</span>
                 <h2 className="betaAlphanetTitle " style={{ margin: "0" }}>
-                  {"Betanet Roadmap"}
+                  {"Betanet Sphinx Roadmap"}
                 </h2>
               </VStack>
             </SimpleGrid>
@@ -732,7 +748,7 @@ const AlphanetLanding: NextPage = () => {
               py={10}
               color="brand.grey-90"
             >
-              {/* Q1 */}
+              {/* Q3 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
                   <AccordionButton
@@ -742,8 +758,8 @@ const AlphanetLanding: NextPage = () => {
                     _expanded={{ border: "none" }}
                   >
                     <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>What is Shardeum?</h3>
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`What are the requirements to run a node on betanet?`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -751,12 +767,163 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      Shardeum is an EVM-based, linearly scalable smart contract platform that
-                      provides low gas fees forever while maintaining true decentralization and
-                      solid security through dynamic state sharding.
+                      "Minimum specs:
+                      <br />
+                      <br />
+                      - 60GB SSD storage (will go up in mainnet, but this will save cost in betanet)
+                      - Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
+                      with newer xeons/ EPYC - Initially 16GB of RAM, 4+ GB of virtual memory
+                      recommended. (we expect this number to go down over time)
+                      <br />
+                      <br />
+                      Stay tuned for an official announcement on hardware specs and staking
+                      requirements which will be added to our docs page soon"
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q4 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`How do GUI and CLI features help me in operating a node?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      With GUI, you can start running a node with a few clicks of your mouse.
+                      Shardeum is one of the first L1 networks to enable user-friendly GUI feature
+                      for node validators
+                      <br />
+                      CLI is the primary interface used by the vast majority of blockchain networks.
+                      It is enabled for more advanced users and developers who intend to work with
+                      nodes more deeply and technically
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                     </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`What is the reward I will get by running an honest node on betanet?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Your node will earn Betanet SHM, but these will not have any value. However,
+                      we will be keeping track of the addresses that helped out during Betanet and
+                      those addresses may receive a reward after Mainnet.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q6 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`What is the process for bug bounties and where do I report the bugs on betanet`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      A web form will be provided for reporting bug bounties. Details of the
+                      bounties will be announced with the release of Betanet.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                    </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q7 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`When can we expect whitepaper to be released?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>Whitepapers will be released around the same time as the launch of betanet</>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q8 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`When will the protocol be made open-source?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      The Shardeum code will be open-sourced around the same time as the launch of
+                      betanet
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
                   </AccordionPanel>
                 </AccordionItem>
               </div>
@@ -771,7 +938,7 @@ const AlphanetLanding: NextPage = () => {
                     _expanded={{ border: "none" }}
                   >
                     <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
+                      <Heading size={"lg"} className="faqHeading">
                         <h3>
                           What are the unique features in Shardeum apart from typical features that
                           comes with a L1 blockchain network?
@@ -804,7 +971,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>Linear Scalability </h3>
                                   </Heading>
                                 </Box>
@@ -844,7 +1011,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>Dynamic State Sharding</h3>
                                   </Heading>
                                 </Box>
@@ -882,7 +1049,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>Low & Constant Gas Fees</h3>
                                   </Heading>
                                 </Box>
@@ -919,7 +1086,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>EVM based smart contract platform</h3>
                                   </Heading>
                                 </Box>
@@ -954,7 +1121,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>Anyone can operate a node on Shardeum and earn rewards</h3>
                                   </Heading>
                                 </Box>
@@ -994,7 +1161,7 @@ const AlphanetLanding: NextPage = () => {
                                 _expanded={{ border: "none" }}
                               >
                                 <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"}>
+                                  <Heading size={"lg"} className="faqHeading">
                                     <h3>Solid Security with a unique consensus mechanism</h3>
                                   </Heading>
                                 </Box>
@@ -1031,185 +1198,191 @@ const AlphanetLanding: NextPage = () => {
                 </AccordionItem>
               </div>
 
-              {/* Q3 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`What are the requirements to run a node on betanet?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+              {showMoreFAQ === false && (
+                <a href="javascript:void(0)" className="showFAQBTN" onClick={showFAQ}>
+                  Show More
+                </a>
+              )}
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      "Minimum specs:
-                      <br />
-                      <br />
-                      - 60GB SSD storage (will go up in mainnet, but this will save cost in betanet)
-                      - Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
-                      with newer xeons/ EPYC - Initially 16GB of RAM, 4+ GB of virtual memory
-                      recommended. (we expect this number to go down over time)
-                      <br />
-                      <br />
-                      Stay tuned for an official announcement on hardware specs and staking
-                      requirements which will be added to our docs page soon"
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                      </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+              {showMoreFAQ && (
+                <>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
 
-              {/* Q4 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`How do GUI and CLI features help me in operating a node?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          During betanet the community can operate Validator nodes. After mainnet,
+                          community can also operate Archiver nodes.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      With GUI, you can start running a node with a few clicks of your mouse.
-                      Shardeum is one of the first L1 networks to enable user-friendly GUI feature
-                      for node validators
-                      <br />
-                      CLI is the primary interface used by the vast majority of blockchain networks.
-                      It is enabled for more advanced users and developers who intend to work with
-                      nodes more deeply and technically
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                    </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
 
-              {/* Q5 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`What is the reward I will get by running an honest node on betanet?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Requirements for running an Archiver will be determined during betanet,
+                          but at a minimum, it would be: 32 core, 256GB RAM, 4TB SSD
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      Your node will earn Betanet SHM, but these will not have any value. However,
-                      we will be keeping track of the addresses that helped out during Betanet and
-                      those addresses may receive a reward after Mainnet.
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                      </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`When and how can I apply for grants?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
 
-              {/* Q6 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`What is the process for bug bounties and where do I report the bugs on betanet`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          The Shardeum Foundation plans to launch a grants program in 2023. Early
+                          adopters that have demonstrated measurable progress in development and
+                          community growth on Shardeum's testnets will be prioritized.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      A web form will be provided for reporting bug bounties. Details of the
-                      bounties will be announced with the release of Betanet.
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                    </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`I am not looking for grants but I am keen to get your support in promoting the dApp I am building on Shardeum`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
 
-              {/* Q7 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`When can we expect whitepaper to be released?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Please submit this{" "}
+                          <a
+                            href="https://share.hsforms.com/1-1yoCFL9QJCeNM62L1FM7gdb8am"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            form .
+                          </a>
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>Whitepapers will be released around the same time as the launch of betanet</>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                      </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`Can I get advisory support from the team for my project?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
 
-              {/* Q8 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"}>
-                        <h3>{`When will the protocol be made open-source?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Shardeum’s Leadership Advisory Group is available to brainstorm and
+                          discuss the potential of projects and its GTM strategy. These leaders have
+                          led and helped world-class projects launch and succeed, and they are
+                          available to help and advise.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
 
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      The Shardeum code will be open-sourced around the same time as the launch of
-                      betanet
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                      </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`Where can i look for active projects that are deployed on Shardeum so far?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          You can find and interact with the active projects building on Shardeum{" "}
+                          <a
+                            href="https://shardeum.org/ecosystem/"
+                            target="_blank"
+                            rel="noreferrer"
+                          ></a>{" "}
+                          here
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+                </>
+              )}
             </Accordion>
           </VStack>
         </Container>

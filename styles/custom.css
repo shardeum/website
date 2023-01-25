@@ -57,7 +57,7 @@
   margin: 1em 0;
 }
 
-.vertical-timeline-element > div {
+.vertical-timeline-element>div {
   min-height: 1px;
 }
 
@@ -226,8 +226,7 @@
 }
 
 .vertical-timeline-element-content p,
-.vertical-timeline-element-content .vertical-timeline-element-date {
-}
+.vertical-timeline-element-content .vertical-timeline-element-date {}
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
   display: inline-block;
@@ -296,8 +295,7 @@
     font-size: 1.25rem;
   }
 
-  .vertical-timeline-element-content p {
-  }
+  .vertical-timeline-element-content p {}
 
   .vertical-timeline-element-content .vertical-timeline-element-date {
     font-size: 14px;
@@ -318,9 +316,7 @@
     transform: rotate(180deg);
   }
 
-  .vertical-timeline--two-columns
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
+  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
     display: block;
     position: absolute;
     width: 100%;
@@ -329,47 +325,29 @@
     font-size: var(--chakra-fontSizes-2xl);
   }
 
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
-    .vertical-timeline-element-content,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content {
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content,
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content {
     float: right;
   }
 
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
-    .vertical-timeline-element-content-arrow,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content-arrow {
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow,
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow {
     top: 24px;
     left: auto;
     right: 100%;
     transform: rotate(0deg);
   }
 
-  .vertical-timeline--one-column-right
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
-    .vertical-timeline-element-content-arrow,
-  .vertical-timeline--one-column-right
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content-arrow {
+  .vertical-timeline--one-column-right .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow,
+  .vertical-timeline--one-column-right .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow {
     top: 24px;
     left: 100%;
     right: auto;
     transform: rotate(0deg);
   }
 
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date,
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date {
     left: auto;
     right: 104%;
     text-align: right;
@@ -389,13 +367,10 @@
 }
 
 @media only screen and (min-width: 1170px) {
+
   /* inverse bounce effect on even content blocks */
-  .vertical-timeline--two-columns.vertical-timeline--animate
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
-    .vertical-timeline-element-content.bounce-in,
-  .vertical-timeline--two-columns.vertical-timeline--animate
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content.bounce-in {
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in,
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s;
@@ -580,7 +555,7 @@
   margin-top: 10px;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 32px;
   /* or 145% */
 
@@ -700,6 +675,12 @@
   margin-top: 5px;
 }
 
+.gridAlignTwo {
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+}
+
 .borderGrid {
   border: 1px solid #656565;
   box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);
@@ -713,7 +694,7 @@
   box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);
   width: 90vh;
   height: 212px;
-  margin-left: -15vh;
+  margin-left: 2vh;
 }
 
 .borderGridThree {
@@ -721,8 +702,8 @@
   box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);
   width: 90vh;
   height: 230px;
-  margin-left: -15vh;
-  margin-top: 20px;
+  margin-top: 23px;
+  margin-left: 2vh;
 }
 
 .chekMark {
@@ -805,7 +786,7 @@
   /* display: flex;
   flex-direction: column;
   justify-items: center; */
-  background-image: url("../public/betanet/Vector_2.png");
+  /* background-image: url("../public/betanet/Vector_2.png"); */
   background-size: cover;
   /* background-position: 100%; */
   /* height: 658px; */
@@ -823,10 +804,12 @@
   display: flex;
   flex-direction: column;
 }
+
 .list-wrap ul {
   list-style-type: square;
   padding: 1.5rem 1rem;
 }
+
 .list-wrap ul li {
   margin-bottom: 1rem;
   font-style: normal;
@@ -838,9 +821,12 @@
   color: #ffffff;
   padding-left: 0.5rem;
 }
+
 .list-wrap ul li::marker {
-  color: #118263; /* Change the color */
+  color: #118263;
+  /* Change the color */
 }
+
 .checkMarkcheckIconSquare {
   margin-top: 5px;
   height: 10px;
@@ -849,12 +835,46 @@
 .chekMarkNextlineButtonBox {
   margin-top: auto;
 }
+
 .chekMarkNextlineButton {
   margin-top: 0px !important;
   padding: 1rem 1.5rem !important;
   width: 100% !important;
-  background-color: #ec5b29 !important;
+  background-color: #de7171 !important;
+  border: 1px solid #de7171;
+  color: black !important;
+}
+
+.faqHeading {
+  font-size: 25px !important;
+}
+
+.showFAQBTN {
+  width: 200px;
+  background-color: #de7171;
+  padding: 10px;
+  font-size:18px;
+  font-weight:700;
+  margin-top: 50px;
+  color: white;
+}
+
+.chekMarkNextlineButtonTwo {
+  margin-top: 0px !important;
+  padding: 1rem 1.5rem !important;
+  width: 100% !important;
+  background-color: #ffae93 !important;
   border: 1px solid #ec5b29;
+  color: black !important;
+}
+
+.chekMarkNextlineButtonThree {
+  margin-top: 0px !important;
+  padding: 1rem 1.5rem !important;
+  width: 100% !important;
+  background-color: #ffce88 !important;
+  border: 1px solid #ffce88;
+  color: black !important;
 }
 
 .betanetHighlightsLeft {
@@ -867,31 +887,38 @@
   /* color: #de7171; */
   margin-bottom: 0px;
 }
+
 .roadmap-li-box {
   padding: 0 4%;
 }
+
 .dashBorder {
   border-left: 1px dashed #b5b5b5;
   padding-left: 14%;
 }
+
 .roadmap-li-heading {
   display: flex;
   align-items: center;
 }
+
 .roadmap-li-heading-text {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
 }
+
 .roadmap-li-heading-green-line {
   margin: 0 5%;
   width: 30%;
   border-top: 2px solid #118263;
 }
+
 .road-list-wrap ul {
   /* list-style-type: ; */
   padding: 1.5rem 1rem;
 }
+
 .road-list-wrap ul li {
   margin-bottom: 1rem;
   font-style: normal;
@@ -903,8 +930,10 @@
   color: #ffffff;
   padding-left: 0.5rem;
 }
+
 .road-list-wrap ul li::marker {
-  color: #ec5b29; /* Change the color */
+  color: #ec5b29;
+  /* Change the color */
 }
 
 .roadmap-section {
@@ -912,13 +941,36 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .benefit-section {
   background-image: url("../public/betanet/benefit.png");
   background-size: 30%;
   background-repeat: no-repeat;
   background-position-x: right;
 }
+
+.betanetquestionSubTiltedColor {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  /* or 136% */
+
+  display: flex;
+  align-items: center;
+
+  color: #EC5B29;
+}
+
 @media screen and (max-width: 620px) {
+
+  .gridAlignTwo {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    column-gap: 2rem;
+  }
+
   .betaAlphanetTitleColor {
     font-style: normal;
     font-weight: 700;
@@ -965,7 +1017,7 @@
     width: 300px;
     height: 420px;
     margin-top: 20px;
-    margin-left: -0vh;
+    margin-left: 0px;
   }
 
   .borderGridTwo {
@@ -974,7 +1026,7 @@
     box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);
     width: 300px;
     height: 360px;
-    margin-left: -0vh;
+    margin-left: 0vh;
   }
 
   .globeImage {
@@ -986,7 +1038,7 @@
     margin-top: 10px;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 32px;
     /* or 145% */
 
@@ -994,6 +1046,10 @@
     align-items: center;
 
     color: #616161;
+  }
+
+  .css-1eh652p {
+    padding-bottom: 0px !important;
   }
 
   .betaAlphanetTitle {
@@ -1005,10 +1061,13 @@
     /* identical to box height, or 133% */
 
     color: #ffffff;
+    margin-bottom: 30px;
   }
+
   .borderGridNoborder {
     padding-top: 15%;
   }
+
   .dashBorder {
     border-left: none;
     padding-left: 4%;

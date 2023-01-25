@@ -58,26 +58,44 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
           content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
         />
 
-        <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} />
-        <meta property="og:title" content={`Shardeum | Ecosystem ${project.name}`} />
-        <meta property="og:description" content={project.description.substring(0, 160)} />
+        {/* Facebook */}
         <meta
           property="og:url"
           content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
         />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum | Ecosystem ${project.name}`} />
+        <meta property="og:description" content={`${project.description.substring(0, 160)}`} />
         <meta
           property="og:image"
           content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
         />
 
-        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
-        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
-          name="twitter:image"
+          property="twitter:domain"
+          content="shardeum-website-git-2022bugandfixchanges-shardeum.vercel.app"
+        />
+        <meta
+          property="twitter:url"
+          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
+        />
+        <meta property="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} />
+        <meta property="twitter:description" content={`${project.description.substring(0, 160)}`} />
+        <meta
+          property="twitter:image"
           content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
         />
-        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
       </Helmet>

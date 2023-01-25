@@ -73,10 +73,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
 
         {/* Twiter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="shardeum-website-git-2022bugandfixchanges-shardeum.vercel.app"
-        />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta
           property="twitter:url"
           content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}

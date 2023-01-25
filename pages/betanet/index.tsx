@@ -39,28 +39,28 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 
 const AlphanetLanding: NextPage = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = `{
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-      "@type": "ListItem", 
-      "position": 1, 
-      "name": "Home",
-      "item": "https://shardeum.org/" 
-      },{
-      "@type": "ListItem", 
-      "position": 2, 
-      "name": "Shardeum Liberty (Alphanet)",
-      "item": "https://shardeum.org/shardeum-liberty-alphanet/" 
-      }]
-      };`;
-
-    document.head.appendChild(script);
+    // const script = document.createElement("script");
+    // script.type = "application/ld+json";
+    // script.text = `{
+    //   "@context": "https://schema.org/",
+    //   "@type": "BreadcrumbList",
+    //   "itemListElement": [{
+    //   "@type": "ListItem",
+    //   "position": 1,
+    //   "name": "Home",
+    //   "item": "https://shardeum.org/"
+    //   },{
+    //   "@type": "ListItem",
+    //   "position": 2,
+    //   "name": "Shardeum Liberty (Alphanet)",
+    //   "item": "https://shardeum.org/shardeum-liberty-alphanet/"
+    //   }]
+    //   };`;
+    // document.head.appendChild(script);
   }, []);
   const { t: pageTranslation } = useTranslation(["page-alphanet"]);
   const { t: commonTranslation } = useTranslation(["common"]);
@@ -76,12 +76,12 @@ const AlphanetLanding: NextPage = () => {
   ];
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={
-          "Shardeum Liberty | Alphanet | Build scalable dApps and Web3 applications on Shardeum"
+          "Shardeum | Betanet"
         }
-        description="Shardeum is the world’s first layer 1 blockchain that truly solves scalability trilemma. It is an EVM based smart contract network that scales linearly with low gas fees forever with an aim to onboard billions of daily users and numerous DApps to Web 3"
-        canonical="https://shardeum.org/shardeum-liberty-alphanet/"
+        description="Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3"
+        canonical="https://shardeum.org/betanet/"
         additionalMetaTags={[
           {
             property: "keywords",
@@ -114,7 +114,57 @@ const AlphanetLanding: NextPage = () => {
           site: "https://shardeum.org",
           handle: "@shardeum",
         }}
-      />
+      /> */}
+
+      <Helmet>
+        <title>{`Shardeum | Betanet`}</title>
+        <meta
+          name="description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+
+        {/* Facebook */}
+        <meta property="og:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum | Betanet`} />
+        <meta
+          property="og:description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          property="og:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
+        <meta property="twitter:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="twitter:title" content={`Shardeum | Betanet`} />
+        <meta
+          property="twitter:description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+      </Helmet>
 
       {/* Hero section */}
       <Hero

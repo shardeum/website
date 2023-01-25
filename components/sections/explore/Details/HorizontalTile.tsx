@@ -29,6 +29,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
 }) => {
   const [userUpvotedState, setUserUpvotedState] = useState(userUpvoted);
   const [upvoteCount, setUpvoteCount] = useState(project.numUpvotes);
+  const [readmore, setReadmore] = useState(false);
 
   // to open signin window
   const { setPopup } = useContext(SigninContext);
@@ -68,6 +69,10 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
         // undo the update from frontend side if the API call fails
         handleUpvoteProjectState(!upvoted);
       });
+  };
+
+  const readMoreChange = (value: boolean) => {
+    setReadmore(value);
   };
 
   return (
@@ -139,7 +144,21 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             color="brand.grey-90"
             fontSize={["sm", "md", "lg", "xl"]}
           >
-            {project.description}
+            {readmore === true ? (
+              <div>
+                {project.description}...
+                <a href="#" onClick={() => readMoreChange(false)} style={{ color: "blue" }}>
+                  Shrink
+                </a>
+              </div>
+            ) : (
+              <div>
+                {project.description.substring(0, 160)}...
+                <a href="#" onClick={() => readMoreChange(true)} style={{ color: "blue" }}>
+                  Read More
+                </a>
+              </div>
+            )}
           </Text>
           <CategoryBadge category={project.category} />
         </GridItem>

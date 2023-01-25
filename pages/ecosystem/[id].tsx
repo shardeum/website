@@ -9,6 +9,7 @@ import { getSession } from "next-auth/react";
 import ShareModal from "@shm/components/sections/explore/Details/ShareModal";
 import { ProductScreenshots } from "@shm/components/sections/explore/Details/ProductScreenshots";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Helmet } from "react-helmet";
 
 export const getServerSideProps = async ({ req, locale, query }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
@@ -37,18 +38,45 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
-    const prevTitle = document.title;
-    document.title = `Shardeum | Ecosystem | ${project.name}`;
-    const Description = project.description.substring(0, 160);
-    const stateObj = {};
-    return () => {
-      document.title = prevTitle;
-      const CONTENT = document.getElementsByTagName("META") as any | null;
-      CONTENT[5].content = Description;
-    };
+    // const stateObj = {};
+    // const prevTitle = document.title;
+    // const Description = project.description.substring(0, 160);
+    // const CONTENT = document.getElementsByTagName("META") as any | null;
+    // CONTENT[5].content = Description;
+    const pageTitle = `Shardeum | Ecosystem | ${project.name}`;
+    if (document.title !== pageTitle) {
+      document.title = pageTitle;
+    }
   });
   return (
     <Box>
+      <Helmet>
+        <title>{`Shardeum | Ecosystem ${project.name}`}</title>
+        <meta name="description" content={project.description.substring(0, 160)} />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+        <meta property="og:title" content={`Shardeum | Ecosystem ${project.name}`} />
+        <meta property="og:description" content={project.description.substring(0, 160)} />
+        <meta
+          property="og:url"
+          content={`https://shardeum.org/${project.name.replace(/\s/g, "")}`}
+        />
+        <meta
+          property="og:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+        <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} />
+        <meta name="twitter:description" content={project.description.substring(0, 160)} />
+        <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+      </Helmet>
       <HorizontalTile
         onOpen={onOpen}
         project={project}

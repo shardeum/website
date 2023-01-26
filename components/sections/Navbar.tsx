@@ -196,8 +196,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           padding: "5px",
         }}
       >
-        <a href={"https://lu.ma/shardeum-q4-update"} target="_blank" rel="noreferrer">
-          <b> Register now for Shardeum Q4 Update : Intro to Betanet </b>
+        <a href={"https://shardeum.org/explore/events/"} target="_blank" rel="noreferrer">
+          <b> Register now for Shardeum Betanet Launch Party </b>
         </a>
       </div>
     );

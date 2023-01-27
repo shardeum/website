@@ -566,7 +566,7 @@
 }
 
 .globeImage {
-  width: 60vh;
+  width: 70vh;
   height: 50vh;
 }
 
@@ -579,6 +579,17 @@
   /* identical to box height, or 133% */
 
   color: #ffffff;
+}
+
+.betaAlphanetTitleDark {
+  text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  /* identical to box height, or 133% */
+
+  color: black;
 }
 
 .betaAlphanetTitleColor {
@@ -992,6 +1003,18 @@
     margin-top: 0px !important;
     padding: 10px;
   }
+  .betaAlphanetTitleNew {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    /* identical to box height, or 246% */
+
+    text-align: center;
+
+    color: #ec5b29;
+    text-align: center;
+  }
 
   .backgroundBorderLine {
     border: 0px solid #adadad;
@@ -1061,6 +1084,16 @@
     /* identical to box height, or 133% */
 
     color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .betaAlphanetTitleDark {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 133% */
+
+    color: black;
     margin-bottom: 30px;
   }
 

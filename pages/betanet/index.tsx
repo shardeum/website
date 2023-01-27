@@ -261,10 +261,10 @@ const AlphanetLanding: NextPage = () => {
           </>
         }
         media={
-          <Box position="relative" h="full">
+          <Box position="relative" h="full" style={{ borderRadius: "100px" }}>
             <Image
               objectFit="contain"
-              src="/alphanet/alphanet-hero.png"
+              src="/betanet/spinx.jpg"
               alt="Shardeum Alphanet is Live"
               layout="fill"
             />
@@ -314,9 +314,9 @@ const AlphanetLanding: NextPage = () => {
         <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="center" spacing="20">
-              <img className="globeImage" src={"/betanet/globe.png"} alt="Nischal Image" />
+              <img className="globeImage" src={"/betanet/2ndImage.jpg"} alt="Nischal Image" />
             </VStack>
-            <VStack alignItems="left" spacing="20" mt={10}>
+            <VStack alignItems="left" spacing="20" mt={5}>
               <SectionHeading color="brand.grey-90">
                 <h2>What is Betanet?</h2>
 
@@ -377,12 +377,12 @@ const AlphanetLanding: NextPage = () => {
                     First Web3 state sharded network with sharding abstraction
                   </p>
                 </div>
-                <div className="chekMarkNextline">
+                {/* <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
                     First smart contract platform to implement EIP2930
                   </p>
-                </div>
+                </div> */}
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">Automation of EIP2930 for a smoother DX</p>
@@ -468,7 +468,7 @@ const AlphanetLanding: NextPage = () => {
           px={{ base: 6, xl: 0 }}
           style={{ paddingTop: "0px" }}
         >
-          <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
+          {/* <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <div>
                 <VStack alignItems="left" className="backgroundBorder" spacing="10" mt={0}>
@@ -481,6 +481,18 @@ const AlphanetLanding: NextPage = () => {
                   </div>
                 </VStack>
               </div>
+            </SimpleGrid>
+          </VStack> */}
+
+          <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
+            <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
+              <VStack alignItems="center" spacing="10" mt={10}>
+                <SectionHeading color="brand.grey-90">
+                  <h2 className="betaAlphanetTitleDark">
+                    dApps/Projects that gained cult status on alphanet
+                  </h2>
+                </SectionHeading>
+              </VStack>
             </SimpleGrid>
           </VStack>
 
@@ -613,7 +625,11 @@ const AlphanetLanding: NextPage = () => {
                           "Access to over 300k community members with the fastest growing L1 ecosystem"
                         }
                       </li>
-                      <li>{"Guidance from proven leaders and visionaries like Nischal Shetty"}</li>
+                      <li>
+                        {
+                          "Guidance from proven leaders and visionaries like Nischal Shetty & Omar Syed"
+                        }
+                      </li>
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
@@ -630,7 +646,7 @@ const AlphanetLanding: NextPage = () => {
                       <li>{"Bug bounty will be enabled"}</li>
                       <li>
                         {
-                          "Earn rewards by engaging in various Shardeum and dApp initiatives Like Shardeum Leagues, Shardeum missions, quiz etc"
+                          "Earn rewards by engaging in various Shardeum and dApp initiatives Like Shardeum Leagues, Shardeum missions, Super Shardian"
                         }
                       </li>
                       <li>{"Earn POAPs by participating in Shardeum community events"}</li>
@@ -767,7 +783,7 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      "Minimum specs:
+                      Minimum specs:
                       <br />
                       <br />
                       - 60GB SSD storage (will go up in mainnet, but this will save cost in betanet)
@@ -777,7 +793,7 @@ const AlphanetLanding: NextPage = () => {
                       <br />
                       <br />
                       Stay tuned for an official announcement on hardware specs and staking
-                      requirements which will be added to our docs page soon"
+                      requirements which will be added to our docs page soon
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
@@ -837,9 +853,10 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      Your node will earn Betanet SHM, but these will not have any value. However,
-                      we will be keeping track of the addresses that helped out during Betanet and
-                      those addresses may receive a reward after Mainnet.
+                      Your node will earn Betanet SHM, but these will not have any value. That said,
+                      we will be keeping track of the addresses that helped out during Betanet.
+                      While we haven’t yet decided on Mainnet rewards for Betanet users, we’ll
+                      announce in due time if and when it is decided.
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
@@ -893,7 +910,7 @@ const AlphanetLanding: NextPage = () => {
                   </AccordionButton>
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>Whitepapers will be released around the same time as the launch of betanet</>
+                    <>Whitepaper will be released around the same time as the launch of betanet</>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
                   </AccordionPanel>
@@ -1368,13 +1385,49 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                          You can find and interact with the active projects building on Shardeum{" "}
+                          You can find and interact with the active projects building on Shardeum
                           <a
                             href="https://shardeum.org/ecosystem/"
                             target="_blank"
                             rel="noreferrer"
-                          ></a>{" "}
-                          here
+                          >
+                            {" "}
+                            here
+                          </a>
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`How can I get my dApp to be enlisted or added as part of active projects on Shardeum?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Please list your dApps that you are building on Shardeum
+                          <a
+                            href="https://airtable.com/shrIXaaf87BzaTfYy"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {" "}
+                            here
+                          </a>
                         </>
                         {/* <ReactMarkdown linkTarget="_blank">
                         </ReactMarkdown> */}

@@ -7,31 +7,31 @@ import NewsletterInput from "../../common/NewsletterInput";
 
 const bars = [
   {
-    bgColor: "brand.grey-30",
+    bgColor: "brand.grey-60",
     height: "51%",
     totalSHM: getPercentage(51),
     use: "node-mining",
   },
   {
-    bgColor: "brand.grey-30",
+    bgColor: "brand.grey-60",
     height: "18%",
     totalSHM: getPercentage(18),
     use: "sale",
   },
   {
-    bgColor: "brand.grey-30",
+    bgColor: "brand.grey-60",
     height: "15%",
     totalSHM: getPercentage(15),
     use: "team",
   },
   {
-    bgColor: "brand.grey-30",
+    bgColor: "brand.grey-60",
     height: "11%",
     totalSHM: getPercentage(11),
     use: "foundation",
   },
   {
-    bgColor: "brand.grey-30",
+    bgColor: "brand.grey-60",
     height: "5%",
     totalSHM: getPercentage(5),
     use: "ecosystem-airdrops",
@@ -43,7 +43,7 @@ const SHMTokenomics = () => {
   const { t: commonTranslation } = useTranslation("common");
 
   return (
-    <Box position="relative" overflow="hidden" bg="brand.black">
+    <Box position="relative" overflow="hidden" bg="brand.white">
       <Box
         position="absolute"
         right="-20%"
@@ -51,13 +51,13 @@ const SHMTokenomics = () => {
         zIndex={1}
         display={{ base: "none", lg: "block" }}
       >
-        <Image
+        {/* <Image
           src="/tokenomic-bg.png"
           width="700px"
           objectFit="cover"
           alt="Nischal Image"
           height="800px"
-        />
+        /> */}
       </Box>
       <Container
         maxW="container.xl"
@@ -68,7 +68,7 @@ const SHMTokenomics = () => {
         px={{ base: 6, xl: 0 }}
       >
         <Box mb="12">
-          <SectionHeading color="brand.white">
+          <SectionHeading color="brand.black">
             <h2>{pageTranslation("shm-tokenomics")}</h2>
           </SectionHeading>
         </Box>
@@ -132,7 +132,7 @@ const SHMTokenomics = () => {
         >
           <GridItem display="flex" justifyContent="flex-end" h="full" flexDir="column">
             <VStack alignItems="start" spacing="2" mb="4">
-              <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
+              <Text fontSize="xl" fontWeight="medium" color="brand.black">
                 {pageTranslation("shm-fixed-supply-label")}
               </Text>
               <Text as="span" color="brand.orange" fontWeight="xl">
@@ -150,13 +150,13 @@ const SHMTokenomics = () => {
               flexDir={{ base: "row", md: "column" }}
             >
               <VStack alignItems="start" spacing="2" mb="4">
-                <Text fontSize="xl" fontWeight="medium" color="brand.grey-10">
+                <Text fontSize="xl" fontWeight="medium" color="brand.grey-80">
                   {bar.height}
                 </Text>{" "}
-                <Text fontSize="lg" fontWeight="medium" color="brand.grey-30">
+                <Text fontSize="lg" fontWeight="medium" color="brand.grey-80">
                   {commonTranslation(bar.use)}
                 </Text>{" "}
-                <Text as="span" color="brand.grey-50" display="inline-block" fontSize="base">
+                <Text as="span" color="brand.grey-70" display="inline-block" fontSize="base">
                   {bar.totalSHM}M $SHM
                 </Text>
               </VStack>

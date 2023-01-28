@@ -88,10 +88,12 @@ const roadmapList = [
       {
         description: "phase-5-desc",
         taskList: [
-          "phase-5-task-list-1",
-          "phase-5-task-list-2",
-          "phase-5-task-list-3",
-          "phase-5-task-list-4",
+          // "phase-5-task-list-1",
+          // "phase-5-task-list-2",
+          // "phase-5-task-list-3",
+          // "phase-5-task-list-4",
+          "phase-5-task-list-6",
+          "phase-5-task-list-5",
         ],
         launchItems: [],
       },
@@ -115,8 +117,6 @@ const roadmapList = [
           "phase-6-task-list-5",
           "phase-6-task-list-6",
           "phase-6-task-list-7",
-          "phase-6-task-list-8",
-          "phase-6-task-list-9",
         ],
         launchItems: [],
       },
@@ -126,6 +126,31 @@ const roadmapList = [
     ],
     quarterStartDate: new Date(2023, 1, 1),
     quarterEndDate: new Date(2023, 3, 31),
+  },
+  {
+    title: "phase-7-title",
+    sections: [
+      {
+        description: "phase-7-desc",
+        taskList: [
+          "phase-7-task-list-1",
+          "phase-7-task-list-2",
+          "phase-7-task-list-3",
+          "phase-7-task-list-4",
+          "phase-7-task-list-5",
+          // "phase-7-task-list-6",
+          // "phase-7-task-list-7",
+          // "phase-7-task-list-8",
+          // "phase-7-task-list-9",
+        ],
+        launchItems: [],
+      },
+      // {
+      //   description: "phase-5-secondary-desc",
+      // },
+    ],
+    quarterStartDate: new Date(2023, 1, 1),
+    quarterEndDate: new Date(2023, 6, 31),
   },
 ];
 
@@ -162,7 +187,7 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
   }
 };
 
-function RoadmapFull() {
+function RoadmapFull({ heading }: any) {
   const { t: pageTranslation } = useTranslation(["page-home", "common"]);
 
   return (
@@ -190,7 +215,7 @@ function RoadmapFull() {
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as="h2" alignItems="center">
+            <Heading size="2xl" color="brand.white" as={heading} alignItems="center">
               {pageTranslation("roadmap")}
             </Heading>
           </VStack>

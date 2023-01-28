@@ -740,14 +740,16 @@
 
 .imageBox {
   background: #ffffff;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); */
   border-radius: 50px;
   width: 80px;
   height: 80px;
 }
 
 .dropboxImage {
-  margin-top: 1.2em;
+  margin-top: 0em;
+  width: 140px;
+  border-radius: 0px;
 }
 
 .dropBoxTitle {
@@ -766,13 +768,13 @@
 .dropBoxTitleParra {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
-  text-align: center;
+  text-align: left;
   /* or 128% */
 
   color: #4f4f4f;
-  width: 250px;
+  width: 350px !important;
 }
 
 .dropBoxTitleBold {
@@ -790,7 +792,7 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .containerForThreeNode {
@@ -833,6 +835,31 @@
   padding-left: 0.5rem;
 }
 
+
+.list-wrap2 ul li {
+  margin-bottom: 1rem;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  /* or 138% */
+
+  font-weight: 500;
+  text-align: left;
+  /* or 128% */
+
+  color: #4f4f4f;
+  padding-left: 0.5rem;
+}
+
+.list-wrap2 ul {
+  list-style-type: square;
+  padding: 0rem 0rem;
+}
+
+.list-wrap2 ul li::marker {
+  color: #118263;
+  /* Change the color */
+}
 .list-wrap ul li::marker {
   color: #118263;
   /* Change the color */
@@ -974,6 +1001,58 @@
 }
 
 @media screen and (max-width: 620px) {
+
+  .list-wrap2 ul li {
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* or 138% */
+  
+    font-weight: 500;
+    text-align: center;
+    /* or 128% */
+  
+    color: #4f4f4f;
+    padding-left: 0.5rem;
+  }
+  
+  .list-wrap2 ul {
+    list-style-type: square;
+    padding: 0rem 0rem;
+  }
+  
+  .list-wrap2 ul li::marker {
+    color: #118263;
+    /* Change the color */
+  }
+
+  .simpleGridDesign {
+    padding: 0px !important
+  }
+
+  .dropBoxTitleParra {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: left;
+    /* or 128% */
+  
+    color: #4f4f4f;
+    width: 250px !important;
+    text-align: center !important;
+  }
+
+  .dropBoxBporder {
+    /* width: 188px; */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+
+    border-right: 0px !important;
+  }
 
   .gridAlignTwo {
     display: flex;

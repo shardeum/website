@@ -11,6 +11,7 @@ import {
   SimpleGrid,
   Link,
   Heading,
+  Img,
 } from "@chakra-ui/react";
 import { Container, VStack, ListItem, OrderedList } from "@chakra-ui/react";
 
@@ -360,7 +361,7 @@ const AlphanetLanding: NextPage = () => {
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
-                  <h2 className="betaAlphanetTitle">Shardeum Alphanet (Liberty) Metrics</h2>
+                  <h2 className="betaAlphanetTitle">Shardeum Liberty (Alphanet) Metrics</h2>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>
@@ -486,10 +487,10 @@ const AlphanetLanding: NextPage = () => {
 
           <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
-              <VStack alignItems="center" spacing="10" mt={10}>
+              <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitleDark">
-                    dApps/Projects that gained cult status on alphanet
+                    dApps & their success stories on Alphanet
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -504,46 +505,159 @@ const AlphanetLanding: NextPage = () => {
             w="full"
             pb="16"
           >
-            <SimpleGrid columns={[1, 4]} justifyContent="space-evenly" w="full">
+            <SimpleGrid
+              className="simpleGridDesign"
+              columns={[1, 3]}
+              justifyContent="space-evenly"
+              w="full"
+              style={{ padding: "0px 0px 0px 0px" }}
+            >
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
-                  <img className="dropboxImage" src={"/betanet/dropbox.png"} alt="Image" />
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/5nqNjMJHmaA9yz9kjL8dww/5jmmpxeQgw8R6N7yCJpCgRVrlU5IT4pbfijhJbZlZmKK5nAjMuNHogbWL5wGzyIe9uMNK_q-Gbuz4SnQoHcp823kcBiJJa4u3zw2oOKZT48/1jF8ISFC-mokccm9kDzGNnhJ-ahm0TlwmllenR9YGQQ" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
                 </VStack>
-                <h5 className="dropBoxTitle">Spriyo</h5>
+                <h5 className="dropBoxTitle">Swapped Finance</h5>
                 <p className="dropBoxTitleParra">
-                  <span className="dropBoxTitleBold">1000</span> Galacticore NFT sold out in less
-                  5hrs.
+                  {/* <span className="dropBoxTitleBold">1000</span> Galacticore NFT sold out in less
+                  5hrs. */}
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{"Recorded 21k+ txs worth 245k test SHM by 7.5k unique wallets"}</li>
+                      <li>{"738k profile visits & 28.5 mentions on Twitter"}</li>
+                    </ul>
+                  </Box>
                 </p>
               </div>
 
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
-                  <img className="dropboxImage" src={"/betanet/dropbox.png"} alt="Image" />
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/hd8bATV5D3q8XdGwRrhlQw/kZl0mh-ZrjHCXDDi-u6qR29PTwg4TWg5Q5rpw7wVQHl7FAX2PpiBySpaeBT3DQ6VFet1heDt9yGa0BAZX-P8zHKcLobovT8V3K2DFD6e1No/vGE9UpmHm70PmvywKGEBcqwFRrDtQMGH8_d04CKAzDw" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
                 </VStack>
-                <h5 className="dropBoxTitle">Chainhash</h5>
+                <h5 className="dropBoxTitle">Spriyo NFT Marketplace</h5>
                 <p className="dropBoxTitleParra">
-                  <span className="dropBoxTitleBold">11K</span> Signups on day 1
+                  {/* <span className="dropBoxTitleBold" >1000</span> Galacticore NFT sold out in less
+                  5hrs. */}
+
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{"50k users registered with 30k NFTs minted approx"}</li>
+                      <li>{"19k Twitter followers & 14k Discord members"}</li>
+                    </ul>
+                  </Box>
+                </p>
+              </div>
+
+              <div
+                className="dropBoxBporder"
+                style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
+              >
+                <VStack alignItems="center" className="imageBox" spacing="20">
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/x8f4ajCrmTRXYnYy_91c0A/sJZrdI-chcSFDO8E4HZygivSHuVG0hSLWXPG7Hd6z1XfAH5d0otwgLokhEbxTlc2UqXGB2AoqoRCBK6W6jcmuI_bxcF4r7cagA0Yt0C4ISs/88yFR5Fzmtto9dFk5ZxXI1_6q8gPMa9nsGydbil_GJk" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
+                </VStack>
+                <h5 className="dropBoxTitle">ChainHash</h5>
+                <p className="dropBoxTitleParra">
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{"Ranking in top 25 projects globally on Guild.xyz"}</li>
+                      <li>{"22k Twitter followers & 27k Discord members"}</li>
+                    </ul>
+                  </Box>
                 </p>
               </div>
 
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
-                  <img className="dropboxImage" src={"/betanet/dropbox.png"} alt="Image" />
-                </VStack>
-                <h5 className="dropBoxTitle">Yogama</h5>
-                <p className="dropBoxTitleParra">
-                  <span className="dropBoxTitleBold">12 hours</span> Sold out NFTs in
-                </p>
-              </div>
-
-              <div className="dropBoxBporder">
-                <VStack alignItems="center" className="imageBox" spacing="20">
-                  <img className="dropboxImage" src={"/betanet/dropbox.png"} alt="Image" />
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/3boSrb3egLgX7BUaTzh3SQ/Ui3NA33YtPJeDWPqbL3hy61FYG0RmQ_-YkLDCxHGmwVlggzdHR7i0ZA8-G3Oy5VNxrwYsjOX5x_E1ca3eeuWu51A7fbtI_vqTxLcJLDUIlU/4KxFRIMyoEg8Cx1afbTgNOwBU5WPw61ksttvj9PHxjg" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
                 </VStack>
                 <h5 className="dropBoxTitle">DotSHM</h5>
                 <p className="dropBoxTitleParra">
-                  First revenue generating project on Shardeum Treasury of{" "}
-                  <span className="dropBoxTitleBold">~$100K</span>
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{""}</li>
+                      <li>{""}</li>
+                    </ul>
+                  </Box>
+                </p>
+              </div>
+
+              <div className="dropBoxBporder">
+                <VStack alignItems="center" className="imageBox" spacing="20">
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/nMaRhQUlwGPqELQqJZA5yw/aTZrsiSR0J-Dpg04EOvNurda5RT5kr9_8vyjpiIQCNmudRaa8Jvyrcptu2Gu02hcyu7ZDXMETVdbfHpxrKjqJh4wlQly4WI019PU_qdTnbA/w2fQhN6-ukfWyVDZLgOHIPUrXa6F_vBxN8tGf6HT5_g" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
+                </VStack>
+                <h5 className="dropBoxTitle">Bandit</h5>
+                <p className="dropBoxTitleParra">
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{""}</li>
+                      <li>{""}</li>
+                    </ul>
+                  </Box>
+                </p>
+              </div>
+
+              <div
+                className="dropBoxBporder"
+                style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
+              >
+                <VStack alignItems="center" className="imageBox" spacing="20">
+                  <Img
+                    src={
+                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/5nqNjMJHmaA9yz9kjL8dww/5jmmpxeQgw8R6N7yCJpCgRVrlU5IT4pbfijhJbZlZmKK5nAjMuNHogbWL5wGzyIe9uMNK_q-Gbuz4SnQoHcp823kcBiJJa4u3zw2oOKZT48/1jF8ISFC-mokccm9kDzGNnhJ-ahm0TlwmllenR9YGQQ" ||
+                      "/Shardeum.png"
+                    }
+                    margin={["0 auto", 0]}
+                    boxSize={["7.5rem", "11.25rem"]}
+                    alt="logo"
+                  />
+                </VStack>
+                <h5 className="dropBoxTitle">ABC</h5>
+                <p className="dropBoxTitleParra">
+                  <Box className="list-wrap2">
+                    <ul>
+                      <li>{""}</li>
+                      <li>{""}</li>
+                    </ul>
+                  </Box>
                 </p>
               </div>
             </SimpleGrid>
@@ -568,7 +682,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitle">
-                    How do I benefit from Shardeum’s <br /> Betanet/Sphinx release?
+                    How do I benefit from Shardeum’s <br /> Sphinx (Betanet) release?
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -690,7 +804,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10} pl={5}>
                 <span style={{ color: "#EC5B29" }}>{"2022"}</span>
                 <h2 className="betaAlphanetTitle " style={{ margin: "0" }}>
-                  {"Betanet Sphinx Roadmap"}
+                  {"Sphinx (Betanet) Roadmap"}
                 </h2>
               </VStack>
             </SimpleGrid>

@@ -1,7 +1,17 @@
 
 ## Getting Started
 
-First, run the development server:
+1. Have the .env file for environmental variables needed.
+
+2. Install all dependencies:  
+
+```bash
+npm install
+# or
+yarn
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev

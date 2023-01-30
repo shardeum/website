@@ -41,17 +41,7 @@ const roadmapList = [
     sections: [
       {
         description: "phase-3-desc",
-        taskList: [
-          "phase-3-task-list-1",
-          "phase-3-task-list-2",
-          "phase-3-task-list-3",
-          "phase-3-task-list-4",
-          "phase-3-task-list-5",
-          "phase-3-task-list-6",
-          "phase-3-task-list-7",
-          "phase-3-task-list-8",
-          "phase-3-task-list-9",
-        ],
+        taskList: ["phase-3-task-list-1", "phase-3-task-list-2", "phase-3-task-list-3"],
       },
       {
         description: "phase-3-secondary-desc",
@@ -88,12 +78,10 @@ const roadmapList = [
       {
         description: "phase-5-desc",
         taskList: [
-          // "phase-5-task-list-1",
-          // "phase-5-task-list-2",
-          // "phase-5-task-list-3",
-          // "phase-5-task-list-4",
-          "phase-5-task-list-6",
-          "phase-5-task-list-5",
+          "phase-5-task-list-1",
+          "phase-5-task-list-2",
+          "phase-5-task-list-3",
+          "phase-5-task-list-4",
         ],
         launchItems: [],
       },
@@ -109,15 +97,7 @@ const roadmapList = [
     sections: [
       {
         description: "phase-6-desc",
-        taskList: [
-          "phase-6-task-list-1",
-          "phase-6-task-list-2",
-          "phase-6-task-list-3",
-          "phase-6-task-list-4",
-          "phase-6-task-list-5",
-          "phase-6-task-list-6",
-          "phase-6-task-list-7",
-        ],
+        taskList: ["phase-6-task-list-1", "phase-6-task-list-2"],
         launchItems: [],
       },
       // {
@@ -127,33 +107,7 @@ const roadmapList = [
     quarterStartDate: new Date(2023, 1, 1),
     quarterEndDate: new Date(2023, 3, 31),
   },
-  {
-    title: "phase-7-title",
-    sections: [
-      {
-        description: "phase-7-desc",
-        taskList: [
-          "phase-7-task-list-1",
-          "phase-7-task-list-2",
-          "phase-7-task-list-3",
-          "phase-7-task-list-4",
-          "phase-7-task-list-5",
-          // "phase-7-task-list-6",
-          // "phase-7-task-list-7",
-          // "phase-7-task-list-8",
-          // "phase-7-task-list-9",
-        ],
-        launchItems: [],
-      },
-      // {
-      //   description: "phase-5-secondary-desc",
-      // },
-    ],
-    quarterStartDate: new Date(2023, 1, 1),
-    quarterEndDate: new Date(2023, 6, 31),
-  },
 ];
-
 /**
  *
  * @param quarter Current quarter

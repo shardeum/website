@@ -33,7 +33,6 @@ import SlidingStats from "@shm/components/common/SlidingStats";
 import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
 import { CheckIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import SwappedFinance from "../../public/betanet/SwappedFinance.png";
 import {
   Accordion,
   AccordionItem,

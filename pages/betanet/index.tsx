@@ -599,7 +599,6 @@ const AlphanetLanding: NextPage = () => {
                   </Box>
                 </p>
               </div>
-
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img

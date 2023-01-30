@@ -30,7 +30,7 @@
   "phase-3-secondary-desc": "Private sale started",
   "phase-3-task-list-1": "20 node unsharded network operated by Shardeum",
   "phase-3-task-list-2": "Send transactions and deploy smart contracts",
-  "phase-3-task-list-3": "Deployed to individual medium nodes on AWS in different",
+  "phase-3-task-list-3": "Deployed to individual medium nodes on AWS in different regions",
   "phase-3-task-list-4": "Mainnet launch",
   "phase-3-task-list-5": "Minimum 1280 validators",
   "phase-3-task-list-6": "Autoscaling enabled providing linear scalability",

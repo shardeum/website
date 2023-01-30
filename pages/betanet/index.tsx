@@ -537,7 +537,7 @@ const AlphanetLanding: NextPage = () => {
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={"/Shardeum.png"}
+                    src={"/betanet/Spriyo.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
@@ -563,10 +563,7 @@ const AlphanetLanding: NextPage = () => {
               >
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/x8f4ajCrmTRXYnYy_91c0A/sJZrdI-chcSFDO8E4HZygivSHuVG0hSLWXPG7Hd6z1XfAH5d0otwgLokhEbxTlc2UqXGB2AoqoRCBK6W6jcmuI_bxcF4r7cagA0Yt0C4ISs/88yFR5Fzmtto9dFk5ZxXI1_6q8gPMa9nsGydbil_GJk" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/betanet/ChainHash.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
@@ -586,10 +583,7 @@ const AlphanetLanding: NextPage = () => {
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/3boSrb3egLgX7BUaTzh3SQ/Ui3NA33YtPJeDWPqbL3hy61FYG0RmQ_-YkLDCxHGmwVlggzdHR7i0ZA8-G3Oy5VNxrwYsjOX5x_E1ca3eeuWu51A7fbtI_vqTxLcJLDUIlU/4KxFRIMyoEg8Cx1afbTgNOwBU5WPw61ksttvj9PHxjg" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/betanet/DotSHM.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
@@ -609,10 +603,7 @@ const AlphanetLanding: NextPage = () => {
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/nMaRhQUlwGPqELQqJZA5yw/aTZrsiSR0J-Dpg04EOvNurda5RT5kr9_8vyjpiIQCNmudRaa8Jvyrcptu2Gu02hcyu7ZDXMETVdbfHpxrKjqJh4wlQly4WI019PU_qdTnbA/w2fQhN6-ukfWyVDZLgOHIPUrXa6F_vBxN8tGf6HT5_g" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/betanet/Bandit.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"

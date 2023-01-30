@@ -33,6 +33,7 @@ import SlidingStats from "@shm/components/common/SlidingStats";
 import { IconGlobe, IconTransaction, IconWeb3 } from "@shm/Icons";
 import { CheckIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import SwappedFinance from "../../public/betanet/SwappedFinance.png";
 import {
   Accordion,
   AccordionItem,
@@ -515,10 +516,7 @@ const AlphanetLanding: NextPage = () => {
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/5nqNjMJHmaA9yz9kjL8dww/5jmmpxeQgw8R6N7yCJpCgRVrlU5IT4pbfijhJbZlZmKK5nAjMuNHogbWL5wGzyIe9uMNK_q-Gbuz4SnQoHcp823kcBiJJa4u3zw2oOKZT48/1jF8ISFC-mokccm9kDzGNnhJ-ahm0TlwmllenR9YGQQ" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/betanet/SwappedFinance.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
@@ -540,10 +538,7 @@ const AlphanetLanding: NextPage = () => {
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/hd8bATV5D3q8XdGwRrhlQw/kZl0mh-ZrjHCXDDi-u6qR29PTwg4TWg5Q5rpw7wVQHl7FAX2PpiBySpaeBT3DQ6VFet1heDt9yGa0BAZX-P8zHKcLobovT8V3K2DFD6e1No/vGE9UpmHm70PmvywKGEBcqwFRrDtQMGH8_d04CKAzDw" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/Shardeum.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"

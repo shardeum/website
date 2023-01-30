@@ -321,7 +321,7 @@ const AlphanetLanding: NextPage = () => {
               <SectionHeading color="brand.grey-90">
                 <h2>What is Betanet?</h2>
 
-                <Text className="betanetquestionSubHed">
+                <Text className="betanetquestionSubHed xyz">
                   It all starts with an idea! Once a tech product idea proves its technical
                   feasibilty, it will be followed by an extensive period of testing and upgrades.
                   The gradual yet volatile upgrades will be carried out on a test network or testnet

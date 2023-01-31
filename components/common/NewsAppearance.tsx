@@ -96,16 +96,19 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
             </HStack>
           </VStack>
         </Box>
-        {news.map((item) => (
-          <SwiperSlide key={item.title}>
-            <NewsItem
-              title={item.title}
-              imageURL={item.imageURL}
-              siteName={item.siteName}
-              newsURL={item.newsURL}
-            />
-          </SwiperSlide>
-        ))}
+        {news.map((item, index) => {
+          console.log("*****news", item.title, index);
+          return (
+            <SwiperSlide key={item.title}>
+              <NewsItem
+                title={item.title}
+                imageURL={`/news/${index}.png`}
+                siteName={item.siteName}
+                newsURL={item.newsURL}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </Box>
   );

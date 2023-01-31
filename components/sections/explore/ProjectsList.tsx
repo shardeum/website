@@ -57,7 +57,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
         mx="auto"
         pt="16"
         // pb={{ lg: "11.6rem", md: "3rem", sm: "3rem", xs: "4rem" }}
-        pb={["4rem", "3rem", "3rem", "11.6rem"]}
+        pb={["4rem", "3rem", "3rem", "4rem"]}
         px={{ base: 6, xl: 0 }}
       >
         {/* title and searchbar */}

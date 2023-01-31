@@ -12,6 +12,7 @@ import {
   Link,
   Heading,
   Img,
+  background,
 } from "@chakra-ui/react";
 import { Container, VStack, ListItem, OrderedList } from "@chakra-ui/react";
 
@@ -262,10 +263,14 @@ const AlphanetLanding: NextPage = () => {
           </>
         }
         media={
-          <Box position="relative" h="full" style={{ borderRadius: "100px" }}>
+          <Box
+            position="relative"
+            h="full"
+            style={{ borderRadius: "100px", backgroundColor: "transparent" }}
+          >
             <Image
               objectFit="contain"
-              src="/betanet/spinx.jpg"
+              src="/betanet/spinx.png"
               alt="Shardeum Alphanet is Live"
               layout="fill"
             />
@@ -315,7 +320,7 @@ const AlphanetLanding: NextPage = () => {
         <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
           <SimpleGrid columns={[1, 2]} justifyContent="space-between" w="full">
             <VStack alignItems="center" spacing="20">
-              <img className="globeImage" src={"/betanet/2ndImage.jpg"} alt="Nischal Image" />
+              <img className="globeImage" src={"/betanet/Betanet2.png"} alt="Nischal Image" />
             </VStack>
             <VStack alignItems="left" spacing="20" mt={5}>
               <SectionHeading color="brand.grey-90">

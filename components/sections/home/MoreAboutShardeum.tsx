@@ -18,7 +18,7 @@ const featureList = [
   {
     titleKey: "shm-feature-3-title",
     descriptionKey: "shm-feature-3-desc",
-    iconPath: "clockIcon.png",
+    iconPath: "DynamicShardingAtomicComposibility.png",
   },
   {
     titleKey: "shm-feature-4-title",
@@ -28,7 +28,7 @@ const featureList = [
   {
     titleKey: "shm-feature-5-title",
     descriptionKey: "shm-feature-5-desc",
-    iconPath: "plantIcon.png",
+    iconPath: "AutoscalingHighfairness.png",
   },
   {
     titleKey: "shm-feature-6-title",

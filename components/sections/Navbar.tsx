@@ -190,7 +190,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       <div
         className="navNotificationShow"
         style={{
-          background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%);",
+          // background: "linear-gradient(90deg, #606EFF -5.59%, #EC5B29 103.41%)",
           textAlign: "center",
           color: "white",
           padding: "5px",

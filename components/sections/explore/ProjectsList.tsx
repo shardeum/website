@@ -27,10 +27,10 @@ export const ProjectsList: FC<ProjectsListProps> = ({
 
   const numProjectsPerPage: number | undefined = useBreakpointValue({
     lg: 6,
-    md: 2,
-    sm: 2,
-    xs: 2,
-    base: 2,
+    md: 6,
+    sm: 6,
+    xs: 6,
+    base: 6,
   });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {

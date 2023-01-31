@@ -57,7 +57,7 @@
   margin: 1em 0;
 }
 
-.vertical-timeline-element>div {
+.vertical-timeline-element > div {
   min-height: 1px;
 }
 
@@ -226,7 +226,8 @@
 }
 
 .vertical-timeline-element-content p,
-.vertical-timeline-element-content .vertical-timeline-element-date {}
+.vertical-timeline-element-content .vertical-timeline-element-date {
+}
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
   display: inline-block;
@@ -295,7 +296,8 @@
     font-size: 1.25rem;
   }
 
-  .vertical-timeline-element-content p {}
+  .vertical-timeline-element-content p {
+  }
 
   .vertical-timeline-element-content .vertical-timeline-element-date {
     font-size: 14px;
@@ -316,7 +318,9 @@
     transform: rotate(180deg);
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
     display: block;
     position: absolute;
     width: 100%;
@@ -325,29 +329,47 @@
     font-size: var(--chakra-fontSizes-2xl);
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content,
-  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
+    .vertical-timeline-element-content,
+  .vertical-timeline--two-columns
+    .vertical-timeline-element.vertical-timeline-element--right
+    .vertical-timeline-element-content {
     float: right;
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow,
-  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
+    .vertical-timeline-element-content-arrow,
+  .vertical-timeline--two-columns
+    .vertical-timeline-element.vertical-timeline-element--right
+    .vertical-timeline-element-content-arrow {
     top: 24px;
     left: auto;
     right: 100%;
     transform: rotate(0deg);
   }
 
-  .vertical-timeline--one-column-right .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow,
-  .vertical-timeline--one-column-right .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow {
+  .vertical-timeline--one-column-right
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
+    .vertical-timeline-element-content-arrow,
+  .vertical-timeline--one-column-right
+    .vertical-timeline-element.vertical-timeline-element--right
+    .vertical-timeline-element-content-arrow {
     top: 24px;
     left: 100%;
     right: auto;
     transform: rotate(0deg);
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date,
-  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date,
+  .vertical-timeline--two-columns
+    .vertical-timeline-element.vertical-timeline-element--right
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
     left: auto;
     right: 104%;
     text-align: right;
@@ -367,10 +389,13 @@
 }
 
 @media only screen and (min-width: 1170px) {
-
   /* inverse bounce effect on even content blocks */
-  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in,
-  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in {
+  .vertical-timeline--two-columns.vertical-timeline--animate
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left)
+    .vertical-timeline-element-content.bounce-in,
+  .vertical-timeline--two-columns.vertical-timeline--animate
+    .vertical-timeline-element.vertical-timeline-element--right
+    .vertical-timeline-element-content.bounce-in {
     -webkit-animation: cd-bounce-2-inverse 0.6s;
     -moz-animation: cd-bounce-2-inverse 0.6s;
     animation: cd-bounce-2-inverse 0.6s;
@@ -835,7 +860,6 @@
   padding-left: 0.5rem;
 }
 
-
 .list-wrap2 ul li {
   margin-bottom: 1rem;
   font-style: normal;
@@ -891,8 +915,8 @@
   width: 200px;
   background-color: #de7171;
   padding: 10px;
-  font-size:18px;
-  font-weight:700;
+  font-size: 18px;
+  font-weight: 700;
   margin-top: 50px;
   color: white;
 }
@@ -997,38 +1021,37 @@
   display: flex;
   align-items: center;
 
-  color: #EC5B29;
+  color: #ec5b29;
 }
 
 @media screen and (max-width: 620px) {
-
   .list-wrap2 ul li {
     margin-bottom: 1rem;
     font-style: normal;
     font-size: 1rem;
     line-height: 1.5rem;
     /* or 138% */
-  
+
     font-weight: 500;
     text-align: center;
     /* or 128% */
-  
+
     color: #4f4f4f;
     padding-left: 0.5rem;
   }
-  
+
   .list-wrap2 ul {
     list-style-type: square;
     padding: 0rem 0rem;
   }
-  
+
   .list-wrap2 ul li::marker {
     color: #118263;
     /* Change the color */
   }
 
   .simpleGridDesign {
-    padding: 0px !important
+    padding: 0px !important;
   }
 
   .dropBoxTitleParra {
@@ -1038,7 +1061,7 @@
     line-height: 23px;
     text-align: left;
     /* or 128% */
-  
+
     color: #4f4f4f;
     width: 250px !important;
     text-align: center !important;
@@ -1184,4 +1207,16 @@
     border-left: none;
     padding-left: 4%;
   }
+}
+
+.joimCommunitySocaialLinks svg {
+  margin: 0 !important;
+  width: 3rem !important;
+
+}
+
+.joimCommunitySocaialLinks p {
+  width: max-content !important;
+  margin: 0 !important;
+
 }

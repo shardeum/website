@@ -22,7 +22,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function Carousel({ children }) {
+export default function Carousel({ children, arrowHide }) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = useState(null);
@@ -49,36 +49,38 @@ export default function Carousel({ children }) {
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
-      {/* Left Icon */}
-      <IconButton
-        style={{ color: "black", backgroundColor: "transparent" }}
-        aria-label="left-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
-      >
-        <ArrowBackIcon />
-      </IconButton>
-      {/* Right Icon */}
-      <IconButton
-        style={{ color: "black", backgroundColor: "transparent" }}
-        aria-label="right-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      >
-        <ArrowForwardIcon />
-      </IconButton>
+      {arrowHide === true ? null : (
+        <>
+          <IconButton
+            style={{ color: "black", backgroundColor: "transparent" }}
+            aria-label="left-arrow"
+            colorScheme="messenger"
+            borderRadius="full"
+            position="absolute"
+            left={side}
+            top={top}
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            onClick={() => slider?.slickPrev()}
+          >
+            <ArrowBackIcon />
+          </IconButton>
+          <IconButton
+            style={{ color: "black", backgroundColor: "transparent" }}
+            aria-label="right-arrow"
+            colorScheme="messenger"
+            borderRadius="full"
+            position="absolute"
+            right={side}
+            top={top}
+            transform={"translate(0%, -50%)"}
+            zIndex={2}
+            onClick={() => slider?.slickNext()}
+          >
+            <ArrowForwardIcon />
+          </IconButton>
+        </>
+      )}
       {/* Slider */}
       <Container
         mx="auto"

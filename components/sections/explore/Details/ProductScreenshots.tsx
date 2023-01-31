@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+import { useEffect, useState } from "react";
 import { Container, Heading, Image, Box } from "@chakra-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { Screenshot } from "models";
@@ -21,6 +22,9 @@ type ProductScreenshotProps = {
 export const ProductScreenshots: FC<ProductScreenshotProps> = ({
   screenShots,
 }: ProductScreenshotProps) => {
+  useEffect(() => {
+    // console.log(screenShots.length)
+  });
   return (
     <Container
       mx="auto"

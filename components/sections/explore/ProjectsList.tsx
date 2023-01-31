@@ -26,7 +26,8 @@ export const ProjectsList: FC<ProjectsListProps> = ({
   // Use breakpoints to show different number of project cards
 
   const numProjectsPerPage: number | undefined = useBreakpointValue({
-    lg: 6,
+    // lg: 6,
+    lg: 8,
     md: 2,
     sm: 2,
     xs: 2,
@@ -57,7 +58,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
         mx="auto"
         pt="16"
         // pb={{ lg: "11.6rem", md: "3rem", sm: "3rem", xs: "4rem" }}
-        pb={["4rem", "3rem", "3rem", "11.6rem"]}
+        pb={["4rem", "3rem", "3rem", "4rem"]}
         px={{ base: 6, xl: 0 }}
       >
         {/* title and searchbar */}
@@ -83,7 +84,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                 .slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
                 ?.map((item) => (
                   <>
-                    {item.status === "accepted" ? (
+                    {item.status === "accepted" && (
                       <ProjectCard
                         key={item.name}
                         projectId={item.id}
@@ -95,7 +96,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                         onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}
                         upvoteCount={item.numUpvotes}
                       />
-                    ) : null}
+                    )}
                   </>
                 ))
             : null}

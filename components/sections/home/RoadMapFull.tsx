@@ -108,7 +108,6 @@ const roadmapList = [
     quarterEndDate: new Date(2023, 3, 31),
   },
 ];
-
 /**
  *
  * @param quarter Current quarter
@@ -142,7 +141,7 @@ const getQuarterProgressInPercentage = (quarter: typeof roadmapList[0]) => {
   }
 };
 
-function RoadmapFull() {
+function RoadmapFull({ heading }: any) {
   const { t: pageTranslation } = useTranslation(["page-home", "common"]);
 
   return (
@@ -170,7 +169,7 @@ function RoadmapFull() {
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as="h2" alignItems="center">
+            <Heading size="2xl" color="brand.white" as={heading} alignItems="center">
               {pageTranslation("roadmap")}
             </Heading>
           </VStack>

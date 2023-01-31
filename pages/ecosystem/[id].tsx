@@ -51,7 +51,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   return (
     <Box>
       <Helmet>
-        <title>{`Shardeum | Ecosystem ${project.name}`}</title>
+        <title>{`Shardeum |  ${project.name}`}</title>
         <meta name="description" content={project.description.substring(0, 160)} />
         <meta
           name="keywords"

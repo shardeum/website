@@ -97,7 +97,6 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
           </VStack>
         </Box>
         {news.map((item, index) => {
-          console.log("*****news", item.title, index);
           return (
             <SwiperSlide key={item.title}>
               <NewsItem

@@ -146,7 +146,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             </SimpleGrid>
           </VStack>
 
-          <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
+          <VStack spacing={{ base: "12", md: "12" }} w="full" pb="16">
             <div className="gridAlignTwo">
               <div className="borderGrid">
                 <h4 className="betanetHighlights">Top Alphanet Highlights</h4>

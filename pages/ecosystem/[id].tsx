@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Box, useDisclosure } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";

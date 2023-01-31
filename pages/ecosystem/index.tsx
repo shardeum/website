@@ -195,7 +195,13 @@ const Explore: NextPage<ExplorePageProps> = ({
   return (
     <>
       <Helmet>
-        <title>{`Shardeum | Ecosystem`}</title>
+        <title>{`Shardeum Ecosystem | dApps/Projects on Shardeum`}</title>
+        <meta
+          name="description"
+          content={
+            "Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem"
+          }
+        />
       </Helmet>
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"

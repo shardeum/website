@@ -584,7 +584,7 @@ const AlphanetLanding: NextPage = () => {
 
               <div
                 className="dropBoxBporder"
-                style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
+                // style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
               >
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
@@ -647,7 +647,7 @@ const AlphanetLanding: NextPage = () => {
 
               <div
                 className="dropBoxBporder"
-                style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
+                // style={{ borderRight: "2px solid black", borderStyle: "dashed" }}
               >
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img

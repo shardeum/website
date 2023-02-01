@@ -878,6 +878,7 @@
 .BackgroundShaed {
   padding: 5% 3%;
   background: linear-gradient(180deg, #1e1e1e 0%, rgba(0, 0, 0, 0.02) 181.91%);
+  /* background: #1E1E1E; */
 }
 
 .borderGridNoborder {

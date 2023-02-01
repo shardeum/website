@@ -1,5 +1,6 @@
 import { Container, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
+import { PhoneIcon, AddIcon, WarningIcon, EmailIcon } from "@chakra-ui/icons";
 import {
   IconDiscord,
   IconExternal,
@@ -7,6 +8,8 @@ import {
   IconSeeMore,
   IconTelegram,
   IconTwitter,
+  IconReddit,
+  IconYoutube,
 } from "@shm/Icons";
 import {
   DISCORD_URL,
@@ -15,6 +18,7 @@ import {
   TELEGRAM_URL,
   TWITTER_URL,
   REDDIT_URL,
+  YOUTUBE_URL,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
 
@@ -23,7 +27,8 @@ const socialLinks = [
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
   { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
-  { Icon: IconSeeMore, title: "Reddit", href: REDDIT_URL, target: "_blank" },
+  { Icon: IconYoutube, title: "YouTube", href: YOUTUBE_URL, target: "_blank" },
+  { Icon: IconReddit, title: "Reddit", href: REDDIT_URL, target: "_blank" },
   { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
 ];
 
@@ -38,12 +43,13 @@ const JoinCommunity = () => {
           style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
         >
           {socialLinks.map((link) => (
-            <Link href={link.href} passHref key={link.title}>
+            <a href={link.href} target="_blank" key={link.title} rel="noreferrer">
               <HStack
                 className="joimCommunitySocaialLinks"
                 style={{ margin: "0", cursor: "pointer" }}
               >
-                <link.Icon />
+                {link.title === "Newsletter" ? <EmailIcon /> : <link.Icon />}
+
                 <Text
                   color="brand.white"
                   fontSize="base"
@@ -56,7 +62,7 @@ const JoinCommunity = () => {
                 </Text>
                 {/* <IconExternal /> */}
               </HStack>
-            </Link>
+            </a>
           ))}
           {/* <Link href={"/ecosystem"} passHref key={"all"}>
             <HStack style={{ margin: "0", cursor: "pointer" }}>

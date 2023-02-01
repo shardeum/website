@@ -27,10 +27,10 @@ export const ProjectsList: FC<ProjectsListProps> = ({
 
   const numProjectsPerPage: number | undefined = useBreakpointValue({
     lg: 6,
-    md: 2,
-    sm: 2,
-    xs: 2,
-    base: 2,
+    md: 6,
+    sm: 6,
+    xs: 6,
+    base: 6,
   });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {
@@ -57,7 +57,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
         mx="auto"
         pt="16"
         // pb={{ lg: "11.6rem", md: "3rem", sm: "3rem", xs: "4rem" }}
-        pb={["4rem", "3rem", "3rem", "11.6rem"]}
+        pb={["4rem", "3rem", "3rem", "4rem"]}
         px={{ base: 6, xl: 0 }}
       >
         {/* title and searchbar */}

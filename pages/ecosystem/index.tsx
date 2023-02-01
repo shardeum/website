@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
 import { Button } from "@chakra-ui/react";
@@ -14,8 +14,10 @@ import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Helmet } from "react-helmet";
 
 import { useRouter } from "next/router";
+import moment from "moment";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
@@ -59,8 +61,9 @@ const Explore: NextPage<ExplorePageProps> = ({
   // convert server props into state
   const [projectsState, setProjectsState] = useState(projects);
   const [projectSort, setProjectSort] = useState(projects);
+  const [projectSortRandom, setProjectSortRandom] = useState(projects);
   const [projectSortUpvote, setProjectSortUpvote] = useState(projects);
-  const [projectSortDate, setProjectSortDate] = useState(projects);
+  const [projectSortDate, setProjectSortDate] = useState([]);
   const [upvotedProjectsMap, setUpvotedProjectsMap] = useState(() => {
     return upvotedProjectIds.reduce((acc: Record<string, boolean>, projectId) => {
       acc[projectId] = true;
@@ -130,9 +133,6 @@ const Explore: NextPage<ExplorePageProps> = ({
       return 0;
     });
   };
-  sort();
-
-  console.log(projectSort);
 
   const sortUpvote = () => {
     projectSortUpvote.sort(function (a, b) {
@@ -144,22 +144,65 @@ const Explore: NextPage<ExplorePageProps> = ({
       return 0;
     });
   };
-  sortUpvote();
 
-  const sortDate = () => {
-    projectSortUpvote.sort(function (a, b) {
-      const nA = a.dateCreated;
-      const nB = b.dateCreated;
+  useEffect(() => {
+    // sort();
+    // sortUpvote();
+    const Projectdata = sortDate(projectSort);
+    const RandomProjectdata = randomiseProject(projectSort);
+    setProjectSortDate(Projectdata);
+    setProjectSortRandom(RandomProjectdata);
+  }, []);
 
-      if (nA < nB) return -1;
-      else if (nA > nB) return 1;
-      return 0;
+  const sortDate = (data: any) => {
+    const arrayProject: any = [];
+    data.map((element: any, index: any) => {
+      const formattedDate = moment(element.dateCreated).format("YYYY-MM-DD");
+      const startOfNextMonth = moment().add(1, "M").startOf("month").format("YYYY-MM-DD");
+      const startOfMonth = moment().startOf("month").format("YYYY-MM-DD");
+
+      const foundDateInRange = moment(formattedDate).isBetween(startOfMonth, startOfNextMonth);
+
+      if (foundDateInRange === true && element.status === "accepted") {
+        arrayProject.push(element);
+      }
     });
+    return arrayProject;
   };
-  sortDate();
+
+  const randomiseProject = (array: any) => {
+    // eslint-disable-next-line prefer-const
+    // let dataArray = array;
+    // for (let i = dataArray.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * (i + 1));
+    //     [dataArray[i], dataArray[j]] = [dataArray[j], dataArray[i]];
+    // }
+
+    const TempDataArray: any = [];
+    let dataArray = array
+      .map((value: any) => ({ value, sort: Math.random() }))
+      .sort((a: any, b: any) => a.sort - b.sort)
+      .map(({ value }: any) => value);
+    dataArray.map((element: any, index: any) => {
+      if (element.status === "accepted") {
+        TempDataArray.push(element);
+      }
+    });
+    dataArray = TempDataArray;
+    return dataArray;
+  };
 
   return (
     <>
+      <Helmet>
+        <title>{`Shardeum Ecosystem | dApps/Projects on Shardeum`}</title>
+        <meta
+          name="description"
+          content={
+            "Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem"
+          }
+        />
+      </Helmet>
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"
         cta={
@@ -170,24 +213,24 @@ const Explore: NextPage<ExplorePageProps> = ({
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />
 
-      {projectSort.length > 0 && (
+      {projectSortRandom.length > 0 && (
         <ProjectsList
-          projects={projectsState}
+          projects={projectSortRandom}
           categories={categories}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />
       )}
-      {projectSortUpvote.length > 0 && (
+      {/* {projectSortUpvote.length > 0 && (
         <TrendingProjects
           projects={projectsState}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />
-      )}
+      )} */}
       {projectSortDate.length > 0 && (
         <NewestProjects
-          projects={projectsState}
+          projects={projectSortDate}
           upvoteMap={upvotedProjectsMap}
           onUpvoteProject={onUpvoteProject}
         />

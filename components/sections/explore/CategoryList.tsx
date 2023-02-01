@@ -47,9 +47,9 @@ export const CategoryList: FC<CaregoryListProps> = ({
             <>
               {typeof categoryCount[category.name] !== "undefined" ? (
                 <Button
+                  key={category.name}
                   p={4}
                   marginInlineStart={0}
-                  key={category.name}
                   value={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   variant={isSelected ? "secondary" : "outline"}

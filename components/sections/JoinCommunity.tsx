@@ -14,6 +14,7 @@ import {
   NEWSLETTER_URL,
   TELEGRAM_URL,
   TWITTER_URL,
+  REDDIT_URL,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
 
@@ -22,6 +23,7 @@ const socialLinks = [
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
   { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
+  { Icon: IconSeeMore, title: "Reddit", href: REDDIT_URL, target: "_blank" },
   { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
 ];
 

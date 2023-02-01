@@ -14,7 +14,7 @@ import {
   Img,
   background,
 } from "@chakra-ui/react";
-import { Container, VStack, ListItem, OrderedList } from "@chakra-ui/react";
+import { Container, VStack, ListItem, OrderedList, Grid, GridItem } from "@chakra-ui/react";
 
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
@@ -255,6 +255,7 @@ const AlphanetLanding: NextPage = () => {
                 size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
+                style={{ backgroundColor: "#3241e8" }}
                 href={DOCS_URL}
               >
                 {pageTranslation("page-betanet-hero-cta")}
@@ -324,22 +325,21 @@ const AlphanetLanding: NextPage = () => {
             </VStack>
             <VStack alignItems="left" spacing="20" mt={5}>
               <SectionHeading color="brand.grey-90">
-                <h2>What is Betanet?</h2>
+                <h2>The Final Testnet</h2>
 
                 <Text className="betanetquestionSubHed xyz">
-                  It all starts with an idea! Once a tech product idea proves its technical
-                  feasibilty, it will be followed by an extensive period of testing and upgrades.
-                  The gradual yet volatile upgrades will be carried out on a test network or testnet
-                  until it is battle ready with all the desired features and performance for real
-                  world use (mainnet). The upgrades are typically made via two major testnet phases
-                  called 'alphanet' and 'betanet'.
+                  Shardeum's journey to mainnet requires thorough testing of prototype networks. The
+                  alphanet, Shardeum Liberty, tested EVM compatibility and sharding features.
+                  Shardeum Sphinx simulates Shardeum’s mainnet environment, ensuring production
+                  readiness and allowing safe application testing. Sphinx is the final step before
+                  the mainnet launch.
                 </Text>
 
                 <p className="betanetquestionSubTiltedColor" style={{ marginTop: "10px" }}>
-                  Let's see how strong is Shardeum alphanet
+                  Before that, let's see the progress made on
                 </p>
                 <span className="betanetquestionSubTiltedColor" style={{ color: "black" }}>
-                  (Liberty)!
+                  Liberty !
                 </span>
               </SectionHeading>
             </VStack>
@@ -352,110 +352,126 @@ const AlphanetLanding: NextPage = () => {
         maxW="container"
         mx="auto"
         py={{ base: "9", md: "2", lg: "2" }}
-        px={{ base: 6, xl: 0 }}
+        px={{ base: 0, xl: 0 }}
         style={{ paddingTop: "0px", background: "#000000" }}
       >
+        <div className="baseContainer" />
         <Container
           maxW="container.xl"
           mx="auto"
           py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
-          style={{ paddingTop: "50px", background: "#000000" }}
+          style={{ paddingTop: "0px", background: "#000000" }}
         >
-          <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
+          <VStack
+            spacing={{ base: "12", md: "12" }}
+            className="titleIndex"
+            alignItems="start"
+            w="full"
+            pb="16"
+          >
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
-                  <h2 className="betaAlphanetTitle">Shardeum Liberty (Alphanet) Metrics</h2>
+                  <h2 className="betaAlphanetTitle">Shardeum Liberty Was a Success!</h2>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>
           </VStack>
 
-          <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
-            <div className="gridAlignTwo">
+          <Grid className="responciveGrid">
+            <GridItem rowSpan={2} colSpan={2}>
               <div className="borderGrid">
                 <h4 className="betanetHighlights">Top Alphanet Highlights</h4>
 
                 <div className="chekMark">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
-                    First Web3 state sharded network with sharding abstraction
+                    First demonstration of a state sharded blockchain with cross shard atomic
+                    composability
                   </p>
                 </div>
                 {/* <div className="chekMarkNextline">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
+                    <p className="checkMarkText">
+                      First smart contract platform to implement EIP2930
+                    </p>
+                  </div> */}
+                <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
-                    First smart contract platform to implement EIP2930
+                    EIP 2930 automation for a streamlined developer experience
                   </p>
-                </div> */}
-                <div className="chekMarkNextline">
-                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">Automation of EIP2930 for a smoother DX</p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">50 validator nodes with shard size of 20 nodes</p>
+                  <p className="checkMarkText">50 validator nodes with a shard size of 5 nodes</p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">Network capacity of 100 TPS</p>
+                  <p className="checkMarkText">100 TPS network capacity</p>
                 </div>
               </div>
+            </GridItem>
+            <GridItem colSpan={3}>
+              <div className="borderGridTwo">
+                <h4 className="betanetHighlightsTwo">Network Growth Metrics</h4>
 
-              <div>
-                <div className="borderGridTwo">
-                  <h4 className="betanetHighlightsTwo">Network Growth Metrics</h4>
-
-                  <div className="borderGridTwoAddSpace">
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                      <p className="checkMarkText">45,000+ smart contracts</p>
-                    </div>
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                      <p className="checkMarkText">29 dApps</p>
-                    </div>
+                <div className="borderGridTwoAddSpace">
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                    <p className="checkMarkText">45,000+ smart contracts</p>
                   </div>
-                  <div className="borderGridTwoAddSpace">
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                      <p className="checkMarkText">
-                        540,000+ accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      </p>
-                    </div>
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                      <p className="checkMarkText">1.5 million+ transactions</p>
-                    </div>
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                    <p className="checkMarkText">105 ecosystem projects</p>
                   </div>
                 </div>
-
-                <div className="borderGridThree">
-                  <h4 className="betanetHighlightsThree">Community Growth Metrics</h4>
-
-                  <div className="borderGridTwoAddSpace">
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                      <p className="checkMarkText">300,000+ community members</p>
-                    </div>
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                      <p className="checkMarkText">
-                        50+ Meetups/Workshops ~ Proof of Community Events
-                      </p>
-                    </div>
+                <div className="borderGridTwoAddSpace">
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                    <p className="checkMarkText">
+                      540,000+ accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
                   </div>
-                  <div className="borderGridTwoAddSpace">
-                    <div className="chekMark">
-                      <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                      <p className="checkMarkText">30,000+ newsletter subscribers</p>
-                    </div>
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
+                    <p className="checkMarkText">1.5 million+ transactions</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </VStack>
+            </GridItem>
+            <GridItem colSpan={3}>
+              <div className="borderGridTwo">
+                <h4 className="betanetHighlightsThree">Community Growth Metrics</h4>
+
+                <div className="borderGridTwoAddSpace">
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
+                    <p className="checkMarkText">300,000+ community members</p>
+                  </div>
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
+                    <p className="checkMarkText">
+                      50+ Meetups/Workshops ~ Proof of Community Events
+                    </p>
+                  </div>
+                </div>
+                <div className="borderGridTwoAddSpace">
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
+                    <p className="checkMarkText">30,000+ newsletter subscribers</p>
+                  </div>
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
+                    <p className="checkMarkText">
+                      714 developers participated in Shardeum Missions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </GridItem>
+          </Grid>
         </Container>
       </Container>
 
@@ -465,14 +481,14 @@ const AlphanetLanding: NextPage = () => {
         mx="auto"
         py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 6, xl: 0 }}
-        style={{ paddingTop: "60px" }}
+        style={{ paddingTop: "60px", position: "relative", zIndex: 1 }}
       >
         <Container
           maxW="container.xl"
           mx="auto"
           py={{ base: "9", md: "2", lg: "2" }}
           px={{ base: 6, xl: 0 }}
-          style={{ paddingTop: "0px" }}
+          style={{ paddingBottom: "0px" }}
         >
           {/* <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
@@ -495,7 +511,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitleDark">
-                    dApps & their success stories on Alphanet
+                    Apps Deployed on Shardeum Liberty Grew Fast!
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -598,27 +614,28 @@ const AlphanetLanding: NextPage = () => {
                 <p className="dropBoxTitleParra">
                   <Box className="list-wrap2">
                     <ul>
-                      <li>{""}</li>
-                      <li>{""}</li>
+                      <li>{"Over 5k product feedbacks by users"}</li>
+                      <li>{"30k+ domains minted on shardeum liberty"}</li>
                     </ul>
                   </Box>
                 </p>
               </div>
+
               <div className="dropBoxBporder">
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={"/betanet/Bandit.png"}
+                    src={"/betanet/shardex.jpg"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
                   />
                 </VStack>
-                <h5 className="dropBoxTitle">Bandit</h5>
+                <h5 className="dropBoxTitle">Shardex</h5>
                 <p className="dropBoxTitleParra">
                   <Box className="list-wrap2">
                     <ul>
-                      <li>{""}</li>
-                      <li>{""}</li>
+                      <li>{"More than 5k interacted users"}</li>
+                      <li>{"2 Million Share Points Genesis Giveaway"}</li>
                     </ul>
                   </Box>
                 </p>
@@ -630,16 +647,13 @@ const AlphanetLanding: NextPage = () => {
               >
                 <VStack alignItems="center" className="imageBox" spacing="20">
                   <Img
-                    src={
-                      "https://v5.airtableusercontent.com/v1/14/14/1674914400000/5nqNjMJHmaA9yz9kjL8dww/5jmmpxeQgw8R6N7yCJpCgRVrlU5IT4pbfijhJbZlZmKK5nAjMuNHogbWL5wGzyIe9uMNK_q-Gbuz4SnQoHcp823kcBiJJa4u3zw2oOKZT48/1jF8ISFC-mokccm9kDzGNnhJ-ahm0TlwmllenR9YGQQ" ||
-                      "/Shardeum.png"
-                    }
+                    src={"/betanet/Bandit.png"}
                     margin={["0 auto", 0]}
                     boxSize={["7.5rem", "11.25rem"]}
                     alt="logo"
                   />
                 </VStack>
-                <h5 className="dropBoxTitle">ABC</h5>
+                <h5 className="dropBoxTitle">Bandit</h5>
                 <p className="dropBoxTitleParra">
                   <Box className="list-wrap2">
                     <ul>
@@ -671,7 +685,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitle">
-                    How do I benefit from Shardeum’s <br /> Sphinx (Betanet) release?
+                    Don’t Miss the Opportunity to <br /> Participate on Shardeum Sphinx
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -690,16 +704,16 @@ const AlphanetLanding: NextPage = () => {
               >
                 <Box className="borderGridNoborder">
                   <h4 className="betanetHighlightsLeft" style={{ color: "#de7171" }}>
-                    As a Validator
+                    Become a Validator:
                   </h4>
 
                   <Box className="list-wrap">
                     <ul>
-                      <li>{"You can run validator nodes easily via GUI"}</li>
-                      <li>{"You can stake test SHM"}</li>
-                      <li>{"Get involved in network's unique consensus mechanism"}</li>
-                      <li>{"Validate transactions and keep network secure"}</li>
-                      <li>{"You can operate nodes easily via GUI"}</li>
+                      <li>{"Run a validator via GUI or CLI with no permission required"}</li>
+                      <li>{"Stake test SHM"}</li>
+                      <li>{"Validate transactions and keep the network secure"}</li>
+                      <li>{"Prepare your node infrastructure business for Shardeum’s mainnet"}</li>
+                      <li>{"Experience participating in a truly permissionless network"}</li>
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
@@ -711,28 +725,29 @@ const AlphanetLanding: NextPage = () => {
 
                 <Box className="borderGridNoborder">
                   <h4 className="betanetHighlightsLeft" style={{ color: "#ffae93" }}>
-                    As a Builder
+                    Benefits for Developers:
                   </h4>
 
                   <Box className="list-wrap">
                     <ul>
-                      <li>{"Linear scalability allows you to build scalable dApps"}</li>
+                      <li>{"Stable low gas fees forever"}</li>
+                      <li>{"Linear scalability while retaining cross shard composibility"}</li>
                       <li>
                         {
-                          "A great DX via state sharding, EVM parallelization and atomic composibility"
-                        }
-                      </li>
-                      <li>{"Access to grants"}</li>
-                      <li>
-                        {
-                          "Access to over 300k community members with the fastest growing L1 ecosystem"
+                          "Marketing support from the Shardeum Foundation providing 10-15k users to your app on testnet within 1-month "
                         }
                       </li>
                       <li>
                         {
-                          "Guidance from proven leaders and visionaries like Nischal Shetty & Omar Syed"
+                          "Opportunity to become a leading app in the Shardeum ecosystem prior to mainnet"
                         }
                       </li>
+                      <li>
+                        {
+                          "Early adopters will be prioritized when Shardeum’s grant program launches"
+                        }
+                      </li>
+                      <li>{"Guidance from visionaries such as Nischal Shetty & Omar Syed"}</li>
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
@@ -743,23 +758,23 @@ const AlphanetLanding: NextPage = () => {
                 </Box>
 
                 <Box className="borderGridNoborder" style={{ color: "#ffce88" }}>
-                  <h4 className="betanetHighlightsLeft">As a General User</h4>
+                  <h4 className="betanetHighlightsLeft">Opportunities for Everyone:</h4>
                   <Box className="list-wrap">
                     <ul>
-                      <li>{"Bug bounty will be enabled"}</li>
+                      <li>{"Participate in bounties"}</li>
                       <li>
                         {
-                          "Earn rewards by engaging in various Shardeum and dApp initiatives Like Shardeum Leagues, Shardeum missions, Super Shardian"
+                          "Earn rewards by engaging in Shardeum initiatives such as Shardeum Leagues, Shardeum Missions and Super Shardian"
                         }
                       </li>
                       <li>{"Earn POAPs by participating in Shardeum community events"}</li>
-                      <li>{"Moderating social media channels"}</li>
+                      <li>{"Moderate social media channels"}</li>
                       <li>
                         {
-                          "A rare learning experience by directly supporting a L1 blockchain project"
+                          "Benefit from a rare learning experience by directly supporting a L1 blockchain project"
                         }
                       </li>
-                      <li>{"Smoother UX"}</li>
+                      <li>{"Play a role in enabling decentralization for everyone"}</li>
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
@@ -793,7 +808,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10} pl={5}>
                 <span style={{ color: "#EC5B29" }}>{"2022"}</span>
                 <h2 className="betaAlphanetTitle " style={{ margin: "0" }}>
-                  {"Sphinx (Betanet) Roadmap"}
+                  {"Sphinx Roadmap"}
                 </h2>
               </VStack>
             </SimpleGrid>
@@ -812,10 +827,11 @@ const AlphanetLanding: NextPage = () => {
 
                   <Box className="road-list-wrap">
                     <ul>
-                      <li>{"Sharded network with 150 validators initially"}</li>
-                      <li>{"Shard size of 21 initially"}</li>
-                      <li>{"150 TPS capacity"}</li>
-                      <li>{"Nodes and validators open source to run by community"}</li>
+                      <li>{"Sphinx 1.0 with 150 TPS, 150 validators and 21 node shard size"}</li>
+                      <li>
+                        {"Sphinx 1.1 with 250 TPS, 1280 validators and a 128 node shard size"}
+                      </li>
+                      <li>{"Nodes and validators are open source to run by the community"}</li>
                     </ul>
                   </Box>
                 </Box>
@@ -828,8 +844,8 @@ const AlphanetLanding: NextPage = () => {
 
                   <Box className="road-list-wrap">
                     <ul>
-                      <li>{"Node operator GUI live"}</li>
-                      <li>{"Staking, node rotation and node rewards enabled"}</li>
+                      <li>{"Validator Dashboard (GUI) launch"}</li>
+                      <li>{"Staking, auto scaling, node rotation and node rewards enabled"}</li>
                       <li>{"External security audits and bug bounties"}</li>
                     </ul>
                   </Box>
@@ -967,6 +983,60 @@ const AlphanetLanding: NextPage = () => {
                 </AccordionItem>
               </div>
 
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      During betanet the community can operate Validator nodes. After mainnet,
+                      community can also operate Archiver nodes.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Requirements for running an Archiver will be determined during betanet, but at
+                      a minimum, it would be: 32 core, 256GB RAM, 4TB SSD
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
               {/* Q6 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
@@ -1048,276 +1118,6 @@ const AlphanetLanding: NextPage = () => {
                 </AccordionItem>
               </div>
 
-              {/* Q2 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>
-                          What are the unique features in Shardeum apart from typical features that
-                          comes with a L1 blockchain network?
-                        </h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      {/* MORE SUb MEnu */}
-
-                      <VStack spacing="40" alignItems="start" w="full">
-                        <Accordion
-                          allowMultiple
-                          defaultIndex={0}
-                          allowToggle
-                          w="full"
-                          py={10}
-                          color="brand.grey-90"
-                        >
-                          {/* 1 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>Linear Scalability </h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  Although we see more recent L1 networks claim high TPS, there are
-                                  some catches here apart from high TPS claim itself. Once a network
-                                  reaches its maximum TPS or throughput, say during peak traffic, it
-                                  often results in network outages accompanied with spike in gas
-                                  fees for users. Shardeum, through its innovative protocol, will
-                                  scale linearly i.e. every node joining the network will increase
-                                  its throughput proportionally. Further, on Shardeum, consensus is
-                                  reached on every transaction individually as opposed to block
-                                  level consensus done by most blockchains. Transaction level
-                                  consensus at a high throughput rate and finality has been
-                                  impossible to achieve so far. Shardeum is not only “capable” of
-                                  achieving linear scalability but has also publicly demonstrated it
-                                  at the launch of alphanet 1.0 and 2.0 releases. Here is a demo
-                                  video
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-
-                          {/* 2 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>Dynamic State Sharding</h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  Sharding helps the network to evenly distribute compute workload,
-                                  storage, and bandwidth across all nodes thereby saving more
-                                  resources. The unique protocol introduces not just state sharding
-                                  but dynamic state sharding. Here validating nodes are assigned
-                                  multiple shards with different address ranges. And since consensus
-                                  is done at transaction level on Shardeum, transactions that affect
-                                  multiple shards can be processed simultaneously with atomic
-                                  processing resulting in immediate finality. Whereas in static
-                                  state sharding done by some of the latest blockchain networks,
-                                  nodes in a shard are assigned the same address range which does
-                                  not allow for cross shard composability due to which transactions
-                                  on such networks are processed sequentially.
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-
-                          {/* 3 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>Low & Constant Gas Fees</h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  A lack of scalability leads to low throughput, high latency and
-                                  increasing transaction fees resulting in a bad user experience.
-                                  Because Shardeum can scale linearly, the network processes
-                                  transactions with high fairness eliminating MEV crisis plaguing
-                                  the industry. Transactions will be received and validated on FCFS
-                                  basis. Shardeum can further auto-scale i.e. depending on the
-                                  demand in the network, the network will automatically expand or
-                                  shrink its capacity. The project engineers are well aware that
-                                  maintaining high efficiency while scaling to meet demand is what
-                                  will help keep the cost of the network and ultimately the average
-                                  transaction fees low.
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-
-                          {/* 4 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>EVM based smart contract platform</h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  There is a popular saying among the Shardeum community members aka
-                                  Shardians, that “If you have built for Ethereum, you have built
-                                  for Shardeum”. What it means is that, any dApp/product/service
-                                  built atop Ethereum can be migrated to Shardeum seamlessly in a
-                                  matter of few minutes. Since you just need to deploy a smart
-                                  contract written in Solidity or Vyper on Shardeum (with a bonus
-                                  that you will never have to worry about rising gas fees again),
-                                  the environment is also tailor-made for new dApp devs and
-                                  creators.
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-
-                          {/* 5 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>Anyone can operate a node on Shardeum and earn rewards</h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  As mentioned in previous answers, parallel processing with atomic
-                                  and cross shard composability leading up to linear scalability
-                                  were never possible before. The networks had no choice but to
-                                  scale up vertically instead of horizontally which brings us to the
-                                  same old problem of centralization. What that effectively meant
-                                  was average users could not afford to run a node on these networks
-                                  due to high requirements in either hardware specs or staking. The
-                                  idea behind vertical scalability is to facilitate more capacity to
-                                  process transactions. On Shardeum, validator nodes would need to
-                                  maintain only the current state within a shard they are involved
-                                  in while all the the historical data is offloaded to archive nodes
-                                  on the network. This enables the platform to keep the
-                                  staking/hardware requirements low for average users, thus allowing
-                                  for high decentralization
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-
-                          {/* 6 */}
-                          <div>
-                            <AccordionItem bg="brand.white" mb={4}>
-                              <AccordionButton
-                                px={5}
-                                py={5}
-                                _hover={{ bg: "brand.white" }}
-                                _expanded={{ border: "none" }}
-                              >
-                                <Box flex="1" textAlign="left">
-                                  <Heading size={"lg"} className="faqHeading">
-                                    <h3>Solid Security with a unique consensus mechanism</h3>
-                                  </Heading>
-                                </Box>
-                                <AccordionIcon />
-                              </AccordionButton>
-
-                              <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                <>
-                                  Shardeum will use a combination of two consensus algorithms namely
-                                  proof of stake (PoS) and proof of quorum (PoQ). Staking native
-                                  coins will be mandatory for validators to participate in the
-                                  transaction validation process in return for rewards. Nodes that
-                                  act maliciously will be penalized. Proof of Quorum, in a nutshell,
-                                  allows the network validators of a transaction to approve it only
-                                  if it receives 51% of votes which is then followed by batching
-                                  such transactions together and passing it onto archive nodes.
-                                  Moreover, the network will randomly rotate validator nodes in and
-                                  out of the system which will make it extremely difficult for bad
-                                  actors to attack the network. The nodes that are rotated out will
-                                  take the place of 'standby nodes' who will wait for their turn to
-                                  validate transactions again.
-                                </>
-                                {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                              </AccordionPanel>
-                            </AccordionItem>
-                          </div>
-                        </Accordion>
-                      </VStack>
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                    </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
               {showMoreFAQ === false && (
                 <a href="javascript:void(0)" className="showFAQBTN" onClick={showFAQ}>
                   Show More
@@ -1326,6 +1126,7 @@ const AlphanetLanding: NextPage = () => {
 
               {showMoreFAQ && (
                 <>
+                  {/* Q2 */}
                   <div>
                     <AccordionItem bg="brand.white" mb={4}>
                       <AccordionButton
@@ -1336,7 +1137,10 @@ const AlphanetLanding: NextPage = () => {
                       >
                         <Box flex="1" textAlign="left">
                           <Heading size={"lg"} className="faqHeading">
-                            <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                            <h3>
+                              What are the unique features in Shardeum apart from typical features
+                              that comes with a L1 blockchain network?
+                            </h3>
                           </Heading>
                         </Box>
                         <AccordionIcon />
@@ -1344,38 +1148,256 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                          During betanet the community can operate Validator nodes. After mainnet,
-                          community can also operate Archiver nodes.
+                          {/* MORE SUb MEnu */}
+
+                          <VStack spacing="40" alignItems="start" w="full">
+                            <Accordion
+                              allowMultiple
+                              defaultIndex={0}
+                              allowToggle
+                              w="full"
+                              py={10}
+                              color="brand.grey-90"
+                            >
+                              {/* 1 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Linear Scalability </h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      Although we see more recent L1 networks claim high TPS, there
+                                      are some catches here apart from high TPS claim itself. Once a
+                                      network reaches its maximum TPS or throughput, say during peak
+                                      traffic, it often results in network outages accompanied with
+                                      spike in gas fees for users. Shardeum, through its innovative
+                                      protocol, will scale linearly i.e. every node joining the
+                                      network will increase its throughput proportionally. Further,
+                                      on Shardeum, consensus is reached on every transaction
+                                      individually as opposed to block level consensus done by most
+                                      blockchains. Transaction level consensus at a high throughput
+                                      rate and finality has been impossible to achieve so far.
+                                      Shardeum is not only “capable” of achieving linear scalability
+                                      but has also publicly demonstrated it at the launch of
+                                      alphanet 1.0 and 2.0 releases. Here is a demo video
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 2 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Dynamic State Sharding</h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      Sharding helps the network to evenly distribute compute
+                                      workload, storage, and bandwidth across all nodes thereby
+                                      saving more resources. The unique protocol introduces not just
+                                      state sharding but dynamic state sharding. Here validating
+                                      nodes are assigned multiple shards with different address
+                                      ranges. And since consensus is done at transaction level on
+                                      Shardeum, transactions that affect multiple shards can be
+                                      processed simultaneously with atomic processing resulting in
+                                      immediate finality. Whereas in static state sharding done by
+                                      some of the latest blockchain networks, nodes in a shard are
+                                      assigned the same address range which does not allow for cross
+                                      shard composability due to which transactions on such networks
+                                      are processed sequentially.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 3 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Low & Constant Gas Fees</h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      A lack of scalability leads to low throughput, high latency
+                                      and increasing transaction fees resulting in a bad user
+                                      experience. Because Shardeum can scale linearly, the network
+                                      processes transactions with high fairness eliminating MEV
+                                      crisis plaguing the industry. Transactions will be received
+                                      and validated on FCFS basis. Shardeum can further auto-scale
+                                      i.e. depending on the demand in the network, the network will
+                                      automatically expand or shrink its capacity. The project
+                                      engineers are well aware that maintaining high efficiency
+                                      while scaling to meet demand is what will help keep the cost
+                                      of the network and ultimately the average transaction fees
+                                      low.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 4 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>EVM based smart contract platform</h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      There is a popular saying among the Shardeum community members
+                                      aka Shardians, that “If you have built for Ethereum, you have
+                                      built for Shardeum”. What it means is that, any
+                                      dApp/product/service built atop Ethereum can be migrated to
+                                      Shardeum seamlessly in a matter of few minutes. Since you just
+                                      need to deploy a smart contract written in Solidity or Vyper
+                                      on Shardeum (with a bonus that you will never have to worry
+                                      about rising gas fees again), the environment is also
+                                      tailor-made for new dApp devs and creators.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 5 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>
+                                          Anyone can operate a node on Shardeum and earn rewards
+                                        </h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      As mentioned in previous answers, parallel processing with
+                                      atomic and cross shard composability leading up to linear
+                                      scalability were never possible before. The networks had no
+                                      choice but to scale up vertically instead of horizontally
+                                      which brings us to the same old problem of centralization.
+                                      What that effectively meant was average users could not afford
+                                      to run a node on these networks due to high requirements in
+                                      either hardware specs or staking. The idea behind vertical
+                                      scalability is to facilitate more capacity to process
+                                      transactions. On Shardeum, validator nodes would need to
+                                      maintain only the current state within a shard they are
+                                      involved in while all the the historical data is offloaded to
+                                      archive nodes on the network. This enables the platform to
+                                      keep the staking/hardware requirements low for average users,
+                                      thus allowing for high decentralization
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 6 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Solid Security with a unique consensus mechanism</h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      Shardeum will use a combination of two consensus algorithms
+                                      namely proof of stake (PoS) and proof of quorum (PoQ). Staking
+                                      native coins will be mandatory for validators to participate
+                                      in the transaction validation process in return for rewards.
+                                      Nodes that act maliciously will be penalized. Proof of Quorum,
+                                      in a nutshell, allows the network validators of a transaction
+                                      to approve it only if it receives 51% of votes which is then
+                                      followed by batching such transactions together and passing it
+                                      onto archive nodes. Moreover, the network will randomly rotate
+                                      validator nodes in and out of the system which will make it
+                                      extremely difficult for bad actors to attack the network. The
+                                      nodes that are rotated out will take the place of 'standby
+                                      nodes' who will wait for their turn to validate transactions
+                                      again.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+                            </Accordion>
+                          </VStack>
                         </>
                         {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
-                      </AccordionPanel>
-                    </AccordionItem>
-                  </div>
-
-                  <div>
-                    <AccordionItem bg="brand.white" mb={4}>
-                      <AccordionButton
-                        px={5}
-                        py={5}
-                        _hover={{ bg: "brand.white" }}
-                        _expanded={{ border: "none" }}
-                      >
-                        <Box flex="1" textAlign="left">
-                          <Heading size={"lg"} className="faqHeading">
-                            <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
-                          </Heading>
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-
-                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                        <>
-                          Requirements for running an Archiver will be determined during betanet,
-                          but at a minimum, it would be: 32 core, 256GB RAM, 4TB SSD
-                        </>
-                        {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
+                    </ReactMarkdown> */}
                       </AccordionPanel>
                     </AccordionItem>
                   </div>

@@ -35,7 +35,7 @@ const colors: ColorProps = {
     "grey-80": "#424242",
     "grey-40": "#BDBDBD",
     orange: "#EC5B29",
-    // blue: "#2031E2",
+    blue: "#2031E2",
     "green-5": "#EDFFFA",
     "green-10": "#D7F6EE",
     "green-70": "#4EB59A",

@@ -106,6 +106,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
       <ShareModal
         projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
         isOpen={isOpen}
+        project={project}
         onClose={onClose}
       />
       <JoinCommunity />

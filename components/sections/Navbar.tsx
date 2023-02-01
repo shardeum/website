@@ -28,6 +28,7 @@ import {
   BETANET_URL,
   ECOSYSTEM_URL,
   CAREERS_URL,
+  EXPLORER_NEW_LIBERTY_URL,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -68,7 +69,7 @@ const linksArr = [
       },
       {
         title: "Explorer",
-        link: EXPLORER_LIBERTY_URL,
+        link: EXPLORER_NEW_LIBERTY_URL,
         newPage: true,
       },
     ],

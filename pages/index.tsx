@@ -9,7 +9,9 @@ import {
   SimpleGrid,
   Grid,
   GridItem,
+  Img,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { CheckIcon } from "@chakra-ui/icons";
 import Hero from "components/sections/Hero";
 import ReadWhitepaper from "components/sections/home/ReadWhitepaper";
@@ -29,6 +31,7 @@ import Team from "../components/sections/Team";
 import { getSHMNewsArticles } from "../utils/api";
 import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
 import { Helmet } from "react-helmet";
+import { relative } from "path";
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-home");
   const { t: commonTranslation } = useTranslation("common");
@@ -247,6 +250,53 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           </Grid>
         </Container>
       </Container>
+
+      {/* Shardium Alphanet dpps*/}
+      <Container
+        maxW="container"
+        mx="auto"
+        py={{ base: "9", md: "2", lg: "2" }}
+        px={{ base: 6, xl: 0 }}
+        style={{ paddingTop: "60px", background: "#118263", position: "relative", zIndex: 1 }}
+      >
+        <Container
+          maxW="container.xl"
+          mx="auto"
+          py={{ base: "9", md: "2", lg: "2" }}
+          px={{ base: 6, xl: 0 }}
+          style={{ paddingTop: "0px" }}
+        >
+          <VStack
+            spacing={{ base: "12", md: "12" }}
+            className="incressZhight"
+            alignItems="start"
+            w="full"
+            pb="16"
+          >
+            <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
+              <VStack alignItems="left" spacing="10" mt={10}>
+                <SectionHeading color="brand.blue-100">
+                  <h2
+                    className="betaAlphanetTitleDark"
+                    style={{ color: "white", textAlign: "center" }}
+                  >
+                    <NextLink href="/ecosystem" passHref>
+                      Find dApps/projects building on Shardeum here
+                    </NextLink>
+                  </h2>
+                  <br />
+                  <p style={{ color: "#D7F6EE", textAlign: "center" }}>
+                    <NextLink href="/ecosystem" passHref>
+                      Click Here ↑
+                    </NextLink>
+                  </p>
+                </SectionHeading>
+              </VStack>
+            </SimpleGrid>
+          </VStack>
+        </Container>
+      </Container>
+
       <SHMTokenomics />
 
       {/* Use cases section */}

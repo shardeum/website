@@ -37,8 +37,8 @@ export const ProductScreenshots: FC<ProductScreenshotProps> = ({
         Product Screenshots
       </Heading>
       <Carousel arrowHide={screenShots.length > 1 ? false : true}>
-        {screenShots?.map((item) => (
-          <Box w="100%" h={"auto"}>
+        {screenShots?.map((item, index) => (
+          <Box w="100%" h={"auto"} key={index}>
             <Image
               m={"auto"}
               // objectFit='cover'

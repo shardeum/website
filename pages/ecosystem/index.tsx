@@ -14,10 +14,10 @@ import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Helmet } from "react-helmet";
 
 import { useRouter } from "next/router";
 import moment from "moment";
-import { Helmet } from "react-helmet";
 
 // define page props type
 export type ExplorePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;

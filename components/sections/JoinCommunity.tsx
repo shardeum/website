@@ -32,7 +32,8 @@ const JoinCommunity = () => {
       <Container maxW="container.xl" py="8" px={{ base: 6, xl: "5%" }}>
         <HStack
           spacing="12"
-          style={{ margin: 0, display: "flex", justifyContent: "space-between" }}
+          // className=""
+          style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
         >
           {socialLinks.map((link) => (
             <Link href={link.href} passHref key={link.title}>

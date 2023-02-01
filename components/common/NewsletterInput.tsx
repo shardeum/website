@@ -21,7 +21,9 @@ function NewsletterInput({ type }: Props) {
       <Stack w="full" flexDirection={{ base: "column", md: "row" }} alignItems="center" spacing="0">
         <Box w="full" h="full" mb={{ base: "4", md: "0" }} mr={{ md: "4" }}>
           <Input
-            placeholder={commonTranslation("your-email")}
+            // placeholder={commonTranslation("your-email")}
+            placeholder={""}
+            backgroundColor={"#E0E0E0"}
             w="full"
             h="56px"
             onChange={handleOnChange}
@@ -38,8 +40,9 @@ function NewsletterInput({ type }: Props) {
           border="0"
           fontSize="base"
           w={{ base: "full", md: "auto" }}
-          borderColor="transparent"
+          borderColor="solid"
           isLoading={status === "loading"}
+          backgroundColor={"#2031E6"}
           onClick={() => handleSubmit([type])}
           rightIcon={<IconRightArrow />}
         >

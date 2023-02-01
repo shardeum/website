@@ -14,6 +14,7 @@ import {
   NEWSLETTER_URL,
   TELEGRAM_URL,
   TWITTER_URL,
+  REDDIT_URL,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
 
@@ -22,6 +23,7 @@ const socialLinks = [
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
   { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
+  { Icon: IconSeeMore, title: "Reddit", href: REDDIT_URL, target: "_blank" },
   { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
 ];
 
@@ -29,8 +31,50 @@ const JoinCommunity = () => {
   const { t: pageTranslation } = useTranslation(["common", "page-home"]);
   return (
     <Flex bg="brand.grey-90" as="section">
-      <Container maxW="container.xl" mx="auto" pt="16" pb="28" px={{ base: 6, xl: 0 }}>
-        <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
+      <Container maxW="container.xl" py="8" px={{ base: 6, xl: "5%" }}>
+        <HStack
+          spacing="12"
+          // className=""
+          style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
+        >
+          {socialLinks.map((link) => (
+            <Link href={link.href} passHref key={link.title}>
+              <HStack
+                className="joimCommunitySocaialLinks"
+                style={{ margin: "0", cursor: "pointer" }}
+              >
+                <link.Icon />
+                <Text
+                  color="brand.white"
+                  fontSize="base"
+                  fontWeight="normal"
+                  w="full"
+                  m="0"
+                  _hover={{ color: "brand.grey-40" }}
+                >
+                  {link.title}
+                </Text>
+                <IconExternal />
+              </HStack>
+            </Link>
+          ))}
+          <Link href={"/ecosystem"} passHref key={"all"}>
+            <HStack style={{ margin: "0", cursor: "pointer" }}>
+              {/* <link.Icon /> */}
+              <Text
+                color="brand.white"
+                fontSize="base"
+                fontWeight="normal"
+                w="full"
+                _hover={{ color: "brand.grey-40" }}
+              >
+                {"View all communities"}
+              </Text>
+              <IconExternal />
+            </HStack>
+          </Link>
+        </HStack>
+        {/* <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <VStack spacing="6" alignItems="start">
             <Text
               as="h2"
@@ -85,7 +129,7 @@ const JoinCommunity = () => {
               ))}
             </VStack>
           </Flex>
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Container>
     </Flex>
   );

@@ -3,6 +3,8 @@ export const SHARDEUMPEPE = "/75-(Shardeum-Pepe).png";
 export const DISCORD_URL = "https://discord.gg/shardeum";
 export const COMMUNITY_URL = "/community";
 export const ECOSYSTEM_URL = "/ecosystem";
+export const CAREERS_URL = "/careers";
+export const BETANET_URL = "/betanet";
 export const TWITTER_URL = "https://twitter.com/shardeum";
 // export const BLOG_URL = `https://${process.env.ENV_DOMAIN}/blog/`;
 export const NEWSLETTER_URL = "/newsletter";
@@ -29,5 +31,6 @@ export const INVESTMENT_QUERY_LINK = "mailto:invest@shardeum.org";
 export const CROWDIN_PROJECT_LINK = "https://crowdin.com/project/shardeumtranslation";
 export const CLAIM_100_SHM_LINK = "https://docs.shardeum.org/faucet/claim";
 export const EXPLORER_LIBERTY_URL = "https://explorer-liberty10.shardeum.org/";
+export const EXPLORER_NEW_LIBERTY_URL = "https://docs.shardeum.org/network/explorer";
 export const EVENTBRITE =
   "https://www.eventbrite.com/e/shardeum-22-q3-update-autoscaling-demo-tickets-457872989437";

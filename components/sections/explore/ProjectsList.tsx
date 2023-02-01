@@ -26,11 +26,12 @@ export const ProjectsList: FC<ProjectsListProps> = ({
   // Use breakpoints to show different number of project cards
 
   const numProjectsPerPage: number | undefined = useBreakpointValue({
-    lg: 6,
-    md: 6,
-    sm: 6,
-    xs: 6,
-    base: 6,
+    // lg: 6,
+    lg: 8,
+    md: 2,
+    sm: 2,
+    xs: 2,
+    base: 2,
   });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {
@@ -83,7 +84,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                 .slice((currentPage - 1) * numProjectsPerPage, currentPage * numProjectsPerPage) // only show the values in the range of the page
                 ?.map((item) => (
                   <>
-                    {item.status === "accepted" ? (
+                    {item.status === "accepted" && (
                       <ProjectCard
                         key={item.name}
                         projectId={item.id}
@@ -95,7 +96,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                         onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}
                         upvoteCount={item.numUpvotes}
                       />
-                    ) : null}
+                    )}
                   </>
                 ))
             : null}

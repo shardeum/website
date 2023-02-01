@@ -51,7 +51,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   return (
     <Box>
       <Helmet>
-        <title>{`Shardeum |  ${project.name}`}</title>
+        <title>{`Shardeum | Ecosystem ${project.name}`}</title>
         <meta name="description" content={project.description.substring(0, 160)} />
         <meta
           name="keywords"
@@ -106,6 +106,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
       <ShareModal
         projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
         isOpen={isOpen}
+        project={project}
         onClose={onClose}
       />
       <JoinCommunity />

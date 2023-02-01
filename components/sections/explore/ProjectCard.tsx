@@ -28,13 +28,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   projectId = "",
 }) => {
   const numProjectsPerPage: number | undefined = useBreakpointValue({
+    // lg: 160,
     lg: 160,
     base: 100,
   });
 
   return (
     <LinkBox
-      w={{ lg: "32.5%", sm: "20.375rem" }}
+      // w={{ lg: "32.5%", sm: "20.375rem" }}
+      w={{ lg: "23.5%", sm: "20.375rem" }}
       maxW={{ lg: "32.5%", sm: "20.375rem" }}
       h={{ lg: "28rem", base: "27rem" }}
       minH={{ lg: "28rem", base: "27rem" }}

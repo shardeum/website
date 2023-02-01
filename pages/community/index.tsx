@@ -134,6 +134,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
               size="lg"
               rel="noopener noreferrer"
               target="_blank"
+              style={{ backgroundColor: "#3241e8" }}
               href={DISCORD_URL}
               mt={8}
             >

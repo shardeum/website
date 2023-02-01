@@ -25,6 +25,10 @@ import {
   EXPLORER_LIBERTY_URL,
   SUPERSHARDIAN_URL,
   EVENTBRITE,
+  BETANET_URL,
+  ECOSYSTEM_URL,
+  CAREERS_URL,
+  EXPLORER_NEW_LIBERTY_URL,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -37,6 +41,39 @@ import MenuComponent from "./MenuComponent";
 // import { getNotificationById } from "../../utils/api"
 
 const linksArr = [
+  {
+    title: "developers",
+    link: "",
+    newPage: false,
+    highlight: false,
+    submenu: [
+      // {
+      //   title: "alphanet",
+      //   link: SHARDEUM_LIBERTY_ALPHANET_URL,
+      //   newPage: false,
+      // },
+      {
+        title: "Betanet",
+        link: BETANET_URL,
+        newPage: false,
+      },
+      {
+        title: "dApp Ecosystem",
+        link: ECOSYSTEM_URL,
+        newPage: false,
+      },
+      {
+        title: "docs",
+        link: DOCS_URL,
+        newPage: true,
+      },
+      {
+        title: "Explorer",
+        link: EXPLORER_NEW_LIBERTY_URL,
+        newPage: true,
+      },
+    ],
+  },
   {
     title: "learn",
     link: "",
@@ -61,29 +98,6 @@ const linksArr = [
     ],
   },
   {
-    title: "developers",
-    link: "",
-    newPage: false,
-    highlight: false,
-    submenu: [
-      {
-        title: "alphanet",
-        link: SHARDEUM_LIBERTY_ALPHANET_URL,
-        newPage: false,
-      },
-      {
-        title: "docs",
-        link: DOCS_URL,
-        newPage: true,
-      },
-      {
-        title: "explore",
-        link: EXPLORER_LIBERTY_URL,
-        newPage: true,
-      },
-    ],
-  },
-  {
     title: "community",
     link: "",
     newPage: false,
@@ -95,13 +109,18 @@ const linksArr = [
         newPage: false,
       },
       {
-        title: "events",
+        title: "shardeum_events",
         link: EXPLORE_EVENTS,
         newPage: false,
       },
       {
-        title: "supershardian",
+        title: "community_reward_program",
         link: SUPERSHARDIAN_URL,
+        newPage: true,
+      },
+      {
+        title: "careers",
+        link: CAREERS_URL,
         newPage: true,
       },
     ],

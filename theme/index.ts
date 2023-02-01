@@ -17,6 +17,7 @@ const colors: ColorProps = {
     "blue-50": "#2D3BD4",
     "blue-70": "#3735EC",
     "blue-90": "#0029DD",
+    "blue-100": "#0022B8",
     secondaryHover: "#424242",
     success: "#1A8038",
     black: "#000000",

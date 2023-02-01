@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "@chakra-ui/react";
 import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
@@ -21,15 +21,20 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function Carousel({ arrowHide, children }: any) {
+export default function Carousel({ children }: any, arrowHide: boolean) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState<Slider | null>(null);
+  const arrowHideNew = true;
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "5%", md: "10px" });
+
+  useEffect(() => {
+    console.log("arrowHide", arrowHide);
+  });
 
   // These are the images used in the slide
 
@@ -49,7 +54,7 @@ export default function Carousel({ arrowHide, children }: any) {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
       {/* Left Icon */}
-      {arrowHide ? null : (
+      {arrowHideNew === true ? null : (
         <>
           <IconButton
             style={{ color: "black", backgroundColor: "transparent" }}

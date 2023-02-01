@@ -206,7 +206,13 @@ const Explore: NextPage<ExplorePageProps> = ({
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"
         cta={
-          <Button onClick={handleSubmitProject} variant="primary" size="lg" mt={8}>
+          <Button
+            onClick={handleSubmitProject}
+            style={{ backgroundColor: "#3241e8" }}
+            variant="primary"
+            size="lg"
+            mt={8}
+          >
             Submit your project
           </Button>
         }

@@ -82,6 +82,10 @@ const AlphanetLanding: NextPage = () => {
   const showFAQ = () => {
     setShowMoreFAQ(true);
   };
+
+  const setGotoPage = (value: any) => {
+    window.open(value, "_blank");
+  };
   return (
     <>
       {/* <NextSeo
@@ -657,8 +661,8 @@ const AlphanetLanding: NextPage = () => {
                 <p className="dropBoxTitleParra">
                   <Box className="list-wrap2">
                     <ul>
-                      <li>{""}</li>
-                      <li>{""}</li>
+                      <li>{"Recorded 200k+ txs worth ~100k test SHM by ~50k unique wallets"}</li>
+                      <li>{"200k profile visits & 20k mentions on Twitter"}</li>
                     </ul>
                   </Box>
                 </p>
@@ -717,7 +721,14 @@ const AlphanetLanding: NextPage = () => {
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
-                    <Button className="btn btn-primary chekMarkNextlineButton">
+                    <Button
+                      onClick={() =>
+                        setGotoPage(
+                          "https://www.google.com/url?sa=j&url=https%3A%2F%2Fdocs.shardeum.org%2Fnode%2Frun%2Fvalidator&uct=1647879655&usg=JtuCfrXFGl5Y92QeSzggjrdC-P8.&source=meet"
+                        )
+                      }
+                      className="btn btn-primary chekMarkNextlineButton"
+                    >
                       {"How to run a node?"}
                     </Button>
                   </Box>
@@ -751,7 +762,10 @@ const AlphanetLanding: NextPage = () => {
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
-                    <Button className="btn btn-primary chekMarkNextlineButtonTwo">
+                    <Button
+                      onClick={() => setGotoPage("https://docs.shardeum.org/")}
+                      className="btn btn-primary chekMarkNextlineButtonTwo"
+                    >
                       {"Developer Docs"}
                     </Button>
                   </Box>
@@ -778,7 +792,10 @@ const AlphanetLanding: NextPage = () => {
                     </ul>
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
-                    <Button className="btn btn-primary chekMarkNextlineButtonThree">
+                    <Button
+                      onClick={() => setGotoPage("https://discord.gg/shardeum")}
+                      className="btn btn-primary chekMarkNextlineButtonThree"
+                    >
                       {"Join Shardeum community"}
                     </Button>
                   </Box>

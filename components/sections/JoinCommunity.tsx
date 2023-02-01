@@ -54,13 +54,13 @@ const JoinCommunity = () => {
                 >
                   {link.title}
                 </Text>
-                <IconExternal />
+                {/* <IconExternal /> */}
               </HStack>
             </Link>
           ))}
-          <Link href={"/ecosystem"} passHref key={"all"}>
+          {/* <Link href={"/ecosystem"} passHref key={"all"}>
             <HStack style={{ margin: "0", cursor: "pointer" }}>
-              {/* <link.Icon /> */}
+              <link.Icon />
               <Text
                 color="brand.white"
                 fontSize="base"
@@ -72,7 +72,7 @@ const JoinCommunity = () => {
               </Text>
               <IconExternal />
             </HStack>
-          </Link>
+          </Link> */}
         </HStack>
         {/* <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <VStack spacing="6" alignItems="start">

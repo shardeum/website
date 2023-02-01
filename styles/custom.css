@@ -774,6 +774,10 @@
 
 }
 
+.newsLetterInput ::placeholder { /* Most modern browsers support this now. */
+  color: grey !important;
+}
+
 .borderGridThree {
   border: 1px solid #656565;
   box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);

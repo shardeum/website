@@ -189,10 +189,12 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
                 {getNumberWithSuffix(upvoteCount)}
               </Text>
             </HorizontalTileButton> */}
-            <HorizontalTileButton onClick={onOpen}>
+
+            {/* Share */}
+            {/* <HorizontalTileButton onClick={onOpen}>
               <ShareIcon />
               &nbsp;&nbsp; Share
-            </HorizontalTileButton>
+            </HorizontalTileButton> */}
           </Flex>
         </GridItem>
         <GridItem

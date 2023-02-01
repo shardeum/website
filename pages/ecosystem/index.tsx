@@ -159,9 +159,11 @@ const Explore: NextPage<ExplorePageProps> = ({
     data.map((element: any, index: any) => {
       const formattedDate = moment(element.dateCreated).format("YYYY-MM-DD");
       const startOfNextMonth = moment().add(1, "M").startOf("month").format("YYYY-MM-DD");
+      const startOfLastMonth = moment().subtract(1, "M").startOf("month").format("YYYY-MM-DD");
       const startOfMonth = moment().startOf("month").format("YYYY-MM-DD");
 
-      const foundDateInRange = moment(formattedDate).isBetween(startOfMonth, startOfNextMonth);
+      // const foundDateInRange = moment(formattedDate).isBetween(startOfMonth, startOfNextMonth);
+      const foundDateInRange = moment(formattedDate).isBetween(startOfLastMonth, startOfNextMonth);
 
       if (foundDateInRange === true && element.status === "accepted") {
         arrayProject.push(element);

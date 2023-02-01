@@ -361,7 +361,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         px={{ base: 6, xl: 0 }}
         style={{
           paddingTop: "60px",
-          marginBottom: "50px",
+          // marginBottom: "50px",
           background: "#000000",
           position: "relative",
           zIndex: 1,
@@ -384,20 +384,29 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.blue-100">
-                  <h2
-                    className="betaAlphanetTitleDark"
-                    style={{ color: "white", textAlign: "center" }}
-                  >
-                    <NextLink href="/ecosystem" passHref>
-                      Find dApps/projects building on Shardeum here
-                    </NextLink>
-                  </h2>
-                  <br />
-                  <p style={{ color: "#4EB59A", textAlign: "center" }}>
-                    <NextLink href="/ecosystem" passHref>
-                      Click Here ↑
-                    </NextLink>
-                  </p>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <h2
+                      className="betaAlphanetTitleDark"
+                      style={{ color: "white", textAlign: "center" }}
+                    >
+                      Find dApps/projects building on Shardeum
+                    </h2>
+                    <br />
+                    <p
+                      style={{
+                        backgroundColor: "#4EB59A",
+                        width: "400px",
+                        color: "white",
+                        textAlign: "center",
+                        padding: "10px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <NextLink href="/ecosystem" passHref>
+                        Explore dApps
+                      </NextLink>
+                    </p>
+                  </div>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>

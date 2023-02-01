@@ -7,7 +7,7 @@ import { NewsItem } from "../../../types";
 
 function ShardeumInNews({ news }: { news: NewsItem[] }) {
   return (
-    <Flex as="section" bg="brand.grey-10">
+    <Flex as="section" bg="brand.grey-10" pt={20}>
       <Container
         maxW="container.xl"
         mx="auto"

@@ -343,7 +343,7 @@ const AlphanetLanding: NextPage = () => {
                   Before that, let's see the progress made on
                 </p>
                 <span className="betanetquestionSubTiltedColor" style={{ color: "black" }}>
-                  Liberty !
+                  Liberty!
                 </span>
               </SectionHeading>
             </VStack>
@@ -722,11 +722,7 @@ const AlphanetLanding: NextPage = () => {
                   </Box>
                   <Box className="chekMarkNextlineButtonBox">
                     <Button
-                      onClick={() =>
-                        setGotoPage(
-                          "https://www.google.com/url?sa=j&url=https%3A%2F%2Fdocs.shardeum.org%2Fnode%2Frun%2Fvalidator&uct=1647879655&usg=JtuCfrXFGl5Y92QeSzggjrdC-P8.&source=meet"
-                        )
-                      }
+                      onClick={() => setGotoPage("https://docs.shardeum.org/node/run/validator")}
                       className="btn btn-primary chekMarkNextlineButton"
                     >
                       {"How to run a node?"}
@@ -839,7 +835,7 @@ const AlphanetLanding: NextPage = () => {
                 <Box className="roadmap-li-box ">
                   <Box className="roadmap-li-heading">
                     <span className="roadmap-li-heading-text">{"Q1 2023"}</span>
-                    <span className="roadmap-li-heading-green-line"></span>
+                    {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
                   <Box className="road-list-wrap">
@@ -856,7 +852,7 @@ const AlphanetLanding: NextPage = () => {
                 <Box className="roadmap-li-box dashBorder">
                   <Box className="roadmap-li-heading">
                     <span className="roadmap-li-heading-text">{"Continued..."}</span>
-                    <span className="roadmap-li-heading-green-line"></span>
+                    {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
                   <Box className="road-list-wrap">

@@ -392,7 +392,18 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       Find dApps/projects building on Shardeum
                     </h2>
                     <br />
-                    <p
+                    <Button
+                      as="a"
+                      variant="primary"
+                      size="lg"
+                      // backgroundColor= "#4EB59A"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={"/ecosystem"}
+                    >
+                      Explore dApps
+                    </Button>
+                    {/* <p
                       style={{
                         backgroundColor: "#4EB59A",
                         width: "400px",
@@ -405,7 +416,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       <NextLink href="/ecosystem" passHref>
                         Explore dApps
                       </NextLink>
-                    </p>
+                    </p> */}
                   </div>
                 </SectionHeading>
               </VStack>

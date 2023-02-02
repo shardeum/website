@@ -774,6 +774,10 @@
 
 }
 
+.newsLetterInput ::placeholder { /* Most modern browsers support this now. */
+  color: grey !important;
+}
+
 .borderGridThree {
   border: 1px solid #656565;
   box-shadow: 0px 4px 40px rgba(154, 154, 154, 0.2);
@@ -874,6 +878,7 @@
 .BackgroundShaed {
   padding: 5% 3%;
   background: linear-gradient(180deg, #1e1e1e 0%, rgba(0, 0, 0, 0.02) 181.91%);
+  /* background: #1E1E1E; */
 }
 
 .borderGridNoborder {

@@ -159,9 +159,11 @@ const Explore: NextPage<ExplorePageProps> = ({
     data.map((element: any, index: any) => {
       const formattedDate = moment(element.dateCreated).format("YYYY-MM-DD");
       const startOfNextMonth = moment().add(1, "M").startOf("month").format("YYYY-MM-DD");
+      const startOfLastMonth = moment().subtract(1, "M").startOf("month").format("YYYY-MM-DD");
       const startOfMonth = moment().startOf("month").format("YYYY-MM-DD");
 
-      const foundDateInRange = moment(formattedDate).isBetween(startOfMonth, startOfNextMonth);
+      // const foundDateInRange = moment(formattedDate).isBetween(startOfMonth, startOfNextMonth);
+      const foundDateInRange = moment(formattedDate).isBetween(startOfLastMonth, startOfNextMonth);
 
       if (foundDateInRange === true && element.status === "accepted") {
         arrayProject.push(element);
@@ -202,6 +204,51 @@ const Explore: NextPage<ExplorePageProps> = ({
             "Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem"
           }
         />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+
+        {/* Facebook */}
+        <meta property="og:url" content={`https://shardeum.org/ecosystem/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum Ecosystem | dApps/Projects on Shardeum`} />
+        <meta
+          property="og:description"
+          content={`Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
+        />
+        <meta
+          property="og:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
+        <meta property="twitter:url" content={`https://shardeum.org/ecosystem/`} />
+        <meta
+          property="twitter:title"
+          content={`Shardeum Ecosystem | dApps/Projects on Shardeum`}
+        />
+        <meta
+          property="twitter:description"
+          content={`Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
       </Helmet>
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"

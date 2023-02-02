@@ -158,7 +158,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
-                  <h2 className="betaAlphanetTitle">Shardeum Liberty (Alphanet) Metrics</h2>
+                  <h2 className="betaAlphanetTitle">Shardeum Liberty Was a Success!</h2>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>
@@ -172,7 +172,8 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 <div className="chekMark">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
-                    First Web3 state sharded network with sharding abstraction
+                    First demonstration of a state sharded blockchain with cross shard atomic
+                    composability
                   </p>
                 </div>
                 {/* <div className="chekMarkNextline">
@@ -183,15 +184,17 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                   </div> */}
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">Automation of EIP2930 for a smoother DX</p>
+                  <p className="checkMarkText">
+                    EIP 2930 automation for a streamlined developer experience
+                  </p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">50 validator nodes with shard size of 20 nodes</p>
+                  <p className="checkMarkText">50 validator nodes with a shard size of 5 nodes</p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">Network capacity of 100 TPS</p>
+                  <p className="checkMarkText">100 TPS network capacity</p>
                 </div>
               </div>
             </GridItem>
@@ -206,7 +209,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                    <p className="checkMarkText">29 dApps</p>
+                    <p className="checkMarkText">105 ecosystem projects</p>
                   </div>
                 </div>
                 <div className="borderGridTwoAddSpace">
@@ -244,6 +247,12 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">30,000+ newsletter subscribers</p>
                   </div>
+                  <div className="chekMark">
+                    <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
+                    <p className="checkMarkText">
+                      714 developers participated in Shardeum Missions
+                    </p>
+                  </div>
                 </div>
               </div>
             </GridItem>
@@ -252,7 +261,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       </Container>
 
       {/* Shardium Alphanet dpps*/}
-      <Container
+      {/* <Container
         maxW="container"
         mx="auto"
         py={{ base: "9", md: "2", lg: "2" }}
@@ -295,7 +304,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             </SimpleGrid>
           </VStack>
         </Container>
-      </Container>
+      </Container> */}
 
       <SHMTokenomics />
 
@@ -343,6 +352,79 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
 
       <RoadmapFull heading={"h2"} />
       <Team />
+
+      {/* Shardium Alphanet dpps*/}
+      <Container
+        maxW="container"
+        mx="auto"
+        py={{ base: "9", md: "2", lg: "2" }}
+        px={{ base: 6, xl: 0 }}
+        style={{
+          paddingTop: "60px",
+          // marginBottom: "50px",
+          background: "#000000",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        <Container
+          maxW="container.xl"
+          mx="auto"
+          py={{ base: "9", md: "2", lg: "2" }}
+          px={{ base: 6, xl: 0 }}
+          style={{ paddingTop: "0px" }}
+        >
+          <VStack
+            spacing={{ base: "12", md: "12" }}
+            className="incressZhight"
+            alignItems="start"
+            w="full"
+            pb="16"
+          >
+            <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
+              <VStack alignItems="left" spacing="10" mt={10}>
+                <SectionHeading color="brand.blue-100">
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <h2
+                      className="betaAlphanetTitleDark"
+                      style={{ color: "white", textAlign: "center" }}
+                    >
+                      Find dApps/projects building on Shardeum
+                    </h2>
+                    <br />
+                    <Button
+                      as="a"
+                      variant="primary"
+                      size="lg"
+                      // backgroundColor= "#4EB59A"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={"/ecosystem"}
+                    >
+                      Explore dApps
+                    </Button>
+                    {/* <p
+                      style={{
+                        backgroundColor: "#4EB59A",
+                        width: "400px",
+                        color: "white",
+                        textAlign: "center",
+                        padding: "10px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <NextLink href="/ecosystem" passHref>
+                        Explore dApps
+                      </NextLink>
+                    </p> */}
+                  </div>
+                </SectionHeading>
+              </VStack>
+            </SimpleGrid>
+          </VStack>
+        </Container>
+      </Container>
+
       <ShardeumInNews news={news} />
       <JoinCommunity />
     </>

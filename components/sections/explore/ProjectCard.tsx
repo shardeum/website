@@ -35,8 +35,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <LinkBox
-      // w={{ lg: "32.5%", sm: "20.375rem" }}
-      w={{ lg: "23.5%", sm: "20.375rem" }}
+      w={{ lg: "32.5%", sm: "20.375rem" }}
+      // w={{ lg: "23.5%", sm: "20.375rem" }}
       maxW={{ lg: "32.5%", sm: "20.375rem" }}
       h={{ lg: "28rem", base: "27rem" }}
       minH={{ lg: "28rem", base: "27rem" }}

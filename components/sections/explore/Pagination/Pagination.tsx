@@ -39,7 +39,9 @@ export const Pagination: FC<PaginationProps> = ({
   return (
     <HStack justifyContent="center" alignItems="center" gap={1} {...flexProps}>
       {/* left button */}
-      <PaginationButton iconButton onClick={onClickLeft} icon={<IconLeftArrow />} />
+      {isFirstPage === true ? null : (
+        <PaginationButton iconButton onClick={onClickLeft} icon={<IconLeftArrow />} />
+      )}
 
       {thing.map((pageNumber) => {
         const isSelected = pageNumber === currentPage;

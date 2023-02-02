@@ -34,10 +34,10 @@ export const NewestProjects: FC<NewestProjectsProps> = ({
   const numProjectsPerPage: number | undefined = useBreakpointValue({
     // lg: 6,
     lg: 4,
-    md: 2,
-    sm: 2,
-    xs: 2,
-    base: 2,
+    md: 4,
+    sm: 4,
+    xs: 4,
+    base: 4,
   });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {

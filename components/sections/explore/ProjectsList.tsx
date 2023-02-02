@@ -26,12 +26,12 @@ export const ProjectsList: FC<ProjectsListProps> = ({
   // Use breakpoints to show different number of project cards
 
   const numProjectsPerPage: number | undefined = useBreakpointValue({
-    // lg: 6,
-    lg: 8,
-    md: 2,
-    sm: 2,
-    xs: 2,
-    base: 2,
+    // lg: 8,
+    lg: 6,
+    md: 6,
+    sm: 6,
+    xs: 6,
+    base: 6,
   });
   // filter projects by search value and category
   const filteredProjects = useMemo(() => {

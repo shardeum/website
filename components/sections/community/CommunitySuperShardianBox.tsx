@@ -19,7 +19,7 @@ const CommunitySuperShardianBox = () => {
         pb={{ base: 0, sm: 0, md: 0, lg: 16 }}
       >
         {/* <Box > */}
-        <VStack spacing={2} width="100%" alignItems="start" bg="#FCF4E9" p={6}>
+        {/* <VStack spacing={2} width="100%" alignItems="start" bg="#FCF4E9" p={6}>
           <Text
             as="h2"
             textAlign="left"
@@ -31,7 +31,6 @@ const CommunitySuperShardianBox = () => {
           >
             {pageTranslation("page-community-supershardians-h1")}
           </Text>
-          {/* <Box maxW={{ base: "md", md: "full" }}> */}
           <Text
             fontSize={{ base: "md", lg: "md" }}
             textAlign="left"
@@ -44,14 +43,12 @@ const CommunitySuperShardianBox = () => {
               )}
             ></div>
           </Text>
-          {/* </Box> */}
           <LightMode>
             <Button as="a" variant="secondary" size="lg" href={SUPERSHARDIAN_URL}>
               {pageTranslation("page-community-supershardians-cta")}
             </Button>
           </LightMode>
-        </VStack>
-        {/* </Box> */}
+        </VStack> */}
       </Container>
     </Flex>
   );

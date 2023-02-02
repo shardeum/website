@@ -218,7 +218,7 @@ const SHMTokenomics = () => {
             mx="auto"
             w="full"
           >
-            <Text fontSize={{ base: "base", md: "xl" }} color="brand.white">
+            <Text fontSize={{ base: "base", md: "xl" }} color="brand.black">
               {commonTranslation("investment-newsletter-title")}
             </Text>
           </VStack>

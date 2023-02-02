@@ -7,6 +7,7 @@ import NewsletterInput from "../../components/common/NewsletterInput";
 import JoinCommunity from "../../components/sections/JoinCommunity";
 import NextLink from "next/link";
 import Hero from "components/sections/Hero";
+import { Helmet } from "react-helmet";
 
 function Newsletter() {
   useEffect(() => {
@@ -33,6 +34,55 @@ function Newsletter() {
   const { t: pageTranslation } = useTranslation("page-newsletter");
   return (
     <>
+      <Helmet>
+        <title>{`Shardeum | NewsLetter`}</title>
+        <meta
+          name="description"
+          content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
+        />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+
+        {/* Facebook */}
+        <meta property="og:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum | NewsLetter`} />
+        <meta
+          property="og:description"
+          content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
+        />
+        <meta
+          property="og:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
+        <meta property="twitter:url" content={`https://shardeum.org/newsletter/`} />
+        <meta property="twitter:title" content={`Shardeum | NewsLetter`} />
+        <meta
+          property="twitter:description"
+          content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+      </Helmet>
       <script
         dangerouslySetInnerHTML={{
           __html: `<script type="application/ld+json">

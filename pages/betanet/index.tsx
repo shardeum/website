@@ -915,6 +915,9 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
+                      Approximate info :
+                      <br />
+                      <br />
                       60GB SSD storage (will go up in mainnet, but this will save cost in betanet) -
                       Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
                       with newer xeons/ EPYC - Initially 16GB of RAM, 4+ GB of virtual memory

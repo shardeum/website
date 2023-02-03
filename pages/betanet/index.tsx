@@ -255,14 +255,23 @@ const AlphanetLanding: NextPage = () => {
             >
               <Button
                 as="a"
+                variant="secondary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={DOCS_URL}
+              >
+                {pageTranslation("page-betanet-hero-cta")}
+              </Button>
+              <Button
+                as="a"
                 variant="primary"
                 size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
-                style={{ backgroundColor: "#3241e8" }}
-                href={DOCS_URL}
+                href={CLAIM_100_SHM_LINK}
               >
-                {pageTranslation("page-betanet-hero-cta")}
+                {commonTranslation("claim-100-shm-cta")}
               </Button>
             </Stack>
           </>
@@ -915,11 +924,11 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      Minimum specs:
+                      Approximate info :
                       <br />
                       <br />
-                      - 60GB SSD storage (will go up in mainnet, but this will save cost in betanet)
-                      - Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
+                      60GB SSD storage (will go up in mainnet, but this will save cost in betanet) -
+                      Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
                       with newer xeons/ EPYC - Initially 16GB of RAM, 4+ GB of virtual memory
                       recommended. (we expect this number to go down over time)
                       <br />
@@ -1041,8 +1050,8 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      Requirements for running an Archiver will be determined during betanet, but at
-                      a minimum, it would be: 32 core, 256GB RAM, 4TB SSD
+                      Requirements for running an Archiver will be determined during betanet, but
+                      approximately, it would be: 32 core, 256GB RAM, 4TB SSD
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                         </ReactMarkdown> */}
@@ -1515,7 +1524,7 @@ const AlphanetLanding: NextPage = () => {
                       >
                         <Box flex="1" textAlign="left">
                           <Heading size={"lg"} className="faqHeading">
-                            <h3>{`Where can i look for active projects that are deployed on Shardeum so far?`}</h3>
+                            <h3>{`Where can I look for active projects that are deployed on Shardeum so far?`}</h3>
                           </Heading>
                         </Box>
                         <AccordionIcon />

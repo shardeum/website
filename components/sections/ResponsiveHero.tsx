@@ -57,7 +57,7 @@ const ResponsiveHero = ({
                   </BreadcrumbItem>
 
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/super-shardian">{"Super Shardian"}</BreadcrumbLink>
+                    <BreadcrumbLink href="/ecosystem">{"ecosystem"}</BreadcrumbLink>
                   </BreadcrumbItem>
                 </Breadcrumb>
               </Text>

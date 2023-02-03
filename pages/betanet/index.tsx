@@ -255,14 +255,23 @@ const AlphanetLanding: NextPage = () => {
             >
               <Button
                 as="a"
+                variant="secondary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={DOCS_URL}
+              >
+                {pageTranslation("page-betanet-hero-cta")}
+              </Button>
+              <Button
+                as="a"
                 variant="primary"
                 size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
-                style={{ backgroundColor: "#3241e8" }}
-                href={DOCS_URL}
+                href={CLAIM_100_SHM_LINK}
               >
-                {pageTranslation("page-betanet-hero-cta")}
+                {commonTranslation("claim-100-shm-cta")}
               </Button>
             </Stack>
           </>

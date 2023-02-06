@@ -924,17 +924,18 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      Approximate info :
+                      Minimum hardware requirements :
                       <br />
                       <br />
-                      60GB SSD storage (will go up in mainnet, but this will save cost in betanet) -
-                      Quad core CPU less than 10 years old if self hosting / Two cores, if hosted
-                      with newer xeons/ EPYC - Initially 16GB of RAM, 4+ GB of virtual memory
-                      recommended. (we expect this number to go down over time)
+                      -60 GB ssd storage
                       <br />
+                      -Quad core CPU less than 10 years old if self hosting
                       <br />
-                      Stay tuned for an official announcement on hardware specs and staking
-                      requirements which will be added to our docs page soon
+                      -Dual core CPU works if hosted with newer Xeons / EPYC
+                      <br />
+                      -16 GB of ram, 4+ GB of virtual memory recommended
+                      <br />
+                      -Hosting: 8 GB RAM + 8 GB Virtual Memory
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}

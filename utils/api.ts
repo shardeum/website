@@ -44,6 +44,7 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
                 title,
                 siteName: SiteName,
                 imageURL: image?.[0]?.thumbnails?.large?.url,
+                imageMAIN: image?.[0]?.url,
                 newsURL,
               });
             }

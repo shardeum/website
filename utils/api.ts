@@ -43,8 +43,8 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
               data.push({
                 title,
                 siteName: SiteName,
-                imageURL: image?.[0]?.thumbnails?.large?.url,
-                imageMAIN: image?.[0]?.url,
+                imageMAIN: image?.[0]?.thumbnails?.large?.url,
+                imageURL: image?.[0]?.url,
                 newsURL,
               });
             }

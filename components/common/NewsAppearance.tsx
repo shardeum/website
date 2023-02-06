@@ -99,7 +99,7 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
           <SwiperSlide key={item.title}>
             <NewsItem
               title={item.title}
-              imageURL={item.imageMAIN}
+              imageURL={item.imageURL}
               siteName={item.siteName}
               newsURL={item.newsURL}
             />

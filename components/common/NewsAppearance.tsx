@@ -76,7 +76,6 @@ const NewsItem = ({
 
 const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: NewsItem[] }) => {
   const slidesPerView = useBreakpointValue({ base: 1, md: 2 });
-
   return (
     <Box>
       <Swiper slidesPerView={slidesPerView} spaceBetween={20} autoplay>

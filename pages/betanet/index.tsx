@@ -1071,7 +1071,7 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`What is the process for bug bounties and where do I report the bugs on betanet`}</h3>
+                        <h3>{`What is the process for bug bounties and where do I report bugs on betanet?`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -1079,8 +1079,15 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      A web form will be provided for reporting bug bounties. Details of the
-                      bounties will be announced with the release of Betanet.
+                      Please report bugs on betanet{" "}
+                      <a
+                        href="https://github.com/Shardeum/shardeum-bug-reporting"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        here
+                      </a>
+                      . Details of the bounties will be announced after the release of Betanet.
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                     </ReactMarkdown> */}

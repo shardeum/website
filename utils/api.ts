@@ -16,7 +16,8 @@ export const fetchNewList = () =>
     .then(({ data }) =>
       data.map((item: any) => ({
         title: item.title,
-        imageURL: item.image?.[0].thumbnails?.large.url,
+        imageURL: item.image?.[0]?.url,
+        imageSubURL: item.image?.[0].thumbnails?.large.url,
         siteName: item.siteName,
         newsURL: item.newsURL,
       }))

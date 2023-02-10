@@ -233,7 +233,9 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">300,000+ community members</p>
+                    <p className="checkMarkText">
+                      300,000+ community members &nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />

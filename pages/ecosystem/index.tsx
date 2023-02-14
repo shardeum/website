@@ -1,4 +1,6 @@
 import { useContext, useState, useEffect } from "react";
+import Head from "next/head";
+
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
 import { Button } from "@chakra-ui/react";
@@ -196,7 +198,7 @@ const Explore: NextPage<ExplorePageProps> = ({
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{`Shardeum Ecosystem | dApps/Projects on Shardeum`}</title>
         <meta
           name="description"
@@ -249,7 +251,8 @@ const Explore: NextPage<ExplorePageProps> = ({
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </Helmet>
+      </Head>
+
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"
         cta={

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
+
 import { Box, useDisclosure } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
@@ -50,7 +52,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
   });
   return (
     <Box>
-      <Helmet>
+      <Head>
         <title>{`Shardeum | ${project.name}`}</title>
         <meta name="description" content={project.description.substring(0, 160)} />
         <meta
@@ -95,7 +97,8 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </Helmet>
+      </Head>
+
       <HorizontalTile
         onOpen={onOpen}
         project={project}

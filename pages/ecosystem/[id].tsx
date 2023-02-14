@@ -63,7 +63,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         {/* Facebook */}
         <meta
           property="og:url"
-          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
+          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}/`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Shardeum | Ecosystem ${project.name}`} />
@@ -78,7 +78,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta
           property="twitter:url"
-          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
+          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}/`}
         />
         <meta property="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} />
         <meta property="twitter:description" content={`${project.description.substring(0, 160)}`} />

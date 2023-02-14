@@ -45,13 +45,13 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
     // const Description = project.description.substring(0, 160);
     // const CONTENT = document.getElementsByTagName("META") as any | null;
     // CONTENT[5].content = Description;
-    const pageTitle = `Shardeum | Ecosystem | ${project.name}`;
-    if (document.title !== pageTitle) {
-      document.title = pageTitle;
-    }
+    // const pageTitle = `Shardeum | Ecosystem | ${project.name}`;
+    // if (document.title !== pageTitle) {
+    //   document.title = pageTitle;
+    // }
   });
   return (
-    <Box>
+    <>
       <Head>
         <title>{`Shardeum | ${project.name}`}</title>
         <meta name="description" content={project.description.substring(0, 160)} />
@@ -98,22 +98,23 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
       </Head>
-
-      <HorizontalTile
-        onOpen={onOpen}
-        project={project}
-        userUpvoted={userUpvoted}
-        session={sessionObject}
-      />
-      {project.screenShots?.length && <ProductScreenshots screenShots={project.screenShots} />}
-      <ShareModal
-        projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
-        isOpen={isOpen}
-        project={project}
-        onClose={onClose}
-      />
-      <JoinCommunity />
-    </Box>
+      <Box>
+        <HorizontalTile
+          onOpen={onOpen}
+          project={project}
+          userUpvoted={userUpvoted}
+          session={sessionObject}
+        />
+        {project.screenShots?.length && <ProductScreenshots screenShots={project.screenShots} />}
+        <ShareModal
+          projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
+          isOpen={isOpen}
+          project={project}
+          onClose={onClose}
+        />
+        <JoinCommunity />
+      </Box>
+    </>
   );
 };
 

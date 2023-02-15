@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 
 import {
   Box,
@@ -88,43 +89,55 @@ const AlphanetLanding: NextPage = () => {
   };
   return (
     <>
-      <NextSeo
-        title={"Shardeum | Betanet"}
-        description="Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3"
-        canonical="https://shardeum.org/betanet/"
-        additionalMetaTags={[
-          {
-            property: "keywords",
-            content:
-              "shardeum, shardeum liberty, testnet, betanet,  alphanet, blockchain,layer1 blockchain,evm compatible blockchain",
-          },
-          // {
-          //   property: "twitter:image",
-          //   content: "https://shardeum.org/shardeum-liberty.jpeg",
-          // },
-        ]}
-        openGraph={{
-          url: "https://shardeum.org/shardeum-liberty-alphanet/",
-          title: "Shardeum | Betanet",
-          description:
-            "Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3",
-          images: [
-            {
-              url: "https://shardeum.org/shardeum-liberty.jpeg",
-              width: 800,
-              height: 600,
-              alt: "Shardeum | Betanet",
-              type: "image/jpeg",
-            },
-          ],
-          site_name: "Shardeum | Betanet",
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-          site: "https://shardeum.org",
-          handle: "@shardeum",
-        }}
-      />
+      <Head>
+        <title>{`Shardeum | Betanet`}</title>
+        <meta
+          name="description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+
+        {/* Facebook */}
+        <meta property="og:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum | Betanet`} />
+        <meta
+          property="og:description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          property="og:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
+        <meta property="twitter:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="twitter:title" content={`Shardeum | Betanet`} />
+        <meta
+          property="twitter:description"
+          content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+      </Head>
 
       {/* Hero section */}
       <Hero

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
+
 import { Box, useDisclosure } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
@@ -43,14 +45,14 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
     // const Description = project.description.substring(0, 160);
     // const CONTENT = document.getElementsByTagName("META") as any | null;
     // CONTENT[5].content = Description;
-    const pageTitle = `Shardeum | Ecosystem | ${project.name}`;
-    if (document.title !== pageTitle) {
-      document.title = pageTitle;
-    }
+    // const pageTitle = `Shardeum | Ecosystem | ${project.name}`;
+    // if (document.title !== pageTitle) {
+    //   document.title = pageTitle;
+    // }
   });
   return (
-    <Box>
-      <Helmet>
+    <>
+      <Head>
         <title>{`Shardeum | ${project.name}`}</title>
         <meta name="description" content={project.description.substring(0, 160)} />
         <meta
@@ -61,7 +63,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         {/* Facebook */}
         <meta
           property="og:url"
-          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
+          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}/`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Shardeum | Ecosystem ${project.name}`} />
@@ -76,7 +78,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta
           property="twitter:url"
-          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}`}
+          content={`https://shardeum.org/ecosystem/${project.name.replace(/\s/g, "")}/`}
         />
         <meta property="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} />
         <meta property="twitter:description" content={`${project.description.substring(0, 160)}`} />
@@ -95,22 +97,24 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </Helmet>
-      <HorizontalTile
-        onOpen={onOpen}
-        project={project}
-        userUpvoted={userUpvoted}
-        session={sessionObject}
-      />
-      {project.screenShots?.length && <ProductScreenshots screenShots={project.screenShots} />}
-      <ShareModal
-        projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
-        isOpen={isOpen}
-        project={project}
-        onClose={onClose}
-      />
-      <JoinCommunity />
-    </Box>
+      </Head>
+      <Box>
+        <HorizontalTile
+          onOpen={onOpen}
+          project={project}
+          userUpvoted={userUpvoted}
+          session={sessionObject}
+        />
+        {project.screenShots?.length && <ProductScreenshots screenShots={project.screenShots} />}
+        <ShareModal
+          projectUrl={typeof window !== "undefined" ? window?.location.href : ""}
+          isOpen={isOpen}
+          project={project}
+          onClose={onClose}
+        />
+        <JoinCommunity />
+      </Box>
+    </>
   );
 };
 

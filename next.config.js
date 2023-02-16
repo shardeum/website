@@ -16,6 +16,11 @@ const nextConfig = {
         destination: "https://youtu.be/KR4vBDQ1HZw",
         permanent: true,
       },
+      {
+        source: "/shardeum-liberty-alphanet",
+        destination: "https://shardeum.org/betanet/",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

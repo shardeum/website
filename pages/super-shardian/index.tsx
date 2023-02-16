@@ -10,6 +10,7 @@ import { Shardian } from "types";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import NextLink from "next/link";
 import { Helmet } from "react-helmet";
+import Head from "next/head";
 const initialButtonCategories = [{ name: "All", selected: true }];
 
 const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): React.ReactNode => {
@@ -18,25 +19,25 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
   const { t: ssTranslation } = useTranslation("page-super-shardian");
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = `{
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-      "@type": "ListItem", 
-      "position": 1, 
-      "name": "Home",
-      "item": "https://shardeum.org/" 
-      },{
-      "@type": "ListItem", 
-      "position": 2, 
-      "name": "Super Shardian",
-      "item": "https://shardeum.org/super-shardian/" 
-      }]
-      };`;
+    // const script = document.createElement("script");
+    // script.type = "application/ld+json";
+    // script.text = `{
+    //   "@context": "https://schema.org/",
+    //   "@type": "BreadcrumbList",
+    //   "itemListElement": [{
+    //   "@type": "ListItem",
+    //   "position": 1,
+    //   "name": "Home",
+    //   "item": "https://shardeum.org/"
+    //   },{
+    //   "@type": "ListItem",
+    //   "position": 2,
+    //   "name": "Super Shardian",
+    //   "item": "https://shardeum.org/super-shardian/"
+    //   }]
+    //   };`;
 
-    document.head.appendChild(script);
+    // document.head.appendChild(script);
     const buttonCategories = [
       ...initialButtonCategories,
       ...Array.from(new Set(superShardians.map((shardian: any) => shardian.category))).map(
@@ -65,7 +66,10 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
   };
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
+        
+      </Helmet> */}
+      <Head>
         <title>{"Top contributors of Shardeum AKA Super Shardians"}</title>
         <meta
           name="description"
@@ -97,7 +101,27 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/super-shardian" />
-      </Helmet>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home",
+                "item": "https://shardeum.org/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Super Shardian",
+                "item": "https://shardeum.org/super-shardian/"  
+              }]
+            }`,
+          }}
+        />
+      </Head>
       <NextSeo
         title="Top contributors of Shardeum AKA Super Shardians"
         description="Create, collaborate, contribute to building world's 1st EVM-based L1 with linear scalability and get recognized and rewarded for it."

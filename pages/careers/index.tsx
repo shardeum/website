@@ -9,6 +9,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
+import Head from "next/head";
 const Carrers: NextPage = () => {
   const router = useRouter();
 
@@ -16,32 +17,31 @@ const Carrers: NextPage = () => {
   const { t: commonTranslation } = useTranslation(["common"]);
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = `{
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://shardeum.org/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Careers",
-          item: "https://shardeum.org/careers/",
-        },
-      ],
-    };`;
-
-    document.head.appendChild(script);
+    // const script = document.createElement("script");
+    // script.type = "application/ld+json";
+    // script.text = `{
+    //   "@context": "https://schema.org/",
+    //   "@type": "BreadcrumbList",
+    //   itemListElement: [
+    //     {
+    //       "@type": "ListItem",
+    //       position: 1,
+    //       name: "Home",
+    //       item: "https://shardeum.org/",
+    //     },
+    //     {
+    //       "@type": "ListItem",
+    //       position: 2,
+    //       name: "Careers",
+    //       item: "https://shardeum.org/careers/",
+    //     },
+    //   ],
+    // };`;
+    // document.head.appendChild(script);
   }, []);
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={"Shardeum Careers | Help us build Shardeum!"}
         description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
         canonical="https://shardeum.org/careers/"
@@ -74,7 +74,78 @@ const Carrers: NextPage = () => {
           site: "https://shardeum.org",
           handle: "@shardeum",
         }}
-      />
+      /> */}
+
+      <Head>
+        <title>{`Shardeum Careers | Help us build Shardeum!`}</title>
+        <meta
+          name="description"
+          content={`Join the team of enthusiastic people trying to make decentralization accessible to everyone!`}
+        />
+        <meta
+          name="keywords"
+          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+        />
+
+        {/* Facebook */}
+        <meta property="og:url" content={`https://shardeum.org/careers/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Shardeum Careers | Help us build Shardeum!`} />
+        <meta
+          property="og:description"
+          content={`Join the team of enthusiastic people trying to make decentralization accessible to everyone!`}
+        />
+        <meta
+          property="og:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* Twiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://shardeum.org/" />
+        <meta property="twitter:url" content={`https://shardeum.org/careers/`} />
+        <meta property="twitter:title" content={`Shardeum Careers | Help us build Shardeum!`} />
+        <meta
+          property="twitter:description"
+          content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
+        />
+        <meta
+          property="twitter:image"
+          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        />
+
+        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+
+        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
+        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
+        {/* <meta
+          name="twitter:image"
+          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+        /> */}
+        <meta name="twitter:site" content="@shardeum" />
+        <link rel="canonical" href="https://shardeum.org/" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home",
+                "item": "https://shardeum.org/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Careers",
+                "item": "https://shardeum.org/careers/"  
+              }]
+            }`,
+          }}
+        />
+      </Head>
 
       {/* Hero section */}
       {!router.query.gh_jid && (

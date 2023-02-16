@@ -13,34 +13,37 @@ import { getCommunityStats } from "utils/api";
 import { CommunityStat } from "types";
 import CommunitySuperShardianBox from "@shm/components/sections/community/CommunitySuperShardianBox";
 import NextLink from "next/link";
+import Head from "next/head";
 
 const Community = ({ communityStats }: { communityStats: CommunityStat[] }): React.ReactNode => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = `{
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-      "@type": "ListItem", 
-      "position": 1, 
-      "name": "Home",
-      "item": "https://shardeum.org/" 
-      },{
-      "@type": "ListItem", 
-      "position": 2, 
-      "name": "Community",
-      "item": "https://shardeum.org/community/" 
-      }]
-      };`;
-
-    document.head.appendChild(script);
+    // const script = document.createElement("script");
+    // script.type = "application/ld+json";
+    // script.text = `{
+    //   "@context": "https://schema.org/",
+    //   "@type": "BreadcrumbList",
+    //   "itemListElement": [{
+    //   "@type": "ListItem",
+    //   "position": 1,
+    //   "name": "Home",
+    //   "item": "https://shardeum.org/"
+    //   },{
+    //   "@type": "ListItem",
+    //   "position": 2,
+    //   "name": "Community",
+    //   "item": "https://shardeum.org/community/"
+    //   }]
+    //   };`;
+    // document.head.appendChild(script);
   }, []);
   const { t: pageTranslation } = useTranslation("page-community");
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
+        
+      </Helmet> */}
+      <Head>
         <title>{"Community is the CEO of Shardeum"}</title>
         <meta
           name="description"
@@ -72,7 +75,28 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/community/" />
-      </Helmet>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home",
+                "item": "https://shardeum.org/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Community",
+                "item": "https://shardeum.org/community/"  
+              }]
+            }`,
+          }}
+        />
+      </Head>
       <NextSeo
         title="Community is the CEO of Shardeum"
         description="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma."

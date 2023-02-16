@@ -8,33 +8,36 @@ import JoinCommunity from "../../components/sections/JoinCommunity";
 import NextLink from "next/link";
 import Hero from "components/sections/Hero";
 import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 function Newsletter() {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = `{
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-      "@type": "ListItem", 
-      "position": 1, 
-      "name": "Home",
-      "item": "https://shardeum.org/" 
-      },{
-      "@type": "ListItem", 
-      "position": 2, 
-      "name": "Newsletter",
-      "item": "https://shardeum.org/newsletter/" 
-      }]
-      };`;
-
-    document.head.appendChild(script);
+    // const script = document.createElement("script");
+    // script.type = "application/ld+json";
+    // script.text = `{
+    //   "@context": "https://schema.org/",
+    //   "@type": "BreadcrumbList",
+    //   "itemListElement": [{
+    //   "@type": "ListItem",
+    //   "position": 1,
+    //   "name": "Home",
+    //   "item": "https://shardeum.org/"
+    //   },{
+    //   "@type": "ListItem",
+    //   "position": 2,
+    //   "name": "Newsletter",
+    //   "item": "https://shardeum.org/newsletter/"
+    //   }]
+    //   };`;
+    // document.head.appendChild(script);
   }, []);
   const { t: pageTranslation } = useTranslation("page-newsletter");
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
+        
+      </Helmet> */}
+      <Head>
         <title>{`Shardeum | NewsLetter`}</title>
         <meta
           name="description"
@@ -82,7 +85,28 @@ function Newsletter() {
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </Helmet>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Home",
+                "item": "https://shardeum.org/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Newsletter",
+                "item": "https://shardeum.org/newsletter/"  
+              }]
+            }`,
+          }}
+        />
+      </Head>
       <script
         dangerouslySetInnerHTML={{
           __html: `<script type="application/ld+json">

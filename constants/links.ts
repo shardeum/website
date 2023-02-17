@@ -1,5 +1,6 @@
 export const LITEPAPER_URL = "/Shardeum-Litepaper.pdf";
 export const SHARDEUMPEPE = "/75-(Shardeum-Pepe).png";
+export const BETANETIMAGE = "/betanet.png";
 export const DISCORD_URL = "https://discord.gg/shardeum";
 export const COMMUNITY_URL = "/community";
 export const ECOSYSTEM_URL = "/ecosystem";

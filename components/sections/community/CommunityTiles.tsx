@@ -385,7 +385,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
               width="100%"
               color="brand.grey-90"
             >
-              {pageTranslation("page-community-join-community-h1")}
+              {pageTranslation("page-community-join-community-h2")}
             </Text>
             <Box maxW={{ base: "md", md: "full" }}>
               <Text
@@ -395,7 +395,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                 color="brand.grey-80"
                 mb="5"
               >
-                {pageTranslation("page-community-join-community-description")}
+                {pageTranslation("page-community-join-community-description2")}
               </Text>
             </Box>
 

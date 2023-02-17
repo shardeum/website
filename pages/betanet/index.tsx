@@ -27,7 +27,7 @@ import SectionHeading from "../../components/common/SectionHeading";
 import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
 import { NextSeo } from "next-seo";
-import { CLAIM_100_SHM_LINK, DOCS_URL } from "constants/links";
+import { CLAIM_100_SHM_LINK, DOCS_URL, BETANETIMAGE } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
@@ -108,10 +108,7 @@ const AlphanetLanding: NextPage = () => {
           property="og:description"
           content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
         />
-        <meta
-          property="og:image"
-          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
-        />
+        <meta property="og:image" content={BETANETIMAGE} />
 
         {/* Twiter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -122,10 +119,7 @@ const AlphanetLanding: NextPage = () => {
           property="twitter:description"
           content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
         />
-        <meta
-          property="twitter:image"
-          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
-        />
+        <meta property="twitter:image" content={BETANETIMAGE} />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
 
@@ -133,7 +127,7 @@ const AlphanetLanding: NextPage = () => {
         {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
         {/* <meta
           name="twitter:image"
-          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={project.logo || BETANETIMAGE}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />

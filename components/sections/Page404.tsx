@@ -52,8 +52,8 @@ const Page404 = () => {
               ></Text>
               <Text fontSize={{ base: "lg", lg: "base" }} textAlign="center" color="brand.grey-40">
                 {pageTranslation("un-oh-desc")}
-                <br />
-                {pageTranslation("un-oh-descTwo")}
+                {/* <br />
+                {pageTranslation("un-oh-descTwo")} */}
               </Text>
             </VStack>
           </VStack>

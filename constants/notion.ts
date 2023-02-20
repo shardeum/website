@@ -15,6 +15,14 @@ const NotionPagesLinks = [
       "These terms and conditions outline the rules and regulations for the use of Shardeum's Website",
     image: "https://shardeum.org/Shardeum.png",
   },
+  {
+    slug: "ambassadorprogram",
+    notionId: "a3785e84f61a45d799e026833a7952cb",
+    title: "Shardian’s assemble! | Shardeum",
+    description:
+      "Are you interested in leading a Shardeum Chapter and becoming a part of Shardeum’s <> Program?",
+    image: "https://shardeum.org/Shardeum.png",
+  },
 ];
 
 export default NotionPagesLinks;

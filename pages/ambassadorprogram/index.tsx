@@ -100,8 +100,8 @@ const Page = ({
                   },{
                     "@type": "ListItem", 
                     "position": 2, 
-                    "name": "Privacy Policy",
-                    "item": "https://shardeum.org/privacy-policy/"  
+                    "name": "Ambassador Program",
+                    "item": "https://shardeum.org/ambassadorprogram/"  
                   }]
                 }
                 </script>`,

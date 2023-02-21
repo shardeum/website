@@ -1158,8 +1158,15 @@ const AlphanetLanding: NextPage = () => {
                       rm installer.sh
                       <br />
                       <br />
-                      After these, Start from Step 2 from the Validator Node Installation Guide
-                      (https://docs.shardeum.org/node/run/validator#step-2-download-and-install-validator)
+                      After these, Start from{" "}
+                      <a
+                        target="_blank"
+                        href="https://docs.shardeum.org/node/run/validator#step-2-download-and-install-validator"
+                        rel="noreferrer"
+                      >
+                        Step 2
+                      </a>{" "}
+                      from the Validator Node Installation Guide
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}

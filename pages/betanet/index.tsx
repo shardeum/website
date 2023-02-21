@@ -963,6 +963,7 @@ const AlphanetLanding: NextPage = () => {
                 </AccordionItem>
               </div>
 
+              {/* Q5 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
                   <AccordionButton
@@ -973,7 +974,7 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                        <h3>{`My Node status is Standby. What does it mean and when does it become active?`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -981,103 +982,19 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      During betanet the community can operate Validator nodes. After mainnet,
-                      community can also operate Archiver nodes.
+                      When you have the needed amount of SHM staked and you start your node, your
+                      Node starts with a Standby status. This means that it is ready to be included
+                      in the network. Whenever network rotation occurs, your node will get the
+                      opportunity to become Active. This will entirely depend on the network demand
+                      and there is no fixed timeline when your node will become Active.
                     </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      Requirements for running an Archiver will be determined during betanet, but
-                      approximately, it would be: 32 core, 256GB RAM, 4TB SSD
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              {/* Q6 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`What is the process for bug bounties and where do I report bugs on betanet?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      Please report bugs on betanet{" "}
-                      <a
-                        href="https://github.com/Shardeum/shardeum-bug-reporting"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        here
-                      </a>
-                      . Details of the bounties will be announced after the release of Betanet.
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                    </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              {/* Q7 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`When can we expect whitepaper to be released?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>Whitepaper will be released around the same time as the launch of betanet</>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
                   </AccordionPanel>
                 </AccordionItem>
               </div>
 
-              {/* Q8 */}
+              {/* Q5 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
                   <AccordionButton
@@ -1088,7 +1005,7 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`When will the protocol be made open-source?`}</h3>
+                        <h3>{`My transaction is failing whenever I try to add stake on my Validator.`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -1096,8 +1013,150 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      The Shardeum code will be open-sourced around the same time as the launch of
-                      betanet
+                      {`Please Reset your Metamask Wallet. (Settings > Advanced > Reset Account)`}
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`Can I run a Shardeum Validator on Windows?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      While the team has not done extensive testing on windows, technically if you
+                      have Windows Subsystem for Linux (WSL) in your system, you should be able to
+                      run a Shardeum validator node.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`Troubleshoot Error: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      {`Run the following command in your shell --> sudo usermod -a -G docker $USER && newgrp docker Then run the shell script again.`}
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`I see my Validator IP as 0.0.0.0 and get the error of "Node cannot join with invalid external IP: 0.0.0.0". What should I do?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Go into the operator dashboard docker (may be different if you customized
+                      install location)
+                      <br />
+                      <br />
+                      cd ~/.shardeum
+                      <br />
+                      ./shell.sh
+                      <br />
+                      <br />
+                      Get your node's external IP:
+                      <br />
+                      curl https://ipinfo.io/ip
+                      <br />
+                      <br />
+                      The returned IP in the format of nnn.nnn.nnn.nnn is your EXTERNAL_IP.
+                      <br />
+                      Set the number above in place of EXTERNAL_IP:
+                      <br />
+                      export APP_IP="EXTERNAL_IP"
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`How to do a fresh install of a Shardeum Node?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Use the following commands in your shell:
+                      <br />
+                      <br />
+                      cd ~/.shardeum
+                      <br />
+                      ./cleanup.sh
+                      <br />
+                      cd ~/
+                      <br />
+                      rm -rf .shardeum
+                      <br />
+                      rm installer.sh
+                      <br />
+                      <br />
+                      After these, Start from Step 2 from the Validator Node Installation Guide
+                      (https://docs.shardeum.org/node/run/validator#step-2-download-and-install-validator)
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
@@ -1113,6 +1172,149 @@ const AlphanetLanding: NextPage = () => {
 
               {showMoreFAQ && (
                 <>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          During betanet the community can operate Validator nodes. After mainnet,
+                          community can also operate Archiver nodes.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                            </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Requirements for running an Archiver will be determined during betanet,
+                          but approximately, it would be: 32 core, 256GB RAM, 4TB SSD
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                            </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q6 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`What is the process for bug bounties and where do I report bugs on betanet?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Please report bugs on betanet{" "}
+                          <a
+                            href="https://github.com/Shardeum/shardeum-bug-reporting"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            here
+                          </a>
+                          . Details of the bounties will be announced after the release of Betanet.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q7 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`When can we expect whitepaper to be released?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Whitepaper will be released around the same time as the launch of betanet
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                          </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q8 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`When will the protocol be made open-source?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          The Shardeum code will be open-sourced around the same time as the launch
+                          of betanet
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                          </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
                   {/* Q2 */}
                   <div>
                     <AccordionItem bg="brand.white" mb={4}>

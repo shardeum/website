@@ -1069,7 +1069,10 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      {`Run the following command in your shell --> sudo usermod -a -G docker $USER && newgrp docker Then run the shell script again.`}
+                      Run the following command in your shell {`-->`} sudo usermod -a -G docker
+                      $USER && newgrp docker
+                      <br />
+                      Then run the shell script again.
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}

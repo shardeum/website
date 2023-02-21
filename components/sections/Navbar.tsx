@@ -29,6 +29,7 @@ import {
   ECOSYSTEM_URL,
   CAREERS_URL,
   EXPLORER_NEW_LIBERTY_URL,
+  REPORT_BUGS,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -70,6 +71,11 @@ const linksArr = [
       {
         title: "Explorer",
         link: EXPLORER_NEW_LIBERTY_URL,
+        newPage: true,
+      },
+      {
+        title: "Report Bugs",
+        link: REPORT_BUGS,
         newPage: true,
       },
     ],

@@ -33,5 +33,6 @@ export const CROWDIN_PROJECT_LINK = "https://crowdin.com/project/shardeumtransla
 export const CLAIM_100_SHM_LINK = "https://docs.shardeum.org/faucet/claim";
 export const EXPLORER_LIBERTY_URL = "https://explorer-liberty10.shardeum.org/";
 export const EXPLORER_NEW_LIBERTY_URL = "https://docs.shardeum.org/network/explorer";
+export const REPORT_BUGS = "https://github.com/Shardeum/shardeum-bug-reporting";
 export const EVENTBRITE =
   "https://www.eventbrite.com/e/shardeum-22-q3-update-autoscaling-demo-tickets-457872989437";

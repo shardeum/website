@@ -32,15 +32,20 @@ const MenuComponent = (props: any) => {
       >
         {link.submenu?.map((item: any) =>
           item.newPage === true ? (
-            <MenuItem key={item.title} onClick={() => window.open(item.link)}>
-              {commonTranslation(item.title)}
-            </MenuItem>
+            <a
+              target="_blank"
+              href={item.link}
+              onClick={() => window.open(item.link)}
+              rel="noreferrer"
+            >
+              <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
+            </a>
           ) : (
-            <MenuItem key={item.title}>
+            <a href={item.link} rel="noreferrer">
               <NextLink key={item.title} href={item.link} passHref>
-                {commonTranslation(item.title)}
+                <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
               </NextLink>
-            </MenuItem>
+            </a>
           )
         )}
       </MenuList>

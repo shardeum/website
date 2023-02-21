@@ -40,30 +40,32 @@ const JoinCommunity = () => {
         <HStack
           spacing="12"
           // className=""
-          style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
+          // style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
         >
-          {socialLinks.map((link) => (
-            <a href={link.href} target="_blank" key={link.title} rel="noreferrer">
-              <HStack
-                className="joimCommunitySocaialLinks"
-                style={{ margin: "0", cursor: "pointer" }}
-              >
-                {link.title === "Newsletter" ? <EmailIcon /> : <link.Icon />}
-
-                <Text
-                  color="brand.white"
-                  fontSize="base"
-                  fontWeight="normal"
-                  w="full"
-                  m="0"
-                  _hover={{ color: "brand.grey-40" }}
+          <SimpleGrid columns={[2, 7]} gap={{ base: 6 }} rowGap={{ base: 10 }}>
+            {socialLinks.map((link) => (
+              <a href={link.href} target="_blank" key={link.title} rel="noreferrer">
+                <HStack
+                  className="joimCommunitySocaialLinks"
+                  style={{ margin: "0", cursor: "pointer" }}
                 >
-                  {link.title}
-                </Text>
-                {/* <IconExternal /> */}
-              </HStack>
-            </a>
-          ))}
+                  {link.title === "Newsletter" ? <EmailIcon /> : <link.Icon />}
+
+                  <Text
+                    color="brand.white"
+                    fontSize="base"
+                    fontWeight="normal"
+                    w="full"
+                    m="0"
+                    _hover={{ color: "brand.grey-40" }}
+                  >
+                    {link.title}
+                  </Text>
+                  {/* <IconExternal /> */}
+                </HStack>
+              </a>
+            ))}
+          </SimpleGrid>
           {/* <Link href={"/ecosystem"} passHref key={"all"}>
             <HStack style={{ margin: "0", cursor: "pointer" }}>
               <link.Icon />

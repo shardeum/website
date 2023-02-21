@@ -884,7 +884,7 @@ const AlphanetLanding: NextPage = () => {
                       Minimum hardware requirements :
                       <br />
                       <br />
-                      -60 GB ssd storage
+                      -250 GB ssd storage
                       <br />
                       -Quad core CPU less than 10 years old if self hosting
                       <br />

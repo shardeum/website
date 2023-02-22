@@ -1219,39 +1219,6 @@ const AlphanetLanding: NextPage = () => {
                       >
                         <Box flex="1" textAlign="left">
                           <Heading size={"lg"} className="faqHeading">
-                            <h3>{`EVM-based Smart Contract Platform`}</h3>
-                          </Heading>
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-
-                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                        <>
-                          There is a popular saying among the Shardeum community members aka
-                          Shardians, that “If you have built for Ethereum, you have built for
-                          Shardeum”. What it means is that, any dApp/product/service built atop
-                          Ethereum can be migrated to Shardeum seamlessly in a matter of few
-                          minutes. Since you just need to deploy a smart contract written in
-                          Solidity or Vyper on Shardeum (with a bonus that you will never have to
-                          worry about rising gas fees again), the environment is tailor-made for
-                          both new and experienced developers.
-                        </>
-                        {/* <ReactMarkdown linkTarget="_blank">
-                            </ReactMarkdown> */}
-                      </AccordionPanel>
-                    </AccordionItem>
-                  </div>
-
-                  <div>
-                    <AccordionItem bg="brand.white" mb={4}>
-                      <AccordionButton
-                        px={5}
-                        py={5}
-                        _hover={{ bg: "brand.white" }}
-                        _expanded={{ border: "none" }}
-                      >
-                        <Box flex="1" textAlign="left">
-                          <Heading size={"lg"} className="faqHeading">
                             <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
                           </Heading>
                         </Box>
@@ -1358,6 +1325,7 @@ const AlphanetLanding: NextPage = () => {
                       </AccordionPanel>
                     </AccordionItem>
                   </div>
+
                   {/* Q2 */}
                   <div>
                     <AccordionItem bg="brand.white" mb={4}>
@@ -1391,44 +1359,6 @@ const AlphanetLanding: NextPage = () => {
                               py={10}
                               color="brand.grey-90"
                             >
-                              {/* 1 */}
-                              <div>
-                                <AccordionItem bg="brand.white" mb={4}>
-                                  <AccordionButton
-                                    px={5}
-                                    py={5}
-                                    _hover={{ bg: "brand.white" }}
-                                    _expanded={{ border: "none" }}
-                                  >
-                                    <Box flex="1" textAlign="left">
-                                      <Heading size={"lg"} className="faqHeading">
-                                        <h3>Linear Scalability </h3>
-                                      </Heading>
-                                    </Box>
-                                    <AccordionIcon />
-                                  </AccordionButton>
-
-                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                    <>
-                                      With the help of dynamic state sharding, every node added to
-                                      the network will increase the transaction throughput
-                                      instantly. So basically, by simply adding more nodes from the
-                                      network’s ‘standby’ validator pool during peak demand, the TPS
-                                      will increase proportionally making Shardeum the first Web3
-                                      network to scale linearly.{" "}
-                                      <b>
-                                        And this is the main X factor that impacts every other
-                                        outcome on a blockchain network favorably including
-                                        throughput, decentralization, security and constant
-                                        transaction fees irrespective of the demand in the network.
-                                      </b>
-                                    </>
-                                    {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                                  </AccordionPanel>
-                                </AccordionItem>
-                              </div>
-
                               {/* 2 */}
                               <div>
                                 <AccordionItem bg="brand.white" mb={4}>
@@ -1467,6 +1397,44 @@ const AlphanetLanding: NextPage = () => {
                                       vertical scaling (as opposed to linear scaling), sybil attack,
                                       weak finality and lack of cross shard composability. Shardeum,
                                       will further maintain atomic and cross-shard composability.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 1 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Linear Scalability </h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      With the help of dynamic state sharding, every node added to
+                                      the network will increase the transaction throughput
+                                      instantly. So basically, by simply adding more nodes from the
+                                      network’s ‘standby’ validator pool during peak demand, the TPS
+                                      will increase proportionally making Shardeum the first Web3
+                                      network to scale linearly.{" "}
+                                      <b>
+                                        And this is the main X factor that impacts every other
+                                        outcome on a blockchain network favorably including
+                                        throughput, decentralization, security and constant
+                                        transaction fees irrespective of the demand in the network.
+                                      </b>
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}
@@ -1520,7 +1488,7 @@ const AlphanetLanding: NextPage = () => {
                                   >
                                     <Box flex="1" textAlign="left">
                                       <Heading size={"lg"} className="faqHeading">
-                                        <h3>EVM based smart contract platform</h3>
+                                        <h3>EVM-based Smart Contract Platform</h3>
                                       </Heading>
                                     </Box>
                                     <AccordionIcon />
@@ -1535,8 +1503,8 @@ const AlphanetLanding: NextPage = () => {
                                       Shardeum seamlessly in a matter of few minutes. Since you just
                                       need to deploy a smart contract written in Solidity or Vyper
                                       on Shardeum (with a bonus that you will never have to worry
-                                      about rising gas fees again), the environment is also
-                                      tailor-made for new dApp devs and creators.
+                                      about rising gas fees again), the environment is tailor-made
+                                      for both new and experienced developers.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}

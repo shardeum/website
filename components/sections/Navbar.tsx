@@ -73,11 +73,11 @@ const linksArr = [
         link: EXPLORER_NEW_LIBERTY_URL,
         newPage: true,
       },
-      {
-        title: "Report Bugs",
-        link: REPORT_BUGS,
-        newPage: true,
-      },
+      // {
+      //   title: "Report Bugs",
+      //   link: REPORT_BUGS,
+      //   newPage: true,
+      // },
     ],
   },
   {
@@ -136,6 +136,12 @@ const linksArr = [
     link: CLAIM_100_SHM_LINK,
     newPage: true,
     highlight: true,
+  },
+  {
+    title: "Report Bugs on Betanet",
+    link: REPORT_BUGS,
+    newPage: true,
+    highlight: false,
   },
 ];
 

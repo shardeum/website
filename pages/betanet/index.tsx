@@ -963,6 +963,7 @@ const AlphanetLanding: NextPage = () => {
                 </AccordionItem>
               </div>
 
+              {/* Q5 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
                   <AccordionButton
@@ -973,7 +974,7 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                        <h3>{`My Node status is Standby. What does it mean and when does it become active?`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -981,103 +982,19 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      During betanet the community can operate Validator nodes. After mainnet,
-                      community can also operate Archiver nodes.
+                      When you have the needed amount of SHM staked and you start your node, your
+                      Node starts with a Standby status. This means that it is ready to be included
+                      in the network. Whenever network rotation occurs, your node will get the
+                      opportunity to become Active. This will entirely depend on the network demand
+                      and there is no fixed timeline when your node will become Active.
                     </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      Requirements for running an Archiver will be determined during betanet, but
-                      approximately, it would be: 32 core, 256GB RAM, 4TB SSD
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                        </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              {/* Q6 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`What is the process for bug bounties and where do I report bugs on betanet?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>
-                      Please report bugs on betanet{" "}
-                      <a
-                        href="https://github.com/Shardeum/shardeum-bug-reporting"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        here
-                      </a>
-                      . Details of the bounties will be announced after the release of Betanet.
-                    </>
-                    {/* <ReactMarkdown linkTarget="_blank">
-                    </ReactMarkdown> */}
-                  </AccordionPanel>
-                </AccordionItem>
-              </div>
-
-              {/* Q7 */}
-              <div>
-                <AccordionItem bg="brand.white" mb={4}>
-                  <AccordionButton
-                    px={5}
-                    py={5}
-                    _hover={{ bg: "brand.white" }}
-                    _expanded={{ border: "none" }}
-                  >
-                    <Box flex="1" textAlign="left">
-                      <Heading size={"lg"} className="faqHeading">
-                        <h3>{`When can we expect whitepaper to be released?`}</h3>
-                      </Heading>
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                    <>Whitepaper will be released around the same time as the launch of betanet</>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
                   </AccordionPanel>
                 </AccordionItem>
               </div>
 
-              {/* Q8 */}
+              {/* Q5 */}
               <div>
                 <AccordionItem bg="brand.white" mb={4}>
                   <AccordionButton
@@ -1088,7 +1005,7 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`When will the protocol be made open-source?`}</h3>
+                        <h3>{`My transaction is failing whenever I try to add stake on my Validator.`}</h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />
@@ -1096,8 +1013,160 @@ const AlphanetLanding: NextPage = () => {
 
                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                     <>
-                      The Shardeum code will be open-sourced around the same time as the launch of
-                      betanet
+                      {`Please Reset your Metamask Wallet. (Settings > Advanced > Reset Account)`}
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`Can I run a Shardeum Validator on Windows?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      While the team has not done extensive testing on windows, technically if you
+                      have Windows Subsystem for Linux (WSL) in your system, you should be able to
+                      run a Shardeum validator node.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`Troubleshoot Error: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Run the following command in your shell {`-->`} sudo usermod -a -G docker
+                      $USER && newgrp docker
+                      <br />
+                      Then run the shell script again.
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`I see my Validator IP as 0.0.0.0 and get the error of "Node cannot join with invalid external IP: 0.0.0.0". What should I do?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Go into the operator dashboard docker (may be different if you customized
+                      install location)
+                      <br />
+                      <br />
+                      cd ~/.shardeum
+                      <br />
+                      ./shell.sh
+                      <br />
+                      <br />
+                      Get your node's external IP:
+                      <br />
+                      curl https://ipinfo.io/ip
+                      <br />
+                      <br />
+                      The returned IP in the format of nnn.nnn.nnn.nnn is your EXTERNAL_IP.
+                      <br />
+                      Set the number above in place of EXTERNAL_IP:
+                      <br />
+                      export APP_IP="EXTERNAL_IP"
+                    </>
+                    {/* <ReactMarkdown linkTarget="_blank">
+                      </ReactMarkdown> */}
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              {/* Q5 */}
+              <div>
+                <AccordionItem bg="brand.white" mb={4}>
+                  <AccordionButton
+                    px={5}
+                    py={5}
+                    _hover={{ bg: "brand.white" }}
+                    _expanded={{ border: "none" }}
+                  >
+                    <Box flex="1" textAlign="left">
+                      <Heading size={"lg"} className="faqHeading">
+                        <h3>{`How to do a fresh install of a Shardeum Node?`}</h3>
+                      </Heading>
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                    <>
+                      Use the following commands in your shell:
+                      <br />
+                      <br />
+                      cd ~/.shardeum
+                      <br />
+                      ./cleanup.sh
+                      <br />
+                      cd ~/
+                      <br />
+                      rm -rf .shardeum
+                      <br />
+                      rm installer.sh
+                      <br />
+                      <br />
+                      After these, Start from{" "}
+                      <a
+                        target="_blank"
+                        href="https://docs.shardeum.org/node/run/validator#step-2-download-and-install-validator"
+                        rel="noreferrer"
+                      >
+                        Step 2
+                      </a>{" "}
+                      from the Validator Node Installation Guide
                     </>
                     {/* <ReactMarkdown linkTarget="_blank">
                       </ReactMarkdown> */}
@@ -1113,6 +1182,150 @@ const AlphanetLanding: NextPage = () => {
 
               {showMoreFAQ && (
                 <>
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`Can I operate archive nodes on betanet?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          During betanet the community can operate Validator nodes. After mainnet,
+                          community can also operate Archiver nodes.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                            </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`What would be the requirement and incentive to run an archive node?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Requirements for running an Archiver will be determined during betanet,
+                          but approximately, it would be: 32 core, 256GB RAM, 4TB SSD
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                            </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q6 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`What is the process for bug bounties and where do I report bugs on betanet?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Please report bugs on betanet{" "}
+                          <a
+                            href="https://github.com/Shardeum/shardeum-bug-reporting"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            here
+                          </a>
+                          . Details of the bounties will be announced after the release of Betanet.
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                        </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q7 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`When can we expect whitepaper to be released?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          Whitepaper will be released around the same time as the launch of betanet
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                          </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
+                  {/* Q8 */}
+                  <div>
+                    <AccordionItem bg="brand.white" mb={4}>
+                      <AccordionButton
+                        px={5}
+                        py={5}
+                        _hover={{ bg: "brand.white" }}
+                        _expanded={{ border: "none" }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Heading size={"lg"} className="faqHeading">
+                            <h3>{`When will the protocol be made open-source?`}</h3>
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                        <>
+                          The Shardeum code will be open-sourced around the same time as the launch
+                          of betanet
+                        </>
+                        {/* <ReactMarkdown linkTarget="_blank">
+                          </ReactMarkdown> */}
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </div>
+
                   {/* Q2 */}
                   <div>
                     <AccordionItem bg="brand.white" mb={4}>
@@ -1146,46 +1359,6 @@ const AlphanetLanding: NextPage = () => {
                               py={10}
                               color="brand.grey-90"
                             >
-                              {/* 1 */}
-                              <div>
-                                <AccordionItem bg="brand.white" mb={4}>
-                                  <AccordionButton
-                                    px={5}
-                                    py={5}
-                                    _hover={{ bg: "brand.white" }}
-                                    _expanded={{ border: "none" }}
-                                  >
-                                    <Box flex="1" textAlign="left">
-                                      <Heading size={"lg"} className="faqHeading">
-                                        <h3>Linear Scalability </h3>
-                                      </Heading>
-                                    </Box>
-                                    <AccordionIcon />
-                                  </AccordionButton>
-
-                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                                    <>
-                                      Although we see more recent L1 networks claim high TPS, there
-                                      are some catches here apart from high TPS claim itself. Once a
-                                      network reaches its maximum TPS or throughput, say during peak
-                                      traffic, it often results in network outages accompanied with
-                                      spike in gas fees for users. Shardeum, through its innovative
-                                      protocol, will scale linearly i.e. every node joining the
-                                      network will increase its throughput proportionally. Further,
-                                      on Shardeum, consensus is reached on every transaction
-                                      individually as opposed to block level consensus done by most
-                                      blockchains. Transaction level consensus at a high throughput
-                                      rate and finality has been impossible to achieve so far.
-                                      Shardeum is not only “capable” of achieving linear scalability
-                                      but has also publicly demonstrated it at the launch of
-                                      alphanet 1.0 and 2.0 releases. Here is a demo video
-                                    </>
-                                    {/* <ReactMarkdown linkTarget="_blank">
-                                  </ReactMarkdown> */}
-                                  </AccordionPanel>
-                                </AccordionItem>
-                              </div>
-
                               {/* 2 */}
                               <div>
                                 <AccordionItem bg="brand.white" mb={4}>
@@ -1205,19 +1378,63 @@ const AlphanetLanding: NextPage = () => {
 
                                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                                     <>
-                                      Sharding helps the network to evenly distribute compute
-                                      workload, storage, and bandwidth across all nodes thereby
-                                      saving more resources. The unique protocol introduces not just
-                                      state sharding but dynamic state sharding. Here validating
-                                      nodes are assigned multiple shards with different address
-                                      ranges. And since consensus is done at transaction level on
-                                      Shardeum, transactions that affect multiple shards can be
-                                      processed simultaneously with atomic processing resulting in
-                                      immediate finality. Whereas in static state sharding done by
-                                      some of the latest blockchain networks, nodes in a shard are
-                                      assigned the same address range which does not allow for cross
-                                      shard composability due to which transactions on such networks
-                                      are processed sequentially.
+                                      Consensus and processing are done at transaction level on
+                                      Shardeum instead of the block level which you find with
+                                      existing blockchain networks. Through dynamic state sharding,
+                                      the network will shard its state by evenly and dynamically
+                                      distributing compute workload, storage, and bandwidth among
+                                      all the nodes. This not only allows for parallel processing of
+                                      transactions but also very low overhead for validator nodes as
+                                      they will store only the state data of transactions they are
+                                      involved in.{" "}
+                                      <b>
+                                        Shardeum will be the first Web3 network to scale linearly
+                                      </b>{" "}
+                                      . Dynamic state sharding is the most advanced version of
+                                      state, transaction/network and static state sharding employed
+                                      by more recent sharded chains which runs into both
+                                      inter-related and standalone problems such as high latency,
+                                      vertical scaling (as opposed to linear scaling), sybil attack,
+                                      weak finality and lack of cross shard composability. Shardeum,
+                                      will further maintain atomic and cross-shard composability.
+                                    </>
+                                    {/* <ReactMarkdown linkTarget="_blank">
+                                  </ReactMarkdown> */}
+                                  </AccordionPanel>
+                                </AccordionItem>
+                              </div>
+
+                              {/* 1 */}
+                              <div>
+                                <AccordionItem bg="brand.white" mb={4}>
+                                  <AccordionButton
+                                    px={5}
+                                    py={5}
+                                    _hover={{ bg: "brand.white" }}
+                                    _expanded={{ border: "none" }}
+                                  >
+                                    <Box flex="1" textAlign="left">
+                                      <Heading size={"lg"} className="faqHeading">
+                                        <h3>Linear Scalability </h3>
+                                      </Heading>
+                                    </Box>
+                                    <AccordionIcon />
+                                  </AccordionButton>
+
+                                  <AccordionPanel className="brand-orange-href" px={5} py={8}>
+                                    <>
+                                      With the help of dynamic state sharding, every node added to
+                                      the network will increase the transaction throughput
+                                      instantly. So basically, by simply adding more nodes from the
+                                      network’s ‘standby’ validator pool during peak demand, the TPS
+                                      will increase proportionally making Shardeum the first Web3
+                                      network to scale linearly.{" "}
+                                      <b>
+                                        And this is the main X factor that impacts every other
+                                        outcome on a blockchain network favorably including
+                                        throughput, decentralization, security and constant
+                                        transaction fees irrespective of the demand in the network.
+                                      </b>
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}
@@ -1244,18 +1461,15 @@ const AlphanetLanding: NextPage = () => {
 
                                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                                     <>
-                                      A lack of scalability leads to low throughput, high latency
-                                      and increasing transaction fees resulting in a bad user
-                                      experience. Because Shardeum can scale linearly, the network
-                                      processes transactions with high fairness eliminating MEV
-                                      crisis plaguing the industry. Transactions will be received
-                                      and validated on FCFS basis. Shardeum can further auto-scale
-                                      i.e. depending on the demand in the network, the network will
-                                      automatically expand or shrink its capacity. The project
-                                      engineers are well aware that maintaining high efficiency
-                                      while scaling to meet demand is what will help keep the cost
-                                      of the network and ultimately the average transaction fees
-                                      low.
+                                      As noted previously, linear scaling on Shardeum allows the
+                                      validator nodes on the network to download only the latest
+                                      state of the transactions they are handling while historical
+                                      transactions are handled by archiver nodes on the network.
+                                      Combined with autoscaling where the network independently
+                                      increases and decrease its capacity during peaks and troughs,
+                                      cost of running the operations on Shardeum will be low which
+                                      directly ensures low and constant transaction fees for users
+                                      and developers.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}
@@ -1274,7 +1488,7 @@ const AlphanetLanding: NextPage = () => {
                                   >
                                     <Box flex="1" textAlign="left">
                                       <Heading size={"lg"} className="faqHeading">
-                                        <h3>EVM based smart contract platform</h3>
+                                        <h3>EVM-based Smart Contract Platform</h3>
                                       </Heading>
                                     </Box>
                                     <AccordionIcon />
@@ -1289,8 +1503,8 @@ const AlphanetLanding: NextPage = () => {
                                       Shardeum seamlessly in a matter of few minutes. Since you just
                                       need to deploy a smart contract written in Solidity or Vyper
                                       on Shardeum (with a bonus that you will never have to worry
-                                      about rising gas fees again), the environment is also
-                                      tailor-made for new dApp devs and creators.
+                                      about rising gas fees again), the environment is tailor-made
+                                      for both new and experienced developers.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}
@@ -1319,21 +1533,16 @@ const AlphanetLanding: NextPage = () => {
 
                                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                                     <>
-                                      As mentioned in previous answers, parallel processing with
-                                      atomic and cross shard composability leading up to linear
-                                      scalability were never possible before. The networks had no
-                                      choice but to scale up vertically instead of horizontally
-                                      which brings us to the same old problem of centralization.
-                                      What that effectively meant was average users could not afford
-                                      to run a node on these networks due to high requirements in
-                                      either hardware specs or staking. The idea behind vertical
-                                      scalability is to facilitate more capacity to process
-                                      transactions. On Shardeum, validator nodes would need to
-                                      maintain only the current state within a shard they are
-                                      involved in while all the the historical data is offloaded to
-                                      archive nodes on the network. This enables the platform to
-                                      keep the staking/hardware requirements low for average users,
-                                      thus allowing for high decentralization
+                                      As of a result of linear scaling and low hardware requirements
+                                      to run a node, average users can run a validator node and keep
+                                      the network safe in return for networks tokens. By scaling
+                                      horizontally, network will be decentralized. No blockchain
+                                      network has demonstrated its ability to scale linearly and
+                                      instead were mostly able to scale vertically making it
+                                      expensive for average users to run a node on such networks. As
+                                      a result, large institutions and node providers fill the
+                                      vacuum created and operate nodes on them leading to
+                                      centralization and increased chances for sybil attacks.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}
@@ -1352,7 +1561,7 @@ const AlphanetLanding: NextPage = () => {
                                   >
                                     <Box flex="1" textAlign="left">
                                       <Heading size={"lg"} className="faqHeading">
-                                        <h3>Solid Security with a unique consensus mechanism</h3>
+                                        <h3>Solid Security with Unique Consensus Mechanism</h3>
                                       </Heading>
                                     </Box>
                                     <AccordionIcon />
@@ -1368,12 +1577,10 @@ const AlphanetLanding: NextPage = () => {
                                       in a nutshell, allows the network validators of a transaction
                                       to approve it only if it receives 51% of votes which is then
                                       followed by batching such transactions together and passing it
-                                      onto archive nodes. Moreover, the network will randomly rotate
-                                      validator nodes in and out of the system which will make it
-                                      extremely difficult for bad actors to attack the network. The
-                                      nodes that are rotated out will take the place of 'standby
-                                      nodes' who will wait for their turn to validate transactions
-                                      again.
+                                      onto archive nodes. Moreover, consensus algorithm on Shardeum
+                                      will randomly rotate validator and standby nodes in and out of
+                                      the system which will make it extremely difficult for bad
+                                      actors to attack the network.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}

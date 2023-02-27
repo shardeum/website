@@ -191,10 +191,10 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             </HorizontalTileButton> */}
 
             {/* Share */}
-            {/* <HorizontalTileButton onClick={onOpen}>
+            <HorizontalTileButton onClick={onOpen}>
               <ShareIcon />
               &nbsp;&nbsp; Share
-            </HorizontalTileButton> */}
+            </HorizontalTileButton>
           </Flex>
         </GridItem>
         <GridItem

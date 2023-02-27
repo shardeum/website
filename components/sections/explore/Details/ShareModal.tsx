@@ -37,7 +37,7 @@ export type ShareModalProps = {
 export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, project }) => {
   const { hasCopied, onCopy } = useClipboard(projectUrl);
   const TEXT =
-    "it cover only %0Athis Check out " +
+    " <b>it</b> cover only %0Athis Check out " +
     project.name +
     " on @shardeum 🔥 %0A%0ABuild highly scalable dApps on the worlds first EVM-based L1 which uses dynamic state sharding to increase TPS with every new node. %0A%0ALets %0A%0A" +
     projectUrl;

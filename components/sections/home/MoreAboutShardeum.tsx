@@ -13,12 +13,12 @@ const featureList = [
   {
     titleKey: "shm-feature-2-title",
     descriptionKey: "shm-feature-2-desc",
-    iconPath: "linearScale.png",
+    iconPath: "DynamicShardingAtomicComposibility.png",
   },
   {
     titleKey: "shm-feature-3-title",
     descriptionKey: "shm-feature-3-desc",
-    iconPath: "DynamicShardingAtomicComposibility.png",
+    iconPath: "linearScale.png",
   },
   {
     titleKey: "shm-feature-4-title",

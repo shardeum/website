@@ -70,18 +70,18 @@ const AlphanetLanding: NextPage = () => {
   const [showMoreFAQ, setShowMoreFAQ] = useState(false);
 
   const stats = [
-    { Icon: IconTransaction, title: "total-transaction-spinks" },
-    { Icon: IconGlobe, title: "total-accounts-spinks" },
-    { Icon: IconGlobe, title: "total-contracts-spinks" },
-    { Icon: IconGlobe, title: "active-nodes-spinks" },
-    { Icon: IconGlobe, title: "total-stake-transactions-spinks" },
-    { Icon: IconGlobe, title: "total-unstake-transactions-spinks" },
-    { Icon: IconTransaction, title: "total-transaction-spinks" },
-    { Icon: IconGlobe, title: "total-accounts-spinks" },
-    { Icon: IconGlobe, title: "total-contracts-spinks" },
-    { Icon: IconGlobe, title: "active-nodes-spinks" },
-    { Icon: IconGlobe, title: "total-stake-transactions-spinks" },
-    { Icon: IconGlobe, title: "total-unstake-transactions-spinks" },
+    { Icon: IconTransaction, title: "total-transaction-sphinx" },
+    { Icon: IconGlobe, title: "total-accounts-sphinx" },
+    { Icon: IconGlobe, title: "total-contracts-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-sphinx" },
+    { Icon: IconGlobe, title: "total-stake-transactions-sphinx" },
+    { Icon: IconGlobe, title: "total-unstake-transactions-sphinx" },
+    { Icon: IconTransaction, title: "total-transaction-sphinx" },
+    { Icon: IconGlobe, title: "total-accounts-sphinx" },
+    { Icon: IconGlobe, title: "total-contracts-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-sphinx" },
+    { Icon: IconGlobe, title: "total-stake-transactions-sphinx" },
+    { Icon: IconGlobe, title: "total-unstake-transactions-sphinx" },
   ];
 
   const showFAQ = () => {

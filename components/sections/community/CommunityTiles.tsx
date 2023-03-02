@@ -481,7 +481,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Tamil",
-    icon: "https://cdn5.telegram-cdn.org/file/odKzUqV7moFn6kPQNIgngbs4UaMNMTBSrivc_7u0uQmkWmLvoXioWL35-k_0P8rnt1Q-IdJhelP239r07MnnQvnxsBjSANfQ4Z32hH5qpCdSk3ANJOMC8OZrYjCb4ogAKa14f51G78jnOYRQ7IWJxGm7BXZN-ASVYfx5KJJsQ1a5K_dEsWkyzXqK592YRL6Ah9B6_kEEr0NJ3a0HNS_i9M40poFXNwcXqVT9bWwtDQ0SS69LiEFWcHErtCSeAsstFXJFVUqNX8wvUSTc1dHdxQZAlFOdC3hmdzC1_OqGKvUiPFgS3xYT8VkQ3jwTyVec7LMm2KLDwQRWpZLWHaVzeQ.jpg",
+    icon: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/india-flag-design-template-186e8b084e00b5e1f777ddf3f534b763_screen.jpg?ts=1625072969",
     link: "https://t.me/shardeum_tamil",
     fallBackNum: "",
     userAlias: "sanjaivps#5907 (Discord)",
@@ -545,7 +545,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Nigeria",
-    icon: "https://cdn4.telegram-cdn.org/file/DoEG2IM0X8VmYCpcLn-475GlRcohmsYtvCYtzuNt4MOWjE08ZOkrSBDCnHFm9NUAlcz1SGdpMKuMFyJ0rpbozGwu8gAwYDhg3kLjNJPY3ySPjYnzN9xD8Gu-UYb8enUKslACGYdsAc0eg7ivIMaxet_YG6EwXsnHtNrihntuld7hMszQvmh4jkfS7reGHttLUVeDScJDoF8p23D1-dIeTmzUqOAMPPePGfP4saFHWsBx0XSZv0jzBpvX4A8KrluHrMXjOqZeVifD0DOUf3BofrH9yaLNjt-ucfYcZwMk5OhthIykb1HKY10N_OjA4p3gcwh5aFO0O2-3YYEgzhl5Cw.jpg",
+    icon: "https://cdn.britannica.com/68/5068-004-72A3F250/Flag-Nigeria.jpg",
     link: "https://t.me/ShardeumNigeria",
     fallBackNum: "",
     userAlias: "iPrinceMoon #3958 (Discord)",
@@ -561,7 +561,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Vietnam",
-    icon: "https://cdn5.telegram-cdn.org/file/LkjZdO82biabxLpIPjeCkvnmbsBlk2HBkg_j7ajVGnMDgZG5GTBBl8UyZcJl6Nqe9SXcpq_njmRadXT1rgvwQcPqFdhfLmUCfkfrO4vV3jAIOiIYSocYW274C3CX-_JdmO6HoHlNEdIMly8qh3g4gnKNUCV39oRd6jSH9JOynVfpxmVYfOK7c_KFZSk3n9Gjzy2mNQNojNOMWwmyuVW8jGt1hy0rpUZaswG5fxCd1hufu_aW4V19revGiWXD1zsMKu4kTIsfC0KuECx_rr5HTENfsVhvFs3fy9hDk-8bPOjRCnBXs6P-4UTyeV8Wh5WyWrBSYaWPNV3JfRL9vRsHDA.jpg",
+    icon: "https://cdn.britannica.com/41/4041-004-D051B135/Flag-Vietnam.jpg",
     link: "https://t.me/nodeazOfficial/23006",
     fallBackNum: "",
     userAlias: "Tbros#6868 (Discord)",
@@ -569,7 +569,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Tamil Queries",
-    icon: "https://cdn5.telegram-cdn.org/file/LkjZdO82biabxLpIPjeCkvnmbsBlk2HBkg_j7ajVGnMDgZG5GTBBl8UyZcJl6Nqe9SXcpq_njmRadXT1rgvwQcPqFdhfLmUCfkfrO4vV3jAIOiIYSocYW274C3CX-_JdmO6HoHlNEdIMly8qh3g4gnKNUCV39oRd6jSH9JOynVfpxmVYfOK7c_KFZSk3n9Gjzy2mNQNojNOMWwmyuVW8jGt1hy0rpUZaswG5fxCd1hufu_aW4V19revGiWXD1zsMKu4kTIsfC0KuECx_rr5HTENfsVhvFs3fy9hDk-8bPOjRCnBXs6P-4UTyeV8Wh5WyWrBSYaWPNV3JfRL9vRsHDA.jpg",
+    icon: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/india-flag-design-template-186e8b084e00b5e1f777ddf3f534b763_screen.jpg?ts=1625072969",
     link: "https://t.me/shmcit",
     fallBackNum: "",
     userAlias: "Sanity420#2396 (Discord)",
@@ -698,8 +698,8 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                 color="brand.grey-80"
                 mb="5"
               >
-                Find and join community-run tribes. If you want to create a new tribe and lead it,
-                please submit the{" "}
+                Find and join community-run platforms. If you want to create a new platform and lead
+                it, please submit the{" "}
                 <a
                   target="_blank"
                   style={{ color: "orange" }}
@@ -707,7 +707,7 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   rel="noreferrer"
                 >
                   Shardeum League form
-                </a>{" "}
+                </a>
                 , and stand a chance to be an early adopter of Shardeum with great incentives
                 {/* {pageTranslation("page-community-join-community-description2")} */}
               </Text>
@@ -745,15 +745,15 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                     {tile.title}
                   </Text>
 
-                  <Text
+                  {/* <Text
                     color={"brand.grey-80"}
                     fontSize={{ base: "sm", sm: "sm", lg: "sm" }}
                     fontWeight={"normal"}
-                  >
-                    {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "}
-                    {/* {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias} */}
-                    {tile.userAlias}
-                  </Text>
+                  > */}
+                  {/* {communityStatsMap?.[tile.key] || tile.fallBackNum}{" "} */}
+                  {/* {pageTranslation(`page-community-join-${tile.userAlias}`) || tile.userAlias} */}
+                  {/* {tile.userAlias} */}
+                  {/* </Text> */}
                 </Box>
               ))}
             </SimpleGrid>

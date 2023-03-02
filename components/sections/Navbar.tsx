@@ -138,7 +138,7 @@ const linksArr = [
     highlight: true,
   },
   {
-    title: "Report Bugs on Betanet",
+    title: "Report Bugs on Sphinx",
     link: REPORT_BUGS,
     newPage: true,
     highlight: false,

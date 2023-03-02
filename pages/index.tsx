@@ -20,7 +20,7 @@ import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import SectionHeading from "../components/common/SectionHeading";
 import JoinCommunity from "components/sections/JoinCommunity";
-import { CLAIM_100_SHM_LINK } from "constants/links";
+import { CLAIM_100_SHM_LINK, REPORT_BUGS } from "constants/links";
 import type { InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -394,17 +394,33 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       Find dApps/projects building on Shardeum
                     </h2>
                     <br />
-                    <Button
-                      as="a"
-                      variant="primary"
-                      size="lg"
-                      // backgroundColor= "#4EB59A"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href={"/ecosystem"}
-                    >
-                      Explore dApps
-                    </Button>
+                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+                      <Button
+                        as="a"
+                        variant="secondary"
+                        size="lg"
+                        // backgroundColor= "#4EB59A"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href={"/ecosystem"}
+                      >
+                        Explore dApps
+                      </Button>
+
+                      <Button
+                        as="a"
+                        variant="primary"
+                        size="lg"
+                        // backgroundColor= "#4EB59A"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        ml={5}
+                        href={REPORT_BUGS}
+                      >
+                        Report Bugs on Sphinx
+                      </Button>
+                    </div>
+
                     {/* <p
                       style={{
                         backgroundColor: "#4EB59A",

@@ -27,7 +27,7 @@ import SectionHeading from "../../components/common/SectionHeading";
 import Image from "next/image";
 import { AlphanetFeatureIcons } from "@shm/Icons";
 import { NextSeo } from "next-seo";
-import { CLAIM_100_SHM_LINK, DOCS_URL, BETANETIMAGE } from "constants/links";
+import { CLAIM_100_SHM_LINK, DOCS_URL, BETANETIMAGE, REPORT_BUGS } from "constants/links";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import WhatCanYoDo from "@shm/components/sections/WhatCanYouDo";
@@ -70,14 +70,18 @@ const AlphanetLanding: NextPage = () => {
   const [showMoreFAQ, setShowMoreFAQ] = useState(false);
 
   const stats = [
-    { Icon: IconTransaction, title: "total-transaction" },
-    { Icon: IconGlobe, title: "total-accounts" },
-    { Icon: IconGlobe, title: "total-contracts" },
-    { Icon: IconGlobe, title: "active-nodes" },
-    { Icon: IconTransaction, title: "total-transaction" },
-    { Icon: IconGlobe, title: "total-accounts" },
-    { Icon: IconGlobe, title: "total-contracts" },
-    { Icon: IconGlobe, title: "active-nodes" },
+    { Icon: IconTransaction, title: "total-transaction-spinks" },
+    { Icon: IconGlobe, title: "total-accounts-spinks" },
+    { Icon: IconGlobe, title: "total-contracts-spinks" },
+    { Icon: IconGlobe, title: "active-nodes-spinks" },
+    { Icon: IconGlobe, title: "total-stake-transactions-spinks" },
+    { Icon: IconGlobe, title: "total-unstake-transactions-spinks" },
+    { Icon: IconTransaction, title: "total-transaction-spinks" },
+    { Icon: IconGlobe, title: "total-accounts-spinks" },
+    { Icon: IconGlobe, title: "total-contracts-spinks" },
+    { Icon: IconGlobe, title: "active-nodes-spinks" },
+    { Icon: IconGlobe, title: "total-stake-transactions-spinks" },
+    { Icon: IconGlobe, title: "total-unstake-transactions-spinks" },
   ];
 
   const showFAQ = () => {
@@ -206,7 +210,7 @@ const AlphanetLanding: NextPage = () => {
               spacing="4"
               direction={{ base: "column", sm: "row" }}
               width={{ base: "full", sm: "auto" }}
-              style={{ paddingBottom: "50px" }}
+              style={{ paddingBottom: "0px" }}
             >
               <Button
                 as="a"
@@ -229,6 +233,17 @@ const AlphanetLanding: NextPage = () => {
                 {commonTranslation("claim-100-shm-cta")}
               </Button>
             </Stack>
+            <Text fontSize={{ base: "m", lg: "m" }}>
+              <a
+                href={REPORT_BUGS}
+                target="_blank"
+                rel="noreferrer"
+                style={{ fontSize: "20px", fontWeight: "800" }}
+              >
+                {" "}
+                <span style={{ fontSize: "25px" }}>👉</span> Report Bugs on Sphinx Here{" "}
+              </a>
+            </Text>
           </>
         }
         media={
@@ -246,7 +261,7 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
-      {/* <Box position="relative">
+      <Box position="relative">
         <Center
           maxW="30%"
           bg="black"
@@ -258,11 +273,10 @@ const AlphanetLanding: NextPage = () => {
           borderBottomWidth="1px"
           px={{ base: "4", md: "6", lg: "9" }}
         >
-          <Text fontSize={{ base: "xl", lg: "2xl" }}>Liberty Metrics</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx Metrics</Text>
         </Center>
-
         <SlidingStats stats={stats} />
-      </Box> */}
+      </Box>
       {/* Features of alphanet */}
       {/* <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}

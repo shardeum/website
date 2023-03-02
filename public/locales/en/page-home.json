@@ -9,7 +9,7 @@
   "shm-feature-4-title": "Anyone can operate a node",
   "shm-feature-4-desc": "Since historical data on Shardeum will be offloaded to archive nodes on top of its <a style='color:#ec5c28' href='https://shardeum.org/blog/shardeum-solves-blockchain-trilemma/' target='_blank' >linear scalability</a>, hardware requirements to run a node on the network will be low. With the help of GUI, even non-technical users can run a node easily.",
   "shm-feature-5-title": "Autoscaling & high fairness",
-  "shm-feature-5-desc": "Shardeum will autoscale dynamically based on demand in the network keeping its operational cost low to retain low gas fees. The network will further process transactions on FCFS basis to ensure high fairness eliminating MEV.",
+  "shm-feature-5-desc": "Shardeum will <a style='color:#ec5c28' href='https://shardeum.org/blog/worlds-first-auto-scaling-demo-by-blockchain-network/' target='_blank' >autoscale</a> dynamically based on demand in the network keeping its operational cost low to retain low gas fees. The network will further process transactions on FCFS basis to ensure high fairness eliminating MEV.",
   "shm-feature-6-title": "Solid security",
   "shm-feature-6-desc": "A leaderless <a style='color:#ec5c28' href='https://shardeum.org/blog/consensus-mechanism-used-in-shardeum/' target='_blank' >Proof-of-Quorum</a> (PoQ) consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation - all contributes to boost the security of the network.",
   "roadmap": "Roadmap",

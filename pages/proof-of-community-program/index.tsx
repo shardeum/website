@@ -40,7 +40,7 @@ const Page = ({
                 <NextLink href="/" passHref>
                   Home
                 </NextLink>{" "}
-                / Ambassador Program
+                / Proof Of Community
               </p>
             </Text>
           </>
@@ -121,7 +121,7 @@ const Page = ({
               / Privacy Policy
             </p>
           </Text> */}
-          <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
+          <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
         </Container>
       </Flex>
     </>

@@ -100,8 +100,8 @@ const Page = ({
                   },{
                     "@type": "ListItem", 
                     "position": 2, 
-                    "name": "Ambassador Program",
-                    "item": "https://shardeum.org/ambassadorprogram/"  
+                    "name": "Super Shardian: Proof Of Community",
+                    "item": "https://shardeum.org/proof-of-community-program/"  
                   }]
                 }
                 </script>`,
@@ -130,7 +130,7 @@ const Page = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = "ambassadorprogram";
+  const pageId = "proof-of-community-program";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {

@@ -16,11 +16,11 @@ const NotionPagesLinks = [
     image: "https://shardeum.org/Shardeum.png",
   },
   {
-    slug: "ambassadorprogram",
+    slug: "proof-of-community-program",
     notionId: "a3785e84f61a45d799e026833a7952cb",
-    title: "Shardian’s assemble! | Shardeum",
+    title: "Super Shardian: Proof Of Community | Shardeum",
     description:
-      "Are you interested in leading a Shardeum Chapter and becoming a part of Shardeum’s <> Program?",
+      "Becoming a Super Shardian means that you are not only at the forefront of the blockchain race, but you are also pushing the boundaries into deep exploration.",
     image: "https://shardeum.org/Shardeum.png",
   },
 ];

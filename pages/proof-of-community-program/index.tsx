@@ -121,7 +121,7 @@ const Page = ({
               / Privacy Policy
             </p>
           </Text> */}
-          <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+          <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>
     </>

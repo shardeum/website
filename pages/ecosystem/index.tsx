@@ -272,9 +272,9 @@ const Explore: NextPage<ExplorePageProps> = ({
                 size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
-                href={REPORT_BUGS}
+                href={`https://shardeum.org/blog/shardeum-open-source/`}
               >
-                Report Bugs on Sphinx
+                Contribute to Gitlab Repositories
               </Button>
             </Stack>
           </>

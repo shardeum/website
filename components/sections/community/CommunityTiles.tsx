@@ -653,7 +653,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   }}
                   onClick={() => handleTileClick(tile.link)}
                 >
-                  <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  <div>
+                    <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  </div>
                   <Text
                     color={"brand.grey-80"}
                     fontSize={{ base: "md", sm: "md", lg: "lg" }}
@@ -735,7 +737,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   onClick={() => handleTileClick(tile.link)}
                 >
                   {/* <Image src={tile.icon} alt={tile.key} width={32} height={32} /> */}
-                  <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  <div style={{ minHeight: "50px" }}>
+                    <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  </div>
                   <Text
                     color={"brand.grey-80"}
                     fontSize={{ base: "md", sm: "md", lg: "lg" }}

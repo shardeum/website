@@ -353,7 +353,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum TR",
-    icon: "https://cdn5.telegram-cdn.org/file/fnEmOyhxSuUynTFBL7rjX2qIERP6be1ZjeGQUTs-xnp5WHDa5dT4PMXVnB0GEnxM0tTQr9xGwYYvEg3sV3SCy2HjPNlTJdMCQIHRtC2FIu6Yn-mMBGhDG-4G02jT9qxiYP_sNaObqu46ros4_R1FWzS9BdpNuIlkpkVzzDY5H5twGtgnc9opbt3XshhjIsKtGonPuQjvqUz8tGhNxVbWvcSPZH_aBhrelORqgp633pO2dw0LJefADGgXd2t_rcnm1Vfcf5lxQqM9GYK6Ff6TW-ht_eXewsFPd8Dfk2w4e-yCl6D5XkWEXXi_kja_y2uAveu1LR_6kehxq8eF51lERQ.jpg",
+    icon: "/TR.jpg",
     link: "https://t.me/ShardeumTR",
     fallBackNum: "",
     userAlias: "@Ruesandora0 (Twitter)",
@@ -433,7 +433,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum India",
-    icon: "https://cdn5.telegram-cdn.org/file/kK9hXMWMPlxHv9baa0YpXIfTjso8nG8vhMPpJvgglclBXmDlI3MQe3UhLpgCGietj9IOmUTbbHFkNgp0X1CIjdJOihH5eWb6bfj9KePPwCFQUKpFZT5qIRJXekKu7AYZSlmehr-xzsXI2tWwLxL0ky2ptUISPguocvBhmDLvCVXPBUMn_KvZ4B82DtCTof_ttHpD8ZkjHZD-x1HGv_XXgn-kTFtrH88YhFPwkoUKXMelliGKc-RiWgSkJtMJ9l4SGOmkdx95SOQKjguyIiQVmtOy6zEAx74GC2t5wlsZZJIz6sQ89h4x36Azu2c8ai4boeOn9pN0PMReuuPl1opnIA.jpg",
+    icon: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/india-flag-design-template-186e8b084e00b5e1f777ddf3f534b763_screen.jpg?ts=1625072969",
     link: "https://t.me/ShardeumBharat",
     fallBackNum: "",
     userAlias: "0xSimba#3891(Discord)",
@@ -457,7 +457,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Hyderabad",
-    icon: "https://cdn5.telegram-cdn.org/file/ctR3UyB7nr-Fh7orDEBdhKP3ySP_87Xkvmlo8natzwlOw8a9Kp6htZI4Tq7G4Y6KlUSIxt4KKGTOuArxztOHyzB74ixOih0kbF97116Jkes1ds1Np6_5imeEjPMgTcXV0OzXTMdbA86cZWcwymaR0Tq87n_wZitsfe1N6oFWNd-2tZBBEYAFHOFMiJmfS9juP1x7-SizBcOrrnt2aD6vIjcYElEFGlKePHvqE83xYFWRtSIrdidxpAMBcVHQcDoMMK6A2Xu2oFIMvOWhtNZ3qyfati9UGsu0313hM443lIus4gyNBajJ8Y29VvQ79ICKi_C-Vv4jRMOqbf_WGUdy9w.jpg",
+    icon: "https://yt3.googleusercontent.com/NDiC3fD1jAEnBekfSvLA4rARN30kG4VKV4BtLRxJjE-0o62eR7sbGKulaxk9X2d9xmIia98VzQ=s176-c-k-c0x00ffffff-no-rj",
     link: "https://t.me/ShardeumHyderabad",
     fallBackNum: "",
     userAlias: "suhas#4913 (Discord) susmitha#1582 (Discord)",
@@ -513,7 +513,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Bangla",
-    icon: "https://cdn5.telegram-cdn.org/file/GreV9ozz1jJe9LkFgqNsVNxCaJ3BQ0cl8a7bYbB4GHSJ9y2pWDq5BA8jvvf7iG0-d5PdntqEwa_NawK7b_k7CpmtivfdceJH3mqgL7qZeYeRfkixcw36XYqCMKl39Aow02g7wFIOMTFyLPxnPgx54E1FwiV_Rn7tSs_hUtk-cCXaVLn7lYgwWk4w7hFzB7YYrzXgrp34JODSagWniqXZJJx11rjSqkfIDgdnpbm0onsqYZgKMAxnDG1VTFggyu2hYhS9WPXxX5MfaL_gHZBvVgAxvcylQ_vgZ45SuEwNbUj1p6DL5h-LvfIYJEVJXd-z5wrNl3Lp68eguAlrfMFzRA.jpg",
+    icon: "https://yt3.googleusercontent.com/NDiC3fD1jAEnBekfSvLA4rARN30kG4VKV4BtLRxJjE-0o62eR7sbGKulaxk9X2d9xmIia98VzQ=s176-c-k-c0x00ffffff-no-rj",
     link: "https://t.me/ShardeumBangla",
     fallBackNum: "",
     userAlias: "RiseBoi#2925 (Discord)",
@@ -521,7 +521,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "ShardeumCN",
-    icon: "https://cdn5.telegram-cdn.org/file/GreV9ozz1jJe9LkFgqNsVNxCaJ3BQ0cl8a7bYbB4GHSJ9y2pWDq5BA8jvvf7iG0-d5PdntqEwa_NawK7b_k7CpmtivfdceJH3mqgL7qZeYeRfkixcw36XYqCMKl39Aow02g7wFIOMTFyLPxnPgx54E1FwiV_Rn7tSs_hUtk-cCXaVLn7lYgwWk4w7hFzB7YYrzXgrp34JODSagWniqXZJJx11rjSqkfIDgdnpbm0onsqYZgKMAxnDG1VTFggyu2hYhS9WPXxX5MfaL_gHZBvVgAxvcylQ_vgZ45SuEwNbUj1p6DL5h-LvfIYJEVJXd-z5wrNl3Lp68eguAlrfMFzRA.jpg",
+    icon: "https://yt3.googleusercontent.com/NDiC3fD1jAEnBekfSvLA4rARN30kG4VKV4BtLRxJjE-0o62eR7sbGKulaxk9X2d9xmIia98VzQ=s176-c-k-c0x00ffffff-no-rj",
     link: "https://t.me/Shardeum_CN",
     fallBackNum: "",
     userAlias: "Assistant#3161 (Discord)",
@@ -553,7 +553,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Indonesia TCS",
-    icon: "https://cdn5.telegram-cdn.org/file/sarI9Ptyk4xdwHRZkkNI5iBIpxuvDPNzEAz-vYySqTgdfXSBSyJwxbXrGmklv5hD9XuIeCSNtpTJUDWjD1GsymnJYmpWybPSfTevZGHkQu34C2cFD0vrMPWnu2XfEI86p3V1g4RLWeb_gU_0c4H5LVHcW2BsIMhsmXWhMoqGOoR9EJnFSyNV6YORUzCF0ZyoQpr_NWv21YgFXAScvmzSghQLaYkGSQ8MC3CxYiRyUrGIUJMw2AO4HpHc2WU6ptC1C2fiXwRldptv2GbteVE25iSQqjxhAg8GoPGhUZBbEXbHWfqW2xPSBgW8VZgi34F1onxizbJxNEYfiTcsfe9Pbg.jpg",
+    icon: "/TCS.jpg",
     link: "https://t.me/+pLgm5vrE0WljNTc9",
     fallBackNum: "",
     userAlias: "this is me#7795 (Discord)",
@@ -653,7 +653,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   }}
                   onClick={() => handleTileClick(tile.link)}
                 >
-                  <Image src={tile.icon} alt={tile.key} width={32} height={32} />
+                  <div>
+                    <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  </div>
                   <Text
                     color={"brand.grey-80"}
                     fontSize={{ base: "md", sm: "md", lg: "lg" }}
@@ -735,7 +737,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
                   onClick={() => handleTileClick(tile.link)}
                 >
                   {/* <Image src={tile.icon} alt={tile.key} width={32} height={32} /> */}
-                  <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  <div style={{ minHeight: "50px" }}>
+                    <img src={tile.icon} alt={tile.key} width={32} height={32} />
+                  </div>
                   <Text
                     color={"brand.grey-80"}
                     fontSize={{ base: "md", sm: "md", lg: "lg" }}

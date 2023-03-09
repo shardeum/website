@@ -227,8 +227,12 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           padding: "5px",
         }}
       >
-        <a href={"https://bit.ly/sphinx-launch"} target="_blank" rel="noreferrer">
-          <b> Register Now for Shardeum Betanet Launch </b>
+        <a
+          href={"https://shardeum.org/blog/shardeum-open-source/"}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <b> Shardeum is Going Open Source! Contribute to Gitlab Repositories </b>
         </a>
       </div>
     );
@@ -243,7 +247,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
         // className="navNotificationShow"
       >
-        {/* <NotificationBar /> */}
+        <NotificationBar />
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
         <Flex
           bg={mode === "light" ? "brand.white" : "brand.black"}

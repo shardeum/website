@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Stack } from "@chakra-ui/react";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
@@ -16,6 +16,7 @@ import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { CLAIM_100_SHM_LINK, REPORT_BUGS } from "constants/links";
 import { Helmet } from "react-helmet";
 
 import { useRouter } from "next/router";
@@ -256,15 +257,27 @@ const Explore: NextPage<ExplorePageProps> = ({
       <ResponsiveHero
         heading="Explore the Shardeum Ecosystem"
         cta={
-          <Button
-            onClick={handleSubmitProject}
-            style={{ backgroundColor: "#3241e8" }}
-            variant="primary"
-            size="lg"
-            mt={8}
-          >
-            Submit your project
-          </Button>
+          <>
+            <Stack
+              spacing="4"
+              direction={{ base: "column", sm: "row" }}
+              width={{ base: "full", sm: "auto" }}
+            >
+              <Button onClick={handleSubmitProject} variant="secondary" size="lg">
+                Submit your project
+              </Button>
+              <Button
+                as="a"
+                variant="primary"
+                size="lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={`https://shardeum.org/blog/shardeum-open-source/`}
+              >
+                Contribute to Gitlab Repositories
+              </Button>
+            </Stack>
+          </>
         }
         src={"/explore/shardeum-ecosystem-hero-img.png"}
       />

@@ -416,6 +416,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                         target="_blank"
                         ml={5}
                         href={REPORT_BUGS}
+                        maxWidth="200px"
                       >
                         Report Bugs on Sphinx
                       </Button>

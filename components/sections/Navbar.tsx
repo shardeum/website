@@ -232,7 +232,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <b> Shardeum is Going Open Source! Find out more here </b>
+          <b> Shardeum is Going Open Source! Contribute to Gitlab Repositories </b>
         </a>
       </div>
     );

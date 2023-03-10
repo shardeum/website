@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
-import { Box, useDisclosure } from "@chakra-ui/react";
+import { Box, useDisclosure, Stack, Button } from "@chakra-ui/react";
 import HorizontalTile from "@shm/components/sections/explore/Details/HorizontalTile";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
+import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import { getProjectById } from "utils/api";
 import { getSession } from "next-auth/react";
 import ShareModal from "@shm/components/sections/explore/Details/ShareModal";
@@ -98,6 +99,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
       </Head>
+      <ResponsiveHero cta={""} heading={""} internalPage={project} />
       <Box>
         <HorizontalTile
           onOpen={onOpen}

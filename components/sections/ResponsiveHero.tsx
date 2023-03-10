@@ -12,6 +12,7 @@ type HeroProps = {
   titleColor?: string;
   descColor?: string;
   breadcrumb?: any;
+  internalPage?: any;
 };
 
 const ResponsiveHero = ({
@@ -23,6 +24,7 @@ const ResponsiveHero = ({
   descColor,
   respHeroImg,
   breadcrumb,
+  internalPage,
 }: HeroProps) => {
   const router = useRouter();
   const renderIcon = (src: string) => {
@@ -57,7 +59,9 @@ const ResponsiveHero = ({
                   </BreadcrumbItem>
 
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/ecosystem">{"ecosystem"}</BreadcrumbLink>
+                    <BreadcrumbLink href="/ecosystem">
+                      {"ecosystem"} {internalPage && `/ ${internalPage.name}`}
+                    </BreadcrumbLink>
                   </BreadcrumbItem>
                 </Breadcrumb>
               </Text>

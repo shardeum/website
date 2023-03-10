@@ -58,7 +58,7 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
           <HStack mt={4} align="center" justify="center" columnGap={2}>
             <Flex
               as="a"
-              href={`https://twitter.com/intent/tweet?text=${TEXT}`}
+              href={`https://twitter.com/intent/tweet?text=${projectUrl}`}
               direction="column"
               align="center"
               target={"_blank"}
@@ -79,7 +79,7 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://www.reddit.com/submit?url=${TEXT}`}
+              href={`https://www.reddit.com/submit?url=${projectUrl}`}
               direction="column"
               target={"_blank"}
               align="center"
@@ -100,7 +100,7 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://telegram.me/share/url?url=${TEXT}`}
+              href={`https://telegram.me/share/url?url=${projectUrl}`}
               direction="column"
               target={"_blank"}
               align="center"

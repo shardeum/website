@@ -274,7 +274,7 @@ const Explore: NextPage<ExplorePageProps> = ({
                 target="_blank"
                 href={`https://shardeum.org/blog/shardeum-open-source/`}
               >
-                Contribute to Gitlab Repositories
+                Contribute to Shardeum GitLab
               </Button>
             </Stack>
           </>

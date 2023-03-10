@@ -99,7 +99,8 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 target="_blank"
                 href="https://shardeum.org/betanet"
               >
-                {commonTranslation("join-liberty-cta")}
+                {/* {commonTranslation("join-liberty-cta")} */}
+                Join Shardeum Sphinx
               </Button>
               <Button
                 as="a"

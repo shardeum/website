@@ -15,6 +15,7 @@ export const SUPER_SHARDIAN_START_HERE = "https://trello.com/b/8d3aAQWj/super-sh
 export const EXPLORE_EVENTS = "/explore/events/";
 export const TELEGRAM_URL = "https://telegram.me/shardeum";
 export const REDDIT_URL = "https://www.reddit.com/r/shardeum/";
+export const BRAND_ASSET = "http://shm.gg/brand";
 export const LINKEDIN_URL = "https://www.linkedin.com/company/shardeum/";
 export const YOUTUBE_URL = "https://www.youtube.com/channel/UCO20LJZBF-lYbc6PWVvwkMA";
 export const FAQ_URL =

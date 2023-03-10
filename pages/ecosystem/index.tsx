@@ -266,7 +266,7 @@ const Explore: NextPage<ExplorePageProps> = ({
               <Button onClick={handleSubmitProject} variant="secondary" size="lg">
                 Submit your project
               </Button>
-              <Button
+              {/* <Button
                 as="a"
                 variant="primary"
                 size="lg"
@@ -275,7 +275,7 @@ const Explore: NextPage<ExplorePageProps> = ({
                 href={`https://shardeum.org/blog/shardeum-open-source/`}
               >
                 Contribute to Shardeum GitLab
-              </Button>
+              </Button> */}
             </Stack>
           </>
         }

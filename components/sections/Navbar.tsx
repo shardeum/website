@@ -289,7 +289,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   </NextLink>
                 ))}
 
-                {isauthVisible === true ? (
+                {/* {isauthVisible === true ? (
                   <Menu>
                     <MenuButton>
                       <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
@@ -303,7 +303,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                       )}
                     </MenuList>
                   </Menu>
-                ) : null}
+                ) : null} */}
 
                 {/* <Link variant="navlink">Language</Link> */}
               </Stack>

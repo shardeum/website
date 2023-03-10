@@ -60,7 +60,7 @@ const ResponsiveHero = ({
 
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/ecosystem">
-                      {"ecosystem"} {internalPage && `/ ${internalPage.name}`}
+                      {"Ecosystem"} {internalPage && `/ ${internalPage.name}`}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                 </Breadcrumb>

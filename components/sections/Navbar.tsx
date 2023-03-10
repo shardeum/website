@@ -54,7 +54,7 @@ const linksArr = [
       //   newPage: false,
       // },
       {
-        title: "Betanet",
+        title: "Betanet Sphinx",
         link: BETANET_URL,
         newPage: false,
       },
@@ -232,7 +232,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <b> Shardeum is Going Open Source! Contribute to Gitlab Repositories </b>
+          {/* <b> Shardeum is Going Open Source! Contribute to Gitlab Repositories </b> */}
+          <b> Find and Contribute to the Open Sourced Shardeum GitLab Now! </b>
         </a>
       </div>
     );

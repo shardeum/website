@@ -37,7 +37,7 @@ export type ShareModalProps = {
 export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, project }) => {
   const { hasCopied, onCopy } = useClipboard(projectUrl);
   const TEXT =
-    " <b>it</b> cover only %0Athis Check out " +
+    " it cover only %0Athis Check out " +
     project.name +
     " on @shardeum 🔥 %0A%0ABuild highly scalable dApps on the worlds first EVM-based L1 which uses dynamic state sharding to increase TPS with every new node. %0A%0ALets %0A%0A" +
     projectUrl;
@@ -68,8 +68,10 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://www.facebook.com/sharer/sharer.php?href=${projectUrl}`}
+              // href={`https://www.facebook.com/sharer/sharer.php?href=${TEXT}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${projectUrl}`}
               direction="column"
+              target={"_blank"}
               align="center"
             >
               {facebook}
@@ -77,8 +79,9 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://www.reddit.com/submit?url=${projectUrl}`}
+              href={`https://www.reddit.com/submit?url=${TEXT}`}
               direction="column"
+              target={"_blank"}
               align="center"
             >
               {reddit}
@@ -86,8 +89,10 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${projectUrl}`}
+              // href={`https://www.linkedin.com/sharing/share-offsite/?url=${TEXT}`}
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=${projectUrl}&title=${project.name}&summary=${TEXT}`}
               direction="column"
+              target={"_blank"}
               align="center"
             >
               {linkedIn}
@@ -95,8 +100,9 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
             </Flex>
             <Flex
               as="a"
-              href={`https://telegram.me/share/url?url=${projectUrl}`}
+              href={`https://telegram.me/share/url?url=${TEXT}`}
               direction="column"
+              target={"_blank"}
               align="center"
             >
               {telegram}

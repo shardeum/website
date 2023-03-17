@@ -131,6 +131,8 @@ export const getSHMProjects = (): Promise<{
               const projectName = record.get("Project Name") as string;
               const projectDescription = record.get("Project Description") as string;
               const projectCategory = record.get("Project Category") as string;
+              const shardeumNetwork = record.get("Shardeum Network") as string;
+              const projectStatus = record.get("Project Status") as string;
               const projectLogo: any = record.get("Project Logo") as string[];
               const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
               const projectWebsiteURL = record.get("Project Website URL") as string;
@@ -146,6 +148,8 @@ export const getSHMProjects = (): Promise<{
                   name: projectName,
                   description: projectDescription,
                   category: projectCategory || "Others",
+                  shardeumNetwork: shardeumNetwork || "",
+                  projectStatus: projectStatus || "",
                   logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
                   screenShots: projectScreenshots,
                   website: projectWebsiteURL,
@@ -153,12 +157,20 @@ export const getSHMProjects = (): Promise<{
                   numUpvotes: projectUpvotes,
                   githubUrl: projectGithubURL,
                   twiterUrl: "",
-                  status: status,
+                  status: status || "pending",
                 });
-
-                if (status !== "pending") {
+                // Catagory
+                if (status === "accepted") {
                   categoryCount[projectCategory] = categoryCount[projectCategory]
                     ? categoryCount[projectCategory] + 1
+                    : 1;
+                  // status
+                  categoryCount[projectStatus] = categoryCount[projectStatus]
+                    ? categoryCount[projectStatus] + 1
+                    : 1;
+                  // Network
+                  categoryCount[shardeumNetwork] = categoryCount[shardeumNetwork]
+                    ? categoryCount[shardeumNetwork] + 1
                     : 1;
                   categoryCount["All"] = categoryCount["All"] ? categoryCount["All"] + 1 : 1;
                 }
@@ -167,7 +179,6 @@ export const getSHMProjects = (): Promise<{
               console.log(err);
             }
           });
-
           fetchNextPage();
         },
         function done(err) {

@@ -15,6 +15,8 @@ export type ProjectCardProps = {
   projectId: string;
   onUpvoteProject: () => void;
   upvoteCount: number;
+  shardeumNetwork?: any;
+  projectStatus?: any;
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -26,6 +28,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   onUpvoteProject,
   upvoteCount = 0,
   projectId = "",
+  shardeumNetwork,
+  projectStatus,
 }) => {
   const numProjectsPerPage: number | undefined = useBreakpointValue({
     // lg: 160,
@@ -97,7 +101,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </Text>
       )}
 
-      <CategoryBadge category={category} />
+      <CategoryBadge
+        category={category}
+        shardeumNetwork={shardeumNetwork}
+        projectStatus={projectStatus}
+      />
     </LinkBox>
   );
 };

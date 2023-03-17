@@ -40,8 +40,16 @@ export const ProjectsList: FC<ProjectsListProps> = ({
       // check if seaerched value matches
       const isSearched = project.name.toLowerCase().includes(searchValue.trim().toLowerCase());
       // check if selected category matches
-      const isCategory = project.category === selectedCategory || selectedCategory === "All";
+      let isCategory: any = false;
 
+      if (isCategory !== true) isCategory = project.shardeumNetwork === selectedCategory;
+      if (isCategory !== true) isCategory = project.projectStatus === selectedCategory;
+      if (isCategory !== true)
+        isCategory = project.category === selectedCategory || selectedCategory === "All";
+
+      // console.log('project.projectStatus',project.projectStatus)
+
+      // isCategory = project.category === selectedCategory || selectedCategory === "All";
       return isSearched && isCategory; // show project if both if it matches search and category
     });
   }, [projects, selectedCategory, searchValue]);
@@ -91,6 +99,8 @@ export const ProjectsList: FC<ProjectsListProps> = ({
                         imageURL={item.logo}
                         title={item.name}
                         category={item.category}
+                        shardeumNetwork={item.shardeumNetwork}
+                        projectStatus={item.projectStatus}
                         description={item.description}
                         userUpvotedState={upvoteMap[item.id]}
                         onUpvoteProject={() => onUpvoteProject(item.id, !upvoteMap[item.id])}

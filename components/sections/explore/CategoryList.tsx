@@ -17,6 +17,13 @@ const categoryList: CategoryList = [
   { id: 12, name: "Tools", selected: false },
   { id: 13, name: "Infrastructure", selected: false },
   { id: 14, name: "Others", selected: false },
+
+  { id: 15, name: "Liberty 1.X", selected: false },
+  { id: 16, name: "Liberty 2.X", selected: false },
+  { id: 17, name: "Sphinx 1.X", selected: false },
+  { id: 18, name: "Upcoming", selected: false },
+  { id: 18, name: "Live", selected: false },
+  { id: 19, name: "", selected: false },
 ];
 
 export type CaregoryListProps = {
@@ -30,6 +37,10 @@ export const CategoryList: FC<CaregoryListProps> = ({
   selectedCategory = "All",
   setSelectedCategory,
 }) => {
+  // console.log('categoryList',categoryList);
+  // console.log('selectedCategory',selectedCategory);
+  // console.log('categoryCount',categoryCount);
+
   return (
     <Flex overflowX="scroll" className="no-scrollbar">
       <HStack

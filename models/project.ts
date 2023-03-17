@@ -27,6 +27,9 @@ export type Project = {
   screenShots: Screenshot[]; // Project Screenshot
   dateCreated: Date | string; // Project Date Created
   numUpvotes: number; // Project Upvotes
+  shardeumNetwork?: any; // Project Upvotes
+  projectStatus?: any; // Project Upvotes
+  allCategory?: any; // Project Upvotes
   githubUrl: string; //github url
   twiterUrl: string; //github url
   status: string; //github url

@@ -43,7 +43,7 @@ const Carrers: NextPage = () => {
     <>
       {/* <NextSeo
         title={"Shardeum Careers | Help us build Shardeum!"}
-        description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
+        description="Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma"
         canonical="https://shardeum.org/careers/"
         additionalMetaTags={[
           {
@@ -61,7 +61,7 @@ const Carrers: NextPage = () => {
           url: "https://shardeum.org/careers/",
 
           description:
-            "Join the team of enthusiastic people trying to make decentralization accessible to everyone!",
+            "Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma",
           images: [
             {
               url: "https://shardeum.org/Shardeum.png",
@@ -80,7 +80,7 @@ const Carrers: NextPage = () => {
         <title>{`Shardeum Careers | Help us build Shardeum!`}</title>
         <meta
           name="description"
-          content={`Join the team of enthusiastic people trying to make decentralization accessible to everyone!`}
+          content={`Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma`}
         />
         <meta
           name="keywords"
@@ -93,7 +93,7 @@ const Carrers: NextPage = () => {
         <meta property="og:title" content={`Shardeum Careers | Help us build Shardeum!`} />
         <meta
           property="og:description"
-          content={`Join the team of enthusiastic people trying to make decentralization accessible to everyone!`}
+          content={`Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma`}
         />
         <meta
           property="og:image"
@@ -151,7 +151,7 @@ const Carrers: NextPage = () => {
       {!router.query.gh_jid && (
         <Hero
           heading="Help us build Shardeum!"
-          description="Join the team of enthusiastic people trying to make decentralization accessible to everyone!"
+          description="Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma"
           breadcrumb={
             <>
               <p>

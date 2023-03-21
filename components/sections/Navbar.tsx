@@ -137,12 +137,12 @@ const linksArr = [
     newPage: true,
     highlight: true,
   },
-  {
-    title: "Report Bugs on Sphinx",
-    link: REPORT_BUGS,
-    newPage: true,
-    highlight: false,
-  },
+  // {
+  //   title: "Report Bugs on Sphinx",
+  //   link: REPORT_BUGS,
+  //   newPage: true,
+  //   highlight: false,
+  // },
 ];
 
 export type NavbarProps = {

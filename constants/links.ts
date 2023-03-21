@@ -4,6 +4,7 @@ export const BETANETIMAGE = "/betanet.png";
 export const DISCORD_URL = "https://discord.gg/shardeum";
 export const COMMUNITY_URL = "/community";
 export const ECOSYSTEM_URL = "/ecosystem";
+export const GITLAB_URL = "https://gitlab.com/shardeum/server";
 export const CAREERS_URL = "/careers";
 export const BETANET_URL = "/betanet";
 export const TWITTER_URL = "https://twitter.com/shardeum";

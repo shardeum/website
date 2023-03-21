@@ -10,10 +10,12 @@ import {
   IconTwitter,
   IconReddit,
   IconYoutube,
+  IconGitLab,
 } from "@shm/Icons";
 import {
   DISCORD_URL,
   GITHUB_URL,
+  GITLAB_URL,
   NEWSLETTER_URL,
   TELEGRAM_URL,
   TWITTER_URL,
@@ -26,6 +28,7 @@ const socialLinks = [
   { Icon: IconDiscord, title: "Discord", href: DISCORD_URL, target: "_blank" },
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
   { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
+  { Icon: IconGitLab, title: "Gitlab", href: GITLAB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
   { Icon: IconYoutube, title: "YouTube", href: YOUTUBE_URL, target: "_blank" },
   { Icon: IconReddit, title: "Reddit", href: REDDIT_URL, target: "_blank" },
@@ -42,7 +45,7 @@ const JoinCommunity = () => {
           // className=""
           // style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
         >
-          <SimpleGrid columns={[2, 7]} gap={{ base: 6 }} rowGap={{ base: 10 }}>
+          <SimpleGrid columns={[2, 8]} gap={{ base: 6 }} rowGap={{ base: 5 }}>
             {socialLinks.map((link) => (
               <a href={link.href} target="_blank" key={link.title} rel="noreferrer">
                 <HStack

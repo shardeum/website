@@ -11,6 +11,7 @@ import {
   YOUTUBE_URL,
   REDDIT_URL,
   LINKEDIN_URL,
+  GITLAB_URL,
 } from "constants/links";
 import Image from "next/image";
 
@@ -70,6 +71,14 @@ const titleFixedData: Tile[] = [
     icon: "/community/icons/github.svg",
     link: GITHUB_URL,
     fallBackNum: "14",
+    userAlias: "contributors",
+  },
+  {
+    key: "gitlab",
+    title: "GitLab",
+    icon: "/community/icons/gitlabDark.svg",
+    link: GITLAB_URL,
+    fallBackNum: "24",
     userAlias: "contributors",
   },
   {

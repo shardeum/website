@@ -86,8 +86,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           color="brand.grey-80"
         >
           {description.slice(0, numProjectsPerPage)}...
-          <Text cursor="pointer" as="span" color="#2031E6">
-            read more
+          <br />
+          <br />
+          <Text cursor="pointer" as="span">
+            <b>Read more</b>
           </Text>
         </Text>
       ) : (

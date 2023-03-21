@@ -32,7 +32,7 @@ const socialLinks = [
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
   { Icon: IconYoutube, title: "YouTube", href: YOUTUBE_URL, target: "_blank" },
   { Icon: IconReddit, title: "Reddit", href: REDDIT_URL, target: "_blank" },
-  { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
+  // { Icon: IconSeeMore, title: "Newsletter", href: NEWSLETTER_URL, target: "_self" },
 ];
 
 const JoinCommunity = () => {
@@ -45,7 +45,7 @@ const JoinCommunity = () => {
           // className=""
           // style={{ margin: 0, display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
         >
-          <SimpleGrid columns={[2, 8]} gap={{ base: 6 }} rowGap={{ base: 5 }}>
+          <SimpleGrid columns={[2, 7]} gap={{ base: 12 }} rowGap={{ base: 5 }}>
             {socialLinks.map((link) => (
               <a href={link.href} target="_blank" key={link.title} rel="noreferrer">
                 <HStack

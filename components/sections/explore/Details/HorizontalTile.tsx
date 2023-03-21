@@ -147,15 +147,19 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             {readmore === true ? (
               <div>
                 {project.description}...
-                <a href="#" onClick={() => readMoreChange(false)} style={{ color: "blue" }}>
-                  Shrink
+                <br />
+                <br />
+                <a href="#" onClick={() => readMoreChange(false)}>
+                  <b>Shrink</b>
                 </a>
               </div>
             ) : (
               <div>
                 {project.description.substring(0, 160)}...
-                <a href="#" onClick={() => readMoreChange(true)} style={{ color: "blue" }}>
-                  Read More
+                <br />
+                <br />
+                <a href="#" onClick={() => readMoreChange(true)}>
+                  <b>Read More</b>
                 </a>
               </div>
             )}

@@ -27,8 +27,8 @@ import { useTranslation } from "next-i18next";
 const socialLinks = [
   { Icon: IconDiscord, title: "Discord", href: DISCORD_URL, target: "_blank" },
   { Icon: IconTwitter, title: "Twitter", href: TWITTER_URL, target: "_blank" },
-  { Icon: IconGithub, title: "Github", href: GITHUB_URL, target: "_blank" },
-  { Icon: IconGitLab, title: "Gitlab", href: GITLAB_URL, target: "_blank" },
+  { Icon: IconGithub, title: "GitHub", href: GITHUB_URL, target: "_blank" },
+  { Icon: IconGitLab, title: "GitLab", href: GITLAB_URL, target: "_blank" },
   { Icon: IconTelegram, title: "Telegram", href: TELEGRAM_URL, target: "_blank" },
   { Icon: IconYoutube, title: "YouTube", href: YOUTUBE_URL, target: "_blank" },
   { Icon: IconReddit, title: "Reddit", href: REDDIT_URL, target: "_blank" },

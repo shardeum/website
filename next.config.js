@@ -21,6 +21,53 @@ const nextConfig = {
         destination: "https://shardeum.org/betanet/",
         permanent: true,
       },
+
+      // Temp Redirection
+      {
+        source: "/hi",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/id",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/it",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/ja",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/kn",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/ko",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/ru",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/ta",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
+      {
+        source: "/te",
+        destination: "https://shardeum.org/",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

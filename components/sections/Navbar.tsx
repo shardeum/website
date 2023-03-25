@@ -228,12 +228,15 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         }}
       >
         <a
-          href={"https://shardeum.org/blog/shardeum-open-source/"}
+          // href={"https://shardeum.org/blog/shardeum-open-source/"}
+          href={
+            "https://discord.com/channels/933959587462254612/1058349322627989555/1088734570876252231"
+          }
           target="_blank"
           rel="noreferrer"
         >
-          {/* <b> Shardeum is Going Open Source! Contribute to Gitlab Repositories </b> */}
-          <b> Explore and Contribute to the Open Source Shardeum Codebase </b>
+          <b> Shardeum Sphinx 1.1.5 is Live! Claim Test SHM & Run Your Nodes Now </b>
+          {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>
     );

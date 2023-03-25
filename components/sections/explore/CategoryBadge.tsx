@@ -15,7 +15,7 @@ export const CategoryBadge: FC<CategoryBadgeProps> = ({
 }) => {
   return (
     <>
-      <Flex flexDirection="row">
+      <Flex flexDirection="row" justifyContent="left">
         <Box
           px="12px"
           pt="5px"

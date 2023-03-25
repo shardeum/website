@@ -100,7 +100,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 href="https://shardeum.org/betanet"
               >
                 {/* {commonTranslation("join-liberty-cta")} */}
-                Join Shardeum Sphinx
+                Join Betanet Sphinx
               </Button>
               <Button
                 as="a"
@@ -392,7 +392,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       className="betaAlphanetTitleDark"
                       style={{ color: "white", textAlign: "center" }}
                     >
-                      Find dApps/projects building on Shardeum
+                      Find dApps/Projects building on Shardeum
                     </h2>
                     <br />
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>

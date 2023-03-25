@@ -65,6 +65,15 @@ const titleFixedData: Tile[] = [
     fallBackNum: "141",
     userAlias: "members",
   },
+
+  {
+    key: "linkedin",
+    title: "LinkedIn",
+    icon: "/community/icons/linkedin.svg",
+    link: LINKEDIN_URL,
+    fallBackNum: "891",
+    userAlias: "followers",
+  },
   {
     key: "github",
     title: "GitHub",
@@ -80,14 +89,6 @@ const titleFixedData: Tile[] = [
     link: GITLAB_URL,
     fallBackNum: "24",
     userAlias: "contributors",
-  },
-  {
-    key: "linkedin",
-    title: "LinkedIn",
-    icon: "/community/icons/linkedin.svg",
-    link: LINKEDIN_URL,
-    fallBackNum: "891",
-    userAlias: "followers",
   },
 ];
 

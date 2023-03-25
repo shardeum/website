@@ -396,6 +396,8 @@ export const getProjectById = async (
           const projectName = record.get("Project Name") as string;
           const projectDescription = record.get("Project Description") as string;
           const projectCategory = record.get("Project Category") as string;
+          const shardeumNetwork = record.get("Shardeum Network") as string;
+          const projectStatus = record.get("Project Status") as string;
           const projectLogo: any = record.get("Project Logo") as string[];
           const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
           const projectWebsiteURL = record.get("Project Website URL") as string;
@@ -404,11 +406,14 @@ export const getProjectById = async (
           const projectGithub = (record.get("Project Github URL") as string) || "";
           const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
           const status = (record.get("Status") as string) || "pending";
+
           const project: Project = {
             id: projectId,
             name: projectName,
             description: projectDescription,
             category: projectCategory || "Others",
+            shardeumNetwork: shardeumNetwork || "",
+            projectStatus: projectStatus || "",
             logo: (projectLogo && projectLogo[0]?.url) || "/Shardeum.png",
             screenShots: projectScreenshots || [],
             website: projectWebsiteURL,

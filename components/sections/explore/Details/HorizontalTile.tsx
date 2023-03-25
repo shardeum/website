@@ -33,7 +33,6 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
 
   // to open signin window
   const { setPopup } = useContext(SigninContext);
-
   // to manage state of projects(update upvote count) and upvotedProjectsMap
   const handleUpvoteProjectState = (upvoted: boolean) => {
     setUpvoteCount((curCount) => {
@@ -146,7 +145,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
           >
             {readmore === true ? (
               <div>
-                {project.description}...
+                {project.description}
                 <br />
                 <br />
                 <a href="#" onClick={() => readMoreChange(false)}>
@@ -155,7 +154,7 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
               </div>
             ) : (
               <div>
-                {project.description.substring(0, 160)}...
+                {project.description.substring(0, 160)}
                 <br />
                 <br />
                 <a href="#" onClick={() => readMoreChange(true)}>
@@ -164,7 +163,11 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
               </div>
             )}
           </Text>
-          <CategoryBadge category={project.category} />
+          <CategoryBadge
+            category={project.category}
+            shardeumNetwork={project.shardeumNetwork}
+            projectStatus={project.projectStatus}
+          />
         </GridItem>
         <GridItem
           colStart={[1, 2, 2, 3]}

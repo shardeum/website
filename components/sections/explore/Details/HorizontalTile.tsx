@@ -162,12 +162,13 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
                 </a>
               </div>
             )}
+            <br />
+            <CategoryBadge
+              category={project.category}
+              shardeumNetwork={project.shardeumNetwork}
+              projectStatus={project.projectStatus}
+            />
           </Text>
-          <CategoryBadge
-            category={project.category}
-            shardeumNetwork={project.shardeumNetwork}
-            projectStatus={project.projectStatus}
-          />
         </GridItem>
         <GridItem
           colStart={[1, 2, 2, 3]}

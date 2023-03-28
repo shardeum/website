@@ -229,9 +229,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={
-            "https://discord.com/channels/933959587462254612/1058349322627989555/1088734570876252231"
-          }
+          href={"https://docs.shardeum.org/node/run/validator"}
           target="_blank"
           rel="noreferrer"
         >

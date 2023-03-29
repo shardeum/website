@@ -36,3 +36,9 @@ export type Project = {
 };
 
 export default Project;
+
+export type featureList = {
+  titleKey: string;
+  descriptionKey: string;
+  iconPath: string;
+};

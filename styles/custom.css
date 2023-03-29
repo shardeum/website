@@ -777,7 +777,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: 4vh;
-  width: 70vh;
+  width: 50vh;
   height: 34.47%;
   position: absolute;
   z-index: 0;
@@ -1143,7 +1143,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: 4vh;
-    width: 50vh;
+    width: 30vh;
     height: 50%;
     position: absolute;
     z-index: 0;

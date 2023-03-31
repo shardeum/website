@@ -159,7 +159,9 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
-                  <h2 className="betaAlphanetTitle">Shardeum Liberty Was a Success!</h2>
+                  <h2 className="betaAlphanetTitle">
+                    {"Shardeum Liberty (Alphanet) Was a Success!"}
+                  </h2>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>

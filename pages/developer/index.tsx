@@ -86,7 +86,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       <DeveloperResponsiveHero
         heading={"Build Linearly Scalable dApps on Shardeum!"}
         description={
-          "Central Statement: Shardeum is the world's first EVM-based L1 blockchain that scales linearly through dynamic state sharding and maintains low gas fees forever."
+          "Shardeum is the world's first EVM-based L1 blockchain that scales linearly through dynamic state sharding and maintains low gas fees forever."
         }
         cta={
           <>
@@ -106,12 +106,23 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               >
                 {"Start Building Now"}
               </Button>
-              <div style={{ color: "#9E9E9E", fontSize: "1.5rem", lineHeight: "2rem" }}>
+              <div
+                onClick={() => window.open(DOCS_URL)}
+                style={{
+                  color: "#9E9E9E",
+                  fontSize: "1.1rem",
+                  lineHeight: "2rem",
+                  cursor: "pointer",
+                  marginTop: "10px",
+                }}
+              >
                 {/* {commonTranslation("join-liberty-cta")} */}
-                {"On The Fastest"}
-                <br />
-                {"growing L1 platform "}
-                <Image src="/fire-img.png" width="25px" height="25px" />
+                <b>
+                  <i>{"On the fastest "}</i>
+                  {/* <br /> */}
+                  <i>{"growing L1 platform ! ✨"}</i>
+                </b>
+                {/* <Image src="/fire-img.png" width="25px" height="25px" /> */}
               </div>
             </Stack>
           </>

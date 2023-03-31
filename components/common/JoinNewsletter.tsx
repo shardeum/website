@@ -26,7 +26,7 @@ const JoinNewsletter = () => {
       <Feature
         type="h2"
         title={pageTranslation("join-newsletter-title")}
-        description={pageTranslation("join-newsletter-desc")}
+        description={pageTranslation("join-newsletter-desc-2")}
       />
       <FormControl isInvalid={!!error}>
         <LightMode>

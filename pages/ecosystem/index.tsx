@@ -153,7 +153,7 @@ const Explore: NextPage<ExplorePageProps> = ({
     // sortUpvote();
     const Projectdata = sortDate(projectSort);
     const RandomProjectdata = randomiseProject(projectSort);
-    setProjectSortDate(Projectdata);
+    setProjectSortDate(Projectdata.reverse());
     setProjectSortRandom(RandomProjectdata);
   }, []);
 

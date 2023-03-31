@@ -229,11 +229,11 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://docs.shardeum.org/node/run/validator"}
+          href={"https://t.me/shardeum/373"}
           target="_blank"
           rel="noreferrer"
         >
-          <b> Shardeum Sphinx 1.1.5 is Live! Claim Test SHM & Run Your Nodes Now </b>
+          <b> Shardeum Sphinx 1.1.6 is Live! Claim Test SHM & Run Your Nodes Now </b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>

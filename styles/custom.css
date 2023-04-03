@@ -1359,3 +1359,8 @@
   width: max-content !important;
   margin: 0 !important;
 }
+
+
+#vstackForDev :hover{
+  background-color: #ec5c2821;
+}

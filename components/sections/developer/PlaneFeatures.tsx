@@ -1,6 +1,7 @@
 import { AspectRatio, Box, Container, Flex, Grid, VStack } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import SectionHeading from "../../common/SectionHeading";
 import FeatureWhite from "./FeatureWhite";
 
 const featureList = [
@@ -49,6 +50,9 @@ const FeatureCard = ({
     maxW="3xl"
     alignItems="flex-start"
     spacing="10"
+    id="vstackForDev"
+    style={{ cursor: "pointer" }}
+    onClick={() => window.open(link)}
   >
     <AspectRatio ratio={1} maxWidth={{ base: "50px", lg: "80px" }} w={{ base: "50px", lg: "80px" }}>
       <Image src={`/${icon}`} alt={`${icon}`} layout="fill" objectFit="contain" />
@@ -73,7 +77,7 @@ function Features() {
       <Container
         maxW="container.xl"
         mx="auto"
-        py={{ base: "12", md: "16", lg: "32" }}
+        py={{ base: "12", md: "16", lg: "20" }}
         px={{ base: "6", xl: 0 }}
       >
         {/* <Box mb="12">
@@ -81,6 +85,14 @@ function Features() {
             <h2>{"Features"}</h2>
           </SectionHeading>
         </Box> */}
+        <Box mb="20">
+          <SectionHeading color="black">
+            <h2>
+              <span style={{ color: "#ec5c28" }}>{`Develop`}</span>
+              {" Your Future"}
+            </h2>
+          </SectionHeading>
+        </Box>
         <Grid
           templateColumns={{
             md: "repeat(2, 1fr)",

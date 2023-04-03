@@ -76,12 +76,16 @@ const AlphanetLanding: NextPage = () => {
     { Icon: IconGlobe, title: "active-nodes-sphinx" },
     { Icon: IconGlobe, title: "total-stake-transactions-sphinx" },
     { Icon: IconGlobe, title: "total-unstake-transactions-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-shm-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-stakeShm-sphinx" },
     { Icon: IconTransaction, title: "total-transaction-sphinx" },
     { Icon: IconGlobe, title: "total-accounts-sphinx" },
     { Icon: IconGlobe, title: "total-contracts-sphinx" },
     { Icon: IconGlobe, title: "active-nodes-sphinx" },
     { Icon: IconGlobe, title: "total-stake-transactions-sphinx" },
     { Icon: IconGlobe, title: "total-unstake-transactions-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-shm-sphinx" },
+    { Icon: IconGlobe, title: "active-nodes-stakeShm-sphinx" },
   ];
 
   const showFAQ = () => {
@@ -273,7 +277,7 @@ const AlphanetLanding: NextPage = () => {
           borderBottomWidth="1px"
           px={{ base: "4", md: "6", lg: "9" }}
         >
-          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx Metrics</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.X Metrics</Text>
         </Center>
         <SlidingStats stats={stats} />
       </Box>

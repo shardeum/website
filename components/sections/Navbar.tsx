@@ -30,6 +30,7 @@ import {
   CAREERS_URL,
   EXPLORER_NEW_LIBERTY_URL,
   REPORT_BUGS,
+  DEV_URL,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -51,6 +52,11 @@ const linksArr = [
       // {
       //   title: "alphanet",
       //   link: SHARDEUM_LIBERTY_ALPHANET_URL,
+      //   newPage: false,
+      // },
+      // {
+      //   title: "Developer",
+      //   link: DEV_URL,
       //   newPage: false,
       // },
       {

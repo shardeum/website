@@ -45,7 +45,7 @@ const FeatureWhite = ({
         <Box m="0" ml="2" mt="3">
           <img
             style={{ cursor: "pointer", width: "12px", height: "12px" }}
-            onClick={() => window.open(link)}
+            // onClick={() => window.open(link)}
             src="/cta-arrow.png"
           />
         </Box>

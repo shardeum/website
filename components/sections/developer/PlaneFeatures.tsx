@@ -49,6 +49,8 @@ const FeatureCard = ({
     maxW="3xl"
     alignItems="flex-start"
     spacing="10"
+    style={{ cursor: "pointer" }}
+    onClick={() => window.open(link)}
   >
     <AspectRatio ratio={1} maxWidth={{ base: "50px", lg: "80px" }} w={{ base: "50px", lg: "80px" }}>
       <Image src={`/${icon}`} alt={`${icon}`} layout="fill" objectFit="contain" />

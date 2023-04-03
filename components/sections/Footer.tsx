@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import {
   Box,
   Container,
@@ -53,13 +55,22 @@ const JoinNewsletterComp = () => {
     handleOnChange,
     handleSubmit,
   } = useNewsLetterForm();
+  const [title, setTitle] = useState("join-newsletter-title-footer");
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log("****useRouter()", router.pathname);
+    router.pathname == "/developer"
+      ? setTitle("join-newsletter-title-footer-dev")
+      : setTitle("join-newsletter-title-footer");
+  }, [router.pathname]);
   const { t: pageTranslation } = useTranslation(["common"]);
 
   return (
     <VStack py="6" px="0" bgColor="#101010" w="full" alignItems="start" spacing="6">
       <Feature
         type="h2"
-        title={pageTranslation("join-newsletter-title-footer")}
+        title={pageTranslation(title)}
         description={pageTranslation("join-newsletter-desc")}
       />
       <FormControl isInvalid={!!error}>

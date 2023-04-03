@@ -56,6 +56,7 @@ const JoinNewsletterComp = () => {
     handleSubmit,
   } = useNewsLetterForm();
   const [title, setTitle] = useState("join-newsletter-title-footer");
+  const [disc, setDisc] = useState("join-newsletter-desc");
   const router = useRouter();
 
   useEffect(() => {
@@ -63,16 +64,16 @@ const JoinNewsletterComp = () => {
     router.pathname == "/developer"
       ? setTitle("join-newsletter-title-footer-dev")
       : setTitle("join-newsletter-title-footer");
+
+    router.pathname == "/developer"
+      ? setDisc("join-newsletter-desc-dev")
+      : setDisc("join-newsletter-desc");
   }, [router.pathname]);
   const { t: pageTranslation } = useTranslation(["common"]);
 
   return (
     <VStack py="6" px="0" bgColor="#101010" w="full" alignItems="start" spacing="6">
-      <Feature
-        type="h2"
-        title={pageTranslation(title)}
-        description={pageTranslation("join-newsletter-desc")}
-      />
+      <Feature type="h2" title={pageTranslation(title)} description={pageTranslation(disc)} />
       <FormControl isInvalid={!!error}>
         <LightMode>
           <InputGroup>

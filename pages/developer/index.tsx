@@ -84,7 +84,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       </Helmet>
 
       <DeveloperResponsiveHero
-        heading={"Build Linearly Scalable dApps on Shardeum!"}
+        heading={"Build Linearly Scalable Dapps on Shardeum"}
         description={
           "Shardeum is the world's first EVM-based L1 blockchain that scales linearly through dynamic state sharding and maintains low gas fees forever."
         }
@@ -104,7 +104,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 target="_blank"
                 href={DOCS_URL}
               >
-                {"Start Building Now"}
+                {"Start Building"}
               </Button>
               <div
                 onClick={() => window.open(DOCS_URL)}
@@ -118,9 +118,9 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               >
                 {/* {commonTranslation("join-liberty-cta")} */}
                 <b>
-                  <i>{"On the fastest "}</i>
+                  <i>{"On the Fastest "}</i>
                   {/* <br /> */}
-                  <i>{"growing L1 platform ! ✨"}</i>
+                  <i>{"Growing L1 Platform ! ✨"}</i>
                 </b>
                 {/* <Image src="/fire-img.png" width="25px" height="25px" /> */}
               </div>

@@ -21,7 +21,7 @@ import RoadmapFull from "components/sections/home/RoadMapFull";
 import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import SectionHeading from "../../components/common/SectionHeading";
-import JoinCommunity from "components/sections/JoinCommunity";
+import JoinDevCommunity from "./JoinDevCommunity";
 import { CLAIM_100_SHM_LINK, REPORT_BUGS, DOCS_URL } from "constants/links";
 import type { InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
@@ -163,7 +163,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <Features />
       </Container>
 
-      <JoinCommunity />
+      <JoinDevCommunity />
     </>
   );
 };

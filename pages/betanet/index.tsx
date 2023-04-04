@@ -1517,7 +1517,7 @@ const AlphanetLanding: NextPage = () => {
                                       There is a popular saying among the Shardeum community members
                                       aka Shardians, that “If you have built for Ethereum, you have
                                       built for Shardeum”. What it means is that, any
-                                      dApp/product/service built atop Ethereum can be migrated to
+                                      dapp/product/service built atop Ethereum can be migrated to
                                       Shardeum seamlessly in a matter of few minutes. Since you just
                                       need to deploy a smart contract written in Solidity or Vyper
                                       on Shardeum (with a bonus that you will never have to worry
@@ -1652,7 +1652,7 @@ const AlphanetLanding: NextPage = () => {
                       >
                         <Box flex="1" textAlign="left">
                           <Heading size={"lg"} className="faqHeading">
-                            <h3>{`I am not looking for grants but I am keen to get your support in promoting the dApp I am building on Shardeum`}</h3>
+                            <h3>{`I am not looking for grants but I am keen to get your support in promoting the dapp I am building on Shardeum`}</h3>
                           </Heading>
                         </Box>
                         <AccordionIcon />
@@ -1748,7 +1748,7 @@ const AlphanetLanding: NextPage = () => {
                       >
                         <Box flex="1" textAlign="left">
                           <Heading size={"lg"} className="faqHeading">
-                            <h3>{`How can I get my dApp to be enlisted or added as part of active projects on Shardeum?`}</h3>
+                            <h3>{`How can I get my dapp to be enlisted or added as part of active projects on Shardeum?`}</h3>
                           </Heading>
                         </Box>
                         <AccordionIcon />
@@ -1756,7 +1756,7 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                          Please list your dApps that you are building on Shardeum
+                          Please list your dapps that you are building on Shardeum
                           <a
                             href="https://airtable.com/shrIXaaf87BzaTfYy"
                             target="_blank"

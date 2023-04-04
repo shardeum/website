@@ -85,11 +85,11 @@ function Features() {
             <h2>{"Features"}</h2>
           </SectionHeading>
         </Box> */}
-        <Box mb="20">
+        <Box mb="12">
           <SectionHeading color="black">
             <h2>
-              <span style={{ color: "#ec5c28" }}>{`Develop`}</span>
-              {" Your Future"}
+              {/* <span style={{ color: "#ec5c28" }}>{`Develop`}</span> */}
+              {"Building on Shardeum is Easy"}
             </h2>
           </SectionHeading>
         </Box>

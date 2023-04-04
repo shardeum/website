@@ -394,7 +394,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       className="betaAlphanetTitleDark"
                       style={{ color: "white", textAlign: "center" }}
                     >
-                      Find dApps/Projects building on Shardeum
+                      Find dapps/Projects building on Shardeum
                     </h2>
                     <br />
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>

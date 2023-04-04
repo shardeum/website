@@ -66,7 +66,7 @@ function Features() {
       >
         <Box mb="12">
           <SectionHeading color="brand.white">
-            <h2>{"Features"}</h2>
+            <h2>{"Why You Should Build on Shardeum"}</h2>
           </SectionHeading>
         </Box>
         <Grid

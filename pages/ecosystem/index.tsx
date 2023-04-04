@@ -200,11 +200,11 @@ const Explore: NextPage<ExplorePageProps> = ({
   return (
     <>
       <Head>
-        <title>{`Shardeum Ecosystem | dApps/Projects on Shardeum`}</title>
+        <title>{`Shardeum Ecosystem | dapps/Projects on Shardeum`}</title>
         <meta
           name="description"
           content={
-            "Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem"
+            "Uncover the dapps and projects that are building on Shardeum to become an early adopter of the ecosystem"
           }
         />
         <meta
@@ -215,10 +215,10 @@ const Explore: NextPage<ExplorePageProps> = ({
         {/* Facebook */}
         <meta property="og:url" content={`https://shardeum.org/ecosystem/`} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Shardeum Ecosystem | dApps/Projects on Shardeum`} />
+        <meta property="og:title" content={`Shardeum Ecosystem | dapps/Projects on Shardeum`} />
         <meta
           property="og:description"
-          content={`Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
+          content={`Uncover the dapps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
         />
         <meta
           property="og:image"
@@ -231,11 +231,11 @@ const Explore: NextPage<ExplorePageProps> = ({
         <meta property="twitter:url" content={`https://shardeum.org/ecosystem/`} />
         <meta
           property="twitter:title"
-          content={`Shardeum Ecosystem | dApps/Projects on Shardeum`}
+          content={`Shardeum Ecosystem | dapps/Projects on Shardeum`}
         />
         <meta
           property="twitter:description"
-          content={`Uncover the dApps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
+          content={`Uncover the dapps and projects that are building on Shardeum to become an early adopter of the ecosystem`}
         />
         <meta
           property="twitter:image"

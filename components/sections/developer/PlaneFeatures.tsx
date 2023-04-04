@@ -50,7 +50,7 @@ const FeatureCard = ({
     maxW="3xl"
     alignItems="flex-start"
     spacing="10"
-    id="vstackForDev"
+    className="vstackForDevPoint"
     style={{ cursor: "pointer" }}
     onClick={() => window.open(link)}
   >

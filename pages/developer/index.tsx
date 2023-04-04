@@ -149,6 +149,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 0, xl: 0, lg: "2" }}
         style={{ paddingTop: "0px" }}
+        className="vstackForDev"
       >
         <PlaneFeatures />
       </Container>

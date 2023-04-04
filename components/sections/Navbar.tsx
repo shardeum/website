@@ -55,7 +55,7 @@ const linksArr = [
       //   newPage: false,
       // },
       {
-        title: "Developer",
+        title: "Developer Home",
         link: DEV_URL,
         newPage: false,
       },

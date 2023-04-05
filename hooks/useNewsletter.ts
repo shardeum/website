@@ -45,6 +45,15 @@ const useNewsLetterForm = () => {
           }));
           return;
         }
+        if (err?.response?.status === 504) {
+          setEmail((prev) => ({
+            ...prev,
+            status: "idle",
+            success: null,
+            error: "You are already subscribed to our newsletter",
+          }));
+          return;
+        }
         setEmail((prev) => ({
           ...prev,
           status: "idle",

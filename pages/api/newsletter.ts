@@ -19,6 +19,7 @@ function addEmailAsContact(email: string, sources: validSources[]) {
     data: {
       email,
       listIds: sources.map((src) => sourceToListIdMap[src]),
+      updateEnabled: true,
     },
   });
 }

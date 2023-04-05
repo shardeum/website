@@ -55,7 +55,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <title>{"Developers | Build Dapps on Shardeum"}</title>
         <meta
           name="description"
-          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         />
         <meta
           name="keywords"
@@ -89,7 +89,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
 
       <NextSeo
         title="Developers | Build Dapps on Shardeum"
-        description="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+        description="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         canonical="https://shardeum.org/developer"
         additionalMetaTags={[
           {

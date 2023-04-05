@@ -65,7 +65,7 @@ const linksArr = [
         newPage: false,
       },
       {
-        title: "dApp Ecosystem",
+        title: "Dapp Ecosystem",
         link: ECOSYSTEM_URL,
         newPage: false,
       },

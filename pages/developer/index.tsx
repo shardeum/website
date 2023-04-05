@@ -87,7 +87,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <link rel="canonical" href="https://shardeum.org/developer" />
       </Head>
 
-      <NextSeo
+      {/* <NextSeo
         title="Developers | Build Dapps on Shardeum"
         description="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         canonical="https://shardeum.org/developer"
@@ -122,7 +122,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           site: "https://shardeum.org",
           handle: "@shardeum",
         }}
-      />
+      /> */}
 
       <DeveloperResponsiveHero
         heading={"Build Linearly Scalable Dapps on Shardeum"}

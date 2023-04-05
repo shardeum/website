@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   } catch (error: any) {
     if (error.response) {
-      // console.log(error.response);
+      console.log(error.response);
       switch (error.response.data.code) {
         case "duplicate_parameter":
           return res.status(400).json({ code: "", error: "Invalid Request" });

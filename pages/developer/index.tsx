@@ -30,6 +30,8 @@ import Image from "next/image";
 import UseCases from "../../components//sections/UseCases";
 import Features from "../../components/sections/developer/Features";
 import PlaneFeatures from "../../components/sections/developer/PlaneFeatures";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import Team from "../../components/sections/Team";
 import { getSHMNewsArticles } from "../../utils/api";
@@ -49,11 +51,11 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
-      <Helmet>
+      <Head>
         <title>{"Developers | Build Dapps on Shardeum"}</title>
         <meta
           name="description"
-          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         />
         <meta
           name="keywords"
@@ -83,7 +85,44 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/developer" />
-      </Helmet>
+      </Head>
+
+      {/* <NextSeo
+        title="Developers | Build Dapps on Shardeum"
+        description="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
+        canonical="https://shardeum.org/developer"
+        additionalMetaTags={[
+          {
+            property: "keywords",
+            content: "shardeum, L1, evm based smart contract platform, linear scalability",
+          },
+          {
+            property: "twitter:image",
+            content: "https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png",
+          },
+        ]}
+        openGraph={{
+          url: "https://shardeum.org/developer",
+          title: "Developers | Build Dapps on Shardeum",
+          description:
+            "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",
+          images: [
+            {
+              url: "https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png",
+              width: 800,
+              height: 600,
+              alt: "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",
+            },
+          ],
+          site_name:
+            "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "https://shardeum.org",
+          handle: "@shardeum",
+        }}
+      /> */}
 
       <DeveloperResponsiveHero
         heading={"Build Linearly Scalable Dapps on Shardeum"}

@@ -57,6 +57,9 @@ const JoinNewsletterComp = () => {
   } = useNewsLetterForm();
   const [title, setTitle] = useState("join-newsletter-title-footer");
   const [disc, setDisc] = useState("join-newsletter-desc");
+  const [newsLetterBottom, setNewsLetterBottom] = useState("newsletterBottom");
+  const [developerPage, setDeveloperPage] = useState("developerPage");
+  const [newsLetterEmail, setNewsLetterEmail] = useState("");
   const router = useRouter();
 
   useEffect(() => {
@@ -68,6 +71,10 @@ const JoinNewsletterComp = () => {
     router.pathname == "/developer"
       ? setDisc("join-newsletter-desc-dev")
       : setDisc("join-newsletter-desc");
+
+    router.pathname == "/developer"
+      ? setNewsLetterEmail(developerPage)
+      : setNewsLetterEmail(newsLetterBottom);
   }, [router.pathname]);
   const { t: pageTranslation } = useTranslation(["common"]);
 
@@ -85,7 +92,7 @@ const JoinNewsletterComp = () => {
               value={value}
             />
             <InputRightAddon
-              onClick={() => handleSubmit(["newsletterBottom"])}
+              onClick={(newsLetterEmail: any) => handleSubmit([newsLetterEmail])}
               children={
                 <LightMode>
                   <IconButton

@@ -54,18 +54,18 @@ const linksArr = [
       //   link: SHARDEUM_LIBERTY_ALPHANET_URL,
       //   newPage: false,
       // },
-      // {
-      //   title: "Developer",
-      //   link: DEV_URL,
-      //   newPage: false,
-      // },
+      {
+        title: "Developer Home",
+        link: DEV_URL,
+        newPage: false,
+      },
       {
         title: "Betanet Sphinx",
         link: BETANET_URL,
         newPage: false,
       },
       {
-        title: "dApp Ecosystem",
+        title: "Dapps Ecosystem",
         link: ECOSYSTEM_URL,
         newPage: false,
       },

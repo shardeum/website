@@ -23,7 +23,7 @@
   "shm-feature-11-title": "Solidity compatible (EVM)",
   "shm-feature-11-desc": "Since you just need to deploy a smart contract written in developer-friendly languages like Solidity & Vyper on Shardeum, it is tailor-made for both new & existing developers to build dapps within minutes.",
   "shm-feature-12-title": "Instant transaction finality",
-  "shm-feature-12-desc": "Shardeum processes transactions individually with <a style='color:#ec5c28' href='cross shard composability' target='_blank' >cross shard composability</a> instead of processing them at the block level resulting in fully confirmed transaction time of just a few seconds.",
+  "shm-feature-12-desc": "Shardeum processes transactions individually with <a style='color:#ec5c28' href='https://shardeum.org/blog/shardeum-solves-blockchain-trilemma/' target='_blank' >cross shard composability</a> instead of processing them at the block level resulting in fully confirmed transaction time of just a few seconds.",
   "shm-feature-13-title": "Secure & trustless",
   "shm-feature-13-desc": "A leaderless <a style='color:#ec5c28' href='https://shardeum.org/blog/consensus-mechanism-used-in-shardeum/' target='_blank' >Proof-of-Quorum (PoQ)</a> consensus algorithm, Proof-of-Stake (PoS) with slashing, standby nodes, node rotation and permissionless participation - all contribute to boost the security of the network.",
   "shm-feature-14-title": "Linearly scalable & low gas forever",

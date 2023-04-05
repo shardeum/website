@@ -47,7 +47,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         <title>{"Community is the CEO of Shardeum"}</title>
         <meta
           name="description"
-          content="Join the fastest growing L1 blockchain community and contribute without permission using your own content, DApps, validator nodes, and community building initiatives. Get started now"
+          content="Join the fastest growing L1 blockchain community and contribute without permission using your own content, dapps, validator nodes, and community building initiatives. Get started now"
         />
         <meta
           name="keywords"
@@ -99,7 +99,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
       </Head>
       <NextSeo
         title="Community is the CEO of Shardeum"
-        description="Join the fastest growing L1 blockchain community and contribute without permission using your own content, DApps, validator nodes, and community building initiatives. Get started now"
+        description="Join the fastest growing L1 blockchain community and contribute without permission using your own content, dapps, validator nodes, and community building initiatives. Get started now"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
         additionalMetaTags={[
           {

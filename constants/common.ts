@@ -4,4 +4,5 @@ export const sourceToListIdMap = {
   newsletterHero: 5,
   newsletterBottom: 6,
   newsletterPage: 4,
+  developerPage: 183,
 };

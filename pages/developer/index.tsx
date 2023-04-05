@@ -50,37 +50,39 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
     <>
       {/* Hero section */}
       <Helmet>
-        <title>{"Shardeum | EVM based Sharded Layer 1 Blockchain"}</title>
+        <title>{"Developers | Build Dapps on Shardeum"}</title>
         <meta
           name="description"
           content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
         />
         <meta
           name="keywords"
-          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+          content="shardeum, L1, evm based smart contract platform, linear scalability"
         />
-        <meta property="og:title" content="EVM Based Sharded Layer 1 Blockchain" />
+        <meta property="og:title" content="Developers | Build Dapps on Shardeum" />
         <meta
           property="og:description"
-          content="Shardeum is an EVM-based, linearly scalable smart contract platform that maintains low gas fees while providing true decentralization and solid security"
+          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         />
-        <meta property="og:url" content="https://shardeum.org/" />
+
+        <meta property="og:url" content="https://shardeum.org/developer" />
         <meta
           property="og:image"
           content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
         />
-        <meta name="twitter:title" content="EVM Based Sharded Layer 1 Blockchain" />
+        <meta name="twitter:title" content="Developers | Build Dapps on Shardeum" />
         <meta
           name="twitter:description"
-          content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
+          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         />
+
         <meta
           name="twitter:image"
           content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/" />
+        <link rel="canonical" href="https://shardeum.org/developer" />
       </Helmet>
 
       <DeveloperResponsiveHero
@@ -149,6 +151,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         py={{ base: "9", md: "2", lg: "2" }}
         px={{ base: 0, xl: 0, lg: "2" }}
         style={{ paddingTop: "0px" }}
+        className="vstackForDev"
       >
         <PlaneFeatures />
       </Container>

@@ -1361,6 +1361,6 @@
 }
 
 
-#vstackForDev :hover{
-  background-color: #ec5c2821;
+.vstackForDev .vstackForDevPoint:hover{
+  background-color: #ec5c286f;
 }

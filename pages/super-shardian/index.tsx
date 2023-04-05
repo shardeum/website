@@ -77,7 +77,7 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
         />
         <meta
           name="keywords"
-          content="super shardian, shardeum, shardeum dApps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm based blockchain"
+          content="super shardian, shardeum, shardeum dapps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm based blockchain"
         />
         <meta property="og:title" content="Top contributors of Shardeum AKA Super Shardians" />
         <meta
@@ -130,7 +130,7 @@ const SuperShardians = ({ superShardians }: { superShardians: Shardian[] }): Rea
           {
             property: "keywords",
             content:
-              "super shardian, shardeum, shardeum dApps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm compatible blockchain",
+              "super shardian, shardeum, shardeum dapps, shardeum community, testnet, alphanet, blockchain,layer1 blockchain,evm compatible blockchain",
           },
           {
             property: "twitter:image",

@@ -39,7 +39,7 @@ export const ShareModal: FC<ShareModalProps> = ({ projectUrl, isOpen, onClose, p
   const TEXT =
     " it cover only %0Athis Check out " +
     project.name +
-    " on @shardeum 🔥 %0A%0ABuild highly scalable dApps on the worlds first EVM-based L1 which uses dynamic state sharding to increase TPS with every new node. %0A%0ALets %0A%0A" +
+    " on @shardeum 🔥 %0A%0ABuild highly scalable dapps on the worlds first EVM-based L1 which uses dynamic state sharding to increase TPS with every new node. %0A%0ALets %0A%0A" +
     projectUrl;
   return (
     <Modal isOpen={isOpen} isCentered onClose={onClose}>

@@ -62,19 +62,13 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           content="Shardeum is an EVM-based, linearly scalable smart contract platform that maintains low gas fees while providing true decentralization and solid security"
         />
         <meta property="og:url" content="https://shardeum.org/" />
-        <meta
-          property="og:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:title" content="EVM Based Sharded Layer 1 Blockchain" />
         <meta
           name="twitter:description"
           content="Shardeum is an EVM-based, linearly scalable network that provides low gas fees forever while maintaining true decentralization and solid security"
         />
-        <meta
-          name="twitter:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />

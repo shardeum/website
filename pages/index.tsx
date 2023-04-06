@@ -46,7 +46,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
-      <head>
+      <Head>
         <title>{"Shardeum | EVM based Sharded Layer 1 Blockchain"}</title>
         <meta
           name="description"
@@ -78,7 +78,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </head>
+      </Head>
       <Hero
         heading={commonTranslation("shm-slogan")}
         description={commonTranslation("shm-description")}

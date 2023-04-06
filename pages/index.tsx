@@ -62,7 +62,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta property="og:url" content="https://shardeum.org/" />
         <meta
           property="og:image"
-          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
         />
         <meta name="twitter:title" content="EVM Based Sharded Layer 1 Blockchain" />
         <meta
@@ -71,7 +71,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         />
         <meta
           name="twitter:image"
-          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />

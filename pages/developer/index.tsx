@@ -22,7 +22,7 @@ import ShardeumInNews from "components/sections/home/ShardeumInNews";
 import SHMTokenomics from "components/sections/home/SHMTokenomics";
 import SectionHeading from "../../components/common/SectionHeading";
 import JoinDevCommunity from "./JoinDevCommunity";
-import { CLAIM_100_SHM_LINK, REPORT_BUGS, DOCS_URL } from "constants/links";
+import { CLAIM_100_SHM_LINK, REPORT_BUGS, DOCS_URL, SHARDEUM } from "constants/links";
 import type { InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -70,7 +70,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta property="og:url" content="https://shardeum.org/developer" />
         <meta
           property="og:image"
-          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
         />
         <meta name="twitter:title" content="Developers | Build Dapps on Shardeum" />
         <meta
@@ -80,7 +80,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
 
         <meta
           name="twitter:image"
-          content="https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png"
+          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
@@ -98,7 +98,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           },
           {
             property: "twitter:image",
-            content: "https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png",
+            content: "https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png",
           },
         ]}
         openGraph={{
@@ -108,7 +108,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",
           images: [
             {
-              url: "https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png",
+              url: "https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png",
               width: 800,
               height: 600,
               alt: "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",

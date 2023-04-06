@@ -58,7 +58,7 @@ function Newsletter() {
         />
         <meta
           property="og:image"
-          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={`https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
         />
 
         {/* Twiter */}
@@ -72,7 +72,7 @@ function Newsletter() {
         />
         <meta
           property="twitter:image"
-          content={`https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={`https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
         />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
@@ -81,7 +81,7 @@ function Newsletter() {
         {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
         {/* <meta
           name="twitter:image"
-          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={project.logo || `https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />

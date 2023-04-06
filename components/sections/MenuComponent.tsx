@@ -1,4 +1,4 @@
-import { Menu, MenuButton, MenuItem, MenuList, useDisclosure } from "@chakra-ui/react";
+import { Menu, MenuButton, MenuItem, MenuList, useDisclosure, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useTranslation } from "next-i18next";
@@ -30,23 +30,53 @@ const MenuComponent = (props: any) => {
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
       >
-        {link.submenu?.map((item: any) =>
-          item.newPage === true ? (
-            <a
-              target="_blank"
-              href={item.link}
-              onClick={() => window.open(item.link)}
-              rel="noreferrer"
-            >
-              <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
-            </a>
-          ) : (
-            <a href={item.link} rel="noreferrer">
-              <NextLink key={item.title} href={item.link} passHref>
-                <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
-              </NextLink>
-            </a>
-          )
+        {link.submenu?.map(
+          (item: any) =>
+            item.newPage === true ? (
+              <a
+                target="_blank"
+                href={item.link}
+                onClick={() => window.open(item.link)}
+                rel="noreferrer"
+              >
+                <NextLink key={item.title} href={item.link} passHref>
+                  <Link
+                    style={{ textDecoration: "none !important" }}
+                    variant=""
+                    rel="noopener noreferrer"
+                    target={item.newPage ? "_blank" : "_self"}
+                  >
+                    <MenuItem style={{ textDecoration: "none !important" }} key={item.title}>
+                      {commonTranslation(item.title)}
+                    </MenuItem>
+                  </Link>
+                </NextLink>
+                {/* <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem> */}
+              </a>
+            ) : (
+              <a href={item.link} rel="noreferrer">
+                <NextLink key={item.title} href={item.link} passHref>
+                  <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
+                </NextLink>
+              </a>
+            )
+          // <>
+          //   {/* <a key={item.title} target="_blank" href={item.link} rel="noreferrer">
+          //     <NextLink key={item.title} href={item.link} passHref>
+          //       <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
+          //     </NextLink>
+          //   </a> */}
+          //   <NextLink key={item.title} href={item.link} passHref>
+          //     <Link
+          //       variant="navlink"
+          //       rel="noopener noreferrer"
+          //       target={item.newPage ? "_blank" : "_self"}
+          //       fontWeight={item.highlight ? "bold" : "normal"}
+          //     >
+          //       <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
+          //     </Link>
+          //   </NextLink>
+          // </>
         )}
       </MenuList>
     </Menu>

@@ -20,7 +20,7 @@
   "shm-feature-9-desc": "Say goodbye to resource-intensive node running on blockchain networks. With Shardeum's user-friendly GUI and minimal hardware requirements, validator setup is a breeze",
   "shm-feature-10-title": "Shardeum Explorer",
   "shm-feature-10-desc": "Uncover the power of Shardeum with our intuitive explorer. Track transactions, monitor activity, and gain deep insights into the decentralized world",
-  "shm-feature-11-title": "Solidity compatible (EVM)",
+  "shm-feature-11-title": "EVM compatible",
   "shm-feature-11-desc": "Since you just need to deploy a smart contract written in developer-friendly languages like Solidity & Vyper on Shardeum, it is tailor-made for both new & existing developers to build dapps within minutes.",
   "shm-feature-12-title": "Instant transaction finality",
   "shm-feature-12-desc": "Shardeum processes transactions individually with <a style='color:#ec5c28' href='https://shardeum.org/blog/shardeum-solves-blockchain-trilemma/' target='_blank' >cross shard composability</a> instead of processing them at the block level resulting in fully confirmed transaction time of just a few seconds.",

@@ -95,10 +95,7 @@ const Carrers: NextPage = () => {
           property="og:description"
           content={`Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma`}
         />
-        <meta
-          property="og:image"
-          content={`https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
-        />
+        <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} />
 
         {/* Twiter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -109,10 +106,7 @@ const Carrers: NextPage = () => {
           property="twitter:description"
           content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
         />
-        <meta
-          property="twitter:image"
-          content={`https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
-        />
+        <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
 
@@ -120,7 +114,7 @@ const Carrers: NextPage = () => {
         {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
         {/* <meta
           name="twitter:image"
-          content={project.logo || `https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
+          content={project.logo || `https://shardeum.org/Shardeum.png`}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />

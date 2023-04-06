@@ -68,20 +68,14 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         />
 
         <meta property="og:url" content="https://shardeum.org/developer" />
-        <meta
-          property="og:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:title" content="Developers | Build Dapps on Shardeum" />
         <meta
           name="twitter:description"
           content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
         />
 
-        <meta
-          name="twitter:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/developer" />
@@ -98,7 +92,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           },
           {
             property: "twitter:image",
-            content: "https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png",
+            content: "https://shardeum.org/Shardeum.png",
           },
         ]}
         openGraph={{
@@ -108,7 +102,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
             "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",
           images: [
             {
-              url: "https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png",
+              url: "https://shardeum.org/Shardeum.png",
               width: 800,
               height: 600,
               alt: "Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem",

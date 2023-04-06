@@ -59,19 +59,13 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
           content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
         />
         <meta property="og:url" content="https://shardeum.org/community/" />
-        <meta
-          property="og:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:title" content="Community is the CEO of Shardeum" />
         <meta
           name="twitter:description"
           content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
         />
-        <meta
-          name="twitter:image"
-          content="https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png"
-        />
+        <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/community/" />

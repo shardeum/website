@@ -58,26 +58,31 @@ const linksArr = [
         title: "Developer Home",
         link: DEV_URL,
         newPage: false,
+        highlight: false,
       },
       {
         title: "Betanet Sphinx",
         link: BETANET_URL,
         newPage: false,
+        highlight: false,
       },
       {
         title: "Dapps Ecosystem",
         link: ECOSYSTEM_URL,
         newPage: false,
+        highlight: false,
       },
       {
         title: "docs",
         link: DOCS_URL,
         newPage: true,
+        highlight: false,
       },
       {
         title: "Explorer",
         link: EXPLORER_NEW_LIBERTY_URL,
         newPage: true,
+        highlight: false,
       },
       // {
       //   title: "Report Bugs",
@@ -96,16 +101,19 @@ const linksArr = [
         title: "litepaper",
         link: LITEPAPER_URL,
         newPage: true,
+        highlight: false,
       },
       {
         title: "faq",
         link: FAQ_URL,
         newPage: true,
+        highlight: false,
       },
       {
         title: "blog",
         link: BLOG_URL,
         newPage: true,
+        highlight: false,
       },
     ],
   },
@@ -119,21 +127,25 @@ const linksArr = [
         title: "community_ecosystem",
         link: COMMUNITY_URL,
         newPage: false,
+        highlight: false,
       },
       {
         title: "shardeum_events",
         link: EXPLORE_EVENTS,
         newPage: false,
+        highlight: false,
       },
       {
         title: "community_reward_program",
         link: SUPERSHARDIAN_URL,
         newPage: true,
+        highlight: false,
       },
       {
         title: "careers",
         link: CAREERS_URL,
         newPage: true,
+        highlight: false,
       },
     ],
   },
@@ -279,22 +291,22 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                 display={{ base: "none", lg: "flex" }}
               >
                 {/* All the links laid out horizontally */}
-                {linksArr?.map((link, index) => (
-                  <NextLink key={link.title} href={link.link} passHref>
-                    <Link
-                      variant="navlink"
-                      rel="noopener noreferrer"
-                      target={link.newPage ? "_blank" : "_self"}
-                      fontWeight={link.highlight ? "bold" : "normal"}
-                    >
-                      {typeof link.submenu !== "undefined" ? (
-                        <MenuComponent link={link} />
-                      ) : (
-                        commonTranslation(link.title)
-                      )}
-                    </Link>
-                  </NextLink>
-                ))}
+                {linksArr?.map((link, index) =>
+                  typeof link.submenu !== "undefined" ? (
+                    <MenuComponent link={link} />
+                  ) : (
+                    <NextLink key={link.title} href={link.link} passHref>
+                      <Link
+                        variant="navlink"
+                        rel="noopener noreferrer"
+                        target={link.newPage ? "_blank" : "_self"}
+                        fontWeight={link.highlight ? "bold" : "normal"}
+                      >
+                        {commonTranslation(link.title)}
+                      </Link>
+                    </NextLink>
+                  )
+                )}
 
                 {/* {isauthVisible === true ? (
                   <Menu>

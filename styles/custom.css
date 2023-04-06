@@ -1364,3 +1364,7 @@
 .vstackForDev .vstackForDevPoint:hover{
   background-color: #ec5c286f;
 }
+
+a {
+  text-decoration: none !important;
+}

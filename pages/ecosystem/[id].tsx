@@ -71,7 +71,10 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta property="og:description" content={`${project.description.substring(0, 160)}`} />
         <meta
           property="og:image"
-          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={
+            project.logo ||
+            `https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`
+          }
         />
 
         {/* Twiter */}
@@ -85,7 +88,10 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         <meta property="twitter:description" content={`${project.description.substring(0, 160)}`} />
         <meta
           property="twitter:image"
-          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={
+            project.logo ||
+            `https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`
+          }
         />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
@@ -94,7 +100,7 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
         {/* <meta
           name="twitter:image"
-          content={project.logo || `https://shardeum.org/wp-content/uploads/2022/03/Shardeum.png`}
+          content={project.logo || `https://shardeum.org/blog/wp-content/uploads/2023/03/New-logo-1024x683.png`}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />

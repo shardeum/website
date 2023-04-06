@@ -43,8 +43,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const response = await addEmailAsContact(email, sources);
-    if (response.status === 201 || response.status === 204) {
+    if (response.status === 201) {
       return res.status(201).json({ message: "Success" });
+    }
+    if (response.status === 204) {
+      return res.status(400).json({ code: "", error: "Invalid Request" });
     }
   } catch (error: any) {
     if (error.response) {

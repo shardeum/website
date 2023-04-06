@@ -32,6 +32,8 @@ import { getSHMNewsArticles } from "../utils/api";
 import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
 import { Helmet } from "react-helmet";
 import { relative } from "path";
+import Head from "next/head";
+
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-home");
   const { t: commonTranslation } = useTranslation("common");
@@ -44,7 +46,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
-      <Helmet>
+      <head>
         <title>{"Shardeum | EVM based Sharded Layer 1 Blockchain"}</title>
         <meta
           name="description"
@@ -76,7 +78,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
-      </Helmet>
+      </head>
       <Hero
         heading={commonTranslation("shm-slogan")}
         description={commonTranslation("shm-description")}

@@ -200,7 +200,7 @@ const Explore: NextPage<ExplorePageProps> = ({
   return (
     <>
       <Head>
-        <title>{`Shardeum Ecosystem | dapps/Projects on Shardeum`}</title>
+        <title>{`Shardeum Ecosystem | Dapps/Projects on Shardeum`}</title>
         <meta
           name="description"
           content={

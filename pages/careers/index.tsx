@@ -42,8 +42,8 @@ const Carrers: NextPage = () => {
   return (
     <>
       {/* <NextSeo
-        title={"Shardeum Careers | Help us build Shardeum!"}
-        description="Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma"
+        title={"Shardeum Community | Community is the CEO of Shardeum"}
+        description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         canonical="https://shardeum.org/careers/"
         additionalMetaTags={[
           {
@@ -56,12 +56,12 @@ const Carrers: NextPage = () => {
           },
         ]}
         openGraph={{
-          title: "Shardeum Careers | Help us build Shardeum!",
+          title: "Shardeum Community | Community is the CEO of Shardeum",
           type: "website",
           url: "https://shardeum.org/careers/",
 
           description:
-            "Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma",
+            "Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem",
           images: [
             {
               url: "https://shardeum.org/Shardeum.png",
@@ -77,10 +77,10 @@ const Carrers: NextPage = () => {
       /> */}
 
       <Head>
-        <title>{`Shardeum Careers | Help us build Shardeum!`}</title>
+        <title>{`Shardeum Community | Community is the CEO of Shardeum`}</title>
         <meta
           name="description"
-          content={`Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma`}
+          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
         />
         <meta
           name="keywords"
@@ -90,10 +90,13 @@ const Carrers: NextPage = () => {
         {/* Facebook */}
         <meta property="og:url" content={`https://shardeum.org/careers/`} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Shardeum Careers | Help us build Shardeum!`} />
+        <meta
+          property="og:title"
+          content={`Shardeum Community | Community is the CEO of Shardeum`}
+        />
         <meta
           property="og:description"
-          content={`Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma`}
+          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
         />
         <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} />
 
@@ -101,7 +104,10 @@ const Carrers: NextPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta property="twitter:url" content={`https://shardeum.org/careers/`} />
-        <meta property="twitter:title" content={`Shardeum Careers | Help us build Shardeum!`} />
+        <meta
+          property="twitter:title"
+          content={`Shardeum Community | Community is the CEO of Shardeum`}
+        />
         <meta
           property="twitter:description"
           content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
@@ -145,7 +151,7 @@ const Carrers: NextPage = () => {
       {!router.query.gh_jid && (
         <Hero
           heading="Help us build Shardeum!"
-          description="Explore and apply for job openings at Shardeum in project management, development, social media, and more. Join us in building the first Web3 network to solve the blockchain trilemma"
+          description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
           breadcrumb={
             <>
               <p>

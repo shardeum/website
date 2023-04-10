@@ -110,7 +110,7 @@ const Carrers: NextPage = () => {
         />
         <meta
           property="twitter:description"
-          content={`Stay up-to-date with the latest news, topics and trends on the world's fastest growing L1 ecosystem`}
+          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
         />
         <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} />
 

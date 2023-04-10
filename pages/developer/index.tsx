@@ -121,7 +121,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
       <DeveloperResponsiveHero
         heading={"Build Linearly Scalable Dapps on Shardeum"}
         description={
-          "Shardeum is the world's first EVM-based L1 blockchain that scales linearly through dynamic state sharding and maintains low gas fees forever."
+          "Shardeum is the world's first EVM-based L1 smart contract platform that scales linearly through dynamic state sharding and maintains low gas fees forever."
         }
         cta={
           <>
@@ -153,9 +153,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               >
                 {/* {commonTranslation("join-liberty-cta")} */}
                 <b>
-                  <i>{"On the Fastest "}</i>
-                  {/* <br /> */}
-                  <i>{"Growing L1 Platform ! ✨"}</i>
+                  <i>{"On the Fastest Growing L1 Blockchain! ✨"}</i>
                 </b>
                 {/* <Image src="/fire-img.png" width="25px" height="25px" /> */}
               </div>

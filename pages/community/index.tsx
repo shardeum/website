@@ -44,23 +44,26 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         
       </Helmet> */}
       <Head>
-        <title>{"Community is the CEO of Shardeum"}</title>
+        <title>{"Shardeum Community | Community is the CEO of Shardeum"}</title>
         <meta
           name="description"
-          content="Join the fastest growing L1 blockchain community and contribute without permission using your own content, dapps, validator nodes, and community building initiatives. Get started now"
+          content="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         />
         <meta
           name="keywords"
           content="super shardian, shardeum, contributors, rewards, shardeum community, developers, testnet, blockchain,layer1 blockchain,evm based blockchain"
         />
-        <meta property="og:title" content="Community is the CEO of Shardeum" />
+        <meta property="og:title" content="Shardeum Community | Community is the CEO of Shardeum" />
         <meta
           property="og:description"
           content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
         />
         <meta property="og:url" content="https://shardeum.org/community/" />
         <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
-        <meta name="twitter:title" content="Community is the CEO of Shardeum" />
+        <meta
+          name="twitter:title"
+          content="Shardeum Community | Community is the CEO of Shardeum"
+        />
         <meta
           name="twitter:description"
           content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
@@ -92,8 +95,8 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         />
       </Head>
       <NextSeo
-        title="Community is the CEO of Shardeum"
-        description="Join the fastest growing L1 blockchain community and contribute without permission using your own content, dapps, validator nodes, and community building initiatives. Get started now"
+        title="Shardeum Community | Community is the CEO of Shardeum"
+        description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
         additionalMetaTags={[
           {
@@ -108,7 +111,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         ]}
         openGraph={{
           url: "https://shardeum.org/community/",
-          title: "Community is the CEO of Shardeum",
+          title: "Shardeum Community | Community is the CEO of Shardeum",
           description:
             "Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma",
           images: [

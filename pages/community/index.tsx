@@ -56,7 +56,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         <meta property="og:title" content="Shardeum Community | Community is the CEO of Shardeum" />
         <meta
           property="og:description"
-          content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
+          content="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         />
         <meta property="og:url" content="https://shardeum.org/community/" />
         <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
@@ -66,7 +66,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
         />
         <meta
           name="twitter:description"
-          content="Shardeum welcomes you to join its community of creators, developers, translators and users to build a layer 1 blockchain that finally solves blockchain trilemma"
+          content="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         />
         <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -94,7 +94,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
           }}
         />
       </Head>
-      <NextSeo
+      {/* <NextSeo
         title="Shardeum Community | Community is the CEO of Shardeum"
         description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
         canonical="https://shardeum.org/shardeum-liberty-alphanet/"
@@ -131,7 +131,7 @@ const Community = ({ communityStats }: { communityStats: CommunityStat[] }): Rea
           site: "https://shardeum.org",
           handle: "@shardeum",
         }}
-      />
+      /> */}
 
       {/* Hero section */}
       <ResponsiveHero

@@ -49,7 +49,7 @@ function Newsletter() {
         />
 
         {/* Facebook */}
-        <meta property="og:url" content={`https://shardeum.org/betanet/`} />
+        <meta property="og:url" content={`https://shardeum.org/newsletter/`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Shardeum | NewsLetter`} />
         <meta
@@ -78,7 +78,7 @@ function Newsletter() {
           content={project.logo || `https://shardeum.org/Shardeum.png`}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/" />
+        <link rel="canonical" href="https://shardeum.org/newsletter/" />
 
         <script
           type="application/ld+json"

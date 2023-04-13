@@ -78,7 +78,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/developer" />
+        <link rel="canonical" href="https://shardeum.org/developer/" />
       </Head>
 
       {/* <NextSeo

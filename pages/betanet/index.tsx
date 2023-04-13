@@ -116,7 +116,7 @@ const AlphanetLanding: NextPage = () => {
           property="og:description"
           content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
         />
-        <meta property="og:image" content={BETANETIMAGE} />
+        <meta property="og:image" content={`https://shardeum.org` + BETANETIMAGE} />
 
         {/* Twiter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -127,7 +127,7 @@ const AlphanetLanding: NextPage = () => {
           property="twitter:description"
           content={`Join the fastest-growing L1 ecosystem as a node validator, smart contract developer, or community contributor in the mission to onboard billions of people to Web3`}
         />
-        <meta property="twitter:image" content={BETANETIMAGE} />
+        <meta property="twitter:image" content={`https://shardeum.org` + BETANETIMAGE} />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
 
@@ -138,7 +138,7 @@ const AlphanetLanding: NextPage = () => {
           content={project.logo || BETANETIMAGE}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/" />
+        <link rel="canonical" href="https://shardeum.org/betanet/" />
       </Head>
 
       {/* Hero section */}

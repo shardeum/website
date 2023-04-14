@@ -53,17 +53,21 @@ const ResponsiveHero = ({
                 lineHeight={{ base: "7", md: "8" }}
                 color={descColor || "brand.grey-20"}
               >
-                <Breadcrumb color={descColor || "brand.grey-20"}>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/">{"Home"}</BreadcrumbLink>
-                  </BreadcrumbItem>
+                {breadcrumb ? (
+                  breadcrumb
+                ) : (
+                  <Breadcrumb color={descColor || "brand.grey-20"}>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/">{"Home"}</BreadcrumbLink>
+                    </BreadcrumbItem>
 
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/ecosystem">
-                      {"Ecosystem"} {internalPage && `/ ${internalPage.name}`}
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                </Breadcrumb>
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/ecosystem">
+                        {"Ecosystem"} {internalPage && `/ ${internalPage.name}`}
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                  </Breadcrumb>
+                )}
               </Text>
               <Text
                 as="h1"

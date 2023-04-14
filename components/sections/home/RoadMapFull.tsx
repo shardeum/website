@@ -215,9 +215,13 @@ function RoadmapFull({ heading }: any) {
             {/* <Text fontSize="sm" color="brand.orange">
               2022
             </Text> */}
-            <Heading size="2xl" color="brand.white" as={heading} alignItems="center">
-              {pageTranslation("roadmap")}
-            </Heading>
+            <h1 style={{ fontSize: "48px" }}>
+              {" "}
+              <b>{pageTranslation("roadmap")}</b>{" "}
+            </h1>
+            {/* <Heading size="2xl" color="brand.white" as={heading} alignItems="center">
+            {pageTranslation("roadmap")}
+            </Heading> */}
           </VStack>
           <VerticalTimeline lineColor="rgba(33, 33, 33, 1)">
             {roadmapList.map((item: any) => {

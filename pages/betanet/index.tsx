@@ -138,7 +138,7 @@ const AlphanetLanding: NextPage = () => {
           content={project.logo || BETANETIMAGE}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/" />
+        <link rel="canonical" href="https://shardeum.org/betanet/" />
       </Head>
 
       {/* Hero section */}
@@ -159,55 +159,210 @@ const AlphanetLanding: NextPage = () => {
           <>
             <script
               dangerouslySetInnerHTML={{
-                __html: `<script type="application/ld+json">	
-                {	
-                @context: "https://schema.org",	
-                @type: "FAQPage",	
-                mainEntity: [{	
-                @type: "Question",	
-                name: "What is Shardeum?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "Shardeum is an EVM-based sharded layer 1 blockchain that uses dynamic state sharding to increase transactions per second (TPS) with the addition of every new node."	
-                }	
-                },{	
-                @type: "Question",	
-                name: "Who will use Shardeum?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "Shardeum aims to be capable of onboarding over a billion people to Web3. Like the Internet, Shardeum is Open, Collaborative, and Community-driven with a mission to provide decentralization for everyone."	
-                }	
-                },{	
-                @type: "Question",	
-                name: "What languages can be used to write smart contracts on the Shardeum network?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "EVM-compatible languages can be used to compile smart contracts; this includes Solidity and Vyper."	
-                }	
-                },{	
-                @type: "Question",	
-                name: "How can I contribute to Liberty as a developer?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "You can build and deploy smart contracts on Liberty by following the developer documentation. List your smart contract here to publicize it among the community and become a leader in the Shardeum ecosystem. Pro-tip: If you already have a smart contract deployed on Ethereum, you can migrate it to Liberty within seconds."	
-                }	
-                },{	
-                @type: "Question",	
-                name: "How can the community get involved with Liberty?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "Everyone in the Shardeum community can add the Liberty network to their wallet, request testnet SHM from the faucet and interact with smart contracts."	
-                }	
-                },{	
-                @type: "Question",	
-                name: "I already have a smart contract deployed on Ethereum. Can I easily migrate it to Liberty?",	
-                acceptedAnswer: {	
-                @type: "Answer",	
-                text: "Since Shardeum is EVM-based, it's as simple as deploying your existing code to the Shardeum network. If you have built for Ethereum, you have built for Shardeum."	
-                }	
-                }]	
-                }	
-                </script>	`,
+                __html: `<script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What are the requirements to run a node on betanet?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Minimum hardware requirements :
+                
+                -250 GB ssd storage
+                -Quad core CPU less than 10 years old if self hosting
+                -Dual core CPU works if hosted with newer Xeons / EPYC
+                -16 GB of ram, 4+ GB of virtual memory recommended
+                -Hosting: 8 GB RAM + 8 GB Virtual Memory"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "How do GUI and CLI features help me in operating a node?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "With GUI, you can start running a node with a few clicks of your mouse. Shardeum is one of the first L1 networks to enable user-friendly GUI feature for node validators
+                CLI is the primary interface used by the vast majority of blockchain networks. It is enabled for more advanced users and developers who intend to work with nodes more deeply and technically"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What is the reward I will get by running an honest node on betanet?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Your node will earn Betanet SHM, but these will not have any value. That said, we will be keeping track of the addresses that helped out during Betanet. While we haven’t yet decided on Mainnet rewards for Betanet users, we’ll announce in due time if and when it is decided."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "My Node status is Standby. What does it mean and when does it become active?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "When you have the needed amount of SHM staked and you start your node, your Node starts with a Standby status. This means that it is ready to be included in the network. Whenever network rotation occurs, your node will get the opportunity to become Active. This will entirely depend on the network demand and there is no fixed timeline when your node will become Active."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "My transaction is failing whenever I try to add stake on my Validator.",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Please Reset your Metamask Wallet. (Settings > Advanced > Reset Account)"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Can I run a Shardeum Validator on Windows?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "While the team has not done extensive testing on windows, technically if you have Windows Subsystem for Linux (WSL) in your system, you should be able to run a Shardeum validator node."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Troubleshoot Error: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Run the following command in your shell --> sudo usermod -a -G docker $USER && newgrp docker
+                Then run the shell script again."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "I see my Validator IP as 0.0.0.0 and get the error of Node cannot join with invalid external IP: 0.0.0.0. What should I do?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Go into the operator dashboard docker (may be different if you customized install location)
+                
+                cd ~/.shardeum
+                ./shell.sh
+                
+                Get your node's external IP:
+                curl https://ipinfo.io/ip
+                
+                The returned IP in the format of nnn.nnn.nnn.nnn is your EXTERNAL_IP.
+                Set the number above in place of EXTERNAL_IP:
+                export APP_IP="EXTERNAL_IP"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "How to do a fresh install of a Shardeum Node?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Use the following commands in your shell:
+                
+                cd ~/.shardeum
+                ./cleanup.sh
+                cd ~/
+                rm -rf .shardeum
+                rm installer.sh
+                
+                After these, Start from Step 2 from the Validator Node Installation Guide"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Can I operate archive nodes on betanet?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "During betanet the community can operate Validator nodes. After mainnet, community can also operate Archiver nodes."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What would be the requirement and incentive to run an archive node?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Requirements for running an Archiver will be determined during betanet, but approximately, it would be: 32 core, 256GB RAM, 4TB SSD"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What is the process for bug bounties and where do I report bugs on betanet?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Please report bugs on betanet here. Details of the bounties will be announced after the release of Betanet."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "When can we expect whitepaper to be released?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Whitepaper will be released around the same time as the launch of betanet"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "When will the protocol be made open-source?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The Shardeum code will be open-sourced around the same time as the launch of betanet"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What are the unique features in Shardeum apart from typical features that comes with a L1 blockchain network?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamic State Sharding
+                Consensus and processing are done at transaction level on Shardeum instead of the block level which you find with existing blockchain networks. Through dynamic state sharding, the network will shard its state by evenly and dynamically distributing compute workload, storage, and bandwidth among all the nodes. This not only allows for parallel processing of transactions but also very low overhead for validator nodes as they will store only the state data of transactions they are involved in. Shardeum will be the first Web3 network to scale linearly . Dynamic state sharding is the most advanced version of state, transaction/network and static state sharding employed by more recent sharded chains which runs into both inter-related and standalone problems such as high latency, vertical scaling (as opposed to linear scaling), sybil attack, weak finality and lack of cross shard composability. Shardeum, will further maintain atomic and cross-shard composability.
+                Linear Scalability
+                With the help of dynamic state sharding, every node added to the network will increase the transaction throughput instantly. So basically, by simply adding more nodes from the network’s ‘standby’ validator pool during peak demand, the TPS will increase proportionally making Shardeum the first Web3 network to scale linearly. And this is the main X factor that impacts every other outcome on a blockchain network favorably including throughput, decentralization, security and constant transaction fees irrespective of the demand in the network."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Low & Constant Gas Fees",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "As noted previously, linear scaling on Shardeum allows the validator nodes on the network to download only the latest state of the transactions they are handling while historical transactions are handled by archiver nodes on the network. Combined with autoscaling where the network independently increases and decrease its capacity during peaks and troughs, cost of running the operations on Shardeum will be low which directly ensures low and constant transaction fees for users and developers."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "EVM-based Smart Contract Platform",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "There is a popular saying among the Shardeum community members aka Shardians, that “If you have built for Ethereum, you have built for Shardeum”. What it means is that, any dApp/product/service built atop Ethereum can be migrated to Shardeum seamlessly in a matter of few minutes. Since you just need to deploy a smart contract written in Solidity or Vyper on Shardeum (with a bonus that you will never have to worry about rising gas fees again), the environment is tailor-made for both new and experienced developers."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Anyone can operate a node on Shardeum and earn rewards",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "As of a result of linear scaling and low hardware requirements to run a node, average users can run a validator node and keep the network safe in return for networks tokens. By scaling horizontally, network will be decentralized. No blockchain network has demonstrated its ability to scale linearly and instead were mostly able to scale vertically making it expensive for average users to run a node on such networks. As a result, large institutions and node providers fill the vacuum created and operate nodes on them leading to centralization and increased chances for sybil attacks."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Solid Security with Unique Consensus Mechanism",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Shardeum will use a combination of two consensus algorithms namely proof of stake (PoS) and proof of quorum (PoQ). Staking native coins will be mandatory for validators to participate in the transaction validation process in return for rewards. Nodes that act maliciously will be penalized. Proof of Quorum, in a nutshell, allows the network validators of a transaction to approve it only if it receives 51% of votes which is then followed by batching such transactions together and passing it onto archive nodes. Moreover, consensus algorithm on Shardeum will randomly rotate validator and standby nodes in and out of the system which will make it extremely difficult for bad actors to attack the network."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "When and how can I apply for grants?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The Shardeum Foundation plans to launch a grants program in 2023. Early adopters that have demonstrated measurable progress in development and community growth on Shardeum's testnets will be prioritized."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "I am not looking for grants but I am keen to get your support in promoting the dApp I am building on Shardeum",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Please submit this form ."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Can I get advisory support from the team for my project?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Shardeum’s Leadership Advisory Group is available to brainstorm and discuss the potential of projects and its GTM strategy. These leaders have led and helped world-class projects launch and succeed, and they are available to help and advise."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "Where can I look for active projects that are deployed on Shardeum so far?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "You can find and interact with the active projects building on Shardeum here"
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "How can I get my dApp to be enlisted or added as part of active projects on Shardeum?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Please list your dApps that you are building on Shardeum here"
+                    }
+                  }]
+                }
+                </script>`,
               }}
             ></script>
             <Stack

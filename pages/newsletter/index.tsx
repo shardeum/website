@@ -101,7 +101,7 @@ function Newsletter() {
           }}
         />
       </Head>
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `<script type="application/ld+json">
             {
@@ -121,7 +121,7 @@ function Newsletter() {
             }
             </script>	`,
         }}
-      ></script>
+      ></script> */}
       <Hero />
       <Container maxW="container" mx="auto" py="12" px={{ base: "6", xl: "0" }} bg="brand.black">
         <VStack

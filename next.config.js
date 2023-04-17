@@ -84,6 +84,10 @@ const nextConfig = {
         source: "/explore/wp-admin",
         destination: `${process.env.EXPLORE_URL}/wp-admin/index.php`,
       },
+      {
+        source: "/issuance-dashboard/:slug*",
+        destination: `https://issuance-dashboard.vercel.app/:slug*`,
+      },
     ];
   },
   async headers() {

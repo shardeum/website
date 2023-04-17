@@ -68,6 +68,11 @@ const nextConfig = {
         destination: "https://shardeum.org/",
         permanent: true,
       },
+      // {
+      //   source: "/issuance",
+      //   destination: "https://issuance-dashboard.vercel.app/",
+      //   permanent: true,
+      // },
     ];
   },
   async rewrites() {
@@ -84,6 +89,10 @@ const nextConfig = {
         source: "/explore/wp-admin",
         destination: `${process.env.EXPLORE_URL}/wp-admin/index.php`,
       },
+      {
+        source: "/issuance-dashboard/:slug*",
+        destination: `${process.env.ISSUANCE_URL}/:slug*`,
+      },
     ];
   },
   async headers() {
@@ -98,6 +107,14 @@ const nextConfig = {
       },
       {
         source: "/explore/:slug*",
+        headers: [
+          { key: "x-forwarded-proto", value: "https" },
+          { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
+          { key: "host", value: process.env.ENV_DOMAIN },
+        ],
+      },
+      {
+        source: "/issuance-dashboard/:slug*",
         headers: [
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },

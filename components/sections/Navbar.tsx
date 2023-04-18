@@ -247,11 +247,15 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://t.me/shardeum/373"}
+          href={"https://shm.gg/shm-node-reward-calc-demo"}
           target="_blank"
           rel="noreferrer"
         >
-          <b> Shardeum Sphinx 1.1.6 is Live! Claim Test SHM & Run Your Nodes Now </b>
+          <b>
+            {" "}
+            Join us for the Live Demo of Shardeum Node Reward Calculator on April 19th at 3.30 PM
+            UTC{" "}
+          </b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>
@@ -267,7 +271,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
         // className="navNotificationShow"
       >
-        {/* <NotificationBar /> */}
+        <NotificationBar />
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
         <Flex
           bg={mode === "light" ? "brand.white" : "brand.black"}

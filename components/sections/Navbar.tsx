@@ -252,9 +252,8 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           rel="noreferrer"
         >
           <b>
-            {" "}
             Register for the Live Demo of Shardeum Node Reward Calculator on April 19th at 3.30 PM
-            UTC{" "}
+            UTC
           </b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>

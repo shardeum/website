@@ -253,7 +253,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         >
           <b>
             {" "}
-            Join us for the Live Demo of Shardeum Node Reward Calculator on April 19th at 3.30 PM
+            Register for the Live Demo of Shardeum Node Reward Calculator on April 19th at 3.30 PM
             UTC{" "}
           </b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}

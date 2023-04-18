@@ -85,7 +85,7 @@ const nextConfig = {
         destination: `${process.env.EXPLORE_URL}/wp-admin/index.php`,
       },
       {
-        source: "/issuance-dashboard/:slug*",
+        source: "/shm-node-reward-calculator/:slug*",
         destination: `https://issuance-dashboard.vercel.app/:slug*`,
       },
     ];

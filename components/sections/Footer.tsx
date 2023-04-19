@@ -135,6 +135,7 @@ const LinksMap = {
     { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
+    { title: "OCC", href: "/occ/", target: "" },
     { title: "Privacy Policy", href: "/privacy-policy/", target: "" },
     { title: "Terms", href: "/terms/", target: "" },
   ],

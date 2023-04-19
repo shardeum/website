@@ -147,12 +147,12 @@ const linksArr = [
         newPage: true,
         highlight: false,
       },
-      {
-        title: "careers",
-        link: CAREERS_URL,
-        newPage: true,
-        highlight: false,
-      },
+      // {
+      //   title: "careers",
+      //   link: CAREERS_URL,
+      //   newPage: true,
+      //   highlight: false,
+      // },
     ],
   },
   {

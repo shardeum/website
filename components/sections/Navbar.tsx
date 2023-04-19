@@ -126,7 +126,7 @@ const linksArr = [
       {
         title: "SHM_Tokenomics",
         link: SHM_CALCULATOR,
-        newPage: false,
+        newPage: true,
         highlight: false,
       },
       {

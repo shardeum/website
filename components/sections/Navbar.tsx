@@ -19,7 +19,7 @@ import {
   COMMUNITY_URL,
   CLAIM_100_SHM_LINK,
   EXPLORE_EVENTS,
-  SHARDEUM_LIBERTY_ALPHANET_URL,
+  SHM_CALCULATOR,
   DOCS_URL,
   FAQ_URL,
   EXPLORER_LIBERTY_URL,
@@ -123,6 +123,12 @@ const linksArr = [
     newPage: false,
     highlight: false,
     submenu: [
+      {
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
+        newPage: false,
+        highlight: false,
+      },
       {
         title: "community_ecosystem",
         link: COMMUNITY_URL,

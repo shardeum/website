@@ -276,7 +276,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
         // className="navNotificationShow"
       >
-        <NotificationBar />
+        {/* <NotificationBar /> */}
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
         <Flex
           bg={mode === "light" ? "brand.white" : "brand.black"}

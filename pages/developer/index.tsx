@@ -51,7 +51,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
-      <Head>
+      <Helmet>
         <title>{"Developers | Build Dapps on Shardeum"}</title>
         <meta
           name="description"
@@ -79,7 +79,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/developer/" />
-      </Head>
+      </Helmet>
 
       {/* <NextSeo
         title="Developers | Build Dapps on Shardeum"

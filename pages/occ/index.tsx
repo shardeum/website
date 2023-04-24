@@ -20,10 +20,11 @@ const Page = ({
   recordMap: ExtendedRecordMap;
   notionPageDetails: any;
 }) => {
-  const title = notionPageDetails.title || getPageTitle(recordMap);
-  const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
-  const description = notionPageDetails.description;
-  const image = notionPageDetails.image;
+  const title = "OCC | The Guiding Principles of Shardeum";
+  const canonical = "https://shardeum.org/occ/";
+  const description =
+    "OCC is short for Open, Collaborative & Community Driven which are the guiding principles of Shardeum in pursuit of enabling decentralization for everyone";
+  const image = "https://shardeum.org/blog/wp-content/uploads/2023/04/OCC.jpg";
   return (
     <>
       <Hero
@@ -47,7 +48,7 @@ const Page = ({
         }
       />
       <NextSeo
-        title={`OCC | The Guiding Principles of Shardeum`}
+        title={title}
         description={description}
         canonical={canonical}
         additionalMetaTags={[

@@ -39,12 +39,13 @@ const MenuComponent = (props: any) => {
                 onClick={() => window.open(item.link)}
                 rel="noreferrer"
               >
-                <NextLink key={item.title} href={item.link} passHref>
+                <NextLink key={item.title} href={""} passHref>
                   <Link
                     style={{ textDecoration: "none !important" }}
                     variant=""
                     rel="noopener noreferrer"
-                    target={item.newPage ? "_blank" : "_self"}
+                    // target={item.newPage ? "_blank" : "_self"}
+                    target={"_self"}
                   >
                     <MenuItem style={{ textDecoration: "none !important" }} key={item.title}>
                       {commonTranslation(item.title)}

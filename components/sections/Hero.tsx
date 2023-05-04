@@ -16,6 +16,9 @@ type HeroProps = {
   titleColor?: string;
   descColor?: string;
   breadcrumb?: any;
+  backgroundImage?: any;
+  backgroundSize?: any;
+  backgroundPosition?: any;
 };
 
 const Hero = ({

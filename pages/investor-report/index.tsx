@@ -16,16 +16,16 @@ import { Link } from "@chakra-ui/react";
 import { CalendarIcon } from "@chakra-ui/icons";
 
 const Page = () => {
-  const title = "Investor Report";
+  const title = "Shardeum Investor Report";
   const canonical = "https://shardeum.org/investor-report/";
   const description = "Investor Report";
   const image = "https://shardeum.org/Shardeum.png";
   return (
     <>
       <Hero
-        heading="News and Results"
+        heading="Shardeum Investor Report"
         backgroundImage={
-          "url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)"
+          "url(https://shardeum.org/explore/wp-content/uploads/2023/05/charles-forerunner-3fPXt37X6UQ-unsplash-1.png)"
         }
         backgroundSize={"cover"}
         backgroundPosition={"center center"}
@@ -104,15 +104,15 @@ const Page = () => {
                   },{
                     "@type": "ListItem", 
                     "position": 2, 
-                    "name": "Super Shardian: Proof Of Community",
-                    "item": "https://shardeum.org/proof-of-community-program/"  
+                    "name": "Shardeum Investor Report",
+                    "item": "https://shardeum.org/investor-report/"  
                   }]
                 }
                 </script>`,
             }}
           ></script>
           <Text fontSize="3xl" color="#000">
-            Shardeum Investor Report
+            Investor Updates
           </Text>
           <Text
             fontSize={{ base: "md", lg: "xl" }}

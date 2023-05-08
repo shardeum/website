@@ -432,7 +432,7 @@ const AlphanetLanding: NextPage = () => {
           borderBottomWidth="1px"
           px={{ base: "4", md: "6", lg: "9" }}
         >
-          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.X Metrics</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.2 Metrics</Text>
         </Center>
         <SlidingStats stats={stats} />
       </Box>

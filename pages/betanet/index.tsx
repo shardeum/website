@@ -422,7 +422,7 @@ const AlphanetLanding: NextPage = () => {
       />
       <Box position="relative">
         <Center
-          maxW="30%"
+          maxW="300px"
           bg="black"
           position="absolute"
           zIndex="9"
@@ -432,7 +432,7 @@ const AlphanetLanding: NextPage = () => {
           borderBottomWidth="1px"
           px={{ base: "4", md: "6", lg: "9" }}
         >
-          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.X Metrics</Text>
+          <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.2 Metrics</Text>
         </Center>
         <SlidingStats stats={stats} />
       </Box>
@@ -1234,7 +1234,14 @@ const AlphanetLanding: NextPage = () => {
                   >
                     <Box flex="1" textAlign="left">
                       <Heading size={"lg"} className="faqHeading">
-                        <h3>{`Troubleshoot Error: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:`}</h3>
+                        <h3>
+                          Troubleshoot Error: Got permission denied while trying to connect to the
+                          Docker daemon socket at
+                          <br />
+                          <span style={{ fontSize: "20px" }}>
+                            unix:///var/run/docker.sock:
+                          </span>{" "}
+                        </h3>
                       </Heading>
                     </Box>
                     <AccordionIcon />

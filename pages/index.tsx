@@ -401,6 +401,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                         // backgroundColor= "#4EB59A"
                         rel="noopener noreferrer"
                         target="_blank"
+                        fontSize="14px"
                         href={"/ecosystem"}
                       >
                         Explore dApps
@@ -415,7 +416,8 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                         target="_blank"
                         ml={5}
                         href={REPORT_BUGS}
-                        maxWidth="200px"
+                        maxWidth="160px"
+                        fontSize="14px"
                       >
                         Report Bugs on Sphinx
                       </Button>

@@ -583,7 +583,7 @@ const AlphanetLanding: NextPage = () => {
               </div>
             </GridItem>
             <GridItem colSpan={3}>
-              <div className="borderGridTwo">
+              <div className="borderGridTwoMob">
                 <h4 className="betanetHighlightsThree">Community Growth Metrics</h4>
 
                 <div className="borderGridTwoAddSpace">

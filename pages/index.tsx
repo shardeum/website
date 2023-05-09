@@ -226,7 +226,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               </div>
             </GridItem>
             <GridItem colSpan={3}>
-              <div className="borderGridTwo">
+              <div className="borderGridTwoMob">
                 <h4 className="betanetHighlightsThree">Community Growth Metrics</h4>
 
                 <div className="borderGridTwoAddSpace">
@@ -390,7 +390,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                       className="betaAlphanetTitleDark"
                       style={{ color: "white", textAlign: "center" }}
                     >
-                      Find dapps/Projects building on Shardeum
+                      Find Dapps/Projects building on Shardeum
                     </h2>
                     <br />
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
@@ -404,7 +404,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                         fontSize="14px"
                         href={"/ecosystem"}
                       >
-                        Explore dApps
+                        Explore Dapps
                       </Button>
 
                       <Button

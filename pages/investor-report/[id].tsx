@@ -12,6 +12,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import NextLink from "next/link";
 import Hero from "components/sections/Hero";
+import { Image, Center } from "@chakra-ui/react";
 
 const Page = ({
   recordMap,
@@ -114,12 +115,16 @@ const Page = ({
           <Text
             fontSize={{ base: "md", lg: "xl" }}
             textAlign="left"
+            fontWeight="bold"
             lineHeight={{ base: "7", md: "8" }}
             color={"#37352f"}
             paddingLeft="7.9cm"
           >
             {title}
           </Text>
+          <div className="notion-page">
+            <Image py="4" src={image} alt={title} />
+          </div>
           <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>

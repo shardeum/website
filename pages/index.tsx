@@ -33,6 +33,7 @@ import { IconCommunity, IconGlobe, IconTransaction } from "@shm/Icons";
 import { Helmet } from "react-helmet";
 import { relative } from "path";
 import Head from "next/head";
+import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 
 const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): React.ReactNode => {
   const { t: pageTranslation } = useTranslation("page-home");
@@ -43,6 +44,10 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
     { Icon: IconTransaction, title: "est-transaction-cost" },
     { Icon: IconGlobe, title: "min-validators" },
   ];
+
+  const getCookieValue = () => {
+    console.log(getCookieConsentValue());
+  };
   return (
     <>
       {/* Hero section */}
@@ -125,7 +130,20 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
           </Box>
         }
       />
-
+      <CookieConsent
+        onAccept={() => {
+          getCookieValue();
+        }}
+        enableDeclineButton
+        onDecline={() => {
+          alert("nay!");
+        }}
+      >
+        We value your privacy
+        <br />
+        We use cookies to enhance the user experience, serve personalised ads or content , and
+        analise our traffic. by clicking i Understand you consent to our use if cookies
+      </CookieConsent>
       <SlidingStats stats={stats} />
       <ReadWhitepaper />
       <MoreAboutShardeum />

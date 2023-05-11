@@ -119,7 +119,7 @@ const Page = () => {
             Investor Updates
           </Text>
           <Center gap={6} py={6}>
-            {InvestorPagesLinks.map((links) => (
+            {InvestorPagesLinks.reverse().map((links) => (
               <Box
                 key={links.slug}
                 maxW={"445px"}

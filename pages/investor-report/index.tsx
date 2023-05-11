@@ -20,8 +20,10 @@ import Image from "next/image";
 const Page = () => {
   const title = "Shardeum Investor Report";
   const canonical = "https://shardeum.org/investor-report/";
-  const description = "Investor Report";
-  const image = "https://shardeum.org/Shardeum.png";
+  const description =
+    "Stay ahead of the curve and unlock valuable insights with Shardeum's Investor Report that will be published on our website every month. You don't want to miss this!";
+  const image =
+    "https://shardeum.org/explore/wp-content/uploads/2023/05/Shardeum-Investor-Report.jpg";
   return (
     <>
       <Hero

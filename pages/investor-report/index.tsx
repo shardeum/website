@@ -118,8 +118,8 @@ const Page = () => {
           <Text fontSize="3xl" color="#000">
             Investor Updates
           </Text>
-          <Center gap={6} py={6}>
-            {InvestorPagesLinks.reverse().map((links) => (
+          <Center gap={6} py={6} flexDirection="row-reverse">
+            {InvestorPagesLinks.map((links) => (
               <Box
                 key={links.slug}
                 maxW={"445px"}

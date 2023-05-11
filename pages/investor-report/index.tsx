@@ -14,6 +14,8 @@ import Hero from "components/sections/Hero";
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 import { CalendarIcon } from "@chakra-ui/icons";
+import { Box, Center, Heading, Avatar, useColorModeValue } from "@chakra-ui/react";
+import Image from "next/image";
 
 const Page = () => {
   const title = "Shardeum Investor Report";
@@ -114,20 +116,37 @@ const Page = () => {
           <Text fontSize="3xl" color="#000">
             Investor Updates
           </Text>
-          <Text
-            fontSize={{ base: "md", lg: "xl" }}
-            textAlign="left"
-            lineHeight={{ base: "7", md: "8" }}
-            color={"#37352f"}
-          >
+          <Center gap={6} py={6}>
             {InvestorPagesLinks.map((links) => (
-              <Text key={links.slug} py="2">
-                <NextLink href={`/investor-report/${links.slug}`} passHref>
-                  {links.name}
-                </NextLink>
-              </Text>
+              <Box
+                key={links.slug}
+                maxW={"445px"}
+                w={"full"}
+                bg={useColorModeValue("white", "gray.900")}
+                boxShadow={"2xl"}
+                rounded={"md"}
+                p={6}
+                overflow={"hidden"}
+              >
+                <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
+                  <NextLink href={`/investor-report/${links.slug}`}>
+                    <a>
+                      <Image src={links.image} layout={"fill"} />
+                    </a>
+                  </NextLink>
+                </Box>
+                <Stack>
+                  <Heading
+                    color={useColorModeValue("gray.700", "white")}
+                    fontSize={"2xl"}
+                    fontFamily={"body"}
+                  >
+                    <NextLink href={`/investor-report/${links.slug}`}>{links.name}</NextLink>
+                  </Heading>
+                </Stack>
+              </Box>
             ))}
-          </Text>
+          </Center>
         </Container>
       </Flex>
     </>

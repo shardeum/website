@@ -122,9 +122,7 @@ const Page = ({
           >
             {title}
           </Text>
-          <div className="notion-page">
-            <Image py="4" src={image} alt={title} />
-          </div>
+
           <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>

@@ -55,8 +55,8 @@ const NewsItem = ({
       <Flex w="full" position="relative">
         {imageURL ? (
           <AspectRatio ratio={564 / 300} w="full">
-            <img src={imageURL} alt={title} />
-            {/* <Image unoptimized={false} src={imageURL} alt={title} layout="fill" /> */}
+            {/* <img src={imageURL} alt={title} /> */}
+            <Image unoptimized={false} src={imageURL} alt={title} layout="fill" />
           </AspectRatio>
         ) : null}
         <Box position="absolute" bg="brand.white" px="3" py="2" bottom="0">
@@ -106,12 +106,11 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
           </SwiperSlide>
         ))} */}
         {news.map((item, index) => {
-          console.log("*****news", item.title, index);
           return (
             <SwiperSlide key={item.title}>
               <NewsItem
                 title={item.title}
-                imageURL={`/news/${index}.png`}
+                imageURL={`/news/${index}.jpg`}
                 siteName={item.siteName}
                 newsURL={item.newsURL}
               />

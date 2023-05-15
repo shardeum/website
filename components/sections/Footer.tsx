@@ -43,6 +43,7 @@ import {
   NEWSLETTER_URL,
   CLAIM_100_SHM_LINK,
   BRAND_ASSET,
+  NEWS_LETTER_UPDATES,
 } from "../../constants/links";
 import { useTranslation } from "next-i18next";
 import useNewsLetterForm from "../../hooks/useNewsletter";
@@ -144,6 +145,7 @@ const LinksMap = {
     { title: "faq", href: FAQ_URL },
     { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },
     { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },
+    { title: "Newsletter Updates", href: NEWS_LETTER_UPDATES, target: "_BLANK" },
     { title: "Brand Assets", href: BRAND_ASSET },
   ],
   Contact: [

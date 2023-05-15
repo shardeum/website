@@ -97,7 +97,7 @@ function Team() {
                   <Image
                     layout="fill"
                     objectFit="cover"
-                    src="/community-thumbnail.png"
+                    src="/community-thumbnail.jpg"
                     alt="Community Image"
                   />
                 </AspectRatio>

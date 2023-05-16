@@ -21,7 +21,7 @@ const CommunityUpdatesLinks = [
     name: "Shardeum Mar'23 Updates",
     title: "Shardeum Mar'23 Updates | Shardeum",
     description: "Shardeum Mar'23 Updates",
-    image: "https://shardeum.org/explore/wp-content/uploads/2023/05/IMG_20230509_195808_792.jpg",
+    image: "https://shardeum.org/explore/wp-content/uploads/2023/05/Shardeum-going-open-source.jpg",
   },
   {
     notionId: "5f50b54b6fa6489c8af3f6b2b9e1710e ",

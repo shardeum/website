@@ -4960,6 +4960,11 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
+react-tweet-embed@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-tweet-embed/-/react-tweet-embed-2.0.0.tgz#bb8a94bd11bf38ce6c5d9f18f35bf044110a7f40"
+  integrity sha512-g2kfPjSRTOKeJtaQF5EMuSTmp/q8I0qdDs/pZ2qLXZjCWExDT/JgjxSlyM65NyNzsz8072PDpvlO/sIXwwVpdQ==
+
 react-universal-interface@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"

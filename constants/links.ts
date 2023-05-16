@@ -14,6 +14,7 @@ export const TWITTER_URL = "https://twitter.com/shardeum";
 export const NEWSLETTER_URL = "/newsletter";
 export const DOCS_URL = "https://docs.shardeum.org";
 export const DEV_URL = "/developer";
+export const SHARDEUM_UPDATES_URL = "/shardeum-updates";
 export const GITHUB_URL = "https://github.com/shardeum/";
 export const SUPER_SHARDIAN_START_HERE = "https://trello.com/b/8d3aAQWj/super-shardian";
 export const EXPLORE_EVENTS = "/explore/events/";

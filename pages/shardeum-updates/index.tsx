@@ -20,7 +20,7 @@ import Image from "next/image";
 const Page = () => {
   const reCommunityUpdatesLinks = CommunityUpdatesLinks.slice(0).reverse();
   const title = "Shardeum Updates";
-  const canonical = "https://shardeum.org/community-update/";
+  const canonical = "https://shardeum.org/shardeum-updates/";
   const description =
     "Open, Collaborative, and Community-driven approach is the core principle of Shardeum. That is why, we have started an initiative to share monthly Shardeum updates with you all to keep you updated about the foundation. Excited to build the future of decentralization together 🚀";
   const image =
@@ -95,7 +95,7 @@ const Page = () => {
                     "@type": "ListItem", 
                     "position": 2, 
                     "name": "Shardeum Community Update",
-                    "item": "https://shardeum.org/community-update/"  
+                    "item": "https://shardeum.org/shardeum-updates/"  
                   }]
                 }
                 </script>`,

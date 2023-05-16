@@ -22,7 +22,7 @@ const Page = () => {
   const title = "Shardeum Updates";
   const canonical = "https://shardeum.org/shardeum-updates/";
   const description =
-    "Open, Collaborative, and Community-driven approach is the core principle of Shardeum. That is why, we have started an initiative to share monthly Shardeum updates with you all to keep you updated about the foundation. Excited to build the future of decentralization together 🚀";
+    "At Shardeum, we embrace an open, collaborative, and community-driven approach. Stay updated with our monthly updates as we build the future of decentralization together";
   const image =
     "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-19-41-05.png";
   return (

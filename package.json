@@ -45,6 +45,7 @@
     "react-new-window": "^0.2.1",
     "react-notion-x": "^6.12.11",
     "react-slick": "^0.29.0",
+    "react-tweet-embed": "^2.0.0",
     "react-vertical-timeline-component": "^3.5.2",
     "swiper": "^8.1.3",
     "typecheck": "tsc"

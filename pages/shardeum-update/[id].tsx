@@ -3,9 +3,12 @@ import { NotionAPI } from "notion-client";
 import { Container, Flex, Text, VStack } from "@chakra-ui/react";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionRenderer } from "react-notion-x";
+import { Collection } from "react-notion-x/build/third-party/collection";
+import TweetEmbed from "react-tweet-embed";
+
 // core styles shared by all of react-notion-x (required)
 import "react-notion-x/src/styles.css";
-import InvestorPagesLinks from "constants/community-updates";
+import CommunityUpdatesLinks from "constants/community-updates";
 import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -21,7 +24,10 @@ const Page = ({
   recordMap: ExtendedRecordMap;
   notionPageDetails: any;
 }) => {
-  const title = getPageTitle(recordMap);
+  const Tweet = ({ id }: { id: string }) => {
+    return <TweetEmbed tweetId={id} />;
+  };
+  const title = notionPageDetails.name;
   const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
   const description = notionPageDetails.description;
   const image = notionPageDetails.image;
@@ -42,8 +48,8 @@ const Page = ({
                   Home
                 </NextLink>{" "}
                 /{" "}
-                <NextLink href="/investor-report" passHref>
-                  Investor Report
+                <NextLink href="/shardeum-update" passHref>
+                  Shardeum Update
                 </NextLink>{" "}
                 / {title}
               </p>
@@ -123,7 +129,12 @@ const Page = ({
             {title}
           </Text>
 
-          <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
+          <NotionRenderer
+            recordMap={recordMap}
+            fullPage={false}
+            darkMode={false}
+            components={{ Collection, Tweet }}
+          />
         </Container>
       </Flex>
     </>
@@ -131,7 +142,7 @@ const Page = ({
 };
 // Generates `/posts/1` and `/posts/2`
 export async function getStaticPaths() {
-  const paths = InvestorPagesLinks.map((post) => ({
+  const paths = CommunityUpdatesLinks.map((post) => ({
     params: { id: post.slug },
   }));
 
@@ -146,7 +157,7 @@ export async function getStaticProps({ params, locale }: { params: any; locale: 
   const pageId = params.id;
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
-  for (const nPage of InvestorPagesLinks) {
+  for (const nPage of CommunityUpdatesLinks) {
     // console.log(nPage);
     if (nPage.slug == pageId) notionPageDetails = nPage;
   }

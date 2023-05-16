@@ -19,7 +19,7 @@ import Image from "next/image";
 
 const Page = () => {
   const reCommunityUpdatesLinks = CommunityUpdatesLinks.slice(0).reverse();
-  const title = "Shardeum Community Update";
+  const title = "Shardeum Updates";
   const canonical = "https://shardeum.org/community-update/";
   const description =
     "Open, Collaborative, and Community-driven approach is the core principle of Shardeum. That is why, we have started an initiative to share monthly Shardeum updates with you all to keep you updated about the foundation. Excited to build the future of decentralization together 🚀";
@@ -29,12 +29,13 @@ const Page = () => {
     <>
       <ResponsiveHero
         heading={title}
-        description={description}
-        breadcrumb={
+        description={
           <>
             <p>Community is the CEO of Shardeum!</p>
+            <small>{description}</small>
           </>
         }
+        breadcrumb={<></>}
         cta={<></>}
         src={"/community/community-hero.png"}
       />

@@ -31,6 +31,7 @@ import {
   EXPLORER_NEW_LIBERTY_URL,
   REPORT_BUGS,
   DEV_URL,
+  SHARDEUM_UPDATES_URL,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -138,6 +139,12 @@ const linksArr = [
       {
         title: "shardeum_events",
         link: EXPLORE_EVENTS,
+        newPage: false,
+        highlight: false,
+      },
+      {
+        title: "shardeum_updates",
+        link: SHARDEUM_UPDATES_URL,
         newPage: false,
         highlight: false,
       },

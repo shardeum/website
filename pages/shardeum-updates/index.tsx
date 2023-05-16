@@ -94,8 +94,8 @@ const Page = () => {
                   },{
                     "@type": "ListItem", 
                     "position": 2, 
-                    "name": "Shardeum Investor Report",
-                    "item": "https://shardeum.org/investor-report/"  
+                    "name": "Shardeum Community Update",
+                    "item": "https://shardeum.org/community-update/"  
                   }]
                 }
                 </script>`,
@@ -115,7 +115,7 @@ const Page = () => {
                 overflow={"hidden"}
               >
                 <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-                  <NextLink href={`/shardeum-update/${links.slug}`}>
+                  <NextLink href={`/shardeum-updates/${links.slug}`}>
                     <a>
                       <Image src={links.image} layout="fill" objectFit={"cover"} />
                     </a>
@@ -127,7 +127,7 @@ const Page = () => {
                     fontSize={"2xl"}
                     fontFamily={"body"}
                   >
-                    <NextLink href={`/shardeum-update/${links.slug}`}>{links.name}</NextLink>
+                    <NextLink href={`/shardeum-updates/${links.slug}`}>{links.name}</NextLink>
                   </Heading>
                 </Stack>
               </Box>

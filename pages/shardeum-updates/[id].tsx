@@ -48,7 +48,7 @@ const Page = ({
                   Home
                 </NextLink>{" "}
                 /{" "}
-                <NextLink href="/shardeum-update" passHref>
+                <NextLink href="/shardeum-updates" passHref>
                   Shardeum Update
                 </NextLink>{" "}
                 / {title}
@@ -97,27 +97,6 @@ const Page = ({
           py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `<script type="application/ld+json">
-                {
-                  "@context": "https://schema.org/", 
-                  "@type": "BreadcrumbList", 
-                  "itemListElement": [{
-                    "@type": "ListItem", 
-                    "position": 1, 
-                    "name": "Home",
-                    "item": "https://shardeum.org/"  
-                  },{
-                    "@type": "ListItem", 
-                    "position": 2, 
-                    "name": "Super Shardian: Proof Of Community",
-                    "item": "https://shardeum.org/proof-of-community-program/"  
-                  }]
-                }
-                </script>`,
-            }}
-          ></script>
           <Text
             fontSize={{ base: "md", lg: "xl" }}
             textAlign="left"

@@ -26,8 +26,8 @@ const CommunityUpdatesLinks = [
   {
     notionId: "5f50b54b6fa6489c8af3f6b2b9e1710e ",
     slug: "April-2023",
-    name: "Shardeum April'23 Updates",
-    title: "Shardeum April'23 Updates | Shardeum",
+    name: "Shardeum Apr'23 Updates",
+    title: "Shardeum Apr'23 Updates | Shardeum",
     description: "Shardeum April'23 Updates",
     image:
       "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-12-12-11.png",

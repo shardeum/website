@@ -103,7 +103,7 @@ const Page = ({
             fontWeight="bold"
             lineHeight={{ base: "7", md: "8" }}
             color={"#37352f"}
-            paddingLeft="7.9cm"
+            paddingLeft={{ base: "15", md: "7.9cm" }}
           >
             {title}
           </Text>

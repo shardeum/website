@@ -1,39 +1,33 @@
 /* eslint-disable react/no-unknown-property */
 import { NotionAPI } from "notion-client";
-import { Container, Flex, Text, VStack, useBreakpointValue, Stack, Button } from "@chakra-ui/react";
+import { Container, Flex, Text, VStack } from "@chakra-ui/react";
 import { ExtendedRecordMap } from "notion-types";
 import { NotionRenderer } from "react-notion-x";
 // core styles shared by all of react-notion-x (required)
 import "react-notion-x/src/styles.css";
-import InvestorPagesLinks from "constants/investor-pages";
+import InvestorPagesLinks from "constants/community-updates";
 import { NextSeo } from "next-seo";
 import { getPageTitle } from "notion-utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import Hero from "components/sections/Hero";
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/react";
-import { CalendarIcon } from "@chakra-ui/icons";
-import { Box, Center, Heading, Avatar, useColorModeValue } from "@chakra-ui/react";
-import Image from "next/image";
+import Hero from "components/sections/Hero";
+import { Image, Center } from "@chakra-ui/react";
 
-const Page = () => {
-  const title = "Shardeum Investor Report";
-  const canonical = "https://shardeum.org/investor-report/";
-  const description =
-    "Stay ahead of the curve and unlock valuable insights with Shardeum's Investor Report that will be published on our website every month. You don't want to miss this!";
-  const image =
-    "https://shardeum.org/explore/wp-content/uploads/2023/05/Shardeum-Investor-Report.jpg";
+const Page = ({
+  recordMap,
+  notionPageDetails,
+}: {
+  recordMap: ExtendedRecordMap;
+  notionPageDetails: any;
+}) => {
+  const title = getPageTitle(recordMap);
+  const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
+  const description = notionPageDetails.description;
+  const image = notionPageDetails.image;
   return (
     <>
       <Hero
-        heading="Shardeum Investor Report"
-        backgroundImage={
-          "url(https://shardeum.org/explore/wp-content/uploads/2023/05/charles-forerunner-3fPXt37X6UQ-unsplash-1.png)"
-        }
-        backgroundSize={"cover"}
-        backgroundPosition={"center center"}
-        description=""
         cta={
           <>
             <Text
@@ -47,7 +41,11 @@ const Page = () => {
                 <NextLink href="/" passHref>
                   Home
                 </NextLink>{" "}
-                / Investor Report
+                /{" "}
+                <NextLink href="/investor-report" passHref>
+                  Investor Report
+                </NextLink>{" "}
+                / {title}
               </p>
             </Text>
           </>
@@ -86,7 +84,6 @@ const Page = () => {
           handle: "@shardeum",
         }}
       />
-
       <Flex bg="brand.white" as="section">
         <Container
           maxW="container.xl"
@@ -108,55 +105,66 @@ const Page = () => {
                   },{
                     "@type": "ListItem", 
                     "position": 2, 
-                    "name": "Shardeum Investor Report",
-                    "item": "https://shardeum.org/investor-report/"  
+                    "name": "Super Shardian: Proof Of Community",
+                    "item": "https://shardeum.org/proof-of-community-program/"  
                   }]
                 }
                 </script>`,
             }}
           ></script>
-          <Text fontSize="3xl" color="#000">
-            Investor Updates
+          <Text
+            fontSize={{ base: "md", lg: "xl" }}
+            textAlign="left"
+            fontWeight="bold"
+            lineHeight={{ base: "7", md: "8" }}
+            color={"#37352f"}
+            paddingLeft="7.9cm"
+          >
+            {title}
           </Text>
-          <Center gap={6} py={6} flexDirection="row-reverse">
-            {InvestorPagesLinks.map((links) => (
-              <Box
-                key={links.slug}
-                maxW={"445px"}
-                w={"full"}
-                bg={useColorModeValue("white", "gray.900")}
-                boxShadow={"2xl"}
-                rounded={"md"}
-                p={6}
-                overflow={"hidden"}
-              >
-                <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
-                  <NextLink href={`/investor-report/${links.slug}`}>
-                    <a>
-                      <Image src={links.image} layout={"fill"} />
-                    </a>
-                  </NextLink>
-                </Box>
-                <Stack>
-                  <Heading
-                    color={useColorModeValue("gray.700", "white")}
-                    fontSize={"2xl"}
-                    fontFamily={"body"}
-                  >
-                    <NextLink href={`/investor-report/${links.slug}`}>{links.name}</NextLink>
-                  </Heading>
-                </Stack>
-              </Box>
-            ))}
-          </Center>
+
+          <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>
     </>
   );
 };
-export async function getStaticProps({ locale }: { locale: string }) {
+// Generates `/posts/1` and `/posts/2`
+export async function getStaticPaths() {
+  const paths = InvestorPagesLinks.map((post) => ({
+    params: { id: post.slug },
+  }));
+
+  return {
+    paths,
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+
+export async function getStaticProps({ params, locale }: { params: any; locale: string }) {
+  const notion = new NotionAPI();
+  const pageId = params.id;
+  // console.log(NotionPagesLinks);
+  let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
+  for (const nPage of InvestorPagesLinks) {
+    // console.log(nPage);
+    if (nPage.slug == pageId) notionPageDetails = nPage;
+  }
+
+  if (!notionPageDetails.notionId) {
+    //Redirect to 404
+    return {
+      // returns the default 404 page with a status code of 404
+      notFound: true,
+    };
+  }
+  // const notionPageDetails = NotionPagesLinks[pageId];
+  const recordMap = await notion.getPage(notionPageDetails.notionId);
+  // console.log(recordMap);
   return {
     props: {
+      recordMap,
+      notionPageDetails,
       ...(await serverSideTranslations(locale, ["common"])),
     },
     revalidate: 10, // In seconds

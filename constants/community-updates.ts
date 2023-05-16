@@ -30,7 +30,7 @@ const CommunityUpdatesLinks = [
     title: "Shardeum April'23 Updates | Shardeum",
     description: "Shardeum April'23 Updates",
     image:
-      "https://shardeum.org/explore/wp-content/uploads/2023/05/Grey-Simple-Modern-Timeline-Infographic-Chart-Graph.png",
+      "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-12-12-11.png",
   },
 ];
 

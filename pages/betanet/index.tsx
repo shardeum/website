@@ -973,7 +973,7 @@ const AlphanetLanding: NextPage = () => {
               <SimpleGrid className="" columns={[1, 2]} justifyContent="space-between" w="full">
                 <Box className="roadmap-li-box ">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text">{"Q1 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{marginTop: '10px'}}>{"Q1 2023"}</span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 

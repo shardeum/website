@@ -958,7 +958,7 @@ const AlphanetLanding: NextPage = () => {
           <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10} pl={5}>
-                <span style={{ color: "#EC5B29" }}>{"2022"}</span>
+                <span style={{ color: "#EC5B29" }}>{"2023"}</span>
                 <h2 className="betaAlphanetTitle " style={{ margin: "0" }}>
                   {"Sphinx Roadmap"}
                 </h2>
@@ -973,7 +973,7 @@ const AlphanetLanding: NextPage = () => {
               <SimpleGrid className="" columns={[1, 2]} justifyContent="space-between" w="full">
                 <Box className="roadmap-li-box ">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text">{"Q1 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{marginTop: '20px'}}>{"Q1 2023"}</span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
@@ -992,7 +992,7 @@ const AlphanetLanding: NextPage = () => {
 
                 <Box className="roadmap-li-box dashBorder">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text">{"Q2 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{marginTop: '20px'}}>{"Q2 2023"}</span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 

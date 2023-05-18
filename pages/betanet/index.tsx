@@ -999,7 +999,7 @@ const AlphanetLanding: NextPage = () => {
                   <Box className="road-list-wrap">
                     <ul>
                       <li>{"Sphinx 1.2"}</li>
-                      <li>{"Node Reward Policy Announcement"}</li>
+                      <li>{"Sphinx 1.3"}</li>
                       <li>{"Feature completion"}</li>
                       <li>{"Patent Filing"}</li>
                     </ul>

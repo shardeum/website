@@ -958,7 +958,7 @@ const AlphanetLanding: NextPage = () => {
           <VStack spacing={{ base: "12", md: "12" }} alignItems="start" w="full" pb="16">
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10} pl={5}>
-                <span style={{ color: "#EC5B29" }}>{"2022"}</span>
+                <span style={{ color: "#EC5B29" }}>{"2023"}</span>
                 <h2 className="betaAlphanetTitle " style={{ margin: "0" }}>
                   {"Sphinx Roadmap"}
                 </h2>

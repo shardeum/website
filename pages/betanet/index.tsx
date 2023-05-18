@@ -992,7 +992,7 @@ const AlphanetLanding: NextPage = () => {
 
                 <Box className="roadmap-li-box dashBorder">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text">{"Q2 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{marginTop: '20px'}}>{"Q2 2023"}</span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 

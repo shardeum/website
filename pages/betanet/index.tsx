@@ -984,21 +984,24 @@ const AlphanetLanding: NextPage = () => {
                         {"Sphinx 1.1 with 250 TPS, 1280 validators and a 128 node shard size"}
                       </li>
                       <li>{"Nodes and validators are open source to run by the community"}</li>
+                      <li>{"Validator Dashboard (GUI) launch"}</li>
+                      <li>{"Staking, auto scaling, node rotation and node rewards enabled"}</li>
                     </ul>
                   </Box>
                 </Box>
 
                 <Box className="roadmap-li-box dashBorder">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text">{"Continued..."}</span>
+                    <span className="roadmap-li-heading-text">{"Q2 2023"}</span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
                   <Box className="road-list-wrap">
                     <ul>
-                      <li>{"Validator Dashboard (GUI) launch"}</li>
-                      <li>{"Staking, auto scaling, node rotation and node rewards enabled"}</li>
-                      <li>{"External security audits and bug bounties"}</li>
+                      <li>{"Sphinx 1.2"}</li>
+                      <li>{"Node Reward Policy Announcement"}</li>
+                      <li>{"Feature completion"}</li>
+                      <li>{"Patent Filing"}</li>
                     </ul>
                   </Box>
                 </Box>

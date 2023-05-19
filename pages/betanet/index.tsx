@@ -1506,8 +1506,8 @@ const AlphanetLanding: NextPage = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            these
-                          </a> 
+                            {" "}these{" "}
+                        </a>
                         validator source codes considering validator nodes are now run by community since the launch of Betanet. 
                         The project intends to open source all the repositories by the time it reaches mainnet in 2023.
                         </>

@@ -160,7 +160,7 @@ const roadmapList = [
         taskList: [
           "phase-8-task-list-1",
           "phase-8-task-list-2",
-          "phase-8-task-list-3",
+          // "phase-8-task-list-3",
           "phase-8-task-list-4",
 
           // "phase-7-task-list-6",

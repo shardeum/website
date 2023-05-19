@@ -1473,7 +1473,7 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                          Whitepaper will be released around the same time as the launch of betanet
+                          Whitepaper will be released during betanet phase of the project.
                         </>
                         {/* <ReactMarkdown linkTarget="_blank">
                           </ReactMarkdown> */}
@@ -1500,8 +1500,7 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                          The Shardeum code will be open-sourced around the same time as the launch
-                          of betanet
+                        Shardeum has begun open-sourcing its codebase on 09th March 2023. Public can now access and contribute to <a style='color:#ec5c28' target="_blank" href="https://shardeum.org/blog/shardeum-open-source/">these</a> validator source codes considering validator nodes are now run by community since the launch of Betanet. The project intends to open source all the repositories by the time it reaches mainnet in 2023.
                         </>
                         {/* <ReactMarkdown linkTarget="_blank">
                           </ReactMarkdown> */}
@@ -1561,25 +1560,17 @@ const AlphanetLanding: NextPage = () => {
 
                                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                                     <>
-                                      Consensus and processing are done at transaction level on
-                                      Shardeum instead of the block level which you find with
-                                      existing blockchain networks. Through dynamic state sharding,
-                                      the network will shard its state by evenly and dynamically
-                                      distributing compute workload, storage, and bandwidth among
-                                      all the nodes. This not only allows for parallel processing of
-                                      transactions but also very low overhead for validator nodes as
-                                      they will store only the state data of transactions they are
-                                      involved in.{" "}
-                                      <b>
-                                        Shardeum will be the first Web3 network to scale linearly
-                                      </b>{" "}
-                                      . Dynamic state sharding is the most advanced version of
-                                      state, transaction/network and static state sharding employed
-                                      by more recent sharded chains which runs into both
-                                      inter-related and standalone problems such as high latency,
-                                      vertical scaling (as opposed to linear scaling), sybil attack,
-                                      weak finality and lack of cross shard composability. Shardeum,
-                                      will further maintain atomic and cross-shard composability.
+                                    Consensus and processing are done at transaction level on Shardeum instead of the block level which you find 
+                                    with existing blockchain networks. Validators on the network will be assigned dynamic address spaces across
+                                     multiple shards with significant overlap. Through dynamic state sharding, the network will shard its state 
+                                     by evenly and dynamically distributing compute workload, storage, and bandwidth among all the nodes. 
+                                     This not only allows for parallel processing of transactions but also very low overhead for validator 
+                                     nodes as they will store only the state data of transactions they are involved in. Shardeum will be the 
+                                     first Web3 network to scale linearly . Dynamic state sharding is the most advanced version of state, 
+                                     transaction/network and static state sharding employed by more recent sharded chains which runs into both 
+                                     inter-related and standalone problems such as high latency, vertical scaling (as opposed to linear scaling), 
+                                     sybil attack, weak finality and lack of cross shard composability. Shardeum will retain atomic and cross-shard 
+                                     composability.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}

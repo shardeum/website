@@ -1500,8 +1500,14 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                        Shardeum has begun open-sourcing its codebase on 09th March 2023. Public can now access and contribute to 
-                        these
+                        Shardeum has begun open-sourcing its codebase on 09th March 2023. Public can now access and contribute to
+                        <a
+                            href="https://shardeum.org/blog/shardeum-open-source/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            these
+                          </a> 
                         validator source codes considering validator nodes are now run by community since the launch of Betanet. 
                         The project intends to open source all the repositories by the time it reaches mainnet in 2023.
                         </>

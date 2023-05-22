@@ -420,7 +420,8 @@ const AlphanetLanding: NextPage = () => {
           </Box>
         }
       />
-      <Box position="relative">
+
+      {/* <Box position="relative">
         <Center
           maxW="300px"
           bg="black"
@@ -435,7 +436,8 @@ const AlphanetLanding: NextPage = () => {
           <Text fontSize={{ base: "xl", lg: "2xl" }}>Sphinx 1.2 Metrics</Text>
         </Center>
         <SlidingStats stats={stats} />
-      </Box>
+      </Box> */}
+
       {/* Features of alphanet */}
       {/* <UseCases
         heading={pageTranslation("page-alphanet-hero-features-h1")}
@@ -973,7 +975,9 @@ const AlphanetLanding: NextPage = () => {
               <SimpleGrid className="" columns={[1, 2]} justifyContent="space-between" w="full">
                 <Box className="roadmap-li-box ">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text" style={{marginTop: '20px'}}>{"Q1 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{ marginTop: "20px" }}>
+                      {"Q1 2023"}
+                    </span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
@@ -992,7 +996,9 @@ const AlphanetLanding: NextPage = () => {
 
                 <Box className="roadmap-li-box dashBorder">
                   <Box className="roadmap-li-heading">
-                    <span className="roadmap-li-heading-text" style={{marginTop: '20px'}}>{"Q2 2023"}</span>
+                    <span className="roadmap-li-heading-text" style={{ marginTop: "20px" }}>
+                      {"Q2 2023"}
+                    </span>
                     {/* <span className="roadmap-li-heading-green-line"></span> */}
                   </Box>
 
@@ -1472,9 +1478,7 @@ const AlphanetLanding: NextPage = () => {
                       </AccordionButton>
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
-                        <>
-                          Whitepaper will be released during betanet phase of the project.
-                        </>
+                        <>Whitepaper will be released during betanet phase of the project.</>
                         {/* <ReactMarkdown linkTarget="_blank">
                           </ReactMarkdown> */}
                       </AccordionPanel>
@@ -1500,16 +1504,19 @@ const AlphanetLanding: NextPage = () => {
 
                       <AccordionPanel className="brand-orange-href" px={5} py={8}>
                         <>
-                        Shardeum has begun open-sourcing its codebase on 09th March 2023. Public can now access and contribute to
-                        <a
+                          Shardeum has begun open-sourcing its codebase on 09th March 2023. Public
+                          can now access and contribute to
+                          <a
                             href="https://shardeum.org/blog/shardeum-open-source/"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {" "}these{" "}
-                        </a>
-                        validator source codes considering validator nodes are now run by community since the launch of Betanet. 
-                        The project intends to open source all the repositories by the time it reaches mainnet in 2023.
+                            {" "}
+                            these{" "}
+                          </a>
+                          validator source codes considering validator nodes are now run by
+                          community since the launch of Betanet. The project intends to open source
+                          all the repositories by the time it reaches mainnet in 2023.
                         </>
                         {/* <ReactMarkdown linkTarget="_blank">
                           </ReactMarkdown> */}
@@ -1569,17 +1576,24 @@ const AlphanetLanding: NextPage = () => {
 
                                   <AccordionPanel className="brand-orange-href" px={5} py={8}>
                                     <>
-                                    Consensus and processing are done at transaction level on Shardeum instead of the block level which you find 
-                                    with existing blockchain networks. Validators on the network will be assigned dynamic address spaces across
-                                     multiple shards with significant overlap. Through dynamic state sharding, the network will shard its state 
-                                     by evenly and dynamically distributing compute workload, storage, and bandwidth among all the nodes. 
-                                     This not only allows for parallel processing of transactions but also very low overhead for validator 
-                                     nodes as they will store only the state data of transactions they are involved in. Shardeum will be the 
-                                     first Web3 network to scale linearly . Dynamic state sharding is the most advanced version of state, 
-                                     transaction/network and static state sharding employed by more recent sharded chains which runs into both 
-                                     inter-related and standalone problems such as high latency, vertical scaling (as opposed to linear scaling), 
-                                     sybil attack, weak finality and lack of cross shard composability. Shardeum will retain atomic and cross-shard 
-                                     composability.
+                                      Consensus and processing are done at transaction level on
+                                      Shardeum instead of the block level which you find with
+                                      existing blockchain networks. Validators on the network will
+                                      be assigned dynamic address spaces across multiple shards with
+                                      significant overlap. Through dynamic state sharding, the
+                                      network will shard its state by evenly and dynamically
+                                      distributing compute workload, storage, and bandwidth among
+                                      all the nodes. This not only allows for parallel processing of
+                                      transactions but also very low overhead for validator nodes as
+                                      they will store only the state data of transactions they are
+                                      involved in. Shardeum will be the first Web3 network to scale
+                                      linearly . Dynamic state sharding is the most advanced version
+                                      of state, transaction/network and static state sharding
+                                      employed by more recent sharded chains which runs into both
+                                      inter-related and standalone problems such as high latency,
+                                      vertical scaling (as opposed to linear scaling), sybil attack,
+                                      weak finality and lack of cross shard composability. Shardeum
+                                      will retain atomic and cross-shard composability.
                                     </>
                                     {/* <ReactMarkdown linkTarget="_blank">
                                   </ReactMarkdown> */}

@@ -36,30 +36,30 @@ const MenuComponent = (props: any) => {
               <a
                 target="_blank"
                 href={item.link}
-                onClick={() => window.open(item.link)}
+                // onClick={() => window.open(item.link)}
                 rel="noreferrer"
               >
-                <NextLink key={item.title} href={""} passHref>
-                  <Link
+                {/* <NextLink key={item.title} href={item.link} passHref> */}
+                {/* <Link
                     style={{ textDecoration: "none !important" }}
                     variant=""
                     rel="noopener noreferrer"
                     // target={item.newPage ? "_blank" : "_self"}
                     target={"_self"}
-                  >
-                    <MenuItem style={{ textDecoration: "none !important" }} key={item.title}>
-                      {commonTranslation(item.title)}
-                    </MenuItem>
-                  </Link>
-                </NextLink>
+                  > */}
+                <MenuItem style={{ textDecoration: "none !important" }} key={item.title}>
+                  {commonTranslation(item.title)}
+                </MenuItem>
+                {/* </Link> */}
+                {/* </NextLink> */}
                 {/* <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem> */}
               </a>
             ) : (
-              <a href={item.link} rel="noreferrer">
-                <NextLink key={item.title} href={item.link} passHref>
+              <NextLink key={item.title} href={item.link} passHref>
+                <a href={item.link} rel="noreferrer">
                   <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
-                </NextLink>
-              </a>
+                </a>
+              </NextLink>
             )
           // <>
           //   {/* <a key={item.title} target="_blank" href={item.link} rel="noreferrer">

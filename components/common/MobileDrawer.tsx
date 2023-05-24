@@ -57,7 +57,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
         <DrawerOverlay />
         <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "135px" }}>
           <DrawerCloseButton alignSelf="end" m="15" />
-          {isauthVisible === true ? (
+          {/* {isauthVisible === true ? (
             <Menu>
               <MenuButton position="absolute" top="1.5rem" left="1.5rem">
                 <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
@@ -71,7 +71,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                 )}
               </MenuList>
             </Menu>
-          ) : null}
+          ) : null} */}
 
           <DrawerHeader />
           <DrawerBody>

@@ -23,6 +23,13 @@ const NotionPagesLinks = [
       "Becoming a Super Shardian means that you are not only at the forefront of the blockchain race, but you are also pushing the boundaries into deep exploration.",
     image: "https://shardeum.org/Shardeum.png",
   },
+  {
+    slug: "community-rewards",
+    notionId: "96f128c1ebb948e383a13cab4baf61e6",
+    title: "",
+    description: "",
+    image: "https://shardeum.org/Shardeum.png",
+  },
 ];
 
 export default NotionPagesLinks;

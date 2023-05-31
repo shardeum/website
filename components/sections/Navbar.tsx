@@ -153,7 +153,7 @@ const linksArr = [
       {
         title: "community_rewards",
         link: COMMUNITY_REWARDS,
-        newPage: true,
+        newPage: false,
         highlight: false,
       },
       // {

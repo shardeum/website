@@ -10,6 +10,8 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import Head from "next/head";
+import { Helmet } from "react-helmet";
+
 const Quest: NextPage = () => {
   const router = useRouter();
 
@@ -17,27 +19,21 @@ const Quest: NextPage = () => {
   const { t: commonTranslation } = useTranslation(["common"]);
 
   useEffect(() => {
-    // const script = document.createElement("script");
-    // script.type = "application/ld+json";
-    // script.text = `{
-    //   "@context": "https://schema.org/",
-    //   "@type": "BreadcrumbList",
-    //   itemListElement: [
-    //     {
-    //       "@type": "ListItem",
-    //       position: 1,
-    //       name: "Home",
-    //       item: "https://shardeum.org/",
-    //     },
-    //     {
-    //       "@type": "ListItem",
-    //       position: 2,
-    //       name: "Careers",
-    //       item: "https://shardeum.org/careers/",
-    //     },
-    //   ],
-    // };`;
-    // document.head.appendChild(script);
+    const script = document.createElement("script");
+    script.src = "https://sdk.bandit.network/static/js/index.js";
+    script.async = true;
+
+    script.onload = () => {
+      // Call the function from the loaded script here
+      renderStats({ id: "bad-stats", accessKey: "a1f02d832d8b4d6d82ea450367bbe1f3" });
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup: remove the dynamically added script when the component unmounts
+      document.body.removeChild(script);
+    };
   }, []);
   return (
     <>
@@ -77,18 +73,15 @@ const Quest: NextPage = () => {
       /> */}
 
       <Head>
-        <title>{`Shardeum Community | Community is the CEO of Shardeum`}</title>
-        <meta
-          name="description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
-        />
+        <title>{`Shardeum Quest`}</title>
+        <meta name="description" content={`Shardeum welcomes you to the quest`} />
         <meta
           name="keywords"
           content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
         />
 
         {/* Facebook */}
-        <meta property="og:url" content={`https://shardeum.org/careers/`} />
+        {/* <meta property="og:url" content={`https://shardeum.org/careers/`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -98,10 +91,10 @@ const Quest: NextPage = () => {
           property="og:description"
           content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
         />
-        <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} />
+        <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} /> */}
 
         {/* Twiter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta property="twitter:url" content={`https://shardeum.org/careers/`} />
         <meta
@@ -112,7 +105,7 @@ const Quest: NextPage = () => {
           property="twitter:description"
           content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
         />
-        <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} />
+        <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} /> */}
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
 
@@ -140,7 +133,7 @@ const Quest: NextPage = () => {
                 "@type": "ListItem", 
                 "position": 2, 
                 "name": "Careers",
-                "item": "https://shardeum.org/careers/"  
+                "item": "https://shardeum.org/quest/"  
               }]
             }`,
           }}
@@ -148,22 +141,7 @@ const Quest: NextPage = () => {
       </Head>
 
       {/* Hero section */}
-      {!router.query.gh_jid && (
-        <Hero
-          heading="Help us build Shardeum!"
-          description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
-          breadcrumb={
-            <>
-              <p>
-                <NextLink href="/" passHref>
-                  Home
-                </NextLink>{" "}
-                / Careers
-              </p>
-            </>
-          }
-        />
-      )}
+      {!router.query.gh_jid && <Hero heading="Shardeum Quest!" />}
       <Flex bg="brand.white" as="section">
         <Container
           maxW="container.xl"
@@ -171,8 +149,7 @@ const Quest: NextPage = () => {
           py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
-          <div id="grnhse_app"></div>
-          <Script src="https://boards.greenhouse.io/embed/job_board/js?for=shardeumfoundation" />
+          <div data-access-key="a1f02d832d8b4d6d82ea450367bbe1f3" id="bad-stats"></div>
         </Container>
       </Flex>
     </>

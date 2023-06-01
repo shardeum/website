@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: "/live",
-        destination: "https://youtube.com/live/yCdD2ywT7yY",
+        destination: "https://youtube.com/live/hmRlBMtWvxk",
         permanent: true,
       },
       {

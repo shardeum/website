@@ -25,7 +25,13 @@ const Quest: NextPage = () => {
 
     script.onload = () => {
       // Call the function from the loaded script here
-      renderStats({ id: "bad-stats", accessKey: "a1f02d832d8b4d6d82ea450367bbe1f3" });
+      renderStats({
+        launchpad: {
+          buttonTitle: "Launchpad",
+          allowedChains: [8082],
+        },
+        allowedChains: [8082],
+      });
     };
 
     document.body.appendChild(script);

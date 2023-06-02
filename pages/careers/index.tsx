@@ -15,7 +15,11 @@ const Carrers: NextPage = () => {
 
   const { t: pageTranslation } = useTranslation(["page-careers"]);
   const { t: commonTranslation } = useTranslation(["common"]);
-
+  const { title, description } = {
+    title: "Careers at Shardeum | EVM Based L1 Blockchain",
+    description:
+      "Discover exciting career opportunities with Shardeum and leave a lasting impact on its mission to make decentralization accessible to all.",
+  };
   useEffect(() => {
     // const script = document.createElement("script");
     // script.type = "application/ld+json";
@@ -77,11 +81,8 @@ const Carrers: NextPage = () => {
       /> */}
 
       <Head>
-        <title>{`Shardeum Community | Community is the CEO of Shardeum`}</title>
-        <meta
-          name="description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta
           name="keywords"
           content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
@@ -90,28 +91,16 @@ const Carrers: NextPage = () => {
         {/* Facebook */}
         <meta property="og:url" content={`https://shardeum.org/careers/`} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content={`Shardeum Community | Community is the CEO of Shardeum`}
-        />
-        <meta
-          property="og:description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} />
 
         {/* Twiter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="https://shardeum.org/" />
         <meta property="twitter:url" content={`https://shardeum.org/careers/`} />
-        <meta
-          property="twitter:title"
-          content={`Shardeum Community | Community is the CEO of Shardeum`}
-        />
-        <meta
-          property="twitter:description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
-        />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} />
 
         {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
@@ -151,7 +140,7 @@ const Carrers: NextPage = () => {
       {!router.query.gh_jid && (
         <Hero
           heading="Help us build Shardeum!"
-          description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
+          description={description}
           breadcrumb={
             <>
               <p>

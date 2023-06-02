@@ -151,7 +151,7 @@ const Carrers: NextPage = () => {
       {!router.query.gh_jid && (
         <Hero
           heading="Help us build Shardeum!"
-          description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
+          description="Discover exciting career opportunities with Shardeum and leave a lasting impact on its mission to make decentralization accessible to all"
           breadcrumb={
             <>
               <p>

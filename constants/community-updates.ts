@@ -32,6 +32,15 @@ const CommunityUpdatesLinks = [
     image:
       "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-12-12-11.png",
   },
+  {
+    notionId: "9ca212da1023412f9ee9e99938e004a0 ",
+    slug: "may-2023",
+    name: "Shardeum May'23 Updates",
+    title: "Shardeum May'23 Updates | Shardeum",
+    description: "Shardeum May'23 Updates",
+    image:
+      "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-12-12-11.png",
+  },
 ];
 
 export default CommunityUpdatesLinks;

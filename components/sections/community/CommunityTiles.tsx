@@ -411,7 +411,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Intern",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://twitter.com/Shardeumintern",
     fallBackNum: "",
     userAlias: "@Shardeumintern (Twitter)",
@@ -595,7 +595,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum List",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/shardeumlist",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -627,7 +627,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Belarus",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/shardeum_belarus_official",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -659,7 +659,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Ukraine",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/ShardeumUkraine",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -667,7 +667,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum France",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://twitter.com/ShardeumFrance",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -675,7 +675,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Vietnam",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/Shardeumvietnamgroup",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -683,7 +683,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Sharedum USA",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://twitter.com/shardeumusa",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",
@@ -691,7 +691,7 @@ const tilesData: Tile[] = [
   {
     key: "Shardeum_Community",
     title: "Shardeum Kenya",
-    icon: "https://pbs.twimg.com/profile_images/1638052223090569216/vrk5E0to_400x400.jpg",
+    icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/shardeumkenya",
     fallBackNum: "",
     userAlias: "shuwamrana#1123 (Discord)",

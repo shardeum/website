@@ -602,7 +602,7 @@ const tilesData: Tile[] = [
   },
   {
     key: "Shardeum_Community",
-    title: "Sharedum Korea",
+    title: "Shardeum Korea",
     icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://t.me/shardeumkorea",
     fallBackNum: "",
@@ -682,7 +682,7 @@ const tilesData: Tile[] = [
   },
   {
     key: "Shardeum_Community",
-    title: "Sharedum USA",
+    title: "Shardeum USA",
     icon: "https://pbs.twimg.com/profile_images/1619661303844585472/9_Q6Dwef_400x400.jpg",
     link: "https://twitter.com/shardeumusa",
     fallBackNum: "",

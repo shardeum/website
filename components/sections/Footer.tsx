@@ -64,7 +64,6 @@ const JoinNewsletterComp = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log("****useRouter()", router.pathname);
     router.pathname == "/developer"
       ? setTitle("join-newsletter-title-footer-dev")
       : setTitle("join-newsletter-title-footer");
@@ -150,7 +149,7 @@ const LinksMap = {
   ],
   Contact: [
     { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
-    { title: "investment-queries", href: INVESTMENT_QUERY_LINK, target: "_BLANK" },
+    // { title: "investment-queries", href: INVESTMENT_QUERY_LINK, target: "_BLANK" },
   ],
 };
 

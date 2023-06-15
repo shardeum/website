@@ -109,7 +109,7 @@ const nextConfig = {
         ],
       },
       {
-        source: "/(.*)",
+        source: "/(.*?)",
         headers: [
           {
             key: "X-Frame-Options",

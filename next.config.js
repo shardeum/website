@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: "/live",
-        destination: "https://youtube.com/live/yCdD2ywT7yY",
+        destination: "https://youtube.com/live/hmRlBMtWvxk",
         permanent: true,
       },
       {
@@ -106,6 +106,19 @@ const nextConfig = {
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
           { key: "host", value: process.env.ENV_DOMAIN },
+        ],
+      },
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
         ],
       },
     ];

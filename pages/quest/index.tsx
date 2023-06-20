@@ -122,28 +122,7 @@ const Quest: NextPage = () => {
           content={project.logo || `https://shardeum.org/Shardeum.png`}
         /> */}
         <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: `{
-              "@context": "https://schema.org/", 
-              "@type": "BreadcrumbList", 
-              "itemListElement": [{
-                "@type": "ListItem", 
-                "position": 1, 
-                "name": "Home",
-                "item": "https://shardeum.org/"  
-              },{
-                "@type": "ListItem", 
-                "position": 2, 
-                "name": "Careers",
-                "item": "https://shardeum.org/quest/"  
-              }]
-            }`,
-          }}
-        />
+        <link rel="canonical" href="https://shardeum.org/quest" />
       </Head>
 
       {/* Hero section */}

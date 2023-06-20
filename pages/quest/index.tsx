@@ -28,9 +28,9 @@ const Quest: NextPage = () => {
       renderStats({
         launchpad: {
           buttonTitle: "Launchpad",
-          allowedChains: [8082],
+          allowedChains: [8081],
         },
-        allowedChains: [8082],
+        allowedChains: [8081],
       });
     };
 

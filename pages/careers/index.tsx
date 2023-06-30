@@ -134,6 +134,12 @@ const Carrers: NextPage = () => {
             }`,
           }}
         />
+
+        <script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/08f8687cb2b708c3de5b4b9f/script.js"
+        ></script>
       </Head>
 
       {/* Hero section */}

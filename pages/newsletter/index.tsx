@@ -81,6 +81,12 @@ function Newsletter() {
         <link rel="canonical" href="https://shardeum.org/newsletter/" />
 
         <script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/08f8687cb2b708c3de5b4b9f/script.js"
+        ></script>
+
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{

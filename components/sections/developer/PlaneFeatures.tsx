@@ -9,13 +9,13 @@ const featureList = [
     titleKey: "shm-feature-7-title",
     descriptionKey: "shm-feature-7-desc",
     iconPath: "SetupShardeumTestnet.png",
-    link: "https://docs.shardeum.org/wallets/MetaMask/add-shardeum-network",
+    link: "https://docs.shardeum.org/wallets/metamask/add-shardeum-network",
   },
   {
     titleKey: "shm-feature-8-title",
     descriptionKey: "shm-feature-8-desc",
     iconPath: "DeployYourDApp.png",
-    link: "https://docs.shardeum.org/smartContracts/deploy/remix",
+    link: "https://docs.shardeum.org/smart-contracts/deploy/remix",
   },
   {
     titleKey: "shm-feature-9-title",

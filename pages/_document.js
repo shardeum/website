@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -32,6 +33,10 @@ export default function Document() {
             </script>`,
           }}
         ></script>
+        <Script
+          strategy="beforeInteractive"
+          src={`https://cdn-cookieyes.com/client_data/08f8687cb2b708c3de5b4b9f/script.js`}
+        ></Script>
       </Head>
       <body>
         <Main />

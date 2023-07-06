@@ -80,53 +80,40 @@ const Quest: NextPage = () => {
 
       <Head>
         <title>{`Shardeum Quest`}</title>
-        <meta name="description" content={`Shardeum welcomes you to the quest`} />
+        <meta name="title" content="Shardeum Quests: Engage, Contribute, and Earn Rewards!" />
+        <meta
+          name="description"
+          content="Join the Shardeum quests and immerse yourself in challenges that inspire and reward. Complete the missions and win exclusive rewards like NFTs, cash prizes, and more. Be part of the rising Shardeum ecosystem and contribute to building the future of decentralized platforms."
+        />
         <meta
           name="keywords"
-          content="shardeum,blockchain,layer1 blockchain,evm based blockchain"
+          content="Shardeum quests, Blockchain, EVM, Crypto, Missions, Users, NFT, Challenges, Participate, Network, Platform, rewards, Rising, contests, Decentralized, Projects"
         />
-
-        {/* Facebook */}
-        {/* <meta property="og:url" content={`https://shardeum.org/careers/`} />
-        <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Shardeum Community | Community is the CEO of Shardeum`}
+          content="Shardeum Quests: Engage, Contribute, and Earn Rewards!"
         />
         <meta
           property="og:description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
+          content="Join the Shardeum quests and immerse yourself in challenges that inspire and reward. Complete the missions and win exclusive rewards like NFTs, cash prizes, and more. Be part of the rising Shardeum ecosystem and contribute to building the future of decentralized platforms."
         />
-        <meta property="og:image" content={`https://shardeum.org/Shardeum.png`} /> */}
-
-        {/* Twiter */}
-        {/* <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="https://shardeum.org/" />
-        <meta property="twitter:url" content={`https://shardeum.org/careers/`} />
+        <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
+        <meta property="og:url" content="https://shardeum.org/quests/" />
         <meta
-          property="twitter:title"
-          content={`Shardeum Community | Community is the CEO of Shardeum`}
+          name="twitter:title"
+          content="Shardeum Quests: Engage, Contribute, and Earn Rewards!"
         />
         <meta
-          property="twitter:description"
-          content={`Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem`}
+          name="twitter:description"
+          content="Join the Shardeum quests and immerse yourself in challenges that inspire and reward. Complete the missions and win exclusive rewards like NFTs, cash prizes, and more. Be part of the rising Shardeum ecosystem and contribute to building the future of decentralized platforms."
         />
-        <meta property="twitter:image" content={`https://shardeum.org/Shardeum.png`} /> */}
-
-        {/* <meta property="og:site_name" content={`Shardeum | Ecosystem ${project.name}`} /> */}
-
-        {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
-        {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
-        {/* <meta
-          name="twitter:image"
-          content={project.logo || `https://shardeum.org/Shardeum.png`}
-        /> */}
-        <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/quest" />
+        <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://shardeum.org/quests/" />
       </Head>
 
       {/* Hero section */}
-      {!router.query.gh_jid && <Hero heading="Shardeum Quest!" />}
+      <Hero heading="Shardeum Quest!" description={"Engage, Contribute, and Earn Rewards!"} />
       <Flex bg="brand.white" as="section">
         <Container
           maxW="container.xl"
@@ -134,6 +121,13 @@ const Quest: NextPage = () => {
           py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
+          <Container mx="0" maxW="850" px="0">
+            <p>
+              Participate in campaigns organized by Shardeum, the Shardeum community, and Dapps
+              building on Shardeum, and stand a chance to win exclusive rewards like NFTs, cash
+              prize, merch and much more
+            </p>
+          </Container>
           <div data-access-key="55d91a8c797948aa842bf6d1bfe1fc70" id="bad-stats"></div>
         </Container>
       </Flex>

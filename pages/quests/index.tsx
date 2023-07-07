@@ -22,7 +22,6 @@ const Quest: NextPage = () => {
     const script = document.createElement("script");
     script.src = "https://sdk.bandit.network/static/js/index.js";
     script.async = true;
-
     script.onload = () => {
       // Call the function from the loaded script here
       renderStats({

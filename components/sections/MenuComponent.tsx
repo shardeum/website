@@ -34,6 +34,7 @@ const MenuComponent = (props: any) => {
           (item: any) =>
             item.newPage === true ? (
               <a
+                key={item.title}
                 target="_blank"
                 href={item.link}
                 // onClick={() => window.open(item.link)}

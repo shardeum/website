@@ -42,41 +42,6 @@ const Quest: NextPage = () => {
   }, []);
   return (
     <>
-      {/* <NextSeo
-        title={"Shardeum Community | Community is the CEO of Shardeum"}
-        description="Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem"
-        canonical="https://shardeum.org/careers/"
-        additionalMetaTags={[
-          {
-            property: "keywords",
-            content: "shardeum,blockchain,layer1 blockchain,evm compatible blockchain",
-          },
-          {
-            property: "twitter:image",
-            content: "https://shardeum.org/Shardeum.png",
-          },
-        ]}
-        openGraph={{
-          title: "Shardeum Community | Community is the CEO of Shardeum",
-          type: "website",
-          url: "https://shardeum.org/careers/",
-
-          description:
-            "Shardeum welcomes you to join its community of moderators, content creators, event organizers, users and you name it on the fastest growing L1 blockchain ecosystem",
-          images: [
-            {
-              url: "https://shardeum.org/Shardeum.png",
-              alt: "Shardeum Image",
-            },
-          ],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-          site: "https://shardeum.org",
-          handle: "@shardeum",
-        }}
-      /> */}
-
       <Head>
         <title>{`Shardeum Quest`}</title>
         <meta name="title" content="Shardeum Quests: Engage, Contribute, and Earn Rewards!" />

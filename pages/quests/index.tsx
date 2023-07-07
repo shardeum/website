@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, Flex, Container } from "@chakra-ui/react";
+import { Box, Flex, Container, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Hero from "components/sections/Hero";
 import Image from "next/image";
@@ -113,7 +113,24 @@ const Quest: NextPage = () => {
       </Head>
 
       {/* Hero section */}
-      <Hero heading="Shardeum Quest!" description={"Engage, Contribute, and Earn Rewards!"} />
+      <Hero
+        heading="Shardeum Quest!"
+        description={
+          <>
+            <b>Engage, Contribute, and Earn Rewards!</b>
+            <Text
+              marginY="4"
+              fontSize={{ base: "sm", lg: "md" }}
+              color={"#fff"}
+              // paddingLeft="7.9cm"
+            >
+              Participate in campaigns organized by Shardeum, the Shardeum community, and Dapps
+              building on Shardeum, and stand a chance to win exclusive rewards like NFTs, cash
+              prize, merch and much more
+            </Text>
+          </>
+        }
+      />
       <Flex bg="brand.white" as="section">
         <Container
           maxW="container.xl"
@@ -121,13 +138,6 @@ const Quest: NextPage = () => {
           py={{ base: "9", md: "10" }}
           px={{ base: 6, xl: 0 }}
         >
-          <Container mx="0" maxW="850" px="0">
-            <p>
-              Participate in campaigns organized by Shardeum, the Shardeum community, and Dapps
-              building on Shardeum, and stand a chance to win exclusive rewards like NFTs, cash
-              prize, merch and much more
-            </p>
-          </Container>
           <div data-access-key="55d91a8c797948aa842bf6d1bfe1fc70" id="bad-stats"></div>
         </Container>
       </Flex>

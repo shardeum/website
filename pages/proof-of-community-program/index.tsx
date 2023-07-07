@@ -107,20 +107,6 @@ const Page = ({
                 </script>`,
             }}
           ></script>
-          {/* <Text
-            fontSize={{ base: "md", lg: "xl" }}
-            textAlign="left"
-            lineHeight={{ base: "7", md: "8" }}
-            color={"#37352f"}
-            paddingLeft="7.9cm"
-          >
-            <p>
-              <NextLink href="/" passHref>
-                Home
-              </NextLink>{" "}
-              / Privacy Policy
-            </p>
-          </Text> */}
           <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </Container>
       </Flex>

@@ -106,6 +106,10 @@ const nextConfig = {
           { key: "x-forwarded-proto", value: "https" },
           { key: "x-forwarded-host", value: process.env.ENV_DOMAIN },
           { key: "host", value: process.env.ENV_DOMAIN },
+          {
+            key: "Cache-Control",
+            value: "s-maxage=3600, stale-while-revalidate=59",
+          },
         ],
       },
       {

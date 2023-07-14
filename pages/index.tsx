@@ -234,9 +234,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                    <p className="checkMarkText">
-                      7.4 million+ transactions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
+                    <p className="checkMarkText">7.4 million+ transactions &nbsp;&nbsp;&nbsp;</p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
@@ -252,9 +250,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">
-                      800,000+ Community members &nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
+                    <p className="checkMarkText">800,000+ Community members &nbsp;&nbsp;&nbsp;</p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />

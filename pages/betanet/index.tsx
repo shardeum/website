@@ -532,7 +532,7 @@ const AlphanetLanding: NextPage = () => {
           <Grid className="responciveGrid">
             <GridItem rowSpan={2} colSpan={2}>
               <div className="borderGrid">
-                <h4 className="betanetHighlights">Top Alphanet Highlights</h4>
+                <h4 className="betanetHighlights">Top Testnet Highlights</h4>
 
                 <div className="chekMark">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />

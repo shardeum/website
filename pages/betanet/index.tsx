@@ -613,7 +613,7 @@ const AlphanetLanding: NextPage = () => {
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      800,000+ community members &nbsp;&nbsp;&nbsp;&nbsp;
+                      800,000+ Community members &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
                   </div>
                   <div className="chekMark">

@@ -522,7 +522,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitle">
-                    Shardeum Testnets: A Stepping Stone to the Future of Blockchain
+                    Shardeum Testnets: A Preview of Blockchain's Future
                   </h2>
                 </SectionHeading>
               </VStack>
@@ -631,7 +631,7 @@ const AlphanetLanding: NextPage = () => {
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      Shardeum saw 352 guest bloggers and 445 guest posts since Feb 2023
+                      352 guest bloggers and 445 guest posts since Feb 2023
                     </p>
                   </div>
                 </div>

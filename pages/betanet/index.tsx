@@ -521,7 +521,9 @@ const AlphanetLanding: NextPage = () => {
             <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full">
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
-                  <h2 className="betaAlphanetTitle">Shardeum Liberty Was a Success!</h2>
+                  <h2 className="betaAlphanetTitle">
+                    Shardeum Testnets: A Stepping Stone to the Future of Blockchain
+                  </h2>
                 </SectionHeading>
               </VStack>
             </SimpleGrid>
@@ -535,8 +537,7 @@ const AlphanetLanding: NextPage = () => {
                 <div className="chekMark">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
-                    First demonstration of a state sharded blockchain with cross shard atomic
-                    composability
+                    Built a user friendly GUI/dashboard for node operators
                   </p>
                 </div>
                 {/* <div className="chekMarkNextline">
@@ -548,16 +549,31 @@ const AlphanetLanding: NextPage = () => {
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
                   <p className="checkMarkText">
+                    Open-sourced Shardeum validator and the validator dashboard code
+                  </p>
+                </div>
+                <div className="chekMarkNextline">
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
+                  <p className="checkMarkText">
+                    First demonstration of a state sharded blockchain with cross shard atomic
+                    composability
+                  </p>
+                </div>
+                <div className="chekMarkNextline">
+                  <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
+                  <p className="checkMarkText">
                     EIP 2930 automation for a streamlined developer experience
                   </p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">50 validator nodes with a shard size of 5 nodes</p>
+                  <p className="checkMarkText">
+                    Ongoing betanet 'Sphinx' touched a high of 35,000+ validators
+                  </p>
                 </div>
                 <div className="chekMarkNextline">
                   <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#de7171" />
-                  <p className="checkMarkText">100 TPS network capacity</p>
+                  <p className="checkMarkText">180 TPS average network capacity</p>
                 </div>
               </div>
             </GridItem>
@@ -568,23 +584,23 @@ const AlphanetLanding: NextPage = () => {
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                    <p className="checkMarkText">45,000+ smart contracts</p>
+                    <p className="checkMarkText">230,000+ smart contracts</p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                    <p className="checkMarkText">105 ecosystem projects</p>
+                    <p className="checkMarkText">820,000+ accounts</p>
                   </div>
                 </div>
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
                     <p className="checkMarkText">
-                      540,000+ accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      7.4 million+ transactions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffae93" />
-                    <p className="checkMarkText">1.5 million+ transactions</p>
+                    <p className="checkMarkText">145+ ecosystem projects</p>
                   </div>
                 </div>
               </div>
@@ -597,25 +613,25 @@ const AlphanetLanding: NextPage = () => {
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      300,000+ community members &nbsp;&nbsp;&nbsp;&nbsp;{" "}
+                      800,000+ community members &nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">
-                      50+ Meetups/Workshops ~ Proof of Community Events
-                    </p>
+                    <p className="checkMarkText">90,000+ newsletter subscribers</p>
                   </div>
                 </div>
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">30,000+ newsletter subscribers</p>
+                    <p className="checkMarkText">
+                      190+ meetups/workshops ~ Proof of Community Events
+                    </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      714 developers participated in Shardeum Missions
+                      Shardeum saw 352 guest bloggers and 445 guest posts since Feb 2023
                     </p>
                   </div>
                 </div>

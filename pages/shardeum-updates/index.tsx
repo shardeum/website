@@ -81,9 +81,9 @@ const Page = () => {
           px={{ base: 6, xl: 0 }}
         >
           <script
+            type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: `<script type="application/ld+json">
-                {
+              __html: `{
                   "@context": "https://schema.org/", 
                   "@type": "BreadcrumbList", 
                   "itemListElement": [{
@@ -97,10 +97,9 @@ const Page = () => {
                     "name": "Shardeum Community Update",
                     "item": "https://shardeum.org/shardeum-updates/"  
                   }]
-                }
-                </script>`,
+                }`,
             }}
-          ></script>
+          />
 
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6} py={6}>
             {reCommunityUpdatesLinks.map((links) => (

@@ -88,8 +88,9 @@ const Page = ({
           px={{ base: 6, xl: 0 }}
         >
           <script
+            type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: `<script type="application/ld+json">
+              __html: `
                 {
                   "@context": "https://schema.org/", 
                   "@type": "BreadcrumbList", 
@@ -105,9 +106,9 @@ const Page = ({
                     "item": "https://shardeum.org/privacy-policy/"  
                   }]
                 }
-                </script>`,
+                `,
             }}
-          ></script>
+          />
           {/* <Text
             fontSize={{ base: "md", lg: "xl" }}
             textAlign="left"

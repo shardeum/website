@@ -163,8 +163,9 @@ const AlphanetLanding: NextPage = () => {
         cta={
           <>
             <script
+              type="application/ld+json"
               dangerouslySetInnerHTML={{
-                __html: `<script type="application/ld+json">
+                __html: `
                 {
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
@@ -367,9 +368,9 @@ const AlphanetLanding: NextPage = () => {
                     }
                   }]
                 }
-                </script>`,
+                `,
               }}
-            ></script>
+            />
             <Stack
               spacing="4"
               direction={{ base: "column", sm: "row" }}

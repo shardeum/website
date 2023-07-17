@@ -28,7 +28,7 @@ const Page = ({
     return <TweetEmbed tweetId={id} />;
   };
   const title = notionPageDetails.name;
-  const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
+  const canonical = "https://shardeum.org/shardeum-updates/" + notionPageDetails.slug + "/";
   const description = notionPageDetails.description;
   const image = notionPageDetails.image;
   return (

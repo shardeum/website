@@ -610,9 +610,7 @@ const AlphanetLanding: NextPage = () => {
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">
-                      800,000+ Community members &nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
+                    <p className="checkMarkText">800,000+ Community members &nbsp;</p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
@@ -622,7 +620,10 @@ const AlphanetLanding: NextPage = () => {
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">190+ Proof of Community Events</p>
+                    <p className="checkMarkText">
+                      190+ Proof of Community Events
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />

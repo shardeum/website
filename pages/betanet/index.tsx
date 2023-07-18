@@ -611,9 +611,7 @@ const AlphanetLanding: NextPage = () => {
                 <div className="borderGridTwoAddSpace">
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
-                    <p className="checkMarkText">
-                      800,000+ Community members &nbsp;&nbsp;&nbsp;&nbsp;
-                    </p>
+                    <p className="checkMarkText">800,000+ Community members &nbsp;</p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
@@ -624,13 +622,14 @@ const AlphanetLanding: NextPage = () => {
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      190+ meetups/workshops ~ Proof of Community Events
+                      190+ Proof of Community Events
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
                   </div>
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      352 guest bloggers and 445 guest posts since Feb 2023
+                      51+ community-led Shardeum Leagues across the world
                     </p>
                   </div>
                 </div>

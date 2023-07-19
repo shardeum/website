@@ -628,7 +628,7 @@ const AlphanetLanding: NextPage = () => {
                   <div className="chekMark">
                     <CheckIcon className="checkMarkcheckIcon" w={4} h={4} color="#ffce88" />
                     <p className="checkMarkText">
-                      51+ community-led Shardeum Leagues across the world
+                      50+ community-led Shardeum Leagues across the world
                     </p>
                   </div>
                 </div>

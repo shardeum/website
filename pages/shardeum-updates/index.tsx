@@ -24,7 +24,7 @@ const Page = () => {
   const description =
     "At Shardeum, we embrace an open, collaborative, and community-driven approach. Stay updated with our monthly updates as we build the future of decentralization together";
   const image =
-    "https://shardeum.org/explore/wp-content/uploads/2023/05/Screenshot-from-2023-05-16-19-41-05.png";
+    "https://shardeum.org/explore/wp-content/uploads/2023/08/photo_2023-08-01_12-21-46.jpg";
   return (
     <>
       <ResponsiveHero

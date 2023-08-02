@@ -110,7 +110,8 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
             <SwiperSlide key={item.title}>
               <NewsItem
                 title={item.title}
-                imageURL={`/news/${index}.jpg`}
+                // imageURL={`/news/${index}.jpg`}
+                imageURL={item.imageMAIN}
                 siteName={item.siteName}
                 newsURL={item.newsURL}
               />

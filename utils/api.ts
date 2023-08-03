@@ -128,18 +128,18 @@ export const getSHMProjects = (): Promise<{
             try {
               // extract row details
               const projectId = record.getId();
-              const projectName = record.get("Project Name") as string;
-              const projectDescription = record.get("Project Description") as string;
-              const projectCategory = record.get("Project Category") as string;
+              const projectName = record.get("Organization") as string;
+              const projectDescription = record.get("About Organization") as string;
+              const projectCategory = record.get("Product Category") as string;
               const shardeumNetwork = record.get("Shardeum Network") as string;
-              const projectStatus = record.get("Project Status") as string;
-              const projectLogo: any = record.get("Project Logo") as string[];
-              const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
-              const projectWebsiteURL = record.get("Project Website URL") as string;
+              const projectStatus = record.get("Live on Shardeum") as string;
+              const projectLogo: any = record.get("Organization Logo") as string[];
+              const projectScreenshots = record.get("Product Screenshots") as Screenshot[];
+              const projectWebsiteURL = record.get("Website") as string;
               const projectDateCreated = record.get("Created") as string;
               const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
-              const projectGithubURL = (record.get("Project Github URL") as string) || "";
+              const projectGithubURL = "";
               const status = (record.get("Status") as string) || "pending";
 
               if (projectName) {
@@ -393,18 +393,18 @@ export const getProjectById = async (
         .find(projectRecordId)
         .then((record) => {
           const projectId = record.getId();
-          const projectName = record.get("Project Name") as string;
-          const projectDescription = record.get("Project Description") as string;
-          const projectCategory = record.get("Project Category") as string;
+          const projectName = record.get("Organization") as string;
+          const projectDescription = record.get("About Organization") as string;
+          const projectCategory = record.get("Product Category") as string;
           const shardeumNetwork = record.get("Shardeum Network") as string;
-          const projectStatus = record.get("Project Status") as string;
-          const projectLogo: any = record.get("Project Logo") as string[];
-          const projectScreenshots = record.get("Project Screenshots") as Screenshot[];
-          const projectWebsiteURL = record.get("Project Website URL") as string;
+          const projectStatus = record.get("Live on Shardeum") as string;
+          const projectLogo: any = record.get("Organization Logo") as string[];
+          const projectScreenshots = record.get("Product Screenshots") as Screenshot[];
+          const projectWebsiteURL = record.get("Website") as string;
           const projectDateCreated = record.get("Created") as string;
           const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
-          const projectGithub = (record.get("Project Github URL") as string) || "";
-          const projectTwiterUrl = (record.get("Project Twitter URL") as string) || "";
+          const projectGithub = "";
+          const projectTwiterUrl = (record.get("Product Twitter URL") as string) || "";
           const status = (record.get("Status") as string) || "pending";
 
           const project: Project = {

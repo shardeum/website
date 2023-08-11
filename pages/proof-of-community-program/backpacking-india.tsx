@@ -27,7 +27,8 @@ const Page = ({
     return <TweetEmbed tweetId={id} />;
   };
   const title = notionPageDetails.title || getPageTitle(recordMap);
-  const canonical = "https://shardeum.org/" + notionPageDetails.slug + "/";
+  const canonical =
+    "https://shardeum.org/proof-of-community-program/" + notionPageDetails.slug + "/";
   const description = notionPageDetails.description;
   const image = notionPageDetails.image;
   return (

@@ -23,6 +23,14 @@ const NotionPagesLinks = [
       "Becoming a Super Shardian means that you are not only at the forefront of the blockchain race, but you are also pushing the boundaries into deep exploration.",
     image: "https://shardeum.org/Shardeum.png",
   },
+  {
+    slug: "overview",
+    notionId: "b9a51fb534fc4b35ab860164ce4cb15f",
+    title: "Proof Of Community | Backpacking India",
+    description:
+      'The "Proof Of Community Backpacking India" is a unique edition of the larger Proof of Community meetups, with a specific focus on introducing students to the world of web3.',
+    image: "https://shardeum.org/Shardeum.png",
+  },
 ];
 
 export default NotionPagesLinks;

@@ -24,8 +24,8 @@ const NotionPagesLinks = [
     image: "https://shardeum.org/Shardeum.png",
   },
   {
-    slug: "overview",
-    notionId: "b9a51fb534fc4b35ab860164ce4cb15f",
+    slug: "backpacking-india",
+    notionId: "c4610f5952e64b26aba31108ecb843e8",
     title: "Proof Of Community | Backpacking India",
     description:
       'The "Proof Of Community Backpacking India" is a unique edition of the larger Proof of Community meetups, with a specific focus on introducing students to the world of web3.',

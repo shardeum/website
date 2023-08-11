@@ -49,7 +49,7 @@ const Page = ({
                 <NextLink href="/proof-of-community-program" passHref>
                   Proof Of Community
                 </NextLink>{" "}
-                / Overview
+                / Backpacking India
               </p>
             </Text>
           </>
@@ -109,7 +109,7 @@ const Page = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = "overview";
+  const pageId = "backpacking-india";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {

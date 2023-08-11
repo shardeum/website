@@ -14,6 +14,7 @@ import NextLink from "next/link";
 import Hero from "components/sections/Hero";
 import TweetEmbed from "react-tweet-embed";
 import { Collection } from "react-notion-x/build/third-party/collection";
+import Navbar from "@shm/components/sections/Navbar";
 
 const Page = ({
   recordMap,
@@ -31,30 +32,7 @@ const Page = ({
   const image = notionPageDetails.image;
   return (
     <>
-      <Hero
-        cta={
-          <>
-            <Text
-              fontSize={{ base: "md", lg: "xl" }}
-              textAlign="left"
-              lineHeight={{ base: "7", md: "8" }}
-              // color={"#37352f"}
-              // paddingLeft="7.9cm"
-            >
-              <p>
-                <NextLink href="/" passHref>
-                  Home
-                </NextLink>{" "}
-                /{" "}
-                <NextLink href="/proof-of-community-program" passHref>
-                  Proof Of Community
-                </NextLink>{" "}
-                / Backpacking India
-              </p>
-            </Text>
-          </>
-        }
-      />
+      <Navbar />
       <NextSeo
         title={title}
         description={description}
@@ -97,7 +75,7 @@ const Page = ({
         >
           <NotionRenderer
             recordMap={recordMap}
-            fullPage={false}
+            fullPage={true}
             darkMode={false}
             components={{ Collection, Tweet }}
           />

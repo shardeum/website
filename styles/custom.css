@@ -1,3 +1,7 @@
+
+.notion-header, .notion-page-icon-hero{
+  display: none !important;
+}
 .brand-orange-href a {
   color: var(--chakra-colors-brand-orange-80);
 }

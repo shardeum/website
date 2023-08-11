@@ -45,7 +45,11 @@ const Page = ({
                 <NextLink href="/" passHref>
                   Home
                 </NextLink>{" "}
-                / Proof Of Community
+                /{" "}
+                <NextLink href="/proof-of-community-program" passHref>
+                  Proof Of Community
+                </NextLink>{" "}
+                / Overview
               </p>
             </Text>
           </>
@@ -105,7 +109,7 @@ const Page = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = "proof-of-community-program";
+  const pageId = "overview";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {
@@ -121,7 +125,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
     };
   }
   // const notionPageDetails = NotionPagesLinks[pageId];
-  const recordMap = await notion.getPage("b9a51fb534fc4b35ab860164ce4cb15f");
+  const recordMap = await notion.getPage(notionPageDetails.notionId);
+
   // console.log(recordMap);
   return {
     props: {

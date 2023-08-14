@@ -88,6 +88,10 @@ const nextConfig = {
         source: "/shm-tokenomics/:slug*",
         destination: `https://issuance-dashboard.vercel.app/:slug*`,
       },
+      {
+        source: "/shardeum-pepe/",
+        destination: `/404`,
+      },
     ];
   },
   async headers() {

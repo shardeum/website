@@ -32,6 +32,15 @@ const NotionPagesLinks = [
     image:
       "https://shardeum.org/blog/wp-content/uploads/2023/08/Proof-Of-Community-Backpacking-India.jpg",
   },
+  {
+    slug: "backpacking-india-updates",
+    notionId: "947d4abc57f24252992d3b9dd3f1db5c",
+    title: "Proof Of Community | Backpacking India Updates",
+    description:
+      'The "Proof Of Community Backpacking India" is a unique edition of the larger Proof of Community meetups, with a specific focus on introducing students to the world of web3.',
+    image:
+      "https://shardeum.org/blog/wp-content/uploads/2023/08/Proof-Of-Community-Backpacking-India.jpg",
+  },
 ];
 
 export default NotionPagesLinks;

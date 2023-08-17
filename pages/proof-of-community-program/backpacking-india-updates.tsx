@@ -88,7 +88,7 @@ const Page = ({
 
 export async function getStaticProps({ locale }: { locale: string }) {
   const notion = new NotionAPI();
-  const pageId = "backpacking-india";
+  const pageId = "backpacking-india-updates";
   // console.log(NotionPagesLinks);
   let notionPageDetails = { slug: "", notionId: "", title: "", description: "", image: "" };
   for (const nPage of NotionPagesLinks) {

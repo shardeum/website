@@ -12,15 +12,30 @@ const MenuComponent = (props: any) => {
 
   return (
     <Menu isOpen={isOpen}>
-      <MenuButton
-        // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-        aria-label="Courses"
-        fontWeight="normal"
-        onMouseEnter={onOpen}
-        onMouseLeave={onClose}
-      >
-        {commonTranslation(link.title)} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
-      </MenuButton>
+      {link.submenuLevel === 1 ? (
+        <MenuButton
+          // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
+          aria-label="Courses"
+          fontWeight="normal"
+          onMouseEnter={onOpen}
+          onMouseLeave={onClose}
+        >
+          {commonTranslation(link.title)} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+        </MenuButton>
+      ) : (
+        <MenuItem style={{ textDecoration: "none !important" }} key={link.title}>
+          <MenuButton
+            // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
+            aria-label="Courses"
+            fontWeight="normal"
+            onMouseEnter={onOpen}
+            onMouseLeave={onClose}
+          >
+            {commonTranslation(link.title)} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+          </MenuButton>
+        </MenuItem>
+      )}
+
       <MenuList
         style={{
           maxHeight: "500px",
@@ -32,7 +47,9 @@ const MenuComponent = (props: any) => {
       >
         {link.submenu?.map(
           (item: any) =>
-            item.newPage === true ? (
+            typeof item.submenu !== "undefined" ? (
+              <MenuComponent link={item} />
+            ) : item.newPage === true ? (
               <a
                 key={item.title}
                 target="_blank"
@@ -62,6 +79,7 @@ const MenuComponent = (props: any) => {
                 </a>
               </NextLink>
             )
+
           // <>
           //   {/* <a key={item.title} target="_blank" href={item.link} rel="noreferrer">
           //     <NextLink key={item.title} href={item.link} passHref>

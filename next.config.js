@@ -3,6 +3,7 @@ const { i18n } = require("./next-i18next.config");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   reactStrictMode: true,
   i18n,
   trailingSlash: true,
@@ -130,6 +131,14 @@ const nextConfig = {
           {
             key: "X-Content-Type-Options",
             value: "nosniff",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: "self",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "autoplay=(), web-share=(), fullscreen=()",
           },
         ],
       },

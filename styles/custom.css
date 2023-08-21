@@ -1401,8 +1401,9 @@ a {
 }
 
 .SubMenu {
-  margin-left: 180px;
+  margin-left: -240px;
   margin-top: -50px;
+  max-width: 100px;
 }
 
 .SubMenuShow{

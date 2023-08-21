@@ -23,13 +23,16 @@ const MenuComponent = (props: any) => {
           {commonTranslation(link.title)} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </MenuButton>
       ) : (
-        <MenuItem style={{ textDecoration: "none !important" }} key={link.title}>
+        <MenuItem
+          onMouseEnter={onOpen}
+          onMouseLeave={onClose}
+          style={{ textDecoration: "none !important" }}
+          key={link.title}
+        >
           <MenuButton
             // _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
             aria-label="Courses"
             fontWeight="normal"
-            onMouseEnter={onOpen}
-            onMouseLeave={onClose}
           >
             {commonTranslation(link.title)} {isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
           </MenuButton>

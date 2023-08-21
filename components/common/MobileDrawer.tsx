@@ -60,7 +60,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
       </Box>
       <ChakraDrawer isOpen={isOpen} placement={placement} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "135px" }}>
+        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "0px" }}>
           <DrawerCloseButton alignSelf="end" m="15" />
           {/* {isauthVisible === true ? (
             <Menu>
@@ -124,7 +124,8 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                             ) : i.submenuLevel === 2 ? (
                               <Menu isOpen={isOpen}>
                                 <MenuItem key={i.title}>
-                                  <MenuButton onClick={toggleHideShow}>
+                                  {/* <MenuButton onClick={toggleHideShow}> */}
+                                  <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
                                     {commonTranslation(i.title)} <ChevronDownIcon />
                                   </MenuButton>
                                 </MenuItem>
@@ -137,7 +138,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                                     marginTop: "20px",
                                     marginRight: "24px",
                                   }}
-                                  className={toggle === true ? "SubMenuShow" : "SubMenuNone"}
+                                  // className={toggle === true ? "SubMenuShow" : "SubMenuNone"}
                                 >
                                   {i.submenu?.map((item: any) => (
                                     <MenuItem

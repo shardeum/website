@@ -41,6 +41,8 @@ const MenuComponent = (props: any) => {
           maxHeight: "500px",
           overflowX: "hidden",
           background: "#000000",
+          marginLeft: "170px",
+          // marginTop: "20px"
         }}
         onMouseEnter={onOpen}
         onMouseLeave={onClose}

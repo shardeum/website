@@ -72,8 +72,8 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
               </MenuList>
             </Menu>
           ) : null} */}
-
           <DrawerHeader />
+
           <DrawerBody>
             <VStack alignItems="left" mt="16" spacing="6">
               {links.map((item) => (
@@ -91,9 +91,16 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                   </Link> */}
                   {typeof item.submenu !== "undefined" ? (
                     <Menu>
-                      <MenuButton>
-                        {commonTranslation(item.title)} <ChevronDownIcon />
-                      </MenuButton>
+                      {item.submenuLevel === 1 ? (
+                        <MenuButton>
+                          {commonTranslation(item.title)} <ChevronDownIcon />
+                        </MenuButton>
+                      ) : (
+                        <MenuButton>
+                          {commonTranslation(item.title)} <ChevronDownIcon />
+                        </MenuButton>
+                      )}
+
                       <MenuList
                         style={{
                           maxHeight: "500px",
@@ -103,19 +110,48 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                         onMouseEnter={onOpen}
                         onMouseLeave={onClose}
                       >
-                        {item.submenu?.map((i: any) =>
-                          i.newPage === true ? (
-                            <MenuItem key={i.title} onClick={() => window.open(i.link)}>
-                              {commonTranslation(i.title)}
-                            </MenuItem>
-                          ) : (
-                            <MenuItem key={i.title}>
-                              <NextLink key={i.title} href={i.link} passHref>
+                        {item.submenu?.map((i: any) => (
+                          <>
+                            {i.newPage === true ? (
+                              <MenuItem key={i.title} onClick={() => window.open(i.link)}>
                                 {commonTranslation(i.title)}
-                              </NextLink>
-                            </MenuItem>
-                          )
-                        )}
+                              </MenuItem>
+                            ) : i.submenuLevel === 2 ? (
+                              <Menu isOpen={isOpen}>
+                                <MenuItem key={i.title}>
+                                  <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
+                                    {commonTranslation(i.title)} <ChevronDownIcon />
+                                  </MenuButton>
+                                </MenuItem>
+
+                                <MenuList
+                                  style={{
+                                    maxHeight: "500px",
+                                    overflowX: "hidden",
+                                    background: "#000000",
+                                    marginTop: "20px",
+                                  }}
+                                  onMouseEnter={onOpen}
+                                  onMouseLeave={onClose}
+                                >
+                                  {i.submenu?.map((item: any) => (
+                                    <MenuItem key={item.title}>
+                                      <NextLink key={item.title} href={i.link} passHref>
+                                        {commonTranslation(item.title)}
+                                      </NextLink>
+                                    </MenuItem>
+                                  ))}
+                                </MenuList>
+                              </Menu>
+                            ) : (
+                              <MenuItem key={i.title}>
+                                <NextLink key={i.title} href={i.link} passHref>
+                                  {commonTranslation(i.title)}
+                                </NextLink>
+                              </MenuItem>
+                            )}
+                          </>
+                        ))}
                       </MenuList>
                     </Menu>
                   ) : (

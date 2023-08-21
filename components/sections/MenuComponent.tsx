@@ -41,9 +41,10 @@ const MenuComponent = (props: any) => {
           maxHeight: "500px",
           overflowX: "hidden",
           background: "#000000",
-          marginLeft: "170px",
+          // marginLeft: "170px",
           // marginTop: "20px"
         }}
+        className={link.submenuLevel === 2 ? "SubMenu" : ""}
         onMouseEnter={onOpen}
         onMouseLeave={onClose}
       >

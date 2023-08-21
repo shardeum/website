@@ -34,6 +34,10 @@ import {
   REPORT_BUGS,
   DEV_URL,
   SHARDEUM_UPDATES_URL,
+  PROOF_OF_COMMUNITY_OVERVIEW,
+  PROOF_OF_COMMUNITY_PROGRAM,
+  PROOF_OF_COMMUNITY_BACKPACKING_INDIA,
+  PROOF_OF_COMMUNITY_BACKPACKING_UPDATES,
 } from "../../constants/links";
 import { ArrowDownIcon, ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "components/common/Logo";
@@ -51,6 +55,7 @@ const linksArr = [
     link: "",
     newPage: false,
     highlight: false,
+    submenuLevel: 1,
     submenu: [
       // {
       //   title: "alphanet",
@@ -99,7 +104,14 @@ const linksArr = [
     link: "",
     newPage: false,
     highlight: false,
+    submenuLevel: 1,
     submenu: [
+      {
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
+        newPage: true,
+        highlight: false,
+      },
       {
         title: "litepaper",
         link: LITEPAPER_URL,
@@ -125,13 +137,8 @@ const linksArr = [
     link: "",
     newPage: false,
     highlight: false,
+    submenuLevel: 1,
     submenu: [
-      {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
-        newPage: true,
-        highlight: false,
-      },
       {
         title: "community_ecosystem",
         link: COMMUNITY_URL,
@@ -155,6 +162,39 @@ const linksArr = [
         link: COMMUNITY_REWARDS,
         newPage: true,
         highlight: false,
+      },
+      {
+        title: "proof-of-community",
+        link: "",
+        newPage: false,
+        highlight: false,
+        submenuLevel: 2,
+        submenu: [
+          {
+            title: "proof-of-community-overview",
+            link: PROOF_OF_COMMUNITY_OVERVIEW,
+            newPage: true,
+            highlight: false,
+          },
+          {
+            title: "proof-of-community-program",
+            link: PROOF_OF_COMMUNITY_PROGRAM,
+            newPage: true,
+            highlight: false,
+          },
+          {
+            title: "proof-of-community-backpacking-india",
+            link: PROOF_OF_COMMUNITY_BACKPACKING_INDIA,
+            newPage: true,
+            highlight: false,
+          },
+          {
+            title: "proof-of-community-backpacking-updates",
+            link: PROOF_OF_COMMUNITY_BACKPACKING_UPDATES,
+            newPage: true,
+            highlight: false,
+          },
+        ],
       },
       // {
       //   title: "careers",

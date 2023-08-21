@@ -1399,3 +1399,17 @@
 a {
   text-decoration: none !important;
 }
+
+.SubMenu {
+  margin-left: -237px;
+  margin-top: -50px;
+  max-width: 100px;
+}
+
+.SubMenuShow{
+  display: block;
+}
+
+.SubMenuNone{
+  display: none;
+}

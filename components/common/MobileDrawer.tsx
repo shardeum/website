@@ -37,6 +37,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
   const { setPopup } = useContext(SigninContext);
   const { t: commonTranslation } = useTranslation(["common"]);
   const [isauthVisible, setIsauthVisible] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const text = window.location.href;
@@ -48,6 +49,10 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
     }
   }, []);
 
+  const toggleHideShow = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <Flex display={{ lg: "none" }}>
       <Box onClick={onOpen}>
@@ -55,7 +60,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
       </Box>
       <ChakraDrawer isOpen={isOpen} placement={placement} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "135px" }}>
+        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "0px" }}>
           <DrawerCloseButton alignSelf="end" m="15" />
           {/* {isauthVisible === true ? (
             <Menu>
@@ -72,8 +77,8 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
               </MenuList>
             </Menu>
           ) : null} */}
-
           <DrawerHeader />
+
           <DrawerBody>
             <VStack alignItems="left" mt="16" spacing="6">
               {links.map((item) => (
@@ -91,9 +96,16 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                   </Link> */}
                   {typeof item.submenu !== "undefined" ? (
                     <Menu>
-                      <MenuButton>
-                        {commonTranslation(item.title)} <ChevronDownIcon />
-                      </MenuButton>
+                      {item.submenuLevel === 1 ? (
+                        <MenuButton>
+                          {commonTranslation(item.title)} <ChevronDownIcon />
+                        </MenuButton>
+                      ) : (
+                        <MenuButton>
+                          {commonTranslation(item.title)} <ChevronDownIcon />
+                        </MenuButton>
+                      )}
+
                       <MenuList
                         style={{
                           maxHeight: "500px",
@@ -103,19 +115,50 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                         onMouseEnter={onOpen}
                         onMouseLeave={onClose}
                       >
-                        {item.submenu?.map((i: any) =>
-                          i.newPage === true ? (
-                            <MenuItem key={i.title} onClick={() => window.open(i.link)}>
-                              {commonTranslation(i.title)}
-                            </MenuItem>
-                          ) : (
-                            <MenuItem key={i.title}>
-                              <NextLink key={i.title} href={i.link} passHref>
+                        {item.submenu?.map((i: any) => (
+                          <>
+                            {i.newPage === true ? (
+                              <MenuItem key={i.title} onClick={() => window.open(i.link)}>
                                 {commonTranslation(i.title)}
-                              </NextLink>
-                            </MenuItem>
-                          )
-                        )}
+                              </MenuItem>
+                            ) : i.submenuLevel === 2 ? (
+                              <Menu isOpen={isOpen}>
+                                <MenuItem key={i.title}>
+                                  {/* <MenuButton onClick={toggleHideShow}> */}
+                                  <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
+                                    {commonTranslation(i.title)} <ChevronDownIcon />
+                                  </MenuButton>
+                                </MenuItem>
+
+                                <MenuList
+                                  style={{
+                                    maxHeight: "500px",
+                                    overflowX: "hidden",
+                                    background: "#000000",
+                                    marginTop: "20px",
+                                    marginRight: "24px",
+                                  }}
+                                  // className={toggle === true ? "SubMenuShow" : "SubMenuNone"}
+                                >
+                                  {i.submenu?.map((item: any) => (
+                                    <MenuItem
+                                      key={item.title}
+                                      onClick={() => window.open(item.link)}
+                                    >
+                                      {commonTranslation(item.title)}
+                                    </MenuItem>
+                                  ))}
+                                </MenuList>
+                              </Menu>
+                            ) : (
+                              <MenuItem key={i.title}>
+                                <NextLink key={i.title} href={i.link} passHref>
+                                  {commonTranslation(i.title)}
+                                </NextLink>
+                              </MenuItem>
+                            )}
+                          </>
+                        ))}
                       </MenuList>
                     </Menu>
                   ) : (

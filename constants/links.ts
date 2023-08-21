@@ -26,9 +26,9 @@ export const PROOF_OF_COMMUNITY_OVERVIEW =
   "https://www.notion.so/shardeumfoundation/ProofOfCommunity-General-b9a51fb534fc4b35ab860164ce4cb15f?pvs=4";
 export const PROOF_OF_COMMUNITY_PROGRAM = "https://shardeum.org/proof-of-community-program/";
 export const PROOF_OF_COMMUNITY_BACKPACKING_INDIA =
-  "https://shardeumfoundation.notion.site/ProofOfCommunity-Backpacking-India-c4610f5952e64b26aba31108ecb843e8";
+  "https://shardeum.org/proof-of-community-program/backpacking-india/";
 export const PROOF_OF_COMMUNITY_BACKPACKING_UPDATES =
-  "https://shardeumfoundation.notion.site/ProofOfCommunity-General-b9a51fb534fc4b35ab860164ce4cb15f";
+  "https://shardeum.org/proof-of-community-program/backpacking-india-updates/";
 
 export const TELEGRAM_URL = "https://telegram.me/shardeum";
 export const REDDIT_URL = "https://www.reddit.com/r/shardeum/";

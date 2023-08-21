@@ -1401,5 +1401,14 @@ a {
 }
 
 .SubMenu {
-  margin-left: 170px;
+  margin-left: 180px;
+  margin-top: -50px;
+}
+
+.SubMenuShow{
+  display: block;
+}
+
+.SubMenuNone{
+  display: none;
 }

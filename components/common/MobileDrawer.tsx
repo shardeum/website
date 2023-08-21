@@ -37,6 +37,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
   const { setPopup } = useContext(SigninContext);
   const { t: commonTranslation } = useTranslation(["common"]);
   const [isauthVisible, setIsauthVisible] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const text = window.location.href;
@@ -47,6 +48,10 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
       setIsauthVisible(false);
     }
   }, []);
+
+  const toggleHideShow = () => {
+    setToggle(!toggle);
+  };
 
   return (
     <Flex display={{ lg: "none" }}>
@@ -119,7 +124,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                             ) : i.submenuLevel === 2 ? (
                               <Menu isOpen={isOpen}>
                                 <MenuItem key={i.title}>
-                                  <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
+                                  <MenuButton onClick={toggleHideShow}>
                                     {commonTranslation(i.title)} <ChevronDownIcon />
                                   </MenuButton>
                                 </MenuItem>
@@ -130,15 +135,16 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                                     overflowX: "hidden",
                                     background: "#000000",
                                     marginTop: "20px",
+                                    marginRight: "24px",
                                   }}
-                                  onMouseEnter={onOpen}
-                                  onMouseLeave={onClose}
+                                  className={toggle === true ? "SubMenuShow" : "SubMenuNone"}
                                 >
                                   {i.submenu?.map((item: any) => (
-                                    <MenuItem key={item.title}>
-                                      <NextLink key={item.title} href={i.link} passHref>
-                                        {commonTranslation(item.title)}
-                                      </NextLink>
+                                    <MenuItem
+                                      key={item.title}
+                                      onClick={() => window.open(item.link)}
+                                    >
+                                      {commonTranslation(item.title)}
                                     </MenuItem>
                                   ))}
                                 </MenuList>

@@ -107,6 +107,12 @@ const linksArr = [
     submenuLevel: 1,
     submenu: [
       {
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
+        newPage: true,
+        highlight: false,
+      },
+      {
         title: "litepaper",
         link: LITEPAPER_URL,
         newPage: true,
@@ -133,12 +139,6 @@ const linksArr = [
     highlight: false,
     submenuLevel: 1,
     submenu: [
-      {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
-        newPage: true,
-        highlight: false,
-      },
       {
         title: "community_ecosystem",
         link: COMMUNITY_URL,

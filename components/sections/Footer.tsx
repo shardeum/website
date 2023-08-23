@@ -42,6 +42,7 @@ import {
   LITEPAPER_URL,
   NEWSLETTER_URL,
   CLAIM_100_SHM_LINK,
+  PARTNER_SHARDEUM,
   BRAND_ASSET,
   NEWS_LETTER_UPDATES,
 } from "../../constants/links";
@@ -149,7 +150,7 @@ const LinksMap = {
   ],
   Contact: [
     { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
-    // { title: "investment-queries", href: INVESTMENT_QUERY_LINK, target: "_BLANK" },
+    { title: "partner-shardeum", href: PARTNER_SHARDEUM, target: "_BLANK" },
   ],
 };
 

@@ -523,7 +523,7 @@ const AlphanetLanding: NextPage = () => {
               <VStack alignItems="left" spacing="10" mt={10}>
                 <SectionHeading color="brand.grey-90">
                   <h2 className="betaAlphanetTitle">
-                    Shardeum Testnets: A Preview of Blockchain's Future
+                    Shardeum Testnets: A Preview of the Future of Web3
                   </h2>
                 </SectionHeading>
               </VStack>

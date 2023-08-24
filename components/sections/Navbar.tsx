@@ -385,6 +385,15 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                 {/* <Link variant="navlink">Language</Link> */}
               </Stack>
               {/* Will only show on mobile and tablets */}
+              <Box>
+                {/* <NextLink href="/" passHref>
+                  <Link>
+                    <Logo />
+                  </Link>
+                </NextLink> */}
+              </Box>
+            </Flex>
+            <Flex justify="end">
               <MobileDrawer links={linksArr} />
             </Flex>
           </Container>

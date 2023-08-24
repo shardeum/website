@@ -54,7 +54,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
   };
 
   return (
-    <Flex display={{ lg: "none" }}>
+    <Flex display={{ lg: "none" }} style={{ marginTop: "-27px" }}>
       <Box onClick={onOpen}>
         <IconHamburger />
       </Box>

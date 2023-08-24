@@ -9,6 +9,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Spacer,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -50,6 +51,7 @@ import MenuComponent from "./MenuComponent";
 // import { getNotificationById } from "../../utils/api"
 
 const linksArr = [
+  { title: "Road To Mainnet", link: "https://shardeum.org/roadmap/mainnet/" },
   {
     title: "developers",
     link: "",
@@ -334,7 +336,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           color={mode === "light" ? "brand.grey-90" : "text"}
         >
           <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
-            <Flex justify="space-between" align={"center"}>
+            <Flex justify="" align={"center"}>
               <Box>
                 <NextLink href="/" passHref>
                   <Link>
@@ -342,6 +344,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   </Link>
                 </NextLink>
               </Box>
+              <Spacer />
               <Stack
                 direction={["column", "row"]}
                 spacing={"1rem"}

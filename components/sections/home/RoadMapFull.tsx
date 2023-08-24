@@ -162,7 +162,6 @@ const roadmapList = [
           "phase-8-task-list-2",
           // "phase-8-task-list-3",
           "phase-8-task-list-4",
-          "Road to Mainnet",
           // "phase-7-task-list-6",
           // "phase-7-task-list-7",
           // "phase-7-task-list-8",

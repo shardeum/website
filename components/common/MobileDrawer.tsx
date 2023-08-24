@@ -162,7 +162,9 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                       </MenuList>
                     </Menu>
                   ) : (
-                    commonTranslation(item.title)
+                    <NextLink key={item.title} href={item.link} passHref>
+                      {commonTranslation(item.title)}
+                    </NextLink>
                   )}
                 </Flex>
               ))}

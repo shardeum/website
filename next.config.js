@@ -22,7 +22,12 @@ const nextConfig = {
         destination: "https://shardeum.org/betanet/",
         permanent: true,
       },
-
+      {
+        source: "/roadmap/mainnet",
+        destination:
+          "https://shardeumfoundation.notion.site/3be10f9fef334db68e8b627ffc3d7650?v=51008332cd434fca82413733d6a058cc",
+        permanent: false,
+      },
       // Temp Redirection
       {
         source: "/hi",

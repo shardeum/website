@@ -151,6 +151,7 @@ const LinksMap = {
   Contact: [
     { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
     { title: "partner-shardeum", href: PARTNER_SHARDEUM, target: "_BLANK" },
+    { title: "Road to Mainnet", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
   ],
 };
 

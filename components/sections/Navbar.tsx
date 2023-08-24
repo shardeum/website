@@ -51,7 +51,7 @@ import MenuComponent from "./MenuComponent";
 // import { getNotificationById } from "../../utils/api"
 
 const linksArr = [
-  { title: "Road To Mainnet", link: "https://shardeum.org/roadmap/mainnet/" },
+  { title: "Countdown To Mainnet", link: "https://shardeum.org/roadmap/mainnet/" },
   {
     title: "developers",
     link: "",
@@ -362,6 +362,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                         rel="noopener noreferrer"
                         target={link.newPage ? "_blank" : "_self"}
                         fontWeight={link.highlight ? "bold" : "normal"}
+                        fontSize={"16px"}
                       >
                         {commonTranslation(link.title)}
                       </Link>

@@ -132,8 +132,8 @@ const socialLinks = [
 const LinksMap = {
   General: [
     { title: "home", href: "/" },
+    { title: "Detailed Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
     { title: "the-community", href: COMMUNITY_URL },
-    { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
     { title: "OCC", href: "/occ/", target: "" },
@@ -142,6 +142,7 @@ const LinksMap = {
   ],
   Resources: [
     { title: "litepaper", href: LITEPAPER_URL },
+    { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "faq", href: FAQ_URL },
     { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },
     { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },

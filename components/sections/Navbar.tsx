@@ -102,39 +102,6 @@ const linksArr = [
     ],
   },
   {
-    title: "learn",
-    link: "",
-    newPage: false,
-    highlight: false,
-    submenuLevel: 1,
-    submenu: [
-      {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "litepaper",
-        link: LITEPAPER_URL,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "faq",
-        link: FAQ_URL,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "blog",
-        link: BLOG_URL,
-        newPage: true,
-        highlight: false,
-      },
-    ],
-  },
-  {
     title: "community",
     link: "",
     newPage: false,
@@ -206,6 +173,40 @@ const linksArr = [
       // },
     ],
   },
+  {
+    title: "learn",
+    link: "",
+    newPage: false,
+    highlight: false,
+    submenuLevel: 1,
+    submenu: [
+      {
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "litepaper",
+        link: LITEPAPER_URL,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "faq",
+        link: FAQ_URL,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "blog",
+        link: BLOG_URL,
+        newPage: true,
+        highlight: false,
+      },
+    ],
+  },
+
   {
     title: "claim-100-shm-cta",
     link: CLAIM_100_SHM_LINK,

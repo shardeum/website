@@ -51,7 +51,7 @@ import MenuComponent from "./MenuComponent";
 // import { getNotificationById } from "../../utils/api"
 
 const linksArr = [
-  { title: "Countdown To Mainnet", link: "https://shardeum.org/roadmap/mainnet/" },
+  { title: "Mainnet Roadmap", link: "https://shardeum.org/roadmap/mainnet/" },
   {
     title: "developers",
     link: "",

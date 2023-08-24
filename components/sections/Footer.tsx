@@ -132,7 +132,7 @@ const socialLinks = [
 const LinksMap = {
   General: [
     { title: "home", href: "/" },
-    { title: "Detailed Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
+    { title: "Mainnet Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
     { title: "the-community", href: COMMUNITY_URL },
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
@@ -152,7 +152,6 @@ const LinksMap = {
   Contact: [
     { title: "general-enquiries", href: GENERAL_QUERIES_LINK, target: "_BLANK" },
     { title: "partner-shardeum", href: PARTNER_SHARDEUM, target: "_BLANK" },
-    { title: "Road to Mainnet", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
   ],
 };
 

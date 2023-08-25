@@ -51,7 +51,6 @@ import MenuComponent from "./MenuComponent";
 // import { getNotificationById } from "../../utils/api"
 
 const linksArr = [
-  { title: "Mainnet Roadmap", link: "https://shardeum.org/roadmap/mainnet/" },
   {
     title: "developers",
     link: "",
@@ -206,7 +205,7 @@ const linksArr = [
       },
     ],
   },
-
+  { title: "Mainnet Roadmap", link: "https://shardeum.org/roadmap/mainnet/" },
   {
     title: "claim-100-shm-cta",
     link: CLAIM_100_SHM_LINK,
@@ -249,12 +248,10 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
     const current_date = formatDate(new Date());
 
     if (current_date.getTime() > specific_date.getTime()) {
-      console.log("current_date date is grater than specific_date");
       setHideNoti(true);
     } else if (current_date.getTime() === specific_date.getTime()) {
       setHideNoti(false);
     } else {
-      console.log("current_date date is lower than specific_date");
       setHideNoti(false);
     }
 

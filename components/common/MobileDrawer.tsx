@@ -60,7 +60,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
       </Box>
       <ChakraDrawer isOpen={isOpen} placement={placement} onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "0px" }}>
+        <DrawerContent position="relative" bgColor="brand.grey-80" style={{ marginTop: "60px" }}>
           <DrawerCloseButton alignSelf="end" m="15" />
           {/* {isauthVisible === true ? (
             <Menu>
@@ -162,7 +162,9 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                       </MenuList>
                     </Menu>
                   ) : (
-                    commonTranslation(item.title)
+                    <NextLink key={item.title} href={item.link} passHref>
+                      {commonTranslation(item.title)}
+                    </NextLink>
                   )}
                 </Flex>
               ))}

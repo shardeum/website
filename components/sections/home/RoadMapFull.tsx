@@ -1,4 +1,15 @@
-import { Show, Box, Container, Flex, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Show,
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  VStack,
+  Button,
+  Spacer,
+} from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -162,7 +173,6 @@ const roadmapList = [
           "phase-8-task-list-2",
           // "phase-8-task-list-3",
           "phase-8-task-list-4",
-
           // "phase-7-task-list-6",
           // "phase-7-task-list-7",
           // "phase-7-task-list-8",
@@ -300,6 +310,18 @@ function RoadmapFull({ heading }: any) {
                       );
                     })}
                   </VStack>
+                  {item.title === "phase-8-title" && (
+                    <Button
+                      as="a"
+                      variant="primary"
+                      size="lg"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={"https://shardeum.org/roadmap/mainnet/"}
+                    >
+                      Detailed Roadmap
+                    </Button>
+                  )}
                 </VerticalTimelineElement>
               );
             })}

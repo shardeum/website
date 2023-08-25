@@ -9,6 +9,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Spacer,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -100,39 +101,6 @@ const linksArr = [
     ],
   },
   {
-    title: "learn",
-    link: "",
-    newPage: false,
-    highlight: false,
-    submenuLevel: 1,
-    submenu: [
-      {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "litepaper",
-        link: LITEPAPER_URL,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "faq",
-        link: FAQ_URL,
-        newPage: true,
-        highlight: false,
-      },
-      {
-        title: "blog",
-        link: BLOG_URL,
-        newPage: true,
-        highlight: false,
-      },
-    ],
-  },
-  {
     title: "community",
     link: "",
     newPage: false,
@@ -205,6 +173,40 @@ const linksArr = [
     ],
   },
   {
+    title: "learn",
+    link: "",
+    newPage: false,
+    highlight: false,
+    submenuLevel: 1,
+    submenu: [
+      {
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "litepaper",
+        link: LITEPAPER_URL,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "faq",
+        link: FAQ_URL,
+        newPage: true,
+        highlight: false,
+      },
+      {
+        title: "blog",
+        link: BLOG_URL,
+        newPage: true,
+        highlight: false,
+      },
+    ],
+  },
+  { title: "Mainnet Roadmap", link: "https://shardeum.org/roadmap/mainnet/" },
+  {
     title: "claim-100-shm-cta",
     link: CLAIM_100_SHM_LINK,
     newPage: true,
@@ -246,12 +248,10 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
     const current_date = formatDate(new Date());
 
     if (current_date.getTime() > specific_date.getTime()) {
-      console.log("current_date date is grater than specific_date");
       setHideNoti(true);
     } else if (current_date.getTime() === specific_date.getTime()) {
       setHideNoti(false);
     } else {
-      console.log("current_date date is lower than specific_date");
       setHideNoti(false);
     }
 
@@ -302,14 +302,11 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://shm.gg/shm-node-reward-calc-demo"}
+          href={"https://shardeum.org/roadmap/mainnet/"}
           target="_blank"
           rel="noreferrer"
         >
-          <b>
-            Register for the Live Demo of Shardeum Node Reward Calculator on April 19th at 3.30 PM
-            UTC
-          </b>
+          <b>Click here to view the detailed roadmap to Shardeum mainnet</b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>
@@ -325,7 +322,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
         // className={!scrollHideNoti ? "navNotificationHide" : "navNotificationShow"}
         // className="navNotificationShow"
       >
-        {/* <NotificationBar /> */}
+        <NotificationBar />
         {/* {hideNoti === false ? <NotificationBar /> : null} */}
         <Flex
           bg={mode === "light" ? "brand.white" : "brand.black"}
@@ -334,7 +331,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           color={mode === "light" ? "brand.grey-90" : "text"}
         >
           <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
-            <Flex justify="space-between" align={"center"}>
+            <Flex justify="" align={"center"}>
               <Box>
                 <NextLink href="/" passHref>
                   <Link>
@@ -342,6 +339,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   </Link>
                 </NextLink>
               </Box>
+              <Spacer />
               <Stack
                 direction={["column", "row"]}
                 spacing={"1rem"}
@@ -359,6 +357,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                         rel="noopener noreferrer"
                         target={link.newPage ? "_blank" : "_self"}
                         fontWeight={link.highlight ? "bold" : "normal"}
+                        fontSize={"16px"}
                       >
                         {commonTranslation(link.title)}
                       </Link>

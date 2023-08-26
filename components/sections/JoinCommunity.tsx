@@ -52,7 +52,7 @@ const JoinCommunity = () => {
                   className="joimCommunitySocaialLinks"
                   style={{ margin: "0", cursor: "pointer" }}
                 >
-                  {link.title === "Newsletter" ? <EmailIcon /> : <link.Icon />}
+                  {link.title === "Newsletter" ? <EmailIcon color="white" /> : <link.Icon />}
 
                   <Text
                     color="brand.white"

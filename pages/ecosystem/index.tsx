@@ -120,10 +120,11 @@ const Explore: NextPage<ExplorePageProps> = ({
   };
 
   const handleSubmitProject = (): void => {
-    console.log("ON click", sessionObject);
-    !sessionObject
-      ? setPopup(true)
-      : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
+    // console.log("ON click", sessionObject);
+    // !sessionObject
+    //   ? setPopup(true)
+    //   : window.open("https://airtable.com/shrIXaaf87BzaTfYy", " _blank");
+    window.open("https://airtable.com/shrIXaaf87BzaTfYy", "_blank");
   };
 
   const sort = () => {

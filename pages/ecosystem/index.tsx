@@ -264,7 +264,7 @@ const Explore: NextPage<ExplorePageProps> = ({
               direction={{ base: "column", sm: "row" }}
               width={{ base: "full", sm: "auto" }}
             >
-              <Button onClick={handleSubmitProject} variant="secondary" size="lg">
+              <Button onClick={handleSubmitProject} variant="primary" size="lg">
                 Submit your project
               </Button>
               {/* <Button

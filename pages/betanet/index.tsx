@@ -898,7 +898,7 @@ const AlphanetLanding: NextPage = () => {
                   <Box className="list-wrap">
                     <ul>
                       <li>{"Stable low gas fees forever"}</li>
-                      <li>{"Linear scalability while retaining cross shard composibility"}</li>
+                      <li>{"Linear scalability while retaining cross shard composability"}</li>
                       <li>
                         {
                           "Marketing support from the Shardeum Foundation providing 10-15k users to your app on testnet within 1-month "

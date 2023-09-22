@@ -20,6 +20,7 @@ export const fetchNewList = () =>
         imageSubURL: item.image?.[0].thumbnails?.large.url,
         siteName: item.siteName,
         newsURL: item.newsURL,
+        colID: item.colID,
       }))
     );
 
@@ -40,12 +41,14 @@ export const getSHMNewsArticles = (): Promise<NewsItem[]> => {
             const image: any = record.get("Image");
             const isPosted: any = record.get("isPosted");
             const newsURL = record.get("News URL");
+            const colID = record.get("colID");
             if (isPosted) {
               data.push({
                 title,
                 siteName: SiteName,
                 imageMAIN: image?.[0]?.thumbnails?.large?.url,
                 imageURL: image?.[0]?.url,
+                colID: colID,
                 newsURL,
               });
             }

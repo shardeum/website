@@ -44,19 +44,21 @@ const NewsItem = ({
   imageURL,
   siteName,
   newsURL,
+  colID,
 }: {
   title: string;
   imageURL: string;
   siteName: string;
   newsURL: string;
+  colID: string;
 }) => (
   <Link passHref href={newsURL}>
     <VStack maxW="700px" as="a" rel="noopener noreferrer" target="__blank">
       <Flex w="full" position="relative">
         {imageURL ? (
           <AspectRatio ratio={564 / 300} w="full">
-            {/* <img src={imageURL} alt={title} /> */}
-            <Image unoptimized={false} src={imageURL} alt={title} layout="fill" />
+            <img src={`/news/${colID}.png`} alt={title} />
+            {/* <Image unoptimized={false} src={imageURL} alt={title} layout="fill" /> */}
           </AspectRatio>
         ) : null}
         <Box position="absolute" bg="brand.white" px="3" py="2" bottom="0">
@@ -114,6 +116,7 @@ const NewsAppearance = ({ sectionTitle, news }: { sectionTitle: string; news: Ne
                 imageURL={item.imageMAIN}
                 siteName={item.siteName}
                 newsURL={item.newsURL}
+                colID={item.colID}
               />
             </SwiperSlide>
           );

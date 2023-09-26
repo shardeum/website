@@ -10,6 +10,7 @@ export interface NewsItem {
   imageURL: string;
   newsURL: string;
   siteName: string;
+  colID: string;
 }
 
 export interface CommunityStat {

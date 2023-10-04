@@ -847,12 +847,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shardeum.org/super-shardian/</loc>
-    <lastmod>2023-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://shardeum.org/blog/dao-guide/</loc>
     <lastmod>2023-04-10</lastmod>
     <changefreq>daily</changefreq>

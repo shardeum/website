@@ -146,8 +146,9 @@ const roadmapList = [
         taskList: [
           "phase-7-task-list-1",
           "phase-7-task-list-2",
-          "phase-7-task-list-3",
-          "phase-7-task-list-4",
+          "Sphinx 1.3",
+          // "phase-7-task-list-3",
+          // "phase-7-task-list-4",
 
           // "phase-7-task-list-6",
           // "phase-7-task-list-7",
@@ -157,22 +158,25 @@ const roadmapList = [
         launchItems: [],
       },
       {
-        description: "phase-7-secondary-desc",
+        // description: "phase-7-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2023, 4, 1),
     quarterEndDate: new Date(2023, 6, 31),
   },
   {
-    title: "phase-8-title",
+    title: "Q3 / Q4 2023",
     sections: [
       {
-        description: "phase-8-desc",
+        description: "Betanet Feature Completion",
+        // description: "phase-8-desc",
         taskList: [
           "phase-8-task-list-1",
           "phase-8-task-list-2",
           // "phase-8-task-list-3",
-          "phase-8-task-list-4",
+          // "Betanet Feature Completion",
+          "Patent Filing",
+          // "phase-8-task-list-4",
           // "phase-7-task-list-6",
           // "phase-7-task-list-7",
           // "phase-7-task-list-8",
@@ -186,6 +190,32 @@ const roadmapList = [
     ],
     quarterStartDate: new Date(2023, 7, 1),
     quarterEndDate: new Date(2023, 9, 31),
+  },
+  {
+    title: "phase-8-title",
+    sections: [
+      {
+        description: "phase-8-desc",
+        taskList: [
+          // "phase-8-task-list-1",
+          // "phase-8-task-list-2",
+          // "phase-8-task-list-3",
+          // "Feature completion",
+          // "Patent Filing",
+          "phase-8-task-list-4",
+          // "phase-7-task-list-6",
+          // "phase-7-task-list-7",
+          // "phase-7-task-list-8",
+          // "phase-7-task-list-9",
+        ],
+        launchItems: [],
+      },
+      {
+        description: "phase-8-secondary-desc",
+      },
+    ],
+    quarterStartDate: new Date(2024, 1, 1),
+    quarterEndDate: new Date(2024, 3, 31),
   },
 ];
 

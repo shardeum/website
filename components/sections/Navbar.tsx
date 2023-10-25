@@ -302,11 +302,11 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://shardeum.org/roadmap/mainnet/"}
+          href={"https://shm.gg/shm-oct-2023-updates"}
           target="_blank"
           rel="noreferrer"
         >
-          <b>Click here to view the detailed roadmap to Shardeum mainnet</b>
+          <b>Join us on Nov 8 for our monthly update & whitepaper release. Register now!</b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>

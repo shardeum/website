@@ -146,6 +146,7 @@ const roadmapList = [
         taskList: [
           "phase-7-task-list-1",
           "phase-7-task-list-2",
+          "Sphinx 1.3",
           // "phase-7-task-list-3",
           // "phase-7-task-list-4",
 
@@ -157,7 +158,7 @@ const roadmapList = [
         launchItems: [],
       },
       {
-        description: "phase-7-secondary-desc",
+        // description: "phase-7-secondary-desc",
       },
     ],
     quarterStartDate: new Date(2023, 4, 1),

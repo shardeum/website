@@ -991,7 +991,7 @@ const AlphanetLanding: NextPage = () => {
             {/* <SimpleGrid columns={[1, 1]} justifyContent="space-between" w="full"> */}
             {/* <Box className="containerForThreeNode " > */}
             <Box className="" w="full">
-              <SimpleGrid className="" columns={[1, 2]} justifyContent="space-between" w="full">
+              <SimpleGrid className="" columns={[1, 3]} justifyContent="space-between" w="full">
                 <Box className="roadmap-li-box ">
                   <Box className="roadmap-li-heading">
                     <span className="roadmap-li-heading-text" style={{ marginTop: "20px" }}>
@@ -1025,12 +1025,30 @@ const AlphanetLanding: NextPage = () => {
                     <ul>
                       <li>{"Sphinx 1.2"}</li>
                       <li>{"Sphinx 1.3"}</li>
+                    </ul>
+                  </Box>
+                </Box>
+
+                <Box className="roadmap-li-box dashBorder">
+                  <Box className="roadmap-li-heading">
+                    <span className="roadmap-li-heading-text" style={{ marginTop: "20px" }}>
+                      {"Q3/Q4 2023"}
+                    </span>
+                    {/* <span className="roadmap-li-heading-green-line"></span> */}
+                  </Box>
+
+                  <Box className="road-list-wrap">
+                    <ul>
                       <li>{"Feature completion"}</li>
-                      <li>{"Patent Filing"}</li>
+                      <li>{"Bug bounties"}</li>
+                      <li>{"Security audit"}</li>
                     </ul>
                   </Box>
                 </Box>
               </SimpleGrid>
+              {/* <SimpleGrid className="" columns={[1, 2]} justifyContent="space-between" w="full">
+                
+              </SimpleGrid> */}
             </Box>
             {/* </Box> */}
             {/* </SimpleGrid> */}

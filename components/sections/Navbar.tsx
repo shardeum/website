@@ -306,10 +306,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <b>
-            Click here to register and join us on 8th Nov for our special monthly update, where we
-            will unveil our whitepaper
-          </b>
+          <b>Join us on Nov 8 for our monthly update & whitepaper release. Register now!</b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>

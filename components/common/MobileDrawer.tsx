@@ -152,7 +152,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                               </Menu>
                             ) : (
                               <MenuItem key={i.title}>
-                                <NextLink key={i.title} href={i.link} passHref>
+                                <NextLink key={i.title} href={i.link} passHref legacyBehavior>
                                   {commonTranslation(i.title)}
                                 </NextLink>
                               </MenuItem>
@@ -162,7 +162,7 @@ function MobileDrawer({ placement = "right", links }: MobileDrawerProps) {
                       </MenuList>
                     </Menu>
                   ) : (
-                    <NextLink key={item.title} href={item.link} passHref>
+                    <NextLink key={item.title} href={item.link} passHref legacyBehavior>
                       {commonTranslation(item.title)}
                     </NextLink>
                   )}

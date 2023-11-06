@@ -747,9 +747,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
             </Box>
 
             <SimpleGrid spacing={6} columns={{ base: 2, sm: 2, md: 3, lg: 4 }} w="100%">
-              {titleFixedData?.map((tile) => (
+              {titleFixedData?.map((tile, index) => (
                 <Box
-                  key={tile.key}
+                  key={tile.key + index}
                   display="flex"
                   flexDir="column"
                   cursor="pointer"
@@ -830,9 +830,9 @@ const CommunityTiles = ({ communityStats }: { communityStats: CommunityStat[] })
             </Box>
 
             <SimpleGrid spacing={6} columns={{ base: 2, sm: 2, md: 3, lg: 4 }} w="100%">
-              {tilesData?.map((tile) => (
+              {tilesData?.map((tile, index) => (
                 <Box
-                  key={tile.key}
+                  key={tile.key + index}
                   display="flex"
                   flexDir="column"
                   cursor="pointer"

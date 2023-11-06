@@ -61,7 +61,7 @@ export const ProjectSectionCard: FC<ProjectSectionCardProps> = ({
 
         <GridItem>
           <Heading as="h3" fontSize="lg">
-            <NextLink href={`/ecosystem/${title.replace(/ /g, "")}`} passHref>
+            <NextLink href={`/ecosystem/${title.replace(/ /g, "")}`} passHref legacyBehavior>
               <LinkOverlay target="_blank">{title}</LinkOverlay>
             </NextLink>
           </Heading>

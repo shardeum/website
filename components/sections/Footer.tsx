@@ -164,7 +164,7 @@ function Footer() {
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
             <Flex direction="column" justifyContent="left" alignItems="left">
-              <Link href="/" passHref>
+              <Link href="/" passHref legacyBehavior>
                 <Box as="a">
                   <Logo />
                 </Box>
@@ -197,7 +197,7 @@ function Footer() {
                   </Text>
                   <VStack spacing="3" alignItems="start">
                     {links.map((link) => (
-                      <Link href={link.href} passHref key={link.title}>
+                      <Link href={link.href} passHref key={link.title} legacyBehavior>
                         <Text
                           as="a"
                           target={link.target ? link.target : ""}

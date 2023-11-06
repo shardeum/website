@@ -79,10 +79,8 @@ const MenuComponent = (props: any) => {
                 {/* <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem> */}
               </a>
             ) : (
-              <NextLink key={item.title} href={item.link} passHref>
-                <a href={item.link} rel="noreferrer">
-                  <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
-                </a>
+              <NextLink key={item.title} href={item.link} passHref rel="noreferrer">
+                <MenuItem key={item.title}>{commonTranslation(item.title)}</MenuItem>
               </NextLink>
             )
 

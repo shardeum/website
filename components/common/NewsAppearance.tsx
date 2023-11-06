@@ -52,7 +52,7 @@ const NewsItem = ({
   newsURL: string;
   colID: string;
 }) => (
-  <Link passHref href={newsURL}>
+  <Link passHref href={newsURL} legacyBehavior>
     <VStack maxW="700px" as="a" rel="noopener noreferrer" target="__blank">
       <Flex w="full" position="relative">
         {imageURL ? (

@@ -57,7 +57,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         fontSize={{ base: "md", sm: "md", lg: "lg" }}
         fontWeight={"bold"}
       >
-        <NextLink href={`/ecosystem/${title.replace(/ /g, "")}`} passHref>
+        <NextLink href={`/ecosystem/${title.replace(/ /g, "")}`} passHref legacyBehavior>
           <LinkOverlay target="_blank">{title}</LinkOverlay>
         </NextLink>
       </Text>

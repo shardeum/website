@@ -10,7 +10,7 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import Head from "next/head";
-const Carrers: NextPage = () => {
+const Careers: NextPage = () => {
   const router = useRouter();
 
   const { t: pageTranslation } = useTranslation(["page-careers"]);
@@ -183,4 +183,4 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default Carrers;
+export default Careers;

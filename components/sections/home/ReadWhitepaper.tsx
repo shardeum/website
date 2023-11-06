@@ -11,10 +11,10 @@ function ReadWhitepaper() {
       <Box position="absolute" zIndex={1} display={{ base: "none", xl: "block" }}>
         <Image
           src="/white-paper-bg.png"
-          width="700px"
+          width="700"
           objectFit="cover"
           alt="white paper gradient background"
-          height="800px"
+          height="800"
         />
       </Box>
       <Box

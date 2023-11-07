@@ -255,11 +255,11 @@ $(".cta-btn.split").each(function () {
 
   // add icon if any
   if ($(this).data("icon")) {
-    ctaData += '<img src="../img/' + $(this).data("icon") + '" class="cta-icon">';
+    ctaData += '<img src="./html/img/' + $(this).data("icon") + '" class="cta-icon">';
   }
 
   // swap out arrow for other icon if any
-  let arrow = '<img src="./img/global/chevron-blue.svg">';
+  let arrow = '<img src="/html/img/global/chevron-blue.svg">';
   if ($(this).data("arrow")) {
     arrow = '<div class="icon icon-' + $(this).data("arrow") + '"></div>';
   }

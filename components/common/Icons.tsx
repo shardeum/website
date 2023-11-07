@@ -373,7 +373,7 @@ export const teamSocialIcons = {
 
 export const AlphanetFeatureIcons = ({ id }: { id: string }) => (
   <>
-    <Image src={`/alphanet/alphanet-feature-${id}.svg`} height={50} width={50} />
+    <Image alt="" src={`/alphanet/alphanet-feature-${id}.svg`} height={50} width={50} />
   </>
 );
 

@@ -90,9 +90,9 @@ export const ExploreDetails: NextPage<ProjectPageProps> = ({
         {/* <meta name="twitter:title" content={`Shardeum | Ecosystem ${project.name}`} /> */}
         {/* <meta name="twitter:description" content={project.description.substring(0, 160)} /> */}
         {/* <meta
-          name="twitter:image"
-          content={project.logo || `https://shardeum.org/Shardeum.png`}
-        /> */}
+        name="twitter:image"
+        content={project.logo || `https://shardeum.org/Shardeum.png`}
+      /> */}
         <meta name="twitter:site" content="@shardeum" />
         <link rel="canonical" href="https://shardeum.org/" />
 

@@ -333,7 +333,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
             <Flex justify="" align={"center"}>
               <Box>
-                <NextLink href="/" passHref>
+                <NextLink href="/" passHref legacyBehavior>
                   <Link>
                     <Logo />
                   </Link>
@@ -351,7 +351,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   typeof link.submenu !== "undefined" ? (
                     <MenuComponent link={link} />
                   ) : (
-                    <NextLink key={link.title} href={link.link} passHref>
+                    <NextLink key={link.title} href={link.link} passHref legacyBehavior>
                       <Link
                         variant="navlink"
                         rel="noopener noreferrer"
@@ -366,30 +366,30 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                 )}
 
                 {/* {isauthVisible === true ? (
-                  <Menu>
-                    <MenuButton>
-                      <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
-                    </MenuButton>
+                <Menu>
+                  <MenuButton>
+                    <Avatar size="sm" src={session?.user?.image || "/avatar.png"} />
+                  </MenuButton>
 
-                    <MenuList>
-                      {session ? (
-                        <MenuItem onClick={() => signOut()}>Signout</MenuItem>
-                      ) : (
-                        <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
-                      )}
-                    </MenuList>
-                  </Menu>
-                ) : null} */}
+                  <MenuList>
+                    {session ? (
+                      <MenuItem onClick={() => signOut()}>Signout</MenuItem>
+                    ) : (
+                      <MenuItem onClick={() => setPopup(true)}>Signin</MenuItem>
+                    )}
+                  </MenuList>
+                </Menu>
+              ) : null} */}
 
                 {/* <Link variant="navlink">Language</Link> */}
               </Stack>
               {/* Will only show on mobile and tablets */}
               <Box>
                 {/* <NextLink href="/" passHref>
-                  <Link>
-                    <Logo />
-                  </Link>
-                </NextLink> */}
+                <Link>
+                  <Logo />
+                </Link>
+              </NextLink> */}
               </Box>
             </Flex>
             <Flex justify="end">

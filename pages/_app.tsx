@@ -20,6 +20,8 @@ import { AuthChecker } from "@shm/components/common/AuthChecker";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   const router = useRouter();
+  const isHome = router.asPath === "/";
+  console.log(router.asPath, isHome);
   const [popup, setPopup] = useState(false);
   const isInSigninRoute = router.pathname.startsWith("/auth/signin");
 

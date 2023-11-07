@@ -94,10 +94,10 @@ function Roadmap() {
       <Box position="absolute" zIndex={1} display={{ base: "none", lg: "block" }}>
         <Image
           src="/roadmap-bg.png"
-          width="500px"
+          width="500"
           objectFit="cover"
           alt="white paper gradient background"
-          height="800px"
+          height="800"
         />
       </Box>
       <Container

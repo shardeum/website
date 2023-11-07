@@ -5,6 +5,7 @@ const { i18n } = require("./next-i18next.config");
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  pageExtensions: ["ts", "tsx"],
   i18n,
   trailingSlash: true,
   images: {
@@ -83,6 +84,10 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      {
+        source: "/",
+        destination: "/html/index.html",
+      },
       {
         source: "/blog/:slug*",
         destination: `${process.env.BLOG_URL}/:slug*`,

@@ -175,7 +175,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               mx="auto"
               transform={{ md: "scale(1)" }}
             >
-              <Image src="/developer-banner.png" width="660px" height="450px" />
+              <Image alt="" src="/developer-banner.png" width="660" height="450" />
             </Box>
           </Box>
         }

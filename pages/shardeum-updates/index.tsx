@@ -84,20 +84,20 @@ const Page = () => {
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: `{
-                  "@context": "https://schema.org/", 
-                  "@type": "BreadcrumbList", 
-                  "itemListElement": [{
-                    "@type": "ListItem", 
-                    "position": 1, 
-                    "name": "Home",
-                    "item": "https://shardeum.org/"  
-                  },{
-                    "@type": "ListItem", 
-                    "position": 2, 
-                    "name": "Shardeum Community Update",
-                    "item": "https://shardeum.org/shardeum-updates/"  
-                  }]
-                }`,
+                "@context": "https://schema.org/", 
+                "@type": "BreadcrumbList", 
+                "itemListElement": [{
+                  "@type": "ListItem", 
+                  "position": 1, 
+                  "name": "Home",
+                  "item": "https://shardeum.org/"  
+                },{
+                  "@type": "ListItem", 
+                  "position": 2, 
+                  "name": "Shardeum Community Update",
+                  "item": "https://shardeum.org/shardeum-updates/"  
+                }]
+              }`,
             }}
           />
 
@@ -115,9 +115,7 @@ const Page = () => {
               >
                 <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
                   <NextLink href={`/shardeum-updates/${links.slug}`}>
-                    <a>
-                      <Image src={links.image} layout="fill" objectFit={"cover"} />
-                    </a>
+                    <Image alt="" src={links.image} layout="fill" objectFit={"cover"} />
                   </NextLink>
                 </Box>
                 <Stack>
@@ -126,7 +124,9 @@ const Page = () => {
                     fontSize={"2xl"}
                     fontFamily={"body"}
                   >
-                    <NextLink href={`/shardeum-updates/${links.slug}`}>{links.name}</NextLink>
+                    <NextLink href={`/shardeum-updates/${links.slug}`} legacyBehavior>
+                      {links.name}
+                    </NextLink>
                   </Heading>
                 </Stack>
               </Box>

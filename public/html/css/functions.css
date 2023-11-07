@@ -1,0 +1,188 @@
+/* colors */
+.bluebg {
+  background-color: #3042FB;
+  color: #fff;
+}
+.greenbg {
+  background-color: #A4FF00;
+}
+.pinkbg {
+  background-color: #FF0098;
+}
+.aquabg {
+  background-color: #1EFFFA;
+}
+.aquabglt {
+  background-color: #CAFFEF;
+}
+.tanbg {
+  background-color: #FCFAEF;
+}
+.yellowbg {
+  background-color: #FBFF1E;
+}
+.orangebg {
+  background-color: #FF4C0F;
+}
+.orangebglt {
+  background-color: #FFDFCD;
+}
+.gradbg {
+  background: linear-gradient(0deg, #CAFFEF 13.46%, #FFFACE 54.71%, #FFDFCD 88.88%);
+}
+.gradbg2 {
+  background: linear-gradient(180deg, #CAFFEF 0%, #FFFACE 97.25%, #FFDFCD 177.83%);
+}
+.gradbg3 {
+  background: linear-gradient(180deg, #FFDFCD -3.75%, #CAFFEF 22.3%, #FFFACE 46.91%, #FFDFCD 88.88%);
+}
+.gradbg4 {
+  background: linear-gradient(0deg, #FFFACE 13.46%, #CEFAFF 58.77%, #FFD9CE 88.88%);
+}
+.gradbg5 {
+  background: linear-gradient(0deg, #CAFFEF 13.46%, #FFFACE 41.35%, #FFFACE 53.13%, #FFDFCD 88.88%);
+}
+/* widths/margins */
+/* fonts */
+/* text */
+.headerXlg {
+  font: 400 185px/.85 "Helvetica Neue LT Pro Bold Cd", sans-serif;
+  letter-spacing: -5px;
+}
+.headerLg {
+  font: 400 165px/.96 "Helvetica Neue LT Pro Bold Cd", sans-serif;
+  letter-spacing: -5px;
+}
+.headerMd {
+  font: 400 85px/1 "Helvetica Neue LT Pro Bold Cd", sans-serif;
+  letter-spacing: -2px;
+}
+.headerSm {
+  font: 400 38px/1 "Helvetica Neue LT Pro Bold Cd", sans-serif;
+}
+.bodySm {
+  font: 400 16px/1.37 "Helvetica Neue LT Pro", sans-serif;
+}
+.bodyP {
+  font: 400 20px/1.4 "Helvetica Neue LT Pro", sans-serif;
+}
+.bodyMd {
+  font: 400 30px/1.26 "Helvetica Neue LT Pro", sans-serif;
+}
+/* shadows/borders */
+.round-box-shad {
+  border-radius: 20px;
+  box-shadow: 6px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #000;
+  background-color: #fff;
+}
+.round-box-shad-nf {
+  border-radius: 20px;
+  box-shadow: 6px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #000;
+}
+.round-box-shadM {
+  border-radius: 15px;
+  box-shadow: 4.5px 6px 0px 0px rgba(0, 0, 0, 0.15);
+  border-style: solid;
+  border-width: 1.5px;
+}
+.box-shad {
+  box-shadow: 6px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  border: 2px solid #000;
+}
+.rounded {
+  border-radius: 70px;
+  overflow: hidden;
+}
+.rounded-top {
+  border-radius: 70px 70px 0 0;
+  overflow: hidden;
+}
+.rounded-sm {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.rounded-sm-bdr {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+/* padding/margins */
+.pt-65 {
+  padding-top: 65px;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pt-100 {
+  padding-top: 100px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.pb-80 {
+  padding-bottom: 80px;
+}
+.pb-100 {
+  padding-bottom: 100px;
+}
+.pt-120 {
+  padding-top: 120px;
+}
+.pb-120 {
+  padding-bottom: 120px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.mt-70 {
+  margin-top: 70px;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-120 {
+  margin-top: 120px;
+}
+.sp-5 {
+  padding: 0 5px;
+}
+.sidepad,
+.pad-wrap {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.sidepad-sm {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.nopad {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.automargin {
+  margin-left: auto;
+  margin-right: auto;
+}
+.round-ontop {
+  margin-top: -70px;
+  z-index: 2;
+}
+/* animation */
+/* FUNCTIONS */

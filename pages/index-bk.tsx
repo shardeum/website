@@ -25,7 +25,7 @@ import type { InferGetStaticPropsType } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Image from "next/image";
-import UseCases from "../components//sections/UseCases";
+import UseCases from "../components/sections/UseCases";
 import MoreAboutShardeum from "../components/sections/home/MoreAboutShardeum";
 import Team from "../components/sections/Team";
 import { getSHMNewsArticles } from "../utils/api";
@@ -126,7 +126,7 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
               mx="auto"
               transform={{ md: "scale(1)" }}
             >
-              <Image src="/hero-globe-image.png" width="660px" height="660px" />
+              <Image alt="" src="/hero-globe-image.png" width="660" height="660" />
             </Box>
           </Box>
         }

@@ -255,7 +255,7 @@ $(".cta-btn.split").each(function () {
 
   // add icon if any
   if ($(this).data("icon")) {
-    ctaData += '<img src="../html/img/' + $(this).data("icon") + '" class="cta-icon">';
+    ctaData += '<img src="./html/img/' + $(this).data("icon") + '" class="cta-icon">';
   }
 
   // swap out arrow for other icon if any

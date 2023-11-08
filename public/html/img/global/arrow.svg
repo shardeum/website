@@ -1,1 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 25"><polygon points="9.61121 .62939 6.19708 4.15558 11.98303 10.12939 .19141 10.12939 .19141 15.12939 11.98303 15.12939 6.19708 21.10321 9.61121 24.62939 21.23413 12.62939 21.23438 12.62939 9.61121 .62939" style="stroke-width:0px;"/></svg>
+<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.61121 24.6294L21.2341 12.6294H21.2344L9.61121 0.629395L6.19706 4.15559L14.4044 12.6294L6.19706 21.1032L9.61121 24.6294Z" fill="black"/>
+<rect x="0.191406" y="10.1294" width="18" height="5" fill="black"/>
+</svg>

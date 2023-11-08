@@ -1025,7 +1025,7 @@ a.full {
   text-align: center;
   position: relative;
   color: #fff;
-  background-image: url(./html/img/global/texture@2x.png);
+  background-image: url(../img/global/texture@2x.png);
   background-size: 262px 262px;
   -webkit-transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
@@ -1098,7 +1098,7 @@ ul.has-check {
   list-style: none;
 }
 ul.has-check > li {
-  background: url(./html/img/global/check-green.svg) left top no-repeat;
+  background: url(../img/global/check-green.svg) left top no-repeat;
   background-position: 20px 22px;
   background-size: 27px auto;
   position: relative;
@@ -1122,7 +1122,7 @@ ul.has-check ul li:before {
   top: 0px;
 }
 .bgtexture {
-  background-image: url(./html/img/global/texture@2x.png);
+  background-image: url(../img/global/texture@2x.png);
   background-size: 262px 262px;
 }
 .bgtexture.sm {
@@ -1176,7 +1176,7 @@ ul.has-check ul li:before {
   overflow: hidden;
 }
 .bucket-ctas .bucket-cta .inner {
-  background-image: url(./html/img/global/texture@2x.png);
+  background-image: url(../img/global/texture@2x.png);
   background-size: 262px 262px;
 }
 .bucket-ctas .bucket-cta .inner.sm {
@@ -3433,7 +3433,7 @@ body.dark #globalHeader .main-menu .top > li .active-dot {
   overflow: hidden;
 }
 #dev-building .bucket .top {
-  background-image: url(./html/img/global/texture@2x.png);
+  background-image: url(../img/global/texture@2x.png);
   background-size: 262px 262px;
   padding: 17px 38px 42px;
 }
@@ -3919,7 +3919,7 @@ body.dark #globalHeader .main-menu .top > li .active-dot {
 }
 #comm-workwith .bucket-ctas .top {
   padding: 15px 38px 28px;
-  background-image: url(./html/img/global/texture@2x.png);
+  background-image: url(../img/global/texture@2x.png);
   background-size: 262px 262px;
 }
 #comm-workwith .bucket-ctas .top.sm {

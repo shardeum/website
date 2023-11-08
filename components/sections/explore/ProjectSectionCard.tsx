@@ -8,8 +8,6 @@ import {
   Text,
   Img,
   GridItem,
-  Button,
-  Tooltip,
 } from "@chakra-ui/react";
 
 import NextLink from "next/link";

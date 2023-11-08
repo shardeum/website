@@ -23,4 +23,8 @@ dist/
 *.tsbuildinfo
 .vercel
 
+# Editor
+.idea
+.vscode
+
 yarn.lock

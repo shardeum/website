@@ -1,6 +1,5 @@
 import { Box, Container, Flex, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import JoinNewsletter from "components/common/JoinNewsletter";
 import JoinNewsletterHomePage from "components/common/JoinNewsletterHomePage";
 import NewsAppearance from "components/common/NewsAppearance";
 import VisitBlog from "components/common/VisitBlog";

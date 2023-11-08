@@ -3,16 +3,12 @@ import {
   Box,
   Container,
   Flex,
-  Grid,
-  Heading,
   Text,
   VStack,
   Button,
-  Spacer,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { CalendarIcon } from "@chakra-ui/icons";
 
@@ -290,8 +286,6 @@ function RoadmapFull({ heading }: any) {
           </VStack>
           <VerticalTimeline lineColor="rgba(33, 33, 33, 1)">
             {roadmapList.map((item: any) => {
-              const percentage = getQuarterProgressInPercentage(item);
-              const additionaLProps = { "data-scroll-to": percentage > 0 && percentage < 100 };
               return (
                 <VerticalTimelineElement
                   key={item.title}

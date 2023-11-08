@@ -55,7 +55,7 @@ const ShardeumPepe = () => {
               rel="noopener noreferrer"
               href={SHARDEUMPEPE}
             >
-              {pageTranslation("donwload")}
+              {pageTranslation("download")}
             </Button>
           </VStack>
         </SimpleGrid>

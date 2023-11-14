@@ -132,7 +132,6 @@ const socialLinks = [
 const LinksMap = {
   General: [
     { title: "home", href: "/" },
-    { title: "Mainnet Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
     { title: "the-community", href: COMMUNITY_URL },
     { title: "newsletter", href: NEWSLETTER_URL },
     { title: "Careers", href: "/careers/", target: "_BLANK" },
@@ -141,12 +140,14 @@ const LinksMap = {
     { title: "Terms", href: "/terms/", target: "" },
   ],
   Resources: [
-    { title: "litepaper", href: LITEPAPER_URL },
+    { title: "Whitepaper", href: LITEPAPER_URL },
+    { title: "Mainnet Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
+    { title: "SHM Tokenomics", href: "https://shardeum.org/shm-tokenomics/", target: "_BLANK" },
     { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "faq", href: FAQ_URL },
     { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },
     { title: "claim-100-shm-cta", href: CLAIM_100_SHM_LINK },
-    { title: "Newsletter Updates", href: NEWS_LETTER_UPDATES, target: "_BLANK" },
+    // { title: "Newsletter Updates", href: NEWS_LETTER_UPDATES, target: "_BLANK" },
     { title: "Brand Assets", href: BRAND_ASSET },
   ],
   Contact: [
@@ -164,7 +165,7 @@ function Footer() {
         <SimpleGrid columns={[1, 1, 2]} gap={["8", "12"]}>
           <Flex direction="column" justifyContent="space-between">
             <Flex direction="column" justifyContent="left" alignItems="left">
-              <Link href="/" passHref legacyBehavior>
+              <Link href="/" passHref>
                 <Box as="a">
                   <Logo />
                 </Box>
@@ -197,7 +198,7 @@ function Footer() {
                   </Text>
                   <VStack spacing="3" alignItems="start">
                     {links.map((link) => (
-                      <Link href={link.href} passHref key={link.title} legacyBehavior>
+                      <Link href={link.href} passHref key={link.title}>
                         <Text
                           as="a"
                           target={link.target ? link.target : ""}

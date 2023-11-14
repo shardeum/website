@@ -142,7 +142,7 @@ const LinksMap = {
   Resources: [
     { title: "Whitepaper", href: LITEPAPER_URL },
     { title: "Mainnet Roadmap", href: "https://shardeum.org/roadmap/mainnet/", target: "_BLANK" },
-    { title: "SHM Tokenomics", href: "https://shardeum.org/shm-tokenomics/", target: "_BLANK" },
+    // { title: "SHM Tokenomics", href: "https://shardeum.org/shm-tokenomics/", target: "_BLANK" },
     { title: "blog", href: BLOG_URL, target: "_BLANK" },
     { title: "faq", href: FAQ_URL },
     { title: "public-drive-link", href: PUBLIC_DRIVE_LINK, target: "_BLANK" },

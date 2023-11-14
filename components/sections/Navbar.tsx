@@ -173,21 +173,21 @@ const linksArr = [
     ],
   },
   {
-    title: "learn",
+    title: "Resources",
     link: "",
     newPage: false,
     highlight: false,
     submenuLevel: 1,
     submenu: [
       {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
+        title: "Whitepaper",
+        link: LITEPAPER_URL,
         newPage: true,
         highlight: false,
       },
       {
-        title: "litepaper",
-        link: LITEPAPER_URL,
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
         newPage: true,
         highlight: false,
       },
@@ -302,7 +302,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://shm.gg/shm-oct-2023-updates"}
+          href={"/Shardeum_Whitepaper.pdf"}
           target="_blank"
           rel="noreferrer"
         >

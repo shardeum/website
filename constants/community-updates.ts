@@ -80,8 +80,7 @@ const CommunityUpdatesLinks = [
     name: "Shardeum Oct'23 Updates",
     title: "Shardeum Oct'23 Updates | Shardeum",
     description: "Shardeum Oct'23 Updates",
-    image:
-      "https://shardeum.org/explore/wp-content/uploads/2023/10/Roadmap___copy_2-1024x683-1.jpg",
+    image: "/updates/image__6_.png",
   },
 ];
 

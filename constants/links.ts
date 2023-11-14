@@ -1,4 +1,5 @@
-export const LITEPAPER_URL = "/Shardeum-Litepaper.pdf";
+// export const LITEPAPER_URL = "/Shardeum-Litepaper.pdf";
+export const LITEPAPER_URL = " /Shardeum_Whitepaper.pdf";
 export const SHARDEUMPEPE = "/75-(Shardeum-Pepe).png";
 export const SHARDEUM = "/Shardeum.png";
 export const BETANETIMAGE = "/betanet.png";

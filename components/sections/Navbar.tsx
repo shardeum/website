@@ -173,21 +173,21 @@ const linksArr = [
     ],
   },
   {
-    title: "learn",
+    title: "Resources",
     link: "",
     newPage: false,
     highlight: false,
     submenuLevel: 1,
     submenu: [
       {
-        title: "SHM_Tokenomics",
-        link: SHM_CALCULATOR,
+        title: "Whitepaper",
+        link: LITEPAPER_URL,
         newPage: true,
         highlight: false,
       },
       {
-        title: "litepaper",
-        link: LITEPAPER_URL,
+        title: "SHM_Tokenomics",
+        link: SHM_CALCULATOR,
         newPage: true,
         highlight: false,
       },
@@ -302,11 +302,11 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
       >
         <a
           // href={"https://shardeum.org/blog/shardeum-open-source/"}
-          href={"https://shm.gg/shm-oct-2023-updates"}
+          href={"/Shardeum_Whitepaper.pdf"}
           target="_blank"
           rel="noreferrer"
         >
-          <b>Join us on Nov 8 for our monthly update & whitepaper release. Register now!</b>
+          <b>Explore the Future of Web3: Shardeum&apos;s Whitepaper Released!</b>
           {/* <b> Explore and Contribute to the Open Source Shardeum Codebase </b> */}
         </a>
       </div>
@@ -333,7 +333,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
           <Container maxW="container.xl" py="5" px={{ base: "6", xl: "0" }}>
             <Flex justify="" align={"center"}>
               <Box>
-                <NextLink href="/" passHref legacyBehavior>
+                <NextLink href="/" passHref>
                   <Link>
                     <Logo />
                   </Link>
@@ -351,7 +351,7 @@ const Navbar: FC<NavbarProps> = ({ mode = "dark" }) => {
                   typeof link.submenu !== "undefined" ? (
                     <MenuComponent link={link} />
                   ) : (
-                    <NextLink key={link.title} href={link.link} passHref legacyBehavior>
+                    <NextLink key={link.title} href={link.link} passHref>
                       <Link
                         variant="navlink"
                         rel="noopener noreferrer"

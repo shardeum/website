@@ -19,6 +19,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/careers",
+        destination: "https://careers.shardeum.org/",
+        permanent: true,
+      },
+      {
         source: "/shardeum-liberty-alphanet",
         destination: "https://shardeum.org/betanet/",
         permanent: true,

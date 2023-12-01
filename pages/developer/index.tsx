@@ -51,35 +51,35 @@ const LandingPage = ({ news }: InferGetStaticPropsType<typeof getStaticProps>): 
   return (
     <>
       {/* Hero section */}
+
+      <title>{"Developers | Build Dapps on Shardeum"}</title>
+      <meta
+        name="description"
+        content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
+      />
+      <meta
+        name="keywords"
+        content="shardeum, L1, evm based smart contract platform, linear scalability"
+      />
+      <meta property="og:title" content="Developers | Build Dapps on Shardeum" />
+      <meta
+        property="og:description"
+        content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
+      />
+
+      <meta property="og:url" content="https://shardeum.org/developer" />
+      <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
+      <meta name="twitter:title" content="Developers | Build Dapps on Shardeum" />
+      <meta
+        name="twitter:description"
+        content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
+      />
+
+      <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@shardeum" />
+      <link rel="canonical" href="https://shardeum.org/developer/" />
       <Helmet>
-        <title>{"Developers | Build Dapps on Shardeum"}</title>
-        <meta
-          name="description"
-          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
-        />
-        <meta
-          name="keywords"
-          content="shardeum, L1, evm based smart contract platform, linear scalability"
-        />
-        <meta property="og:title" content="Developers | Build Dapps on Shardeum" />
-        <meta
-          property="og:description"
-          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
-        />
-
-        <meta property="og:url" content="https://shardeum.org/developer" />
-        <meta property="og:image" content="https://shardeum.org/Shardeum.png" />
-        <meta name="twitter:title" content="Developers | Build Dapps on Shardeum" />
-        <meta
-          name="twitter:description"
-          content="Create dapps on Shardeum, an EVM-based platform that delivers authentic linear scalability and is currently the fastest-growing L1 ecosystem"
-        />
-
-        <meta name="twitter:image" content="https://shardeum.org/Shardeum.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@shardeum" />
-        <link rel="canonical" href="https://shardeum.org/developer/" />
-
         <script
           id="cookieyes"
           type="text/javascript"

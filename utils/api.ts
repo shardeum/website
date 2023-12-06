@@ -141,6 +141,8 @@ export const getSHMProjects = (): Promise<{
               const projectWebsiteURL = record.get("Product Website URL") as string;
               const projectDateCreated = record.get("Created") as string;
               const projectUpvotes = (record.get("Upvote Users") as string[])?.length ?? 0;
+              const projectTwiterUrl = (record.get("Product Twitter URL") as string) || "";
+
               // const pointOfContactEmailID = record.get("Your Point of Contact's Email id");
               const projectGithubURL = "";
               const status = (record.get("Status") as string) || "pending";
@@ -159,7 +161,7 @@ export const getSHMProjects = (): Promise<{
                   dateCreated: projectDateCreated,
                   numUpvotes: projectUpvotes,
                   githubUrl: projectGithubURL,
-                  twiterUrl: "",
+                  twiterUrl: projectTwiterUrl,
                   status: status || "pending",
                 });
                 // Catagory

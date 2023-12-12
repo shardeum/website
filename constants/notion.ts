@@ -41,6 +41,15 @@ const NotionPagesLinks = [
     image:
       "https://shardeum.org/blog/wp-content/uploads/2023/08/Proof-Of-Community-Backpacking-India.jpg",
   },
+  {
+    slug: "Shardeum-in-a-Nutshell",
+    notionId: "8fe1a6397eaa43d89823d4385d75cfcb",
+    title: "Shardeum in a Nutshell",
+    description:
+      "Shardeum is an EVM-based L1 that uses dynamic state sharding to achieve linear scalability while retaining atomic composability across shards. ",
+    image:
+      "https://shardeum.org/explore/wp-content/uploads/2023/12/linkedin_-_profile_background_-_1584_x_396.png",
+  },
 ];
 
 export default NotionPagesLinks;

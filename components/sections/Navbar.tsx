@@ -186,6 +186,12 @@ const linksArr = [
         highlight: false,
       },
       {
+        title: "Ultimate Web3 Quiz",
+        link: "https://shardeum.org/explore/blockchain-grandmaster-quiz/",
+        newPage: true,
+        highlight: false,
+      },
+      {
         title: "SHM_Tokenomics",
         link: SHM_CALCULATOR,
         newPage: true,

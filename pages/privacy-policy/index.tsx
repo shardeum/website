@@ -153,7 +153,7 @@ const Page = ({
             </div>
             <div className="notion-text notion-block-d41587d493e34d74a66d0adf6b977b87">
               If you have additional questions or require more information about our Privacy Policy,
-              do not hesitate to contact us
+              do not hesitate to contact us.
             </div>
             <div className="notion-text notion-block-94627db03a01431b97390a4d1ae1b50b">
               This Privacy Policy applies only to our online activities and is valid for visitors to
@@ -223,7 +223,7 @@ const Page = ({
               items such as name, company name, address, email address, and telephone number.
             </div>
             <div className="notion-text notion-block-db212e1d55784139bd74356270526ad3">
-              When you subscribe to our newsletter, we may ask for your email address
+              When you subscribe to our newsletter, we may ask for your email address.
             </div>
             <h3
               className="notion-h notion-h2 notion-h-indent-1 notion-block-7ad8a91f9a7448d58dc1c4632dba5bfc"

@@ -6,7 +6,7 @@ import { NewsItem, Shardian, CommunityStat } from "../types";
 const configureAirtable = () => {
   Airtable.configure({
     endpointUrl: "https://api.airtable.com",
-    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
+    apiKey: process.env.AIRTABLE_TOKEN,
   });
 };
 

@@ -162,7 +162,7 @@ export const getSHMProjects = (): Promise<{
                   twiterUrl: "",
                   status: status || "pending",
                 });
-                // Catagory
+                // Category
                 if (status === "accepted") {
                   categoryCount[projectCategory] = categoryCount[projectCategory]
                     ? categoryCount[projectCategory] + 1

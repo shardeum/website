@@ -96,7 +96,7 @@ const Explore: NextPage<ExplorePageProps> = ({
 
   // this will make calls to the API, will call handleUpvoteProjectState (optimistic), and will revert by calling it again with the opposite value to revert state
   const onUpvoteProject = (projectId: string, upvoted: boolean) => {
-    // window.alert("Disabled for the momment")
+    // window.alert("Disabled for the moment")
     //uncomment code to enable upvote functionality and comment/ remove above line
     // if user is not signed in, take them to sign in page
     if (!sessionObject) {

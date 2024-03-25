@@ -1,6 +1,5 @@
 import { Container, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Project } from "models/project";
-import { totalmem } from "os";
 import { FC, useMemo, useState } from "react";
 import CategoryList from "./CategoryList";
 import { Pagination } from "./Pagination";

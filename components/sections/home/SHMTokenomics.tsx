@@ -1,8 +1,7 @@
-import { Box, Container, Flex, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
 import { getPercentage } from "@shm/utils";
 import SectionHeading from "components/common/SectionHeading";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 import NewsletterInput from "../../common/NewsletterInput";
 
 const bars = [

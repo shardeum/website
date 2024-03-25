@@ -3,11 +3,10 @@ import Head from "next/head";
 
 import type { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from "next";
 
-import { Box, Button, Stack } from "@chakra-ui/react";
+import { Button, Stack } from "@chakra-ui/react";
 import ResponsiveHero from "@shm/components/sections/ResponsiveHero";
 import JoinCommunity from "@shm/components/sections/JoinCommunity";
 import ProjectsList from "@shm/components/sections/explore/ProjectsList";
-import TrendingProjects from "@shm/components/sections/explore/TrendingProjects";
 import NewestProjects from "@shm/components/sections/explore/NewProjects";
 import { useTranslation } from "next-i18next";
 
@@ -16,8 +15,6 @@ import { getSHMProjects, getUserUpvotedProjects } from "utils/api";
 import { upvoteProject } from "services/explore.service";
 import SigninContext from "context/signin-window.context";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { CLAIM_100_SHM_LINK, REPORT_BUGS } from "constants/links";
-import { Helmet } from "react-helmet";
 
 import { useRouter } from "next/router";
 import moment from "moment";

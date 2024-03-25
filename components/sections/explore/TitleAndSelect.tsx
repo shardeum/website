@@ -1,4 +1,4 @@
-import { Flex, Heading, HStack, LightMode, Select } from "@chakra-ui/react";
+import { Heading, HStack, LightMode, Select } from "@chakra-ui/react";
 import { FC } from "react";
 
 export type TitleAndSelectProps = {

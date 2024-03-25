@@ -112,7 +112,9 @@ export const HorizontalTile: FC<HorizontalTileProps> = ({
             <BreadcrumbItem>
               <BreadcrumbLink href="/">{"Home"}</BreadcrumbLink>
             </BreadcrumbItem>
-
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/community">{"Community"}</BreadcrumbLink>
+            </BreadcrumbItem>
             <BreadcrumbItem>
               <BreadcrumbLink href="/ecosystem">{"Ecosystem"}</BreadcrumbLink>
             </BreadcrumbItem>
